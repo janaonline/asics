@@ -1,0 +1,32 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+# Only this computer can open the app (it uses the API key in .env).
+address = "localhost"
+headless = false
+maxUploadSize = 50
+
+[client]
+# Hide developer menus (Deploy, Rerun, Settings) from the team.
+toolbarMode = "minimal"
+# Show a short error message instead of a full technical traceback.
+showErrorDetails = "type"
+
+[theme]
+# Ink from the Janaagraha logo, on warm neutrals. To use official brand colours, change
+# primaryColor (buttons, progress, focus) and linkColor.
+base = "light"
+primaryColor = "#110F0F"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F6F4F0"
+textColor = "#1B1817"
+linkColor = "#1F4E8C"
+borderColor = "#E6E1D9"
+showWidgetBorder = true
+baseRadius = "0.6rem"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+headingFontWeights = [700, 700]
+
+[theme.sidebar]
+backgroundColor = "#F6F4F0"

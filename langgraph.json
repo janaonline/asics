@@ -1,0 +1,8 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "step1_sources": "./src/asics_agent/agents/sources_master.py:graph",
+    "step2_answers": "./src/asics_agent/agents/answers_master.py:graph"
+  },
+  "env": ".env"
+}
