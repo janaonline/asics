@@ -6,7 +6,11 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 ParastatalType = Literal[
-    "water_supply_board", "transport_corporation", "development_authority", "other"
+    "water_supply_board",
+    "transport_corporation",
+    "development_authority",
+    "other",
+    "city_government",  # verticals that assess the city government itself (e.g. UPD)
 ]
 
 Accessibility = Literal["Public", "Not human-verified"]
@@ -89,6 +93,7 @@ class CityConfig(BaseModel):
     name: str
     state: str
     ulg: str
+    aliases: list[str] = Field(default_factory=list)  # other spellings, e.g. Bangalore
     parastatals: list[Parastatal] = Field(default_factory=list)  # optional: known to the team
 
 

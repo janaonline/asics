@@ -15,12 +15,13 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+import ui
 from asics_agent.applicability import applies_to
 from asics_agent.cities import load_register
 from asics_agent.config import get_settings
 from asics_agent.links.accessibility import make_http_client
+from asics_agent.plan import PlanRun
 from asics_agent.practice import PRACTICE_NOTE, fake_http, practice_services
-from asics_agent.question_bank import load_question_bank
 from asics_agent.recheck import recheck_workbook, summary_text
 from asics_agent.reporting import (
     STATUS_HELP,
@@ -34,14 +35,49 @@ from asics_agent.run_options import RunOptions
 from asics_agent.runner import BatchRun, PipelineRun
 from asics_agent.services import default_services
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
-from asics_agent.workbook import city_outcome, coverage_counts
+from asics_agent.verticals import load_bank, load_verticals, settings_for
+from asics_agent.workbook import answers_pattern, city_outcome, coverage_counts
 from ui import header, setup_page_chrome, sidebar_footer, step_card
 
 st.set_page_config(
     page_title="ASICS · Janaagraha", page_icon=":material/fact_check:", layout="wide"
 )
 setup_page_chrome()
-settings = get_settings()
+BASE_SETTINGS = get_settings()
+
+
+def vertical_choice() -> str:
+    """The vertical the team is working on (sidebar). Every page and run uses its settings."""
+    found, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
+    names = list(found) or [BASE_SETTINGS.vertical]
+    remembered = BASE_SETTINGS.outputs_dir / ".last_vertical"  # survives a page reload
+    if st.session_state.get("vertical") not in names:
+        try:
+            last = remembered.read_text().strip()
+        except OSError:
+            last = ""
+        default = BASE_SETTINGS.vertical if BASE_SETTINGS.vertical in names else names[0]
+        st.session_state["vertical"] = last if last in names else default
+
+    def remember():
+        try:
+            remembered.write_text(st.session_state["vertical"])
+        except OSError:
+            pass
+
+    return st.sidebar.selectbox(
+        "Vertical",
+        names,
+        key="vertical",
+        format_func=lambda n: found[n].title if n in found else n.title(),
+        help="Each ASICS vertical has its own question bank, agents, city folders and scoring "
+        "workbook (agent_setup/verticals/). Steps 1, 2 and 3 work the same for all of them.",
+        on_change=remember,
+    )
+
+
+settings = settings_for(BASE_SETTINGS, vertical_choice())
+ui.VERTICAL = settings.vertical_title
 
 MODES = {
     "real": "Real run: researches the web with Claude (uses the internet, costs money)",
@@ -58,9 +94,17 @@ def run_store() -> dict:
 
 
 @st.cache_data
-def question_bank():
-    questions, _ = load_question_bank(settings.question_bank)
+def _question_bank(vertical: str, path: str, mtime: float):
+    questions, _ = load_bank(settings)
     return questions
+
+
+def question_bank():
+    """The question bank of the vertical being worked on."""
+    path = settings.question_bank
+    return _question_bank(
+        settings.vertical, str(path), path.stat().st_mtime if path.exists() else 0
+    )
 
 
 def register(path: Path | None = None):
@@ -143,6 +187,119 @@ START_HEADERS = {
 }
 
 
+def plan_page():
+    """Run several verticals and steps for several cities in one go."""
+    header(
+        "Run steps",
+        "Choose the verticals, cities and steps. Each step runs for every chosen vertical, in "
+        "order: find sources, then answer, then score.",
+        "Assess",
+    )
+    current = run_store()["current"]
+    if current and current.status in BUSY:
+        st.info("A run is already in progress.", icon=":material/hourglass_top:")
+        if st.button("Go to the current run", type="primary"):
+            st.switch_page(PAGES["run"])
+        return
+    found, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
+    practice = st.checkbox(
+        "Practice with sample data (free, takes about a minute)",
+        help="Uses two made-up cities and one question per vertical, with a scripted AI.",
+        key="plan-practice",
+    )
+    verticals = st.multiselect(
+        "Verticals",
+        list(found),
+        default=list(found),
+        format_func=lambda n: found[n].title,
+        help="Each vertical has its own question bank, agents and scoring workbook "
+        "(agent_setup/verticals/).",
+        key="plan-verticals",
+    )
+    if practice:
+        configs, _ = register(practice_services(BASE_SETTINGS).settings.city_register)
+    else:
+        configs, _ = register(BASE_SETTINGS.city_register)
+    if not configs:
+        st.error("No cities are ready. Open **City register** to add one.")
+        return
+    preselect = [c for c in st.session_state.get("preselect-plan", []) if c in configs]
+    cities = st.multiselect(
+        "Cities",
+        list(configs),
+        default=list(configs) if practice else preselect or list(configs)[:1],
+        format_func=lambda c: configs[c].name,
+        key=f"plan-cities-{practice}",
+    )
+    steps = (
+        st.pills(
+            "Steps",
+            [1, 2, 3],
+            selection_mode="multi",
+            default=[1, 2, 3],
+            format_func=lambda n: f"{n} · {STEP_LABELS[n]}",
+            key="plan-steps",
+        )
+        or []
+    )
+    with st.expander("Review and options", expanded=1 in steps and 2 in steps):
+        pause = st.toggle(
+            "Pause after Step 1 so the team can review the Sources workbooks (recommended)",
+            value=not practice,
+            disabled=not (1 in steps and 2 in steps),
+            help="Answers use only the reviewed Citation Sheet. Pausing lets the team untick "
+            "unsuitable sources and add known ones before anything is answered.",
+        )
+        review_parastatals = st.toggle(
+            "In Step 1, pause to review the parastatals found before researching their sources",
+            value=True,
+            help="Applies to verticals that discover agencies (Parastatal).",
+        )
+    stage_count = len(verticals) * len(steps)
+    gaps = []
+    if 2 in steps and 1 not in steps:
+        gaps.append("Step 2 needs each city's Sources workbook from Step 1.")
+    if 3 in steps and 2 not in steps:
+        gaps.append("Step 3 only scores cities whose Step 2 is up to date.")
+    for gap in gaps:
+        st.caption(f"ℹ️ {gap} Cities that aren't ready are listed, not forced through.")
+    if verticals and cities and steps:
+        names = ", ".join(found[v].title for v in verticals)
+        st.markdown(
+            f"**{stage_count} stage(s)**: Steps {', '.join(map(str, sorted(steps)))} for "
+            f"{names}, in **{len(cities)} city(ies)**."
+        )
+    blocked = not (verticals and cities and steps)
+    if not practice and not (os.getenv("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_AUTH_TOKEN")):
+        st.error(
+            "This needs an Anthropic API key. Ask your developer to add it to the .env "
+            "file, then restart the app.",
+            icon=":material/key_off:",
+        )
+        blocked = True
+    elif not practice:
+        st.caption(
+            "Real runs cost money and take time: each vertical and city is researched one "
+            "after another. You can leave this page and come back while the black window "
+            "stays open."
+        )
+    if st.button("Start", type="primary", icon=":material/play_arrow:", disabled=blocked):
+        run_store()["current"] = PlanRun(
+            BASE_SETTINGS,
+            verticals,
+            {c: configs[c].name for c in cities},
+            sorted(steps),
+            practice=practice,
+            review_parastatals=review_parastatals,
+            pause_after_sources=pause,
+        ).start()
+        st.switch_page(PAGES["run"])
+
+
+STEP_LABELS = {1: "Find sources", 2: "Answer questions", 3: "Score"}
+BUSY = {"running", "waiting_for_review", "waiting_for_sources"}
+
+
 def step1_page():
     start_page("sources")
 
@@ -155,11 +312,21 @@ def checks_page():
     start_page("checks")
 
 
+CITY_UNITS = {"parastatal": "parastatals", "city_government": "city government"}
+
+
 def start_page(action: str):
     title, kicker, lede = START_HEADERS[action]
+    if action == "sources" and settings.unit == "city_government":
+        title = "Find sources"
+        lede = (
+            f"{settings.vertical_title} assesses the city government itself. The agent checks "
+            "its official website and builds the Citation Sheet from the state's Acts, the "
+            "city's plans and other official sources."
+        )
     header(title, lede, kicker)
     current = run_store()["current"]
-    if current and current.status in {"running", "waiting_for_review"}:
+    if current and current.status in BUSY:
         st.info("A run is already in progress.", icon=":material/hourglass_top:")
         if st.button("Go to the current run", type="primary"):
             st.switch_page(PAGES["run"])
@@ -204,7 +371,7 @@ def start_page(action: str):
     )
     chosen: dict[str, list[str] | None] = {}
     blocked_cities = []
-    if step == "sources" and action != "checks":
+    if step == "sources" and action != "checks" and settings.unit == "parastatal":
         st.caption(
             "The register's list of parastatals is only a starting point; the agent finds the rest."
         )
@@ -247,7 +414,7 @@ def start_page(action: str):
             "Sections of the question bank",
             list(pillars),
             default=list(pillars),
-            format_func=pillars.get,
+            format_func=lambda c: pillars.get(c) or c,
         )
         only = ""
     upload = None
@@ -347,7 +514,7 @@ def start_page(action: str):
         ]
         where = configs[runnable[0]].name if len(runnable) == 1 else f"{len(runnable)} cities"
         run_store()["current"] = BatchRun(
-            services or default_services(),
+            services or default_services(settings),
             {c: configs[c].name for c in runnable},
             inputs,
             {c: chosen.get(c) for c in runnable} if action == "answers" else None,
@@ -361,10 +528,147 @@ def start_page(action: str):
 # ---------------------------------------------------------------------------------------
 # Current run
 # ---------------------------------------------------------------------------------------
+STAGE_ICON = {
+    "waiting": "⚪ Waiting",
+    "running": "🔵 Running",
+    "needs_review": "🟠 Needs you",
+    "done": "🟢 Done",
+    "failed": "🔴 Stopped",
+    "skipped": "⚪ Nothing to do",
+}
+
+
+def plan_view(plan: PlanRun) -> None:
+    header(plan.label, f"Started {plan.started:%d %b %Y, %H:%M}", "Current run")
+    batch = plan.batch
+    reviewing = batch is not None and batch.status == "waiting_for_review"
+    if reviewing or plan.status not in {"running", "waiting_for_review"}:
+        plan_stages(plan)  # while it runs, the live part below shows them
+    if plan.status == "waiting_for_sources":
+        st.warning(
+            "**Step 1 is done. Review the Sources workbooks before anything is answered.** "
+            "Open each city in **City files** (choose its vertical in the sidebar), check the "
+            "parastatals and the Citation Sheet, add sources you know, save and close the "
+            "workbook. Then continue.",
+            icon=":material/front_hand:",
+        )
+        if st.button("Continue to Step 2", type="primary", icon=":material/play_arrow:"):
+            plan.continue_after_review()
+            st.rerun()
+        return
+    batch = plan.batch
+    if batch is not None and batch.status == "waiting_for_review":
+        review_panel(batch)
+    elif plan.status in {"running", "waiting_for_review"}:  # just continued: catching up
+        plan_progress(plan)
+    elif plan.status == "failed":
+        st.error(plan.error, icon=":material/error:")
+    else:
+        plan_results(plan)
+
+
+def plan_stages(plan: PlanRun) -> None:
+    rows = []
+    for stage in plan.stages:
+        note = stage.note
+        if stage.status == "running" and stage.step == 3 and stage.progress[1]:
+            note = f"{stage.progress[0]} of {stage.progress[1]} rows scored"
+        rows.append((stage.title, STAGE_ICON[stage.status], note))
+    st.dataframe(
+        pd.DataFrame(rows, columns=["Stage", "Status", "Outcome"]),
+        hide_index=True,
+        use_container_width=True,
+    )
+
+
+@st.fragment(run_every=2)
+def plan_progress(plan: PlanRun) -> None:
+    batch = plan.batch
+    if plan.status not in {"running", "waiting_for_review"} or (
+        batch is not None and batch.status == "waiting_for_review"
+    ):
+        st.rerun()  # redraw the whole page: a review, the pause, or the end
+    plan_stages(plan)
+    stage = plan.current
+    if stage is None:
+        st.caption("Moving to the next stage…")
+        return
+    st.markdown(f"#### Now: {stage.title}")
+    if stage.batch is not None:
+        live_progress(stage.batch)
+    else:
+        done, total = stage.progress
+        st.progress(
+            done / total if total else 0.0,
+            text=f"{done} of {total} rows scored" if total else "Preparing…",
+        )
+
+
+STAGE_NEXT = {
+    1: [
+        "Open each city's Sources workbook: check the parastatals and the Citation Sheet, "
+        "untick anything unsuitable, add sources you know, save and close it.",
+        "Then run Step 2 (or continue the run).",
+    ],
+    2: [
+        "Open each answers workbook: start with Needs Attention, check answers against their "
+        "Citation ID and quote, and use the Reviewer Decision column.",
+        "Then run Step 3 to score the answers.",
+    ],
+}
+
+
+def stage_report(stage):
+    """A stage's outcome in the same shape as a Step 3 report: files, problems, what next."""
+    import scoring_page
+
+    if stage.report is not None:
+        return stage.report
+    report = scoring_page.workflow.StepReport(stage.title)
+    if stage.batch is None:
+        return report
+    kind = "Sources workbook" if stage.step == 1 else "answers workbook"
+    for run in stage.batch.runs.values():
+        report.done.append(f"{run.label}: {city_outcome(run)}")
+        workbook = (run.result or {}).get("output_workbook")
+        if workbook and Path(workbook).exists():
+            report.add_file(Path(workbook), f"{run.label}'s {kind}.")
+        report.problems += [
+            f"{run.label}: {i.message}" for i in team_issues(run.issues) if i.severity != "info"
+        ]
+    if report.files:
+        report.next_steps = list(STAGE_NEXT[stage.step])
+    return report
+
+
+def plan_results(plan: PlanRun) -> None:
+    import scoring_page
+
+    st.success(
+        "Finished. Each stage's files and what to do next are below.",
+        icon=":material/check_circle:",
+    )
+    if plan.practice:
+        st.warning(PRACTICE_NOTE, icon=":material/school:")
+    last = len(plan.stages) - 1
+    for i, stage in enumerate(plan.stages):
+        with st.expander(f"{stage.title} · {STAGE_ICON[stage.status]}", expanded=i == last):
+            scoring_page.show_report(stage_report(stage), open_file, key=f"plan-{plan.id}-{i}")
+    row = st.container(horizontal=True)
+    row.page_link(PAGES["files"], label="City files", icon=":material/folder_open:")
+    row.page_link(PAGES["scores"], label="Scores", icon=":material/leaderboard:")
+    if row.button("Start another run", icon=":material/add:"):
+        st.switch_page(PAGES["plan"])
+
+
 def run_page():
-    batch: BatchRun | None = run_store()["current"]
+    current = run_store()["current"]
+    if isinstance(current, PlanRun):
+        plan_view(current)
+        return
+    batch: BatchRun | None = current
     if batch is None:
-        header("Current run", "Nothing is running. Start Step 1 or Step 2.", "Assess")
+        header("Current run", "Nothing is running. Start Step 1, 2 or 3.", "Assess")
         st.page_link(
             PAGES["step1"],
             label="Go to Step 1: Find parastatals and sources",
@@ -587,6 +891,12 @@ def answers_results(slug: str, run: PipelineRun):
     if answers:
         st.write(headline(answers, issues))
     if run.output_dir and (workbook := next(run.output_dir.glob("ASICS_*.xlsx"), None)):
+        if st.button(
+            "Open the answers workbook in Excel",
+            icon=":material/table_view:",
+            key=f"open-wb-{slug}",
+        ):
+            open_file(workbook)
         st.download_button(
             f"Download the {run.label} answers workbook",
             workbook.read_bytes(),
@@ -631,6 +941,13 @@ def results_panel(batch: BatchRun):
     st.success(f"Finished: {done} of {len(runs)} city(ies) done.", icon=":material/check_circle:")
     if batch.label.startswith("Practice"):
         st.warning(PRACTICE_NOTE, icon=":material/school:")
+    if batch.step == "answers" and done:
+        st.info(
+            "**Next:** review the answers, then run **Step 3: Score** for the cities that are "
+            "done.",
+            icon=":material/arrow_forward:",
+        )
+        st.page_link(PAGES["step3"], label="Go to Step 3", icon=":material/scoreboard:")
     if batch.step == "sources" and done:
         st.info(
             "**Next:** open each city's Sources workbook, check the parastatals and the "
@@ -753,10 +1070,16 @@ def city_folders() -> list[Path]:
 
 def city_workbooks() -> list[Path]:
     """Every Sources and answers workbook, newest first (practice ones included)."""
-    found = [p for p in settings.outputs_dir.glob("**/cities/*/ASICS_*_Sources.xlsx")]
-    found += [p for p in settings.outputs_dir.glob("**/cities/*/answers/*/ASICS_Parastatal_*.xlsx")]
+    root = settings.outputs_dir
+    found = [p for p in root.glob("**/cities/*/ASICS_*_Sources.xlsx")]
+    found += [p for p in root.glob(f"**/cities/*/answers/*/{answers_pattern(settings)}")]
     return sorted(
-        (p for p in found if "re-checked" not in p.name),
+        (
+            p
+            for p in found
+            if "re-checked" not in p.name
+            and p.relative_to(root).parts[0] != "verticals"  # other verticals' folders
+        ),
         key=lambda p: p.stat().st_mtime,
         reverse=True,
     )
@@ -781,7 +1104,7 @@ def describe_workbook(path: Path) -> str:
 def files_page():
     import city_view_page
 
-    city_view_page.render(city_folders(), open_file, zip_folder, header)
+    city_view_page.render(city_folders(), open_file, zip_folder, header, answers_pattern(settings))
 
 
 def recheck_page():
@@ -855,9 +1178,21 @@ def setup_page():
     agent_setup_page.render(settings, register, open_file, show_issue, question_bank)
 
 
+def step3_page():
+    import scoring_page as page
+
+    page.render_step3(settings, open_file, register)
+
+
+def scores_page():
+    import scoring_page as page
+
+    page.render_scores(settings, open_file)
+
+
 def help_page():
     header("Help", "How the tool works and how to review its results.")
-    st.header("How it works: two steps")
+    st.header("How it works: three steps")
     st.markdown(
         "1. **Step 1: Find parastatals and sources.** For each city, the agent finds the "
         "parastatals itself, checks each one's official website (with a score you can see "
@@ -867,7 +1202,14 @@ def help_page():
         "sources you don't want, and add any sources you know about. Nothing is answered yet.\n"
         "3. **Step 2: Answer questions.** Every answer uses **only** the Citation Sheet rows "
         "marked *Use for Answers? = Yes*, and names the **Citation ID** it relies on. If no "
-        "source answers a question, it says so, and suggests what kind of source to add."
+        "source answers a question, it says so, and suggests what kind of source to add.\n"
+        "4. **Step 3: Score.** Only after Step 2, and only while the Sources workbook hasn't "
+        "changed since. Each question is scored from its Step 2 answer and the Citation Sheet; "
+        "the AI never searches the web here. It must name the Citation ID and quote it word for "
+        "word (checked in code); the document name and link are copied from the Citation "
+        "Sheet. Where Step 2 found no evidence, the row is left for a person. Interns score "
+        "the same workbook in Excel, with the same Step 2 evidence listed in their copy; the "
+        "**Scores** page shows both side by side."
     )
     st.header("How the official website is checked")
     st.markdown(
@@ -921,16 +1263,16 @@ def help_page():
 
 def home_page():
     header(
-        "Assess a city's parastatals",
-        "Three steps: the agent finds the sources, your team reviews them, then the agent "
-        "answers the question bank using only the reviewed sources.",
+        "Assess a city's parastatals"
+        if settings.unit == "parastatal"
+        else f"Assess a city · {settings.vertical_title}",
+        "Three steps, in order: find and review the sources (the Citation Sheet), answer the "
+        "questions from those sources only, then score each answer from its citation.",
     )
     current = run_store()["current"]
-    if current and current.status == "waiting_for_review":
+    if current and current.status in {"waiting_for_review", "waiting_for_sources"}:
         st.warning("**A run is waiting for your review.**", icon=":material/front_hand:")
-        st.page_link(
-            PAGES["run"], label="Review the parastatals now", icon=":material/arrow_forward:"
-        )
+        st.page_link(PAGES["run"], label="Review it now", icon=":material/arrow_forward:")
     elif current and current.status == "running":
         st.info(f"**A run is in progress:** {current.label}", icon=":material/hourglass_top:")
         st.page_link(PAGES["run"], label="See its progress", icon=":material/arrow_forward:")
@@ -939,23 +1281,25 @@ def home_page():
         (
             1,
             "Find sources",
-            "Finds each city's parastatals, checks their websites and builds the Citation Sheet.",
+            f"Finds each city's {CITY_UNITS[settings.unit]} and builds the Citation Sheet. "
+            "Your team then reviews it in the city's Sources workbook.",
             "step1",
             "Start Step 1",
         ),
         (
             2,
-            "Review sources",
-            "Check the parastatals and sources, untick anything unsuitable, add what you know.",
-            "files",
-            "Open City files",
-        ),
-        (
-            3,
             "Answer questions",
             "Answers each question using only the reviewed Citation Sheet, citing its row.",
             "step2",
             "Start Step 2",
+        ),
+        (
+            3,
+            "Score",
+            "After Step 2: scores each answer from its citation. The AI and interns fill in "
+            "the same scoring workbook.",
+            "step3",
+            "Start Step 3",
         ),
     ]
     for column, (number, title, text, page, label) in zip(st.columns(3), steps, strict=True):
@@ -963,6 +1307,11 @@ def home_page():
             step_card(number, title, text)
             st.page_link(PAGES[page], label=label, icon=":material/arrow_forward:")
 
+    st.page_link(
+        PAGES["plan"],
+        label="Run several verticals and steps for your cities in one go",
+        icon=":material/playlist_play:",
+    )
     st.markdown("#### Your cities")
     cities_overview()
     st.caption(
@@ -975,7 +1324,8 @@ STAGES = {  # stage -> (label shown in the table, what to do next)
     "not_started": ("⚪ Not started", "Find sources (Step 1)"),
     "sources": ("🔵 Sources ready", "Review sources, then answer (Step 2)"),
     "changed": ("🟠 Sources changed", "Answer again (Step 2)"),
-    "answered": ("🟢 Answered", "Review the answers"),
+    "answered": ("🟢 Answered", "Score (Step 3)"),
+    "scored": ("🟣 Scored", "Review the scores"),
 }
 
 
@@ -1005,7 +1355,8 @@ def city_status(city) -> dict:
     workspace = workspace_for(settings.outputs_dir, city.name)
     sources = sources_path(workspace, city.name)
     answers = sorted(
-        (workspace / "answers").glob("*/ASICS_Parastatal_*.xlsx"), key=lambda p: p.stat().st_mtime
+        (workspace / "answers").glob(f"*/{answers_pattern(settings)}"),
+        key=lambda p: p.stat().st_mtime,
     )
     exists = sources.exists()
     status = _city_status(
@@ -1017,6 +1368,12 @@ def city_status(city) -> dict:
     times = ([sources.stat().st_mtime] if exists else []) + (
         [answers[-1].stat().st_mtime] if answers else []
     )
+    if status["stage"] == "answered" and answers:
+        import scoring_page
+
+        scored = scoring_page.city_scored_at(settings, city.name)
+        if scored and datetime.fromisoformat(scored).timestamp() >= answers[-1].stat().st_mtime:
+            status = {**status, "stage": "scored"}
     return {
         **status,
         "sources_path": sources if exists else None,
@@ -1075,8 +1432,9 @@ def cities_overview() -> None:
         st.caption("No cities match.")
         return
     frame = pd.DataFrame(rows)
+    hidden = ["slug"] + (["Parastatals"] if settings.unit != "parastatal" else [])
     event = st.dataframe(
-        frame.drop(columns="slug"),
+        frame.drop(columns=hidden),
         hide_index=True,
         use_container_width=True,
         on_select="rerun",
@@ -1105,22 +1463,34 @@ def city_actions(slug: str, city, status: dict) -> None:
             return
         if status["stage"] == "answered":
             if bar.button(
-                "Open answers",
+                "Score",
                 type="primary",
+                icon=":material/scoreboard:",
+                help="Go to Step 3 for this city",
+            ):
+                go_to_step("step3", slug)
+        if status["stage"] == "scored":
+            if bar.button("See scores", type="primary", icon=":material/leaderboard:"):
+                st.switch_page(PAGES["scores"])
+            if bar.button("Score again", icon=":material/scoreboard:"):
+                go_to_step("step3", slug)
+        if status["stage"] in {"answered", "scored"}:
+            if bar.button(
+                "Open answers",
                 icon=":material/table_view:",
                 help="Opens the latest answers workbook in Excel",
             ):
                 open_file(status["answers_path"])
         if bar.button(
             "View",
-            type="primary" if status["stage"] != "answered" else "secondary",
+            type="primary" if status["stage"] not in {"answered", "scored"} else "secondary",
             icon=":material/visibility:",
             help="See its parastatals, citations and answers here",
         ):
             view_city(city)
         if bar.button("Sources in Excel", icon=":material/edit_document:"):
             open_file(status["sources_path"])
-        label = "Answer again" if status["stage"] in {"answered", "changed"} else "Answer"
+        label = "Answer again" if status["stage"] in {"answered", "scored", "changed"} else "Answer"
         if bar.button(label, icon=":material/task_alt:", help="Go to Step 2 for this city"):
             go_to_step("step2", slug)
         if bar.button(
@@ -1138,14 +1508,18 @@ def view_city(city) -> None:
 
 
 def go_to_step(page: str, slug: str) -> None:
-    """Open Step 1 or Step 2 with this city already selected."""
-    st.session_state[f"preselect-{page}"] = [slug]
+    """Open Step 1, 2 or 3 with this city already selected."""
+    if page == "step3":  # Step 3 lists cities by name
+        configs, _ = register()
+        st.session_state["preselect-step3"] = [configs[slug].name]
+    else:
+        st.session_state[f"preselect-{page}"] = [slug]
     st.switch_page(PAGES[page])
 
 
 def run_title() -> str:
     current = run_store()["current"]
-    if current and current.status == "waiting_for_review":
+    if current and current.status in {"waiting_for_review", "waiting_for_sources"}:
         return "Current run · needs you"
     if current and current.status == "running":
         return "Current run · working"
@@ -1154,24 +1528,28 @@ def run_title() -> str:
 
 PAGES = {
     "home": st.Page(home_page, title="Home", icon=":material/home:", default=True),
+    "plan": st.Page(plan_page, title="Run steps", icon=":material/playlist_play:"),
     "step1": st.Page(step1_page, title="Step 1 · Find sources", icon=":material/travel_explore:"),
     "step2": st.Page(step2_page, title="Step 2 · Answer questions", icon=":material/task_alt:"),
+    "step3": st.Page(step3_page, title="Step 3 · Score", icon=":material/scoreboard:"),
     "run": st.Page(run_page, title=run_title(), icon=":material/pending:", url_path="run_page"),
     "files": st.Page(files_page, title="City files", icon=":material/folder_open:"),
     "recheck": st.Page(recheck_page, title="Re-check links", icon=":material/link:"),
     "register": st.Page(register_page, title="City register", icon=":material/location_city:"),
     "setup": st.Page(setup_page, title="Agent setup", icon=":material/psychology:"),
     "checks": st.Page(checks_page, title="Question bank check", icon=":material/rule:"),
+    "scores": st.Page(scores_page, title="Scores", icon=":material/leaderboard:"),
     "help": st.Page(help_page, title="Help", icon=":material/help:"),
 }
 navigation = st.navigation(
     {
         "": [PAGES["home"]],
-        "Assess": [PAGES["step1"], PAGES["step2"], PAGES["run"]],
-        "Results": [PAGES["files"], PAGES["recheck"]],
+        "Assess": [PAGES["plan"], PAGES["step1"], PAGES["step2"], PAGES["step3"], PAGES["run"]],
+        "Results": [PAGES["files"], PAGES["scores"], PAGES["recheck"]],
         "Settings": [PAGES["register"], PAGES["setup"], PAGES["checks"]],
         "Support": [PAGES["help"]],
-    }
+    },
+    expanded=True,  # show every page; don't fold the last ones behind "View more"
 )
 sidebar_footer()
 navigation.run()

@@ -241,7 +241,7 @@ def agents_view(root: Path):
             [
                 {
                     "Agent": a.title,
-                    "Step": a.step or "checks",
+                    "Step": str(a.step) if a.step else "checks",
                     "Prompt": a.prompt,
                     "Skills": ", ".join(a.skills),
                     "Tools": ", ".join(a.tools) or "none",

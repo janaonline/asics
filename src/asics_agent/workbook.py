@@ -22,16 +22,25 @@ CITATION_SHEET = "Citation Sheet"
 EXCEL_MAX_SHEET_TITLE = 31
 
 
-def scoring_sheet_title(city_name: str) -> str:
-    """ "Parastatal Scoring - <City>", shortened to fit Excel's 31-character limit."""
-    for title in (f"Parastatal Scoring - {city_name}", f"Scoring - {city_name}"):
+def file_part(settings) -> str:
+    """The vertical's name in file names: "Parastatal" -> ASICS_Parastatal_<City>_Phase2.xlsx."""
+    return settings.vertical_title.replace(" ", "")
+
+
+def answers_pattern(settings) -> str:
+    return f"ASICS_{file_part(settings)}_*.xlsx"
+
+
+def scoring_sheet_title(city_name: str, vertical_title: str = "Parastatal") -> str:
+    """ "<Vertical> Scoring - <City>", shortened to fit Excel's 31-character limit."""
+    for title in (f"{vertical_title} Scoring - {city_name}", f"Scoring - {city_name}"):
         if len(title) <= EXCEL_MAX_SHEET_TITLE:
             return title
     return f"Scoring - {city_name}"[:EXCEL_MAX_SHEET_TITLE].rstrip()
 
 
 def is_scoring_sheet(title: str) -> bool:
-    return title.startswith(("Parastatal Scoring", "Scoring - "))
+    return title.startswith("Scoring - ") or " Scoring - " in title
 
 
 # (canonical header, accepted aliases in an existing sheet). New sheets use this order,
@@ -387,7 +396,7 @@ def _write_issue_sheets(wb: Workbook, issues: list[Issue]) -> None:
 
 def write_workbook(
     *,
-    base: Path,
+    base: Path | None,
     out: Path,
     city_name: str,
     questions: dict[str, Question],
@@ -397,8 +406,13 @@ def write_workbook(
     sources: list[Source],
     answers: list[Answer],
     issues: list[Issue],
+    title: str = "Parastatal",
 ) -> Path:
-    wb = load_workbook(base)
+    if base is None:
+        wb = Workbook()
+        wb.remove(wb.active)
+    else:
+        wb = load_workbook(base)
     names = {p.id: p.name for p in parastatals}
     out_dir = out.parent
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -428,7 +442,7 @@ def write_workbook(
         key_columns=["Parastatal", "Official URL"],
     )
 
-    scoring_title = scoring_sheet_title(city_name)
+    scoring_title = scoring_sheet_title(city_name, title)
     ws = _find_sheet(wb, scoring_title) or _new_sheet(
         wb,
         scoring_title,

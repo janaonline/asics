@@ -138,20 +138,35 @@ def _body(root: Path, kind: str, name: str) -> str:
     return split_front_matter(_read(path))[1].strip()
 
 
-def system_prompt(root: Path, agent: AgentConfig, extra_skills: list[str] = ()) -> str:
-    """Shared rules, then the agent's skills, then its task prompt. This part is the same for
-    every call of the agent (memory goes in the message), which keeps calls cache-friendly."""
-    parts = [_body(root, "prompts", "shared-rules")]
+def system_prompt(
+    root: Path, agent: AgentConfig, extra_skills: list[str] = (), rules: str = "shared-rules"
+) -> str:
+    """Shared rules (the vertical's), then the agent's skills, then its task prompt. This part
+    is the same for every call of the agent (memory goes in the message), which keeps calls
+    cache-friendly."""
+    parts = [_body(root, "prompts", rules)]
     for skill in [*agent.skills, *extra_skills]:
         parts.append(f"# SKILL: {skill}\n{_body(root, 'skills', skill)}")
     parts.append(_body(root, "prompts", agent.prompt))
     return "\n\n".join(parts)
 
 
-def section_guidance(root: Path, code: str) -> tuple[str, str, str]:
+def section_skill(root: Path, code: str, vertical: str = "") -> str | None:
+    """The guidance skill for a section: the vertical's own (skills/sections/<vertical>/
+    <code>.md) if it has one, else the shared one (skills/sections/<code>.md)."""
+    for name in ([f"sections/{vertical}/{code.lower()}"] if vertical else []) + [
+        f"sections/{code.lower()}"
+    ]:
+        if (root / "skills" / f"{name}.md").exists():
+            return name
+    return None
+
+
+def section_guidance(root: Path, code: str, vertical: str = "") -> tuple[str, str, str]:
     """(title, guidance, evidence hints) for a question-bank section, or empty strings."""
-    path = root / "skills" / "sections" / f"{code.lower()}.md"
-    if not path.exists():
+    skill = section_skill(root, code, vertical)
+    path = root / "skills" / f"{skill}.md" if skill else None
+    if path is None:
         return "", "", ""
     meta, body = split_front_matter(_read(path))
     return meta.get("title", code), body.strip(), str(meta.get("evidence_hints", ""))
@@ -392,11 +407,11 @@ def _validate_tools(root: Path, agent: AgentConfig, where: str) -> list[Issue]:
                     "blocked_domains, not both.",
                 )
             )
-    if agent.step == 2 and agent.tools.keys() & WEB_TOOLS:
+    if agent.step in (2, 3) and agent.tools.keys() & WEB_TOOLS:
         issues.append(
             _dev(
                 "error",
-                f"{where}: Step 2 agents answer only from the Citation "
+                f"{where}: Step {agent.step} agents work only from the Citation "
                 "Sheet, so they must not have web_search or web_fetch.",
             )
         )

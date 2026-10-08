@@ -189,7 +189,11 @@ def call_json(
         scope.used = [n.path for n in notes_used]
         if block := memory_block(notes_used):
             user = f"{block}\n\n# TASK INPUT\n{user}"
-    messages = [SystemMessage(system_prompt(root, config, list(extra_skills))), HumanMessage(user)]
+    rules = getattr(settings, "shared_rules", "shared-rules")
+    messages = [
+        SystemMessage(system_prompt(root, config, list(extra_skills), rules)),
+        HumanMessage(user),
+    ]
     urls: set[str] = set()
     notes: list[str] = []
 

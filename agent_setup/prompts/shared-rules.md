@@ -20,8 +20,9 @@ can open the exact URL and read the actual page or document, and that content is
 India Code pages that show only metadata about an Act (not its text) are NOT verified.
 
 # SOURCE PRIORITY
-Prefer, in this order: (1) the official parastatal website; (2) official Government of
-Karnataka / state government websites; (3) official Government of India websites;
+Prefer, in this order: (1) the official parastatal website; (2) official websites of the
+government of the state the city is in (named in the task input), including its gazette;
+(3) official Government of India websites;
 (4) official legislation or government PDFs; (5) official annual reports, notifications or
 government publications; (6) other authoritative sources, only when necessary.
 Never present unofficial aggregators as official sources.

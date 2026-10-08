@@ -22,7 +22,12 @@ from typing import Literal
 from langgraph.graph import END, START, StateGraph
 from pydantic import BaseModel
 
-from asics_agent.agent_setup import MemoryScope, section_codes, section_guidance
+from asics_agent.agent_setup import (
+    MemoryScope,
+    section_codes,
+    section_guidance,
+    section_skill,
+)
 from asics_agent.agents.common import read_source_text
 from asics_agent.agents.state import AnswerTask, AnswerTaskOutput
 from asics_agent.links.text import locate_quote, relevance, search_phrase
@@ -30,6 +35,7 @@ from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Answer, Source
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext
+from asics_agent.verticals import agent_for
 
 MAX_SOURCES = 8  # per answer, most relevant first
 
@@ -95,12 +101,12 @@ def _location(source: Source, quote: str) -> dict:
     }
 
 
-def _question_block(section_title: str, task: AnswerTask) -> str:
+def _question_block(section_title: str, task: AnswerTask, unit_label: str = "Parastatal") -> str:
     q, p, run = task["question"], task["parastatal"], task["run"]
     max_score = f"{q.max_score:g}" if q.max_score is not None else "not given"
     return (
         f"City: {run.city_name}, {run.state_name}. City government (ULG): {run.ulg}\n"
-        f"Parastatal: {p.name} ({p.id}), type {p.type}\n"
+        f"{unit_label}: {p.name} ({p.id}), type {p.type}\n"
         f"Section: {section_title or q.pillar_name}\n"
         f"Question {q.raw_id} [{q.tag}, max score {max_score}]: {q.text}\n"
         f"Assessment level: {q.assessment_level}\n"
@@ -118,7 +124,8 @@ def build_section_agent(code: str, services: Services):
 
     def answer_from_citations(task: AnswerTask) -> dict:
         q = task["question"]
-        title, guidance, hints = section_guidance(root, q.pillar)  # read fresh: edits apply
+        vertical = services.settings.vertical
+        title, guidance, hints = section_guidance(root, q.pillar, vertical)  # read fresh
         query = f"{q.text} {q.methodology} {q.evidence_requirement} {hints}"
         texts: dict[str, tuple[Source, str]] = {}
         full: dict[str, str] = {}
@@ -157,11 +164,11 @@ def build_section_agent(code: str, services: Services):
             )
             reply, _, _ = call_json(
                 services,
-                "answer-writer",
-                f"{_question_block(title, task)}\n--- CITATION SHEET SOURCES ---\n{evidence}",
+                agent_for(services.settings, "answer"),
+                f"{_question_block(title, task, services.settings.unit_label)}\n--- CITATION SHEET SOURCES ---\n{evidence}",
                 AnswerReply,
                 scope=scope,
-                extra_skills=[f"sections/{q.pillar.lower()}"] if guidance else [],
+                extra_skills=[s] if (s := section_skill(root, q.pillar, vertical)) else [],
                 # read_citation / search_citation_sheet reach only these rows.
                 tool_context=(
                     tools := ToolContext(

@@ -7,3 +7,7 @@ __pycache__/
 .langgraph_api/
 outputs/*
 !outputs/.gitkeep
+
+# scoring: practice runs and LibreOffice working files
+scoring/*/practice/
+scoring/*/.cache/

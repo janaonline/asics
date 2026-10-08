@@ -25,6 +25,7 @@ from asics_agent.models import Issue
 from asics_agent.progress import report
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext
+from asics_agent.verticals import agent_for
 
 
 def build_links_agent(services: Services):
@@ -83,8 +84,8 @@ def build_links_agent(services: Services):
         try:
             found, urls, rejected = call_json(
                 services,
-                "citation-builder",
-                f"Parastatal: {p.name} ({p.id}), type {p.type}\n"
+                agent_for(services.settings, "sources"),
+                f"{services.settings.unit_label}: {p.name} ({p.id}), type {p.type}\n"
                 f"City: {run.city_name}, {run.state_name}. City government (ULG): {run.ulg}\n"
                 f"Official website: {p.official_website or 'not confirmed'}\n\n"
                 f"{note}\nQuestions to support:\n{question_digest(questions)}\n\n"

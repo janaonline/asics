@@ -23,6 +23,7 @@ from asics_agent.models import CityConfig, Issue, Parastatal
 CITIES_SHEET, PARASTATALS_SHEET, GUIDE_SHEET = "Cities", "Parastatals", "How to Fill"
 
 CITY_COLUMNS = ["City", "State", "City government (ULG)", "Include in runs?", "Notes"]
+ALIASES = "Other names"  # optional column: other spellings, comma separated (e.g. Bangalore)
 PARASTATAL_COLUMNS = [
     "City",
     "Parastatal ID",
@@ -40,6 +41,7 @@ TYPES = {
     "Transport corporation": "transport_corporation",
     "Development authority": "development_authority",
     "Other": "other",
+    "City government": "city_government",
 }
 TYPE_LABELS = {v: k for k, v in TYPES.items()}
 # Yes/No column -> (Parastatal field, value assumed when the cell is left blank)
@@ -58,7 +60,8 @@ GUIDE = [
         "Cities sheet",
         'One row per city. "City government (ULG)" is the name of the city\'s '
         'municipal body. Set "Include in runs?" to No to hide a city from the app without '
-        "deleting it.",
+        'deleting it. "Other names" (optional) lists other spellings used in scoring '
+        "workbooks, comma separated, e.g. Bangalore for Bengaluru.",
     ),
     (
         "Parastatals sheet",
@@ -113,7 +116,9 @@ def _issue(severity: str, message: str, city: str | None = None) -> Issue:
     )
 
 
-def _rows(ws, columns: list[str], issues: list[Issue]) -> list[tuple[int, dict[str, str]]]:
+def _rows(
+    ws, columns: list[str], issues: list[Issue], optional: tuple[str, ...] = ()
+) -> list[tuple[int, dict[str, str]]]:
     header = [_text(c.value) for c in ws[1]]
     missing = [c for c in columns if c not in header]
     if missing:
@@ -125,10 +130,11 @@ def _rows(ws, columns: list[str], issues: list[Issue]) -> list[tuple[int, dict[s
             )
         )
         return []
-    index = {name: header.index(name) for name in columns}
+    index = {name: header.index(name) for name in [*columns, *optional] if name in header}
     rows = []
     for row_no, row in enumerate(ws.iter_rows(min_row=2, values_only=True), start=2):
         values = {name: _text(row[i]) if i < len(row) else "" for name, i in index.items()}
+        values.update({name: "" for name in optional if name not in values})
         if any(values.values()):
             rows.append((row_no, values))
     return rows
@@ -170,7 +176,7 @@ def load_register(path: Path) -> tuple[dict[str, CityConfig], list[Issue]]:
         return {}, issues
 
     cities: dict[str, dict] = {}
-    for row_no, v in _rows(wb[CITIES_SHEET], CITY_COLUMNS, issues):
+    for row_no, v in _rows(wb[CITIES_SHEET], CITY_COLUMNS, issues, optional=(ALIASES,)):
         name = v["City"]
         where = f"Cities sheet, row {row_no}"
         if not name:
@@ -188,6 +194,7 @@ def load_register(path: Path) -> tuple[dict[str, CityConfig], list[Issue]]:
             "state": v["State"],
             "ulg": v["City government (ULG)"],
             "include": include,
+            "aliases": [a.strip() for a in v[ALIASES].split(",") if a.strip()],
             "parastatals": [],
         }
 
@@ -249,6 +256,7 @@ def load_register(path: Path) -> tuple[dict[str, CityConfig], list[Issue]]:
             name=city["name"],
             state=city["state"],
             ulg=city["ulg"],
+            aliases=city["aliases"],
             parastatals=city["parastatals"],
         )
     return configs, issues
@@ -293,12 +301,19 @@ def write_register(path: Path, cities: list[CityConfig], city_notes: dict[str, s
 
     cities_ws = sheet(
         CITIES_SHEET,
-        CITY_COLUMNS,
-        {"City": 20, "State": 18, "City government (ULG)": 45, "Notes": 50},
+        [*CITY_COLUMNS, ALIASES],
+        {"City": 20, "State": 18, "City government (ULG)": 45, "Notes": 50, ALIASES: 30},
     )
     for city in cities:
         cities_ws.append(
-            [city.name, city.state, city.ulg, "Yes", (city_notes or {}).get(city.name, "")]
+            [
+                city.name,
+                city.state,
+                city.ulg,
+                "Yes",
+                (city_notes or {}).get(city.name, ""),
+                ", ".join(city.aliases),
+            ]
         )
     dropdown(cities_ws, 4, '"Yes,No"', "Choose Yes or No")
 
@@ -326,5 +341,7 @@ def write_register(path: Path, cities: list[CityConfig], city_notes: dict[str, s
         dropdown(ws, column, '"Yes,No"', "Choose Yes or No")
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    wb.save(path)
+    partial = path.with_name(f".{path.name}.writing")
+    wb.save(partial)
+    partial.replace(path)  # all at once: a reader never sees a half-written file
     return path

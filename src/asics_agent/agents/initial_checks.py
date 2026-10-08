@@ -21,9 +21,9 @@ from asics_agent.applicability import match_rule
 from asics_agent.cities import issues_for_city, load_register
 from asics_agent.llm import call_json
 from asics_agent.models import Issue, RunContext
-from asics_agent.question_bank import load_question_bank
 from asics_agent.services import Services
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
+from asics_agent.verticals import agent_for, load_bank
 
 _SCALE = re.compile(r"(?im)^\s*(?:score\s*)?(\d+(?:\.\d+)?)\s*(?:—|–|-|marks|if|where)")
 
@@ -76,7 +76,7 @@ def build_initial_checks(services: Services, step: str = "sources"):
                 ]
             }
         issues += issues_for_city(register_issues, city.name)
-        questions, bank_issues = load_question_bank(settings.question_bank)
+        questions, bank_issues = load_bank(settings)
         issues += bank_issues
 
         workspace = workspace_for(settings.outputs_dir, city.name)
@@ -233,7 +233,9 @@ def build_initial_checks(services: Services, step: str = "sources"):
             f"Q: {q.text}\nMethodology: {q.methodology}"
             for q in state["questions"].values()
         )
-        review, _, _ = call_json(services, "question-bank-reviewer", rows, BankReview)
+        review, _, _ = call_json(
+            services, agent_for(services.settings, "bank_review"), rows, BankReview
+        )
         return {
             "issues": [
                 _issue(

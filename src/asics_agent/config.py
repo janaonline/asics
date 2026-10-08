@@ -35,10 +35,31 @@ class Settings:
     llm_call_timeout: float
     user_agent: str
     max_evidence_chars: int
+    scoring_dir: Path = PROJECT_ROOT / "scoring" / "2027"  # templates, human/AI copies, results
+    # The vertical being run (agent_setup/verticals/<vertical>.md; see verticals.py). The
+    # defaults are the Parastatal vertical's.
+    vertical_title: str = "Parastatal"
+    vertical_code: str = "PARASTATAL"
+    unit: str = "parastatal"  # what is assessed: "parastatal" or "city_government"
+    unit_label: str = "Parastatal"
+    shared_rules: str = "shared-rules"
+    agents: tuple = ()  # (role, agent name) pairs that differ from the defaults
+    question_bank_sheet: str = ""
+    question_columns: tuple = ()  # (our column name, the bank's column name) pairs
+    scoring_workbook: Path | None = None
+    outputs_root: Path | None = None  # the outputs folder before the vertical's subfolder
 
 
 @lru_cache
 def get_settings() -> Settings:
+    """Settings for the vertical named by ASICS_VERTICAL (default: parastatal)."""
+    from asics_agent.verticals import settings_for
+
+    base = _base_settings()
+    return settings_for(base, base.vertical)
+
+
+def _base_settings() -> Settings:
     return Settings(
         model=os.getenv("ASICS_MODEL", "claude-opus-5-5"),
         effort=os.getenv("ASICS_EFFORT", "high"),
@@ -60,4 +81,5 @@ def get_settings() -> Settings:
             "ASICS_USER_AGENT", "Mozilla/5.0 (compatible; ASICS-Research-Agent/0.2)"
         ),
         max_evidence_chars=int(os.getenv("ASICS_MAX_EVIDENCE_CHARS", "60000")),
+        scoring_dir=_path("ASICS_SCORING_DIR", "scoring/2027"),
     )

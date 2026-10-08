@@ -26,6 +26,37 @@ class Services:
         return self._models[model]
 
 
+class AsicsChatAnthropic(ChatAnthropic):
+    """ChatAnthropic that keeps each content block's `caller` when replaying a conversation.
+
+    With the current web_search / web_fetch tools, Claude often runs searches from inside
+    code execution; those blocks carry a `caller`. langchain-anthropic drops `caller` from
+    server tool blocks when it sends earlier turns back, and the API then rejects the request
+    ("code_execution tool use ... without a corresponding code_execution_tool_result")
+    whenever a turn continues after our own tool (e.g. check_link). Put it back.
+    """
+
+    def _get_request_payload(self, input_, *, stop=None, **kwargs) -> dict:
+        payload = super()._get_request_payload(input_, stop=stop, **kwargs)
+        callers = {}
+        for message in self._convert_input(input_).to_messages():
+            for block in message.content if isinstance(message.content, list) else []:
+                if isinstance(block, dict) and block.get("caller"):
+                    callers[(block.get("type"), _block_id(block))] = block["caller"]
+        if callers:
+            for message in payload.get("messages", []):
+                content = message.get("content")
+                for block in content if isinstance(content, list) else []:
+                    key = (block.get("type"), _block_id(block)) if isinstance(block, dict) else None
+                    if key in callers and "caller" not in block:
+                        block["caller"] = callers[key]
+        return payload
+
+
+def _block_id(block: dict) -> str | None:
+    return block.get("id") or block.get("tool_use_id")
+
+
 def make_chat_model(settings: Settings, model: str | None = None) -> ChatAnthropic:
     extra = {}
     if settings.enable_fallbacks:
@@ -35,7 +66,7 @@ def make_chat_model(settings: Settings, model: str | None = None) -> ChatAnthrop
             "betas": ["server-side-fallback-2026-07-01"],
             "model_kwargs": {"fallbacks": "default"},
         }
-    return ChatAnthropic(
+    return AsicsChatAnthropic(
         model=model or settings.model,
         max_tokens=32000,
         effort=settings.effort,
@@ -45,8 +76,9 @@ def make_chat_model(settings: Settings, model: str | None = None) -> ChatAnthrop
     )
 
 
-def default_services() -> Services:
-    settings = get_settings()
+def default_services(settings: Settings | None = None) -> Services:
+    """Real Claude and HTTP, for the given vertical's settings (default: ASICS_VERTICAL)."""
+    settings = settings or get_settings()
     return Services(
         llm=make_chat_model(settings),
         http=make_http_client(settings.user_agent, settings.http_timeout),

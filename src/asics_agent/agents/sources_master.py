@@ -49,7 +49,8 @@ def build_sources_graph(
         return END if has_errors(state, "initial_checks") else "parastatal_discovery"
 
     def confirm_scope(state: MasterState) -> dict:
-        if state.get("auto_approve") or state.get("skip_research"):
+        city_level = services.settings.unit == "city_government"  # one unit: nothing to review
+        if state.get("auto_approve") or state.get("skip_research") or city_level:
             return {}
         decision = interrupt(
             {

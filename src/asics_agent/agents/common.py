@@ -12,6 +12,7 @@ from asics_agent.links.text import rank_chunks
 from asics_agent.llm import call_json
 from asics_agent.models import Issue, Parastatal, Question, RunContext, Source
 from asics_agent.services import Services
+from asics_agent.verticals import agent_for
 
 OFFICIAL_SUFFIXES = (".gov.in", ".nic.in", ".gov", ".kar.nic.in")
 UNVERIFIED_SCORE_CAP = 0  # "0 = unusable/unverified"
@@ -111,8 +112,9 @@ def vet_source(
         text, trimmed = read_source_text(source, candidate.useful_for, settings.max_evidence_chars)
         assessment, _, _ = call_json(
             services,
-            "source-assessor",
-            f"Parastatal: {parastatal.name} ({parastatal.id})\n"
+            agent_for(services.settings, "assess"),
+            f"{services.settings.unit_label}: {parastatal.name} ({parastatal.id})\n"
+            f"City: {run.city_name}, {run.state_name}\n"
             f"Title: {candidate.title}\nURL: {url}\nSource type: {candidate.source_type}\n"
             f"What This Source Is Useful For (claimed): {candidate.useful_for}\n"
             f"{'(Text below is an excerpt of the most relevant parts.)' if trimmed else ''}\n\n"

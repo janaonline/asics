@@ -39,12 +39,46 @@ def _score(value) -> float | None:
         return None
 
 
-def load_question_bank(path: Path) -> tuple[dict[str, Question], list[Issue]]:
-    ws = load_workbook(path, read_only=True, data_only=True)[SHEET]
+# Columns a vertical's bank may leave out: every question then applies to every unit.
+OPTIONAL_COLUMNS = {"Sl. No.": "", "Applicability": "Common.", "Evidence / Source Requirement": ""}
+_PART = re.compile(r"^\s*([A-Za-z]+\s*\d+[a-z])\s*(\d+)\s*$")  # e.g. UPD23a1: a part of UPD23a
+
+
+def load_question_bank(
+    path: Path, sheet: str | None = None, columns: dict[str, str] | None = None
+) -> tuple[dict[str, Question], list[Issue]]:
+    """Load a vertical's question bank.
+
+    `sheet` names the sheet (default: "Question Bank", else the first sheet with the
+    columns); `columns` maps our column names to the bank's own, e.g.
+    {"Tag": "MQ_SQ", "Score / Max Score": "Max Score"} (set in the vertical's settings).
+    """
+    wb = load_workbook(path, read_only=True, data_only=True)
+    rename = {actual.strip(): ours for ours, actual in (columns or {}).items()}
+    wanted = set(REQUIRED_COLUMNS) - set(OPTIONAL_COLUMNS)
+
+    def headers(w) -> set[str]:
+        first = next(w.iter_rows(max_row=1, values_only=True), ())
+        return {rename.get(_clean(c), _clean(c)) for c in first}
+
+    ws = (
+        wb[sheet]
+        if sheet and sheet in wb.sheetnames
+        else wb[SHEET]
+        if SHEET in wb.sheetnames
+        else next(
+            (
+                w
+                for w in wb.worksheets  # e.g. the scoring team's "Parastatal Methodology" sheet
+                if headers(w) >= wanted
+            ),
+            wb.worksheets[0],
+        )
+    )
     rows = list(ws.iter_rows(values_only=True))
-    header = [_clean(h) for h in rows[0]]
+    header = [rename.get(_clean(h), _clean(h)) for h in rows[0]]
     issues: list[Issue] = []
-    missing = [c for c in REQUIRED_COLUMNS if c not in header]
+    missing = [c for c in REQUIRED_COLUMNS if c not in header and c not in OPTIONAL_COLUMNS]
     if missing:
         issues.append(
             Issue(
@@ -57,11 +91,18 @@ def load_question_bank(path: Path) -> tuple[dict[str, Question], list[Issue]]:
         )
         return {}, issues
     col = {name: header.index(name) for name in header if name}
+    defaults = {name: value for name, value in OPTIONAL_COLUMNS.items() if name not in col}
+
+    def cell(row, name: str) -> str:
+        if name in defaults:
+            return defaults[name]
+        i = col[name]
+        return _clean(row[i]) if i < len(row) else ""
 
     questions: dict[str, Question] = {}
     pillar_code, pillar_name, parent = "", "", None
     for row_no, row in enumerate(rows[1:], start=2):
-        raw_id = _clean(row[col["City-Systems Pillar"]])
+        raw_id = cell(row, "City-Systems Pillar")
         if not raw_id:
             # Section header row, e.g. "Urban Planning & Design (UPD)"
             pillar_name = _clean(row[0])
@@ -72,6 +113,17 @@ def load_question_bank(path: Path) -> tuple[dict[str, Question], list[Issue]]:
             parent = None
             continue
 
+        if part := _PART.match(raw_id):  # scored as part of its question's own sheet
+            issues.append(
+                Issue(
+                    phase="initial_checks",
+                    severity="info",
+                    ref=raw_id,
+                    message=f"Row {row_no}: {raw_id} is a part of {part.group(1)}; it is "
+                    "answered with that question.",
+                )
+            )
+            continue
         match = _ID.match(raw_id)
         if not match:
             issues.append(
@@ -87,7 +139,7 @@ def load_question_bank(path: Path) -> tuple[dict[str, Question], list[Issue]]:
             continue
         prefix, number, letter = match.groups()
         prefix = prefix.upper()
-        tag = _clean(row[col["Tag"]]).upper()
+        tag = cell(row, "Tag").upper()
         if not pillar_code:
             pillar_code = prefix
             issues.append(
@@ -150,17 +202,17 @@ def load_question_bank(path: Path) -> tuple[dict[str, Question], list[Issue]]:
             row=row_no,
             pillar=pillar_code,
             pillar_name=pillar_name,
-            text=_clean(row[col["Question"]]),
+            text=cell(row, "Question"),
             tag="MQ" if tag == "MQ" else "SQ",
-            max_score=_score(row[col["Score / Max Score"]]),
-            assessment_level=_clean(row[col["Assessment Level"]]) or None,
+            max_score=_score(cell(row, "Score / Max Score")),
+            assessment_level=cell(row, "Assessment Level") or None,
             unit=_clean(row[col.get("Unit of Assessment", -1)])
             if "Unit of Assessment" in col
             else None,
-            applicability=_clean(row[col["Applicability"]]),
-            methodology=_clean(row[col["Detailed Methodology"]]),
-            evidence_requirement=_clean(row[col["Evidence / Source Requirement"]]),
-            rationale=_clean(row[col["Rationale"]]) if "Rationale" in col else "",
+            applicability=cell(row, "Applicability"),
+            methodology=cell(row, "Detailed Methodology"),
+            evidence_requirement=cell(row, "Evidence / Source Requirement"),
+            rationale=cell(row, "Rationale") if "Rationale" in col else "",
         )
         if question.tag == "MQ":
             parent = question

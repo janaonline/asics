@@ -57,10 +57,13 @@ def _citations(path: str, mtime: float, evidence: str):
     return parastatals, citations
 
 
+ANSWERS = "ASICS_Parastatal_*.xlsx"  # set by render() for the vertical being viewed
+
+
 def city_files(folder: Path) -> dict:
     sources = next(folder.glob("ASICS_*_Sources.xlsx"), None)
     answers = sorted(
-        (folder / "answers").glob("*/ASICS_Parastatal_*.xlsx"),
+        (folder / "answers").glob(f"*/{ANSWERS}"),
         key=lambda p: p.stat().st_mtime,
         reverse=True,
     )
@@ -94,7 +97,9 @@ def text(value) -> str:
 
 
 # -- page ------------------------------------------------------------------------------------
-def render(folders: list[Path], open_file, zip_folder, header) -> None:
+def render(folders: list[Path], open_file, zip_folder, header, answers: str = ANSWERS) -> None:
+    global ANSWERS
+    ANSWERS = answers
     header(
         "City files",
         "Everything in each city's workbooks, viewable here. To change "

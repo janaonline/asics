@@ -264,6 +264,24 @@ class FakeClaude(BaseChatModel):
                     "missing_evidence": "the latest plan document or consultation record",
                     "notes": "None of the citations covers this question.",
                 }
+        elif task == "score_question":
+            # Step 3: the first allowed value (or 1) for each input, resting on the citation
+            # Step 2 used, quoted word for word from the text it was shown.
+            inputs = {}
+            for header, allowed in re.findall(
+                r'^- "(.+?)": .*?(?:Allowed values: (.+?)\.)?$', user, re.M
+            ):
+                inputs[header] = allowed.split(" / ")[0] if allowed else 1
+            cited = re.search(r"=== CITATION (\S+): .*?===\n(.*)", user, re.S)
+            words = cited.group(2).split()[:12] if cited else []
+            reply = {
+                "inputs": inputs,
+                "citation_id": cited.group(1) if cited else "",
+                "quote": " ".join(words),
+                "provision": "Section 16",
+                "comments": PRACTICE_NOTE,
+                "confidence": "medium",
+            }
         blocks.append({"type": "text", "text": json.dumps(reply)})
         message = AIMessage(content=blocks, response_metadata={"stop_reason": "end_turn"})
         return ChatResult(generations=[ChatGeneration(message=message)])
@@ -292,6 +310,8 @@ def practice_register(path):
         )
         for name in PRACTICE_CITIES
     ]
+    if path.exists():  # always the same two cities: written once
+        return path
     return write_register(path, cities)
 
 

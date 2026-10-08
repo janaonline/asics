@@ -3,6 +3,13 @@
 Everything that shapes what the AI does, in plain Markdown. The code reads these files on
 every call, so changes apply to the next run. No code changes are needed.
 
+## Verticals
+
+`verticals/<name>.md` sets up each ASICS vertical: its question bank, what it assesses in a
+city (parastatals, or the city government), which agent does each job in Steps 1, 2 and 3,
+and its shared rules (`prompts/shared-rules.md` for Parastatal, `prompts/shared-rules-city.md`
+for UPD). The agents below are shared unless a vertical names its own.
+
 ## Map
 
 | Agent (`agents/`) | Step | Prompt (`prompts/`) | Skills (`skills/`) | Tools (`tools/`) |
@@ -12,6 +19,10 @@ every call, so changes apply to the next run. No code changes are needed.
 | Citation builder | 1 | `find-sources` | government-websites, india-code-and-acts | web_search (no Wikipedia/directories), web_fetch, **check_link** |
 | Source assessor | 1 | `assess-source` | india-code-and-acts | none |
 | Answer writer | 2 | `answer-question` | scoring-methodology, india-code-and-acts, + the question's section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
+| Question scorer | 3 | `score-question` | scoring-methodology, india-code-and-acts | **read_citation**, **search_citation_sheet** (no web) |
+| City government profiler (UPD) | 1 | `city-profile` | government-websites, india-code-and-acts | web_search, web_fetch |
+| City citation builder (UPD) | 1 | `find-city-sources` | government-websites, india-code-and-acts | web_search, web_fetch, **check_link** |
+| City answer writer (UPD) | 2 | `answer-city-question` | scoring-methodology, india-code-and-acts, + the section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
 | Question bank reviewer | checks | `bank-review` | scoring-methodology | none |
 
 Every agent also receives `prompts/shared-rules.md` (the URL, verification and evidence rules)

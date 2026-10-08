@@ -31,9 +31,9 @@ from asics_agent.links.database import write_links_db
 from asics_agent.models import ALL_PARASTATALS, Issue, Source
 from asics_agent.run_options import RunOptions
 from asics_agent.services import Services, default_services
-from asics_agent.workbook import write_json, write_workbook
+from asics_agent.workbook import file_part, write_json, write_workbook
 
-OUTPUT_NAME = "ASICS_Parastatal_{city}_Phase2.xlsx"
+OUTPUT_NAME = "ASICS_{vertical}_{city}_Phase2.xlsx"  # e.g. ASICS_Parastatal_Bengaluru_…
 
 
 def usable(source: Source) -> bool:
@@ -151,8 +151,18 @@ def build_answers_graph(
             issues += qa_answers(all_answers, citations, applicability)
 
         workbook = write_workbook(
-            base=Path(state.get("base_workbook") or services.settings.question_bank),
-            out=out_dir / OUTPUT_NAME.format(city=run.city_name.replace(" ", "_")),
+            # A standalone question bank is the starting workbook; a bank that is one sheet
+            # of a bigger workbook (e.g. UPD's scoring workbook) starts a fresh one.
+            base=Path(state["base_workbook"])
+            if state.get("base_workbook")
+            else None
+            if services.settings.question_bank_sheet
+            else services.settings.question_bank,
+            out=out_dir
+            / OUTPUT_NAME.format(
+                vertical=file_part(services.settings), city=run.city_name.replace(" ", "_")
+            ),
+            title=services.settings.vertical_title,
             city_name=run.city_name,
             questions=state["questions"],
             selected=selected_ids,

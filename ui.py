@@ -40,12 +40,15 @@ def setup_page_chrome() -> None:
     st.markdown(CSS, unsafe_allow_html=True)
 
 
+VERTICAL = "Parastatal"  # the vertical being worked on; set by app.py
+
+
 def header(title: str, lede: str = "", kicker: str = "") -> None:
     """The ASICS bar, then the page title and a one-line explanation."""
     st.markdown(
         '<div class="asics-bar"><span class="asics-word">ASICS</span>'
         '<span class="asics-tag">Annual Survey of India\'s City-Systems · '
-        "Parastatal assessment</span></div>"
+        f"{VERTICAL} assessment</span></div>"
         + (f'<div class="asics-kicker">{kicker}</div>' if kicker else "")
         + f'<div class="asics-title">{title}</div>'
         + (f'<p class="asics-lede">{lede}</p>' if lede else ""),
@@ -64,6 +67,6 @@ def step_card(number: int, title: str, text: str) -> None:
 
 def sidebar_footer() -> None:
     st.sidebar.markdown(
-        '<div class="asics-footer">ASICS · Janaagraha<br>Parastatal assessment tool</div>',
+        f'<div class="asics-footer">ASICS · Janaagraha<br>{VERTICAL} assessment tool</div>',
         unsafe_allow_html=True,
     )
