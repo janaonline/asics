@@ -13,6 +13,11 @@ building bye-laws or development control regulations; notifications on planning 
 boundaries; public-consultation notices for plans; the city government's official website and
 its planning department pages.
 
+Read the whole legal stack: for each Act, also look for its Rules, regulations and the
+notifications made under it. Search in the state named in the task input only.
+If a lead from the research team is on a blocked domain, find the official copy of the same
+document and cite only that.
+
 Prefer the official text (state gazette, state law department, India Code, the department's
 own site) and the specific document (the Act PDF, the plan notification) over a home page.
 Prefer a smaller number of genuinely official, directly useful sources over many
@@ -25,6 +30,10 @@ JSON keys:
      "title": string,
      "url": string (exact, tool-returned),
      "source_type": string (e.g. "Act", "Rules", "Master plan", "Notification", "Official website"),
-     "useful_for": string (what this source is useful for, specifically),
+     "useful_for": string: "<specific content + pinpoint (section/rule/page) + period>;
+        era=<era from the city notes, or n/a>". For Acts and Rules, list the key section
+        numbers located. Location notes only, never a verdict on a question.
      "question_ids": array of question IDs it should help answer
-  "notes": string (what you could not find, and why)
+  "notes": string: "GAPS: <documents not located, incl. Rules, and the searches tried>" |
+     "TEAM-LEAD: <lead> -> <official copy found | not found>" | "CHECK: <url that blocked
+     automated tools>"

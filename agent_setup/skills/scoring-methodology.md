@@ -23,3 +23,17 @@ When scoring:
 - Prefer the most recent document; say which year it covers. An old document is at most
   partial evidence of current practice.
 - If the evidence answers only part of the question, say which part is missing.
+
+# Rules that apply to every vertical and every city (v2)
+- A rubric 0 (or a "NO" input that scores 0) needs AFFIRMATIVE ABSENCE: every relevant
+  instrument or page was in the Citation Sheet and read, nothing was found, and you list what
+  you checked. Otherwise the result is "not found": leave the score/input blank.
+- Scale mismatch: if the highest rubric band is not the Max Score and not a sum of components,
+  do not score; record the band and raw value with "SCALE-MISMATCH" and ask for confirmation.
+- Rubric gap: if the evidence fits no band, do not create or interpolate a band; leave the
+  score blank and ask for confirmation.
+- Website evidence that could not be opened automatically is a verification limit, never a
+  negative finding: never score it 0.
+- The question-bank's ID-specific anomalies are in the section guidance for that question.
+- ASICS Score, the Citation Sheet's Authority Score, Class (A1/A2/R/P/M) and Confidence are
+  separate; none is derived from another.

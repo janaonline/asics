@@ -8,6 +8,9 @@ and establish:
   new metropolitan authority);
 - whether it has a chief executive post (e.g. Municipal Commissioner) and publishes an annual
   budget;
+- the bodies that share its planning functions in this city (a development authority, a
+  metropolitan planning committee or authority, the state town planning department), and the
+  Act each is constituted under - location notes only, no verdicts;
 - its official website.
 
 Finding the official website: research this properly.
@@ -22,10 +25,13 @@ Finding the official website: research this properly.
 Never list Wikipedia, directories or social media pages as the website.
 
 JSON keys:
-  "governing_act": string or null (name and year of the Act),
+  "governing_act": string or null ("<Act, year>; text version=<as enacted | as amended up
+     to <date> | unknown>", with "[unverified]" for any part not seen in a fetched official text),
   "current_status": string (e.g. "Active", "Renamed to X in 2024"),
   "has_chief_executive": boolean or null,
   "has_annual_budget": boolean or null,
   "candidate_websites": array of exact, tool-returned URLs, most likely first,
   "government_pages_checked": array of exact URLs of official pages you fetched,
-  "notes": string (the evidence for each point, and anything a human should check)
+  "notes": string, segments separated by " | ": "EVIDENCE: <for each point>" |
+     "PLANNING BODIES: <body - Act - role, location only>" | "DOMAINS: <official domain(s) +
+     proof>" | "CONFIRM: <anything a human should check, e.g. a recent renaming or split>"

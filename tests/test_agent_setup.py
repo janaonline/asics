@@ -19,6 +19,10 @@ from asics_agent.config import PROJECT_ROOT, get_settings
 def setup_dir(tmp_path):
     root = tmp_path / "agent_setup"
     shutil.copytree(PROJECT_ROOT / "agent_setup", root)
+    # Start from an empty memory folder, so the team's real notes don't change the results.
+    for path in (root / "memory").rglob("*.md"):
+        if path.name != "README.md":
+            path.unlink()
     return root
 
 

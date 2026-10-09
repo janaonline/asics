@@ -78,7 +78,9 @@ def _base_settings() -> Settings:
         http_timeout=float(os.getenv("ASICS_HTTP_TIMEOUT", "30")),
         llm_call_timeout=float(os.getenv("ASICS_LLM_CALL_TIMEOUT", "900")),
         user_agent=os.getenv(
-            "ASICS_USER_AGENT", "Mozilla/5.0 (compatible; ASICS-Research-Agent/0.2)"
+            "ASICS_USER_AGENT",
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+            "(KHTML, like Gecko) Chrome/129.0 Safari/537.36",
         ),
         max_evidence_chars=int(os.getenv("ASICS_MAX_EVIDENCE_CHARS", "60000")),
         scoring_dir=_path("ASICS_SCORING_DIR", "scoring/2027"),

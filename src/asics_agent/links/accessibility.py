@@ -33,6 +33,13 @@ BLOCK_MARKERS = (
     "unusual traffic",
 )
 METADATA_TYPES = ("json", "xml", "rss", "atom")
+# Government sites often answer automated requests with these even when a person can open
+# the page in a browser. They mean "a person must check", never "the page is missing".
+BLOCKED_STATUS = {401, 403, 405, 406, 429, 451, 503}
+BROWSER_USER_AGENT = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/129.0 Safari/537.36"
+)
 
 PAGE_DEADLINE_SECONDS = 60  # a whole page or PDF must arrive within this
 ROBOTS_DEADLINE_SECONDS = 10
@@ -97,6 +104,11 @@ def _robots_allows(client: httpx.Client, url: str, user_agent: str) -> bool:
     return parser is None or parser.can_fetch(user_agent, url)
 
 
+def _site(url: str) -> str:
+    host = urlsplit(url).netloc.lower().split(":")[0]
+    return host.removeprefix("www.")
+
+
 def is_india_code(url: str) -> bool:
     return urlsplit(url).netloc.lower().endswith(INDIA_CODE_HOST)
 
@@ -110,23 +122,47 @@ def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) 
         reasons.append("robots.txt disallows automated fetching; a person must open the link.")
         return check
 
-    try:
-        response = fetch(client, url, PAGE_DEADLINE_SECONDS)
-    except FetchTooSlow as exc:
-        reasons.append(f"Could not be opened: the website {exc}.")
-        check.verification_status = "Human Verification Required"
-        return check
-    except httpx.HTTPError as exc:
-        reasons.append(f"Could not be opened: {type(exc).__name__}.")
-        return check
+    response = None
+    for attempt in (1, 2):  # many government servers drop the first connection
+        try:
+            response = fetch(client, url, PAGE_DEADLINE_SECONDS)
+            break
+        except FetchTooSlow as exc:
+            reasons.append(f"Could not be opened: the website {exc}.")
+            check.verification_status = "Human Verification Required"
+            return check
+        except (httpx.ConnectError, httpx.ConnectTimeout, httpx.RemoteProtocolError) as exc:
+            if attempt == 2:
+                detail = str(exc).lower()
+                why = (
+                    "the website's security certificate could not be checked automatically"
+                    if "certificate" in detail or "ssl" in detail
+                    else f"the connection failed ({type(exc).__name__})"
+                )
+                reasons.append(
+                    f"Could not be opened automatically: {why}. Blocked to automated tools; "
+                    "a person must open the link in a browser."
+                )
+                check.verification_status = "Human Verification Required"
+                return check
+        except httpx.HTTPError as exc:
+            reasons.append(f"Could not be opened: {type(exc).__name__}.")
+            return check
 
     check.status_code = response.status_code
     check.final_url = str(response.url)
     check.content_type = response.headers.get("content-type", "").split(";")[0].strip().lower()
+    if response.status_code in BLOCKED_STATUS:
+        reasons.append(
+            f"HTTP {response.status_code}: the website refused the automated check. Blocked to "
+            "automated tools; a person must open the link in a browser."
+        )
+        check.verification_status = "Human Verification Required"
+        return check
     if response.status_code != 200:
         reasons.append(f"HTTP {response.status_code} when opening the exact URL.")
         return check
-    if urlsplit(check.final_url).netloc.lower() != urlsplit(url).netloc.lower():
+    if _site(check.final_url) != _site(url):
         reasons.append(f"Redirects to a different site ({check.final_url}).")
         check.verification_status = "Human Verification Required"
         return check
@@ -182,11 +218,31 @@ def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) 
     return check
 
 
+def _ssl_context():
+    """Use the computer's own certificate store, like a browser does.
+
+    Many Indian government sites send an incomplete certificate chain. Browsers (and the
+    macOS/Windows certificate store) fill in the missing piece; Python's bundled list does
+    not, so the same link fails only in the automated check. Falls back to the default if
+    the optional `truststore` package is not installed.
+    """
+    try:
+        import ssl
+
+        import truststore
+
+        return truststore.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+    except ImportError:
+        return True
+
+
 def make_http_client(user_agent: str, timeout: float) -> httpx.Client:
     return httpx.Client(
         timeout=timeout,
+        verify=_ssl_context(),
         headers={
-            "User-Agent": user_agent,
+            "User-Agent": user_agent or BROWSER_USER_AGENT,
             "Accept": "text/html,application/xhtml+xml,application/pdf;q=0.9,*/*;q=0.8",
+            "Accept-Language": "en-IN,en;q=0.9",
         },
     )
