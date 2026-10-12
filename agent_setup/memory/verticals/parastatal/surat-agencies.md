@@ -9,4 +9,8 @@ cities: [surat]
   REVIEW rather than deciding.
 - A state-level body whose website is not on gov.in / nic.in needs proof of its domain (a
   link from a gov.in / nic.in page fetched in the run, or the Act/GO naming it).
+- Candidates to screen (NOT pre-approved; each must pass E1-E6): SUDA, Surat Sitilink
+  Ltd, GMRC (Surat Metro), Khajod UDA.
+- Water and sewerage may be delivered by the city corporation itself. The state water supply
+  board and the state road transport corporation are candidates to check for E6 / E1.
 - TEAM TODO: add agencies to screen, as in bengaluru-agencies.md.

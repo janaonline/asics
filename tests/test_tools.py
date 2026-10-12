@@ -159,7 +159,8 @@ def _web_limits(services, monkeypatch, **options):
 
 def test_source_finder_keeps_its_own_limit_when_the_setting_is_not_set(services, monkeypatch):
     assert services.settings.find_sources_max_uses is None
-    assert _web_limits(services, monkeypatch) == {"source finder": {8}, "other": {8}}
+    # "other" includes parastatal discovery, which has 20
+    assert _web_limits(services, monkeypatch) == {"source finder": {8}, "other": {8, 20}}
 
 
 def test_source_finder_gets_its_own_search_limit(services, monkeypatch):
@@ -167,7 +168,7 @@ def test_source_finder_gets_its_own_search_limit(services, monkeypatch):
 
     settings = dataclasses.replace(services.settings, find_sources_max_uses=20)
     limited = Services(llm=services.llm, http=services.http, settings=settings)
-    assert _web_limits(limited, monkeypatch) == {"source finder": {20}, "other": {8}}
+    assert _web_limits(limited, monkeypatch) == {"source finder": {20}, "other": {8, 20}}
 
 
 def test_a_run_override_beats_the_source_finder_limit(services, monkeypatch):

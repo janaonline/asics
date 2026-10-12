@@ -13,11 +13,11 @@ website, and research continues either way.
 
 import re
 from pathlib import Path
-from typing import TypedDict
+from typing import Literal, TypedDict
 
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import Send
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from asics_agent.agent_setup import MemoryScope
 from asics_agent.agents.common import (
@@ -47,6 +47,17 @@ class Discovered(BaseModel):
     capex_mandate: bool | None = None
     why_included: str = ""
     evidence_urls: list[str] = Field(default_factory=list)
+    # "needs_review": a test could not be decided; listed but not ticked for the team to decide.
+    status: Literal["eligible", "needs_review"] = "eligible"
+
+    @field_validator("status", mode="before")
+    @classmethod
+    def _status(cls, value):
+        """A missing status is eligible; an unrecognised one is never auto-ticked."""
+        if value is None:
+            return "eligible"
+        text = str(value).strip().lower().replace(" ", "_").replace("-", "_")
+        return text if text in {"eligible", "needs_review"} else "needs_review"
 
 
 class DiscoverReply(BaseModel):
@@ -159,6 +170,9 @@ def build_parastatal_discovery(services: Services):
                 else "other"
             )
             evidence = [u for u in item.evidence_urls if u in urls]
+            reason = item.why_included.strip()
+            if item.status == "needs_review" and not reason.upper().startswith("NEEDS REVIEW"):
+                reason = f"NEEDS REVIEW: {reason}".strip()  # the review screen looks for this
             candidate = Parastatal(
                 id=_clean_id(item.id, item.name),
                 name=item.name.strip(),
@@ -166,7 +180,8 @@ def build_parastatal_discovery(services: Services):
                 revenue_raising=bool(item.revenue_raising),
                 capex_mandate=bool(item.capex_mandate),
                 found_by="Agent",
-                why_included=item.why_included,
+                include=item.status == "eligible",
+                why_included=reason,
                 notes="Evidence: " + ", ".join(evidence)
                 if evidence
                 else "No supporting link was returned by a search; please check.",
@@ -180,19 +195,34 @@ def build_parastatal_discovery(services: Services):
             parastatals.append(candidate)
             added.append(candidate)
 
+        only = set(state.get("only_parastatals") or [])
+        to_research = [p for p in parastatals if p.include and (not only or p.id in only)]
+        to_review = [p for p in parastatals if not p.include]
         issues = [
             Issue(phase="parastatal_checks", severity="info", ref=run.city_name, message=m)
             for m in rejected
         ] + memory_note(scope, run.city_name, "Parastatal discovery")
-        names = ", ".join(f"{p.name} ({p.id})" for p in parastatals) or "none"
+        names = ", ".join(f"{p.name} ({p.id})" for p in to_research) or "none"
+        review = ", ".join(f"{p.name} ({p.id})" for p in to_review)
         issues.append(
             _team(
                 "info",
-                f"{run.city_name}: {len(parastatals)} parastatal(s) to "
-                f"assess ({len(added)} found by the agent): {names}.",
+                f"{run.city_name}: {len(to_research)} parastatal(s) to "
+                f"assess ({len(added)} found by the agent): {names}."
+                + (f" Not ticked (NEEDS REVIEW or left out): {review}." if review else ""),
                 run.city_name,
             )
         )
+        if not to_research:
+            issues.append(
+                _team(
+                    "warning",
+                    f"{run.city_name}: no parastatals will be researched. See 'notes from the "
+                    "research' for what was found, tick any NEEDS REVIEW agencies on the review "
+                    "screen, or add them to the city register.",
+                    run.city_name,
+                )
+            )
         if reply.notes:
             issues.append(
                 _team(
@@ -201,7 +231,11 @@ def build_parastatal_discovery(services: Services):
                     run.city_name,
                 )
             )
-        report(run.city_name, f"Done: {len(parastatals)} parastatal(s) to assess")
+        report(
+            run.city_name,
+            f"Done: {len(to_research)} parastatal(s) to assess"
+            + (f", {len(to_review)} not ticked" if to_review else ""),
+        )
         official = [(u, t) for u, t in pages if is_official_host(u)]
         return {
             "parastatals": parastatals,

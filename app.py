@@ -28,6 +28,7 @@ from asics_agent.reporting import (
     VERIFICATION_HELP,
     answer_summary,
     headline,
+    review_flags,
     severity_label,
     team_issues,
 )
@@ -764,14 +765,28 @@ BAND_ICON = {
 }
 
 
+FLAG_BADGE = {
+    "NEEDS REVIEW": ":orange-badge[NEEDS REVIEW]",
+    "PRE-OPERATIONAL": ":blue-badge[PRE-OPERATIONAL]",
+    "DOMAIN": ":gray-badge[DOMAIN]",
+}
+
+
 def review_panel(batch: BatchRun):
     reviews = batch.reviews
-    total = sum(len(r.get("parastatals", [])) for r in reviews.values())
+    listed = [p for r in reviews.values() for p in r.get("parastatals", [])]
+    to_review = sum("NEEDS REVIEW" in review_flags(p) for p in listed)
     st.warning(
-        f"**Action needed: the run is paused until you review the {total} parastatal(s) "
+        f"**Action needed: the run is paused until you review the {len(listed)} parastatal(s) "
         "below.** Untick any you don't want researched, then press **Continue** (here or at "
         "the bottom). Unticked ones stay in the Sources workbook as Include? = No, so you can "
-        "add them back later.",
+        "add them back later."
+        + (
+            f" **{to_review} are marked NEEDS REVIEW and start unticked:** read the reason "
+            "and tick the ones you want researched."
+            if to_review
+            else ""
+        ),
         icon=":material/front_hand:",
     )
     top_go = st.button(
@@ -800,13 +815,23 @@ def review_panel(batch: BatchRun):
                         if p["found_by"] == "Your team"
                         else "found by the agent"
                     )
-                    top.markdown(f"**{p['name']}** ({pid}), {who}")
+                    flags = review_flags(p)
+                    needs_review = "NEEDS REVIEW" in flags
+                    top.markdown(
+                        f"**{p['name']}** ({pid}), {who} " + " ".join(FLAG_BADGE[f] for f in flags)
+                    )
                     if box.checkbox(
-                        "Include", value=True, key=f"keep-{slug}-{pid}", disabled=not include_city
+                        "Include",
+                        value=p.get("include", True),
+                        key=f"keep-{slug}-{pid}",
+                        disabled=not include_city,
                     ):
                         keep.append(pid)
                     if p.get("why_included"):
-                        st.caption(p["why_included"])
+                        if needs_review:
+                            st.warning(p["why_included"], icon=":material/help:")
+                        else:
+                            st.caption(p["why_included"])
                     website = p.get("official_website") or "not confirmed"
                     st.markdown(
                         f"Website: {website}  \n"

@@ -88,7 +88,9 @@ GUIDE = [
     (
         "1. Parastatals sheet",
         "Check each parastatal the agent found. Set Include? to No to "
-        "leave one out. To add one it missed, add a row with its ID, name and Type; leave Found "
+        "leave one out. Rows whose Why Included starts with NEEDS REVIEW were found but not "
+        "ticked (Include? = No) because the agent couldn't decide a test: set Include? to Yes "
+        "to research one. To add one it missed, add a row with its ID, name and Type; leave Found "
         "By empty. The Website Check column explains how much the official website can be "
         "trusted, point by point.",
     ),
