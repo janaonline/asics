@@ -8,11 +8,14 @@ import base64
 import contextvars
 import json
 import re
+import time
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import TimeoutError as FuturesTimeout
 from typing import Annotated, TypedDict, TypeVar
 
 import anthropic
+import httpx
+import httpx2
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 from langgraph.errors import GraphRecursionError
 from langgraph.graph import END, START, StateGraph
@@ -34,6 +37,13 @@ from asics_agent.services import Services
 from asics_agent.tools import ToolContext, build_tools
 
 MAX_CONTINUATIONS = 4
+NETWORK_RETRY_PAUSES = (2.0, 5.0)  # seconds before each retry of a call whose connection failed
+NETWORK_ERRORS = (
+    httpx.TimeoutException,
+    httpx2.TimeoutException,
+    anthropic.APITimeoutError,
+    anthropic.APIConnectionError,
+)
 MAX_FETCHED_PDF_CHARS = 100_000  # text kept from each fetched PDF on later turns
 T = TypeVar("T", bound=BaseModel)
 
@@ -59,21 +69,36 @@ def _invoke(llm, messages, timeout: float, **kwargs):
 
     A stalled connection can otherwise block a call (and the run) indefinitely. On timeout
     the call is abandoned and the run carries on without it.
+
+    The SDK retries only the request that opens the stream. A read timeout or dropped
+    connection while the reply is streaming comes out raw, so it is retried here and, if
+    it keeps failing, turned into a CallFailed that affects only this call.
     """
-    future = _CALLS.submit(contextvars.copy_context().run, llm.invoke, messages, **kwargs)
-    try:
-        return future.result(timeout=timeout)
-    except FuturesTimeout:
-        future.cancel()
-        raise CallTimedOut(
-            f"the research took longer than {timeout / 60:.0f} minutes and was stopped"
-        ) from None
-    except anthropic.RequestTooLargeError:
-        raise CallFailed(
-            "the documents it read were too large to send to Claude together"
-        ) from None
-    except anthropic.BadRequestError as exc:
-        raise CallFailed(f"Claude rejected the request ({exc})") from None
+    deadline = time.monotonic() + timeout
+    for attempt, pause in enumerate(NETWORK_RETRY_PAUSES + (None,)):
+        remaining = deadline - time.monotonic()
+        future = _CALLS.submit(contextvars.copy_context().run, llm.invoke, messages, **kwargs)
+        try:
+            return future.result(timeout=max(remaining, 0))
+        except FuturesTimeout:
+            future.cancel()
+            raise CallTimedOut(
+                f"the research took longer than {timeout / 60:.0f} minutes and was stopped"
+            ) from None
+        except anthropic.RequestTooLargeError:
+            raise CallFailed(
+                "the documents it read were too large to send to Claude together"
+            ) from None
+        except anthropic.BadRequestError as exc:
+            raise CallFailed(f"Claude rejected the request ({exc})") from None
+        except NETWORK_ERRORS as exc:
+            if pause is None or deadline - time.monotonic() <= pause:
+                raise CallFailed(
+                    f"the connection to Claude dropped or stalled ({type(exc).__name__}); "
+                    "this usually clears on its own"
+                ) from None
+            time.sleep(pause)
+    raise AssertionError("unreachable")
 
 
 def _pdf_as_text(source: dict) -> dict:

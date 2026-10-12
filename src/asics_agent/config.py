@@ -78,7 +78,7 @@ def _base_settings() -> Settings:
         check_workers=int(os.getenv("ASICS_CHECK_WORKERS", "3")),
         http_timeout=float(os.getenv("ASICS_HTTP_TIMEOUT", "30")),
         llm_call_timeout=float(os.getenv("ASICS_LLM_CALL_TIMEOUT", "900")),
-        api_read_timeout=float(os.getenv("ASICS_API_READ_TIMEOUT", "180")),
+        api_read_timeout=float(os.getenv("ASICS_API_READ_TIMEOUT", "300")),
         user_agent=os.getenv(
             "ASICS_USER_AGENT",
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "

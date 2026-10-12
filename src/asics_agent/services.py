@@ -72,8 +72,9 @@ def make_chat_model(settings: Settings, model: str | None = None) -> ChatAnthrop
         effort=settings.effort,
         streaming=True,
         # Longest wait for the next piece of a reply. Claude sends keep-alive pings while it
-        # works, so only a dropped connection (sleep, Wi-Fi change) waits this long; the
-        # call is then retried instead of hanging.
+        # works, so only a dropped connection (sleep, Wi-Fi change) waits this long. The SDK
+        # retries only the request that opens the stream; a timeout mid-reply is retried
+        # (then reported as a failed call) by `llm._invoke`.
         default_request_timeout=settings.api_read_timeout,
         max_retries=4,
         **extra,

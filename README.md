@@ -694,7 +694,7 @@ agents, rules and `outputs/cities/` folders), so nothing about it changed.
 
 - **The accessibility test uses plain HTTP requests.** JavaScript-only pages end up as *Human Verification Required*.
 - **Backlinks come from government pages the agent fetched during research,** not from a full web-wide backlink index. Official social handles are matched only when a government page links to the same handle.
-- **Time limits:** each web page download is limited to 60 seconds and 30 MB (`links/accessibility.py`), and each Claude call to `ASICS_LLM_CALL_TIMEOUT` seconds (default 900). These exist because httpx's timeout applies per network read, so a slowly trickling server once froze a whole run. Live progress comes from `progress.report()` through LangGraph's `custom` stream mode.
+- **Time limits:** each web page download is limited to 60 seconds and 30 MB (`links/accessibility.py`), each Claude call to `ASICS_LLM_CALL_TIMEOUT` seconds (default 900), and each wait for the next piece of a Claude reply to `ASICS_API_READ_TIMEOUT` seconds (default 300; a stalled or dropped connection is retried twice, then fails only that parastatal). These exist because httpx's timeout applies per network read, so a slowly trickling server once froze a whole run. Live progress comes from `progress.report()` through LangGraph's `custom` stream mode.
 - **A run in progress lives in the app's memory.** Closing the black window mid-run loses that run, but files already written are kept.
 - **Sheet names:** Excel limits them to 31 characters, so long city names get "Scoring - &lt;City&gt;".
 - **Question bank data issues** (e.g. UPD 1a and 1b score out of 10 but have a max of 5) show up in **Needs Attention**.

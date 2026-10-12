@@ -2,6 +2,7 @@ import base64
 
 import anthropic
 import httpx
+import httpx2
 import pytest
 from langchain_core.messages import AIMessage
 
@@ -63,6 +64,46 @@ def test_too_large_request_fails_only_that_call():
 
     with pytest.raises(llm.CallFailed, match="too large"):
         llm._invoke(TooLarge(), [], timeout=5)
+
+
+def _flaky(errors, reply="ok"):
+    class Flaky:
+        calls = 0
+
+        def invoke(self, messages, **kwargs):
+            self.calls += 1
+            if self.calls <= errors:
+                raise httpx2.ReadTimeout("The read operation timed out")
+            return reply
+
+    return Flaky()
+
+
+def test_stream_read_timeout_is_retried(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+    model = _flaky(errors=1)
+    assert llm._invoke(model, [], timeout=60) == "ok"
+    assert model.calls == 2
+
+
+def test_persistent_network_failure_fails_only_that_call(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+    model = _flaky(errors=99)
+    with pytest.raises(llm.CallFailed, match="ReadTimeout"):
+        llm._invoke(model, [], timeout=60)
+    assert model.calls == len(llm.NETWORK_RETRY_PAUSES) + 1
+
+
+def test_dropped_connection_fails_only_that_call(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+
+    class Drops:
+        def invoke(self, messages, **kwargs):
+            request = httpx.Request("POST", "https://api.anthropic.com/v1/messages")
+            raise anthropic.APIConnectionError(request=request)
+
+    with pytest.raises(llm.CallFailed, match="dropped or stalled"):
+        llm._invoke(Drops(), [], timeout=60)
 
 
 class Scripted:
