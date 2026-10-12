@@ -44,11 +44,27 @@ this city because it exists in another. Parastatals listed by the research team 
 repeat them, but do apply the tests to them if you find evidence.
 
 # WHAT TO LIST
-- In "parastatals": agencies that pass E1-E6, and agencies where a test cannot be decided
-  from verified evidence. For an undecided agency, start "why_included" with
-  "NEEDS REVIEW (E<n>): <what is unclear>" so the team can decide on the review screen.
-- Do NOT list agencies that clearly fail E1-E4 or E6. Name each of them in "notes" with the
-  failed test, e.g. "<agency>: Not eligible - E4 power utility".
+Every agency you list is researched in full (a long, costly run), so list only what you can
+defend. When in doubt, leave it out of "parastatals" and name it in "notes": the team adds it
+to the city register if they want it.
+- In "parastatals": ONLY agencies that pass ALL of E1-E6 on evidence you fetched in this task.
+  "why_included" must name the evidence for E1 (primary statutory function) and E5
+  (constituted and functioning today).
+- Agencies named in the city notes are candidates to check, not a list to copy. An agency
+  is never listed just because the notes name it.
+- In "notes", never in "parastatals":
+  - agencies that fail any test, with the test, e.g. "<agency>: Not eligible - E4 power
+    utility";
+  - agencies where a test cannot be decided, e.g. "<agency>: NEEDS REVIEW (E1) - only
+    coordinates/regulates, does not deliver the service";
+  - state departments and directorates (E3), even if they plan or run a service;
+  - bodies that only coordinate, regulate, fund or advise (E1), e.g. a unified transport
+    authority, a regional planning board that does not itself prepare the city's plans;
+  - bodies whose Act is passed but which are not shown to be constituted and functioning (E5);
+  - companies that build infrastructure but do not operate a public service in the city.
+- One body per function where possible: if two bodies seem to deliver the same function for
+  the same area, list the one whose Act gives it the delivery role, and name the other in
+  "notes" with the reason.
 - Metro rail: classify as "transport_corporation" only if it operates public passenger
   transport, and add "NEEDS TEAM CONFIRMATION: legal form <company/corporation/other>" to
   "why_included".

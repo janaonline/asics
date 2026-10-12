@@ -10,8 +10,26 @@ Order of work:
    domain, search for the same instrument on an allowed domain and cite only that copy.
 2. Then independent searches.
 
-Try to locate ONE best source per evidence tag below. Add a second source for a tag only if
-the first did not pass check_link or covers a different period. Never pad the list.
+Your searches and page fetches are limited, so spend them in this order and stop padding:
+  1. [ACT] full text on an allowed domain (the state legislation/gazette portal, India Code
+     full-text PDF, the agency's own site), then [RULES] and [AMEND].
+  2. [ULG-LAW] and [TCP] - most relationship questions (UPD 1-2, DPG 1) cannot be answered
+     without them.
+  3. [BUDGET], [AR], [ACCOUNTS] - most State Capacities questions need them.
+  4. [BOARD-LIST], [EXEC-LAW], [CE-APPT], [ORG], [STAFF-DATA].
+  5. Website-feature tags ([WEB], [WEB-FEATURE], [RTI], [GRIEV], [PROCURE], [CHARTER]).
+  6. Everything else.
+Prefer one document that covers several tags (e.g. an annual report with staffing,
+accounts and board) over several narrow pages. A home page alone is weak evidence for any
+question: prefer the specific page or PDF.
+Try to locate ONE best source per evidence tag. Add a second source for a tag only if the
+first did not pass check_link or covers a different period. Never pad the list.
+
+If an official site blocks automated tools (check_link says so), still list the specific
+page, AND look for the same document on another allowed host (e.g. the Act on the state
+legislation portal or India Code instead of the agency site; an annual report in the state
+legislature's papers-laid pages). Never replace it with a blocked mirror (Indian Kanoon,
+FAOLEX, Wikipedia, news).
 
 EVIDENCE TAGS (start every "useful_for" with the tag in brackets):
 - Identity: [IDENTITY] mandate and functions.
