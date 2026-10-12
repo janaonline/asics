@@ -63,3 +63,47 @@ def test_too_large_request_fails_only_that_call():
 
     with pytest.raises(llm.CallFailed, match="too large"):
         llm._invoke(TooLarge(), [], timeout=5)
+
+
+class Scripted:
+    """A fake model that returns the given replies in turn and records what it was sent."""
+
+    def __init__(self, *replies):
+        self.replies, self.sent = list(replies), []
+
+    def invoke(self, messages, **kwargs):
+        self.sent.append(list(messages))
+        return self.replies.pop(0)
+
+
+def test_every_tool_call_is_answered_before_the_next_turn():
+    unknown = {"type": "tool_use", "id": "toolu_unknown", "name": "web_search_x", "input": {}}
+    cut_off = {"type": "tool_use", "id": "toolu_cut", "name": "read_citation", "input": {}}
+    first = AIMessage(
+        content=[unknown, cut_off],
+        invalid_tool_calls=[
+            {"type": "invalid_tool_call", "id": "toolu_cut", "name": "read_citation", "args": "{"}
+        ],
+    )
+    model = Scripted(first, AIMessage(content='{"answer": 1}'))
+    loop = llm._agent_loop(
+        model, [], timeout=5, effort="low", max_tool_calls=4, on_response=lambda r: None
+    )
+
+    state = loop.invoke({"messages": [], "tool_calls": 0})
+
+    assert state["messages"][-1].text == '{"answer": 1}'
+    answered = {m.tool_call_id for m in model.sent[1] if m.type == "tool"}
+    assert answered == {"toolu_unknown", "toolu_cut"}
+
+
+def test_bad_request_fails_only_that_call():
+    class Rejects:
+        def invoke(self, messages, **kwargs):
+            request = httpx.Request("POST", "https://api.anthropic.com/v1/messages")
+            raise anthropic.BadRequestError(
+                "bad", response=httpx.Response(400, request=request), body=None
+            )
+
+    with pytest.raises(llm.CallFailed, match="rejected"):
+        llm._invoke(Rejects(), [], timeout=5)

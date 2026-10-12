@@ -14,6 +14,7 @@ from typing import Annotated, TypedDict, TypeVar
 
 import anthropic
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
+from langgraph.errors import GraphRecursionError
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
@@ -71,6 +72,8 @@ def _invoke(llm, messages, timeout: float, **kwargs):
         raise CallFailed(
             "the documents it read were too large to send to Claude together"
         ) from None
+    except anthropic.BadRequestError as exc:
+        raise CallFailed(f"Claude rejected the request ({exc})") from None
 
 
 def _pdf_as_text(source: dict) -> dict:
@@ -140,6 +143,10 @@ def _agent_loop(
 
     Server tools (web search / fetch) run inside the model call; our own tools run in the
     `tools` node (LangGraph's ToolNode). Each step is visible in LangGraph Studio.
+
+    Every tool call in a reply must be answered before the next model call, or the API
+    rejects the request. A call to a tool this agent doesn't have, or one whose arguments
+    arrived incomplete, is answered with an error message instead of being run.
     """
     names = {t.name for t in client_tools}
     tool_node = ToolNode(client_tools, handle_tool_errors=True) if client_tools else None
@@ -147,18 +154,35 @@ def _agent_loop(
     def ours(message) -> list:
         return [c for c in getattr(message, "tool_calls", []) or [] if c["name"] in names]
 
+    def unanswerable(message) -> list[ToolMessage]:
+        run = {c["id"] for c in ours(message)}
+        blocks = message.content if isinstance(message.content, list) else []
+        return [
+            ToolMessage(
+                "This tool call couldn't be run (unknown tool or incomplete arguments). Don't "
+                "call it again; reply with the JSON answer.",
+                tool_call_id=b["id"],
+                name=b.get("name") or "unknown",
+                status="error",
+            )
+            for b in blocks
+            if isinstance(b, dict) and b.get("type") == "tool_use" and b.get("id") not in run
+        ]
+
     def model(state: _LoopState) -> dict:
         response: AIMessage = _invoke(llm, state["messages"], timeout, reasoning_effort=effort)
         on_response(response)
         response = _shrink_fetched_pdfs(response)
         return {
             "messages": [response],
-            "tool_calls": state.get("tool_calls", 0) + len(ours(response)),
+            "tool_calls": state.get("tool_calls", 0)
+            + len(ours(response))
+            + len(unanswerable(response)),
         }
 
     def route(state: _LoopState) -> str:
         last = state["messages"][-1]
-        if ours(last):
+        if ours(last) or unanswerable(last):
             return "over_limit" if state["tool_calls"] > max_tool_calls else "tools"
         if last.response_metadata.get("stop_reason") == "pause_turn":
             return "model"  # server tools paused mid-turn; let it continue
@@ -166,8 +190,11 @@ def _agent_loop(
 
     def tools(state: _LoopState) -> dict:
         last = state["messages"][-1]
-        only_ours = last.model_copy(update={"tool_calls": ours(last)})
-        return tool_node.invoke({"messages": [only_ours]})
+        answers = unanswerable(last)
+        if calls := ours(last):
+            only_ours = last.model_copy(update={"tool_calls": calls})
+            answers = tool_node.invoke({"messages": [only_ours]})["messages"] + answers
+        return {"messages": answers}
 
     def over_limit(state: _LoopState) -> dict:
         return {
@@ -180,19 +207,17 @@ def _agent_loop(
                 )
                 for c in ours(state["messages"][-1])
             ]
+            + unanswerable(state["messages"][-1])
         }
 
     graph = StateGraph(_LoopState)
     graph.add_node("model", model)
-    targets = ["model", END]
-    if tool_node:
-        graph.add_node("tools", tools)
-        graph.add_node("over_limit", over_limit)
-        graph.add_edge("tools", "model")
-        graph.add_edge("over_limit", "model")
-        targets += ["tools", "over_limit"]
+    graph.add_node("tools", tools)
+    graph.add_node("over_limit", over_limit)
+    graph.add_edge("tools", "model")
+    graph.add_edge("over_limit", "model")
     graph.add_edge(START, "model")
-    graph.add_conditional_edges("model", route, targets)
+    graph.add_conditional_edges("model", route, ["model", "tools", "over_limit", END])
     return graph.compile(checkpointer=False, name="agent_tool_loop")
 
 
@@ -270,7 +295,10 @@ def call_json(
     )
     limit = {"recursion_limit": 2 * max_calls + 4 * MAX_CONTINUATIONS + 10}
     for attempt in range(2):
-        state = loop.invoke({"messages": messages, "tool_calls": 0}, limit)
+        try:
+            state = loop.invoke({"messages": messages, "tool_calls": 0}, limit)
+        except GraphRecursionError:
+            raise CallFailed("the AI kept calling tools without giving an answer") from None
         messages = state["messages"]
         response = messages[-1]
         try:
