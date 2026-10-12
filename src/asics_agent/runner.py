@@ -20,6 +20,7 @@ from langgraph.types import Command
 
 from asics_agent.agents.answers_master import build_answers_graph
 from asics_agent.agents.sources_master import build_sources_graph
+from asics_agent.keep_awake import keep_awake
 from asics_agent.run_options import RunOptions
 from asics_agent.services import Services
 
@@ -148,7 +149,8 @@ class PipelineRun:
                 f"Review done. Now building the Citation Sheet for {count} "
                 f"parastatal(s). Each one takes several minutes; up to "
                 f"{self._services.settings.max_concurrency} are worked on at the same "
-                "time. Progress appears below."
+                "time. Keep the laptop open (ideally plugged in) until it finishes. "
+                "Progress appears below."
             )
         self._drive(Command(resume=decision))
 
@@ -181,18 +183,19 @@ class PipelineRun:
 
     def _drive(self, payload) -> None:
         try:
-            for namespace, mode, chunk in self._graph.stream(
-                payload,
-                self._config,
-                stream_mode=["updates", "custom"],
-                subgraphs=True,
-                context=self.options,
-            ):
-                self.last_event = datetime.now()
-                if mode == "custom":
-                    self._on_activity(chunk)
-                else:
-                    self._on_update(namespace, chunk)
+            with keep_awake():  # a sleeping computer freezes the run
+                for namespace, mode, chunk in self._graph.stream(
+                    payload,
+                    self._config,
+                    stream_mode=["updates", "custom"],
+                    subgraphs=True,
+                    context=self.options,
+                ):
+                    self.last_event = datetime.now()
+                    if mode == "custom":
+                        self._on_activity(chunk)
+                    else:
+                        self._on_update(namespace, chunk)
             snapshot = self._graph.get_state(self._config)
             if snapshot.interrupts:
                 self.review = snapshot.interrupts[0].value

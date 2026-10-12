@@ -113,6 +113,10 @@ works. The **Right now** table shows what each parastatal is doing, for example 
 links: 6 of 14 done"*, and when it last changed. Building the Citation Sheet takes several
 minutes per parastatal, and up to 4 are worked on at once.
 
+**Keep the laptop open, ideally plugged in.** While a step runs, the app stops the computer
+from going to sleep on its own, but closing the lid still puts it to sleep, and a sleeping
+computer pauses the run.
+
 When the agent needs you, the page shows an **Action needed** banner with **Continue**
 buttons. That's the only time you need to do anything.
 

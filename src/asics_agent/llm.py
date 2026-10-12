@@ -4,6 +4,7 @@ Every call returns the URLs that tools returned verbatim (see links/registry.py)
 downstream code can reject any URL the model wrote from memory or constructed.
 """
 
+import base64
 import contextvars
 import json
 import re
@@ -11,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import TimeoutError as FuturesTimeout
 from typing import Annotated, TypedDict, TypeVar
 
+import anthropic
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
@@ -25,11 +27,13 @@ from asics_agent.agent_setup import (
     system_prompt,
 )
 from asics_agent.links.registry import extract_fetched_pages, extract_tool_urls
+from asics_agent.links.text import pdf_to_text
 from asics_agent.run_options import current_options
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext, build_tools
 
 MAX_CONTINUATIONS = 4
+MAX_FETCHED_PDF_CHARS = 100_000  # text kept from each fetched PDF on later turns
 T = TypeVar("T", bound=BaseModel)
 
 
@@ -63,6 +67,52 @@ def _invoke(llm, messages, timeout: float, **kwargs):
         raise CallTimedOut(
             f"the research took longer than {timeout / 60:.0f} minutes and was stopped"
         ) from None
+    except anthropic.RequestTooLargeError:
+        raise CallFailed(
+            "the documents it read were too large to send to Claude together"
+        ) from None
+
+
+def _pdf_as_text(source: dict) -> dict:
+    """A fetched PDF (base64) as the plain-text source web_fetch uses for web pages."""
+    try:
+        text = pdf_to_text(base64.b64decode(source.get("data") or ""))
+    except Exception:  # malformed PDFs should not stop the call
+        text = ""
+    if not text:
+        text = "(PDF with no readable text, e.g. a scanned document.)"
+    elif len(text) > MAX_FETCHED_PDF_CHARS:
+        more = len(text) - MAX_FETCHED_PDF_CHARS
+        text = f"{text[:MAX_FETCHED_PDF_CHARS]}\n\n[document cut here; {more} more characters]"
+    return {"type": "text", "media_type": "text/plain", "data": text}
+
+
+def _shrink_fetched_pdfs(response: AIMessage) -> AIMessage:
+    """Replace PDFs fetched with web_fetch by their text before the turn is sent again.
+
+    web_fetch returns a PDF as the whole file in base64 (its size limit doesn't apply to
+    PDFs), and the conversation is re-sent on every later turn, so a few large government
+    PDFs once pushed a request over the API's 32 MB limit. Claude has already read the full
+    PDF in the turn that fetched it.
+    """
+    if not isinstance(response.content, list):
+        return response
+    changed, content = False, []
+    for block in response.content:
+        result = block.get("content") if isinstance(block, dict) else None
+        document = result.get("content") if isinstance(result, dict) else None
+        source = document.get("source") if isinstance(document, dict) else None
+        if (
+            block.get("type") == "web_fetch_tool_result"
+            and isinstance(source, dict)
+            and source.get("type") == "base64"
+            and source.get("media_type") == "application/pdf"
+        ):
+            document = {**document, "source": _pdf_as_text(source)}
+            block = {**block, "content": {**result, "content": document}}
+            changed = True
+        content.append(block)
+    return response.model_copy(update={"content": content}) if changed else response
 
 
 _JSON_OBJECT = re.compile(r"\{.*\}", re.DOTALL)
@@ -100,6 +150,7 @@ def _agent_loop(
     def model(state: _LoopState) -> dict:
         response: AIMessage = _invoke(llm, state["messages"], timeout, reasoning_effort=effort)
         on_response(response)
+        response = _shrink_fetched_pdfs(response)
         return {
             "messages": [response],
             "tool_calls": state.get("tool_calls", 0) + len(ours(response)),

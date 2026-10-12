@@ -33,6 +33,7 @@ class Settings:
     web_search_max_uses: int
     http_timeout: float
     llm_call_timeout: float
+    api_read_timeout: float
     user_agent: str
     max_evidence_chars: int
     scoring_dir: Path = PROJECT_ROOT / "scoring" / "2027"  # templates, human/AI copies, results
@@ -77,6 +78,7 @@ def _base_settings() -> Settings:
         web_search_max_uses=int(os.getenv("ASICS_WEB_SEARCH_MAX_USES", "8")),
         http_timeout=float(os.getenv("ASICS_HTTP_TIMEOUT", "30")),
         llm_call_timeout=float(os.getenv("ASICS_LLM_CALL_TIMEOUT", "900")),
+        api_read_timeout=float(os.getenv("ASICS_API_READ_TIMEOUT", "180")),
         user_agent=os.getenv(
             "ASICS_USER_AGENT",
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
