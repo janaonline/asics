@@ -179,7 +179,8 @@ def build_results(
         people, ai = by.get((v, "People")), by.get((v, "AI"))
         base = people or ai
         for code, label in base.questions:
-            if only is not None and (canon(city_of(label)) if canon else city_of(label)) not in only:
+            city = canon(city_of(label)) if canon else city_of(label)
+            if only is not None and city not in only:
                 continue
             p = people.questions.get((code, label)) if people else None
             a = ai.questions.get((code, label)) if ai else None
@@ -190,7 +191,7 @@ def build_results(
                     code,
                     base.tags.get(code, ""),
                     label,
-                    city_of(label),
+                    city,
                     _round(p),
                     _round(a),
                     round(a - p, 2) if both else None,
