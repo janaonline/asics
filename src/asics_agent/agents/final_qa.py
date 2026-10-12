@@ -7,8 +7,9 @@ Citation Sheet row that exists, is marked for use, and is verified.
 """
 
 import re
+from pathlib import Path
 
-from asics_agent.links.accessibility import is_india_code
+from asics_agent.links.accessibility import content_problem, is_india_code
 from asics_agent.models import Answer, Issue, Source
 
 GENERIC_NOTES = re.compile(r"^\s*(source checked|checked|n/?a|ok|done|verified)\.?\s*$", re.I)
@@ -52,6 +53,17 @@ def qa_sources(sources: list[Source], tool_urls: set[str]) -> list[Issue]:
                 "to confirm it shows the text of the Act.",
                 ref,
             )
+        if s.team_saved_copy and s.content_path and Path(s.content_path).exists():
+            # The team's saved copy must pass the same content rules as a downloaded page.
+            text = Path(s.content_path).read_text(encoding="utf-8")
+            if content_problem(s.url, text)[0]:
+                _flag(
+                    issues,
+                    "error",
+                    "The saved copy of this page has too little readable text, or shows only "
+                    "a summary, a login or an error page. Save the page again.",
+                    ref,
+                )
         if not s.notes.strip():
             _flag(issues, "error", "This source has no Notes. Add a short explanation.", ref)
     if not any(i.severity == "error" for i in issues):

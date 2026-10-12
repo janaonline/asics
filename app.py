@@ -439,6 +439,16 @@ def start_page(action: str):
     if not practice and action != "checks":
         with st.expander("Advanced options (for this run only)"):
             st.caption("Leave these empty to use each agent's own settings (Agent setup).")
+            finder = settings.find_sources_max_uses
+            st.caption(
+                "Source-finding calls (Step 1) use "
+                + (
+                    f"{finder} web searches (ASICS_FIND_SOURCES_MAX_USES in .env)"
+                    if finder
+                    else "their agent's own limit (ASICS_FIND_SOURCES_MAX_USES is not set)"
+                )
+                + ". A number below overrides every agent, including those."
+            )
             model = st.text_input(
                 "Claude model for agents without their own",
                 placeholder=f"default: {settings.model}",
@@ -577,7 +587,7 @@ def plan_stages(plan: PlanRun) -> None:
     st.dataframe(
         pd.DataFrame(rows, columns=["Stage", "Status", "Outcome"]),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
 
 
@@ -926,7 +936,7 @@ def answers_results(slug: str, run: PipelineRun):
         st.dataframe(
             pd.DataFrame(rows),
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
             column_config={
                 "Question": st.column_config.TextColumn(width="small"),
                 "Citation": st.column_config.TextColumn(width="small"),
@@ -1037,7 +1047,7 @@ def register_page():
             ]
         ),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
     listed = [
         {
@@ -1059,7 +1069,7 @@ def register_page():
         "included. The full list for each city is in its Sources workbook (City files)."
     )
     if listed:
-        st.dataframe(pd.DataFrame(listed), hide_index=True, use_container_width=True)
+        st.dataframe(pd.DataFrame(listed), hide_index=True, width="stretch")
 
 
 def city_folders() -> list[Path]:
@@ -1422,8 +1432,9 @@ def cities_overview() -> None:
                 "City": city.name,
                 "State": city.state,
                 "Status": STAGES[status["stage"]][0],
-                "Parastatals": "–" if status["parastatals"] is None else status["parastatals"],
-                "Citations ready": "–" if status["ready"] is None else status["ready"],
+                # Text throughout, so each column has one type (numbers mixed with "–" break Arrow)
+                "Parastatals": "–" if status["parastatals"] is None else str(status["parastatals"]),
+                "Citations ready": "–" if status["ready"] is None else str(status["ready"]),
                 "Last activity": status["last"].strftime("%d %b %Y") if status["last"] else "",
                 "Next step": STAGES[status["stage"]][1],
             }
@@ -1436,7 +1447,7 @@ def cities_overview() -> None:
     event = st.dataframe(
         frame.drop(columns=hidden),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         on_select="rerun",
         selection_mode="single-row",
         key="home-cities",

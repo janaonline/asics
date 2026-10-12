@@ -138,7 +138,11 @@ def main() -> None:
     tuning = parser.add_argument_group("run options (override agent_setup/agents and .env)")
     tuning.add_argument("--model", help="Claude model for agents that don't name their own")
     tuning.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"])
-    tuning.add_argument("--web-searches", type=int, help="web searches / fetches per call")
+    tuning.add_argument(
+        "--web-searches",
+        type=int,
+        help="web searches / fetches per call, every agent (beats ASICS_FIND_SOURCES_MAX_USES)",
+    )
     tuning.add_argument("--max-tool-calls", type=int, help="tool calls per agent call")
     args = parser.parse_args()
 

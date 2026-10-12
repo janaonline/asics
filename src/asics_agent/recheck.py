@@ -15,6 +15,7 @@ import httpx
 from openpyxl import load_workbook
 
 from asics_agent.links.accessibility import check_url
+from asics_agent.links.manual import MANUAL_DIR, saved_copy
 from asics_agent.links.text import _squash
 from asics_agent.models import AccessCheck
 from asics_agent.workbook import (
@@ -76,12 +77,18 @@ def recheck_workbook(path: Path, http: httpx.Client, user_agent: str) -> tuple[P
                 continue
             mapping = _column_map(ws, RECHECK_COLUMNS + (QUOTE_COLUMN if is_scoring else []))
             quote_column = headers.get(_norm("Evidence Excerpt"))
+            id_column = None if is_scoring else headers.get(_norm("Citation ID"))
             for r in range(2, ws.max_row + 1):
                 url = _cell_url(ws.cell(row=r, column=url_column))
                 if not url:
                     continue
                 result = check(url)
                 opens, colour = _opens(result)
+                if id_column and opens != "Yes":  # a Sources workbook: the team may have saved it
+                    cache_dir = path.parent / "evidence"
+                    copy = saved_copy(cache_dir, str(ws.cell(row=r, column=id_column).value or ""))
+                    if copy:
+                        opens += f" A saved copy is in evidence/{MANUAL_DIR}/{copy.name}."
                 summary["links opening" if opens == "Yes" else "links with problems"] += 1
                 ws.cell(row=r, column=mapping["Link Re-checked On"], value=today)
                 cell = ws.cell(row=r, column=mapping["Link Still Opens?"], value=opens)

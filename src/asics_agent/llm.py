@@ -232,6 +232,7 @@ def call_json(
     known_urls: set[str] | frozenset[str] = frozenset(),
     pages: list[tuple[str, str]] | None = None,
     tool_context: ToolContext | None = None,
+    web_max_uses: int | None = None,
 ) -> tuple[T, set[str], list[str]]:
     """Run one agent (defined in agent_setup/agents/<agent>.md) and parse its JSON reply.
 
@@ -240,6 +241,8 @@ def call_json(
     - Tools: exactly those listed under the agent's `tools:`. Client tools see only what
       `tool_context` gives them.
     - Model and effort: the agent's own settings, unless the run's RunOptions override them.
+    - Web search/fetch limit: the run's option if set, else `web_max_uses` (the caller's), else
+      the agent's own `max_uses`.
 
     Returns (parsed reply, URLs returned verbatim by tools, notes about rejected URLs).
     If `pages` is given, every page fetched with web_fetch is appended to it as (url, text).
@@ -251,9 +254,9 @@ def call_json(
 
     ctx = tool_context or ToolContext(services=services)
     ctx.allowed_urls |= set(known_urls)
-    server_tools, client_tools = build_tools(
-        root, config.tools, ctx, web_max_uses=options.web_search_max_uses
-    )
+    if options.web_search_max_uses is not None:
+        web_max_uses = options.web_search_max_uses
+    server_tools, client_tools = build_tools(root, config.tools, ctx, web_max_uses=web_max_uses)
     llm = services.llm_for(config.model or options.model)
     if server_tools or client_tools:
         llm = llm.bind_tools([*server_tools, *client_tools])

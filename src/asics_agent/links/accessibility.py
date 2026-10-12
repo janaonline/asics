@@ -113,6 +113,24 @@ def is_india_code(url: str) -> bool:
     return urlsplit(url).netloc.lower().endswith(INDIA_CODE_HOST)
 
 
+def content_problem(url: str, text: str) -> tuple[str | None, str]:
+    """What is wrong with a page's readable text, if anything: (problem, detail).
+
+    The problem is "blocked" (a login, error or captcha page; the detail is the marker
+    found), "metadata" (an India Code record without the Act's text) or "too_short".
+    Used for downloaded pages and for copies the team saved by hand.
+    """
+    words = len(text.split())
+    lowered = text[:5000].lower()
+    if marker := next((m for m in BLOCK_MARKERS if m in lowered), None):
+        return "blocked", marker
+    if is_india_code(url) and (words < INDIA_CODE_MIN_WORDS or lowered.count("section") < 3):
+        return "metadata", ""
+    if words < MIN_WORDS:
+        return "too_short", ""
+    return None, ""
+
+
 def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) -> AccessCheck:
     check = AccessCheck(url=url, checked_at=datetime.now(UTC).isoformat(timespec="seconds"))
     reasons = check.reasons
@@ -185,16 +203,16 @@ def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) 
         return check
 
     check.words = len(text.split())
-    lowered = text[:5000].lower()
-    if marker := next((m for m in BLOCK_MARKERS if m in lowered), None):
-        reasons.append(f"Page appears blocked or gated ({marker!r}).")
+    problem, detail = content_problem(url, text)
+    if problem == "blocked":
+        reasons.append(f"Page appears blocked or gated ({detail!r}).")
         return check
-    if is_india_code(url) and (check.words < INDIA_CODE_MIN_WORDS or lowered.count("section") < 3):
+    if problem == "metadata":
         reasons.append(
             "India Code page shows only metadata, not the text of the Act; not human-verified."
         )
         return check
-    if check.words < MIN_WORDS:
+    if problem == "too_short":
         reasons.append(
             f"Only {check.words} words of readable content (possibly JavaScript-rendered, "
             "a scanned PDF, or an empty page)."

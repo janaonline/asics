@@ -30,7 +30,6 @@ class Settings:
     outputs_dir: Path
     max_concurrency: int
     check_workers: int
-    web_search_max_uses: int
     http_timeout: float
     llm_call_timeout: float
     api_read_timeout: float
@@ -49,6 +48,8 @@ class Settings:
     question_columns: tuple = ()  # (our column name, the bank's column name) pairs
     scoring_workbook: Path | None = None
     outputs_root: Path | None = None  # the outputs folder before the vertical's subfolder
+    # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
+    find_sources_max_uses: int | None = None
 
 
 @lru_cache
@@ -75,7 +76,6 @@ def _base_settings() -> Settings:
         memory_max_chars=int(os.getenv("ASICS_MEMORY_MAX_CHARS", "20000")),
         max_concurrency=int(os.getenv("ASICS_MAX_CONCURRENCY", "4")),
         check_workers=int(os.getenv("ASICS_CHECK_WORKERS", "3")),
-        web_search_max_uses=int(os.getenv("ASICS_WEB_SEARCH_MAX_USES", "8")),
         http_timeout=float(os.getenv("ASICS_HTTP_TIMEOUT", "30")),
         llm_call_timeout=float(os.getenv("ASICS_LLM_CALL_TIMEOUT", "900")),
         api_read_timeout=float(os.getenv("ASICS_API_READ_TIMEOUT", "180")),
@@ -84,6 +84,7 @@ def _base_settings() -> Settings:
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
             "(KHTML, like Gecko) Chrome/129.0 Safari/537.36",
         ),
+        find_sources_max_uses=int(os.getenv("ASICS_FIND_SOURCES_MAX_USES") or 0) or None,
         max_evidence_chars=int(os.getenv("ASICS_MAX_EVIDENCE_CHARS", "60000")),
         scoring_dir=_path("ASICS_SCORING_DIR", "scoring/2027"),
     )

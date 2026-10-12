@@ -28,6 +28,7 @@ from asics_agent.agents.links_builder import build_links_agent
 from asics_agent.agents.parastatal_discovery import build_parastatal_discovery
 from asics_agent.agents.state import MasterState
 from asics_agent.links.database import write_links_db
+from asics_agent.links.manual import team_check
 from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal
 from asics_agent.run_options import RunOptions
 from asics_agent.services import Services, default_services
@@ -157,6 +158,7 @@ def build_sources_graph(
                 ),
                 provenance=old.provenance,
                 allowed_urls=None,
+                team_copy=team_check(old),
             )
             shared.append(
                 (source or old).model_copy(
