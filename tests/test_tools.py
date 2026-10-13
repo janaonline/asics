@@ -132,3 +132,49 @@ def test_each_agent_can_name_its_own_model(services):
     assert real.llm_for(None) is real.llm
     assert real.llm_for("claude-sonnet-5-5").model == "claude-sonnet-5-5"
     assert real.llm_for("claude-sonnet-5-5") is real.llm_for("claude-sonnet-5-5")  # reused
+
+
+def _web_limits(services, monkeypatch, **options):
+    """Run Step 1 and return {agent kind: web limits passed} for every agent that has web tools."""
+    from asics_agent import llm
+    from asics_agent.agents.sources_master import build_sources_graph
+    from asics_agent.run_options import RunOptions
+
+    seen = {}
+    real = llm.build_tools
+
+    def spy(root, tools, ctx, web_max_uses=None):
+        server, client = real(root, tools, ctx, web_max_uses=web_max_uses)
+        kind = "source finder" if "check_link" in tools else "other"
+        seen.setdefault(kind, set()).update(t["max_uses"] for t in server)
+        return server, client
+
+    monkeypatch.setattr(llm, "build_tools", spy)
+    build_sources_graph(services).invoke(
+        {"city": "sample_city_a", "only_questions": ["UPD 1"], "auto_approve": True},
+        context=RunOptions(**options),
+    )
+    return seen
+
+
+def test_source_finder_keeps_its_own_limit_when_the_setting_is_not_set(services, monkeypatch):
+    assert services.settings.find_sources_max_uses is None
+    # "other" includes parastatal discovery, which has 20
+    assert _web_limits(services, monkeypatch) == {"source finder": {8}, "other": {8, 20}}
+
+
+def test_source_finder_gets_its_own_search_limit(services, monkeypatch):
+    from asics_agent.services import Services
+
+    settings = dataclasses.replace(services.settings, find_sources_max_uses=20)
+    limited = Services(llm=services.llm, http=services.http, settings=settings)
+    assert _web_limits(limited, monkeypatch) == {"source finder": {20}, "other": {8, 20}}
+
+
+def test_a_run_override_beats_the_source_finder_limit(services, monkeypatch):
+    from asics_agent.services import Services
+
+    settings = dataclasses.replace(services.settings, find_sources_max_uses=20)
+    limited = Services(llm=services.llm, http=services.http, settings=settings)
+    seen = _web_limits(limited, monkeypatch, web_search_max_uses=5)
+    assert seen == {"source finder": {5}, "other": {5}}

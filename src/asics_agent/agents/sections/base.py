@@ -32,7 +32,7 @@ from asics_agent.agents.common import read_source_text
 from asics_agent.agents.state import AnswerTask, AnswerTaskOutput
 from asics_agent.links.text import locate_quote, relevance, search_phrase
 from asics_agent.llm import CallFailed, call_json
-from asics_agent.models import Answer, Source
+from asics_agent.models import ANSWER_CLASSES, CONFIDENCES, Answer, Source
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext
 from asics_agent.verticals import agent_for
@@ -78,6 +78,57 @@ class AnswerReply(BaseModel):
     evidence_excerpt: str = ""
     missing_evidence: str = ""
     notes: str = ""
+
+
+# What can follow BAND in the model's notes (see prompts/answer-question.md).
+_AFTER_BAND = r"CONFIRM:|SCORE-BLANK:|ALSO:|RTI-TARGET:|SCALE-MISMATCH|Reviewer to capture"
+
+
+def parse_class_line(notes: str) -> tuple[str, str, str, list[str]]:
+    """(class, confidence, band, problems) from the start of the model's notes.
+
+    The prompt asks for "CLASS: <A1|A2|R|P|M|Needs review>; CONFIDENCE: <High|Medium|Low>;
+    BAND: <…>". Spacing and case are forgiven; a value that is missing or not in the allowed
+    list is left blank and reported in `problems`, never guessed.
+    """
+    text, pos, found = notes.strip().lstrip("\"'"), 0, {}
+    stops = {
+        "CLASS": r"[;,\n]|CONFIDENCE\b|BAND\b",
+        "CONFIDENCE": r"[;,\n]|BAND\b",
+        "BAND": _AFTER_BAND,
+    }
+    for key, stop in stops.items():
+        start = re.compile(rf"\s*[;,]?\s*{key}\s*[:=]\s*", re.I).match(text, pos)
+        if not start:
+            found[key] = ""
+            continue
+        value = re.compile(rf"(.*?)(?=\s*(?:{stop})|$)", re.I | re.S).match(text, start.end())
+        found[key] = re.sub(r"\s+", " ", value.group(1)).strip(" .;,")
+        pos = value.end()
+
+    problems, result = [], {}
+    for key, value, allowed in (
+        ("CLASS", found["CLASS"], ANSWER_CLASSES),
+        ("CONFIDENCE", found["CONFIDENCE"], CONFIDENCES),
+        ("BAND", found["BAND"], None),
+    ):
+        match = next((a for a in allowed or () if a.lower() == value.lower()), "")
+        result[key] = (match if allowed else value) if value else ""
+        if value and allowed and not match:
+            problems.append(
+                f"{key} '{value}' is not one of {', '.join(allowed)}, so that column was left blank."
+            )
+    if not any(found.values()):
+        problems = [
+            "the notes don't start with CLASS, CONFIDENCE and BAND, so those columns were left blank."
+        ]
+    else:
+        for key in ("CLASS", "CONFIDENCE", "BAND"):
+            if not found[key]:
+                problems.append(f"{key} is missing from the notes, so that column was left blank.")
+    if result["CLASS"] == "A2" and result["CONFIDENCE"] == "High":
+        problems.append("Class A2 is never High confidence. Check the Confidence.")
+    return result["CLASS"], result["CONFIDENCE"], result["BAND"], problems
 
 
 def _normalise(text: str) -> str:
@@ -206,6 +257,7 @@ def build_section_agent(code: str, services: Services):
         return {
             "draft": {
                 **reply.model_dump(),
+                "replied": True,
                 "valid": not problems,
                 "problems": problems,
                 "trimmed": trimmed,
@@ -245,8 +297,12 @@ def build_section_agent(code: str, services: Services):
 
         if source:
             notes.append(f"Evidence from Citation Sheet row {source.citation_id} ({source.title}).")
+        answer_class = confidence = band = ""
         if d.get("notes"):
             notes.append(d["notes"])
+        if d.get("replied"):
+            answer_class, confidence, band, flags = parse_class_line(d.get("notes", ""))
+            notes += [f"Reviewer: {flag[0].upper()}{flag[1:]}" for flag in flags]
         if score_note and status != "Insufficient Evidence":
             notes.append(score_note)
         if d.get("sources_reviewed"):
@@ -278,6 +334,9 @@ def build_section_agent(code: str, services: Services):
             evidence_excerpt=d.get("evidence_excerpt", "") if source else "",
             source_used="Citation Sheet" if source else "None",
             notes=" ".join(notes),
+            answer_class=answer_class,
+            confidence=confidence,
+            rubric_band=band,
             missing_evidence=missing,
             where_to_find=d.get("where_to_find", "") if source else "",
             search_phrase=d.get("search_phrase", "") if source else "",

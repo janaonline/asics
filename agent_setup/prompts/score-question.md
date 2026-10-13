@@ -20,7 +20,20 @@ Rules:
    one allowed value per input (e.g. "YES"), or a number when asked.
 4. If the Citation Sheet doesn't let you decide an input, leave it "" and say what evidence
    is missing. A person will score it. Never guess.
-5. "citation_id" is the one Citation ID your inputs rest on. "quote" is the decisive passage
+5. An input that would score 0 (e.g. "NO" for "is there a provision...") needs AFFIRMATIVE
+   ABSENCE: every relevant instrument in the Citation Sheet was read (the Act AND its Rules
+   and notifications, and the other body's law for relationship questions), nothing was found,
+   and you list what you checked in "comments". Otherwise leave it "": not found is not absent.
+6. Score the question as asked, not a narrower one: for "law" questions check every layer
+   (Act, Rules, regulations, notifications); for relationship questions check both sides.
+   "may" is not "shall"; advisory is not approval.
+7. Website evidence that could not be opened automatically is a verification limit, never a
+   negative: leave it "" and say "VERIFICATION-LIMIT" in comments.
+8. If the rubric's scale does not match the Max Score, or the evidence fits no band, leave
+   the affected input "" and say "SCALE-MISMATCH" or "RUBRIC-GAP" in comments.
+9. Use only evidence about THIS agency in THIS city (and its state's law). Never carry an
+   input over from another agency or city.
+10. "citation_id" is the one Citation ID your inputs rest on. "quote" is the decisive passage
    copied word for word from that citation (1-3 sentences). Both are checked in code: an
    input with a wrong ID or a quote that isn't in the source is discarded.
 
@@ -30,4 +43,7 @@ JSON keys:
   "quote": string,
   "chapter": string, "provision": string, "clause": string (where in the document, if known),
   "comments": string (why these inputs; anything a person should check),
-  "confidence": "high" | "medium" | "low"
+  "confidence": "high" | "medium" | "low" (evidence quality, not how sure you feel: "high"
+     only when one explicit primary provision or record decides every input; "medium" when
+     inputs need 2+ instruments read together, a relationship judgement, a calculation, or
+     PRS-only text; "low" when anything is blank, partial or outdated)

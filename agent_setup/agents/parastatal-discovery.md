@@ -5,8 +5,8 @@ step: 1
 prompt: discover-parastatals
 skills: [government-websites]
 tools:
-  web_search: {max_uses: 8}
-  web_fetch: {max_uses: 8}
+  web_search: {max_uses: 20}
+  web_fetch: {max_uses: 20}
 max_tool_calls: 0
 # model: claude-sonnet-5-5   # optional: a different Claude model for this agent
 effort: high

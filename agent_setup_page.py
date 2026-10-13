@@ -245,7 +245,7 @@ def agents_view(root: Path):
                     "Prompt": a.prompt,
                     "Skills": ", ".join(a.skills),
                     "Tools": ", ".join(a.tools) or "none",
-                    "Tool calls (max)": a.max_tool_calls
+                    "Tool calls (max)": str(a.max_tool_calls)
                     if any(t not in ("web_search", "web_fetch") for t in a.tools)
                     else "",
                     "Model": a.model or "default",

@@ -120,6 +120,7 @@ Open it from **City files** with **Open the Sources workbook in Excel**. Then:
 
 - **Parastatals:** set **Include?** to No to leave one out. To add one, add a row with its ID, name and Type, and leave Found By empty.
 - **Citation Sheet:** open each link, or its saved copy, and set **Use for Answers?** to No for anything unsuitable. Links that failed the check start as No. To add a source, add a row with Parastatal (an ID from the Parastatals sheet, or `All parastatals`), Source Title, Official URL and What This Source Is Useful For. Leave Citation ID empty; it is filled in automatically. Your links are opened and checked the same way as the agent's.
+- **Links the tool couldn't open (*Human Verification Required*):** many government websites block automated tools. Open the link in your browser, save the page or PDF as `evidence/manual/<Citation ID>.pdf` (or `.html` / `.txt`) in the city's folder, for example `outputs/cities/Bengaluru/evidence/manual/BWSSB-07.pdf`, and set **Use for Answers?** to Yes. Run Step 1 again (or Step 2): the tool reads your saved copy, checks that it has readable text, and marks the row *Verified*, with a note that your team verified it. If the copy can't be used (a scanned PDF with no text, an India Code summary page, a login page, or a file name that matches no Citation ID), **Needs Attention** and the **Citation Sheet** tab in **City files** say why.
 - **Coverage:** questions marked *No source yet* will be answered *Insufficient Evidence* unless you add a source.
 - **Your Notes** columns are never overwritten.
 
@@ -133,6 +134,10 @@ The **Current run** page says **"Working, nothing for you to do right now"** whi
 works. The **Right now** table shows what each parastatal is doing, for example *"Checking
 links: 6 of 14 done"*, and when it last changed. Building the Citation Sheet takes several
 minutes per parastatal, and up to 4 are worked on at once.
+
+**Keep the laptop open, ideally plugged in.** While a step runs, the app stops the computer
+from going to sleep on its own, but closing the lid still puts it to sleep, and a sleeping
+computer pauses the run.
 
 When the agent needs you, the page shows an **Action needed** banner with **Continue**
 buttons. That's the only time you need to do anything.
@@ -187,6 +192,8 @@ For each answer:
 4. If the page has changed, click **Open saved copy**.
 5. Choose **Agree**, **Disagree** or **Needs change** in **Reviewer Decision**, and add a comment.
 
+**Class**, **Confidence** and **Rubric Band** come from the start of each answer's Notes, where the AI writes `CLASS: …; CONFIDENCE: …; BAND: …`. They can be filtered, and Class and Confidence have dropdowns. If one is missing or not an allowed value (Class: A1, A2, R, P, M, Needs review; Confidence: High, Medium, Low), its cell is left blank and the Notes say so, starting "Reviewer:". A2 with High confidence is flagged the same way, since A2 is never High.
+
 Rows are coloured: **green** is answered, **amber** needs a person to look, **red** means no evidence, and **grey** is not applicable.
 
 ## How the official website is checked
@@ -216,7 +223,7 @@ check).
 
 1. **Only links found by a web search, or added by your team, are used.** A link the AI writes from memory or pieces together is thrown away.
 2. **Each exact link is opened separately**, the way a browser would, without changing it. It must show real, readable content. An error page, a login or captcha page, a data feed, or an India Code page showing only a summary of an Act doesn't count.
-3. **Anything uncertain goes to a person.** Pages that need JavaScript, scanned PDFs and links that jump to another website are marked *Human Verification Required*, scored 0, and start as *Use for Answers? = No*.
+3. **Anything uncertain goes to a person.** Pages that need JavaScript, scanned PDFs and links that jump to another website are marked *Human Verification Required*, scored 0, and start as *Use for Answers? = No*. A person can then save the page themselves (see [Reviewing the Sources workbook](#reviewing-the-sources-workbook)). A saved copy has to pass the same content checks, and a later automatic check that fails never undoes it; if the automatic check starts working, its fresh copy is used instead.
 4. **A copy of every page that passes is saved**, and every quote is matched against it word for word.
 
 ## Giving the agents more context (Team memory)
@@ -444,7 +451,11 @@ flowchart TD
 - **Two master agents,** [agents/sources_master.py](src/asics_agent/agents/sources_master.py) and [agents/answers_master.py](src/asics_agent/agents/answers_master.py), handle one city each and route between phases with plain Python.
 - **The Excel handoff** is [sources_workbook.py](src/asics_agent/sources_workbook.py). It reads, writes and merges the Sources workbook, keeping the team's decisions, rows, notes and Citation IDs across re-runs.
 - **Several cities** run through `BatchRun` in [runner.py](src/asics_agent/runner.py), one after another. Step 1 has a single review for all cities, and the app and CLI both use it.
+<<<<<<< HEAD
 - **Files** go to `outputs/<Vertical>/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by all steps), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/<Vertical>/batches/<id>/`; the app's own files to `outputs/_app/`. `outputs/START_HERE.xlsx` is rewritten after every run ([outputs_index.py](src/asics_agent/outputs_index.py)); `scripts/tidy_outputs.py` moves an older outputs folder into this layout.
+=======
+- **Files** go to `outputs/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by both steps; `evidence/manual/` holds copies the team saved by hand), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/batches/<id>/`.
+>>>>>>> main
 
 | Sub-agent | File | What it does |
 |---|---|---|
@@ -483,7 +494,8 @@ parallel branch. Each graph is a `StateGraph` over `MasterState`
 `web_search_max_uses`, `max_tool_calls` and `memory_max_chars`.
 
 - **Where to set them:** Studio shows them as a form per run. The CLI takes `--model`, `--effort`, `--web-searches` and `--max-tool-calls`. The app has **Advanced options** on the Start page.
-- **Precedence:** a run's `effort`, `web_search_max_uses` and `max_tool_calls` override every agent's own setting. A run's `model` applies only to agents that don't name their own.
+- **Where search limits come from:** the `max_uses` in each agent's file under `agent_setup/agents/` (8 by default) sets the limit for its `web_search` and `web_fetch`. `ASICS_FIND_SOURCES_MAX_USES` in `.env` replaces it for both tools in the source finder only, and `--web-searches` or the app's **Advanced options** replace it for every agent in one run. There is no global `.env` setting.
+- **Precedence:** a run's `effort`, `web_search_max_uses` and `max_tool_calls` override every agent's own setting. The source finder (`citation-builder`, and UPD's `city-citation-builder`) has its own limit for web searches and web fetches (each), `ASICS_FIND_SOURCES_MAX_USES` in `.env`; unset, it keeps the agent's `max_uses`. A run's `web_search_max_uses` still wins over it, for every agent. A run's `model` applies only to agents that don't name their own.
 - **In code:** read them with `current_options()`.
 
 **Agents and their tool loop.** Every model call goes through `call_json(services, "<agent>", …)`
@@ -714,7 +726,7 @@ agents and rules), so nothing about how it researches changed. Its files are in
 
 - **The accessibility test uses plain HTTP requests.** JavaScript-only pages end up as *Human Verification Required*.
 - **Backlinks come from government pages the agent fetched during research,** not from a full web-wide backlink index. Official social handles are matched only when a government page links to the same handle.
-- **Time limits:** each web page download is limited to 60 seconds and 30 MB (`links/accessibility.py`), and each Claude call to `ASICS_LLM_CALL_TIMEOUT` seconds (default 900). These exist because httpx's timeout applies per network read, so a slowly trickling server once froze a whole run. Live progress comes from `progress.report()` through LangGraph's `custom` stream mode.
+- **Time limits:** each web page download is limited to 60 seconds and 30 MB (`links/accessibility.py`), each Claude call to `ASICS_LLM_CALL_TIMEOUT` seconds (default 900), and each wait for the next piece of a Claude reply to `ASICS_API_READ_TIMEOUT` seconds (default 300; a stalled or dropped connection is retried twice, then fails only that parastatal). These exist because httpx's timeout applies per network read, so a slowly trickling server once froze a whole run. Live progress comes from `progress.report()` through LangGraph's `custom` stream mode.
 - **A run in progress lives in the app's memory.** Closing the black window mid-run loses that run, but files already written are kept.
 - **Sheet names:** Excel limits them to 31 characters, so long city names get "Scoring - &lt;City&gt;".
 - **Question bank data issues** (e.g. UPD 1a and 1b score out of 10 but have a max of 5) show up in **Needs Attention**.

@@ -19,6 +19,10 @@ from asics_agent.config import PROJECT_ROOT, get_settings
 def setup_dir(tmp_path):
     root = tmp_path / "agent_setup"
     shutil.copytree(PROJECT_ROOT / "agent_setup", root)
+    # Start from an empty memory folder, so the team's real notes don't change the results.
+    for path in (root / "memory").rglob("*.md"):
+        if path.name != "README.md":
+            path.unlink()
     return root
 
 
@@ -141,3 +145,17 @@ def test_note_title_comes_from_its_heading(setup_dir):
         next(n for n in notes if n.path == "general/budget-pages.md").title
         == "Where budgets are published"
     )
+
+
+def test_scope_decisions_note_reaches_every_parastatal_city_but_not_other_verticals():
+    root = PROJECT_ROOT / "agent_setup"
+    note = "verticals/parastatal/scope-decisions.md"
+    for city in ("Surat", "Bengaluru", "Sample City A"):
+        chosen, _ = select_notes(
+            root, MemoryScope(agent="parastatal-discovery", city=city), "parastatal", 20000
+        )
+        assert note in [n.path for n in chosen], city
+    chosen, _ = select_notes(
+        root, MemoryScope(agent="parastatal-discovery", city="Surat"), "upd", 20000
+    )
+    assert note not in [n.path for n in chosen]

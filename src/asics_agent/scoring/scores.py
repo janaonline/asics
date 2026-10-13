@@ -103,7 +103,10 @@ def _round(v: Value):
     return round(v, 2) if isinstance(v, float) else v
 
 
-def build_results(scores: list[VerticalScores], path: Path, canon=None) -> Path:
+def build_results(
+    scores: list[VerticalScores], path: Path, canon=None, only: set[str] | None = None
+) -> Path:
+    """`only`: the cities to show (the register's included cities); others are left out."""
     verticals = list(dict.fromkeys(s.vertical for s in scores))
     by = {(s.vertical, s.source): s for s in scores}
     wb = Workbook()
@@ -118,7 +121,11 @@ def build_results(scores: list[VerticalScores], path: Path, canon=None) -> Path:
     header += [f"Main questions not yet scored ({src})" for src in sources]
     ws.append(header)
     city_values = {c: by[c].city_scores(canon) for c in columns}
-    cities = list(dict.fromkeys(city for c in columns for city in city_values[c]))
+    cities = [
+        city
+        for city in dict.fromkeys(city for c in columns for city in city_values[c])
+        if only is None or city in only
+    ]
     for r, city in enumerate(cities, start=2):
         ws.cell(row=r, column=1, value=city)
         for i, c in enumerate(columns, start=2):
@@ -172,6 +179,9 @@ def build_results(scores: list[VerticalScores], path: Path, canon=None) -> Path:
         people, ai = by.get((v, "People")), by.get((v, "AI"))
         base = people or ai
         for code, label in base.questions:
+            city = canon(city_of(label)) if canon else city_of(label)
+            if only is not None and city not in only:
+                continue
             p = people.questions.get((code, label)) if people else None
             a = ai.questions.get((code, label)) if ai else None
             both = isinstance(p, float) and isinstance(a, float)
@@ -181,7 +191,7 @@ def build_results(scores: list[VerticalScores], path: Path, canon=None) -> Path:
                     code,
                     base.tags.get(code, ""),
                     label,
-                    city_of(label),
+                    city,
                     _round(p),
                     _round(a),
                     round(a - p, 2) if both else None,

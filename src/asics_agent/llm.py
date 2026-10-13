@@ -4,14 +4,20 @@ Every call returns the URLs that tools returned verbatim (see links/registry.py)
 downstream code can reject any URL the model wrote from memory or constructed.
 """
 
+import base64
 import contextvars
 import json
 import re
+import time
 from concurrent.futures import ThreadPoolExecutor
 from concurrent.futures import TimeoutError as FuturesTimeout
 from typing import Annotated, TypedDict, TypeVar
 
+import anthropic
+import httpx
+import httpx2
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
+from langgraph.errors import GraphRecursionError
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.prebuilt import ToolNode
@@ -25,11 +31,20 @@ from asics_agent.agent_setup import (
     system_prompt,
 )
 from asics_agent.links.registry import extract_fetched_pages, extract_tool_urls
+from asics_agent.links.text import pdf_to_text
 from asics_agent.run_options import current_options
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext, build_tools
 
 MAX_CONTINUATIONS = 4
+NETWORK_RETRY_PAUSES = (2.0, 5.0)  # seconds before each retry of a call whose connection failed
+NETWORK_ERRORS = (
+    httpx.TimeoutException,
+    httpx2.TimeoutException,
+    anthropic.APITimeoutError,
+    anthropic.APIConnectionError,
+)
+MAX_FETCHED_PDF_CHARS = 100_000  # text kept from each fetched PDF on later turns
 T = TypeVar("T", bound=BaseModel)
 
 
@@ -54,15 +69,78 @@ def _invoke(llm, messages, timeout: float, **kwargs):
 
     A stalled connection can otherwise block a call (and the run) indefinitely. On timeout
     the call is abandoned and the run carries on without it.
+
+    The SDK retries only the request that opens the stream. A read timeout or dropped
+    connection while the reply is streaming comes out raw, so it is retried here and, if
+    it keeps failing, turned into a CallFailed that affects only this call.
     """
-    future = _CALLS.submit(contextvars.copy_context().run, llm.invoke, messages, **kwargs)
+    deadline = time.monotonic() + timeout
+    for attempt, pause in enumerate(NETWORK_RETRY_PAUSES + (None,)):
+        remaining = deadline - time.monotonic()
+        future = _CALLS.submit(contextvars.copy_context().run, llm.invoke, messages, **kwargs)
+        try:
+            return future.result(timeout=max(remaining, 0))
+        except FuturesTimeout:
+            future.cancel()
+            raise CallTimedOut(
+                f"the research took longer than {timeout / 60:.0f} minutes and was stopped"
+            ) from None
+        except anthropic.RequestTooLargeError:
+            raise CallFailed(
+                "the documents it read were too large to send to Claude together"
+            ) from None
+        except anthropic.BadRequestError as exc:
+            raise CallFailed(f"Claude rejected the request ({exc})") from None
+        except NETWORK_ERRORS as exc:
+            if pause is None or deadline - time.monotonic() <= pause:
+                raise CallFailed(
+                    f"the connection to Claude dropped or stalled ({type(exc).__name__}); "
+                    "this usually clears on its own"
+                ) from None
+            time.sleep(pause)
+    raise AssertionError("unreachable")
+
+
+def _pdf_as_text(source: dict) -> dict:
+    """A fetched PDF (base64) as the plain-text source web_fetch uses for web pages."""
     try:
-        return future.result(timeout=timeout)
-    except FuturesTimeout:
-        future.cancel()
-        raise CallTimedOut(
-            f"the research took longer than {timeout / 60:.0f} minutes and was stopped"
-        ) from None
+        text = pdf_to_text(base64.b64decode(source.get("data") or ""))
+    except Exception:  # malformed PDFs should not stop the call
+        text = ""
+    if not text:
+        text = "(PDF with no readable text, e.g. a scanned document.)"
+    elif len(text) > MAX_FETCHED_PDF_CHARS:
+        more = len(text) - MAX_FETCHED_PDF_CHARS
+        text = f"{text[:MAX_FETCHED_PDF_CHARS]}\n\n[document cut here; {more} more characters]"
+    return {"type": "text", "media_type": "text/plain", "data": text}
+
+
+def _shrink_fetched_pdfs(response: AIMessage) -> AIMessage:
+    """Replace PDFs fetched with web_fetch by their text before the turn is sent again.
+
+    web_fetch returns a PDF as the whole file in base64 (its size limit doesn't apply to
+    PDFs), and the conversation is re-sent on every later turn, so a few large government
+    PDFs once pushed a request over the API's 32 MB limit. Claude has already read the full
+    PDF in the turn that fetched it.
+    """
+    if not isinstance(response.content, list):
+        return response
+    changed, content = False, []
+    for block in response.content:
+        result = block.get("content") if isinstance(block, dict) else None
+        document = result.get("content") if isinstance(result, dict) else None
+        source = document.get("source") if isinstance(document, dict) else None
+        if (
+            block.get("type") == "web_fetch_tool_result"
+            and isinstance(source, dict)
+            and source.get("type") == "base64"
+            and source.get("media_type") == "application/pdf"
+        ):
+            document = {**document, "source": _pdf_as_text(source)}
+            block = {**block, "content": {**result, "content": document}}
+            changed = True
+        content.append(block)
+    return response.model_copy(update={"content": content}) if changed else response
 
 
 _JSON_OBJECT = re.compile(r"\{.*\}", re.DOTALL)
@@ -90,6 +168,10 @@ def _agent_loop(
 
     Server tools (web search / fetch) run inside the model call; our own tools run in the
     `tools` node (LangGraph's ToolNode). Each step is visible in LangGraph Studio.
+
+    Every tool call in a reply must be answered before the next model call, or the API
+    rejects the request. A call to a tool this agent doesn't have, or one whose arguments
+    arrived incomplete, is answered with an error message instead of being run.
     """
     names = {t.name for t in client_tools}
     tool_node = ToolNode(client_tools, handle_tool_errors=True) if client_tools else None
@@ -97,17 +179,35 @@ def _agent_loop(
     def ours(message) -> list:
         return [c for c in getattr(message, "tool_calls", []) or [] if c["name"] in names]
 
+    def unanswerable(message) -> list[ToolMessage]:
+        run = {c["id"] for c in ours(message)}
+        blocks = message.content if isinstance(message.content, list) else []
+        return [
+            ToolMessage(
+                "This tool call couldn't be run (unknown tool or incomplete arguments). Don't "
+                "call it again; reply with the JSON answer.",
+                tool_call_id=b["id"],
+                name=b.get("name") or "unknown",
+                status="error",
+            )
+            for b in blocks
+            if isinstance(b, dict) and b.get("type") == "tool_use" and b.get("id") not in run
+        ]
+
     def model(state: _LoopState) -> dict:
         response: AIMessage = _invoke(llm, state["messages"], timeout, reasoning_effort=effort)
         on_response(response)
+        response = _shrink_fetched_pdfs(response)
         return {
             "messages": [response],
-            "tool_calls": state.get("tool_calls", 0) + len(ours(response)),
+            "tool_calls": state.get("tool_calls", 0)
+            + len(ours(response))
+            + len(unanswerable(response)),
         }
 
     def route(state: _LoopState) -> str:
         last = state["messages"][-1]
-        if ours(last):
+        if ours(last) or unanswerable(last):
             return "over_limit" if state["tool_calls"] > max_tool_calls else "tools"
         if last.response_metadata.get("stop_reason") == "pause_turn":
             return "model"  # server tools paused mid-turn; let it continue
@@ -115,8 +215,11 @@ def _agent_loop(
 
     def tools(state: _LoopState) -> dict:
         last = state["messages"][-1]
-        only_ours = last.model_copy(update={"tool_calls": ours(last)})
-        return tool_node.invoke({"messages": [only_ours]})
+        answers = unanswerable(last)
+        if calls := ours(last):
+            only_ours = last.model_copy(update={"tool_calls": calls})
+            answers = tool_node.invoke({"messages": [only_ours]})["messages"] + answers
+        return {"messages": answers}
 
     def over_limit(state: _LoopState) -> dict:
         return {
@@ -129,19 +232,17 @@ def _agent_loop(
                 )
                 for c in ours(state["messages"][-1])
             ]
+            + unanswerable(state["messages"][-1])
         }
 
     graph = StateGraph(_LoopState)
     graph.add_node("model", model)
-    targets = ["model", END]
-    if tool_node:
-        graph.add_node("tools", tools)
-        graph.add_node("over_limit", over_limit)
-        graph.add_edge("tools", "model")
-        graph.add_edge("over_limit", "model")
-        targets += ["tools", "over_limit"]
+    graph.add_node("tools", tools)
+    graph.add_node("over_limit", over_limit)
+    graph.add_edge("tools", "model")
+    graph.add_edge("over_limit", "model")
     graph.add_edge(START, "model")
-    graph.add_conditional_edges("model", route, targets)
+    graph.add_conditional_edges("model", route, ["model", "tools", "over_limit", END])
     return graph.compile(checkpointer=False, name="agent_tool_loop")
 
 
@@ -166,6 +267,7 @@ def call_json(
     known_urls: set[str] | frozenset[str] = frozenset(),
     pages: list[tuple[str, str]] | None = None,
     tool_context: ToolContext | None = None,
+    web_max_uses: int | None = None,
 ) -> tuple[T, set[str], list[str]]:
     """Run one agent (defined in agent_setup/agents/<agent>.md) and parse its JSON reply.
 
@@ -174,6 +276,8 @@ def call_json(
     - Tools: exactly those listed under the agent's `tools:`. Client tools see only what
       `tool_context` gives them.
     - Model and effort: the agent's own settings, unless the run's RunOptions override them.
+    - Web search/fetch limit: the run's option if set, else `web_max_uses` (the caller's), else
+      the agent's own `max_uses`.
 
     Returns (parsed reply, URLs returned verbatim by tools, notes about rejected URLs).
     If `pages` is given, every page fetched with web_fetch is appended to it as (url, text).
@@ -185,9 +289,9 @@ def call_json(
 
     ctx = tool_context or ToolContext(services=services)
     ctx.allowed_urls |= set(known_urls)
-    server_tools, client_tools = build_tools(
-        root, config.tools, ctx, web_max_uses=options.web_search_max_uses
-    )
+    if options.web_search_max_uses is not None:
+        web_max_uses = options.web_search_max_uses
+    server_tools, client_tools = build_tools(root, config.tools, ctx, web_max_uses=web_max_uses)
     llm = services.llm_for(config.model or options.model)
     if server_tools or client_tools:
         llm = llm.bind_tools([*server_tools, *client_tools])
@@ -229,7 +333,10 @@ def call_json(
     )
     limit = {"recursion_limit": 2 * max_calls + 4 * MAX_CONTINUATIONS + 10}
     for attempt in range(2):
-        state = loop.invoke({"messages": messages, "tool_calls": 0}, limit)
+        try:
+            state = loop.invoke({"messages": messages, "tool_calls": 0}, limit)
+        except GraphRecursionError:
+            raise CallFailed("the AI kept calling tools without giving an answer") from None
         messages = state["messages"]
         response = messages[-1]
         try:

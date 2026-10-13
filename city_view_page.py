@@ -53,8 +53,8 @@ def sheet_names(path: Path) -> list[str]:
 
 @st.cache_data(show_spinner=False)
 def _citations(path: str, mtime: float, evidence: str):
-    parastatals, citations, _ = read_sources_workbook(Path(path), Path(evidence))
-    return parastatals, citations
+    parastatals, citations, issues = read_sources_workbook(Path(path), Path(evidence))
+    return parastatals, citations, [i.message for i in issues if i.audience == "team"]
 
 
 ANSWERS = "ASICS_Parastatal_*.xlsx"  # set by render() for the vertical being viewed
@@ -122,7 +122,7 @@ def render(folders: list[Path], open_file, zip_folder, header, answers: str = AN
     if files["sources"] is None:
         st.warning("This city has no Sources workbook yet. Run Step 1 for it.")
         return
-    parastatals, citations = _citations(
+    parastatals, citations, problems = _citations(
         str(files["sources"]), files["sources"].stat().st_mtime, str(files["evidence"])
     )
 
@@ -132,7 +132,7 @@ def render(folders: list[Path], open_file, zip_folder, header, answers: str = AN
     with tabs[1]:
         parastatals_tab(files["sources"])
     with tabs[2]:
-        citations_tab(files["sources"], citations, open_file)
+        citations_tab(files["sources"], citations, open_file, problems)
     with tabs[3]:
         coverage_tab(files["sources"])
     with tabs[4]:
@@ -184,7 +184,7 @@ def overview(files, parastatals, citations) -> None:
     )
     if not issues.empty and "What we found and what to do" in issues:
         with st.expander(f"Needs attention ({len(issues)})"):
-            st.dataframe(issues, hide_index=True, use_container_width=True)
+            st.dataframe(issues, hide_index=True, width="stretch")
 
 
 def parastatals_tab(sources: Path) -> None:
@@ -209,7 +209,7 @@ def parastatals_tab(sources: Path) -> None:
     st.dataframe(
         frame[columns],
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         column_config={
             "Official Website": st.column_config.LinkColumn(),
             "Website Check": st.column_config.TextColumn(width="large"),
@@ -217,8 +217,12 @@ def parastatals_tab(sources: Path) -> None:
     )
 
 
-def citations_tab(sources: Path, citations, open_file) -> None:
+def citations_tab(sources: Path, citations, open_file, problems: list[str] = ()) -> None:
     frame = read_sheet(sources, "Citation Sheet")
+    if problems:  # e.g. a saved copy (evidence/manual/) that can't be used
+        with st.expander(f"Needs attention ({len(problems)})", expanded=True):
+            for message in problems:
+                st.markdown(f"- {message}")
     left, middle, right = st.columns([2, 2, 3])
     owners = sorted(frame["Parastatal"].dropna().astype(str).unique())
     chosen = left.multiselect("Parastatal", owners, placeholder="All")
@@ -258,7 +262,7 @@ def citations_tab(sources: Path, citations, open_file) -> None:
     event = st.dataframe(
         view[columns],
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         on_select="rerun",
         selection_mode="single-row",
         key="citations",
@@ -301,13 +305,13 @@ def coverage_tab(sources: Path) -> None:
         index="Question ID", columns="Parastatal", values="Has", aggfunc="first"
     )
     grid = grid.map(lambda v: "✓" if v is True else ("—" if v is False else ""))
-    st.dataframe(grid, use_container_width=True)
+    st.dataframe(grid, width="stretch")
     if not missing.empty:
         with st.expander(f"Questions with no source yet ({len(missing)})"):
             st.dataframe(
                 missing[["Parastatal", "Question ID", "Question"]],
                 hide_index=True,
-                use_container_width=True,
+                width="stretch",
             )
 
 
@@ -368,7 +372,7 @@ def answers_tab(files, citations, parastatals, open_file) -> None:
     event = st.dataframe(
         view[columns],
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         on_select="rerun",
         selection_mode="single-row",
         key="answers",
@@ -537,7 +541,7 @@ def recheck_view(path: Path) -> None:
         st.dataframe(
             view[columns],
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
             column_config={
                 link: st.column_config.LinkColumn("Link", display_text="Open link"),
                 "Link Still Opens?": st.column_config.TextColumn(width="large"),

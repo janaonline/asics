@@ -88,3 +88,57 @@ def test_a_stalled_model_call_is_stopped(monkeypatch):
     services = Services(llm=Stalled(), http=fake_http(), settings=settings)
     with pytest.raises(CallTimedOut):
         call_json(services, "source-assessor", "x", Reply)
+
+
+def _client(handler):
+    import httpx
+
+    def wrapped(request):
+        if request.url.path == "/robots.txt":
+            return httpx.Response(404)
+        return handler(request)
+
+    return httpx.Client(transport=httpx.MockTransport(wrapped))
+
+
+def test_site_that_refuses_bots_goes_to_a_person(tmp_path):
+    import httpx
+
+    check = check_url(
+        "https://agency.karnataka.gov.in/page",
+        _client(lambda r: httpx.Response(403, text="Forbidden")),
+        tmp_path,
+        UA,
+    )
+    assert check.verification_status == "Human Verification Required"
+    assert "Blocked to automated tools" in " ".join(check.reasons)
+
+
+def test_www_redirect_on_the_same_site_is_not_a_different_site(tmp_path):
+    import httpx
+
+    body = "<html><body>" + "<p>Water supply and sewerage board annual report</p>" * 40
+    body += "</body></html>"
+
+    def handler(request):
+        if request.url.host == "agency.gujarat.gov.in":
+            return httpx.Response(301, headers={"location": "https://www.agency.gujarat.gov.in/"})
+        return httpx.Response(200, headers={"content-type": "text/html"}, text=body)
+
+    check = check_url("https://agency.gujarat.gov.in/", _client(handler), tmp_path, UA)
+    assert check.verification_status == "Verified"
+
+
+def test_connection_failure_is_retried_then_sent_to_a_person(tmp_path):
+    import httpx
+
+    calls = []
+
+    def handler(request):
+        calls.append(request.url)
+        raise httpx.ConnectError("[SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer")
+
+    check = check_url("https://agency.gov.in/doc.pdf", _client(handler), tmp_path, UA)
+    assert len(calls) == 2
+    assert check.verification_status == "Human Verification Required"
+    assert "certificate" in " ".join(check.reasons)

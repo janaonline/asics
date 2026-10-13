@@ -23,7 +23,13 @@ import time
 
 from asics_agent.cities import load_register, slugify
 from asics_agent.config import get_settings
-from asics_agent.reporting import answer_summary, headline, severity_label, team_issues
+from asics_agent.reporting import (
+    answer_summary,
+    headline,
+    review_flags,
+    severity_label,
+    team_issues,
+)
 from asics_agent.run_options import RunOptions
 from asics_agent.runner import BatchRun
 from asics_agent.services import default_services
@@ -52,8 +58,9 @@ def review_scope(payload: dict) -> dict:
     )
     for p in payload["parastatals"]:
         pid, check = p["id"], p.get("website_check") or {}
+        flag = "".join(f"  [{f}]" for f in review_flags(p))
         print(
-            f"\n{p['name']} ({pid})  found by: {p['found_by']}, "
+            f"\n{p['name']} ({pid}){flag}  found by: {p['found_by']}, "
             f"{len(payload['applicability'].get(pid, []))} questions"
         )
         if p.get("why_included"):
@@ -70,8 +77,8 @@ def review_scope(payload: dict) -> dict:
     choice = ask(
         "What next?",
         {
-            "approve": "Continue with all of these parastatals",
-            "edit": "Continue with only some of them",
+            "approve": "Continue with the included parastatals (NEEDS REVIEW ones stay out)",
+            "edit": "Choose which ones to research (type IDs, including NEEDS REVIEW ones)",
             "stop": "Stop here (no research)",
         },
     )
@@ -138,7 +145,11 @@ def main() -> None:
     tuning = parser.add_argument_group("run options (override agent_setup/agents and .env)")
     tuning.add_argument("--model", help="Claude model for agents that don't name their own")
     tuning.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"])
-    tuning.add_argument("--web-searches", type=int, help="web searches / fetches per call")
+    tuning.add_argument(
+        "--web-searches",
+        type=int,
+        help="web searches / fetches per call, every agent (beats ASICS_FIND_SOURCES_MAX_USES)",
+    )
     tuning.add_argument("--max-tool-calls", type=int, help="tool calls per agent call")
     args = parser.parse_args()
 
