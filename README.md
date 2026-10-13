@@ -58,6 +58,27 @@ scores cities whose Step 2 is up to date. Cities that aren't ready are listed, n
 through. The Step 1, 2 and 3 pages are still there for running one step of one vertical
 with more options (sections, single questions, earlier workbooks).
 
+## Finding your files
+
+Open **`outputs/START_HERE.xlsx`** (or **Open START_HERE.xlsx** on the Home page). It has one row
+per vertical and city: how far it has got, what to do next, and its latest workbooks, which
+you can click to open. Its second sheet explains every folder.
+
+```
+outputs/
+  START_HERE.xlsx          start here
+  Parastatal/              one folder per vertical
+    cities/Bengaluru/
+      ASICS_Bengaluru_Sources.xlsx      Step 1: review and edit this one
+      answers/<run>/ASICS_Parastatal_Bengaluru_Phase2.xlsx   Step 2 (newest run = latest)
+      evidence/  history/  checks/  …   kept automatically; you don't need to open them
+    batches/  practice/
+  UPD/
+  _app/                    the app's own files (error log, uploads)
+  _old/                    files from earlier versions
+scoring/2027/ai/PARASTATAL_ai.xlsx      Step 3: the scoring workbook (first sheet: Scores)
+```
+
 ## The city register
 
 The list of cities is one Excel file, `data/cities/ASICS_Cities_and_Parastatals.xlsx`. Open it
@@ -261,16 +282,22 @@ agency (or city).
 
 | Columns | What they are |
 |---|---|
-| Question, Row, Question text | what is being scored, and for whom |
+| Question, Row, Question text | what is being scored, and for whom; click the question code to open its calculation sheet (each has a link back) |
 | AI score, Max score | the points the workbook's formulas give for the AI's inputs |
 | **★ Your score, ★ Your comments** (yellow) | your own score where you check or disagree; kept when the AI scores again |
 | Agrees with AI? | Yes / No (red) once you've entered a score |
+| **Final score**, **Score used** | your score where you entered one (*Expert (overrides AI)*, green), otherwise the AI's: **this is what the totals use** |
 | Status | *Scored by AI*, or *Left for a person* (orange): filter on it to see what's left |
 | Step 2 status, Step 2 answer, Citation, Link, Quote | the evidence the score rests on |
 | AI's reasoning, Why left for a person | the AI's explanation, or why it didn't score |
 
+Your score counts: each question sheet's **Points** use your score wherever you entered one
+(the AI's own points stay in its **AI points** column), so the summary, city and ASICS totals
+update as you type in Excel. Save and close the workbook, then press **Update scores** on the
+Scores page to refresh the portal and the results workbook.
+
 The other sheets are the experts' scoring workbook itself (one per question, plus the summary
-that adds the scores up), which the formulas use. The page also previews the Scores sheet
+that adds the scores up). They are calculation sheets: nobody needs to type in them. The page also previews the Scores sheet
 (**See the scores here**). Other files (all cities side by side; a technical log) are under
 **Other files**.
 
@@ -386,7 +413,7 @@ uv run python scripts/run_pipeline.py --step sources --all-cities --checks-only
 Re-check a workbook's links:
 
 ```bash
-uv run python scripts/recheck_links.py "outputs/cities/Bengaluru/ASICS_Bengaluru_Sources.xlsx"
+uv run python scripts/recheck_links.py "outputs/Parastatal/cities/Bengaluru/ASICS_Bengaluru_Sources.xlsx"
 ```
 
 LangGraph Studio, with graphs `step1_sources` and `step2_answers`:
@@ -417,7 +444,7 @@ flowchart TD
 - **Two master agents,** [agents/sources_master.py](src/asics_agent/agents/sources_master.py) and [agents/answers_master.py](src/asics_agent/agents/answers_master.py), handle one city each and route between phases with plain Python.
 - **The Excel handoff** is [sources_workbook.py](src/asics_agent/sources_workbook.py). It reads, writes and merges the Sources workbook, keeping the team's decisions, rows, notes and Citation IDs across re-runs.
 - **Several cities** run through `BatchRun` in [runner.py](src/asics_agent/runner.py), one after another. Step 1 has a single review for all cities, and the app and CLI both use it.
-- **Files** go to `outputs/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by both steps), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/batches/<id>/`.
+- **Files** go to `outputs/<Vertical>/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by all steps), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/<Vertical>/batches/<id>/`; the app's own files to `outputs/_app/`. `outputs/START_HERE.xlsx` is rewritten after every run ([outputs_index.py](src/asics_agent/outputs_index.py)); `scripts/tidy_outputs.py` moves an older outputs folder into this layout.
 
 | Sub-agent | File | What it does |
 |---|---|---|
@@ -593,7 +620,7 @@ question_columns:               # optional: our column name -> the bank's own co
   City-Systems Pillar: ASICS 2027_Report_Q No
   Tag: MQ_SQ
   Score / Max Score: Max Score
-outputs: verticals/upd          # city folders go in outputs/verticals/upd/cities/<City>/
+outputs: UPD                    # its folder inside outputs/: outputs/UPD/cities/<City>/
 scoring_workbook: scoring/2027/templates/ASICS_2027_UPD_Scoring_Workbook_v2.xlsx
 shared_rules: shared-rules-city # prompts/<name>.md: the rules every agent of this vertical gets
 steps:                          # which agent does each job (agents/<name>.md)
@@ -629,7 +656,8 @@ the city register, the agents and prompts the verticals choose to share, and the
 workbook, which shows every vertical side by side.
 
 Parastatal's file names exactly what ran before this was configurable (same question bank,
-agents, rules and `outputs/cities/` folders), so nothing about it changed.
+agents and rules), so nothing about how it researches changed. Its files are in
+`outputs/Parastatal/`.
 
 ### Adding a vertical (e.g. Mobility)
 

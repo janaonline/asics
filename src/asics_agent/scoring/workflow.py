@@ -21,7 +21,7 @@ from pathlib import Path
 
 from asics_agent.cities import load_register
 from asics_agent.scoring import human
-from asics_agent.scoring.ai import REASONS, ai_file, run_ai_scoring
+from asics_agent.scoring.ai import REASONS, ai_file, link_for_review, run_ai_scoring
 from asics_agent.scoring.phase2 import bank_ids, load_evidence, phase2_status
 from asics_agent.scoring.recalc import RecalcUnavailable, recalculate
 from asics_agent.scoring.scores import (
@@ -240,6 +240,31 @@ def merge(settings, verticals: list[str] | None = None) -> StepReport:
     return report
 
 
+def refresh_scores(settings) -> StepReport:
+    """After people have entered scores in Excel: recalculate each vertical's scoring
+    workbook and rebuild the results, so the totals include their scores."""
+    report = StepReport("Update scores")
+    _, templates, _ = _plan(settings)
+    for code, vs in configured(settings).items():
+        path = ai_file(vs.scoring_dir, code)
+        if not path.exists() or code not in templates:
+            continue
+        try:
+            link_for_review(path, templates[code], vs.scoring_dir / ".cache")
+            recalculate(path, vs.scoring_dir / ".cache")
+        except RecalcUnavailable as exc:
+            report.problems.append(str(exc))
+            return report
+        except (RuntimeError, PermissionError) as exc:  # e.g. open in Excel and locked
+            report.problems.append(f"{path.name}: {exc} Close it in Excel and try again.")
+            continue
+        report.done.append(f"Recalculated {path.name}.")
+    report.add_file(
+        results(settings), "Every city and vertical, including people's scores.", other=True
+    )
+    return report
+
+
 def results(settings, templates: dict | None = None, eval_label: str = "") -> Path:
     """Rebuild the results workbook from whatever calculated files exist. With an
     `eval_label` (after an AI run), also record AI-vs-people agreement in the evals history."""
@@ -375,9 +400,17 @@ def ai_score(
         )
     report.next_steps.append(
         "Check the AI's scores: read the Step 2 answer, citation and the AI's reasoning, and "
-        "enter your own score where you disagree. 'Agrees with AI?' turns red where you differ."
+        "enter your own score where you disagree. Your score becomes the Final score and the "
+        "totals use it; 'Agrees with AI?' turns red where you differ."
     )
-    report.next_steps.append("Compare cities and verticals on the Scores page.")
+    report.next_steps.append(
+        "Save and close the workbook, then press Update scores on the Scores page to see the "
+        "city totals with your scores."
+    )
+    from asics_agent.outputs_index import refresh_index
+
+    if not practice:
+        refresh_index(settings)
     if run.failed:
         report.problems.append(
             f"{run.failed} row(s) couldn't be scored because the AI call failed. Run Step 3 "

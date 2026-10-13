@@ -129,6 +129,8 @@ def _ai_summary(path: str, mtime: float) -> pd.DataFrame:
         "Max score",
         "★ Your score",
         "Agrees with AI?",
+        "Final score",
+        "Score used",
         "Status",
         "Step 2 status",
         "Step 2 answer",
@@ -444,6 +446,19 @@ def render_scores(settings, open_file) -> None:
         "Excel; this page only shows them.",
         "Results",
     )
+    row = st.container(horizontal=True, vertical_alignment="center")
+    row.caption(
+        "Entered your own scores (★ Your score) in Excel? Save and close the workbook, then "
+        "update: the totals use your score wherever you entered one."
+    )
+    if row.button("Update scores", icon=":material/refresh:", type="primary"):
+        with st.spinner("Recalculating the scoring workbooks…"):
+            report = workflow.refresh_scores(settings)
+        for line in report.done:
+            st.toast(line)
+        for line in report.problems:
+            st.warning(line, icon=":material/warning:")
+        st.cache_data.clear()
     path = settings.scoring_dir / "results" / workflow.RESULTS_FILE
     practice = settings.scoring_dir / "practice" / "results" / workflow.RESULTS_FILE
     if practice.exists() and st.toggle(

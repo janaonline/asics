@@ -75,3 +75,17 @@ def test_caller_survives_the_replay():
         or b.get("tool_use_id") in ("srvtoolu_s1", "srvtoolu_s2")
     ]
     assert len(nested) == 4 and all(b["caller"] == CALLER for b in nested)
+
+
+def test_a_reply_cut_off_mid_tool_call_is_dropped_before_the_retry():
+    from asics_agent.llm import _without_unfinished_tool_use
+
+    cut = AIMessage(
+        content=[
+            {"type": "text", "text": "Let me check"},
+            {"type": "tool_use", "id": "toolu_x", "name": "read_citation", "input": {}},
+        ]
+    )
+    done = AIMessage(content=[{"type": "text", "text": '{"a": 1}'}])
+    assert _without_unfinished_tool_use([HumanMessage("q"), cut]) == [HumanMessage("q")]
+    assert _without_unfinished_tool_use([HumanMessage("q"), done])[-1] is done
