@@ -20,6 +20,7 @@ from asics_agent.agents.common import (
     vet_many,
 )
 from asics_agent.agents.state import ParastatalTask, ParastatalTaskOutput
+from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue
 from asics_agent.progress import report
@@ -53,6 +54,8 @@ def build_links_agent(services: Services):
             provenance="phase1_citation_sheet",
             allowed_urls=None,
             label="Re-checking earlier links",
+            # A saved copy by the team is kept if the automatic check still fails.
+            team_copies={o.url: copy for o in earlier if (copy := team_check(o))},
         )
         for old, (_, source, vet_issues) in zip(earlier, results, strict=True):
             issues += vet_issues
@@ -101,6 +104,7 @@ def build_links_agent(services: Services):
                 ),
                 known_urls=known,
                 tool_context=(tools := ToolContext(services=services, run=run, progress_key=p.id)),
+                web_max_uses=services.settings.find_sources_max_uses,
             )
         except CallFailed as exc:
             report(p.id, f"Stopped this search: {exc}")

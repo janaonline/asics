@@ -15,7 +15,15 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.worksheet import Worksheet
 
-from asics_agent.models import Answer, Issue, Parastatal, Question, Source
+from asics_agent.models import (
+    ANSWER_CLASSES,
+    CONFIDENCES,
+    Answer,
+    Issue,
+    Parastatal,
+    Question,
+    Source,
+)
 from asics_agent.reporting import STATUS_HELP, VERIFICATION_HELP, severity_label, team_issues
 
 CITATION_SHEET = "Citation Sheet"
@@ -71,6 +79,9 @@ SCORING_COLUMNS = [
     ("Answer", ["answer", "response"]),
     ("Proposed Score", ["proposed score", "score"]),
     ("Max Score", ["max score", "score / max score"]),
+    ("Class", ["class"]),
+    ("Confidence", ["confidence"]),
+    ("Rubric Band", ["rubric band", "band"]),
     ("Citation ID", ["citation id"]),
     ("Citation", ["citation", "source"]),
     ("Citation URL", ["citation url", "url", "source url"]),
@@ -453,6 +464,7 @@ def write_workbook(
             "Citation": 30,
             "Citation URL": 40,
             "Status": 26,
+            "Rubric Band": 30,
             "Where to Find It": 30,
             "Search Phrase": 30,
             "Evidence Excerpt": 45,
@@ -494,6 +506,9 @@ def write_workbook(
                         "Answer": a.answer,
                         "Proposed Score": a.proposed_score,
                         "Max Score": q.max_score,
+                        "Class": a.answer_class,
+                        "Confidence": a.confidence,
+                        "Rubric Band": a.rubric_band,
                         "Citation ID": a.citation_id,
                         "Citation": a.citation,
                         "Citation URL": Link(a.citation_url) if a.citation_url else "",
@@ -514,6 +529,8 @@ def write_workbook(
             )
     mapping = _write_rows(ws, SCORING_COLUMNS, rows, key_columns=["Parastatal", "Question ID"])
     _add_dropdown(ws, mapping["Reviewer Decision"], REVIEWER_DECISIONS)
+    _add_dropdown(ws, mapping["Class"], list(ANSWER_CLASSES))
+    _add_dropdown(ws, mapping["Confidence"], list(CONFIDENCES))
 
     _write_guide(wb)
     _write_issue_sheets(wb, issues)

@@ -28,6 +28,7 @@ from asics_agent.agents.links_builder import build_links_agent
 from asics_agent.agents.parastatal_discovery import build_parastatal_discovery
 from asics_agent.agents.state import MasterState
 from asics_agent.links.database import write_links_db
+from asics_agent.links.manual import team_check
 from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal
 from asics_agent.run_options import RunOptions
 from asics_agent.services import Services, default_services
@@ -36,8 +37,13 @@ from asics_agent.workbook import read_citation_sheet, write_checks_workbook, wri
 
 
 def _to_research(state: MasterState) -> list[Parastatal]:
+    return [p for p in _to_review(state) if p.include]
+
+
+def _to_review(state: MasterState) -> list[Parastatal]:
+    """Every parastatal shown on the review screen: ticked ones and unticked NEEDS REVIEW ones."""
     only = set(state.get("only_parastatals") or [])
-    return [p for p in state.get("parastatals", []) if p.include and (not only or p.id in only)]
+    return [p for p in state.get("parastatals", []) if not only or p.id in only]
 
 
 def build_sources_graph(
@@ -54,12 +60,13 @@ def build_sources_graph(
             return {}
         decision = interrupt(
             {
-                "message": 'Review the parastatals found. Resume with {"action": "approve"}, '
-                '{"action": "stop"}, or {"action": "edit", "parastatals": '
-                "[ids to research]}.",
-                "parastatals": [p.model_dump() for p in _to_research(state)],
+                "message": "Review the parastatals found. Ones with include = false (NEEDS "
+                'REVIEW) are not researched unless you tick them. Resume with {"action": '
+                '"approve"} (research the ones with include = true), {"action": "stop"}, or '
+                '{"action": "edit", "parastatals": [ids to research]}.',
+                "parastatals": [p.model_dump() for p in _to_review(state)],
                 "applicability": {
-                    p.id: state["applicability"].get(p.id, []) for p in _to_research(state)
+                    p.id: state["applicability"].get(p.id, []) for p in _to_review(state)
                 },
                 "issues": [
                     i.model_dump()
@@ -157,6 +164,7 @@ def build_sources_graph(
                 ),
                 provenance=old.provenance,
                 allowed_urls=None,
+                team_copy=team_check(old),
             )
             shared.append(
                 (source or old).model_copy(

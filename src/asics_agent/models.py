@@ -18,6 +18,9 @@ VerificationStatus = Literal["Verified", "Not verified", "Human Verification Req
 Provenance = Literal["phase1_citation_sheet", "web_search", "fetched_page", "research_team"]
 FoundBy = Literal["Agent", "Your team"]
 
+ANSWER_CLASSES = ("A1", "A2", "R", "P", "M", "Needs review")  # where an answer lives
+CONFIDENCES = ("High", "Medium", "Low")  # how good the evidence is
+
 AnswerStatus = Literal[
     "Answered — Verified Source",
     "Partially Answered",
@@ -145,6 +148,8 @@ class Source(BaseModel):
     content_path: str | None = None
     snapshot_path: str | None = None
     checked_at: str = ""
+    # True when the team verified this row from a copy they saved by hand (evidence/manual/)
+    team_saved_copy: bool = False
 
     @property
     def key(self) -> str:
@@ -157,6 +162,10 @@ class Answer(BaseModel):
     answer: str = ""
     proposed_score: float | None = None
     status: AnswerStatus = "Insufficient Evidence"
+    # Read from the start of the model's notes (agents/sections/base.py); blank if not valid
+    answer_class: str = ""  # A1 | A2 | R | P | M | Needs review
+    confidence: str = ""  # High | Medium | Low
+    rubric_band: str = ""
     citation_id: str = ""  # the Citation Sheet row the answer relies on
     citation: str = ""  # source title and the section/page used
     citation_url: str = ""

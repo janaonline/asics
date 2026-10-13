@@ -30,6 +30,7 @@ from typing import Literal
 from openpyxl import load_workbook
 from pydantic import BaseModel, Field
 
+from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.scoring.human import (
@@ -609,7 +610,7 @@ def run_ai_scoring(
             )
     details = question_details(template, settings.scoring_dir / ".cache")
     results: list[ScoredCell] = []
-    with ThreadPoolExecutor(max_workers=workers or settings.max_concurrency) as pool:
+    with keep_awake(), ThreadPoolExecutor(max_workers=workers or settings.max_concurrency) as pool:
         futures = [
             pool.submit(
                 score_one,

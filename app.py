@@ -28,6 +28,7 @@ from asics_agent.reporting import (
     VERIFICATION_HELP,
     answer_summary,
     headline,
+    review_flags,
     severity_label,
     team_issues,
 )
@@ -439,6 +440,16 @@ def start_page(action: str):
     if not practice and action != "checks":
         with st.expander("Advanced options (for this run only)"):
             st.caption("Leave these empty to use each agent's own settings (Agent setup).")
+            finder = settings.find_sources_max_uses
+            st.caption(
+                "Source-finding calls (Step 1) use "
+                + (
+                    f"{finder} web searches (ASICS_FIND_SOURCES_MAX_USES in .env)"
+                    if finder
+                    else "their agent's own limit (ASICS_FIND_SOURCES_MAX_USES is not set)"
+                )
+                + ". A number below overrides every agent, including those."
+            )
             model = st.text_input(
                 "Claude model for agents without their own",
                 placeholder=f"default: {settings.model}",
@@ -577,7 +588,7 @@ def plan_stages(plan: PlanRun) -> None:
     st.dataframe(
         pd.DataFrame(rows, columns=["Stage", "Status", "Outcome"]),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
 
 
@@ -754,14 +765,28 @@ BAND_ICON = {
 }
 
 
+FLAG_BADGE = {
+    "NEEDS REVIEW": ":orange-badge[NEEDS REVIEW]",
+    "PRE-OPERATIONAL": ":blue-badge[PRE-OPERATIONAL]",
+    "DOMAIN": ":gray-badge[DOMAIN]",
+}
+
+
 def review_panel(batch: BatchRun):
     reviews = batch.reviews
-    total = sum(len(r.get("parastatals", [])) for r in reviews.values())
+    listed = [p for r in reviews.values() for p in r.get("parastatals", [])]
+    to_review = sum("NEEDS REVIEW" in review_flags(p) for p in listed)
     st.warning(
-        f"**Action needed: the run is paused until you review the {total} parastatal(s) "
+        f"**Action needed: the run is paused until you review the {len(listed)} parastatal(s) "
         "below.** Untick any you don't want researched, then press **Continue** (here or at "
         "the bottom). Unticked ones stay in the Sources workbook as Include? = No, so you can "
-        "add them back later.",
+        "add them back later."
+        + (
+            f" **{to_review} are marked NEEDS REVIEW and start unticked:** read the reason "
+            "and tick the ones you want researched."
+            if to_review
+            else ""
+        ),
         icon=":material/front_hand:",
     )
     top_go = st.button(
@@ -790,13 +815,23 @@ def review_panel(batch: BatchRun):
                         if p["found_by"] == "Your team"
                         else "found by the agent"
                     )
-                    top.markdown(f"**{p['name']}** ({pid}), {who}")
+                    flags = review_flags(p)
+                    needs_review = "NEEDS REVIEW" in flags
+                    top.markdown(
+                        f"**{p['name']}** ({pid}), {who} " + " ".join(FLAG_BADGE[f] for f in flags)
+                    )
                     if box.checkbox(
-                        "Include", value=True, key=f"keep-{slug}-{pid}", disabled=not include_city
+                        "Include",
+                        value=p.get("include", True),
+                        key=f"keep-{slug}-{pid}",
+                        disabled=not include_city,
                     ):
                         keep.append(pid)
                     if p.get("why_included"):
-                        st.caption(p["why_included"])
+                        if needs_review:
+                            st.warning(p["why_included"], icon=":material/help:")
+                        else:
+                            st.caption(p["why_included"])
                     website = p.get("official_website") or "not confirmed"
                     st.markdown(
                         f"Website: {website}  \n"
@@ -926,7 +961,7 @@ def answers_results(slug: str, run: PipelineRun):
         st.dataframe(
             pd.DataFrame(rows),
             hide_index=True,
-            use_container_width=True,
+            width="stretch",
             column_config={
                 "Question": st.column_config.TextColumn(width="small"),
                 "Citation": st.column_config.TextColumn(width="small"),
@@ -1037,7 +1072,7 @@ def register_page():
             ]
         ),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
     )
     listed = [
         {
@@ -1059,7 +1094,7 @@ def register_page():
         "included. The full list for each city is in its Sources workbook (City files)."
     )
     if listed:
-        st.dataframe(pd.DataFrame(listed), hide_index=True, use_container_width=True)
+        st.dataframe(pd.DataFrame(listed), hide_index=True, width="stretch")
 
 
 def city_folders() -> list[Path]:
@@ -1422,8 +1457,9 @@ def cities_overview() -> None:
                 "City": city.name,
                 "State": city.state,
                 "Status": STAGES[status["stage"]][0],
-                "Parastatals": "–" if status["parastatals"] is None else status["parastatals"],
-                "Citations ready": "–" if status["ready"] is None else status["ready"],
+                # Text throughout, so each column has one type (numbers mixed with "–" break Arrow)
+                "Parastatals": "–" if status["parastatals"] is None else str(status["parastatals"]),
+                "Citations ready": "–" if status["ready"] is None else str(status["ready"]),
                 "Last activity": status["last"].strftime("%d %b %Y") if status["last"] else "",
                 "Next step": STAGES[status["stage"]][1],
             }
@@ -1436,7 +1472,7 @@ def cities_overview() -> None:
     event = st.dataframe(
         frame.drop(columns=hidden),
         hide_index=True,
-        use_container_width=True,
+        width="stretch",
         on_select="rerun",
         selection_mode="single-row",
         key="home-cities",

@@ -10,7 +10,7 @@ from asics_agent.agent_setup import MemoryScope
 from asics_agent.links.accessibility import check_url, is_india_code
 from asics_agent.links.text import rank_chunks
 from asics_agent.llm import call_json
-from asics_agent.models import Issue, Parastatal, Question, RunContext, Source
+from asics_agent.models import AccessCheck, Issue, Parastatal, Question, RunContext, Source
 from asics_agent.services import Services
 from asics_agent.verticals import agent_for
 
@@ -67,11 +67,17 @@ def vet_source(
     provenance: str,
     allowed_urls: set[str] | None,
     official_hosts: set[str] = frozenset(),
+    team_copy: AccessCheck | None = None,
 ) -> tuple[Source | None, list[Issue]]:
     """Apply the URL rule, the human-accessibility test and the authority rules to one URL.
 
     `allowed_urls=None` skips the "returned by a tool" check; used only when re-testing
     URLs that already exist in a previous-phase Citation Sheet.
+
+    `team_copy` is the research team's saved copy of the page (see links/manual.py). The
+    page is still opened automatically and the result recorded in the Notes. If that check
+    now passes, its fresh copy is used; if not, the team's copy is kept and assessed like
+    any other verified source.
     """
     issues: list[Issue] = []
     url = candidate.url.strip()
@@ -90,6 +96,15 @@ def vet_source(
 
     settings = services.settings
     check = check_url(url, services.http, Path(run.cache_dir), settings.user_agent)
+    notes = [" ".join(check.reasons)]
+    if team_copy:
+        automated = f"Automated check: {' '.join(check.reasons)}"
+        if check.verification_status == "Verified":
+            notes = [f"{automated} Using this fresh copy instead of the team's saved copy."]
+            team_copy = None
+        else:
+            check = team_copy
+            notes = [*team_copy.reasons, automated]
     source = Source(
         parastatal_id=parastatal.id,
         title=candidate.title,
@@ -105,8 +120,8 @@ def vet_source(
         content_path=check.content_path,
         snapshot_path=check.snapshot_path,
         checked_at=check.checked_at,
+        team_saved_copy=team_copy is not None,
     )
-    notes = [" ".join(check.reasons)]
 
     if check.verification_status == "Verified":
         text, trimmed = read_source_text(source, candidate.useful_for, settings.max_evidence_chars)
@@ -248,10 +263,12 @@ def vet_many(
     provenance: str,
     allowed_urls: set[str] | None,
     label: str = "Checking links",
+    team_copies: dict[str, AccessCheck] | None = None,
 ) -> list[tuple[CandidateSource, Source | None, list[Issue]]]:
     """`vet_source` for several links at once, a few in parallel, reporting progress.
 
-    Results come back in the same order as `candidates`.
+    Results come back in the same order as `candidates`. `team_copies` maps a URL to the
+    team's saved copy of it.
     """
     from concurrent.futures import ThreadPoolExecutor, as_completed
 
@@ -273,6 +290,7 @@ def vet_many(
                 c,
                 provenance=provenance,
                 allowed_urls=allowed_urls,
+                team_copy=(team_copies or {}).get(c.url),
             ): i
             for i, c in enumerate(candidates)
         }

@@ -17,6 +17,7 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font
 
 from asics_agent.cities import FLAGS, TYPE_LABELS, TYPES, YES
+from asics_agent.links.manual import apply_saved_copies
 from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal, Question, Source
 from asics_agent.workbook import (
     _FILLS,
@@ -87,7 +88,9 @@ GUIDE = [
     (
         "1. Parastatals sheet",
         "Check each parastatal the agent found. Set Include? to No to "
-        "leave one out. To add one it missed, add a row with its ID, name and Type; leave Found "
+        "leave one out. Rows whose Why Included starts with NEEDS REVIEW were found but not "
+        "ticked (Include? = No) because the agent couldn't decide a test: set Include? to Yes "
+        "to research one. To add one it missed, add a row with its ID, name and Type; leave Found "
         "By empty. The Website Check column explains how much the official website can be "
         "trusted, point by point.",
     ),
@@ -97,7 +100,13 @@ GUIDE = [
         "anything unsuitable. To add a source you know, add a row: Parastatal (an ID from the "
         'Parastatals sheet, or "All parastatals"), Source Title, Official URL and What This '
         "Source Is Useful For. Leave Citation ID empty; it is filled in next time. Your links are "
-        "opened and checked the same way as the agent's.",
+        "opened and checked the same way as the agent's.\n"
+        'If a link shows "Human Verification Required" (many government websites block '
+        "automated tools), open it in your browser and save the page or PDF as "
+        "evidence/manual/<Citation ID>.pdf (or .html or .txt), for example "
+        "evidence/manual/BWSSB-07.pdf, in this city's folder. Then set Use for Answers? to Yes "
+        "and run Step 1 again (or Step 2). The tool reads your saved copy, and Needs Attention "
+        "says if it can't be used.",
     ),
     (
         "3. Coverage sheet",
@@ -278,6 +287,10 @@ def read_sources_workbook(path: Path, cache_dir: Path):
                 snapshot_path=copy_path,
             )
         )
+    # Pages the team saved by hand (evidence/manual/<Citation ID>.pdf) for links that block
+    # automated tools. Only rows that already have an ID can have one.
+    citations, copy_issues = apply_saved_copies(citations, cache_dir)
+    issues += copy_issues
     assign_citation_ids(citations)  # rows the team added get the next free ID
     return parastatals, citations, issues
 

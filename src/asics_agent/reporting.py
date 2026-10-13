@@ -64,6 +64,19 @@ def team_issues(issues: list[Issue]) -> list[Issue]:
     return result
 
 
+def review_flags(p: dict) -> list[str]:
+    """Flags the team should see before ticking a discovered parastatal (from why_included)."""
+    why = p.get("why_included") or ""
+    flags = []
+    if not p.get("include", True) and why.startswith("NEEDS REVIEW"):
+        flags.append("NEEDS REVIEW")
+    if "PRE-OPERATIONAL" in why:
+        flags.append("PRE-OPERATIONAL")
+    if "DOMAIN:" in why or "domain proof pending" in why.lower():
+        flags.append("DOMAIN")
+    return flags
+
+
 def severity_label(severity: str) -> str:
     return {"error": "Must fix", "warning": "Please check", "info": "For your information"}[
         severity

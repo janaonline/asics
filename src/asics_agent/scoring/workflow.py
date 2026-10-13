@@ -269,6 +269,7 @@ def results(settings, templates: dict | None = None, eval_label: str = "") -> Pa
         found,
         settings.scoring_dir / "results" / RESULTS_FILE,
         canon=lambda city: names.get(city.casefold(), city),
+        only={city.name for city in register.values()},
     )
 
 
