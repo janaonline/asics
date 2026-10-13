@@ -13,7 +13,8 @@ def services(tmp_path):
     from asics_agent.config import get_settings
     from asics_agent.practice import practice_services
 
-    return practice_services(dataclasses.replace(get_settings(), outputs_dir=tmp_path))
+    settings = dataclasses.replace(get_settings(), outputs_dir=tmp_path, outputs_root=tmp_path)
+    return practice_services(settings)
 
 
 @pytest.fixture

@@ -20,6 +20,7 @@ from asics_agent.applicability import applies_to
 from asics_agent.cities import load_register
 from asics_agent.config import get_settings
 from asics_agent.links.accessibility import make_http_client
+from asics_agent.outputs_index import app_dir, refresh_index
 from asics_agent.plan import PlanRun
 from asics_agent.practice import PRACTICE_NOTE, fake_http, practice_services
 from asics_agent.recheck import recheck_workbook, summary_text
@@ -51,7 +52,7 @@ def vertical_choice() -> str:
     """The vertical the team is working on (sidebar). Every page and run uses its settings."""
     found, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
     names = list(found) or [BASE_SETTINGS.vertical]
-    remembered = BASE_SETTINGS.outputs_dir / ".last_vertical"  # survives a page reload
+    remembered = app_dir(BASE_SETTINGS) / "last_vertical"  # survives a page reload
     if st.session_state.get("vertical") not in names:
         try:
             last = remembered.read_text().strip()
@@ -78,6 +79,9 @@ def vertical_choice() -> str:
 
 
 settings = settings_for(BASE_SETTINGS, vertical_choice())
+if not st.session_state.get("index-written"):  # outputs/START_HERE.xlsx, once per visit
+    refresh_index(BASE_SETTINGS)
+    st.session_state["index-written"] = True
 ui.VERTICAL = settings.vertical_title
 
 MODES = {
@@ -510,7 +514,7 @@ def start_page(action: str):
     ):
         base = None
         if upload is not None:
-            uploads = settings.outputs_dir / "uploads"
+            uploads = app_dir(settings) / "uploads"
             uploads.mkdir(parents=True, exist_ok=True)
             base = uploads / f"{datetime.now():%Y%m%d-%H%M%S}-{upload.name}"
             base.write_bytes(upload.getvalue())
@@ -1163,7 +1167,7 @@ def recheck_page():
     elif source == "Upload a workbook":
         upload = st.file_uploader("Workbook", type=["xlsx"])
         if upload:
-            path = settings.outputs_dir / "uploads" / upload.name
+            path = app_dir(settings) / "uploads" / upload.name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(upload.getvalue())
             st.caption(
@@ -1347,6 +1351,16 @@ def home_page():
         label="Run several verticals and steps for your cities in one go",
         icon=":material/playlist_play:",
     )
+    index = (BASE_SETTINGS.outputs_root or BASE_SETTINGS.outputs_dir) / "START_HERE.xlsx"
+    if index.exists():
+        row = st.container(horizontal=True, vertical_alignment="center")
+        row.caption(
+            "**Looking for a file?** START_HERE.xlsx in the outputs folder lists every city's "
+            "latest workbooks, for every vertical."
+        )
+        if row.button("Open START_HERE.xlsx", icon=":material/table_view:"):
+            refresh_index(BASE_SETTINGS)
+            open_file(index)
     st.markdown("#### Your cities")
     cities_overview()
     st.caption(

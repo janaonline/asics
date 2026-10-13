@@ -55,7 +55,7 @@ def friendly_error(exc: Exception) -> str:
         return f"A file couldn't be found: {exc}"
     return (
         f"Something went wrong ({type(exc).__name__}). Your developer can see the details "
-        "in outputs/app_errors.log."
+        "in outputs/_app/app_errors.log."
     )
 
 
@@ -206,8 +206,9 @@ class PipelineRun:
                 self.status = "finished"
                 self._say("Finished")
         except Exception as exc:  # shown to the user in plain language
-            log = self._services.settings.outputs_dir / "app_errors.log"
-            log.parent.mkdir(parents=True, exist_ok=True)
+            from asics_agent.outputs_index import app_dir
+
+            log = app_dir(self._services.settings) / "app_errors.log"
             with log.open("a") as fh:
                 fh.write(f"\n--- {datetime.now()} run {self.id}\n{traceback.format_exc()}")
             logging.exception("run %s failed", self.id)
@@ -286,7 +287,8 @@ class BatchRun:
     built in turn, giving one Sources workbook per city.
     Step 2 (answers): each city is answered in turn from its Sources workbook, giving one
     answers workbook per city. There is no review pause.
-    Each city's files live in outputs/cities/<City>/; the batch folder holds an index.
+    Each city's files live in outputs/<Vertical>/cities/<City>/; the batch folder holds an
+    index of the cities in the run, and outputs/START_HERE.xlsx is updated at the end.
     """
 
     def __init__(
@@ -359,6 +361,9 @@ class BatchRun:
         try:
             self.summary_path = write_batch_summary(self.folder, self.label, self.runs, self.step)
             self.status = "finished"
+            from asics_agent.outputs_index import refresh_index
+
+            refresh_index(self._services.settings)
         except Exception as exc:
             logging.exception("batch summary failed")
             self.error, self.status = friendly_error(exc), "failed"

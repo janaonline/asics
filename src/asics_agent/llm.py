@@ -246,6 +246,16 @@ def _agent_loop(
     return graph.compile(checkpointer=False, name="agent_tool_loop")
 
 
+def _without_unfinished_tool_use(messages: list) -> list:
+    """Drop a last reply that stopped part-way through a tool call (e.g. it ran out of
+    tokens): the API rejects any message after a tool_use that has no tool_result."""
+    last = messages[-1] if messages else None
+    blocks = last.content if isinstance(last, AIMessage) and isinstance(last.content, list) else []
+    if any(isinstance(b, dict) and b.get("type") == "tool_use" for b in blocks):
+        return messages[:-1]
+    return messages
+
+
 def call_json(
     services: Services,
     agent: str,
@@ -335,7 +345,7 @@ def call_json(
             if attempt:
                 raise
             messages = [
-                *messages,
+                *_without_unfinished_tool_use(messages),
                 HumanMessage(
                     f"Your reply could not be parsed ({exc}). Reply again with only the JSON "
                     f"object matching this schema:\n{json.dumps(schema.model_json_schema())}"

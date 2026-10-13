@@ -5,8 +5,8 @@ code: PARASTATAL
 # What is assessed in each city: the parastatal agencies Step 1 discovers.
 unit: parastatal
 question_bank: data/question_banks/Parastatal_ASICS_Question_Bank.xlsx
-# City folders: outputs/cities/<City>/ ("." = the outputs folder itself)
-outputs: .
+# This vertical's folder inside outputs/: outputs/Parastatal/cities/<City>/
+outputs: Parastatal
 scoring_workbook: scoring/2027/templates/ASICS_2027_Parastatal_Scoring_Workbook_DRAFT.xlsx
 shared_rules: shared-rules
 steps:

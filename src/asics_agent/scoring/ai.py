@@ -393,6 +393,8 @@ REVIEW_COLUMNS = [
     YOUR_SCORE,
     YOUR_COMMENTS,
     "Agrees with AI?",
+    "Final score",
+    "Score used",
     "Status",
     "Step 2 status",
     "Step 2 answer",
@@ -402,7 +404,85 @@ REVIEW_COLUMNS = [
     "AI's reasoning",
     "Why left for a person",
 ]
-_AI, _MAX, _YOURS, _AGREE = "D", "E", "F", "H"
+AI_POINTS = "AI points"  # added to each question sheet: the AI's own points, kept apart
+BACK_LINK = "← Back to Scores (start here)"
+EXPERT = "Expert (overrides AI)"
+LINES_SHOWN = 6  # each review row shows this many lines; the full text stays in the cell
+
+
+def _letter(name: str) -> str:
+    from openpyxl.utils import get_column_letter
+
+    return get_column_letter(REVIEW_COLUMNS.index(name) + 1)
+
+
+def _link_your_scores(wb, template: VerticalTemplate) -> dict[str, int]:
+    """Make each question sheet's Points use the person's score where they entered one.
+
+    The AI's points (the experts' formula on the AI's inputs) move to an "AI points" column;
+    Points becomes: your score from Scores (start here) if there is one, else the AI's. So the
+    summary, city and ASICS totals follow people's scores, live in Excel. Returns
+    {question code: AI points column}."""
+    from openpyxl.utils import get_column_letter
+
+    review = f"'{REVIEW_SHEET}'"
+    yours = f"{review}!${_letter(YOUR_SCORE)}:${_letter(YOUR_SCORE)}"
+    codes, labels = f"{review}!$A:$A", f"{review}!$B:$B"
+    columns = {}
+    for code, sheet in template.questions.items():
+        if not sheet.points_column or sheet.sheet not in wb.sheetnames:
+            continue
+        ws = wb[sheet.sheet]
+        heads = {
+            str(ws.cell(row=sheet.header_row, column=c).value or "").strip(): c
+            for c in range(1, ws.max_column + 1)
+        }
+        _back_link(ws, sheet)
+        if AI_POINTS in heads:  # already linked (an earlier run)
+            columns[code] = heads[AI_POINTS]
+            continue
+        helper = ws.max_column + 1
+        ws.cell(row=sheet.header_row - 1, column=helper, value="AUTO - DO NOT ENTER")
+        ws.cell(row=sheet.header_row, column=helper, value=AI_POINTS)
+        h, p = get_column_letter(helper), sheet.points_column
+        for r in sheet.rows.values():
+            ws.cell(row=r, column=helper, value=ws.cell(row=r, column=p).value)
+            ws.cell(
+                row=r,
+                column=p,
+                value=(
+                    f'=IF(COUNTIFS({codes},$B$1,{labels},$A{r},{yours},">=0")>0,'
+                    f"SUMIFS({yours},{codes},$B$1,{labels},$A{r}),{h}{r})"
+                ),
+            )
+        columns[code] = helper
+    return columns
+
+
+def _back_link(ws, sheet: QuestionSheet) -> None:
+    """A link in row 1 of a question sheet back to the review sheet."""
+    from openpyxl.styles import Font
+    from openpyxl.worksheet.hyperlink import Hyperlink
+
+    cell = ws.cell(row=1, column=max(sheet.points_column or 0, 5))
+    cell.value = BACK_LINK
+    cell.hyperlink = Hyperlink(
+        ref=cell.coordinate, location=f"'{REVIEW_SHEET}'!A1", display=BACK_LINK
+    )
+    cell.font = Font(color="1F4E9C", underline="single", bold=True)
+
+
+def _row_height(values: list, widths: list[float]) -> float:
+    """Points for a review row: enough for the longest cell, up to LINES_SHOWN lines."""
+    lines = 1
+    for value, width in zip(values, widths, strict=False):
+        text = str(value or "")
+        if text.startswith("="):
+            continue
+        per_line = max(int(width * 1.15), 1)  # characters per line at this column width
+        need = sum(max(1, -(-len(part) // per_line)) for part in text.split("\n"))
+        lines = max(lines, min(need, LINES_SHOWN))
+    return 15 * lines + 3
 
 
 def _review_rows(ws) -> dict[tuple[str, str], dict]:
@@ -424,8 +504,10 @@ def _summary_sheet(
     from openpyxl.formatting.rule import FormulaRule
     from openpyxl.styles import Alignment, Font, PatternFill
     from openpyxl.utils import get_column_letter
+    from openpyxl.worksheet.hyperlink import Hyperlink
 
     details = details or {}
+    ai_points = _link_your_scores(wb, template)
     rows: dict[tuple[str, str], dict] = {}
     for name in (REVIEW_SHEET, *OLD_REVIEW_SHEETS):
         if name in wb.sheetnames:
@@ -463,43 +545,81 @@ def _summary_sheet(
     for r, key in enumerate(sorted(rows, key=lambda k: order.get(k, (10**6, 0))), start=2):
         row = rows[key]
         sheet = template.questions.get(key[0])
-        if sheet and sheet.points_column and key[1] in sheet.rows:  # live from the workbook
+        if sheet and key[0] in ai_points and key[1] in sheet.rows:  # live from the workbook
             row["AI score"] = (
-                f"=IFERROR('{sheet.sheet}'!{get_column_letter(sheet.points_column)}"
+                f"=IFERROR('{sheet.sheet}'!{get_column_letter(ai_points[key[0]])}"
                 f'{sheet.rows[key[1]]},"")'
             )
+        ai, yours = f"{_letter('AI score')}{r}", f"{_letter(YOUR_SCORE)}{r}"
         row["Agrees with AI?"] = (
-            f'=IF(OR({_YOURS}{r}="",NOT(ISNUMBER({_AI}{r}))),"",'
-            f'IF(ABS({_YOURS}{r}-{_AI}{r})<0.001,"Yes","No"))'
+            f'=IF(OR({yours}="",NOT(ISNUMBER({ai}))),"",IF(ABS({yours}-{ai})<0.001,"Yes","No"))'
+        )
+        row["Final score"] = f"=IF(ISNUMBER({yours}),{yours},{ai})"  # what the totals use
+        row["Score used"] = (
+            f'=IF(ISNUMBER({yours}),"{EXPERT}",IF(ISNUMBER({ai}),"AI","Not scored yet"))'
         )
         ws.append([row.get(c) for c in REVIEW_COLUMNS])
-    widths = [9, 24, 50, 9, 8, 12, 30, 10, 16, 20, 60, 36, 30, 50, 70, 50]
+        if sheet and sheet.sheet in wb.sheetnames:  # click the code to open its sheet
+            link = ws.cell(row=r, column=1)
+            link.hyperlink = Hyperlink(
+                ref=link.coordinate, location=f"'{sheet.sheet}'!A1", display=str(key[0])
+            )
+            link.font = Font(color="1F4E9C", underline="single")
+    widths = [9, 24, 50, 9, 8, 12, 30, 10, 9, 14, 16, 20, 60, 36, 30, 50, 70, 50]
     yellow = PatternFill("solid", fgColor="FFF2B3")
     for c, (head, width) in enumerate(zip(ws[1], widths, strict=True), start=1):
         head.font, head.fill = Font(bold=True), PatternFill("solid", fgColor="DDE7F0")
         head.alignment = Alignment(wrap_text=True, vertical="top")
         ws.column_dimensions[get_column_letter(c)].width = width
-    for c in (_YOURS, "G"):
+    for c in (_letter(YOUR_SCORE), _letter(YOUR_COMMENTS)):
         ws[f"{c}1"].fill = PatternFill("solid", fgColor="F2C200")
         for r in range(2, ws.max_row + 1):
             ws[f"{c}{r}"].fill = yellow
     for row in ws.iter_rows(min_row=2):
         for cell in row:
             cell.alignment = Alignment(wrap_text=True, vertical="top")
+        # A fixed height (a few lines) keeps long texts from making huge rows; the whole text
+        # is still in the cell (click it, or drag the row taller).
+        ws.row_dimensions[row[0].row].height = _row_height([c.value for c in row], widths)
+    ws.row_dimensions[1].height = 32  # a set height is kept as is (no auto-fit)
+    for r in range(1, ws.max_row + 1):  # the score the totals use
+        ws[f"{_letter('Final score')}{r}"].font = Font(bold=True)
     last = max(ws.max_row, 2)
+    status, agree = _letter("Status"), _letter("Agrees with AI?")
+    final, used = _letter("Final score"), _letter("Score used")
+    ws.conditional_formatting.add(  # the expert's score is the one that counts: green
+        f"{final}2:{used}{last}",
+        FormulaRule(formula=[f'${used}2="{EXPERT}"'], fill=PatternFill("solid", fgColor="C6E7C1")),
+    )
     ws.conditional_formatting.add(  # rows the AI left: orange status
-        f"I2:I{last}",
+        f"{status}2:{status}{last}",
         FormulaRule(
-            formula=['$I2="Left for a person"'], fill=PatternFill("solid", fgColor="FBD5B5")
+            formula=[f'${status}2="Left for a person"'],
+            fill=PatternFill("solid", fgColor="FBD5B5"),
         ),
     )
     ws.conditional_formatting.add(
-        f"{_AGREE}2:{_AGREE}{last}",
-        FormulaRule(formula=[f'${_AGREE}2="No"'], fill=PatternFill("solid", fgColor="F4B6B6")),
+        f"{agree}2:{agree}{last}",
+        FormulaRule(formula=[f'${agree}2="No"'], fill=PatternFill("solid", fgColor="F4B6B6")),
     )
     ws.freeze_panes = "D2"
     ws.auto_filter.ref = ws.dimensions
+    ws.sheet_properties.tabColor = "2E9C5A"  # the sheet to work in
+    ws.sheet_view.topLeftCell, ws.sheet_view.selection[0].activeCell = "A1", "A2"
+    ws.sheet_view.selection[0].sqref = "A2"
+    for other in wb.worksheets:  # open on this sheet alone (no grouped tabs)
+        other.sheet_view.tabSelected = other is ws
+        if other is not ws and other.title in {q.sheet for q in template.questions.values()}:
+            other.sheet_properties.tabColor = "BFBFBF"  # calculation sheets
     wb.active = 0
+
+
+def link_for_review(path: Path, template: VerticalTemplate, cache_dir: Path) -> None:
+    """Bring a scoring workbook up to date for review (e.g. one made before people's scores
+    counted in the totals), keeping every row and every person's entry."""
+    wb = load_workbook(path)
+    _summary_sheet(wb, template, [], question_details(template, cache_dir))
+    wb.save(path)
 
 
 def ai_copy(template: VerticalTemplate, out: Path) -> str:

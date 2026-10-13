@@ -44,8 +44,8 @@ def test_all_verticals_run_steps_1_2_3_in_order(tmp_path):
     assert [s.status for s in plan.stages] == ["done"] * 6
     assert all("Scored Sample City A" in s.note for s in plan.stages[4:])
     # each vertical keeps its own folders
-    assert any((tmp_path / "practice" / "cities").iterdir())  # Parastatal: outputs/
-    assert any((tmp_path / "verticals" / "upd" / "practice" / "cities").iterdir())
+    assert any((tmp_path / "Parastatal" / "practice" / "cities").iterdir())
+    assert any((tmp_path / "UPD" / "practice" / "cities").iterdir())
 
 
 def test_pauses_for_the_sources_review_before_answering(tmp_path):

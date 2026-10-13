@@ -306,3 +306,50 @@ def test_your_score_is_kept_when_the_ai_scores_again(services, run_steps, tmp_pa
     _step3(services, tmp_path, ["UPD1a"])  # the AI scores the same rows again
     rows = _review_rows(load_workbook(path)[REVIEW_SHEET])
     assert [r[YOUR_SCORE] for r in rows.values()].count(4) == 1
+
+
+@pytest.mark.skipif(soffice() is None, reason="LibreOffice not installed")
+def test_your_score_flows_into_the_totals(services, run_steps, tmp_path):
+    from asics_agent.scoring.ai import REVIEW_SHEET, YOUR_SCORE, _review_rows, ai_file
+
+    run_steps("sources")
+    run_steps("answers")
+    template, _ = _step3(services, tmp_path, ["UPD1a", "UPD1b"])
+    path = ai_file(tmp_path / "scoring", "PARASTATAL")
+    wb = load_workbook(path)
+    ws = wb[REVIEW_SHEET]
+    head = [c.value for c in ws[1]]
+    row = next(
+        r
+        for r in range(2, ws.max_row + 1)
+        if ws.cell(row=r, column=1).value == "UPD1a"
+        and ws.cell(row=r, column=2).value == "Sample City A – SWB"
+    )
+    ws.cell(row=row, column=head.index(YOUR_SCORE) + 1, value=4)  # an expert's correction
+    wb.save(path)
+    recalculate(path, tmp_path)
+
+    book = load_workbook(path, data_only=True)
+    reviewed = _review_rows(book[REVIEW_SHEET])[("UPD1a", "Sample City A – SWB")]
+    assert reviewed["Final score"] == 4 and reviewed["AI score"] != 4  # the AI's own is kept
+    sheet = template.questions["UPD1a"]
+    assert (
+        book["UPD1a"].cell(row=sheet.rows["Sample City A – SWB"], column=sheet.points_column).value
+        == 4
+    )  # what the totals use
+    scores = read_scores(template, path, "PARASTATAL", "AI")
+    assert scores.questions[("UPD1a", "Sample City A – SWB")] == 4
+
+
+def test_the_review_sheet_links_to_each_question_and_opens_alone(services, run_steps, tmp_path):
+    from asics_agent.scoring.ai import BACK_LINK, REVIEW_SHEET, ai_file
+
+    run_steps("sources")
+    run_steps("answers")
+    _step3(services, tmp_path, ["UPD1a"])
+    wb = load_workbook(ai_file(tmp_path / "scoring", "PARASTATAL"))
+    ws = wb[REVIEW_SHEET]
+    assert ws["A2"].hyperlink.location == f"'{ws['A2'].value}'!A1"  # click → its sheet
+    assert any(c.value == BACK_LINK for c in wb[ws["A2"].value][1])  # and back
+    assert [w.title for w in wb.worksheets if w.sheet_view.tabSelected] == [REVIEW_SHEET]
+    assert all(ws.row_dimensions[r].height <= 15 * 6 + 3 for r in range(2, ws.max_row + 1))

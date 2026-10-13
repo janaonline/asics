@@ -12,7 +12,8 @@ def test_parastatal_settings_are_unchanged():
     s = get_settings()
     base = _base_settings()
     assert s.vertical == "parastatal" and s.unit == "parastatal"
-    assert s.question_bank == base.question_bank and s.outputs_dir == base.outputs_dir
+    assert s.question_bank == base.question_bank
+    assert s.outputs_dir == base.outputs_dir / "Parastatal"  # outputs/Parastatal/cities/…
     assert s.shared_rules == "shared-rules" and s.vertical_title == "Parastatal"
     for role, agent in [
         ("discover", "parastatal-discovery"),
@@ -32,7 +33,7 @@ def test_every_vertical_is_complete():
 def test_upd_has_its_own_bank_agents_and_folders():
     u = settings_for(get_settings(), "upd")
     assert u.unit == "city_government" and u.vertical_code == "UPD"
-    assert u.outputs_dir.parts[-2:] == ("verticals", "upd")
+    assert u.outputs_dir.name == "UPD"
     assert agent_for(u, "answer") == "city-answer-writer" and u.shared_rules == "shared-rules-city"
     questions, issues = load_bank(u)
     assert len(questions) > 90 and questions["UPD 3"].children == ["UPD 3a", "UPD 3b", "UPD 3c"]
@@ -44,7 +45,10 @@ def upd_services(tmp_path):
     from asics_agent.practice import practice_services
 
     upd = dataclasses.replace(
-        settings_for(get_settings(), "upd"), outputs_dir=tmp_path, scoring_dir=tmp_path / "scoring"
+        settings_for(get_settings(), "upd"),
+        outputs_dir=tmp_path,
+        outputs_root=tmp_path,
+        scoring_dir=tmp_path / "scoring",
     )
     return practice_services(upd)
 

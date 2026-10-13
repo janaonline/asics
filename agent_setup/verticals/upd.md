@@ -14,8 +14,8 @@ question_columns:
   Score / Max Score: Max Score
   Assessment Level: Assessment level
   Evidence / Source Requirement: Notes for scorers
-# City folders: outputs/verticals/upd/cities/<City>/
-outputs: verticals/upd
+# This vertical's folder inside outputs/: outputs/UPD/cities/<City>/
+outputs: UPD
 scoring_workbook: scoring/2027/templates/ASICS_2027_UPD_Scoring_Workbook_v2.xlsx
 shared_rules: shared-rules-city
 steps:

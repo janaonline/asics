@@ -137,6 +137,10 @@ class PlanRun:
                 else:
                     self._score(stage)
             self.status = "finished"
+            if not self.practice:
+                from asics_agent.outputs_index import refresh_index
+
+                refresh_index(self.settings)
         except Exception as exc:  # shown in plain language; details in the log
             logging.exception("plan %s failed", self.id)
             self.error, self.status = friendly_error(exc), "failed"
