@@ -709,6 +709,81 @@ agents and rules), so nothing about how it researches changed. Its files are in
    [scoring/phase2.py](src/asics_agent/scoring/phase2.py) decides whether a city is ready and
    loads its evidence.
 
+## Models, effort and cost
+
+- **Ceiling: Claude Sonnet 5.5.** Only `claude-sonnet-5-5`, `claude-sonnet-5` and
+  `claude-haiku-5-5` may run ([services.py](src/asics_agent/services.py), `ALLOWED_MODELS`).
+  Any other model, whether in `.env`, an agent file, a run's options or `--model`, is
+  refused with a plain message, and **Agent setup → Setup check** flags it.
+- **Defaults:** `ASICS_MODEL=claude-sonnet-5-5`, `ASICS_EFFORT=medium`. Every agent file also
+  names its model and effort (`model:`, `effort:`), which take precedence over `.env`; a run's
+  options (Advanced options in the app, `--model` / `--effort` on the command line) override
+  both for that run.
+- **Refusal fallback:** on Sonnet 5.5 a declined request is retried on Sonnet 5 (never higher).
+  Haiku 5.5 has no fallback, so none is sent.
+- **Prompt caching** is on for every call: the agent's instructions are cached across calls,
+  and each turn of a tool loop reads the earlier turns from the cache at a tenth of the price.
+- **Cost:** both command-line scripts print the tokens, web searches and cost of the run, by
+  agent and model, and save them in `outputs/_app/usage/`. Web searches cost $10 per 1,000 on
+  top of tokens, and each search brings back roughly 50,000 tokens of results.
+
+### What runs cost (Costs page)
+
+- **Every run records its cost:** each paid run (Steps 1, 2 and 3, from the app or the
+  command line) saves what it cost in `outputs/_app/usage/`. The cost is worked out from the
+  tokens, cache use and web searches each call used and the model's price. Practice runs and
+  checks cost nothing and aren't recorded.
+- **Costs page:** under **Results → Costs** you'll find every run with its cost and cost per
+  unit of work (per agency for Step 1, per answer for Step 2, per row for Step 3), the totals,
+  and a breakdown by agent and model. A finished run also shows its own cost on its results
+  screen.
+- **Before every paid run, a popup** shows the estimated cost and asks "Are you sure you
+  want to proceed?". The run starts only on **Yes, start**.
+  - **How it estimates:** the work planned (agencies, answers or rows, from the city's
+    Sources workbook and question bank) × the cost per unit of the last run of the same step
+    and vertical.
+  - **First run:** with no earlier run to go by, it uses starting figures measured on
+    Bengaluru (`DEFAULT_RATES` in [costs.py](src/asics_agent/costs.py)) and says so.
+
+### Step 2 runs as batches (half price)
+
+Step 2 sends its model calls through Anthropic's **Message Batches API**, which costs half
+as much. All the answers for a city start together and their calls go out as one batch;
+answers that look further into a citation (read_citation) send their next turn in the next
+batch. A batch usually finishes within minutes, sometimes up to an hour (the API allows 24
+hours), so Step 2 takes longer but nothing changes in what it produces. Anything a batch
+can't complete, or a request the safety classifier declines, is sent again as an ordinary
+call. The cost lines show batch calls as "claude-sonnet-5-5 (batch)", charged at half.
+A round with 5 calls or fewer (`ASICS_STEP2_BATCH_LIVE_UP_TO`) is sent live instead: the
+last rounds are usually one or two answers still reading their citations, and a batch
+would make the whole city wait minutes per round for them.
+To answer live instead (e.g. for a quick check of one question), set
+`ASICS_STEP2_BATCH=false` in `.env`. Practice runs never use batches.
+
+### Keeping Step 1 (finding sources) cheap
+
+Step 1 is the expensive step: it searches the web. It is kept down by:
+
+- **Search limits:** the citation builders make at most 5 web searches and 5 fetches per call,
+  agency discovery and the profilers 8 each (the agent files' `max_uses`). Each fetched page
+  is cut to 10,000 tokens (`max_content_tokens`).
+- **Allowed domains only:** the citation builders' searches and fetches only reach `gov.in`,
+  `nic.in`, `prsindia.org` and the agency's own official domain, the same allow-list the
+  Citation Sheet uses, so no searches are spent on pages that could never be cited.
+- **No link checks by the agent:** the code tests every link afterwards anyway (the Citation
+  Sheet's human-accessibility test), so the agent no longer spends tool calls on it.
+- **Shared state laws once per city:** the city government's Act, the Town and Country
+  Planning Act and other laws every parastatal shares are searched for once, before the
+  parastatals, and saved as "All parastatals" rows that every parastatal's answers can use.
+- **Repeat runs build on the last one:** when the city already has a Sources workbook, the
+  agencies and their websites are kept (no new discovery or profiling), existing links are
+  re-tested, and only questions with no verified source are searched for. Tick **Full refresh**
+  (Run steps page, or Advanced options) or use `--full-refresh` to search everything again.
+- **Source assessor reads 15,000 characters** of each page, the parts most relevant to the
+  claimed use (`ASICS_ASSESS_EVIDENCE_CHARS`). On 24 Bengaluru sources this matched reading
+  60,000 at under half the cost. Haiku 5.5 was also tried and rejected sources Sonnet accepts,
+  so the assessor stays on Sonnet 5.5.
+
 ## Other common changes
 
 - **Look and branding:**

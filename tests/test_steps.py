@@ -2,7 +2,8 @@ from pathlib import Path
 
 from openpyxl import load_workbook
 
-from asics_agent.practice import INDIA_CODE, MADE_UP, PLAN, SITE, TRANSPORT_SITE
+from asics_agent.models import ALL_PARASTATALS
+from asics_agent.practice import INDIA_CODE, MADE_UP, PLAN, SITE, TRANSPORT_SITE, _plain
 from asics_agent.sources_workbook import CITATIONS_SHEET, PARASTATALS_SHEET
 
 
@@ -21,7 +22,9 @@ def test_step1_finds_parastatals_rates_websites_and_builds_citations(run_steps):
 
     sources = {(s.parastatal_id, s.url): s for s in result["final_sources"]}
     assert ("SWB", MADE_UP) not in sources  # invented URL discarded
-    india_code = sources[("SWB", INDIA_CODE)]
+    # The Act is a shared state law: found once for the city, one row for every parastatal.
+    assert ("SWB", INDIA_CODE) not in sources
+    india_code = sources[(ALL_PARASTATALS, INDIA_CODE)]
     assert india_code.verification_status == "Not verified" and not india_code.use_for_answers
     # The gap-filling pass found a source for UPD 1b.
     assert sources[("SWB", PLAN)].question_ids == ["UPD 1b"]
@@ -159,7 +162,7 @@ def test_insufficient_answers_carry_no_citation(run_steps, services):
 
     class Unhelpful(FakeClaude):
         def _generate(self, messages, stop=None, run_manager=None, **kwargs):
-            if "TASK: answer_question" in messages[0].content:
+            if "TASK: answer_question" in _plain(messages[0].content):
                 import json
 
                 from langchain_core.messages import AIMessage
@@ -181,3 +184,48 @@ def test_insufficient_answers_carry_no_citation(run_steps, services):
     answer = next(a for a in result["answers"] if a.question_id == "UPD 1a")
     assert answer.status == "Insufficient Evidence"
     assert answer.citation_id == "" and answer.citation_url == ""
+
+
+def test_a_repeat_step1_run_only_researches_what_is_missing(services):
+    from asics_agent.agents.sources_master import build_sources_graph
+    from asics_agent.run_options import RunOptions
+
+    inputs = {"city": "sample_city_a", "only_questions": ["UPD 1"], "auto_approve": True}
+    llm = services.llm
+    build_sources_graph(services).invoke(inputs)
+    first = list(llm.calls)
+    assert "discover_parastatals" in first and "parastatal_profile" in first
+
+    llm.calls.clear()
+    second = build_sources_graph(services).invoke(inputs)
+    # Agencies and websites come from the Sources workbook; only uncovered questions are searched.
+    assert "discover_parastatals" not in llm.calls and "parastatal_profile" not in llm.calls
+    assert llm.calls.count("find_sources") < first.count("find_sources")
+    swb = next(p for p in second["parastatals"] if p.id == "SWB")
+    assert swb.official_website and swb.website_check and swb.website_check.band == "Official"
+    assert any("already in the Sources workbook" in i.message for i in second["final_issues"])
+
+    llm.calls.clear()
+    build_sources_graph(services).invoke(inputs, context=RunOptions(full_refresh=True))
+    assert "discover_parastatals" in llm.calls and "parastatal_profile" in llm.calls
+
+
+def test_shared_state_laws_are_searched_once_per_city(services):
+    from asics_agent.agents.sources_master import build_sources_graph
+    from asics_agent.models import ALL_PARASTATALS
+    from asics_agent.practice import INDIA_CODE
+
+    inputs = {"city": "sample_city_a", "only_questions": ["UPD 1"], "auto_approve": True}
+    llm = services.llm
+    llm.sent.clear()
+    result = build_sources_graph(services).invoke(inputs)
+    shared_calls = [m for m in llm.sent if "SHARED LAWS ONLY" in m]
+    assert len(shared_calls) == 1  # two parastatals, one search
+    act = [s for s in result["final_sources"] if s.url == INDIA_CODE]
+    assert [s.parastatal_id for s in act] == [ALL_PARASTATALS]  # one row for every parastatal
+    agency_calls = [m for m in llm.sent if "(SWB), type" in m or "(STC), type" in m]
+    assert agency_calls and all(INDIA_CODE in m for m in agency_calls)  # told to skip it
+
+    llm.sent.clear()
+    build_sources_graph(services).invoke(inputs)  # a repeat run: already in the Citation Sheet
+    assert not [m for m in llm.sent if "SHARED LAWS ONLY" in m]

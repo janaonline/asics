@@ -26,13 +26,19 @@ def main():
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
     settings = settings_for(get_settings(), args.vertical)
-    out = args.out or settings.scoring_workbook or settings.scoring_dir / "templates" / (
-        f"ASICS_2027_{settings.vertical_title}_Scoring_Workbook_DRAFT.xlsx"
+    out = (
+        args.out
+        or settings.scoring_workbook
+        or settings.scoring_dir
+        / "templates"
+        / (f"ASICS_2027_{settings.vertical_title}_Scoring_Workbook_DRAFT.xlsx")
     )
     if args.methodology:
         questions, issues = load_question_bank(args.methodology)
-        print("Note: Step 3 only scores questions whose text matches the question bank Steps 1 "
-              "and 2 used; use the same file for both.")
+        print(
+            "Note: Step 3 only scores questions whose text matches the question bank Steps 1 "
+            "and 2 used; use the same file for both."
+        )
     else:
         questions, issues = load_bank(settings)
     units, notes = gather_units(settings)

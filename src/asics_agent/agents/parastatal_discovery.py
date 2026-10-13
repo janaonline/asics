@@ -33,6 +33,7 @@ from asics_agent.links.trust import best_official, host_of, is_official_host, ra
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue, Parastatal, Question, RunContext
 from asics_agent.progress import report
+from asics_agent.run_options import current_options
 from asics_agent.services import Services
 from asics_agent.verticals import CITY_UNIT_ID, agent_for
 
@@ -83,6 +84,7 @@ class DiscoveryInput(TypedDict, total=False):
     only_pillars: list[str] | None
     only_questions: list[str] | None
     skip_research: bool
+    repeat_run: bool  # the city already has a Sources workbook
 
 
 class ProfileTask(TypedDict, total=False):
@@ -105,6 +107,11 @@ def _clean_id(value: str, name: str) -> str:
 def _same(a: Parastatal, b: Parastatal) -> bool:
     norm = lambda s: re.sub(r"[^a-z]", "", s.lower())  # noqa: E731
     return a.id == b.id or norm(a.name) == norm(b.name)
+
+
+def building_on_earlier(state: MasterState) -> bool:
+    """A repeat Step 1 run that keeps what the city's Sources workbook already has."""
+    return bool(state.get("repeat_run")) and not current_options().full_refresh
 
 
 def build_parastatal_discovery(services: Services):
@@ -133,6 +140,20 @@ def build_parastatal_discovery(services: Services):
         known = list(state.get("known_parastatals") or [])
         if state.get("skip_research"):
             return {"parastatals": known}
+        if building_on_earlier(state) and known:
+            report(run.city_name, "Using the parastatals already in the Sources workbook")
+            return {
+                "parastatals": known,
+                "issues": [
+                    _team(
+                        "info",
+                        f"{run.city_name}: used the {len(known)} parastatal(s) already in the "
+                        "Sources workbook; no new search for agencies. Choose 'Full refresh' "
+                        "to search again.",
+                        run.city_name,
+                    )
+                ],
+            }
         listed = "\n".join(f"- {p.name} ({p.id})" for p in known) or "(none)"
         report(run.city_name, "Searching for the city's parastatals (usually a few minutes)")
         pages: list[tuple[str, str]] = []
@@ -249,6 +270,8 @@ def build_parastatal_discovery(services: Services):
             return "finish"
         only = set(state.get("only_parastatals") or [])
         todo = [p for p in state["parastatals"] if p.include and (not only or p.id in only)]
+        if building_on_earlier(state):  # keep the website already confirmed for each agency
+            todo = [p for p in todo if not p.official_website]
         # Parastatals the team excluded (Include? = No) are kept but not researched.
         return [
             Send(

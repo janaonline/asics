@@ -37,6 +37,7 @@ class MasterState(TypedDict, total=False):
     known_parastatals: list[Parastatal]  # from the register and the city's Sources workbook
     parastatals: list[Parastatal]
     existing_citations: list[Source]  # step 1: re-tested; step 2: the list to answer from
+    repeat_run: bool  # step 1: the city already has a Sources workbook to build on
     # Parastatal discovery (step 1)
     discovery_pages: list[tuple[str, str]]
     profiled: Annotated[list[Parastatal], operator.add]
@@ -64,6 +65,7 @@ class ParastatalTask(TypedDict, total=False):
     known_sources: list[Source]  # already verified this run (e.g. the official website)
     covered_urls: list[str]
     known_urls: list[str]
+    shared_laws: list[str]  # "title: url" of the state laws found once for every parastatal
     # outputs
     tool_urls: Annotated[list[str], operator.add]
     sources: Annotated[list[Source], operator.add]

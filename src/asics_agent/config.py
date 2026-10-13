@@ -35,6 +35,9 @@ class Settings:
     api_read_timeout: float
     user_agent: str
     max_evidence_chars: int
+    assess_evidence_chars: int  # Step 1: page text the source assessor reads
+    batch_answers: bool  # Step 2: send model calls as Message Batches (half price, slower)
+    batch_live_up_to: int  # Step 2: a round with this many calls or fewer is sent live
     scoring_dir: Path = PROJECT_ROOT / "scoring" / "2027"  # templates, human/AI copies, results
     # The vertical being run (agent_setup/verticals/<vertical>.md; see verticals.py). The
     # defaults are the Parastatal vertical's.
@@ -63,8 +66,8 @@ def get_settings() -> Settings:
 
 def _base_settings() -> Settings:
     return Settings(
-        model=os.getenv("ASICS_MODEL", "claude-opus-5-5"),
-        effort=os.getenv("ASICS_EFFORT", "high"),
+        model=os.getenv("ASICS_MODEL", "claude-sonnet-5-5"),
+        effort=os.getenv("ASICS_EFFORT", "medium"),
         enable_fallbacks=os.getenv("ASICS_ENABLE_FALLBACKS", "true").lower() == "true",
         question_bank=_path(
             "ASICS_QUESTION_BANK", "data/question_banks/Parastatal_ASICS_Question_Bank.xlsx"
@@ -86,5 +89,9 @@ def _base_settings() -> Settings:
         ),
         find_sources_max_uses=int(os.getenv("ASICS_FIND_SOURCES_MAX_USES") or 0) or None,
         max_evidence_chars=int(os.getenv("ASICS_MAX_EVIDENCE_CHARS", "60000")),
+        assess_evidence_chars=int(os.getenv("ASICS_ASSESS_EVIDENCE_CHARS", "15000")),
+        batch_answers=os.getenv("ASICS_STEP2_BATCH", "true").strip().lower()
+        not in ("0", "false", "no", "off"),
+        batch_live_up_to=int(os.getenv("ASICS_STEP2_BATCH_LIVE_UP_TO", "5")),
         scoring_dir=_path("ASICS_SCORING_DIR", "scoring/2027"),
     )

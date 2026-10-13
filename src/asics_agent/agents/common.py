@@ -58,6 +58,34 @@ def read_source_text(source: Source, query: str, budget: int) -> tuple[str, bool
     return rank_chunks(Path(source.content_path).read_text(encoding="utf-8"), query, budget)
 
 
+def assess_source(
+    services: Services,
+    run: RunContext,
+    parastatal: Parastatal,
+    candidate: CandidateSource,
+    source: Source,
+) -> "SourceAssessment":
+    """The source assessor's view of a page that opened: is it useful, and how authoritative.
+    It reads at most ASICS_ASSESS_EVIDENCE_CHARS of the page, the parts most relevant to the
+    claimed use."""
+    text, trimmed = read_source_text(
+        source, candidate.useful_for, services.settings.assess_evidence_chars
+    )
+    assessment, _, _ = call_json(
+        services,
+        agent_for(services.settings, "assess"),
+        f"{services.settings.unit_label}: {parastatal.name} ({parastatal.id})\n"
+        f"City: {run.city_name}, {run.state_name}\n"
+        f"Title: {candidate.title}\nURL: {source.url}\nSource type: {candidate.source_type}\n"
+        f"What This Source Is Useful For (claimed): {candidate.useful_for}\n"
+        f"{'(Text below is an excerpt of the most relevant parts.)' if trimmed else ''}\n\n"
+        f"--- RETRIEVED TEXT ---\n{text}",
+        SourceAssessment,
+        scope=MemoryScope(city=run.city_name, parastatals=[parastatal.id]),
+    )
+    return assessment
+
+
 def vet_source(
     services: Services,
     run: RunContext,
@@ -124,19 +152,7 @@ def vet_source(
     )
 
     if check.verification_status == "Verified":
-        text, trimmed = read_source_text(source, candidate.useful_for, settings.max_evidence_chars)
-        assessment, _, _ = call_json(
-            services,
-            agent_for(services.settings, "assess"),
-            f"{services.settings.unit_label}: {parastatal.name} ({parastatal.id})\n"
-            f"City: {run.city_name}, {run.state_name}\n"
-            f"Title: {candidate.title}\nURL: {url}\nSource type: {candidate.source_type}\n"
-            f"What This Source Is Useful For (claimed): {candidate.useful_for}\n"
-            f"{'(Text below is an excerpt of the most relevant parts.)' if trimmed else ''}\n\n"
-            f"--- RETRIEVED TEXT ---\n{text}",
-            SourceAssessment,
-            scope=MemoryScope(city=run.city_name, parastatals=[parastatal.id]),
-        )
+        assessment = assess_source(services, run, parastatal, candidate, source)
         source.useful_for = assessment.useful_for or source.useful_for
         source.current_status = assessment.current_status
         source.authority_score = max(0.0, min(10.0, assessment.authority_score))

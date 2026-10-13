@@ -16,6 +16,7 @@ import pandas as pd
 import streamlit as st
 
 import ui
+from asics_agent import costs
 from asics_agent.applicability import applies_to
 from asics_agent.cities import load_register
 from asics_agent.config import get_settings
@@ -35,11 +36,11 @@ from asics_agent.reporting import (
 )
 from asics_agent.run_options import RunOptions
 from asics_agent.runner import BatchRun, PipelineRun
-from asics_agent.services import default_services
+from asics_agent.services import ALLOWED_MODELS, default_services
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
 from asics_agent.verticals import load_bank, load_verticals, settings_for
 from asics_agent.workbook import answers_pattern, city_outcome, coverage_counts
-from ui import header, setup_page_chrome, sidebar_footer, step_card
+from ui import confirm_cost, header, setup_page_chrome, sidebar_footer, step_card
 
 st.set_page_config(
     page_title="ASICS · Janaagraha", page_icon=":material/fact_check:", layout="wide"
@@ -260,6 +261,13 @@ def plan_page():
             value=True,
             help="Applies to verticals that discover agencies (Parastatal).",
         )
+        full_refresh = st.toggle(
+            "In Step 1, search everything again (full refresh)",
+            value=False,
+            help="Off (cheaper): a city that already has a Sources workbook keeps its agencies, "
+            "websites and verified sources, and only questions with no verified source are "
+            "searched. On: search again for agencies and every question.",
+        )
     stage_count = len(verticals) * len(steps)
     gaps = []
     if 2 in steps and 1 not in steps:
@@ -288,7 +296,8 @@ def plan_page():
             "after another. You can leave this page and come back while the black window "
             "stays open."
         )
-    if st.button("Start", type="primary", icon=":material/play_arrow:", disabled=blocked):
+
+    def start():
         run_store()["current"] = PlanRun(
             BASE_SETTINGS,
             verticals,
@@ -297,8 +306,28 @@ def plan_page():
             practice=practice,
             review_parastatals=review_parastatals,
             pause_after_sources=pause,
+            options=RunOptions(full_refresh=full_refresh),
         ).start()
         st.switch_page(PAGES["run"])
+
+    if st.button("Start", type="primary", icon=":material/play_arrow:", disabled=blocked):
+        if practice:
+            start()
+        else:
+            confirm_cost(plan_estimate(verticals, [configs[c] for c in cities], steps), start)
+
+
+def plan_estimate(verticals: list[str], cities: list, steps) -> "costs.Estimate":
+    """What a Run steps run will probably cost: each vertical's steps for every city."""
+    parts = []
+    for name in verticals:
+        vs = settings_for(BASE_SETTINGS, name)
+        questions, _ = load_bank(vs)
+        units = sum(len(costs.city_units(vs, city)) for city in cities)
+        answers = sum(costs.planned_answers(vs, city, questions) for city in cities)
+        for step in sorted(steps):
+            parts.append(costs.estimate(vs, step, units if step == 1 else answers))
+    return costs.combine(parts)
 
 
 STEP_LABELS = {1: "Find sources", 2: "Answer questions", 3: "Score"}
@@ -454,9 +483,9 @@ def start_page(action: str):
                 )
                 + ". A number below overrides every agent, including those."
             )
-            model = st.text_input(
-                "Claude model for agents without their own",
-                placeholder=f"default: {settings.model}",
+            model = st.selectbox(
+                "Claude model for every agent (Sonnet 5.5 at most)",
+                ["(agents' own)", *ALLOWED_MODELS],
             )
             effort = st.selectbox(
                 "Effort for every agent", ["(agents' own)", "low", "medium", "high", "xhigh", "max"]
@@ -467,10 +496,18 @@ def start_page(action: str):
                 max_value=30,
                 value=0,
             )
+            refresh = action == "sources" and st.checkbox(
+                "Full refresh (search everything again)",
+                help="By default a repeat Step 1 run keeps the agencies, websites and verified "
+                "sources already in the city's Sources workbook, and searches only for "
+                "questions that have no verified source. That costs much less. Tick this to "
+                "search again for everything.",
+            )
             options = RunOptions(
-                model=model.strip() or None,
+                model=None if model.startswith("(") else model,
                 effort=None if effort.startswith("(") else effort,
                 web_search_max_uses=int(searches) or None,
+                full_refresh=refresh,
             )
     wanted = {w.strip() for w in only.split(",") if w.strip()} if only else set()
     runnable = [c for c in chosen_cities if c not in blocked_cities]
@@ -506,12 +543,7 @@ def start_page(action: str):
             "can leave this page and come back while the black window stays open."
         )
 
-    if st.button(
-        {"sources": "Start Step 1", "answers": "Start Step 2", "checks": "Run the check"}[action],
-        type="primary",
-        disabled=blocked,
-        icon=":material/play_arrow:",
-    ):
+    def start():
         base = None
         if upload is not None:
             uploads = app_dir(settings) / "uploads"
@@ -538,6 +570,20 @@ def start_page(action: str):
             options=options,
         ).start()
         st.switch_page(PAGES["run"])
+
+    if st.button(
+        {"sources": "Start Step 1", "answers": "Start Step 2", "checks": "Run the check"}[action],
+        type="primary",
+        disabled=blocked,
+        icon=":material/play_arrow:",
+    ):
+        if practice or action == "checks":  # free
+            start()
+        elif action == "sources":
+            units = sum(len(costs.city_units(run_settings, configs[c])) for c in runnable)
+            confirm_cost(costs.estimate(run_settings, 1, units), start, "Step 1")
+        else:
+            confirm_cost(costs.estimate(run_settings, 2, total), start, "Step 2")
 
 
 # ---------------------------------------------------------------------------------------
@@ -665,6 +711,8 @@ def plan_results(plan: PlanRun) -> None:
     )
     if plan.practice:
         st.warning(PRACTICE_NOTE, icon=":material/school:")
+    else:
+        run_cost(costs.group_total(settings, plan.id))
     last = len(plan.stages) - 1
     for i, stage in enumerate(plan.stages):
         with st.expander(f"{stage.title} · {STAGE_ICON[stage.status]}", expanded=i == last):
@@ -974,10 +1022,20 @@ def answers_results(slug: str, run: PipelineRun):
         )
 
 
+def run_cost(usd: float | None) -> None:
+    """The finished run's cost, with a link to every run's costs."""
+    if usd is None:
+        return
+    row = st.container(horizontal=True, vertical_alignment="center")
+    row.markdown(f":material/payments: This run cost **\\${usd:,.2f}** in Claude credit.")
+    row.page_link(PAGES["costs"], label="All costs", icon=":material/arrow_forward:")
+
+
 def results_panel(batch: BatchRun):
     runs = batch.runs
     done = sum(city_outcome(r) == "Done" for r in runs.values())
     st.success(f"Finished: {done} of {len(runs)} city(ies) done.", icon=":material/check_circle:")
+    run_cost(batch.cost)
     if batch.label.startswith("Practice"):
         st.warning(PRACTICE_NOTE, icon=":material/school:")
     if batch.step == "answers" and done:
@@ -1209,6 +1267,115 @@ def recheck_page():
             "Re-check", done, index=index, format_func=lambda p: f"{describe_recheck(p)}"
         )
         city_view_page.recheck_view(chosen)
+
+
+def costs_page():
+    header(
+        "Costs",
+        "What each run cost in Claude credit, worked out from the tokens and web searches it "
+        "used and the model's price. These are also what the next run's estimate is based on.",
+        "Results",
+    )
+    records = costs.history(settings)
+    if not records:
+        st.info(
+            "No paid runs yet. Each Step 1, 2 or 3 run (not practice runs) is listed here "
+            "once it finishes.",
+            icon=":material/receipt_long:",
+        )
+    else:
+        month = datetime.now().strftime("%Y-%m")
+        cols = st.columns(3)
+        cols[0].metric("Spent in total", f"${sum(r.total for r in records):,.2f}")
+        cols[1].metric(
+            "This month",
+            f"${sum(r.total for r in records if r.when.strftime('%Y-%m') == month):,.2f}",
+        )
+        cols[2].metric("Runs", len(records))
+        steps = st.pills(
+            "Step", [1, 2, 3], selection_mode="multi", format_func=lambda n: f"Step {n}"
+        )
+        shown = [r for r in records if not steps or r.step in steps]
+        table = pd.DataFrame(
+            [
+                {
+                    "When": r.when,
+                    "Run": r.label,
+                    "Step": f"Step {r.step}" if r.step else "–",
+                    "Vertical": r.vertical_title or r.vertical or "–",
+                    "Cities": ", ".join(r.cities) or "–",
+                    "Work": costs.plural(r.work, r.unit) if r.work else "–",
+                    "Cost": r.total,
+                    "Per unit": r.per_unit,
+                }
+                for r in shown
+            ]
+        )
+        st.dataframe(
+            table,
+            hide_index=True,
+            width="stretch",
+            column_config={
+                "When": st.column_config.DatetimeColumn(format="D MMM YYYY, HH:mm"),
+                "Cost": st.column_config.NumberColumn(format="$%.2f"),
+                "Per unit": st.column_config.NumberColumn(
+                    format="$%.3f", help="Cost per agency (Step 1), answer (2) or row (3)"
+                ),
+            },
+        )
+        with st.expander("Where the money went, by agent and model"):
+            for r in shown[:20]:
+                if not r.by_agent:
+                    continue
+                st.markdown(f"**{r.label}** · {r.when:%d %b %H:%M} · \\${r.total:,.2f}")
+                st.dataframe(
+                    pd.DataFrame(
+                        [
+                            {
+                                "Agent · model": name,
+                                "Calls": u.get("calls", 0),
+                                "Input tokens": u.get("input", 0) + u.get("cache_write", 0),
+                                "Cached": u.get("cache_read", 0),
+                                "Output tokens": u.get("output", 0),
+                                "Web searches": u.get("searches", 0),
+                                "Cost": u.get("usd") or 0.0,
+                            }
+                            for name, u in r.by_agent.items()
+                        ]
+                    ),
+                    hide_index=True,
+                    width="stretch",
+                    column_config={"Cost": st.column_config.NumberColumn(format="$%.2f")},
+                )
+
+    st.markdown("#### What the next run is estimated at")
+    verticals, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
+    rows = []
+    for name, v in verticals.items():
+        vs = settings_for(BASE_SETTINGS, name)
+        for step in (1, 2, 3):
+            usd, basis, _ = costs.rate(vs, step, vs.vertical)
+            rows.append(
+                {
+                    "Vertical": v.title,
+                    "Step": f"Step {step}",
+                    "Cost per": costs.UNITS[step],
+                    "US$": usd,
+                    "Based on": basis,
+                }
+            )
+    st.dataframe(
+        pd.DataFrame(rows),
+        hide_index=True,
+        width="stretch",
+        column_config={"US$": st.column_config.NumberColumn(format="$%.3f")},
+    )
+    st.caption(
+        "Prices per million tokens (input / output): Claude Sonnet 5.5 \\$2 / \\$10; reading "
+        "from the prompt cache costs a tenth of input, writing to it 1.25×. Web searches cost \\$10 "
+        "per 1,000. Step 2 runs as batches at half price. Runs from before October 2026 have "
+        "no step or work recorded."
+    )
 
 
 def setup_page():
@@ -1589,13 +1756,14 @@ PAGES = {
     "setup": st.Page(setup_page, title="Agent setup", icon=":material/psychology:"),
     "checks": st.Page(checks_page, title="Question bank check", icon=":material/rule:"),
     "scores": st.Page(scores_page, title="Scores", icon=":material/leaderboard:"),
+    "costs": st.Page(costs_page, title="Costs", icon=":material/payments:"),
     "help": st.Page(help_page, title="Help", icon=":material/help:"),
 }
 navigation = st.navigation(
     {
         "": [PAGES["home"]],
         "Assess": [PAGES["plan"], PAGES["step1"], PAGES["step2"], PAGES["step3"], PAGES["run"]],
-        "Results": [PAGES["files"], PAGES["scores"], PAGES["recheck"]],
+        "Results": [PAGES["files"], PAGES["scores"], PAGES["costs"], PAGES["recheck"]],
         "Settings": [PAGES["register"], PAGES["setup"], PAGES["checks"]],
         "Support": [PAGES["help"]],
     },

@@ -22,8 +22,9 @@ Prefer the official text (state gazette, state law department, India Code, the d
 own site) and the specific document (the Act PDF, the plan notification) over a home page.
 Prefer a smaller number of genuinely official, directly useful sources over many
 questionable ones. Only include URLs that a tool returned verbatim.
-Use check_link on a candidate before listing it: it runs the same human-accessibility test the
-Citation Sheet uses, so prefer links that pass and leave out ones that fail.
+Your web tools only reach allowed domains (gov.in, nic.in, prsindia.org and the city
+government's own domain). Do not spend tool calls checking links: the code runs the Citation
+Sheet's human-accessibility test on every candidate.
 
 JSON keys:
   "sources": array of objects with

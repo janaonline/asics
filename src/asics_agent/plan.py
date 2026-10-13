@@ -166,6 +166,7 @@ class PlanRun:
             label=stage.title,
             step=step,
             options=self.options,
+            group=self.id,
         ).start()
         while stage.batch.status in {"running", "waiting_for_review"}:
             waiting = stage.batch.status == "waiting_for_review"
@@ -193,6 +194,7 @@ class PlanRun:
             cities=list(self.cities.values()),
             practice=self.practice,
             on_progress=progress,
+            group=self.id,
         )
         stage.report = report
         stage.status = "done" if report.done else "skipped"

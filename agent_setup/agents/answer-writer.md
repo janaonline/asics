@@ -9,8 +9,8 @@ tools:
   search_citation_sheet: {}
   lookup_question: {}
 max_tool_calls: 8
-# model: claude-sonnet-5-5   # optional: a different Claude model for this agent
-effort: high
+effort: medium
+model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
 Answers one ASICS question for one parastatal using ONLY the Citation Sheet rows marked
 "Use for Answers? = Yes". It names the Citation ID it relies on and quotes the passage word for

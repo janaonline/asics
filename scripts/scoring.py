@@ -12,7 +12,10 @@ uv run python scripts/scoring.py ai --vertical PARASTATAL --question UPD1a --cit
 import argparse
 
 from asics_agent.config import get_settings
+from asics_agent.run_options import RunOptions, set_default_options
 from asics_agent.scoring import workflow
+from asics_agent.services import ALLOWED_MODELS
+from asics_agent.usage import METER
 
 
 def main():
@@ -22,17 +25,30 @@ def main():
     parser.add_argument("--question", action="append", help="only this question code (ai)")
     parser.add_argument("--city", action="append", help="only this city (ai)")
     parser.add_argument("--practice", action="store_true", help="scripted AI, no cost (ai)")
+    parser.add_argument(
+        "--model",
+        choices=ALLOWED_MODELS,
+        help="Claude model for this run (ai), e.g. claude-sonnet-5-5",
+    )
+    parser.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"])
     args = parser.parse_args()
     settings = get_settings()
+    if args.model or args.effort:
+        set_default_options(RunOptions(model=args.model, effort=args.effort))
     if args.step == "merge":
         reports = [workflow.merge(settings, args.vertical)]
     elif args.step == "ai":
         if not args.vertical:
             parser.error("choose a vertical with --vertical, e.g. --vertical UPD")
         reports = [
-            workflow.ai_score(settings, v.upper(), codes=args.question, cities=args.city,
-                              practice=args.practice,
-                              on_progress=lambda i, n: print(f"  {i}/{n}", end="\r"))
+            workflow.ai_score(
+                settings,
+                v.upper(),
+                codes=args.question,
+                cities=args.city,
+                practice=args.practice,
+                on_progress=lambda i, n: print(f"  {i}/{n}", end="\r"),
+            )
             for v in args.vertical
         ]
     else:
@@ -47,6 +63,10 @@ def main():
                 print(f"  • {line}")
         for path in report.files:
             print(f"  → {path}")
+    if METER.by_model:
+        print("\nAI usage and cost:")
+        for line in METER.lines():
+            print(f"  {line}")  # the run's cost record is in outputs/_app/usage/ (Costs page)
 
 
 if __name__ == "__main__":

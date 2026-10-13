@@ -9,7 +9,8 @@ tools:
   search_citation_sheet: {}
   lookup_question: {}
 max_tool_calls: 8
-effort: high
+effort: medium
+model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
 Answers one question of a city-level vertical (e.g. UPD) for one city, using ONLY the city's
 reviewed Citation Sheet. It names the Citation ID it relies on and quotes the passage word for

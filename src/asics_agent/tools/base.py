@@ -12,7 +12,7 @@ from asics_agent.models import Question, RunContext, Source
 
 # Anthropic-hosted tools: name -> API tool type.
 SERVER_TOOLS = {"web_search": "web_search_20260209", "web_fetch": "web_fetch_20260209"}
-SERVER_OPTIONS = {"max_uses", "allowed_domains", "blocked_domains"}
+SERVER_OPTIONS = {"max_uses", "allowed_domains", "blocked_domains", "max_content_tokens"}
 
 
 @dataclass
@@ -51,8 +51,16 @@ def tool_description(root: Path, name: str) -> tuple[dict, str]:
     return split_front_matter(path.read_text(encoding="utf-8"))
 
 
-def build_tools(root: Path, settings: dict, ctx: ToolContext, web_max_uses: int | None = None):
-    """(server tool dicts, LangChain client tools) for an agent's `tools:` settings."""
+def build_tools(
+    root: Path,
+    settings: dict,
+    ctx: ToolContext,
+    web_max_uses: int | None = None,
+    web_domains: set[str] | frozenset[str] = frozenset(),
+):
+    """(server tool dicts, LangChain client tools) for an agent's `tools:` settings.
+    `web_domains` (e.g. the agency's own official domain) are added to a web tool's
+    `allowed_domains`, when it has that list."""
     server, client = [], []
     for name, options in (settings or {}).items():
         options = dict(options or {})
@@ -66,6 +74,10 @@ def build_tools(root: Path, settings: dict, ctx: ToolContext, web_max_uses: int 
             }
             if web_max_uses is not None:
                 spec["max_uses"] = web_max_uses
+            if "allowed_domains" in spec and web_domains:
+                spec["allowed_domains"] = list(
+                    dict.fromkeys([*spec["allowed_domains"], *sorted(web_domains)])
+                )
             if name == "web_search":
                 spec.setdefault("user_location", {"type": "approximate", "country": "IN"})
             server.append(spec)

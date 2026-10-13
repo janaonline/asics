@@ -8,6 +8,8 @@
    authority review -> score caps. The results feed the links database.
 """
 
+from urllib.parse import urlparse
+
 from langgraph.graph import END, START, StateGraph
 
 from asics_agent.agent_setup import MemoryScope
@@ -24,9 +26,24 @@ from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue
 from asics_agent.progress import report
+from asics_agent.run_options import current_options
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext
 from asics_agent.verticals import agent_for
+
+
+def own_domain(website: str | None) -> set[str]:
+    """The agency's own official domain, for the source finder's allowed domains. gov.in and
+    nic.in sites are allowed already."""
+    host = (urlparse(website or "").hostname or "").removeprefix("www.")
+    if not host or host.endswith((".gov.in", ".nic.in")):
+        return set()
+    return {host}
+
+
+def _verified_questions(task: ParastatalTask) -> set[str]:
+    sources = task.get("sources", []) + task.get("known_sources", [])
+    return {q for s in sources if s.verification_status == "Verified" for q in s.question_ids}
 
 
 def build_links_agent(services: Services):
@@ -90,7 +107,14 @@ def build_links_agent(services: Services):
                 agent_for(services.settings, "sources"),
                 f"{services.settings.unit_label}: {p.name} ({p.id}), type {p.type}\n"
                 f"City: {run.city_name}, {run.state_name}. City government (ULG): {run.ulg}\n"
-                f"Official website: {p.official_website or 'not confirmed'}\n\n"
+                f"Official website: {p.official_website or 'not confirmed'}\n"
+                + (
+                    "Shared state laws already in the Citation Sheet for every parastatal "
+                    "(do not search for these again):\n" + "\n".join(task["shared_laws"]) + "\n"
+                    if task.get("shared_laws")
+                    else ""
+                )
+                + "\n"
                 f"{note}\nQuestions to support:\n{question_digest(questions)}\n\n"
                 "Already in the Citation Sheet (skip these):\n"
                 + ("\n".join(sorted(already)) or "(none)"),
@@ -105,6 +129,7 @@ def build_links_agent(services: Services):
                 known_urls=known,
                 tool_context=(tools := ToolContext(services=services, run=run, progress_key=p.id)),
                 web_max_uses=services.settings.find_sources_max_uses,
+                web_domains=own_domain(p.official_website),
             )
         except CallFailed as exc:
             report(p.id, f"Stopped this search: {exc}")
@@ -157,14 +182,26 @@ def build_links_agent(services: Services):
 
     def discover_sources(task: ParastatalTask) -> dict:
         already = {s.url for s in task.get("existing", [])} | set(task.get("covered_urls", []))
-        return research(task, task["task_questions"], already, "")
+        questions = task["task_questions"]
+        if task.get("existing") and not current_options().full_refresh:
+            # A repeat run: the re-tested Citation Sheet rows that are still verified keep
+            # their questions; search only for the rest (fill_gaps then tries once more).
+            covered = _verified_questions(task)
+            questions = [q for q in questions if q.id not in covered]
+            if not questions:
+                report(task["parastatal"].id, "Every question already has a verified source")
+                return {}
+            report(
+                task["parastatal"].id,
+                f"{len(task['task_questions']) - len(questions)} question(s) already have a "
+                f"verified source; searching for the other {len(questions)}",
+            )
+        return research(task, questions, already, "")
 
     def fill_gaps(task: ParastatalTask) -> dict:
         """Second, targeted search for questions that still have no verified source."""
         sources = task.get("sources", []) + task.get("known_sources", [])
-        covered = {
-            q for s in sources if s.verification_status == "Verified" for q in s.question_ids
-        }
+        covered = _verified_questions(task)
         missing = [q for q in task["task_questions"] if q.id not in covered]
         if not missing:
             report(task["parastatal"].id, "Done: every question has at least one source")

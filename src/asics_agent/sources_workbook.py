@@ -18,7 +18,7 @@ from openpyxl.styles import Alignment, Font
 
 from asics_agent.cities import FLAGS, TYPE_LABELS, TYPES, YES
 from asics_agent.links.manual import apply_saved_copies
-from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal, Question, Source
+from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal, Question, Source, WebsiteCheck
 from asics_agent.workbook import (
     _FILLS,
     _HEADER_FILL,
@@ -181,6 +181,20 @@ def _rows(ws):
             yield row_no, get, url
 
 
+_CHECK = re.compile(
+    r"^(\d+)/100 \((Official|Probably official|Not confirmed)\)(?::\s*(.*))?$", re.S
+)
+
+
+def _check(url: str, summary: str) -> WebsiteCheck | None:
+    """A website check as the workbook shows it ("80/100 (Official): reasons"), read back."""
+    match = _CHECK.match((summary or "").strip())
+    if not url or not match:
+        return None
+    reasons = [r for r in (match.group(3) or "").split("; ") if r]
+    return WebsiteCheck(url=url, score=int(match.group(1)), band=match.group(2), reasons=reasons)
+
+
 def read_sources_workbook(path: Path, cache_dir: Path):
     """Return (parastatals, citations, issues) as the research team left them."""
     issues: list[Issue] = []
@@ -230,6 +244,12 @@ def read_sources_workbook(path: Path, cache_dir: Path):
                 found_by="Agent" if get("Found By") == "Agent" else "Your team",
                 why_included=get("Why Included"),
                 official_website=url("Official Website"),
+                website_check=_check(url("Official Website"), get("Website Check")),
+                other_websites=[
+                    c
+                    for line in get("Other Websites Checked").splitlines()
+                    if (c := _check(*line.rsplit(": ", 1)) if ": " in line else None)
+                ],
                 governing_act=get("Governing Act"),
                 current_status=get("Current Status"),
                 notes=get("Notes"),

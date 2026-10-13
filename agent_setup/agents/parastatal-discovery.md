@@ -5,11 +5,11 @@ step: 1
 prompt: discover-parastatals
 skills: [government-websites]
 tools:
-  web_search: {max_uses: 20}
-  web_fetch: {max_uses: 20}
+  web_search: {max_uses: 8}
+  web_fetch: {max_uses: 8, max_content_tokens: 10000}
 max_tool_calls: 0
-# model: claude-sonnet-5-5   # optional: a different Claude model for this agent
-effort: high
+effort: medium
+model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
 Finds the parastatal agencies that serve a city: water and sewerage boards, transport
 corporations, development authorities and others (metro rail, housing, slum boards…).

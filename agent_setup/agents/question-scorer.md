@@ -8,8 +8,8 @@ tools:
   read_citation: {}
   search_citation_sheet: {}
 max_tool_calls: 8
-# model: claude-sonnet-5-5   # optional: a different Claude model for this agent
-effort: high
+effort: medium
+model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
 Step 3. Scores one question for one agency in a city by filling in the same cells of the
 scoring workbook an intern would: the inputs the row above each column asks for (e.g.

@@ -319,12 +319,14 @@ def validate(
                 )
         if agent.effort not in EFFORTS:
             issues.append(_dev("error", f"{where}: effort must be one of {sorted(EFFORTS)}."))
-        if agent.model and not agent.model.startswith("claude-"):
+        from asics_agent.services import ALLOWED_MODELS
+
+        if agent.model and agent.model not in ALLOWED_MODELS:
             issues.append(
                 _dev(
                     "error",
-                    f"{where}: model '{agent.model}' doesn't look like a "
-                    "Claude model ID (e.g. claude-sonnet-5-5).",
+                    f"{where}: model '{agent.model}' isn't allowed. Use one of "
+                    f"{', '.join(ALLOWED_MODELS)} (Claude Sonnet 5.5 at most).",
                 )
             )
         issues += _validate_tools(root, agent, where)

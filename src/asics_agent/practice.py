@@ -98,6 +98,13 @@ def _citation_with(user: str, phrase: str) -> str | None:
     return None
 
 
+def _plain(content) -> str:
+    """Message text whether it is a string or a list of blocks (e.g. with cache_control)."""
+    if isinstance(content, str):
+        return content
+    return "".join(b.get("text", "") for b in content if isinstance(b, dict))
+
+
 class FakeClaude(BaseChatModel):
     """Answers each TASK prompt with canned JSON; web tasks include tool-result blocks."""
 
@@ -128,7 +135,7 @@ class FakeClaude(BaseChatModel):
             import time
 
             time.sleep(self.delay)
-        system, user = messages[0].content, messages[-1].content
+        system, user = _plain(messages[0].content), messages[-1].content
         self.sent.append(user)
         used_tools = any(isinstance(m, ToolMessage) for m in messages)
         if used_tools:  # the agent is replying after a tool call; find the original task input
@@ -178,7 +185,21 @@ class FakeClaude(BaseChatModel):
             if "check_link" in self.bound and not used_tools and "still have NO" not in user:
                 # Check a link before proposing it, as the prompt asks.
                 return self._tool_call("check_link", {"url": SITE}, [_search_block(SITE)])
-            if "still have NO verified source" in user:  # the gap-filling pass
+            if "SHARED LAWS ONLY" in user:  # the once-per-city search for shared state laws
+                blocks.append(_search_block(INDIA_CODE))
+                reply = {
+                    "sources": [
+                        {
+                            "title": "Act (India Code)",
+                            "url": INDIA_CODE,
+                            "source_type": "Act",
+                            "useful_for": "[ULG-LAW] Text of the Act; era=n/a",
+                            "question_ids": ["UPD 1a"],
+                        }
+                    ],
+                    "notes": "",
+                }
+            elif "still have NO verified source" in user:  # the gap-filling pass
                 blocks.append(_search_block(PLAN))
                 reply = {
                     "sources": [

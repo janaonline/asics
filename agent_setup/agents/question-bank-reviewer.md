@@ -6,8 +6,8 @@ prompt: bank-review
 skills: [scoring-methodology]
 tools: {}
 max_tool_calls: 0
-# model: claude-sonnet-5-5   # optional: a different Claude model for this agent
-effort: high
+effort: medium
+model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
 Optional. Reviews the question bank for problems that would make answers unreliable: scoring
 scales above the maximum score, assessment levels that don't match the question, MQ totals

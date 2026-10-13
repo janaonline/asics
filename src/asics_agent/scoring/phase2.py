@@ -99,6 +99,25 @@ def bank_ids(settings) -> dict[str, str]:
     return {q.raw_id: q.id for q in questions.values()}
 
 
+def _step2_statuses(answers: Path) -> dict[str, str]:
+    """{Citation ID: Verification Status} from the Citation Sheet of a Step 2 answers file."""
+    from asics_agent.workbook import CITATION_SHEET
+
+    wb = load_workbook(answers, read_only=True, data_only=True)
+    if CITATION_SHEET not in wb.sheetnames:
+        return {}
+    rows = wb[CITATION_SHEET].iter_rows(values_only=True)
+    header = [str(h or "").strip() for h in next(rows, ())]
+    if "Citation ID" not in header or "Verification Status" not in header:
+        return {}
+    cid, status = header.index("Citation ID"), header.index("Verification Status")
+    return {
+        str(r[cid]).strip(): str(r[status] or "").strip()
+        for r in rows
+        if r and len(r) > max(cid, status) and r[cid]
+    }
+
+
 def load_evidence(status: Phase2, ids: dict[str, str] | None = None) -> CityEvidence:
     """The city's usable citations and Step 2 answers, keyed by (unit ID, question code).
 
@@ -107,6 +126,14 @@ def load_evidence(status: Phase2, ids: dict[str, str] | None = None) -> CityEvid
     ids = ids or {}
     workspace = status.sources.parent
     parastatals, citations, _ = read_sources_workbook(status.sources, workspace / "evidence")
+    # Judge each citation as Step 2 did: Step 2 re-tests citations at the start of its run
+    # and records the result in the answers workbook's own Citation Sheet, so a source that
+    # Step 2 verified and answered from counts for scoring too (and one it couldn't verify
+    # doesn't), whatever the Sources workbook said before that run.
+    step2 = _step2_statuses(status.answers)
+    for c in citations:
+        if c.citation_id in step2:
+            c.verification_status = step2[c.citation_id]
     evidence = CityEvidence(
         parastatals={p.id: p for p in parastatals if p.include},
         citations=[c for c in citations if usable(c)],

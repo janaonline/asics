@@ -32,7 +32,8 @@ from asics_agent.reporting import (
 )
 from asics_agent.run_options import RunOptions
 from asics_agent.runner import BatchRun
-from asics_agent.services import default_services
+from asics_agent.services import ALLOWED_MODELS, default_services
+from asics_agent.usage import METER
 from asics_agent.verticals import settings_for
 from asics_agent.workbook import city_outcome
 
@@ -143,7 +144,9 @@ def main() -> None:
         "--verbose", action="store_true", help="Also show technical messages for developers"
     )
     tuning = parser.add_argument_group("run options (override agent_setup/agents and .env)")
-    tuning.add_argument("--model", help="Claude model for agents that don't name their own")
+    tuning.add_argument(
+        "--model", choices=ALLOWED_MODELS, help="Claude model for every agent in this run"
+    )
     tuning.add_argument("--effort", choices=["low", "medium", "high", "xhigh", "max"])
     tuning.add_argument(
         "--web-searches",
@@ -151,6 +154,12 @@ def main() -> None:
         help="web searches / fetches per call, every agent (beats ASICS_FIND_SOURCES_MAX_USES)",
     )
     tuning.add_argument("--max-tool-calls", type=int, help="tool calls per agent call")
+    tuning.add_argument(
+        "--full-refresh",
+        action="store_true",
+        help="Step 1: search again for agencies and every question, even ones the city's "
+        "Sources workbook already has verified sources for",
+    )
     args = parser.parse_args()
 
     settings = get_settings()
@@ -203,6 +212,7 @@ def main() -> None:
             effort=args.effort,
             web_search_max_uses=args.web_searches,
             max_tool_calls=args.max_tool_calls,
+            full_refresh=args.full_refresh,
         ),
     )
     batch.start()
@@ -245,6 +255,10 @@ def main() -> None:
             print(f"{run.label}: {workbook}")
     if batch.summary_path and len(batch.runs) > 1:
         print(f"Index of all cities: {batch.summary_path}")
+    if METER.by_model:  # the run's cost record is saved in outputs/_app/usage/ (Costs page)
+        print("\nAI usage and cost:")
+        for line in METER.lines():
+            print(f"  {line}")
 
 
 if __name__ == "__main__":

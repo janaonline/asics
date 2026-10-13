@@ -62,8 +62,11 @@ def main():
         if (root / old).exists():
             move(root / old, root / new, args.apply, skipped)
     verticals = root / "verticals"
-    if args.apply and verticals.is_dir() and not any(p for p in verticals.iterdir()
-                                                     if p.name != ".DS_Store"):
+    if (
+        args.apply
+        and verticals.is_dir()
+        and not any(p for p in verticals.iterdir() if p.name != ".DS_Store")
+    ):
         shutil.rmtree(verticals)  # only an empty folder (and a Finder file) is left
     for line in skipped:
         print(f"  left in place: {line}")

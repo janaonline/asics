@@ -8,4 +8,5 @@ Search the web. Run by Anthropic. Every URL in the results counts as "returned b
 it may be used as a source (after it is checked).
 
 Options in an agent's settings: `max_uses` (searches per call), and either `allowed_domains`
-(only these sites, e.g. `[gov.in, nic.in]`) or `blocked_domains` (never these sites). Not both.
+(only these sites and their subdomains, e.g. `[gov.in, nic.in]`; for the source finders
+the code adds the agency's own official domain) or `blocked_domains` (never these sites). Not both.

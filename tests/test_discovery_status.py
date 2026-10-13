@@ -10,7 +10,7 @@ from openpyxl import load_workbook
 
 from asics_agent.agents.parastatal_discovery import Discovered, DiscoverReply
 from asics_agent.agents.sources_master import build_sources_graph
-from asics_agent.practice import FakeClaude
+from asics_agent.practice import FakeClaude, _plain
 from asics_agent.reporting import review_flags
 from asics_agent.runner import PipelineRun
 from asics_agent.sources_workbook import PARASTATALS_SHEET
@@ -34,7 +34,7 @@ def discovering(services, parastatals, notes=""):
 
     class Scripted(FakeClaude):
         def _generate(self, messages, stop=None, run_manager=None, **kwargs):
-            if "TASK: discover_parastatals" in messages[0].content:
+            if "TASK: discover_parastatals" in _plain(messages[0].content):
                 reply = {"parastatals": parastatals, "notes": notes}
                 message = AIMessage(
                     content=json.dumps(reply), response_metadata={"stop_reason": "end_turn"}

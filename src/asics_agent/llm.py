@@ -35,8 +35,10 @@ from asics_agent.links.text import pdf_to_text
 from asics_agent.run_options import current_options
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext, build_tools
+from asics_agent.usage import BATCH_SUFFIX, METER
 
 MAX_CONTINUATIONS = 4
+CACHE = {"cache_control": {"type": "ephemeral"}}  # prompt caching on every model call
 NETWORK_RETRY_PAUSES = (2.0, 5.0)  # seconds before each retry of a call whose connection failed
 NETWORK_ERRORS = (
     httpx.TimeoutException,
@@ -64,8 +66,11 @@ class CallTimedOut(CallFailed):
 _CALLS = ThreadPoolExecutor(max_workers=32, thread_name_prefix="claude-call")
 
 
-def _invoke(llm, messages, timeout: float, **kwargs):
+def _invoke(llm, messages, timeout: float, batched: bool = False, **kwargs):
     """`llm.invoke` with a hard limit on total time.
+
+    A batched call (Step 2, see batch.py) runs in the caller's thread with no time limit: it
+    waits for its Message Batch, which can take up to an hour.
 
     A stalled connection can otherwise block a call (and the run) indefinitely. On timeout
     the call is abandoned and the run carries on without it.
@@ -75,10 +80,12 @@ def _invoke(llm, messages, timeout: float, **kwargs):
     it keeps failing, turned into a CallFailed that affects only this call.
     """
     deadline = time.monotonic() + timeout
-    for attempt, pause in enumerate(NETWORK_RETRY_PAUSES + (None,)):
+    for pause in NETWORK_RETRY_PAUSES + (None,):
         remaining = deadline - time.monotonic()
-        future = _CALLS.submit(contextvars.copy_context().run, llm.invoke, messages, **kwargs)
         try:
+            if batched:
+                return llm.invoke(messages, **kwargs)
+            future = _CALLS.submit(contextvars.copy_context().run, llm.invoke, messages, **kwargs)
             return future.result(timeout=max(remaining, 0))
         except FuturesTimeout:
             future.cancel()
@@ -92,7 +99,7 @@ def _invoke(llm, messages, timeout: float, **kwargs):
         except anthropic.BadRequestError as exc:
             raise CallFailed(f"Claude rejected the request ({exc})") from None
         except NETWORK_ERRORS as exc:
-            if pause is None or deadline - time.monotonic() <= pause:
+            if pause is None or (not batched and deadline - time.monotonic() <= pause):
                 raise CallFailed(
                     f"the connection to Claude dropped or stalled ({type(exc).__name__}); "
                     "this usually clears on its own"
@@ -131,7 +138,8 @@ def _shrink_fetched_pdfs(response: AIMessage) -> AIMessage:
         document = result.get("content") if isinstance(result, dict) else None
         source = document.get("source") if isinstance(document, dict) else None
         if (
-            block.get("type") == "web_fetch_tool_result"
+            isinstance(block, dict)  # a streamed reply can mix plain strings into the list
+            and block.get("type") == "web_fetch_tool_result"
             and isinstance(source, dict)
             and source.get("type") == "base64"
             and source.get("media_type") == "application/pdf"
@@ -159,7 +167,14 @@ class _LoopState(TypedDict):
 
 
 def _agent_loop(
-    llm, client_tools: list, *, timeout: float, effort: str, max_tool_calls: int, on_response
+    llm,
+    client_tools: list,
+    *,
+    timeout: float,
+    effort: str,
+    max_tool_calls: int,
+    on_response,
+    batched: bool = False,
 ):
     """The agent as a LangGraph tool loop:
 
@@ -195,7 +210,12 @@ def _agent_loop(
         ]
 
     def model(state: _LoopState) -> dict:
-        response: AIMessage = _invoke(llm, state["messages"], timeout, reasoning_effort=effort)
+        # cache_control: automatic prompt caching. Each turn of the tool loop resends the
+        # whole conversation; with caching, the part already sent is read from the cache
+        # at a tenth of the price.
+        response: AIMessage = _invoke(
+            llm, state["messages"], timeout, batched, reasoning_effort=effort, **CACHE
+        )
         on_response(response)
         response = _shrink_fetched_pdfs(response)
         return {
@@ -268,6 +288,7 @@ def call_json(
     pages: list[tuple[str, str]] | None = None,
     tool_context: ToolContext | None = None,
     web_max_uses: int | None = None,
+    web_domains: set[str] | frozenset[str] = frozenset(),
 ) -> tuple[T, set[str], list[str]]:
     """Run one agent (defined in agent_setup/agents/<agent>.md) and parse its JSON reply.
 
@@ -277,7 +298,7 @@ def call_json(
       `tool_context` gives them.
     - Model and effort: the agent's own settings, unless the run's RunOptions override them.
     - Web search/fetch limit: the run's option if set, else `web_max_uses` (the caller's), else
-      the agent's own `max_uses`.
+      the agent's own `max_uses`. `web_domains` are added to the web tools' allowed_domains.
 
     Returns (parsed reply, URLs returned verbatim by tools, notes about rejected URLs).
     If `pages` is given, every page fetched with web_fetch is appended to it as (url, text).
@@ -291,8 +312,11 @@ def call_json(
     ctx.allowed_urls |= set(known_urls)
     if options.web_search_max_uses is not None:
         web_max_uses = options.web_search_max_uses
-    server_tools, client_tools = build_tools(root, config.tools, ctx, web_max_uses=web_max_uses)
-    llm = services.llm_for(config.model or options.model)
+    server_tools, client_tools = build_tools(
+        root, config.tools, ctx, web_max_uses=web_max_uses, web_domains=web_domains
+    )
+    llm = services.llm_for(options.model or config.model)  # a run's choice beats the agent's
+    requested = str(getattr(llm, "model", "") or "unknown")
     if server_tools or client_tools:
         llm = llm.bind_tools([*server_tools, *client_tools])
 
@@ -305,14 +329,29 @@ def call_json(
             user = f"{block}\n\n# TASK INPUT\n{user}"
     rules = getattr(settings, "shared_rules", "shared-rules")
     messages = [
-        SystemMessage(system_prompt(root, config, list(extra_skills), rules)),
+        # The instructions are the same for every call of this agent: cache them too, so
+        # every question reuses them (a second cache breakpoint).
+        SystemMessage(
+            [
+                {
+                    "type": "text",
+                    "text": system_prompt(root, config, list(extra_skills), rules),
+                    "cache_control": {"type": "ephemeral"},
+                }
+            ]
+        ),
         HumanMessage(user),
     ]
     urls: set[str] = set()
     notes: list[str] = []
 
     def on_response(response: AIMessage) -> None:
+        served = response.response_metadata.get("model_name") or response.response_metadata.get(
+            "model"
+        )  # differs from the requested model when a refusal fallback answered
         blocks = response.content if isinstance(response.content, list) else []
+        model = f"{served or requested}{BATCH_SUFFIX if response.response_metadata.get('batch') else ''}"
+        METER.record(model, config.name, response.usage_metadata, blocks)
         found, rejected = extract_tool_urls(blocks, set(known_urls) | urls)
         urls.update(found)
         ctx.allowed_urls |= found  # check_link may now check these
@@ -330,6 +369,7 @@ def call_json(
         effort=options.effort or config.effort,
         max_tool_calls=max_calls,
         on_response=on_response,
+        batched=services.batcher is not None,
     )
     limit = {"recursion_limit": 2 * max_calls + 4 * MAX_CONTINUATIONS + 10}
     for attempt in range(2):

@@ -195,6 +195,14 @@ def _prompt(
     lines = [f"City: {task.city}", f"State: {task.state}", f"Agency: {task.agency}", ""]
     lines += [f"QUESTION {task.code}"]
     lines += [f"{label}: {text}" for label, text in details.items() if text]
+    if scale := methodology_scale(details):
+        top, maximum = scale
+        lines += [
+            "",
+            f"SCALE: the methodology's bands go up to {top:g}, but this question's Max Score "
+            f"is {maximum:g}. Decide the band from the methodology, then enter "
+            f"band x {maximum:g}/{top:g} (e.g. {top:g} -> {maximum:g}).",
+        ]
     lines += ["", "INPUT COLUMNS (fill each one):"]
     for spec in sheet.inputs:
         allowed = f" Allowed values: {' / '.join(spec.options)}." if spec.options else ""
@@ -248,6 +256,49 @@ def same_question(a: str, b: str) -> bool:
     # Measured on the Parastatal and UPD banks: rewordings of the same question score 0.72+,
     # different questions under the same code score 0.33 or less.
     return a == b or SequenceMatcher(None, a, b).ratio() >= 0.6
+
+
+# A band written inline, e.g. "...Act.10 — ULG approval... 7.5 — formal consultation...".
+# Only en/em dashes count, so ranges such as "3-5 years" aren't read as bands.
+_INLINE_BAND = re.compile(r"(?<!\d)(?<!\d[.,])(\d+(?:\.\d+)?)\s*[—–]\s")
+
+
+_SCORE_WHERE = re.compile(r"\bScore\s+(\d+(?:\.\d+)?)\s+(?:where|if|when)\b", re.I)
+
+
+def methodology_scale(details: dict[str, str]) -> tuple[float, float] | None:
+    """(top band, Max Score) when the methodology's bands go above the Max Score, e.g.
+    UPD 1a: bands 10 / 7.5 / 5 / 2.5 / 0 against a Max Score of 5."""
+    from asics_agent.scoring.skeleton import _LEVEL
+
+    try:
+        maximum = float(details.get("Max Score", ""))
+    except ValueError:
+        return None
+    text = details.get("Detailed Methodology", "")
+    found = _LEVEL.findall(text) + _INLINE_BAND.findall(text) + _SCORE_WHERE.findall(text)
+    bands = [float(v) for v in found]
+    top = max(bands, default=0)
+    return (top, maximum) if maximum > 0 and top > maximum else None
+
+
+def _on_max_scale(value, spec, scale) -> tuple[object, str]:
+    """A number given on the methodology's scale (above the Max Score) converted to the
+    Max Score, proportionally, with a note for the program team to confirm."""
+    if scale is None or spec.kind not in ("number", "whole_number") or spec.options:
+        return value, ""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return value, ""
+    top, maximum = scale
+    if maximum < number <= top:
+        converted = round(number * maximum / top, 4)
+        return converted, (
+            f"Converted from the methodology's band {number:g} of {top:g} to {converted:g} of "
+            f"{maximum:g} (proportional; for the program team to confirm)."
+        )
+    return value, ""
 
 
 def _for_person(task: Task, sheet: QuestionSheet, reason: str, log: dict) -> ScoredCell:
@@ -352,6 +403,9 @@ def score_one(
             value = next(
                 (o for o in spec.options if o.casefold() == value.strip().casefold()), value.strip()
             )
+        value, converted = _on_max_scale(value, spec, methodology_scale(details))
+        if converted:
+            notes.append(converted)
         if problem := _input_problem(sheet, spec.column, value):
             notes.append(f'"{spec.header}" left blank: the AI gave "{value}", which {problem}.')
             continue

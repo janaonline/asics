@@ -30,6 +30,8 @@ When scoring:
   you checked. Otherwise the result is "not found": leave the score/input blank.
 - Scale mismatch: if the highest rubric band is not the Max Score and not a sum of components,
   do not score; record the band and raw value with "SCALE-MISMATCH" and ask for confirmation.
+  Exception, scoring (Step 3): when the task input has a SCALE line, the program's
+  conversion applies: decide the band, then enter band x Max Score / top band, as it says.
 - Rubric gap: if the evidence fits no band, do not create or interpolate a band; leave the
   score blank and ask for confirmation.
 - Website evidence that could not be opened automatically is a verification limit, never a

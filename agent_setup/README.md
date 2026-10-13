@@ -16,12 +16,12 @@ for UPD). The agents below are shared unless a vertical names its own.
 |---|---|---|---|---|
 | Parastatal discovery | 1 | `discover-parastatals` | government-websites | web_search, web_fetch |
 | Website profiler | 1 | `parastatal-profile` | government-websites, india-code-and-acts | web_search, web_fetch |
-| Citation builder | 1 | `find-sources` | government-websites, india-code-and-acts | web_search (no Wikipedia/directories), web_fetch, **check_link** |
+| Citation builder | 1 | `find-sources` | government-websites, india-code-and-acts | web_search, web_fetch (allowed domains only; 5 each) |
 | Source assessor | 1 | `assess-source` | india-code-and-acts | none |
 | Answer writer | 2 | `answer-question` | scoring-methodology, india-code-and-acts, + the question's section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
 | Question scorer | 3 | `score-question` | scoring-methodology, india-code-and-acts | **read_citation**, **search_citation_sheet** (no web) |
 | City government profiler (UPD) | 1 | `city-profile` | government-websites, india-code-and-acts | web_search, web_fetch |
-| City citation builder (UPD) | 1 | `find-city-sources` | government-websites, india-code-and-acts | web_search, web_fetch, **check_link** |
+| City citation builder (UPD) | 1 | `find-city-sources` | government-websites, india-code-and-acts | web_search, web_fetch (allowed domains only; 5 each) |
 | City answer writer (UPD) | 2 | `answer-city-question` | scoring-methodology, india-code-and-acts, + the section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
 | Question bank reviewer | checks | `bank-review` | scoring-methodology | none |
 
@@ -46,12 +46,11 @@ step: 1
 prompt: find-sources                      # prompts/find-sources.md
 skills: [government-websites, india-code-and-acts]
 tools:                                    # exactly the tools this agent may call
-  web_search: {max_uses: 8, blocked_domains: [wikipedia.org]}   # or allowed_domains, not both
-  web_fetch: {max_uses: 8}
-  check_link: {}
-max_tool_calls: 20                        # our own tools (check_link…) per call
-model: claude-sonnet-5-5                  # optional; default is the app's model
-effort: high                              # low | medium | high | xhigh | max
+  web_search: {max_uses: 5, allowed_domains: [gov.in, nic.in, prsindia.org]}  # or blocked_domains, not both
+  web_fetch: {max_uses: 5, allowed_domains: [gov.in, nic.in, prsindia.org], max_content_tokens: 10000}
+max_tool_calls: 0                         # our own tools (check_link, read_citation…) per call
+model: claude-sonnet-5-5                  # optional; Sonnet 5.5 is the ceiling
+effort: medium                            # low | medium | high | xhigh | max
 ---
 ```
 

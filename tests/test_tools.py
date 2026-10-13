@@ -16,9 +16,15 @@ def test_agents_get_exactly_their_configured_tools(services):
     builder = load_agent(root, "citation-builder")
     server, client = build_tools(root, builder.tools, ToolContext(services=services))
     assert [t["name"] for t in server] == ["web_search", "web_fetch"]
-    assert server[0]["blocked_domains"][0] == "wikipedia.org" and server[0]["max_uses"] == 8
-    assert [t.name for t in client] == ["check_link"]
-    assert "human-accessibility test" in client[0].description  # from agent_setup/tools/
+    assert server[0]["allowed_domains"] == ["gov.in", "nic.in", "prsindia.org"]
+    assert server[0]["max_uses"] == 5 and server[1]["max_content_tokens"] == 10000
+    assert client == []  # links are checked by code afterwards, not by the agent
+
+    # The agency's own domain is added for each call.
+    server, _ = build_tools(
+        root, builder.tools, ToolContext(services=services), web_domains={"bmrc.co.in"}
+    )
+    assert all(t["allowed_domains"][-1] == "bmrc.co.in" for t in server)
 
     writer = load_agent(root, "answer-writer")
     server, client = build_tools(root, writer.tools, ToolContext(services=services))
@@ -59,7 +65,7 @@ def test_citation_tools_only_reach_the_citation_sheet(services, tmp_path):
 def test_both_steps_use_their_tools_and_record_it(run_steps):
     step1 = run_steps("sources")
     log = [i.message for i in step1["final_issues"] if i.phase == "tools"]
-    assert any("Citation builder called: check_link" in m for m in log)
+    assert not any("check_link" in m for m in log)  # the code checks links, not the agent
 
     step2 = run_steps("answers")
     answer = next(a for a in step2["answers"] if a.question_id == "UPD 1a")
@@ -143,9 +149,9 @@ def _web_limits(services, monkeypatch, **options):
     seen = {}
     real = llm.build_tools
 
-    def spy(root, tools, ctx, web_max_uses=None):
-        server, client = real(root, tools, ctx, web_max_uses=web_max_uses)
-        kind = "source finder" if "check_link" in tools else "other"
+    def spy(root, tools, ctx, web_max_uses=None, web_domains=frozenset()):
+        server, client = real(root, tools, ctx, web_max_uses=web_max_uses, web_domains=web_domains)
+        kind = "source finder" if "allowed_domains" in tools.get("web_search", {}) else "other"
         seen.setdefault(kind, set()).update(t["max_uses"] for t in server)
         return server, client
 
@@ -159,8 +165,7 @@ def _web_limits(services, monkeypatch, **options):
 
 def test_source_finder_keeps_its_own_limit_when_the_setting_is_not_set(services, monkeypatch):
     assert services.settings.find_sources_max_uses is None
-    # "other" includes parastatal discovery, which has 20
-    assert _web_limits(services, monkeypatch) == {"source finder": {8}, "other": {8, 20}}
+    assert _web_limits(services, monkeypatch) == {"source finder": {5}, "other": {8}}
 
 
 def test_source_finder_gets_its_own_search_limit(services, monkeypatch):
@@ -168,7 +173,7 @@ def test_source_finder_gets_its_own_search_limit(services, monkeypatch):
 
     settings = dataclasses.replace(services.settings, find_sources_max_uses=20)
     limited = Services(llm=services.llm, http=services.http, settings=settings)
-    assert _web_limits(limited, monkeypatch) == {"source finder": {20}, "other": {8, 20}}
+    assert _web_limits(limited, monkeypatch) == {"source finder": {20}, "other": {8}}
 
 
 def test_a_run_override_beats_the_source_finder_limit(services, monkeypatch):

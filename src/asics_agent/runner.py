@@ -4,6 +4,7 @@ Used by the app (and usable from any other front end). One `PipelineRun` = one r
 the master agent; it pauses at the review step until `submit_review()` is called.
 """
 
+import json
 import logging
 import threading
 import traceback
@@ -81,6 +82,18 @@ def new_checkpointer() -> InMemorySaver:
     return InMemorySaver(serde=JsonPlusSerializer(allowed_msgpack_modules=allowed))
 
 
+BATCHED_CONCURRENCY = 2000  # Step 2 with batches: every answer waits in the same batch
+
+
+def answer_concurrency(services: Services) -> int:
+    """Answers worked on at once in Step 2. With Message Batches nearly all the time is spent
+    waiting for the batch, so every answer is started together and joins the same batch."""
+    from asics_agent.services import AsicsChatAnthropic
+
+    batched = services.settings.batch_answers and isinstance(services.llm, AsicsChatAnthropic)
+    return BATCHED_CONCURRENCY if batched else services.settings.max_concurrency
+
+
 class PipelineRun:
     def __init__(
         self,
@@ -110,7 +123,9 @@ class PipelineRun:
         self._graph = build(services, checkpointer=new_checkpointer())
         self._config = {
             "configurable": {"thread_id": self.id},
-            "max_concurrency": services.settings.max_concurrency,
+            "max_concurrency": answer_concurrency(services)
+            if step == "answers"
+            else services.settings.max_concurrency,
             "recursion_limit": 500,
         }
 
@@ -300,9 +315,15 @@ class BatchRun:
         label: str = "Run",
         step: Step = "sources",
         options: RunOptions | None = None,
+        group: str | None = None,
     ):
+        from asics_agent.costs import RunMeter
+
         self.started = datetime.now()
         self.id = f"{self.started:%Y%m%d-%H%M%S}-{uuid.uuid4().hex[:4]}"
+        self.group = group  # the Run steps run this is a stage of, for its total cost
+        self._meter = RunMeter()
+        self.cost: float | None = None  # US$, once finished
         self.label = label
         self.step = step
         self.options = options or RunOptions()
@@ -355,9 +376,37 @@ class BatchRun:
         self.current = None
         self._finish()
 
+    def _record_cost(self) -> None:
+        """Save what this run cost (Costs page); it is the base for the next estimate."""
+        from asics_agent.costs import record_run
+
+        if any(r.inputs.get("skip_research") for r in self.runs.values()):
+            return  # checks only
+        results = [r.result or {} for r in self.runs.values()]
+        if self.step == "sources":
+            work = sum(len([p for p in r.get("parastatals", []) if p.include]) for r in results)
+        else:
+            work = sum(len(r.get("answers", [])) for r in results)
+        try:
+            path = record_run(
+                self._services.settings,
+                self._meter,
+                step=1 if self.step == "sources" else 2,
+                label=self.label,
+                cities=[r.label for r in self.runs.values()],
+                work=work,
+                started=self.started,
+                group=self.group,
+            )
+            if path:
+                self.cost = json.loads(path.read_text())["total_usd"]
+        except Exception:  # never let the cost record spoil a finished run
+            logging.exception("cost record failed")
+
     def _finish(self) -> None:
         from asics_agent.workbook import write_batch_summary
 
+        self._record_cost()
         try:
             self.summary_path = write_batch_summary(self.folder, self.label, self.runs, self.step)
             self.status = "finished"

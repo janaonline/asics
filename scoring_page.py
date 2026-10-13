@@ -84,6 +84,10 @@ def show_report(report: workflow.StepReport, open_file=None, key: str = "report"
     open_file = open_file or OPEN["file"]
     for line in report.done:
         st.success(line, icon=":material/check_circle:")
+    if report.cost is not None:
+        st.markdown(
+            f":material/payments: The AI scoring cost **\\${report.cost:,.2f}** in Claude credit."
+        )
     if report.breakdown:
         st.markdown("**Why rows were left for a person**")
         st.dataframe(
@@ -336,8 +340,26 @@ def _ai_section(settings, register_fn) -> None:
         icon=":material/play_arrow:",
         disabled=not cities,
     ):
-        _start_ai(settings, vertical, codes or None, cities, practice)
-        st.rerun()
+
+        def start():
+            _start_ai(settings, vertical, codes or None, cities, practice)
+            st.rerun()
+
+        if practice:
+            start()
+        else:
+            from asics_agent import costs
+            from asics_agent.verticals import load_bank
+            from ui import confirm_cost
+
+            questions, _ = load_bank(settings)
+            by_name = {c.name: c for c in register.values()}
+            rows = sum(
+                costs.planned_answers(settings, by_name[c], questions, codes or None)
+                for c in cities
+                if c in by_name
+            )
+            confirm_cost(costs.estimate(settings, 3, rows), start, "Step 3")
     _ai_progress()
     _ai_result()
 

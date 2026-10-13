@@ -16,7 +16,9 @@ Folders (settings.scoring_dir, e.g. scoring/2027):
 """
 
 import dataclasses
+import json
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 
 from asics_agent.cities import load_register
@@ -52,6 +54,7 @@ class StepReport:
     about: dict[Path, str] = field(default_factory=dict)
     breakdown: list[tuple[str, int]] = field(default_factory=list)  # why rows need a person
     next_steps: list[str] = field(default_factory=list)  # what the team should do now
+    cost: float | None = None  # US$ the AI calls cost (AI scoring runs)
 
     other: set[Path] = field(default_factory=set)  # shown under "Other files"
 
@@ -319,13 +322,22 @@ def practice_template(vs, services) -> Path:
 
 
 def ai_score(
-    settings, vertical: str, *, codes=None, cities=None, practice=False, on_progress=None
+    settings,
+    vertical: str,
+    *,
+    codes=None,
+    cities=None,
+    practice=False,
+    on_progress=None,
+    group: str | None = None,
 ) -> StepReport:
     """Step 3 with the AI: score the chosen questions for the chosen cities that the
     vertical's Step 2 has answered, from its answers and Citation Sheet only."""
+    from asics_agent.costs import RunMeter
     from asics_agent.practice import practice_services
     from asics_agent.services import default_services
 
+    meter, started = RunMeter(), datetime.now()
     report = StepReport(f"Step 3 · AI scoring: {vertical}")
     vs = configured(settings).get(vertical)
     if vs is None:
@@ -368,6 +380,21 @@ def ai_score(
         report.problems.append("No city is ready for Step 3 yet: run Step 2 first.")
         return report
     left = run.needs_person + run.failed
+    if not practice:
+        from asics_agent.costs import record_run
+
+        saved = record_run(
+            services.settings,
+            meter,
+            step=3,
+            label=f"Step 3 · AI scoring · {vertical} · {', '.join(run.cities)}",
+            cities=list(run.cities),
+            work=run.scored + left,
+            started=started,
+            group=group,
+        )
+        if saved:
+            report.cost = json.loads(saved.read_text())["total_usd"]
     report.done.append(
         f"Scored {', '.join(run.cities)}: the AI scored {run.scored} row(s) from checked "
         f"evidence and left {left} for a person."

@@ -10,7 +10,7 @@ from openpyxl import load_workbook
 
 from asics_agent.agents import common
 from asics_agent.agents.final_qa import qa_sources
-from asics_agent.models import AccessCheck, Source
+from asics_agent.models import ALL_PARASTATALS, AccessCheck, Source
 from asics_agent.practice import FILLER, INDIA_CODE, PLAN, PLAN_TEXT
 from asics_agent.sources_workbook import CITATIONS_SHEET, read_sources_workbook
 
@@ -26,7 +26,7 @@ def block(workbook: str, url: str, use: str = "Yes") -> str:
     header = [c.value for c in ws[1]]
     for row in ws.iter_rows(min_row=2):
         if url in str(row[header.index("Official URL")].value) and (
-            row[header.index("Parastatal")].value == "SWB"
+            row[header.index("Parastatal")].value in ("SWB", ALL_PARASTATALS)
         ):
             row[header.index("Verification Status")].value = "Human Verification Required"
             row[header.index("Accessibility")].value = "Not human-verified"
@@ -51,7 +51,8 @@ def save_copy(workbook: str, name: str, content: str | bytes = PLAN_PAGE) -> Pat
 
 def read(workbook: str):
     _, citations, issues = read_sources_workbook(Path(workbook), Path(workbook).parent / "evidence")
-    return {c.url: c for c in citations if c.parastatal_id == "SWB"}, [i.message for i in issues]
+    rows = {c.url: c for c in citations if c.parastatal_id in ("SWB", ALL_PARASTATALS)}
+    return rows, [i.message for i in issues]
 
 
 @pytest.fixture

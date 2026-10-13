@@ -5,12 +5,13 @@ step: 1
 prompt: find-sources
 skills: [government-websites, india-code-and-acts]
 tools:
-  web_search: {max_uses: 8, blocked_domains: [wikipedia.org, justdial.com, indiamart.com]}
-  web_fetch: {max_uses: 8}
-  check_link: {}
-max_tool_calls: 20
-# model: claude-sonnet-5-5   # optional: a different Claude model for this agent
-effort: high
+  # Only allowed domains; the code adds the agency's own official domain for each call.
+  # Links are re-checked by code afterwards (the Citation Sheet's accessibility test).
+  web_search: {max_uses: 5, allowed_domains: [gov.in, nic.in, prsindia.org]}
+  web_fetch: {max_uses: 5, allowed_domains: [gov.in, nic.in, prsindia.org], max_content_tokens: 10000}
+max_tool_calls: 0
+effort: medium
+model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
 Builds the Citation Sheet for one parastatal: the official sources needed to answer the
 questions that apply to it (Acts, budgets, accounts, annual reports, plans, minutes, charters,

@@ -353,3 +353,35 @@ def test_the_review_sheet_links_to_each_question_and_opens_alone(services, run_s
     assert any(c.value == BACK_LINK for c in wb[ws["A2"].value][1])  # and back
     assert [w.title for w in wb.worksheets if w.sheet_view.tabSelected] == [REVIEW_SHEET]
     assert all(ws.row_dimensions[r].height <= 15 * 6 + 3 for r in range(2, ws.max_row + 1))
+
+
+def test_a_methodology_on_a_bigger_scale_is_converted_to_the_max_score():
+    from asics_agent.scoring.ai import _on_max_scale, methodology_scale
+    from asics_agent.scoring.template import InputColumn
+
+    details = {
+        "Max Score": "5",
+        "Detailed Methodology": "10 — mandatory\n2.5 — may consult\n0 — none",
+    }
+    score = InputColumn(9, "Score", "ENTER A NUMBER 0 TO 5", "number")
+    assert methodology_scale(details) == (10, 5)
+    assert _on_max_scale(7.5, score, (10, 5))[0] == 3.75
+    assert _on_max_scale(2.5, score, (10, 5)) == (2.5, "")  # already on the 0-5 scale
+    assert methodology_scale({"Max Score": "5", "Detailed Methodology": "5 — yes\n0 — no"}) is None
+
+
+def test_bands_written_inline_are_found():
+    from asics_agent.scoring.ai import methodology_scale
+
+    inline = {
+        "Max Score": "5",
+        "Detailed Methodology": "Review the Act.10 — approval. 7.5 — "
+        "consultation. 2.5 — may consult. 0 — no role.",
+    }
+    where = {
+        "Max Score": "5",
+        "Detailed Methodology": "Check plans.Score 10 where joint. Score 5 where consulted.",
+    }
+    ranges = {"Max Score": "5", "Detailed Methodology": "A 3-5 year plan scores 5 — yes."}
+    assert methodology_scale(inline) == (10, 5) and methodology_scale(where) == (10, 5)
+    assert methodology_scale(ranges) is None

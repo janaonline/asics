@@ -70,3 +70,27 @@ def sidebar_footer() -> None:
         f'<div class="asics-footer">ASICS · Janaagraha<br>{VERTICAL} assessment tool</div>',
         unsafe_allow_html=True,
     )
+
+
+@st.dialog("Before you start")
+def confirm_cost(estimate, start, what: str = "This run") -> None:
+    """Show what a run will probably cost; run `start()` only if the person accepts.
+    `estimate` is a costs.Estimate."""
+    st.markdown(f"{what} will use about **\\${estimate.usd:,.2f}** of Claude credit.")
+    for line in estimate.lines:
+        st.caption(line.replace("$", "\\$"))  # a bare $ would start a formula
+    if estimate.first_time:
+        st.info(
+            "This is a starting estimate: there is no earlier run like this to go by. What "
+            "this run really costs is saved and used for the next estimate.",
+            icon=":material/info:",
+        )
+    st.caption(
+        "Estimates can be 20–30% off either way. Every run's real cost is on the Costs page."
+    )
+    st.markdown("**Are you sure you want to proceed?**")
+    yes, no = st.columns(2)
+    if yes.button("Yes, start", type="primary", icon=":material/play_arrow:", width="stretch"):
+        start()
+    if no.button("Cancel", width="stretch"):
+        st.rerun()

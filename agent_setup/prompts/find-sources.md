@@ -23,9 +23,9 @@ Prefer one document that covers several tags (e.g. an annual report with staffin
 accounts and board) over several narrow pages. A home page alone is weak evidence for any
 question: prefer the specific page or PDF.
 Try to locate ONE best source per evidence tag. Add a second source for a tag only if the
-first did not pass check_link or covers a different period. Never pad the list.
+first could not be opened or covers a different period. Never pad the list.
 
-If an official site blocks automated tools (check_link says so), still list the specific
+If an official site blocks automated tools (web_fetch fails), still list the specific
 page, AND look for the same document on another allowed host (e.g. the Act on the state
 legislation portal or India Code instead of the agency site; an annual report in the state
 legislature's papers-laid pages). Never replace it with a blocked mirror (Indian Kanoon,
@@ -57,6 +57,9 @@ EVIDENCE TAGS (start every "useful_for" with the tag in brackets):
   [TCP] the Town and Country Planning Act - plan preparation, notice, objections, membership;
   [CROSSLAW] state laws naming the agency or its services (service guarantee, RTI rules,
   procurement).
+  These shared laws are searched for once per city. If the task input lists "Shared state
+  laws already in the Citation Sheet", do not search for them again; spend your searches on
+  this agency's own documents. If the task says "SHARED LAWS ONLY", look only for these tags.
 
 "useful_for" format: "[TAG] <specific content + pinpoint (section/rule/page) + period>;
 era=<era tag from the city notes, or n/a>". For Acts, Rules and ULG-LAW, list the key section
@@ -65,10 +68,11 @@ only, e.g. "ULG Act s.X gives the ULG a coordination role over public authoritie
 verdict such as "therefore functions are not demarcated".
 
 Prefer the specific page or document (e.g. the budget PDF) over a home page. Only include URLs
-that a tool returned verbatim, on allowed domains. Use check_link on each candidate before
-listing it: it runs the same human-accessibility test the Citation Sheet uses. Prefer links
-that pass. If an important source fails check_link because the site blocks automated tools,
-you may still list it and say so in "notes" - a person will open it.
+that a tool returned verbatim, on allowed domains. Your web tools only reach allowed domains
+(gov.in, nic.in, prsindia.org and the agency's own domain). Do not spend tool calls checking
+links: the code runs the Citation Sheet's human-accessibility test on every candidate. If an
+important source could not be opened because the site blocks automated tools, you may still
+list it and say so in "notes" - a person will open it.
 
 JSON keys:
   "sources": array of objects with

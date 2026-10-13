@@ -147,6 +147,7 @@ def build_initial_checks(services: Services, step: str = "sources"):
             "known_parastatals": known,
             "parastatals": parastatals,
             "existing_citations": citations,
+            "repeat_run": step == "sources" and sources_file.exists(),
             "issues": issues,
         }
 

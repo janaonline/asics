@@ -26,11 +26,12 @@ from asics_agent.agents.initial_checks import build_initial_checks
 from asics_agent.agents.rollup import compute_rollups
 from asics_agent.agents.sections import build_section_agent, section_for, section_nodes
 from asics_agent.agents.state import MasterState
+from asics_agent.batch import Batcher
 from asics_agent.links.accessibility import check_url
 from asics_agent.links.database import write_links_db
 from asics_agent.models import ALL_PARASTATALS, Issue, Source
 from asics_agent.run_options import RunOptions
-from asics_agent.services import Services, default_services
+from asics_agent.services import AsicsChatAnthropic, Services, default_services
 from asics_agent.workbook import file_part, write_json, write_workbook
 
 OUTPUT_NAME = "ASICS_{vertical}_{city}_Phase2.xlsx"  # e.g. ASICS_Parastatal_Bengaluru_…
@@ -49,6 +50,15 @@ def build_answers_graph(
     services: Services | None = None, checkpointer: BaseCheckpointSaver | None = None
 ):
     services = services or default_services()
+    if services.settings.batch_answers and isinstance(services.llm, AsicsChatAnthropic):
+        # Every answer's model calls go out together as Message Batches (half price).
+        services = services.batched(
+            Batcher(
+                services.llm._client,
+                progress_key="Batches",
+                live_up_to=services.settings.batch_live_up_to,
+            )
+        )
     root = services.settings.agent_setup_dir
 
     def after_checks(state: MasterState) -> str:

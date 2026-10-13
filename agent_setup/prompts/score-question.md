@@ -19,7 +19,10 @@ Rules:
 3. Apply the Detailed Methodology and Notes for scorers to decide every input. Give exactly
    one allowed value per input (e.g. "YES"), or a number when asked.
 4. If the Citation Sheet doesn't let you decide an input, leave it "" and say what evidence
-   is missing. A person will score it. Never guess.
+   is missing. A person will score it. Never guess. But a Step 2 status of "Partially
+   Answered" is not by itself a reason to leave it blank: if the evidence you can read places
+   the case in a band of the methodology, give that band (confidence "low" or "medium") and
+   say what further evidence could change it.
 5. An input that would score 0 (e.g. "NO" for "is there a provision...") needs AFFIRMATIVE
    ABSENCE: every relevant instrument in the Citation Sheet was read (the Act AND its Rules
    and notifications, and the other body's law for relationship questions), nothing was found,
@@ -29,8 +32,10 @@ Rules:
    "may" is not "shall"; advisory is not approval.
 7. Website evidence that could not be opened automatically is a verification limit, never a
    negative: leave it "" and say "VERIFICATION-LIMIT" in comments.
-8. If the rubric's scale does not match the Max Score, or the evidence fits no band, leave
-   the affected input "" and say "SCALE-MISMATCH" or "RUBRIC-GAP" in comments.
+8. Scale: if the methodology's bands go higher than the Max Score (e.g. bands up to 10, Max
+   Score 5), the task input says so under SCALE. Decide the band from the methodology, then
+   enter band x Max Score / top band (e.g. 7.5 of 10 -> 3.75 of 5), and name the band in
+   comments. If the evidence fits no band, leave the input "" and say "RUBRIC-GAP".
 9. Use only evidence about THIS agency in THIS city (and its state's law). Never carry an
    input over from another agency or city.
 10. "citation_id" is the one Citation ID your inputs rest on. "quote" is the decisive passage
