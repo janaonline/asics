@@ -66,14 +66,14 @@ def test_too_large_request_fails_only_that_call():
         llm._invoke(TooLarge(), [], timeout=5)
 
 
-def _flaky(errors, reply="ok"):
+def _flaky(errors, reply="ok", error=httpx2.ReadTimeout("The read operation timed out")):
     class Flaky:
         calls = 0
 
         def invoke(self, messages, **kwargs):
             self.calls += 1
             if self.calls <= errors:
-                raise httpx2.ReadTimeout("The read operation timed out")
+                raise error
             return reply
 
     return Flaky()
@@ -92,6 +92,21 @@ def test_persistent_network_failure_fails_only_that_call(monkeypatch):
     with pytest.raises(llm.CallFailed, match="ReadTimeout"):
         llm._invoke(model, [], timeout=60)
     assert model.calls == len(llm.NETWORK_RETRY_PAUSES) + 1
+
+
+def test_connection_reset_mid_stream_is_retried(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+    reset = httpx2.ReadError("[Errno 54] Connection reset by peer")
+    model = _flaky(errors=1, error=reset)
+    assert llm._invoke(model, [], timeout=60) == "ok"
+    assert model.calls == 2
+
+
+def test_persistent_connection_reset_fails_only_that_call(monkeypatch):
+    monkeypatch.setattr(llm.time, "sleep", lambda s: None)
+    model = _flaky(errors=99, error=httpx2.ReadError("[Errno 54] Connection reset by peer"))
+    with pytest.raises(llm.CallFailed, match="ReadError"):
+        llm._invoke(model, [], timeout=60)
 
 
 def test_dropped_connection_fails_only_that_call(monkeypatch):

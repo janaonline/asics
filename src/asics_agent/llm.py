@@ -41,8 +41,8 @@ MAX_CONTINUATIONS = 4
 CACHE = {"cache_control": {"type": "ephemeral"}}  # prompt caching on every model call
 NETWORK_RETRY_PAUSES = (2.0, 5.0)  # seconds before each retry of a call whose connection failed
 NETWORK_ERRORS = (
-    httpx.TimeoutException,
-    httpx2.TimeoutException,
+    httpx.TransportError,  # timeouts, connection resets (ReadError), protocol errors, ...
+    httpx2.TransportError,
     anthropic.APITimeoutError,
     anthropic.APIConnectionError,
 )
