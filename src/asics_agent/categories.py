@@ -1,22 +1,24 @@
-"""ASICS verticals (Parastatal, UPD, Mobility…): each one is a settings file in
-agent_setup/verticals/<name>.md, and every vertical runs the same three steps:
+"""ASICS categories (Parastatal, ULG…): each one is a settings file in
+agent_setup/categories/<name>.md, and every category runs the same three steps:
 
   Step 1  find sources    the units to assess, their official websites, the Citation Sheet
   Step 2  answer          every question, from the reviewed Citation Sheet only
   Step 3  score           every question, from its Step 2 answer and citation
 
-What differs between verticals is configuration, not code:
+What differs between categories is configuration, not code:
 
   question bank   which workbook (and sheet), and how its columns are named
   unit            what is assessed in a city: "parastatal" (the agencies Step 1 discovers)
-                  or "city_government" (the city government itself, e.g. UPD)
+                  or "ulg" (the urban local government itself: one unit per city)
   agents          which agent does each job in each step (agent_setup/agents/<name>.md),
-                  so a vertical can have its own prompts, skills and tools
-  shared_rules    the rules every agent of the vertical gets (agent_setup/prompts/<name>.md)
+                  so a category can have its own prompts, skills and tools
+  shared_rules    the rules every agent of the category gets (agent_setup/prompts/<name>.md)
   outputs         where its city folders go (inside the outputs folder)
   scoring         its scoring workbook (scoring/2027/templates/…)
 
-`settings_for(settings, name)` returns the settings a run of that vertical uses.
+`category_settings(settings, name)` returns the settings a run of that category uses.
+
+UPD, SC and DPG are sections inside a category's question bank, not categories.
 """
 
 import dataclasses
@@ -26,12 +28,13 @@ from pathlib import Path
 
 import yaml
 
+from asics_agent.legacy_names import canonical_category, canonical_unit, old_folders, pick_dir
 from asics_agent.models import Issue
 
-FOLDER = "verticals"
-UNITS = {"parastatal": "Parastatal", "city_government": "City government"}
-CITY_UNIT_ID = "ULG"  # the unit ID when the city government itself is assessed
-# role -> (step, default agent). A vertical may name its own agent for any role.
+FOLDER = "categories"
+UNITS = {"parastatal": "Parastatal", "ulg": "ULG"}
+ULG_UNIT_ID = "ULG"  # the unit ID when the ULG (the city's urban local government) is assessed
+# role -> (step, default agent). A category may name its own agent for any role.
 ROLES = {
     "discover": (1, "parastatal-discovery"),  # only for unit: parastatal
     "profile": (1, "website-profiler"),
@@ -45,10 +48,10 @@ _FRONT = re.compile(r"\A---\s*\n(.*?)\n---\s*\n", re.S)
 
 
 @dataclass(frozen=True)
-class Vertical:
+class Category:
     name: str  # "parastatal"
     title: str  # "Parastatal"
-    code: str  # "PARASTATAL": scoring workbook sheet names, file names
+    scoring_code: str  # "PARASTATAL": scoring workbook sheet names, file names
     unit: str = "parastatal"
     question_bank: str = ""
     question_bank_sheet: str = ""
@@ -68,7 +71,7 @@ class Vertical:
         return self.agents.get(role) or ROLES[role][1]
 
 
-def _parse(path: Path) -> Vertical:
+def _parse(path: Path) -> Category:
     text = path.read_text(encoding="utf-8")
     match = _FRONT.match(text)
     meta = yaml.safe_load(match.group(1)) if match else {}
@@ -77,12 +80,12 @@ def _parse(path: Path) -> Vertical:
     agents = {}
     for step in (meta.get("steps") or {}).values():
         agents.update({k: str(v) for k, v in (step or {}).items() if v})
-    name = str(meta.get("name") or path.stem)
-    return Vertical(
+    name = canonical_category(str(meta.get("name") or path.stem))
+    return Category(
         name=name,
         title=str(meta.get("title") or name.title()),
-        code=str(meta.get("code") or name.upper()),
-        unit=str(meta.get("unit") or "parastatal"),
+        scoring_code=str(meta.get("scoring_code") or meta.get("code") or name.upper()),
+        unit=canonical_unit(str(meta.get("unit") or "parastatal")),
         question_bank=str(meta.get("question_bank") or ""),
         question_bank_sheet=str(meta.get("question_bank_sheet") or ""),
         question_columns=dict(meta.get("question_columns") or {}),
@@ -95,9 +98,9 @@ def _parse(path: Path) -> Vertical:
     )
 
 
-def load_verticals(root: Path) -> tuple[dict[str, Vertical], list[Issue]]:
-    """{name: Vertical} from agent_setup/verticals/*.md, and problems found in them."""
-    verticals, issues = {}, []
+def load_categories(root: Path) -> tuple[dict[str, Category], list[Issue]]:
+    """{name: Category} from agent_setup/categories/*.md, and problems found in them."""
+    categories, issues = {}, []
     for path in sorted((root / FOLDER).glob("*.md")):
         if path.name.lower() == "readme.md":
             continue
@@ -129,8 +132,8 @@ def load_verticals(root: Path) -> tuple[dict[str, Vertical], list[Issue]]:
                     f"agent_setup/prompts/{v.shared_rules}.md."
                 )
             )
-        verticals[v.name] = v
-    return verticals, issues
+        categories[v.name] = v
+    return categories, issues
 
 
 def _issue(message: str) -> Issue:
@@ -142,27 +145,30 @@ def _resolve(root: Path, value: str) -> Path:
     return path if path.is_absolute() else root / path
 
 
-def settings_for(settings, name: str):
-    """The settings for a run of vertical `name`. Without a settings file, the vertical
+def category_settings(settings, name: str):
+    """The settings for a run of category `name`. Without a settings file, the category
     runs as before (Parastatal defaults)."""
     from asics_agent.config import PROJECT_ROOT
 
-    found, _ = load_verticals(settings.agent_setup_dir)
-    v = found.get(name.lower())
+    name = canonical_category(name)
+    found, _ = load_categories(settings.agent_setup_dir)
+    v = found.get(name)
     if v is None:
         return dataclasses.replace(
             settings,
-            vertical=name.lower(),
+            category=name,
             outputs_root=settings.outputs_root or settings.outputs_dir,
         )
     root = settings.outputs_root or settings.outputs_dir
-    outputs = root / v.outputs if v.outputs not in ("", ".") else root
+    outputs = (
+        pick_dir(root, v.outputs, *old_folders(v.name)) if v.outputs not in ("", ".") else root
+    )
     return dataclasses.replace(
         settings,
         outputs_root=root,
-        vertical=v.name,
-        vertical_title=v.title,
-        vertical_code=v.code,
+        category=v.name,
+        category_title=v.title,
+        scoring_code=v.scoring_code,
         unit=v.unit,
         unit_label=v.unit_label,
         shared_rules=v.shared_rules,
@@ -178,12 +184,12 @@ def settings_for(settings, name: str):
 
 
 def agent_for(settings, role: str) -> str:
-    """The agent that does `role` in this vertical (its settings file, else the default)."""
+    """The agent that does `role` in this category (its settings file, else the default)."""
     return dict(getattr(settings, "agents", ()) or ()).get(role) or ROLES[role][1]
 
 
 def load_bank(settings):
-    """The vertical's question bank, read with its sheet and column names."""
+    """The category's question bank, read with its sheet and column names."""
     from asics_agent.question_bank import load_question_bank
 
     return load_question_bank(

@@ -1,6 +1,6 @@
 """Step 2 master agent: answer questions ONLY from the city's reviewed Citation Sheet.
 
-    initial_checks ─▶ prepare_citations ─▶ answer_<VERTICAL> × (parastatal, question)
+    initial_checks ─▶ prepare_citations ─▶ answer_<SECTION> × (parastatal, question)
         ─▶ finalize_answers  (roll-ups, final QA, the answers workbook)
 
 No web research happens in this step. `prepare_citations` makes sure every row the team
@@ -34,7 +34,7 @@ from asics_agent.run_options import RunOptions
 from asics_agent.services import AsicsChatAnthropic, Services, default_services
 from asics_agent.workbook import file_part, write_json, write_workbook
 
-OUTPUT_NAME = "ASICS_{vertical}_{city}_Phase2.xlsx"  # e.g. ASICS_Parastatal_Bengaluru_…
+OUTPUT_NAME = "ASICS_{category}_{city}_Phase2.xlsx"  # e.g. ASICS_Parastatal_Bengaluru_…
 
 
 def usable(source: Source) -> bool:
@@ -170,9 +170,10 @@ def build_answers_graph(
             else services.settings.question_bank,
             out=out_dir
             / OUTPUT_NAME.format(
-                vertical=file_part(services.settings), city=run.city_name.replace(" ", "_")
+                category=file_part(services.settings), city=run.city_name.replace(" ", "_")
             ),
-            title=services.settings.vertical_title,
+            title=services.settings.category_title,
+            unit_label=services.settings.unit_label,
             city_name=run.city_name,
             questions=state["questions"],
             selected=selected_ids,

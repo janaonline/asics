@@ -3,7 +3,7 @@
 uv run python scripts/scoring.py check     # workbooks follow the conventions? cities match?
 uv run python scripts/scoring.py prepare   # make each intern's copy from the assignments
 uv run python scripts/scoring.py merge     # merge interns' work, calculate, update results
-uv run python scripts/scoring.py ai --vertical PARASTATAL --question UPD1a --city Bengaluru
+uv run python scripts/scoring.py ai --category parastatal --question UPD1a --city Bengaluru
                                            # the AI scores cities Step 2 has answered, from
                                            # Step 2's answers and Citation Sheet only
                                            # (--practice: the practice cities, free)
@@ -11,7 +11,9 @@ uv run python scripts/scoring.py ai --vertical PARASTATAL --question UPD1a --cit
 
 import argparse
 
+from asics_agent.categories import category_settings, load_categories
 from asics_agent.config import get_settings
+from asics_agent.legacy_names import canonical_category, old_option
 from asics_agent.run_options import RunOptions, set_default_options
 from asics_agent.scoring import workflow
 from asics_agent.services import ALLOWED_MODELS
@@ -21,7 +23,10 @@ from asics_agent.usage import METER
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("step", choices=["check", "prepare", "merge", "ai"])
-    parser.add_argument("--vertical", action="append", help="only this vertical (merge, ai)")
+    parser.add_argument(
+        "--category", action="append", help="only this category: parastatal or ulg (merge, ai)"
+    )
+    parser.add_argument("--vertical", action="append", help=argparse.SUPPRESS)  # old name
     parser.add_argument("--question", action="append", help="only this question code (ai)")
     parser.add_argument("--city", action="append", help="only this city (ai)")
     parser.add_argument("--practice", action="store_true", help="scripted AI, no cost (ai)")
@@ -35,21 +40,28 @@ def main():
     settings = get_settings()
     if args.model or args.effort:
         set_default_options(RunOptions(model=args.model, effort=args.effort))
+    names = [canonical_category(c) for c in args.category or []]
+    names += [old_option(v) for v in args.vertical or []]
+    known, _ = load_categories(settings.agent_setup_dir)
+    for name in names:
+        if name not in known:
+            parser.error(f"unknown category '{name}' (choose from: {', '.join(known)})")
+    codes = [category_settings(settings, name).scoring_code for name in dict.fromkeys(names)]
     if args.step == "merge":
-        reports = [workflow.merge(settings, args.vertical)]
+        reports = [workflow.merge(settings, codes or None)]
     elif args.step == "ai":
-        if not args.vertical:
-            parser.error("choose a vertical with --vertical, e.g. --vertical UPD")
+        if not codes:
+            parser.error("choose a category with --category, e.g. --category ulg")
         reports = [
             workflow.ai_score(
                 settings,
-                v.upper(),
+                code,
                 codes=args.question,
                 cities=args.city,
                 practice=args.practice,
                 on_progress=lambda i, n: print(f"  {i}/{n}", end="\r"),
             )
-            for v in args.vertical
+            for code in codes
         ]
     else:
         reports = [getattr(workflow, args.step)(settings)]

@@ -13,7 +13,7 @@ import pandas as pd
 import streamlit as st
 
 from asics_agent.sources_workbook import read_sources_workbook
-from asics_agent.workbook import is_scoring_sheet
+from asics_agent.workbook import canonical_header, is_scoring_sheet, unit_sheet, unit_text
 
 STATUS_ORDER = [
     ("Answered — Verified Source", "#3E7C4F"),
@@ -35,7 +35,8 @@ VERIFICATION_ICON = {
 @st.cache_data(show_spinner=False)
 def _read_sheet(path: str, mtime: float, sheet: str) -> pd.DataFrame:
     frame = pd.read_excel(path, sheet_name=sheet, engine="openpyxl")
-    return frame.dropna(how="all")
+    # A ULG workbook says "ULG" where the code says "Parastatal"; the page works with one name.
+    return frame.dropna(how="all").rename(columns=canonical_header)
 
 
 def read_sheet(path: Path, sheet: str) -> pd.DataFrame:
@@ -57,13 +58,19 @@ def _citations(path: str, mtime: float, evidence: str):
     return parastatals, citations, [i.message for i in issues if i.audience == "team"]
 
 
-ANSWERS = "ASICS_Parastatal_*.xlsx"  # set by render() for the vertical being viewed
+ANSWERS = ["ASICS_Parastatal_*.xlsx"]  # set by render() for the category being viewed
+ULG = False  # set by render(): the category's unit is the city's ULG, not its parastatals
+
+
+def show(frame: pd.DataFrame) -> pd.DataFrame:
+    """The table as shown: column names use the category's word ("ULG ID", not "Parastatal ID")."""
+    return frame.rename(columns=lambda c: unit_text(c, "ULG" if ULG else "Parastatal"))
 
 
 def city_files(folder: Path) -> dict:
     sources = next(folder.glob("ASICS_*_Sources.xlsx"), None)
     answers = sorted(
-        (folder / "answers").glob(f"*/{ANSWERS}"),
+        (p for pattern in ANSWERS for p in (folder / "answers").glob(f"*/{pattern}")),
         key=lambda p: p.stat().st_mtime,
         reverse=True,
     )
@@ -97,9 +104,16 @@ def text(value) -> str:
 
 
 # -- page ------------------------------------------------------------------------------------
-def render(folders: list[Path], open_file, zip_folder, header, answers: str = ANSWERS) -> None:
-    global ANSWERS
-    ANSWERS = answers
+def render(
+    folders: list[Path],
+    open_file,
+    zip_folder,
+    header,
+    answers: list[str] = ANSWERS,
+    unit: str = "parastatal",
+) -> None:
+    global ANSWERS, ULG
+    ANSWERS, ULG = answers, unit == "ulg"
     header(
         "City files",
         "Everything in each city's workbooks, viewable here. To change "
@@ -126,7 +140,8 @@ def render(folders: list[Path], open_file, zip_folder, header, answers: str = AN
         str(files["sources"]), files["sources"].stat().st_mtime, str(files["evidence"])
     )
 
-    tabs = st.tabs(["Overview", "Parastatals", "Citation Sheet", "Coverage", "Answers", "Files"])
+    unit_tab = "ULG" if ULG else "Parastatals"
+    tabs = st.tabs(["Overview", unit_tab, "Citation Sheet", "Coverage", "Answers", "Files"])
     with tabs[0]:
         overview(files, parastatals, citations)
     with tabs[1]:
@@ -154,7 +169,7 @@ def overview(files, parastatals, citations) -> None:
         else 0
     )
     a, b, c, d = st.columns(4)
-    a.metric("Parastatals included", sum(p.include for p in parastatals))
+    a.metric("ULG included" if ULG else "Parastatals included", sum(p.include for p in parastatals))
     b.metric("Citations ready", len(ready), help="Verified and marked Use for Answers = Yes")
     c.metric("Questions with a source", f"{covered} of {len(coverage)}")
     d.metric("Answer runs", len(files["answers"]))
@@ -169,6 +184,7 @@ def overview(files, parastatals, citations) -> None:
         return
     st.markdown(f"**Latest answers** · {when(latest)}")
     counts = frame.groupby(["Parastatal", "Status"]).size().unstack(fill_value=0)
+    counts = counts.rename_axis(index=unit_text("Parastatal", "ULG" if ULG else "Parastatal"))
     present = [(s, colour) for s, colour in STATUS_ORDER if s in counts.columns]
     if present:
         st.bar_chart(
@@ -188,7 +204,7 @@ def overview(files, parastatals, citations) -> None:
 
 
 def parastatals_tab(sources: Path) -> None:
-    frame = read_sheet(sources, "Parastatals")
+    frame = read_sheet(sources, unit_sheet(sheet_names(sources)))
     columns = [
         c
         for c in [
@@ -207,7 +223,7 @@ def parastatals_tab(sources: Path) -> None:
         if c in frame
     ]
     st.dataframe(
-        frame[columns],
+        show(frame[columns]),
         hide_index=True,
         width="stretch",
         column_config={
@@ -225,7 +241,7 @@ def citations_tab(sources: Path, citations, open_file, problems: list[str] = ())
                 st.markdown(f"- {message}")
     left, middle, right = st.columns([2, 2, 3])
     owners = sorted(frame["Parastatal"].dropna().astype(str).unique())
-    chosen = left.multiselect("Parastatal", owners, placeholder="All")
+    chosen = [] if ULG else left.multiselect("Parastatal", owners, placeholder="All")
     status = middle.selectbox(
         "Verification", ["All", "Verified", "Human Verification Required", "Not verified"]
     )
@@ -260,7 +276,7 @@ def citations_tab(sources: Path, citations, open_file, problems: list[str] = ())
     ]
     st.caption(f"{len(view)} of {len(frame)} citations · click a row to see details")
     event = st.dataframe(
-        view[columns],
+        show(view[columns]),
         hide_index=True,
         width="stretch",
         on_select="rerun",
@@ -297,7 +313,8 @@ def coverage_tab(sources: Path) -> None:
     frame = frame.assign(Has=frame["Coverage"].astype(str).str.startswith("Has"))
     missing = frame[~frame["Has"]]
     st.markdown(
-        f"**{int(frame['Has'].sum())} of {len(frame)}** question-parastatal pairs have "
+        f"**{int(frame['Has'].sum())} of {len(frame)}** "
+        f"{'questions' if ULG else 'question-parastatal pairs'} have "
         f"at least one source. Questions without one will be answered *Insufficient "
         "Evidence* unless a source is added in Excel."
     )
@@ -305,11 +322,11 @@ def coverage_tab(sources: Path) -> None:
         index="Question ID", columns="Parastatal", values="Has", aggfunc="first"
     )
     grid = grid.map(lambda v: "✓" if v is True else ("—" if v is False else ""))
-    st.dataframe(grid, width="stretch")
+    st.dataframe(show(grid.rename_axis(columns=None)), width="stretch")
     if not missing.empty:
         with st.expander(f"Questions with no source yet ({len(missing)})"):
             st.dataframe(
-                missing[["Parastatal", "Question ID", "Question"]],
+                show(missing[["Parastatal", "Question ID", "Question"]]),
                 hide_index=True,
                 width="stretch",
             )
@@ -331,7 +348,7 @@ def answers_tab(files, citations, parastatals, open_file) -> None:
         return
     left, middle, right = st.columns(3)
     owners = sorted(frame["Parastatal"].dropna().astype(str).unique())
-    chosen = left.multiselect("Parastatal", owners, placeholder="All", key="ans-p")
+    chosen = [] if ULG else left.multiselect("Parastatal", owners, placeholder="All", key="ans-p")
     statuses = [s for s, _ in STATUS_ORDER if s in set(frame["Status"].astype(str))]
     status = middle.multiselect("Status", statuses, placeholder="All", key="ans-s")
     section = right.selectbox(
@@ -370,7 +387,7 @@ def answers_tab(files, citations, parastatals, open_file) -> None:
     ]
     st.caption(f"{len(view)} of {len(frame)} rows · click a row to see the answer and its evidence")
     event = st.dataframe(
-        view[columns],
+        show(view[columns]),
         hide_index=True,
         width="stretch",
         on_select="rerun",
@@ -539,7 +556,7 @@ def recheck_view(path: Path) -> None:
             if col in view
         ]
         st.dataframe(
-            view[columns],
+            show(view[columns]),
             hide_index=True,
             width="stretch",
             column_config={

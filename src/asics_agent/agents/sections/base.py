@@ -30,12 +30,12 @@ from asics_agent.agent_setup import (
 )
 from asics_agent.agents.common import read_source_text
 from asics_agent.agents.state import AnswerTask, AnswerTaskOutput
+from asics_agent.categories import agent_for
 from asics_agent.links.text import locate_quote, relevance, search_phrase
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import ANSWER_CLASSES, CONFIDENCES, Answer, Source
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext
-from asics_agent.verticals import agent_for
 
 MAX_SOURCES = 8  # per answer, most relevant first
 
@@ -175,8 +175,8 @@ def build_section_agent(code: str, services: Services):
 
     def answer_from_citations(task: AnswerTask) -> dict:
         q = task["question"]
-        vertical = services.settings.vertical
-        title, guidance, hints = section_guidance(root, q.pillar, vertical)  # read fresh
+        category = services.settings.category
+        title, guidance, hints = section_guidance(root, q.pillar, category)  # read fresh
         query = f"{q.text} {q.methodology} {q.evidence_requirement} {hints}"
         texts: dict[str, tuple[Source, str]] = {}
         full: dict[str, str] = {}
@@ -219,7 +219,7 @@ def build_section_agent(code: str, services: Services):
                 f"{_question_block(title, task, services.settings.unit_label)}\n--- CITATION SHEET SOURCES ---\n{evidence}",
                 AnswerReply,
                 scope=scope,
-                extra_skills=[s] if (s := section_skill(root, q.pillar, vertical)) else [],
+                extra_skills=[s] if (s := section_skill(root, q.pillar, category)) else [],
                 # read_citation / search_citation_sheet reach only these rows.
                 tool_context=(
                     tools := ToolContext(

@@ -15,6 +15,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.datavalidation import DataValidation
 from openpyxl.worksheet.worksheet import Worksheet
 
+from asics_agent.legacy_names import answers_globs
 from asics_agent.models import (
     ANSWER_CLASSES,
     CONFIDENCES,
@@ -31,17 +32,27 @@ EXCEL_MAX_SHEET_TITLE = 31
 
 
 def file_part(settings) -> str:
-    """The vertical's name in file names: "Parastatal" -> ASICS_Parastatal_<City>_Phase2.xlsx."""
-    return settings.vertical_title.replace(" ", "")
+    """The category's name in file names: "Parastatal" -> ASICS_Parastatal_<City>_Phase2.xlsx."""
+    return settings.category_title.replace(" ", "")
 
 
-def answers_pattern(settings) -> str:
-    return f"ASICS_{file_part(settings)}_*.xlsx"
+def answers_patterns(settings) -> list[str]:
+    """File patterns of the category's answers workbooks (old file names included)."""
+    return answers_globs(file_part(settings))
 
 
-def scoring_sheet_title(city_name: str, vertical_title: str = "Parastatal") -> str:
-    """ "<Vertical> Scoring - <City>", shortened to fit Excel's 31-character limit."""
-    for title in (f"{vertical_title} Scoring - {city_name}", f"Scoring - {city_name}"):
+def answers_files(folder: Path, settings) -> list[Path]:
+    """The answers workbooks of a city folder, from any run."""
+    return [
+        p
+        for pattern in answers_patterns(settings)
+        for p in (folder / "answers").glob(f"*/{pattern}")
+    ]
+
+
+def scoring_sheet_title(city_name: str, category_title: str = "Parastatal") -> str:
+    """ "<Category> Scoring - <City>", shortened to fit Excel's 31-character limit."""
+    for title in (f"{category_title} Scoring - {city_name}", f"Scoring - {city_name}"):
         if len(title) <= EXCEL_MAX_SHEET_TITLE:
             return title
     return f"Scoring - {city_name}"[:EXCEL_MAX_SHEET_TITLE].rstrip()
@@ -110,6 +121,46 @@ def _norm(value) -> str:
     return re.sub(r"[^a-z0-9/]+", " ", str(value or "").lower()).strip()
 
 
+# -- the unit word in headers: "Parastatal" for the Parastatal category, "ULG" for ULG ----------
+# The code keeps the Parastatal names; a ULG workbook is written with the ULG ones (same columns,
+# same order) and read back through `canonical_header`, so a file with either spelling loads.
+UNIT_HEADERS = ("Parastatal ID", "Parastatal Name", "Parastatal Type", "Parastatal")
+UNIT_SHEET = "Parastatals"  # the Sources workbook's sheet of units (one row for the ULG)
+
+
+def unit_text(text, unit_label: str = "Parastatal"):
+    """A header or sheet name for a category's unit: "Parastatal ID" -> "ULG ID"."""
+    if unit_label == "Parastatal" or not isinstance(text, str):
+        return text
+    return text.replace("Parastatals", unit_label).replace("Parastatal", unit_label)
+
+
+def canonical_header(text):
+    """A header as the code names it: "ULG ID" -> "Parastatal ID" (others unchanged)."""
+    if isinstance(text, str):
+        for name in UNIT_HEADERS:
+            if text == unit_text(name, "ULG"):
+                return name
+    return text
+
+
+def unit_sheet(sheet_names) -> str:
+    """The Sources workbook's sheet of units, whichever spelling it has."""
+    return UNIT_SHEET if UNIT_SHEET in sheet_names or "ULG" not in sheet_names else "ULG"
+
+
+def relabel_unit(wb: Workbook, unit_label: str) -> None:
+    """Write the category's unit word into every header and sheet name that has one."""
+    if unit_label == "Parastatal":
+        return
+    for ws in wb.worksheets:
+        if ws.title == UNIT_SHEET:
+            ws.title = unit_text(UNIT_SHEET, unit_label)
+        for cell in ws[1]:
+            if cell.value in UNIT_HEADERS:
+                cell.value = unit_text(cell.value, unit_label)
+
+
 def _find_sheet(wb: Workbook, name: str) -> Worksheet | None:
     target = _norm(name)
     return next((ws for ws in wb.worksheets if _norm(ws.title) == target), None)
@@ -117,7 +168,7 @@ def _find_sheet(wb: Workbook, name: str) -> Worksheet | None:
 
 def _column_map(ws: Worksheet, columns) -> dict[str, int]:
     """Map canonical column -> 1-based index, adding missing columns at the end."""
-    headers = {_norm(c.value): c.column for c in ws[1] if c.value}
+    headers = {_norm(canonical_header(c.value)): c.column for c in ws[1] if c.value}
     mapping: dict[str, int] = {}
     for canonical, aliases in columns:
         index = next(
@@ -177,7 +228,7 @@ def read_citation_sheet(
             )
         )
         return [], issues
-    headers = {_norm(c.value): c.column - 1 for c in ws[1] if c.value}
+    headers = {_norm(canonical_header(c.value)): c.column - 1 for c in ws[1] if c.value}
 
     def get(row, canonical):
         aliases = dict(CITATION_COLUMNS)[canonical]
@@ -418,6 +469,7 @@ def write_workbook(
     answers: list[Answer],
     issues: list[Issue],
     title: str = "Parastatal",
+    unit_label: str = "Parastatal",
 ) -> Path:
     if base is None:
         wb = Workbook()
@@ -485,14 +537,15 @@ def write_workbook(
                     question_id=qid,
                     status="Not Applicable",
                     notes=f"The question bank says this applies to: "
-                    f"{q.applicability or 'not stated'}. {p.name} is a "
-                    f"{p.type.replace('_', ' ')}.",
+                    f"{q.applicability or 'not stated'}. {p.name} is "
+                    + ("the ULG." if p.type == "ulg" else f"a {p.type.replace('_', ' ')}."),
                 )
             a = a or Answer(
                 parastatal_id=p.id,
                 question_id=qid,
                 status="Not Yet Assessed",
-                notes="Applies to this parastatal, but was not researched in this run.",
+                notes=f"Applies to this {unit_label if p.type == 'ulg' else 'parastatal'}, "
+                "but was not researched in this run.",
             )
             # Reviewer Decision / Comments are never written, so a re-run keeps them.
             rows.append(
@@ -534,6 +587,7 @@ def write_workbook(
 
     _write_guide(wb)
     _write_issue_sheets(wb, issues)
+    relabel_unit(wb, unit_label)
     wb.save(out)
     return out
 

@@ -13,7 +13,7 @@ max_tool_calls: 0
 effort: medium
 model: claude-sonnet-5-5   # Sonnet 5.5 is the ceiling (also allowed: claude-sonnet-5, claude-haiku-5-5)
 ---
-Builds the Citation Sheet for one city in a city-level vertical (e.g. UPD): the state's Acts
+Builds the Citation Sheet for one city in the ULG category: the state's Acts
 and rules (e.g. its Town and Country Planning Act), the city's plans, notifications and
 official pages. Every link is checked by the source assessor and the human-accessibility test.
 

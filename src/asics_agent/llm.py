@@ -323,7 +323,7 @@ def call_json(
     if scope is not None:
         scope.agent, scope.step = config.name, config.step
         budget = options.memory_max_chars or settings.memory_max_chars
-        notes_used, _ = select_notes(root, scope, settings.vertical, budget)
+        notes_used, _ = select_notes(root, scope, settings.category, budget)
         scope.used = [n.path for n in notes_used]
         if block := memory_block(notes_used):
             user = f"{block}\n\n# TASK INPUT\n{user}"

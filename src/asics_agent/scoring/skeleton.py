@@ -1,4 +1,4 @@
-"""Builds a draft scoring workbook for a vertical from its question/methodology sheet.
+"""Builds a draft scoring workbook for a category from its question/methodology sheet.
 
 The draft follows the same conventions as the expert team's UPD workbook (see template.py),
 so the same tools fill, merge and read it. It is a starting point for the experts: each
@@ -265,9 +265,9 @@ def _rollup_formula(row: int, col: str, kids: list[int]) -> str:
 
 
 def _summary_sheet(
-    wb, vertical: str, questions: dict[str, Question], units: list[Unit], questions_sheet: str
+    wb, scoring_code: str, questions: dict[str, Question], units: list[Unit], questions_sheet: str
 ):
-    ws = wb.create_sheet(f"{vertical}_SUMMARY_RAW", 1)
+    ws = wb.create_sheet(f"{scoring_code}_SUMMARY_RAW", 1)
     labels = [u.label for u in units]
     _header(
         ws,
@@ -307,9 +307,9 @@ def _summary_sheet(
                 ws.cell(row=r, column=c).font = Font(bold=True)
     end = 2 + len(questions)
     overall = end + 3
-    ws.cell(row=overall - 1, column=4, value=f"{vertical}_Scores").font = Font(bold=True)
+    ws.cell(row=overall - 1, column=4, value=f"{scoring_code}_Scores").font = Font(bold=True)
     texts = [
-        f"{vertical}_OVERALL_SCORE",
+        f"{scoring_code}_OVERALL_SCORE",
         'No. of MQs not yet scored ("?") - overall score is provisional while > 0',
         "No. of MQs marked NA (excluded from overall score)",
     ]
@@ -333,13 +333,13 @@ def _summary_sheet(
     return ws, overall
 
 
-def _city_sheet(wb, vertical: str, units: list[Unit], summary: str, overall: int):
+def _city_sheet(wb, scoring_code: str, units: list[Unit], summary: str, overall: int):
     """City score = average of the city's agencies' overall scores (equal weights)."""
-    ws = wb.create_sheet(f"{vertical}_CITY_SCORES", 2)
+    ws = wb.create_sheet(f"{scoring_code}_CITY_SCORES", 2)
     _header(
         ws,
         1,
-        ["City", "Agencies", f"{vertical} score", "Agencies with a score"],
+        ["City", "Agencies", f"{scoring_code} score", "Agencies with a score"],
         {1: 22, 2: 50, 3: 16, 4: 20},
     )
     end = get_column_letter(6 + len(units))
@@ -370,7 +370,7 @@ def build_skeleton(
     questions: dict[str, Question],
     units: list[Unit],
     path: Path,
-    vertical: str = "PARASTATAL",
+    scoring_code: str = "PARASTATAL",
     issues: list[Issue] | None = None,
 ) -> list[str]:
     """Write the draft workbook; return the problems listed on its "Check before use" sheet."""
@@ -381,7 +381,7 @@ def build_skeleton(
     guide = wb.active
     guide.title = "Check before use"
     guide.column_dimensions["A"].width = 120
-    guide.append([f"DRAFT {vertical} scoring workbook - generated from the methodology sheet"])
+    guide.append([f"DRAFT {scoring_code} scoring workbook - generated from the methodology sheet"])
     guide["A1"].font = Font(bold=True, size=14)
     for line in [
         "",
@@ -401,10 +401,10 @@ def build_skeleton(
         guide.append([line])
     for row in guide.iter_rows(min_row=2):
         row[0].alignment = Alignment(wrap_text=True, vertical="top")
-    questions_sheet = f"{vertical} Questions"
+    questions_sheet = f"{scoring_code} Questions"
     _questions_sheet(wb, questions_sheet, questions)
-    summary, overall = _summary_sheet(wb, vertical, scored, units, questions_sheet)
-    _city_sheet(wb, vertical, units, summary.title, overall)
+    summary, overall = _summary_sheet(wb, scoring_code, scored, units, questions_sheet)
+    _city_sheet(wb, scoring_code, units, summary.title, overall)
     for q in scored.values():
         if not q.children:
             _question_sheet(wb, q, units, questions_sheet)

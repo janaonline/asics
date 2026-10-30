@@ -36,6 +36,7 @@ from asics_agent.agents.initial_checks import build_initial_checks
 from asics_agent.agents.links_builder import build_links_agent
 from asics_agent.agents.parastatal_discovery import build_parastatal_discovery
 from asics_agent.agents.state import MasterState
+from asics_agent.categories import agent_for
 from asics_agent.links.database import write_links_db
 from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
@@ -45,7 +46,6 @@ from asics_agent.run_options import RunOptions, current_options
 from asics_agent.services import Services, default_services
 from asics_agent.sources_workbook import sources_path, write_sources_workbook
 from asics_agent.tools import ToolContext
-from asics_agent.verticals import agent_for
 from asics_agent.workbook import read_citation_sheet, write_checks_workbook, write_json
 
 SHARED_TAGS = ("[ULG-LAW]", "[TCP]", "[CROSSLAW]")  # evidence tags shared by every parastatal
@@ -80,7 +80,7 @@ def build_sources_graph(
         return END if has_errors(state, "initial_checks") else "parastatal_discovery"
 
     def confirm_scope(state: MasterState) -> dict:
-        city_level = services.settings.unit == "city_government"  # one unit: nothing to review
+        city_level = services.settings.unit == "ulg"  # one unit: nothing to review
         if state.get("auto_approve") or state.get("skip_research") or city_level:
             return {}
         decision = interrupt(
@@ -295,6 +295,7 @@ def build_sources_graph(
             state["questions"],
             state.get("applicability", {}),
             issues,
+            unit_label=services.settings.unit_label,
         )
         write_links_db(workspace / "links.db", sources, tool_urls, (), issues)
         write_json(

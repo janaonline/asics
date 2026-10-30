@@ -2,16 +2,16 @@
 
 Everything is Excel. The research lead fills in the assignments workbook:
 
-  Verticals sheet     Vertical | Scoring workbook (a file in scoring/2027/templates)
-  Assignments sheet   Vertical | Intern | Questions | Cities | Notes
+  Categories sheet    Category | Scoring workbook (a file in scoring/2027/templates)
+  Assignments sheet   Category | Intern | Questions | Cities | Notes
                       Questions: codes separated by commas; "UPD1*" means every code that
                       starts with UPD1. Cities: names separated by commas, or "All".
 
 One intern can score UPD1a for 10 cities and another the same UPD1a for 10 other cities.
-Each intern gets their own copy of the vertical's workbook (scoring/2027/human/<vertical>/),
+Each intern gets their own copy of the category's workbook (scoring/2027/human/<scoring code>/),
 with their questions and rows highlighted and other question sheets hidden. Merging copies
 only what interns type (inputs, evidence, comments), never formulas, into
-scoring/2027/merged/<vertical>_human.xlsx, and lists anything that needs a look.
+scoring/2027/merged/<scoring code>_human.xlsx, and lists anything that needs a look.
 """
 
 import difflib
@@ -23,12 +23,13 @@ from pathlib import Path
 from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 
-from asics_agent.scoring.template import QuestionSheet, VerticalTemplate, read_template
+from asics_agent.legacy_names import current_label, sheet_name
+from asics_agent.scoring.template import CategoryTemplate, QuestionSheet, read_template
 
 ASSIGNMENTS_FILE = "ASICS_2027_Scoring_Assignments.xlsx"
-VERTICALS_SHEET, ASSIGNMENTS_SHEET = "Verticals", "Assignments"
-VERTICAL_COLUMNS = ["Vertical", "Scoring workbook"]
-ASSIGNMENT_COLUMNS = ["Vertical", "Intern", "Questions", "Cities", "Notes"]
+CATEGORIES_SHEET, ASSIGNMENTS_SHEET = "Categories", "Assignments"
+CATEGORY_COLUMNS = ["Category", "Scoring workbook"]
+ASSIGNMENT_COLUMNS = ["Category", "Intern", "Questions", "Cities", "Notes"]
 APPLIES = "Applies?"
 SEPARATOR = " – "  # "Bengaluru – BWSSB"
 _HEAD = PatternFill("solid", fgColor="DDE7F0")
@@ -46,7 +47,7 @@ def _key(name: str) -> str:
 
 @dataclass
 class Assignment:
-    vertical: str
+    category: str  # the category's scoring code ("UPD", "PARASTATAL")
     intern: str
     questions: list[str]  # resolved question codes
     rows: list[str]  # resolved row labels
@@ -55,7 +56,7 @@ class Assignment:
 
 @dataclass
 class Plan:
-    verticals: dict[str, Path]  # vertical -> template path
+    categories: dict[str, Path]  # scoring code -> template path
     assignments: list[Assignment]
     problems: list[str] = field(default_factory=list)
 
@@ -94,7 +95,7 @@ def match_cities(labels: list[str], cities) -> tuple[dict[str, str], list[str]]:
     return mapping, problems
 
 
-def write_assignments_template(path: Path, verticals: dict[str, str]) -> Path:
+def write_assignments_template(path: Path, scoring_workbooks: dict[str, str]) -> Path:
     """An empty assignments workbook with a guide, ready for the research lead."""
     wb = Workbook()
     guide = wb.active
@@ -103,7 +104,7 @@ def write_assignments_template(path: Path, verticals: dict[str, str]) -> Path:
     for line in [
         "Scoring assignments",
         "",
-        "Verticals sheet: one row per vertical and the scoring workbook it uses (a file in "
+        "Categories sheet: one row per category and the scoring workbook it uses (a file in "
         "scoring/2027/templates).",
         "Assignments sheet: one row per intern and set of questions.",
         '  Questions: codes separated by commas, e.g. "UPD1a, UPD1b". "UPD1*" means every '
@@ -116,7 +117,7 @@ def write_assignments_template(path: Path, verticals: dict[str, str]) -> Path:
         guide.append([line])
     guide["A1"].font = Font(bold=True, size=14)
     for title, columns, rows in [
-        (VERTICALS_SHEET, VERTICAL_COLUMNS, list(verticals.items())),
+        (CATEGORIES_SHEET, CATEGORY_COLUMNS, list(scoring_workbooks.items())),
         (ASSIGNMENTS_SHEET, ASSIGNMENT_COLUMNS, []),
     ]:
         ws = wb.create_sheet(title)
@@ -133,7 +134,7 @@ def write_assignments_template(path: Path, verticals: dict[str, str]) -> Path:
 
 
 def _sheet_rows(ws, columns: list[str], problems: list[str]):
-    header = [_text(c.value) for c in ws[1]]
+    header = [current_label(_text(c.value)) for c in ws[1]]  # an old header still reads
     missing = [c for c in columns if c not in header]
     if missing:
         problems.append(f"The {ws.title} sheet is missing the column(s) {', '.join(missing)}.")
@@ -160,52 +161,53 @@ def _split(text: str) -> list[str]:
 
 
 def read_plan(path: Path, templates_dir: Path, register=None) -> tuple[Plan, dict]:
-    """Read the assignments workbook; returns (plan, {vertical: VerticalTemplate})."""
+    """Read the assignments workbook; returns (plan, {scoring code: CategoryTemplate})."""
     problems: list[str] = []
     wb = load_workbook(path, data_only=True)
-    for sheet in (VERTICALS_SHEET, ASSIGNMENTS_SHEET):
-        if sheet not in wb.sheetnames:
+    sheets = {s: sheet_name(wb.sheetnames, s) for s in (CATEGORIES_SHEET, ASSIGNMENTS_SHEET)}
+    for sheet, found in sheets.items():
+        if found not in wb.sheetnames:
             return Plan({}, [], [f'The assignments workbook has no "{sheet}" sheet.']), {}
-    verticals, templates = {}, {}
-    for r, v in _sheet_rows(wb[VERTICALS_SHEET], VERTICAL_COLUMNS, problems):
+    categories, templates = {}, {}
+    for r, v in _sheet_rows(wb[sheets[CATEGORIES_SHEET]], CATEGORY_COLUMNS, problems):
         file = templates_dir / v["Scoring workbook"]
         if not file.exists():
             problems.append(
-                f"Verticals sheet, row {r}: there is no file "
+                f"Categories sheet, row {r}: there is no file "
                 f'"{v["Scoring workbook"]}" in {templates_dir}.'
             )
             continue
-        verticals[v["Vertical"].upper()] = file
-        templates[v["Vertical"].upper()] = read_template(file)
+        categories[v["Category"].upper()] = file
+        templates[v["Category"].upper()] = read_template(file)
 
     assignments = []
-    for r, v in _sheet_rows(wb[ASSIGNMENTS_SHEET], ASSIGNMENT_COLUMNS, problems):
+    for r, v in _sheet_rows(wb[sheets[ASSIGNMENTS_SHEET]], ASSIGNMENT_COLUMNS, problems):
         where = f"Assignments sheet, row {r}"
-        vertical = v["Vertical"].upper()
-        if vertical not in templates:
+        scoring_code = v["Category"].upper()
+        if scoring_code not in templates:
             problems.append(
-                f'{where}: the vertical "{v["Vertical"]}" isn\'t on the Verticals sheet.'
+                f'{where}: the category "{v["Category"]}" isn\'t on the Categories sheet.'
             )
             continue
         if not v["Intern"]:
             problems.append(f"{where}: add the intern's name.")
             continue
-        template = templates[vertical]
+        template = templates[scoring_code]
         codes = []
         for pattern in _split(v["Questions"]) or ["*"]:
             found = [c for c in template.questions if _code_matches(c, pattern)]
             if not found:
-                problems.append(f'{where}: no question "{pattern}" in the {vertical} workbook.')
+                problems.append(f'{where}: no question "{pattern}" in the {scoring_code} workbook.')
             codes += [c for c in found if c not in codes]
         rows = _rows_for(template, v["Cities"], register, where, problems)
         if codes and rows:
-            assignments.append(Assignment(vertical, v["Intern"], codes, rows, r))
+            assignments.append(Assignment(scoring_code, v["Intern"], codes, rows, r))
     problems += _overlaps(assignments)
-    return Plan(verticals, assignments, problems), templates
+    return Plan(categories, assignments, problems), templates
 
 
 def _rows_for(
-    template: VerticalTemplate, cities_text: str, register, where: str, problems: list[str]
+    template: CategoryTemplate, cities_text: str, register, where: str, problems: list[str]
 ) -> list[str]:
     wanted = _split(cities_text)
     if not wanted or [w.lower() for w in wanted] == ["all"]:
@@ -230,7 +232,7 @@ def _overlaps(assignments: list[Assignment]) -> list[str]:
     for a in assignments:
         for code in a.questions:
             for row in a.rows:
-                other = seen.setdefault((a.vertical, code, row), a.intern)
+                other = seen.setdefault((a.category, code, row), a.intern)
                 if other != a.intern:
                     problems.append(
                         f"{code} for {row} is assigned to both {other} and "
@@ -239,9 +241,9 @@ def _overlaps(assignments: list[Assignment]) -> list[str]:
     return problems[:50]
 
 
-def intern_file(scoring_dir: Path, vertical: str, intern: str) -> Path:
+def intern_file(scoring_dir: Path, scoring_code: str, intern: str) -> Path:
     safe = re.sub(r"[^A-Za-z0-9]+", "_", intern).strip("_")
-    return scoring_dir / "human" / vertical / f"{vertical}_{safe}.xlsx"
+    return scoring_dir / "human" / scoring_code / f"{scoring_code}_{safe}.xlsx"
 
 
 def prepare_intern_copies(
@@ -249,29 +251,31 @@ def prepare_intern_copies(
 ) -> list[str]:
     """Make each intern's workbook. Existing copies are never overwritten (they hold work).
 
-    `evidence_for(vertical, code, label)` may return the Step 2 evidence for a row (a dict
+    `evidence_for(scoring_code, code, label)` may return the Step 2 evidence for a row (a dict
     of column -> text); it is listed on a "Step 2 evidence" sheet in the copy."""
     notes = []
     by_intern: dict[tuple[str, str], list[Assignment]] = {}
     for a in plan.assignments:
-        by_intern.setdefault((a.vertical, a.intern), []).append(a)
-    for (vertical, intern), items in by_intern.items():
-        path = intern_file(scoring_dir, vertical, intern)
+        by_intern.setdefault((a.category, a.intern), []).append(a)
+    for (scoring_code, intern), items in by_intern.items():
+        path = intern_file(scoring_dir, scoring_code, intern)
         if path.exists():
-            notes.append(f"{intern} already has a {vertical} copy; left as it is.")
+            notes.append(f"{intern} already has a {scoring_code} copy; left as it is.")
             continue
         path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(plan.verticals[vertical], path)
+        shutil.copyfile(plan.categories[scoring_code], path)
         rows_evidence = (
-            (lambda code, label, v=vertical: evidence_for(v, code, label)) if evidence_for else None
+            (lambda code, label, v=scoring_code: evidence_for(v, code, label))
+            if evidence_for
+            else None
         )
-        _mark_copy(path, templates[vertical], intern, items, rows_evidence)
+        _mark_copy(path, templates[scoring_code], intern, items, rows_evidence)
         notes.append(f"Made {path.name} for {intern}.")
     return notes
 
 
 def _mark_copy(
-    path: Path, template: VerticalTemplate, intern: str, items: list[Assignment], evidence_for=None
+    path: Path, template: CategoryTemplate, intern: str, items: list[Assignment], evidence_for=None
 ):
     wb = load_workbook(path)
     mine = {code: set() for a in items for code in a.questions}
@@ -321,7 +325,7 @@ def _mark_copy(
     wb.save(path)
 
 
-def _evidence_sheet(wb, template: VerticalTemplate, mine: dict, evidence_for) -> None:
+def _evidence_sheet(wb, template: CategoryTemplate, mine: dict, evidence_for) -> None:
     """What Step 2 found for each assigned row: score from these citations."""
     rows = []
     for code, labels in mine.items():
@@ -401,21 +405,23 @@ def _applies(ws, sheet: QuestionSheet, row: int) -> bool:
     return True
 
 
-def merge_vertical(plan: Plan, templates: dict, vertical: str, scoring_dir: Path) -> MergeResult:
+def merge_category(
+    plan: Plan, templates: dict, scoring_code: str, scoring_dir: Path
+) -> MergeResult:
     """Copy every intern's typed cells for their assigned rows into a fresh copy of the
     template. Conflicting answers (two interns, same cell, different values) are listed and
     the first intern's value is kept."""
-    template: VerticalTemplate = templates[vertical]
-    out = scoring_dir / "merged" / f"{vertical}_human.xlsx"
+    template: CategoryTemplate = templates[scoring_code]
+    out = scoring_dir / "merged" / f"{scoring_code}_human.xlsx"
     out.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(plan.verticals[vertical], out)
+    shutil.copyfile(plan.categories[scoring_code], out)
     merged = load_workbook(out)
     result = MergeResult(out)
     written: dict[tuple[str, int, int], tuple[str, object]] = {}
-    for a in (a for a in plan.assignments if a.vertical == vertical):
-        path = intern_file(scoring_dir, vertical, a.intern)
+    for a in (a for a in plan.assignments if a.category == scoring_code):
+        path = intern_file(scoring_dir, scoring_code, a.intern)
         if not path.exists():
-            result.problems.append(f"{a.intern} has no {vertical} copy yet.")
+            result.problems.append(f"{a.intern} has no {scoring_code} copy yet.")
             continue
         source = load_workbook(path)
         done, total = result.done.get(a.intern, (0, 0))
@@ -453,7 +459,7 @@ def merge_vertical(plan: Plan, templates: dict, vertical: str, scoring_dir: Path
     return result
 
 
-def _report_sheet(wb, result: MergeResult, template: VerticalTemplate):
+def _report_sheet(wb, result: MergeResult, template: CategoryTemplate):
     ws = wb.create_sheet("Merge report", 0)
     ws.column_dimensions["A"].width = 30
     ws.column_dimensions["B"].width = 100

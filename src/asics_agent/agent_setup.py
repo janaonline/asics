@@ -20,6 +20,7 @@ from pathlib import Path
 import yaml
 
 from asics_agent.cities import slugify
+from asics_agent.legacy_names import MEMORY_FOLDERS, canonical_category, old_folders
 from asics_agent.models import Issue
 
 EFFORTS = {"low", "medium", "high", "xhigh", "max"}
@@ -56,8 +57,8 @@ class Note:
     title: str
     text: str
     filters: dict
-    scope: str  # "general" | "city" | "vertical"
-    target: str = ""  # the city slug or vertical name the folder points at
+    scope: str  # "general" | "city" | "category"
+    target: str = ""  # the city slug or category name the folder points at
 
 
 @dataclass
@@ -141,7 +142,7 @@ def _body(root: Path, kind: str, name: str) -> str:
 def system_prompt(
     root: Path, agent: AgentConfig, extra_skills: list[str] = (), rules: str = "shared-rules"
 ) -> str:
-    """Shared rules (the vertical's), then the agent's skills, then its task prompt. This part
+    """Shared rules (the category's), then the agent's skills, then its task prompt. This part
     is the same for every call of the agent (memory goes in the message), which keeps calls
     cache-friendly."""
     parts = [_body(root, "prompts", rules)]
@@ -151,20 +152,19 @@ def system_prompt(
     return "\n\n".join(parts)
 
 
-def section_skill(root: Path, code: str, vertical: str = "") -> str | None:
-    """The guidance skill for a section: the vertical's own (skills/sections/<vertical>/
+def section_skill(root: Path, code: str, category: str = "") -> str | None:
+    """The guidance skill for a section: the category's own (skills/sections/<category>/
     <code>.md) if it has one, else the shared one (skills/sections/<code>.md)."""
-    for name in ([f"sections/{vertical}/{code.lower()}"] if vertical else []) + [
-        f"sections/{code.lower()}"
-    ]:
+    own = [category, *(f.lower() for f in old_folders(category))] if category else []
+    for name in [f"sections/{c}/{code.lower()}" for c in own] + [f"sections/{code.lower()}"]:
         if (root / "skills" / f"{name}.md").exists():
             return name
     return None
 
 
-def section_guidance(root: Path, code: str, vertical: str = "") -> tuple[str, str, str]:
+def section_guidance(root: Path, code: str, category: str = "") -> tuple[str, str, str]:
     """(title, guidance, evidence hints) for a question-bank section, or empty strings."""
-    skill = section_skill(root, code, vertical)
+    skill = section_skill(root, code, category)
     path = root / "skills" / f"{skill}.md" if skill else None
     if path is None:
         return "", "", ""
@@ -212,8 +212,8 @@ def list_notes(root: Path) -> tuple[list[Note], list[Issue]]:
         scope, target = "general", ""
         if top == "cities" and len(rel.parts) > 1:
             scope, target = "city", slugify(Path(rel.parts[1]).stem)
-        elif top == "verticals" and len(rel.parts) > 2:
-            scope, target = "vertical", rel.parts[1].lower()
+        elif top in MEMORY_FOLDERS and len(rel.parts) > 2:
+            scope, target = "category", canonical_category(rel.parts[1])
         notes.append(
             Note(
                 path=rel.as_posix(),
@@ -229,10 +229,10 @@ def list_notes(root: Path) -> tuple[list[Note], list[Issue]]:
     return notes, issues
 
 
-def _matches(note: Note, scope: MemoryScope, vertical: str) -> bool:
+def _matches(note: Note, scope: MemoryScope, category: str) -> bool:
     if note.scope == "city" and (not scope.city or slugify(scope.city) != note.target):
         return False
-    if note.scope == "vertical" and note.target != vertical.lower():
+    if note.scope == "category" and note.target != canonical_category(category):
         return False
 
     def wants(key: str, values) -> bool:
@@ -251,11 +251,11 @@ def _matches(note: Note, scope: MemoryScope, vertical: str) -> bool:
     )
 
 
-def select_notes(root: Path, scope: MemoryScope, vertical: str, budget: int):
+def select_notes(root: Path, scope: MemoryScope, category: str, budget: int):
     """(notes to use, notes left out because of the size limit), most specific first."""
     notes, _ = list_notes(root)
-    matching = [n for n in notes if _matches(n, scope, vertical)]
-    weight = {"city": 2, "vertical": 1, "general": 0}
+    matching = [n for n in notes if _matches(n, scope, category)]
+    weight = {"city": 2, "category": 1, "general": 0}
     matching.sort(
         key=lambda n: (
             weight[n.scope] + sum(k in n.filters for k in ("parastatals", "sections", "agents")),
@@ -270,7 +270,7 @@ def select_notes(root: Path, scope: MemoryScope, vertical: str, budget: int):
             continue
         chosen.append(note)
         size += len(note.text)
-    order = {"general": 0, "vertical": 1, "city": 2}  # broad to specific in the prompt
+    order = {"general": 0, "category": 1, "city": 2}  # broad to specific in the prompt
     return sorted(chosen, key=lambda n: (order[n.scope], n.path)), skipped
 
 
@@ -289,7 +289,7 @@ def memory_block(notes: list[Note]) -> str:
 
 # -- checks, audit, editing -----------------------------------------------------------------
 def validate(
-    root: Path, city_names: list[str], vertical: str, section_codes_in_bank: set[str]
+    root: Path, city_names: list[str], category: str, section_codes_in_bank: set[str]
 ) -> list[Issue]:
     issues: list[Issue] = []
     if not root.exists():
@@ -353,13 +353,13 @@ def validate(
                     "the city register, so it is never used. Check the file name.",
                 )
             )
-        if note.scope == "vertical" and note.target != vertical.lower():
+        if note.scope == "category" and note.target != canonical_category(category):
             issues.append(
                 _team(
                     "info",
                     f"Memory note {note.path} is for the "
-                    f"'{note.target}' vertical, so it isn't used in "
-                    f"'{vertical}' runs.",
+                    f"'{note.target}' category, so it isn't used in "
+                    f"'{category}' runs.",
                 )
             )
         if note.scope == "general" and note.path.count("/") == 0:
@@ -434,12 +434,12 @@ def fingerprint(root: Path) -> str:
 
 def note_path(root: Path, scope: str, title: str, target: str = "") -> Path:
     """Where a new note goes: general/<title>.md, cities/<city>/<title>.md or
-    verticals/<vertical>/<title>.md."""
+    categories/<category>/<title>.md."""
     name = slugify(title).replace("_", "-") or "note"
     if scope == "city":
         return root / "memory" / "cities" / slugify(target) / f"{name}.md"
-    if scope == "vertical":
-        return root / "memory" / "verticals" / slugify(target) / f"{name}.md"
+    if scope == "category":
+        return root / "memory" / MEMORY_FOLDERS[0] / slugify(target) / f"{name}.md"
     return root / "memory" / "general" / f"{name}.md"
 
 
@@ -483,21 +483,25 @@ def _dev(severity: str, message: str) -> Issue:
     return Issue(phase="initial_checks", severity=severity, message=message, ref="agent_setup")
 
 
-def verticals(root: Path, current: str) -> list[str]:
-    """Vertical folders under memory/verticals/, always including the current one."""
-    base = root / "memory" / "verticals"
-    found = {p.name for p in base.iterdir() if p.is_dir()} if base.exists() else set()
+def categories(root: Path, current: str) -> list[str]:
+    """Category folders under memory/categories/ (and the old memory folder), always including
+    the current one."""
+    found = set()
+    for folder in MEMORY_FOLDERS:
+        base = root / "memory" / folder
+        if base.exists():
+            found |= {canonical_category(p.name) for p in base.iterdir() if p.is_dir()}
     return sorted(found | {current})
 
 
-def add_vertical(root: Path, name: str) -> Path:
-    folder = root / "memory" / "verticals" / slugify(name).replace("_", "-")
+def add_category(root: Path, name: str) -> Path:
+    folder = root / "memory" / MEMORY_FOLDERS[0] / slugify(name).replace("_", "-")
     folder.mkdir(parents=True, exist_ok=True)
     readme = folder / "README.md"
     if not readme.exists():
         readme.write_text(
-            f"# {name}\n\nNotes for the {name} vertical. They are used only in "
-            f"runs of that vertical (setting ASICS_VERTICAL={folder.name}).\n"
+            f"# {name}\n\nNotes for the {name} category. They are used only in "
+            f"runs of that category (setting ASICS_CATEGORY={folder.name}).\n"
         )
     return folder
 

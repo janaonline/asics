@@ -7,12 +7,12 @@ from urllib.parse import urlsplit
 from pydantic import BaseModel, Field
 
 from asics_agent.agent_setup import MemoryScope
+from asics_agent.categories import agent_for
 from asics_agent.links.accessibility import check_url, is_india_code
 from asics_agent.links.text import rank_chunks
 from asics_agent.llm import call_json
 from asics_agent.models import AccessCheck, Issue, Parastatal, Question, RunContext, Source
 from asics_agent.services import Services
-from asics_agent.verticals import agent_for
 
 OFFICIAL_SUFFIXES = (".gov.in", ".nic.in", ".gov", ".kar.nic.in")
 UNVERIFIED_SCORE_CAP = 0  # "0 = unusable/unverified"

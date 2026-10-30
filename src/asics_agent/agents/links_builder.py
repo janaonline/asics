@@ -22,6 +22,7 @@ from asics_agent.agents.common import (
     vet_many,
 )
 from asics_agent.agents.state import ParastatalTask, ParastatalTaskOutput
+from asics_agent.categories import agent_for
 from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue
@@ -29,7 +30,6 @@ from asics_agent.progress import report
 from asics_agent.run_options import current_options
 from asics_agent.services import Services
 from asics_agent.tools import ToolContext
-from asics_agent.verticals import agent_for
 
 
 def own_domain(website: str | None) -> set[str]:

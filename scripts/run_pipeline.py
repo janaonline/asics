@@ -13,16 +13,18 @@ Examples:
     # Step 2: answer questions using only that Citation Sheet
     uv run python scripts/run_pipeline.py --step answers --city Bengaluru --pillar DPG
 
-    # Another vertical (agent_setup/verticals/upd.md): the same steps, its own settings
-    uv run python scripts/run_pipeline.py --vertical upd --step sources --city Surat
+    # Another category (agent_setup/categories/ulg.md): the same steps, its own settings
+    uv run python scripts/run_pipeline.py --category ulg --step sources --city Surat
 """
 
 import argparse
 import sys
 import time
 
+from asics_agent.categories import category_settings
 from asics_agent.cities import load_register, slugify
 from asics_agent.config import get_settings
+from asics_agent.legacy_names import old_option
 from asics_agent.reporting import (
     answer_summary,
     headline,
@@ -34,7 +36,6 @@ from asics_agent.run_options import RunOptions
 from asics_agent.runner import BatchRun
 from asics_agent.services import ALLOWED_MODELS, default_services
 from asics_agent.usage import METER
-from asics_agent.verticals import settings_for
 from asics_agent.workbook import city_outcome
 
 
@@ -122,10 +123,11 @@ def main() -> None:
         "Step 2: workbook to write the answers into (one city only)",
     )
     parser.add_argument(
-        "--vertical",
-        help="The ASICS vertical (agent_setup/verticals/<name>.md), e.g. parastatal or upd. "
-        "Default: ASICS_VERTICAL, else parastatal",
+        "--category",
+        help="The ASICS category (agent_setup/categories/<name>.md), e.g. parastatal or ulg. "
+        "Default: ASICS_CATEGORY, else parastatal",
     )
+    parser.add_argument("--vertical", help=argparse.SUPPRESS)  # old name
     parser.add_argument("--parastatal", action="append", help="Limit to parastatal ID(s)")
     parser.add_argument("--pillar", action="append", help="Limit to pillar code(s): UPD, DPG, SC")
     parser.add_argument("--questions", help='Comma-separated IDs, e.g. "UPD 1, DPG 5a"')
@@ -163,8 +165,9 @@ def main() -> None:
     args = parser.parse_args()
 
     settings = get_settings()
-    if args.vertical:
-        settings = settings_for(settings, args.vertical)
+    category = old_option(args.vertical) if args.vertical else args.category
+    if category:
+        settings = category_settings(settings, category)
     services = default_services(settings)
     register, register_issues = load_register(services.settings.city_register)
     if args.all_cities:

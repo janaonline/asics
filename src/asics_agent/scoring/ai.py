@@ -3,7 +3,7 @@
 Step 3 comes after Step 2. For each question and agency in a city, the agent gets the Step 2
 answer and the reviewed Citation Sheet (no web research), and gives the inputs the row above
 each column asks for (e.g. YES / NO), the Citation ID it relied on and a word-for-word quote.
-They are written into the AI copy of the vertical's workbook (scoring/2027/ai/<VERTICAL>_ai.xlsx),
+They are written into the AI copy of the category's workbook (scoring/2027/ai/<SCORING_CODE>_ai.xlsx),
 whose formulas compute the points exactly as for people's scores.
 
 Evidence rules, enforced in code (not just asked of the model):
@@ -30,6 +30,7 @@ from typing import Literal
 from openpyxl import load_workbook
 from pydantic import BaseModel, Field
 
+from asics_agent.categories import ULG_UNIT_ID, agent_for
 from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
@@ -49,9 +50,8 @@ from asics_agent.scoring.phase2 import (
     phase2_status,
 )
 from asics_agent.scoring.recalc import RecalcUnavailable, recalculate
-from asics_agent.scoring.template import QuestionSheet, VerticalTemplate
+from asics_agent.scoring.template import CategoryTemplate, QuestionSheet
 from asics_agent.tools import ToolContext
-from asics_agent.verticals import CITY_UNIT_ID, agent_for
 
 SOURCE_CHARS = 20000
 SCORED_FILE = "scored_cities.json"
@@ -99,31 +99,31 @@ class AIRunReport:
     reasons: dict[str, int] = field(default_factory=dict)  # REASONS key -> rows
 
 
-def ai_file(scoring_dir: Path, vertical: str) -> Path:
-    return scoring_dir / "ai" / f"{vertical}_ai.xlsx"
+def ai_file(scoring_dir: Path, scoring_code: str) -> Path:
+    return scoring_dir / "ai" / f"{scoring_code}_ai.xlsx"
 
 
-def scored_cities(scoring_dir: Path, vertical: str) -> dict[str, str]:
+def scored_cities(scoring_dir: Path, scoring_code: str) -> dict[str, str]:
     """{city: when the AI last scored it (ISO time)}."""
     path = scoring_dir / "ai" / SCORED_FILE
     try:
-        return json.loads(path.read_text()).get(vertical, {})
+        return json.loads(path.read_text()).get(scoring_code, {})
     except (OSError, ValueError):
         return {}
 
 
-def _mark_scored(scoring_dir: Path, vertical: str, cities: list[str]) -> None:
+def _mark_scored(scoring_dir: Path, scoring_code: str, cities: list[str]) -> None:
     path = scoring_dir / "ai" / SCORED_FILE
     try:
         data = json.loads(path.read_text())
     except (OSError, ValueError):
         data = {}
     now = datetime.now().isoformat(timespec="seconds")
-    data.setdefault(vertical, {}).update({c: now for c in cities})
+    data.setdefault(scoring_code, {}).update({c: now for c in cities})
     path.write_text(json.dumps(data, indent=2))
 
 
-def question_details(template: VerticalTemplate, cache_dir: Path) -> dict[str, dict[str, str]]:
+def question_details(template: CategoryTemplate, cache_dir: Path) -> dict[str, dict[str, str]]:
     """{code: {detail label: text}} from a calculated copy of the template (the details are
     formulas that look the question up in the questions list)."""
     copy = cache_dir / f"values_{template.path.name}"
@@ -147,7 +147,7 @@ def question_details(template: VerticalTemplate, cache_dir: Path) -> dict[str, d
 
 
 def plan_tasks(
-    template: VerticalTemplate, register, settings, codes=None, cities=None
+    template: CategoryTemplate, register, settings, codes=None, cities=None
 ) -> tuple[list[Task], list[str], list[str]]:
     """(tasks, cities ready for Step 3, problems). Only cities Step 2 has answered."""
     mapping, problems = match_cities(template.labels, register)
@@ -168,9 +168,7 @@ def plan_tasks(
         for label in sheet.rows:
             city = mapping.get(city_of(label))
             if city in ready:  # "City – Agency" rows, or the city government itself
-                agency = (
-                    label.split(SEPARATOR, 1)[1].strip() if SEPARATOR in label else CITY_UNIT_ID
-                )
+                agency = label.split(SEPARATOR, 1)[1].strip() if SEPARATOR in label else ULG_UNIT_ID
                 tasks.append(Task(code, label, city, by_name[city].state, agency))
     return tasks, ready, problems
 
@@ -470,7 +468,7 @@ def _letter(name: str) -> str:
     return get_column_letter(REVIEW_COLUMNS.index(name) + 1)
 
 
-def _link_your_scores(wb, template: VerticalTemplate) -> dict[str, int]:
+def _link_your_scores(wb, template: CategoryTemplate) -> dict[str, int]:
     """Make each question sheet's Points use the person's score where they entered one.
 
     The AI's points (the experts' formula on the AI's inputs) move to an "AI points" column;
@@ -550,7 +548,7 @@ def _review_rows(ws) -> dict[tuple[str, str], dict]:
 
 
 def _summary_sheet(
-    wb, template: VerticalTemplate, results: list[ScoredCell], details: dict | None = None
+    wb, template: CategoryTemplate, results: list[ScoredCell], details: dict | None = None
 ) -> None:
     """The one sheet the team works from: every question and row the AI has handled, with
     the AI's score and why, the Step 2 answer and citation behind it, and highlighted columns
@@ -668,7 +666,7 @@ def _summary_sheet(
     wb.active = 0
 
 
-def link_for_review(path: Path, template: VerticalTemplate, cache_dir: Path) -> None:
+def link_for_review(path: Path, template: CategoryTemplate, cache_dir: Path) -> None:
     """Bring a scoring workbook up to date for review (e.g. one made before people's scores
     counted in the totals), keeping every row and every person's entry."""
     wb = load_workbook(path)
@@ -676,7 +674,7 @@ def link_for_review(path: Path, template: VerticalTemplate, cache_dir: Path) -> 
     wb.save(path)
 
 
-def ai_copy(template: VerticalTemplate, out: Path) -> str:
+def ai_copy(template: CategoryTemplate, out: Path) -> str:
     """Make sure the AI's copy matches the current scoring workbook. A new copy is made when
     there is none, or when the workbook has changed since (e.g. the experts updated it); the
     AI's earlier answers are carried over for questions and rows that still exist."""
@@ -744,8 +742,8 @@ def _number_or_text(value):
 
 def run_ai_scoring(
     services,
-    template: VerticalTemplate,
-    vertical: str,
+    template: CategoryTemplate,
+    scoring_code: str,
     register,
     *,
     codes=None,
@@ -756,7 +754,7 @@ def run_ai_scoring(
     """Score the chosen questions for the chosen cities that are ready (Step 2 done), write
     them into the AI copy, then calculate."""
     settings = services.settings
-    out = ai_file(settings.scoring_dir, vertical)
+    out = ai_file(settings.scoring_dir, scoring_code)
     note = ai_copy(template, out)
     report = AIRunReport(out)
     tasks, report.cities, report.problems = plan_tasks(template, register, settings, codes, cities)
@@ -801,7 +799,7 @@ def run_ai_scoring(
             if on_progress:
                 on_progress(i, len(futures))
     run_id = datetime.now().strftime("%Y%m%d-%H%M%S")
-    report.log_path = out.parent / "runs" / f"{vertical}_{run_id}.jsonl"
+    report.log_path = out.parent / "runs" / f"{scoring_code}_{run_id}.jsonl"
     report.log_path.parent.mkdir(parents=True, exist_ok=True)
     with report.log_path.open("w") as log:
         for cell in results:
@@ -823,5 +821,5 @@ def run_ai_scoring(
     except RecalcUnavailable as exc:
         report.problems.append(str(exc))
     if results and not codes:  # a full run; a few questions is a trial, not "scored"
-        _mark_scored(settings.scoring_dir, vertical, report.cities)
+        _mark_scored(settings.scoring_dir, scoring_code, report.cities)
     return report

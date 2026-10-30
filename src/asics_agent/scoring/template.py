@@ -1,4 +1,4 @@
-"""Reads a vertical's scoring workbook (the expert team's template) by its conventions.
+"""Reads a category's scoring workbook (the expert team's template) by its conventions.
 
 The scoring criteria live in the workbook itself (the experts' formulas); this module only
 finds where things are, so AI and humans can fill the same cells and the tool can read the
@@ -62,7 +62,7 @@ class SummarySheet:
 
 
 @dataclass
-class VerticalTemplate:
+class CategoryTemplate:
     path: Path
     questions: dict[str, QuestionSheet]
     summary: SummarySheet | None
@@ -172,7 +172,7 @@ def _read_summary(wb) -> SummarySheet | None:
     return None
 
 
-def read_template(path: Path) -> VerticalTemplate:
+def read_template(path: Path) -> CategoryTemplate:
     wb = load_workbook(path)  # formulas, not values: we need the structure
     questions, problems = {}, []
     for ws in wb.worksheets:
@@ -226,4 +226,4 @@ def read_template(path: Path) -> VerticalTemplate:
                 f"Sheet '{sheet.sheet}' lists different cities/rows from "
                 f"'{first.sheet}'. Every question sheet must have the same rows."
             )
-    return VerticalTemplate(path, questions, summary, list_sheet, labels, problems)
+    return CategoryTemplate(path, questions, summary, list_sheet, labels, problems)

@@ -151,7 +151,7 @@ def make_chat_model(
 
 
 def default_services(settings: Settings | None = None) -> Services:
-    """Real Claude and HTTP, for the given vertical's settings (default: ASICS_VERTICAL)."""
+    """Real Claude and HTTP, for the given category's settings (default: ASICS_CATEGORY)."""
     settings = settings or get_settings()
     return Services(
         llm=make_chat_model(settings),

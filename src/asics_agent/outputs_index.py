@@ -1,6 +1,6 @@
 """outputs/START_HERE.xlsx: the one file that says where everything is.
 
-One row per vertical and city: how far it has got, its latest workbooks (click to open), and
+One row per city and category: how far it has got, its latest workbooks (click to open), and
 what to do next. A second sheet explains every folder. It is rewritten after every run (and
 when the app starts), from the files on disk only, so it is quick and always current.
 
@@ -8,9 +8,9 @@ The outputs folder:
 
   outputs/
     START_HERE.xlsx
-    <Vertical>/cities/<City>/   that vertical's work for that city (see FOLDERS)
-    <Vertical>/batches/         one index workbook per multi-city run
-    <Vertical>/practice/        practice runs (sample data)
+    <Category>/cities/<City>/   that category's work for that city (see FOLDERS)
+    <Category>/batches/         one index workbook per multi-city run
+    <Category>/practice/        practice runs (sample data)
     _app/                       the app's own files (error log, uploads)
     _old/                       earlier layouts, kept for reference
 """
@@ -27,11 +27,12 @@ APP_DIR = "_app"
 FOLDERS = [
     ("START_HERE.xlsx", "This file. Start here."),
     (
-        "<Vertical>/cities/<City>/ASICS_<City>_Sources.xlsx",
-        "Step 1: the parastatals and the Citation Sheet. Your team reviews and edits this one.",
+        "<Category>/cities/<City>/ASICS_<City>_Sources.xlsx",
+        "Step 1: the parastatals (or the ULG) and the Citation Sheet. Your team reviews and edits "
+        "this one.",
     ),
     (
-        "<Vertical>/cities/<City>/answers/<run>/ASICS_<Vertical>_<City>_Phase2.xlsx",
+        "<Category>/cities/<City>/answers/<run>/ASICS_<Category>_<City>_Phase2.xlsx",
         "Step 2: the answers, one folder per run. The newest is the one to use; older runs are "
         "kept for comparison.",
     ),
@@ -40,23 +41,23 @@ FOLDERS = [
         "Step 3: the scoring workbook. Its first sheet, Scores (start here), is the one to use.",
     ),
     (
-        "<Vertical>/cities/<City>/history/",
+        "<Category>/cities/<City>/history/",
         "Earlier versions of the Sources workbook, saved before each Step 1 run replaced it.",
     ),
-    ("<Vertical>/cities/<City>/checks/", "Reports from free check-only runs."),
+    ("<Category>/cities/<City>/checks/", "Reports from free check-only runs."),
     (
-        "<Vertical>/cities/<City>/evidence/",
+        "<Category>/cities/<City>/evidence/",
         "Saved copies of every source as it was when checked (the 'Open saved copy' links). "
         "Needed by Steps 2 and 3: don't delete.",
     ),
     (
-        "<Vertical>/cities/<City>/links.db, sources_summary.json, answers/<run>/links.db, "
+        "<Category>/cities/<City>/links.db, sources_summary.json, answers/<run>/links.db, "
         "run_summary.json",
         "Technical records of each run, for developers.",
     ),
-    ("<Vertical>/batches/<run>/", "For runs over several cities: one index workbook listing them."),
-    ("<Vertical>/practice/", "Practice runs with sample data (not real research)."),
-    ("_app/", "The app's own files: error log, uploaded workbooks, last vertical chosen."),
+    ("<Category>/batches/<run>/", "For runs over several cities: one index workbook listing them."),
+    ("<Category>/practice/", "Practice runs with sample data (not real research)."),
+    ("_app/", "The app's own files: error log, uploaded workbooks, last city and category chosen."),
     ("_old/", "Files from earlier versions of the tool, kept for reference."),
 ]
 NEXT = {
@@ -70,7 +71,7 @@ _HEAD = PatternFill("solid", fgColor="DDE7F0")
 
 
 def app_dir(settings) -> Path:
-    """outputs/_app: the app's own files, whatever vertical is chosen."""
+    """outputs/_app: the app's own files, whatever category is chosen."""
     root = getattr(settings, "outputs_root", None) or settings.outputs_dir
     path = root / APP_DIR
     path.mkdir(parents=True, exist_ok=True)
@@ -83,13 +84,13 @@ def _latest(paths) -> Path | None:
 
 
 def city_row(vs, city_name: str, scored: dict) -> dict:
-    """Where one city is up to in one vertical, from the files on disk."""
+    """Where one city is up to in one category, from the files on disk."""
     from asics_agent.sources_workbook import sources_path, workspace_for
-    from asics_agent.workbook import answers_pattern
+    from asics_agent.workbook import answers_files
 
     folder = workspace_for(vs.outputs_dir, city_name)
     sources = sources_path(folder, city_name)
-    answers = _latest((folder / "answers").glob(f"*/{answers_pattern(vs)}"))
+    answers = _latest(answers_files(folder, vs))
     if not sources.exists():
         stage = "Not started"
     elif answers is None:
@@ -110,15 +111,15 @@ def city_row(vs, city_name: str, scored: dict) -> dict:
 
 
 def write_index(settings) -> Path:
-    """Write outputs/START_HERE.xlsx for every vertical and every city in the register."""
+    """Write outputs/START_HERE.xlsx for every category and every city in the register."""
+    from asics_agent.categories import category_settings, load_categories
     from asics_agent.cities import load_register
     from asics_agent.scoring.ai import ai_file, scored_cities
-    from asics_agent.verticals import load_verticals, settings_for
 
     root = getattr(settings, "outputs_root", None) or settings.outputs_dir
     root.mkdir(parents=True, exist_ok=True)
     path = root / INDEX
-    found, _ = load_verticals(settings.agent_setup_dir)
+    found, _ = load_categories(settings.agent_setup_dir)
     register, _ = load_register(settings.city_register)
 
     wb = Workbook()
@@ -128,14 +129,14 @@ def write_index(settings) -> Path:
     ws["A1"].font = Font(bold=True, size=14)
     ws.append(
         [
-            "One row per vertical and city. Click a file name to open it. The Step 3 "
-            "scoring workbook covers every city of its vertical."
+            "One row per city and category. Click a file name to open it. The Step 3 "
+            "scoring workbook covers every city of its category."
         ]
     )
     ws.append([])
     columns = [
-        "Vertical",
         "City",
+        "Category",
         "Where it's up to",
         "Next step",
         "1 · Sources workbook (review)",
@@ -147,13 +148,13 @@ def write_index(settings) -> Path:
     for cell in ws[4]:
         cell.font, cell.fill = Font(bold=True), _HEAD
         cell.alignment = Alignment(wrap_text=True, vertical="top")
-    for vertical in found.values():
-        vs = settings_for(settings, vertical.name)
-        scored = scored_cities(vs.scoring_dir, vs.vertical_code)
-        scoring = ai_file(vs.scoring_dir, vs.vertical_code)
+    for category in found.values():
+        vs = category_settings(settings, category.name)
+        scored = scored_cities(vs.scoring_dir, vs.scoring_code)
+        scoring = ai_file(vs.scoring_dir, vs.scoring_code)
         for city in register.values():
             info = city_row(vs, city.name, scored)
-            ws.append([vertical.title, city.name, info["stage"], NEXT[info["stage"]]])
+            ws.append([city.name, category.title, info["stage"], NEXT[info["stage"]]])
             r = ws.max_row
             links = [
                 info["sources"],
@@ -168,7 +169,7 @@ def write_index(settings) -> Path:
                 cell = ws.cell(row=r, column=c, value=target.name)
                 cell.hyperlink = os.path.relpath(target, root)
                 cell.font = Font(color="1F4E9C", underline="single")
-    for letter, width in zip("ABCDEFGH", [12, 14, 16, 44, 34, 40, 22, 14], strict=True):
+    for letter, width in zip("ABCDEFGH", [14, 12, 16, 44, 34, 40, 22, 14], strict=True):
         ws.column_dimensions[letter].width = width
     ws.freeze_panes = "C5"
 

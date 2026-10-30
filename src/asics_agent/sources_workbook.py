@@ -29,6 +29,9 @@ from asics_agent.workbook import (
     _saved_copy,
     _write_issue_sheets,
     _write_rows,
+    canonical_header,
+    relabel_unit,
+    unit_sheet,
 )
 
 PARASTATALS_SHEET, CITATIONS_SHEET, COVERAGE_SHEET = "Parastatals", "Citation Sheet", "Coverage"
@@ -117,6 +120,33 @@ GUIDE = [
     ("When you're done", "Save and close this file, then run Step 2 (Answer questions)."),
 ]
 
+GUIDE_ULG = [
+    ("Sources for {city}", ""),
+    ("", ""),
+    (
+        "What this is",
+        "The city's ULG (urban local government) and the sources for {city}. Step 2 (Answer "
+        'questions) uses ONLY the Citation Sheet rows marked "Use for Answers? = Yes", so this '
+        "workbook controls exactly what the answers can rely on.",
+    ),
+    (
+        "1. ULG sheet",
+        "The city's ULG: its Act, its official website and how far that website can be "
+        "trusted, point by point (the Website Check column). Each ULG question is answered once "
+        "per city.",
+    ),
+    (
+        GUIDE[4][0],
+        GUIDE[4][1].replace(
+            'Parastatal (an ID from the Parastatals sheet, or "All parastatals")',
+            "ULG (the ID on the ULG sheet)",
+        ),
+    ),
+    GUIDE[5],
+    GUIDE[6],
+    GUIDE[7],
+]
+
 
 def workspace_for(outputs_dir: Path, city_name: str) -> Path:
     return outputs_dir / "cities" / re.sub(r"[^\w\- ]", "", city_name).strip()
@@ -166,7 +196,7 @@ def _cell_url(cell) -> str:
 
 
 def _rows(ws):
-    header = {_norm(c.value): i for i, c in enumerate(ws[1]) if c.value}
+    header = {_norm(canonical_header(c.value)): i for i, c in enumerate(ws[1]) if c.value}
     for row_no, row in enumerate(ws.iter_rows(min_row=2), start=2):
 
         def get(name, _row=row):
@@ -207,7 +237,8 @@ def read_sources_workbook(path: Path, cache_dir: Path):
         )
 
     wb = load_workbook(path, data_only=True)
-    for sheet in (PARASTATALS_SHEET, CITATIONS_SHEET):
+    units = unit_sheet(wb.sheetnames)
+    for sheet in (units, CITATIONS_SHEET):
         if sheet not in wb.sheetnames:
             team(
                 "error",
@@ -216,9 +247,9 @@ def read_sources_workbook(path: Path, cache_dir: Path):
             return [], [], issues
 
     parastatals: list[Parastatal] = []
-    for row_no, get, url in _rows(wb[PARASTATALS_SHEET]):
+    for row_no, get, url in _rows(wb[units]):
         pid = re.sub(r"\s+", "", get("Parastatal ID")).upper()
-        where = f"Parastatals sheet, row {row_no}"
+        where = f"{units} sheet, row {row_no}"
         if not pid or not get("Parastatal Name"):
             team("error", f"{where}: every parastatal needs an ID and a name.")
             continue
@@ -271,7 +302,7 @@ def read_sources_workbook(path: Path, cache_dir: Path):
         if owner != ALL_PARASTATALS and owner not in ids:
             team(
                 "warning",
-                f'{where}: "{get("Parastatal")}" isn\'t on the Parastatals sheet. '
+                f'{where}: "{get("Parastatal")}" isn\'t on the {units} sheet. '
                 f'Use an ID from that sheet or "{ALL_PARASTATALS}".',
             )
             continue
@@ -323,6 +354,7 @@ def write_sources_workbook(
     questions: dict[str, Question],
     applicability: dict[str, list[str]],
     issues: list[Issue],
+    unit_label: str = "Parastatal",
 ) -> Path:
     """Write the Sources workbook, backing up any previous version to history/."""
     if path.exists():
@@ -336,7 +368,7 @@ def write_sources_workbook(
     guide.title = "How to Use"
     guide.column_dimensions["A"].width = 26
     guide.column_dimensions["B"].width = 100
-    for a, b in GUIDE:
+    for a, b in GUIDE_ULG if unit_label == "ULG" else GUIDE:
         guide.append([a.format(city=city_name), b.format(city=city_name)])
     guide["A1"].font = Font(bold=True, size=14)
     for r in range(3, guide.max_row + 1):
@@ -486,6 +518,7 @@ def write_sources_workbook(
         cell.fill = _HEADER_FILL
 
     _write_issue_sheets(wb, issues)
+    relabel_unit(wb, unit_label)
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
         wb.save(path)

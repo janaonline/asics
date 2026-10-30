@@ -7,6 +7,8 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+from asics_agent.legacy_names import env_category
+
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 
 load_dotenv(PROJECT_ROOT / ".env")
@@ -25,7 +27,7 @@ class Settings:
     question_bank: Path
     city_register: Path
     agent_setup_dir: Path
-    vertical: str
+    category: str
     memory_max_chars: int
     outputs_dir: Path
     max_concurrency: int
@@ -39,29 +41,29 @@ class Settings:
     batch_answers: bool  # Step 2: send model calls as Message Batches (half price, slower)
     batch_live_up_to: int  # Step 2: a round with this many calls or fewer is sent live
     scoring_dir: Path = PROJECT_ROOT / "scoring" / "2027"  # templates, human/AI copies, results
-    # The vertical being run (agent_setup/verticals/<vertical>.md; see verticals.py). The
-    # defaults are the Parastatal vertical's.
-    vertical_title: str = "Parastatal"
-    vertical_code: str = "PARASTATAL"
-    unit: str = "parastatal"  # what is assessed: "parastatal" or "city_government"
+    # The category being run (agent_setup/categories/<category>.md; see categories.py). The
+    # defaults are the Parastatal category's.
+    category_title: str = "Parastatal"
+    scoring_code: str = "PARASTATAL"  # the scoring workbook's code (file and sheet names)
+    unit: str = "parastatal"  # what is assessed: "parastatal" or "ulg"
     unit_label: str = "Parastatal"
     shared_rules: str = "shared-rules"
     agents: tuple = ()  # (role, agent name) pairs that differ from the defaults
     question_bank_sheet: str = ""
     question_columns: tuple = ()  # (our column name, the bank's column name) pairs
     scoring_workbook: Path | None = None
-    outputs_root: Path | None = None  # the outputs folder before the vertical's subfolder
+    outputs_root: Path | None = None  # the outputs folder before the category's subfolder
     # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
     find_sources_max_uses: int | None = None
 
 
 @lru_cache
 def get_settings() -> Settings:
-    """Settings for the vertical named by ASICS_VERTICAL (default: parastatal)."""
-    from asics_agent.verticals import settings_for
+    """Settings for the category named by ASICS_CATEGORY (default: parastatal)."""
+    from asics_agent.categories import category_settings
 
     base = _base_settings()
-    return settings_for(base, base.vertical)
+    return category_settings(base, base.category)
 
 
 def _base_settings() -> Settings:
@@ -75,7 +77,7 @@ def _base_settings() -> Settings:
         city_register=_path("ASICS_CITY_REGISTER", "data/cities/ASICS_Cities_and_Parastatals.xlsx"),
         outputs_dir=_path("ASICS_OUTPUTS_DIR", "outputs"),
         agent_setup_dir=_path("ASICS_AGENT_SETUP_DIR", "agent_setup"),
-        vertical=os.getenv("ASICS_VERTICAL", "parastatal"),
+        category=env_category(),
         memory_max_chars=int(os.getenv("ASICS_MEMORY_MAX_CHARS", "20000")),
         max_concurrency=int(os.getenv("ASICS_MAX_CONCURRENCY", "4")),
         check_workers=int(os.getenv("ASICS_CHECK_WORKERS", "3")),

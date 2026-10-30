@@ -7,9 +7,12 @@ exists at its new place is left where it was (and listed).
 
 Current layout (see src/asics_agent/outputs_index.py):
     outputs/START_HERE.xlsx
-    outputs/<Vertical>/cities|batches|practice/
-    outputs/_app/          the app's error log, uploads, last vertical chosen
+    outputs/<Category>/cities|batches|practice/
+    outputs/_app/          the app's error log, uploads, last category chosen
     outputs/_old/          earlier layouts' leftovers
+
+This is the manual way to finish the rename of outputs/UPD/ to outputs/ULG/ (until you run it
+the app keeps reading outputs/UPD/).
 """
 
 import argparse
@@ -17,6 +20,7 @@ import shutil
 from pathlib import Path
 
 from asics_agent.config import get_settings
+from asics_agent.legacy_names import OLD_OUTPUT_FOLDER, OLD_OUTPUT_MOVES
 from asics_agent.outputs_index import write_index
 
 # earlier place (inside outputs/) -> current place
@@ -24,12 +28,11 @@ MOVES = [
     ("cities", "Parastatal/cities"),
     ("batches", "Parastatal/batches"),
     ("practice", "Parastatal/practice"),
-    ("verticals/upd", "UPD"),
     ("app_errors.log", "_app/app_errors.log"),
-    (".last_vertical", "_app/last_vertical"),
     ("uploads", "_app/uploads"),
     ("bengaluru", "_old/bengaluru"),  # the first version's single-city runs
     ("evidence", "_old/evidence"),  # the first version's shared evidence cache
+    *OLD_OUTPUT_MOVES,  # the old names, and outputs/UPD -> outputs/ULG
 ]
 
 
@@ -61,13 +64,13 @@ def main():
     for old, new in MOVES:
         if (root / old).exists():
             move(root / old, root / new, args.apply, skipped)
-    verticals = root / "verticals"
+    old_folder = root / OLD_OUTPUT_FOLDER
     if (
         args.apply
-        and verticals.is_dir()
-        and not any(p for p in verticals.iterdir() if p.name != ".DS_Store")
+        and old_folder.is_dir()
+        and not any(p for p in old_folder.iterdir() if p.name != ".DS_Store")
     ):
-        shutil.rmtree(verticals)  # only an empty folder (and a Finder file) is left
+        shutil.rmtree(old_folder)  # only an empty folder (and a Finder file) is left
     for line in skipped:
         print(f"  left in place: {line}")
     if args.apply:

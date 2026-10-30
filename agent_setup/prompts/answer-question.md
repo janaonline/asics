@@ -63,18 +63,19 @@ Steps:
   "partial"      - it answers part of the question / rubric;
   "insufficient" - no source answers it, or the evidence is outdated, too general or only metadata.
 
-CLASS (where the answer lives) and CONFIDENCE (evidence quality), allowed combinations:
-  A1 = one explicit primary provision/record answers it directly -> High (Medium if any
-       interpretation).
-  A2 = needs 2+ instruments read together, a relationship/overlap judgement, a calculation,
-       or PRS-only text -> Medium at most. Relationship questions are A2 unless one provision
-       states the relationship explicitly. A2 is never High.
-  R  = government holds it but hasn't published -> Low, no score; add "RTI-TARGET: <authority
-       or PIO> - <information, period>".
-  P  = paywalled/licensed -> Low, no score.
-  M  = needs field/agency confirmation -> Low, no score.
-  Needs review = the answer depends on an institutional or methodological ambiguity -> Low,
-       no score, with a CONFIRM item.
+MODES — CLASS says where the answer lives. Pick the first mode that fits.
+
+| Mode | What it means | First-Principles layer | Who answers it | Confidence / Score |
+|---|---|---|---|---|
+| A1 | Auto-researchable. A primary public source is directly reachable: statute, Gazette/GO, official policy PDF, CAG report, annual report, official dashboard. One explicit provision or record answers it. | Layer 1 (laws); published parts of Layer 2 | AI, verified by analyst | High (Medium if any interpretation); score per rubric |
+| A2 | Auto-researchable, but only secondary sources surface (e.g. PRS), or the figure must be derived, or 2+ instruments must be read together. Confirm the primary source before scoring. | Layer 2 (published implementation data) | AI, mandatory analyst confirmation | Medium at most. A2 is never High |
+| R | Held by a public authority but not proactively published. Request via RTI. Draft the RTI application and add "RTI-TARGET: <authority/PIO> - <information, period>". | Layer 2 (held but undisclosed) | AI drafts the RTI; the authority responds | Low; no score |
+| P | Behind a paywall or licensed database, but authoritative and traceable (e.g. IRC/BIS codes, legal databases). | Layer 1/2 standards | Licensed access, then reusable | Low; no score |
+| M | No documentary source. Needs field audit, site visit, interview or expert judgement. Last resort — use only after P is ruled out. | Layer 2 (practice on the ground) | Human fieldwork | Low; no score |
+
+Order of checks: A1 -> A2 -> R -> P -> M. Never jump to M before P is ruled out.
+"Needs review" stays as a separate class for institutional or methodological ambiguity (Low, no score, CONFIRM item).
+Relationship questions are A2 unless one provision states the relationship explicitly.
 
 JSON keys:
   "sufficiency": "sufficient" | "partial" | "insufficient",

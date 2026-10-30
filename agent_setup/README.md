@@ -3,12 +3,13 @@
 Everything that shapes what the AI does, in plain Markdown. The code reads these files on
 every call, so changes apply to the next run. No code changes are needed.
 
-## Verticals
+## Categories
 
-`verticals/<name>.md` sets up each ASICS vertical: its question bank, what it assesses in a
-city (parastatals, or the city government), which agent does each job in Steps 1, 2 and 3,
+`categories/<name>.md` sets up each ASICS category (ULG, Parastatal): its question bank, what it
+assesses in a city (the city's parastatals, or the ULG itself), which agent does each job in Steps 1, 2 and 3,
 and its shared rules (`prompts/shared-rules.md` for Parastatal, `prompts/shared-rules-city.md`
-for UPD). The agents below are shared unless a vertical names its own.
+for ULG). The agents below are shared unless a category names its own. UPD, SC and DPG are
+*sections* inside a category's question bank, not categories.
 
 ## Map
 
@@ -20,9 +21,9 @@ for UPD). The agents below are shared unless a vertical names its own.
 | Source assessor | 1 | `assess-source` | india-code-and-acts | none |
 | Answer writer | 2 | `answer-question` | scoring-methodology, india-code-and-acts, + the question's section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
 | Question scorer | 3 | `score-question` | scoring-methodology, india-code-and-acts | **read_citation**, **search_citation_sheet** (no web) |
-| City government profiler (UPD) | 1 | `city-profile` | government-websites, india-code-and-acts | web_search, web_fetch |
-| City citation builder (UPD) | 1 | `find-city-sources` | government-websites, india-code-and-acts | web_search, web_fetch (allowed domains only; 5 each) |
-| City answer writer (UPD) | 2 | `answer-city-question` | scoring-methodology, india-code-and-acts, + the section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
+| City government profiler (ULG) | 1 | `city-profile` | government-websites, india-code-and-acts | web_search, web_fetch |
+| City citation builder (ULG) | 1 | `find-city-sources` | government-websites, india-code-and-acts | web_search, web_fetch (allowed domains only; 5 each) |
+| City answer writer (ULG) | 2 | `answer-city-question` | scoring-methodology, india-code-and-acts, + the section | **read_citation**, **search_citation_sheet**, **lookup_question** (no web) |
 | Question bank reviewer | checks | `bank-review` | scoring-methodology | none |
 
 Every agent also receives `prompts/shared-rules.md` (the URL, verification and evidence rules)
@@ -72,6 +73,6 @@ answers must come only from the Citation Sheet.
 
 - **`memory/general/`:** used in every run.
 - **`memory/cities/<city>.md`** or **`memory/cities/<city>/…`:** used only for that city.
-- **`memory/verticals/<vertical>/`:** used only for that ASICS vertical. The current one is `parastatal` (setting `ASICS_VERTICAL`); add folders like `mobility/` when that work starts.
+- **`memory/categories/<category>/`:** used only for that ASICS category (`ulg` or `parastatal`; setting `ASICS_CATEGORY`); add folders like `mobility/` when that work starts.
 - **Narrowing a note:** a settings block at the top can limit it to some parastatals, sections, agents or steps.
 - **Guidance, not evidence:** answers must still quote the Citation Sheet. Every answer lists the notes it used (the **Team Context Used** column), and each run records a fingerprint of this whole folder in its summary.

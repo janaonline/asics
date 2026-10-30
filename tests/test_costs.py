@@ -56,14 +56,14 @@ def test_the_estimate_uses_the_last_run_else_a_starting_figure(services):
 
 
 def test_planned_work_per_city(services):
+    from asics_agent.categories import load_bank
     from asics_agent.cities import load_register
-    from asics_agent.verticals import load_bank
 
     settings = services.settings
     city = next(iter(load_register(settings.city_register)[0].values()))
     # No Sources workbook yet: the register's agencies plus typical ones not found yet.
     assert len(costs.city_units(settings, city)) == costs.DEFAULT_AGENCIES
-    one_unit = dataclasses.replace(settings, unit="city_government")
+    one_unit = dataclasses.replace(settings, unit="ulg")
     assert len(costs.city_units(one_unit, city)) == 1
 
     questions, _ = load_bank(settings)

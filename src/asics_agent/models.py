@@ -3,14 +3,16 @@
 import hashlib
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
+
+from asics_agent.legacy_names import canonical_unit
 
 ParastatalType = Literal[
     "water_supply_board",
     "transport_corporation",
     "development_authority",
     "other",
-    "city_government",  # verticals that assess the city government itself (e.g. UPD)
+    "ulg",  # the ULG category assesses the city government itself
 ]
 
 Accessibility = Literal["Public", "Not human-verified"]
@@ -89,6 +91,11 @@ class Parastatal(BaseModel):
     official_website: str = ""
     website_check: WebsiteCheck | None = None
     other_websites: list[WebsiteCheck] = Field(default_factory=list)
+
+    @field_validator("type", mode="before")
+    @classmethod
+    def _old_type_names(cls, value):
+        return canonical_unit(value) if isinstance(value, str) else value
 
 
 class CityConfig(BaseModel):

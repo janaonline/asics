@@ -18,8 +18,10 @@ import streamlit as st
 import ui
 from asics_agent import costs
 from asics_agent.applicability import applies_to
+from asics_agent.categories import category_settings, load_bank, load_categories
 from asics_agent.cities import load_register
 from asics_agent.config import get_settings
+from asics_agent.legacy_names import OLD_OUTPUT_FOLDER, canonical_category, read_app_file
 from asics_agent.links.accessibility import make_http_client
 from asics_agent.outputs_index import app_dir, refresh_index
 from asics_agent.plan import PlanRun
@@ -38,8 +40,7 @@ from asics_agent.run_options import RunOptions
 from asics_agent.runner import BatchRun, PipelineRun
 from asics_agent.services import ALLOWED_MODELS, default_services
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
-from asics_agent.verticals import load_bank, load_verticals, settings_for
-from asics_agent.workbook import answers_pattern, city_outcome, coverage_counts
+from asics_agent.workbook import answers_files, answers_patterns, city_outcome, coverage_counts
 from ui import confirm_cost, header, setup_page_chrome, sidebar_footer, step_card
 
 st.set_page_config(
@@ -49,41 +50,134 @@ setup_page_chrome()
 BASE_SETTINGS = get_settings()
 
 
-def vertical_choice() -> str:
-    """The vertical the team is working on (sidebar). Every page and run uses its settings."""
-    found, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
-    names = list(found) or [BASE_SETTINGS.vertical]
-    remembered = app_dir(BASE_SETTINGS) / "last_vertical"  # survives a page reload
-    if st.session_state.get("vertical") not in names:
-        try:
-            last = remembered.read_text().strip()
-        except OSError:
-            last = ""
-        default = BASE_SETTINGS.vertical if BASE_SETTINGS.vertical in names else names[0]
-        st.session_state["vertical"] = last if last in names else default
+def _remember(name: str, value: str) -> None:
+    try:
+        (app_dir(BASE_SETTINGS) / name).write_text(value)
+    except OSError:
+        pass
 
-    def remember():
-        try:
-            remembered.write_text(st.session_state["vertical"])
-        except OSError:
-            pass
 
-    return st.sidebar.selectbox(
-        "Vertical",
+def _remembered(name: str) -> str:
+    try:
+        return read_app_file(app_dir(BASE_SETTINGS), name)
+    except OSError:
+        return ""
+
+
+def _set_choice(key: str, widget_key: str) -> None:
+    """A city or category picker changed: it becomes the choice on every page."""
+    st.session_state[key] = st.session_state[widget_key]
+    _remember(f"last_{key}", st.session_state[key])
+    if key == "city":
+        _preselect_city(st.session_state["city"])
+
+
+def _preselect_city(slug: str) -> None:
+    """The chosen city is what the run pages start with (Steps 1-3, Run steps, City files)."""
+    configs, _ = load_register(BASE_SETTINGS.city_register)
+    if slug not in configs:
+        return
+    name = configs[slug].name
+    for page in ("step1", "step2", "plan"):
+        st.session_state[f"preselect-{page}"] = [slug]
+    st.session_state["preselect-step3"] = [name]
+    st.session_state["view-city"] = workspace_for(BASE_SETTINGS.outputs_dir, name).name
+
+
+def category_names() -> list[str]:
+    """ULG first, then the others (agent_setup/categories/)."""
+    found, _ = load_categories(BASE_SETTINGS.agent_setup_dir)
+    return sorted(found, key=lambda n: (n != "ulg", n)) or [BASE_SETTINGS.category]
+
+
+CATEGORY_TITLES = {n: c.title for n, c in load_categories(BASE_SETTINGS.agent_setup_dir)[0].items()}
+
+
+def city_choice() -> str | None:
+    """The city the team is working on (sidebar). Chosen first, then the category."""
+    configs, _ = load_register(BASE_SETTINGS.city_register)
+    if not configs:
+        return None
+    slugs = list(configs)
+    if (picked := st.session_state.pop("city-next", None)) in slugs:  # chosen on Home
+        st.session_state["city"] = picked
+        _remember("last_city", picked)
+        _preselect_city(picked)
+    if st.session_state.get("city") not in slugs:
+        last = _remembered("last_city")
+        st.session_state["city"] = last if last in slugs else slugs[0]
+        _preselect_city(st.session_state["city"])
+    city = st.session_state["city"]
+    st.sidebar.selectbox(
+        "City",
+        slugs,
+        index=slugs.index(city),
+        key=f"sidebar-city-{city}",
+        format_func=lambda s: configs[s].name,
+        help="Choose the city first, then the category. The run pages start with this city.",
+        on_change=_set_choice,
+        args=("city", f"sidebar-city-{city}"),
+    )
+    return city
+
+
+def category_choice() -> str:
+    """The category the team is working on (sidebar). Every page and run uses its settings."""
+    names = category_names()
+    if st.session_state.get("category") not in names:
+        last = canonical_category(_remembered("last_category"))
+        default = BASE_SETTINGS.category if BASE_SETTINGS.category in names else names[0]
+        st.session_state["category"] = last if last in names else default
+    category = st.session_state["category"]
+    st.sidebar.selectbox(
+        "Category",
         names,
-        key="vertical",
-        format_func=lambda n: found[n].title if n in found else n.title(),
-        help="Each ASICS vertical has its own question bank, agents, city folders and scoring "
-        "workbook (agent_setup/verticals/). Steps 1, 2 and 3 work the same for all of them.",
-        on_change=remember,
+        index=names.index(category),
+        key=f"sidebar-category-{category}",
+        format_func=lambda n: CATEGORY_TITLES.get(n, n.title()),
+        help="ULG: each question is answered once per city. Parastatal: each applicable question "
+        "is answered for every parastatal in the city. Each category has its own question bank, "
+        "agents, city folders and scoring workbook (agent_setup/categories/). Steps 1, 2 and 3 "
+        "work the same for both.",
+        on_change=_set_choice,
+        args=("category", f"sidebar-category-{category}"),
+    )
+    return category
+
+
+def category_picker(page: str) -> None:
+    """The category on a run page, after the cities: the same choice as the sidebar's."""
+    names = category_names()
+    key = f"{page}-category-{settings.category}"
+    st.radio(
+        "Category",
+        names,
+        index=names.index(settings.category),
+        key=key,
+        horizontal=True,
+        format_func=lambda n: CATEGORY_TITLES.get(n, n.title()),
+        on_change=_set_choice,
+        args=("category", key),
     )
 
 
-settings = settings_for(BASE_SETTINGS, vertical_choice())
+CATEGORY_NOTES = {
+    "ulg": "Each ULG question is answered once per city.",
+    "parastatal": "Each applicable question is answered separately for every parastatal in this "
+    "city. The parastatals can differ between cities.",
+}
+
+
+def category_note(unit: str) -> str:
+    return CATEGORY_NOTES.get(unit, "")
+
+
+city_choice()
+settings = category_settings(BASE_SETTINGS, category_choice())
 if not st.session_state.get("index-written"):  # outputs/START_HERE.xlsx, once per visit
     refresh_index(BASE_SETTINGS)
     st.session_state["index-written"] = True
-ui.VERTICAL = settings.vertical_title
+ui.CATEGORY = settings.category_title
 
 MODES = {
     "real": "Real run: researches the web with Claude (uses the internet, costs money)",
@@ -100,16 +194,16 @@ def run_store() -> dict:
 
 
 @st.cache_data
-def _question_bank(vertical: str, path: str, mtime: float):
+def _question_bank(category: str, path: str, mtime: float):
     questions, _ = load_bank(settings)
     return questions
 
 
 def question_bank():
-    """The question bank of the vertical being worked on."""
+    """The question bank of the category being worked on."""
     path = settings.question_bank
     return _question_bank(
-        settings.vertical, str(path), path.stat().st_mtime if path.exists() else 0
+        settings.category, str(path), path.stat().st_mtime if path.exists() else 0
     )
 
 
@@ -194,11 +288,11 @@ START_HEADERS = {
 
 
 def plan_page():
-    """Run several verticals and steps for several cities in one go."""
+    """Run several categories and steps for several cities in one go."""
     header(
         "Run steps",
-        "Choose the verticals, cities and steps. Each step runs for every chosen vertical, in "
-        "order: find sources, then answer, then score.",
+        "Choose the cities, then the categories and steps. Each step runs for every chosen "
+        "category, in order: find sources, then answer, then score.",
         "Assess",
     )
     current = run_store()["current"]
@@ -207,20 +301,11 @@ def plan_page():
         if st.button("Go to the current run", type="primary"):
             st.switch_page(PAGES["run"])
         return
-    found, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
+    found, _ = load_categories(BASE_SETTINGS.agent_setup_dir)
     practice = st.checkbox(
         "Practice with sample data (free, takes about a minute)",
-        help="Uses two made-up cities and one question per vertical, with a scripted AI.",
+        help="Uses two made-up cities and one question per category, with a scripted AI.",
         key="plan-practice",
-    )
-    verticals = st.multiselect(
-        "Verticals",
-        list(found),
-        default=list(found),
-        format_func=lambda n: found[n].title,
-        help="Each vertical has its own question bank, agents and scoring workbook "
-        "(agent_setup/verticals/).",
-        key="plan-verticals",
     )
     if practice:
         configs, _ = register(practice_services(BASE_SETTINGS).settings.city_register)
@@ -237,6 +322,19 @@ def plan_page():
         format_func=lambda c: configs[c].name,
         key=f"plan-cities-{practice}",
     )
+    names = category_names()
+    categories = st.multiselect(
+        "Categories",
+        names,
+        default=names,
+        format_func=lambda n: found[n].title if n in found else n.title(),
+        help="Each category has its own question bank, agents and scoring workbook "
+        "(agent_setup/categories/).",
+        key="plan-categories",
+    )
+    for name in categories:
+        if name in found:
+            st.caption(f"**{found[name].title}:** {category_note(found[name].unit)}")
     steps = (
         st.pills(
             "Steps",
@@ -259,7 +357,7 @@ def plan_page():
         review_parastatals = st.toggle(
             "In Step 1, pause to review the parastatals found before researching their sources",
             value=True,
-            help="Applies to verticals that discover agencies (Parastatal).",
+            help="Applies to categories that discover agencies (Parastatal).",
         )
         full_refresh = st.toggle(
             "In Step 1, search everything again (full refresh)",
@@ -268,7 +366,7 @@ def plan_page():
             "websites and verified sources, and only questions with no verified source are "
             "searched. On: search again for agencies and every question.",
         )
-    stage_count = len(verticals) * len(steps)
+    stage_count = len(categories) * len(steps)
     gaps = []
     if 2 in steps and 1 not in steps:
         gaps.append("Step 2 needs each city's Sources workbook from Step 1.")
@@ -276,13 +374,13 @@ def plan_page():
         gaps.append("Step 3 only scores cities whose Step 2 is up to date.")
     for gap in gaps:
         st.caption(f"ℹ️ {gap} Cities that aren't ready are listed, not forced through.")
-    if verticals and cities and steps:
-        names = ", ".join(found[v].title for v in verticals)
+    if categories and cities and steps:
+        titles = ", ".join(found[c].title for c in categories)
         st.markdown(
             f"**{stage_count} stage(s)**: Steps {', '.join(map(str, sorted(steps)))} for "
-            f"{names}, in **{len(cities)} city(ies)**."
+            f"{titles}, in **{len(cities)} city(ies)**."
         )
-    blocked = not (verticals and cities and steps)
+    blocked = not (categories and cities and steps)
     if not practice and not (os.getenv("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_AUTH_TOKEN")):
         st.error(
             "This needs an Anthropic API key. Ask your developer to add it to the .env "
@@ -292,7 +390,7 @@ def plan_page():
         blocked = True
     elif not practice:
         st.caption(
-            "Real runs cost money and take time: each vertical and city is researched one "
+            "Real runs cost money and take time: each city and category is researched one "
             "after another. You can leave this page and come back while the black window "
             "stays open."
         )
@@ -300,7 +398,7 @@ def plan_page():
     def start():
         run_store()["current"] = PlanRun(
             BASE_SETTINGS,
-            verticals,
+            categories,
             {c: configs[c].name for c in cities},
             sorted(steps),
             practice=practice,
@@ -314,14 +412,14 @@ def plan_page():
         if practice:
             start()
         else:
-            confirm_cost(plan_estimate(verticals, [configs[c] for c in cities], steps), start)
+            confirm_cost(plan_estimate(categories, [configs[c] for c in cities], steps), start)
 
 
-def plan_estimate(verticals: list[str], cities: list, steps) -> "costs.Estimate":
-    """What a Run steps run will probably cost: each vertical's steps for every city."""
+def plan_estimate(categories: list[str], cities: list, steps) -> "costs.Estimate":
+    """What a Run steps run will probably cost: each category's steps for every city."""
     parts = []
-    for name in verticals:
-        vs = settings_for(BASE_SETTINGS, name)
+    for name in categories:
+        vs = category_settings(BASE_SETTINGS, name)
         questions, _ = load_bank(vs)
         units = sum(len(costs.city_units(vs, city)) for city in cities)
         answers = sum(costs.planned_answers(vs, city, questions) for city in cities)
@@ -346,19 +444,24 @@ def checks_page():
     start_page("checks")
 
 
-CITY_UNITS = {"parastatal": "parastatals", "city_government": "city government"}
+STEP1_CARDS = {  # what Step 1 does, by unit
+    "parastatal": "Finds each city's parastatals and builds the Citation Sheet. "
+    "Your team then reviews it in the city's Sources workbook.",
+    "ulg": "Profiles each city's ULG (its Act and official website) and builds the Citation "
+    "Sheet. Your team then reviews it in the city's Sources workbook.",
+}
 
 
 def start_page(action: str):
     title, kicker, lede = START_HEADERS[action]
-    if action == "sources" and settings.unit == "city_government":
+    if action == "sources" and settings.unit == "ulg":
         title = "Find sources"
         lede = (
-            f"{settings.vertical_title} assesses the city government itself. The agent checks "
-            "its official website and builds the Citation Sheet from the state's Acts, the "
-            "city's plans and other official sources."
+            f"{settings.category_title} assesses the city's urban local government itself. The "
+            "agent checks its official website and builds the Citation Sheet from the state's "
+            "Acts, the city's plans and other official sources."
         )
-    header(title, lede, kicker)
+    header(title, f"{lede} {category_note(settings.unit)}", kicker)
     current = run_store()["current"]
     if current and current.status in BUSY:
         st.info("A run is already in progress.", icon=":material/hourglass_top:")
@@ -403,6 +506,7 @@ def start_page(action: str):
         ],
         format_func=lambda c: configs[c].name,
     )
+    category_picker(action)  # the category comes after the cities
     chosen: dict[str, list[str] | None] = {}
     blocked_cities = []
     if step == "sources" and action != "checks" and settings.unit == "parastatal":
@@ -425,20 +529,25 @@ def start_page(action: str):
                 c.use_for_answers and c.verification_status == "Verified" for c in citations
             )
             names = {p.id: f"{p.name} ({p.id})" for p in included}
+            ulg = run_settings.unit == "ulg"  # one ULG per city: nothing to choose between
             with st.expander(
-                f"{configs[slug].name}: {len(included)} parastatal(s), {usable} "
-                f"citation(s) ready to use"
+                f"{configs[slug].name}: {'' if ulg else f'{len(included)} parastatal(s), '}"
+                f"{usable} citation(s) ready to use"
             ):
                 st.caption(
                     f"Sources workbook last saved "
                     f"{datetime.fromtimestamp(path.stat().st_mtime):%d %b %Y %H:%M}"
                 )
-                chosen[slug] = st.multiselect(
-                    "Parastatals to answer",
-                    list(names),
-                    default=list(names),
-                    format_func=names.get,
-                    key=f"p-{slug}",
+                chosen[slug] = (
+                    list(names)
+                    if ulg
+                    else st.multiselect(
+                        "Parastatals to answer",
+                        list(names),
+                        default=list(names),
+                        format_func=names.get,
+                        key=f"p-{slug}",
+                    )
                 )
     if practice:
         chosen_pillars, only = ["UPD"], "UPD 1"
@@ -608,7 +717,7 @@ def plan_view(plan: PlanRun) -> None:
     if plan.status == "waiting_for_sources":
         st.warning(
             "**Step 1 is done. Review the Sources workbooks before anything is answered.** "
-            "Open each city in **City files** (choose its vertical in the sidebar), check the "
+            "Open each city in **City files** (choose its category in the sidebar), check the "
             "parastatals and the Citation Sheet, add sources you know, save and close the "
             "workbook. Then continue.",
             icon=":material/front_hand:",
@@ -790,7 +899,9 @@ def live_progress(batch: BatchRun):
     if run.links_total:
         st.progress(
             min(run.links_done / run.links_total, 1.0),
-            f"Citation Sheet: {run.links_done} of {run.links_total} parastatals finished",
+            "Citation Sheet: building"
+            if run.ulg
+            else f"Citation Sheet: {run.links_done} of {run.links_total} parastatals finished",
         )
     if run.answers_total:
         st.progress(
@@ -802,8 +913,8 @@ def live_progress(batch: BatchRun):
         st.table(
             pd.DataFrame(
                 [(key, text, ago(when)) for key, (when, text) in run.activity.items()],
-                columns=["Parastatal", "What it is doing", "Updated"],
-            ).set_index("Parastatal")
+                columns=[run.unit_label, "What it is doing", "Updated"],
+            ).set_index(run.unit_label)
         )
     with st.expander("What has happened so far", expanded=not run.activity):
         for line in run.log[-25:]:
@@ -948,8 +1059,13 @@ def sources_results(slug: str, run: PipelineRun):
             icon=":material/download:",
             key=f"dl-{slug}",
         )
+        included = (
+            ""
+            if run.ulg
+            else f"**{sum(p.include for p in parastatals)}** parastatal(s) included · "
+        )
         st.markdown(
-            f"**{sum(p.include for p in parastatals)}** parastatal(s) included · "
+            f"{included}"
             f"**{sum(s.verification_status == 'Verified' for s in sources)}** citation(s) "
             f"verified · **{covered}** question(s) have a source · **{missing}** have none yet"
         )
@@ -958,7 +1074,7 @@ def sources_results(slug: str, run: PipelineRun):
             pd.DataFrame(
                 [
                     {
-                        "Parastatal": f"{p.name} ({p.id})",
+                        run.unit_label: f"{p.name} ({p.id})",
                         "Found by": p.found_by,
                         "Included": "Yes" if p.include else "No",
                         "Website": p.official_website or "not confirmed",
@@ -968,7 +1084,7 @@ def sources_results(slug: str, run: PipelineRun):
                     }
                     for p in parastatals
                 ]
-            ).set_index("Parastatal")
+            ).set_index(run.unit_label)
         )
 
 
@@ -1000,7 +1116,7 @@ def answers_results(slug: str, run: PipelineRun):
         )
         rows = [
             {
-                "Parastatal": a.parastatal_id,
+                run.unit_label: a.parastatal_id,
                 "Question": questions[a.question_id].raw_id,
                 "Status": a.status,
                 "Citation": a.citation_id,
@@ -1169,13 +1285,17 @@ def city_workbooks() -> list[Path]:
     """Every Sources and answers workbook, newest first (practice ones included)."""
     root = settings.outputs_dir
     found = [p for p in root.glob("**/cities/*/ASICS_*_Sources.xlsx")]
-    found += [p for p in root.glob(f"**/cities/*/answers/*/{answers_pattern(settings)}")]
+    found += [
+        p
+        for pattern in answers_patterns(settings)
+        for p in root.glob(f"**/cities/*/answers/*/{pattern}")
+    ]
     return sorted(
         (
             p
             for p in found
             if "re-checked" not in p.name
-            and p.relative_to(root).parts[0] != "verticals"  # other verticals' folders
+            and p.relative_to(root).parts[0] != OLD_OUTPUT_FOLDER  # an earlier layout
         ),
         key=lambda p: p.stat().st_mtime,
         reverse=True,
@@ -1201,7 +1321,9 @@ def describe_workbook(path: Path) -> str:
 def files_page():
     import city_view_page
 
-    city_view_page.render(city_folders(), open_file, zip_folder, header, answers_pattern(settings))
+    city_view_page.render(
+        city_folders(), open_file, zip_folder, header, answers_patterns(settings), settings.unit
+    )
 
 
 def recheck_page():
@@ -1302,7 +1424,7 @@ def costs_page():
                     "When": r.when,
                     "Run": r.label,
                     "Step": f"Step {r.step}" if r.step else "–",
-                    "Vertical": r.vertical_title or r.vertical or "–",
+                    "Category": r.category_title or r.category or "–",
                     "Cities": ", ".join(r.cities) or "–",
                     "Work": costs.plural(r.work, r.unit) if r.work else "–",
                     "Cost": r.total,
@@ -1349,15 +1471,18 @@ def costs_page():
                 )
 
     st.markdown("#### What the next run is estimated at")
-    verticals, _ = load_verticals(BASE_SETTINGS.agent_setup_dir)
+    found, _ = load_categories(BASE_SETTINGS.agent_setup_dir)
     rows = []
-    for name, v in verticals.items():
-        vs = settings_for(BASE_SETTINGS, name)
+    for name in category_names():
+        v = found.get(name)
+        if v is None:
+            continue
+        vs = category_settings(BASE_SETTINGS, name)
         for step in (1, 2, 3):
-            usd, basis, _ = costs.rate(vs, step, vs.vertical)
+            usd, basis, _ = costs.rate(vs, step, vs.category)
             rows.append(
                 {
-                    "Vertical": v.title,
+                    "Category": v.title,
                     "Step": f"Step {step}",
                     "Cost per": costs.UNITS[step],
                     "US$": usd,
@@ -1387,7 +1512,7 @@ def setup_page():
 def step3_page():
     import scoring_page as page
 
-    page.render_step3(settings, open_file, register)
+    page.render_step3(settings, open_file, register, lambda: category_picker("step3"))
 
 
 def scores_page():
@@ -1403,7 +1528,9 @@ def help_page():
         "1. **Step 1: Find parastatals and sources.** For each city, the agent finds the "
         "parastatals itself, checks each one's official website (with a score you can see "
         "point by point), then builds the **Citation Sheet**: the official sources needed to "
-        "answer the questions. You review the parastatals before any sources are researched.\n"
+        "answer the questions. You review the parastatals before any sources are researched. "
+        "(For the ULG category the agent profiles the city's ULG instead, so there are no "
+        "parastatals to find or review, and each ULG question is answered once per city.)\n"
         "2. **You review the Sources workbook** (in **City files**). Untick parastatals or "
         "sources you don't want, and add any sources you know about. Nothing is answered yet.\n"
         "3. **Step 2: Answer questions.** Every answer uses **only** the Citation Sheet rows "
@@ -1468,12 +1595,15 @@ def help_page():
 
 
 def home_page():
+    configs, _ = register()
+    city = configs.get(st.session_state.get("city"))
     header(
-        "Assess a city's parastatals"
-        if settings.unit == "parastatal"
-        else f"Assess a city · {settings.vertical_title}",
+        f"{city.name} · {settings.category_title}"
+        if city
+        else f"Assess a city · {settings.category_title}",
         "Three steps, in order: find and review the sources (the Citation Sheet), answer the "
-        "questions from those sources only, then score each answer from its citation.",
+        "questions from those sources only, then score each answer from its citation. "
+        + category_note(settings.unit),
     )
     current = run_store()["current"]
     if current and current.status in {"waiting_for_review", "waiting_for_sources"}:
@@ -1487,8 +1617,7 @@ def home_page():
         (
             1,
             "Find sources",
-            f"Finds each city's {CITY_UNITS[settings.unit]} and builds the Citation Sheet. "
-            "Your team then reviews it in the city's Sources workbook.",
+            STEP1_CARDS[settings.unit],
             "step1",
             "Start Step 1",
         ),
@@ -1515,7 +1644,7 @@ def home_page():
 
     st.page_link(
         PAGES["plan"],
-        label="Run several verticals and steps for your cities in one go",
+        label="Run several categories and steps for your cities in one go",
         icon=":material/playlist_play:",
     )
     index = (BASE_SETTINGS.outputs_root or BASE_SETTINGS.outputs_dir) / "START_HERE.xlsx"
@@ -1523,7 +1652,7 @@ def home_page():
         row = st.container(horizontal=True, vertical_alignment="center")
         row.caption(
             "**Looking for a file?** START_HERE.xlsx in the outputs folder lists every city's "
-            "latest workbooks, for every vertical."
+            "latest workbooks, for every category."
         )
         if row.button("Open START_HERE.xlsx", icon=":material/table_view:"):
             refresh_index(BASE_SETTINGS)
@@ -1567,13 +1696,11 @@ def _city_status(
     }
 
 
-def city_status(city) -> dict:
-    workspace = workspace_for(settings.outputs_dir, city.name)
+def city_status(city, vs) -> dict:
+    """Where one city is up to in one category (`vs`: the category's settings)."""
+    workspace = workspace_for(vs.outputs_dir, city.name)
     sources = sources_path(workspace, city.name)
-    answers = sorted(
-        (workspace / "answers").glob(f"*/{answers_pattern(settings)}"),
-        key=lambda p: p.stat().st_mtime,
-    )
+    answers = sorted(answers_files(workspace, vs), key=lambda p: p.stat().st_mtime)
     exists = sources.exists()
     status = _city_status(
         str(sources) if exists else None,
@@ -1587,7 +1714,7 @@ def city_status(city) -> dict:
     if status["stage"] == "answered" and answers:
         import scoring_page
 
-        scored = scoring_page.city_scored_at(settings, city.name)
+        scored = scoring_page.city_scored_at(vs, city.name)
         if scored and datetime.fromisoformat(scored).timestamp() >= answers[-1].stat().st_mtime:
             status = {**status, "stage": "scored"}
     return {
@@ -1604,7 +1731,13 @@ def cities_overview() -> None:
     if not configs:
         st.caption("No cities yet. Add one in the City register.")
         return
-    statuses = {slug: city_status(city) for slug, city in configs.items()}
+    names = category_names()
+    per_category = {n: category_settings(BASE_SETTINGS, n) for n in names}
+    all_status = {
+        slug: {n: city_status(city, vs) for n, vs in per_category.items()}
+        for slug, city in configs.items()
+    }
+    statuses = {slug: by_category[settings.category] for slug, by_category in all_status.items()}
     counts = {stage: sum(s["stage"] == stage for s in statuses.values()) for stage in STAGES}
 
     left, right = st.columns([3, 1], vertical_alignment="bottom")
@@ -1632,26 +1765,33 @@ def cities_overview() -> None:
             continue
         if search and search.lower() not in f"{city.name} {city.state}".lower():
             continue
-        rows.append(
-            {
-                "slug": slug,
-                "City": city.name,
-                "State": city.state,
-                "Status": STAGES[status["stage"]][0],
-                # Text throughout, so each column has one type (numbers mixed with "–" break Arrow)
-                "Parastatals": "–" if status["parastatals"] is None else str(status["parastatals"]),
-                "Citations ready": "–" if status["ready"] is None else str(status["ready"]),
-                "Last activity": status["last"].strftime("%d %b %Y") if status["last"] else "",
-                "Next step": STAGES[status["stage"]][1],
-            }
+        row = {"slug": slug, "City": city.name, "State": city.state}
+        for n in names:  # each category's progress
+            row[CATEGORY_TITLES.get(n, n.title())] = STAGES[all_status[slug][n]["stage"]][0]
+        # Text throughout, so each column has one type (numbers mixed with "–" break Arrow)
+        parastatals = next(
+            (
+                all_status[slug][n]["parastatals"]
+                for n, vs in per_category.items()
+                if vs.unit == "parastatal"
+            ),
+            None,
         )
+        row |= {
+            "Parastatals": "–" if parastatals is None else str(parastatals),
+            f"Citations ready ({settings.category_title})": "–"
+            if status["ready"] is None
+            else str(status["ready"]),
+            "Last activity": status["last"].strftime("%d %b %Y") if status["last"] else "",
+            f"Next step ({settings.category_title})": STAGES[status["stage"]][1],
+        }
+        rows.append(row)
     if not rows:
         st.caption("No cities match.")
         return
     frame = pd.DataFrame(rows)
-    hidden = ["slug"] + (["Parastatals"] if settings.unit != "parastatal" else [])
     event = st.dataframe(
-        frame.drop(columns=hidden),
+        frame.drop(columns=["slug"]),
         hide_index=True,
         width="stretch",
         on_select="rerun",
@@ -1661,7 +1801,10 @@ def cities_overview() -> None:
     )
     picked = event.selection.rows if event else []
     if not picked:
-        st.caption("Select a city to see what you can do next.")
+        st.caption(
+            f"Select a city to see what you can do next in {settings.category_title} "
+            "(the category chosen in the sidebar)."
+        )
         return
     slug = frame.iloc[picked[0]]["slug"]
     city_actions(slug, configs[slug], statuses[slug])
@@ -1721,11 +1864,13 @@ def city_actions(slug: str, city, status: dict) -> None:
 def view_city(city) -> None:
     """Open the city view (City files) on this city."""
     st.session_state["view-city"] = workspace_for(settings.outputs_dir, city.name).name
+    st.session_state["city-next"] = city.slug
     st.switch_page(PAGES["files"])
 
 
 def go_to_step(page: str, slug: str) -> None:
     """Open Step 1, 2 or 3 with this city already selected."""
+    st.session_state["city-next"] = slug
     if page == "step3":  # Step 3 lists cities by name
         configs, _ = register()
         st.session_state["preselect-step3"] = [configs[slug].name]

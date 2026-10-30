@@ -1,15 +1,23 @@
 # ASICS Assessment
 
 A tool for Janaagraha's **Annual Survey of India's City-Systems (ASICS)**. Every ASICS
-**vertical** (Parastatal, UPD, and more to come) goes through the same three steps:
+**category** (ULG and Parastatal) goes through the same three steps. You choose a **city**
+first, then a **category**:
 
-1. **Step 1: Find sources.** Give it a city. It works out what to assess (for Parastatal, the city's parastatals, found by the agent itself; for UPD, the city government), checks each one's official website, and builds a **Citation Sheet** of official sources for the question bank. **Your team then reviews the Sources workbook**: untick parastatals or sources, and add sources you know about.
+1. **Step 1: Find sources.** Give it a city. It works out what to assess (for Parastatal, the city's parastatals, found by the agent itself; for ULG, the city's urban local government), checks each one's official website, and builds a **Citation Sheet** of official sources for the question bank. **Your team then reviews the Sources workbook**: untick parastatals or sources, and add sources you know about.
 2. **Step 2: Answer questions.** Every answer uses **only** the reviewed Citation Sheet and names the **Citation ID** it relies on. It includes a verbatim quote, where to find it, and a saved copy of the page.
 3. **Step 3: Score.** Each answer is scored from its citation in the expert team's scoring workbook, by the AI and by interns, side by side.
 
-Choose the vertical in the app's sidebar (**Vertical**). Each one has its own question bank,
-agents, city folders and scoring workbook, set in `agent_setup/verticals/` (see
-[Verticals](#verticals-parastatal-upd-and-new-ones)).
+Choose the city, then the category, in the app's sidebar (**City**, **Category**). There are two
+categories:
+
+- **ULG** (Urban Local Government): each ULG question is answered once per city.
+- **Parastatal**: each applicable question is answered separately for every parastatal in the city.
+  The parastatals can differ between cities; the questions and question codes are the same.
+
+UPD, SC and DPG are **sections** inside a category's question bank, not categories. Each category
+has its own question bank, agents, city folders and scoring workbook, set in
+`agent_setup/categories/` (see [Categories](#categories-ulg-parastatal-and-new-ones)).
 
 This README has two parts:
 
@@ -29,51 +37,51 @@ open** while you work; close it when you're done.
 > If you see "This computer isn't set up yet", ask your developer to follow
 > [Setting up a new computer](#setting-up-a-new-computer).
 
-The **Home** page shows the three steps and where each city is up to, for the vertical
-chosen under **Vertical** at the bottom of the sidebar (the app remembers your choice). To learn the app, tick **Practice with sample data** on Step 1. It uses two made-up
+The **Home** page shows the three steps and where each city is up to in every category, for
+the city and category chosen in the sidebar (the app remembers your choice). To learn the app, tick **Practice with sample data** on Step 1. It uses two made-up
 cities, costs nothing, takes seconds, and shows every step.
 
-## Running several verticals and steps at once
+## Running several categories and steps at once
 
 **Assess → Run steps** runs everything for your cities in one go. Choose:
 
-- **Verticals**: e.g. Parastatal and UPD (every vertical in `agent_setup/verticals/` is listed).
-- **Cities**: any cities in the city register.
+- **Cities**: any cities in the city register (the sidebar's city is pre-selected).
+- **Categories**: ULG and Parastatal (every category in `agent_setup/categories/` is listed).
 - **Steps**: 1 Find sources, 2 Answer questions, 3 Score (any of them).
 
-Each step runs for every chosen vertical before the next step starts: Step 1 for Parastatal,
-Step 1 for UPD, then Step 2 for both, then Step 3 for both. The **Current run** page shows each
+Each step runs for every chosen category before the next step starts: Step 1 for Parastatal,
+Step 1 for ULG, then Step 2 for both, then Step 3 for both. The **Current run** page shows each
 stage and its outcome.
 
 Two review points, both on by default (under **Review and options**):
 
 - **Pause after Step 1** so the team can review the Sources workbooks before anything is
   answered. When Step 1 is done, review each city's workbook in **City files** (choose its
-  vertical in the sidebar), save it, then press **Continue to Step 2**.
+  category in the sidebar), save it, then press **Continue to Step 2**.
 - **In Step 1, review the parastatals found** before their sources are researched (Parastatal
   only).
 
 A stage only does what's possible: Step 2 needs the city's Sources workbook, and Step 3 only
 scores cities whose Step 2 is up to date. Cities that aren't ready are listed, not forced
-through. The Step 1, 2 and 3 pages are still there for running one step of one vertical
+through. The Step 1, 2 and 3 pages are still there for running one step of one category
 with more options (sections, single questions, earlier workbooks).
 
 ## Finding your files
 
 Open **`outputs/START_HERE.xlsx`** (or **Open START_HERE.xlsx** on the Home page). It has one row
-per vertical and city: how far it has got, what to do next, and its latest workbooks, which
+per city and category: how far it has got, what to do next, and its latest workbooks, which
 you can click to open. Its second sheet explains every folder.
 
 ```
 outputs/
   START_HERE.xlsx          start here
-  Parastatal/              one folder per vertical
+  Parastatal/              one folder per category
     cities/Bengaluru/
       ASICS_Bengaluru_Sources.xlsx      Step 1: review and edit this one
       answers/<run>/ASICS_Parastatal_Bengaluru_Phase2.xlsx   Step 2 (newest run = latest)
       evidence/  history/  checks/  …   kept automatically; you don't need to open them
     batches/  practice/
-  UPD/
+  ULG/                     the ULG category's folder (an older outputs/UPD/ still works)
   _app/                    the app's own files (error log, uploads)
   _old/                    files from earlier versions
 scoring/2027/ai/PARASTATAL_ai.xlsx      Step 3: the scoring workbook (first sheet: Scores)
@@ -94,7 +102,7 @@ plain language, and a mistake in one city never stops the others.
 
 ## Step 1: Find parastatals and sources
 
-> For a city-level vertical such as UPD there are no parastatals to find: Step 1 checks the
+> For the ULG category there are no parastatals to find: Step 1 checks the
 > city government's official website and builds the Citation Sheet straight away.
 
 1. Open **Step 1 · Find sources** in the sidebar, pick the cities and sections, and press **Start Step 1**.
@@ -119,7 +127,7 @@ The result is one **Sources workbook** per city, in **City files**:
 Open it from **City files** with **Open the Sources workbook in Excel**. Then:
 
 - **Parastatals:** set **Include?** to No to leave one out. To add one, add a row with its ID, name and Type, and leave Found By empty.
-- **Citation Sheet:** open each link, or its saved copy, and set **Use for Answers?** to No for anything unsuitable. Links that failed the check start as No. To add a source, add a row with Parastatal (an ID from the Parastatals sheet, or `All parastatals`), Source Title, Official URL and What This Source Is Useful For. Leave Citation ID empty; it is filled in automatically. Your links are opened and checked the same way as the agent's.
+- **Citation Sheet:** open each link, or its saved copy, and set **Use for Answers?** to No for anything unsuitable. Links that failed the check start as No. To add a source, add a row with Parastatal (an ID from the Parastatals sheet, or `All parastatals`; in a ULG workbook, the ID on the ULG sheet), Source Title, Official URL and What This Source Is Useful For. Leave Citation ID empty; it is filled in automatically. Your links are opened and checked the same way as the agent's.
 - **Links the tool couldn't open (*Human Verification Required*):** many government websites block automated tools. Open the link in your browser, save the page or PDF as `evidence/manual/<Citation ID>.pdf` (or `.html` / `.txt`) in the city's folder, for example `outputs/cities/Bengaluru/evidence/manual/BWSSB-07.pdf`, and set **Use for Answers?** to Yes. Run Step 1 again (or Step 2): the tool reads your saved copy, checks that it has readable text, and marks the row *Verified*, with a note that your team verified it. If the copy can't be used (a scanned PDF with no text, an India Code summary page, a login page, or a file name that matches no Citation ID), **Needs Attention** and the **Citation Sheet** tab in **City files** say why.
 - **Coverage:** questions marked *No source yet* will be answered *Insufficient Evidence* unless you add a source.
 - **Your Notes** columns are never overwritten.
@@ -234,7 +242,7 @@ setup** page (Team memory tab), or as `.md` files in `agent_setup/memory/`:
 
 - **General:** used in every run.
 - **One city:** used only when that city runs.
-- **One vertical:** used only for that ASICS vertical. The current one is **parastatal**; add a new vertical (e.g. Mobility) when that work starts.
+- **One category:** used only for that ASICS category (**ulg** or **parastatal**); add a new category (e.g. Mobility) when that work starts.
 
 You can narrow a note to some parastatals, sections, agents or steps. Notes are **guidance,
 not evidence**: answers still quote the Citation Sheet, and each answer lists the notes it used
@@ -265,13 +273,13 @@ the reviewed Citation Sheet; the AI does no web research in Step 3. Checked in c
 - Where Step 2 found **no evidence**, the AI isn't asked. The row is left for a person, with
   the kind of source that is missing.
 
-Scores are kept in Excel, in the expert team's scoring workbooks: one per vertical, all with
+Scores are kept in Excel, in the expert team's scoring workbooks: one per category, all with
 the same layout. The workbook's own formulas turn the inputs into points, roll sub-questions
 up to main questions, and main questions up to the overall score. The AI and people fill in
 the **same cells** in separate copies, so their scores are directly comparable. People's
 scores are the golden dataset for checking the AI.
 
-Step 3 works the same for every vertical: it scores from that vertical's own Step 2 answers
+Step 3 works the same for every category: it scores from that category's own Step 2 answers
 and Citation Sheet. For Parastatal the scoring workbook has one row per city and agency; for
 UPD, one row per city.
 
@@ -282,7 +290,7 @@ UPD, one row per city.
 **Scored** on Home after a run over all questions. Try **Practice with sample data** first:
 it uses the practice cities, so run a practice Step 1 and Step 2 before it.
 
-**The one workbook to use** is the vertical's scoring workbook, `scoring/2027/ai/<CODE>_ai.xlsx`
+**The one workbook to use** is the category's scoring workbook, `scoring/2027/ai/<CODE>_ai.xlsx`
 (e.g. `PARASTATAL_ai.xlsx`), shown first when Step 3 finishes, with **Open** and
 **Download**. Start from its first sheet, **Scores (start here)**: one row per question and
 agency (or city).
@@ -310,7 +318,7 @@ that adds the scores up). They are calculation sheets: nobody needs to type in t
 
 **People's scoring (interns, in the experts' full workbook):**
 
-1. **Open the assignments workbook.** One row per intern and set of questions: Vertical,
+1. **Open the assignments workbook.** One row per intern and set of questions: Category,
    Intern, Questions (`UPD1a, UPD1b`, or `UPD1*` for UPD1 and its parts), Cities (names, or
    `All`). To split a question, give two interns the same question with different cities.
 2. **Make interns' copies.** Each intern gets a file with their rows highlighted in yellow
@@ -327,20 +335,20 @@ The **Scores** page (under Results) shows city scores from people and the AI sid
 every question's score, and **Only where people and AI differ**. It is view only; scores are
 changed in Excel.
 
-A city's vertical score is its overall score in that workbook; for Parastatal it is the
-average of the city's agencies. The ASICS score is the average of the verticals (equal
+A city's category score is its overall score in that workbook; for Parastatal it is the
+average of the city's agencies. The ASICS score is the average of the categories (equal
 weights). "?" means nothing is scored yet; yellow cells in Excel are provisional.
 
 Everything lives in `scoring/2027/`:
 
 | Folder | What's in it |
 |---|---|
-| `templates/` | the experts' scoring workbooks, one per vertical |
+| `templates/` | the experts' scoring workbooks, one per category |
 | `assignments/` | `ASICS_2027_Scoring_Assignments.xlsx`: which intern scores which questions for which cities |
-| `human/` | one copy per intern per vertical (interns work only in their own copy) |
+| `human/` | one copy per intern per category (interns work only in their own copy) |
 | `merged/` | everyone's work put together and calculated, with a **Merge report** sheet |
 | `ai/` | the AI's copy, and `runs/` with a log of every row (Step 2 status, citation, quote, why) |
-| `results/` | `ASICS_2027_Scores.xlsx`: city × vertical scores from people and the AI, and the ASICS score |
+| `results/` | `ASICS_2027_Scores.xlsx`: city × category scores from people and the AI, and the ASICS score |
 | `evals/` | how closely the AI agrees with people, after each AI run |
 
 **Calculating needs LibreOffice** (free, from libreoffice.org). It runs in the background;
@@ -452,7 +460,7 @@ flowchart TD
 - **The Excel handoff** is [sources_workbook.py](src/asics_agent/sources_workbook.py). It reads, writes and merges the Sources workbook, keeping the team's decisions, rows, notes and Citation IDs across re-runs.
 - **Several cities** run through `BatchRun` in [runner.py](src/asics_agent/runner.py), one after another. Step 1 has a single review for all cities, and the app and CLI both use it.
 <<<<<<< HEAD
-- **Files** go to `outputs/<Vertical>/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by all steps), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/<Vertical>/batches/<id>/`; the app's own files to `outputs/_app/`. `outputs/START_HERE.xlsx` is rewritten after every run ([outputs_index.py](src/asics_agent/outputs_index.py)); `scripts/tidy_outputs.py` moves an older outputs folder into this layout.
+- **Files** go to `outputs/<Category>/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by all steps), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/<Category>/batches/<id>/`; the app's own files to `outputs/_app/`. `outputs/START_HERE.xlsx` is rewritten after every run ([outputs_index.py](src/asics_agent/outputs_index.py)); `scripts/tidy_outputs.py` moves an older outputs folder into this layout.
 =======
 - **Files** go to `outputs/cities/<City>/`: the Sources workbook, `evidence/` (saved copies and text, shared by both steps; `evidence/manual/` holds copies the team saved by hand), `history/`, `answers/<run>/` and `checks/`. Batch indexes go to `outputs/batches/<id>/`.
 >>>>>>> main
@@ -554,7 +562,7 @@ the **Technical Log**.
 ├── data/
 │   ├── question_banks/Parastatal_ASICS_Question_Bank.xlsx
 │   └── cities/ASICS_Cities_and_Parastatals.xlsx   # the city register (team-owned)
-├── agent_setup/                    # verticals, agents, prompts, skills, team memory (Markdown)
+├── agent_setup/                    # categories, agents, prompts, skills, team memory (Markdown)
 ├── agent_setup_page.py             # the app's Agent setup page
 ├── city_view_page.py               # the app's City files view (read-only)
 ├── docs/source_prompts/            # the original prompt the rules come from
@@ -572,9 +580,10 @@ the **Technical Log**.
 │   ├── sources_workbook.py     # the Step 1 → Step 2 handoff
 │   ├── workbook.py             # answers workbook, index, checks report
 │   ├── cities.py  runner.py  reporting.py  recheck.py  practice.py
-│   ├── plan.py                 # one run across verticals, cities and steps (Run steps page)
+│   ├── plan.py                 # one run across cities, categories and steps (Run steps page)
 │   ├── agent_setup.py          # reads agent_setup/: agents, prompts, skills, memory
-│   ├── verticals.py            # reads agent_setup/verticals/: each vertical's settings
+│   ├── categories.py           # reads agent_setup/categories/: each category's settings
+│   ├── legacy_names.py         # the one place that reads old names (saved folders, files, settings)
 │   ├── tools/                  # our own tools (check_link, read_citation, …)
 │   ├── scoring/                # Step 3: template reader, draft generator, phase2 (readiness +
 │   │                           # evidence), interns' copies + merge, LibreOffice recalculation,
@@ -587,7 +596,7 @@ the **Technical Log**.
 ## Adding a new section (e.g. a new pillar in the question bank)
 
 A **section** is a part of the question bank, identified by the prefix of its question IDs
-(UPD, DPG, SC). This is different from an ASICS **vertical** such as Parastatal or Mobility,
+(UPD, DPG, SC). This is different from an ASICS **category** such as ULG or Parastatal,
 which is a whole assessment area with its own memory folder.
 
 1. Add the questions to the question bank under a section header ending in the code, e.g. `(ELPR)`.
@@ -613,34 +622,44 @@ that guidance. Step 1 needs no change. Python is needed only for code-level chec
 | Check or adjust each answer in code | a module in `src/asics_agent/agents/sections/` calling `register(SectionSpec(code="ELPR", postprocess=fn))`. See `require_figures` in [sc.py](src/asics_agent/agents/sections/sc.py) |
 | A completely different workflow | `SectionSpec(build=fn)`, which receives an `AnswerTask` whose `citation_sources` are the only sources it may use |
 
-## Verticals (Parastatal, UPD and new ones)
+## Categories (ULG, Parastatal and new ones)
 
-Every vertical runs the same Steps 1, 2 and 3 with the same code. What differs is
-configuration: one settings file per vertical in `agent_setup/verticals/`, read by
-[verticals.py](src/asics_agent/verticals.py). The app's sidebar lists every file there, and
-`scripts/run_pipeline.py --vertical upd` runs one from the command line.
+A city is assessed in each **category**. There are two today:
+
+- **ULG** (Urban Local Government): its own set of questions, grouped into sections (UPD today;
+  SC and DPG are coming). Each ULG question is answered **once per city**.
+- **Parastatal**: questions grouped into sections UPD, SC and DPG. Each applicable question is
+  answered separately for **every parastatal** in the city. The parastatals differ between
+  cities; the question sets and question codes are the same in every city.
+
+UPD, SC and DPG are **sections** inside a category, not categories.
+
+Every category runs the same Steps 1, 2 and 3 with the same code. What differs is
+configuration: one settings file per category in `agent_setup/categories/`, read by
+[categories.py](src/asics_agent/categories.py). The app's sidebar lists every file there, and
+`scripts/run_pipeline.py --category ulg` runs one from the command line.
 
 ```yaml
 ---
-name: upd                       # file name and folder name
-title: UPD                      # shown in the app
-code: UPD                       # scoring workbook prefix (UPD_SUMMARY_RAW…) and file names
-unit: city_government           # what is assessed in each city (see below)
+name: ulg                       # file name and folder name
+title: ULG                      # shown in the app
+scoring_code: UPD               # scoring workbook prefix (UPD_SUMMARY_RAW…) and file names
+unit: ulg                       # what is assessed in each city (see below)
 question_bank: scoring/2027/templates/ASICS_2027_UPD_Scoring_Workbook_v2.xlsx
 question_bank_sheet: "UPD Questions_290926 "  # optional: which sheet
 question_columns:               # optional: our column name -> the bank's own column name
   City-Systems Pillar: ASICS 2027_Report_Q No
   Tag: MQ_SQ
   Score / Max Score: Max Score
-outputs: UPD                    # its folder inside outputs/: outputs/UPD/cities/<City>/
+outputs: ULG                    # its folder inside outputs/: outputs/ULG/cities/<City>/
 scoring_workbook: scoring/2027/templates/ASICS_2027_UPD_Scoring_Workbook_v2.xlsx
-shared_rules: shared-rules-city # prompts/<name>.md: the rules every agent of this vertical gets
+shared_rules: shared-rules-city # prompts/<name>.md: the rules every agent of this category gets
 steps:                          # which agent does each job (agents/<name>.md)
   1: {profile: city-profiler, sources: city-citation-builder, assess: source-assessor}
   2: {answer: city-answer-writer}
   3: {score: question-scorer}
 ---
-What the vertical assesses, in plain words.
+What the category assesses, in plain words.
 ```
 
 **The unit** is what is assessed in each city:
@@ -648,64 +667,70 @@ What the vertical assesses, in plain words.
 | `unit` | Step 1 | Scoring workbook rows |
 |---|---|---|
 | `parastatal` | the agent **discovers** the parastatals (`discover` job), the team reviews them, then each is profiled | one per city and agency (`Bengaluru – BWSSB`) |
-| `city_government` | no discovery: the unit is the **city government** (its ULG, from the city register, ID `ULG`), profiled the same way | one per city |
+| `ulg` | no discovery: the unit is the **ULG** (the city's urban local government, from the city register, ID `ULG`), profiled the same way | one per city |
 
 **The jobs** each step needs, and their default agents (any job not listed in `steps` uses the
 default): Step 1 `discover` (parastatal-discovery, only for `unit: parastatal`), `profile`
 (website-profiler), `sources` (citation-builder), `assess` (source-assessor); Step 2 `answer`
 (answer-writer); Step 3 `score` (question-scorer); checks `bank_review`
-(question-bank-reviewer). Giving a vertical its own agent for a job is how its research is
-changed, e.g. UPD's `city-citation-builder` looks for state planning Acts and master plans,
+(question-bank-reviewer). Giving a category its own agent for a job is how its research is
+changed, e.g. ULG's `city-citation-builder` looks for state planning Acts and master plans,
 not parastatal budgets. An agent's file names its prompt, skills, tools and model, as usual.
 
-**Section guidance** for a vertical goes in `skills/sections/<vertical>/<code>.md` (e.g.
-`skills/sections/upd/upd.md`); without one, the shared `skills/sections/<code>.md` is used.
+**Section guidance** for a category goes in `skills/sections/<category>/<code>.md` (e.g.
+`skills/sections/ulg/upd.md`); without one, the shared `skills/sections/<code>.md` is used.
 
-**Kept apart per vertical:** city folders (Sources workbooks, answers, evidence), answers files
+**Kept apart per category:** city folders (Sources workbooks, answers, evidence), answers files
 (`ASICS_<Title>_<City>_Phase2.xlsx`), practice runs, team memory
-(`memory/verticals/<name>/`), and Step 3's AI copy (`scoring/2027/ai/<CODE>_ai.xlsx`). **Shared:**
-the city register, the agents and prompts the verticals choose to share, and the results
-workbook, which shows every vertical side by side.
+(`memory/categories/<name>/`), and Step 3's AI copy (`scoring/2027/ai/<CODE>_ai.xlsx`). **Shared:**
+the city register, the agents and prompts the categories choose to share, and the results
+workbook, which shows every category side by side.
+
+**Work saved under the old names still loads.** Before the rename, categories had another name
+and the ULG category was called UPD. `src/asics_agent/legacy_names.py` is the one place that reads
+the old names (an `outputs/UPD/` folder, `ASICS_UPD_*` answers files, the old memory folder, the old
+environment variable and command-line option, the old unit value); everything is written with
+the new names. To finish moving an old `outputs/UPD/` folder, run `scripts/tidy_outputs.py`.
 
 Parastatal's file names exactly what ran before this was configurable (same question bank,
 agents and rules), so nothing about how it researches changed. Its files are in
 `outputs/Parastatal/`.
 
-### Adding a vertical (e.g. Mobility)
+### Adding a category (e.g. Mobility)
 
 1. **Question bank.** Put it in `data/question_banks/` (or point at a sheet of another
    workbook). It needs a question ID, question, MQ/SQ tag, max score, assessment level and
    detailed methodology; map its column names with `question_columns`. Applicability and
    evidence columns are optional (without Applicability, every question applies).
-2. **Settings file.** Copy `agent_setup/verticals/upd.md` (city-level) or `parastatal.md`
-   (agency-level) to `agent_setup/verticals/mobility.md` and edit it.
+2. **Settings file.** Copy `agent_setup/categories/ulg.md` (one unit per city) or `parastatal.md`
+   (one unit per agency) to `agent_setup/categories/mobility.md` and edit it.
 3. **Agents and prompts.** Start with the shared ones. When the research differs, copy an agent
    and its prompt (e.g. `agents/city-citation-builder.md` and `prompts/find-city-sources.md`),
-   rewrite the prompt for the vertical, and name the new agent in `steps`. Keep the prompt's
+   rewrite the prompt for the category, and name the new agent in `steps`. Keep the prompt's
    first line (`TASK: …`) and its JSON keys: the code reads them.
-4. **Memory.** Add the vertical on the **Agent setup** page (or a folder
-   `agent_setup/memory/verticals/mobility/`).
-5. **Scoring workbook.** See [Scoring a new vertical](#scoring-a-new-vertical), then set
+4. **Memory.** Add the category on the **Agent setup** page (or a folder
+   `agent_setup/memory/categories/mobility/`).
+5. **Scoring workbook.** See [Scoring a new category](#scoring-a-new-category), then set
    `scoring_workbook`.
-6. **Check it.** Choose the vertical in the app, run **Question bank check** (free), then a
-   practice Step 1. `uv run pytest` includes a test that every vertical's settings are complete.
+6. **Check it.** Choose the category in the app, run **Question bank check** (free), then a
+   practice Step 1. `uv run pytest` includes a test that every category's settings are complete.
 
-## Scoring a new vertical
+## Scoring a new category
 
 1. Put the experts' workbook in `scoring/2027/templates/`, following the UPD layout: sheets
    named by question code with the code in B1; details above the header row; the row above
    the header says what to enter ("SELECT YES / NO", "ENTER A WHOLE NUMBER", "DO NOT ALTER
    FORMULA"…); a header row starting with **City**; the columns **Points (Auto-generate)**
-   and **SCORER COMMENTS**; and a `<VERTICAL>_SUMMARY_RAW` sheet with an
-   `<VERTICAL>_OVERALL_SCORE` row. ([scoring/template.py](src/asics_agent/scoring/template.py)
+   and **SCORER COMMENTS**; and a `<CODE>_SUMMARY_RAW` sheet with an
+   `<CODE>_OVERALL_SCORE` row. ([scoring/template.py](src/asics_agent/scoring/template.py)
    reads it.) If only a methodology sheet exists, `scripts/make_scoring_skeleton.py` drafts one.
-2. Add the vertical and file name to the **Verticals** sheet of the assignments workbook.
+2. Add the category and file name to the **Categories** sheet of the assignments workbook.
 3. Press **Check workbooks**. No code changes are needed for people's scoring: assignment,
-   merge and results work the same for every vertical.
-4. AI scoring (Step 3) uses the vertical's own Steps 1 and 2, so the vertical needs a
-   settings file in `agent_setup/verticals/` with `scoring_workbook` set (it then doesn't need
-   to be on the Verticals sheet). The workbook's row labels must be the city (`unit:
-   city_government`) or `City – Agency ID` (`unit: parastatal`).
+   merge and results work the same for every category.
+4. AI scoring (Step 3) uses the category's own Steps 1 and 2, so the category needs a
+   settings file in `agent_setup/categories/` with `scoring_workbook` set (it then doesn't need
+   to be on the Categories sheet). The workbook's row labels must be the city (`unit:
+   ulg`) or `City – Agency ID` (`unit: parastatal`).
    [scoring/phase2.py](src/asics_agent/scoring/phase2.py) decides whether a city is ready and
    loads its evidence.
 
@@ -741,7 +766,7 @@ agents and rules), so nothing about how it researches changed. Its files are in
   want to proceed?". The run starts only on **Yes, start**.
   - **How it estimates:** the work planned (agencies, answers or rows, from the city's
     Sources workbook and question bank) × the cost per unit of the last run of the same step
-    and vertical.
+    and category.
   - **First run:** with no earlier run to go by, it uses starting figures measured on
     Bengaluru (`DEFAULT_RATES` in [costs.py](src/asics_agent/costs.py)) and says so.
 
@@ -794,7 +819,7 @@ Step 1 is the expensive step: it searches the web. It is kept down by:
 - **New city:** the team adds a row to the city register.
 - **New parastatal type:** add it to `TYPES` in [cities.py](src/asics_agent/cities.py) and give it a rule in [applicability.py](src/asics_agent/applicability.py).
 - **Website scoring:** the weights and bands are at the top of [links/trust.py](src/asics_agent/links/trust.py).
-- **Prompts, skills, agents:** `agent_setup/` (see [agent_setup/README.md](agent_setup/README.md)). Each vertical's `shared_rules` prompt goes to every one of its agents (`prompts/shared-rules.md` for Parastatal).
+- **Prompts, skills, agents:** `agent_setup/` (see [agent_setup/README.md](agent_setup/README.md)). Each category's `shared_rules` prompt goes to every one of its agents (`prompts/shared-rules.md` for Parastatal).
 - **Settings:** `.env`; see `.env.example`.
 
 ## Limitations

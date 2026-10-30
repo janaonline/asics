@@ -73,7 +73,7 @@ class ParastatalTask(TypedDict, total=False):
 
 
 class AnswerTask(TypedDict, total=False):
-    """Input for a vertical answering sub-agent: one (parastatal, question) pair."""
+    """Input for a category answering sub-agent: one (parastatal, question) pair."""
 
     run: RunContext
     parastatal: Parastatal

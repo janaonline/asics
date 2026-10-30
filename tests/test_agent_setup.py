@@ -65,8 +65,8 @@ def test_memory_is_picked_by_folder_and_settings(setup_dir):
     note(setup_dir, "general/terms.md", "ULG means the city government.")
     note(setup_dir, "cities/bengaluru.md", "Since 2025 the ULG is the GBA corporations.")
     note(setup_dir, "cities/chennai.md", "Chennai note.")
-    note(setup_dir, "verticals/parastatal/boards.md", "Boards publish budgets under Finance.")
-    note(setup_dir, "verticals/mobility/buses.md", "Mobility note.")
+    note(setup_dir, "categories/parastatal/boards.md", "Boards publish budgets under Finance.")
+    note(setup_dir, "categories/mobility/buses.md", "Mobility note.")
     note(setup_dir, "general/bwssb-only.md", "---\nparastatals: [BWSSB]\n---\nBWSSB note.")
     note(setup_dir, "general/answers-only.md", "---\nagents: [answer-writer]\n---\nAnswer note.")
 
@@ -74,12 +74,12 @@ def test_memory_is_picked_by_folder_and_settings(setup_dir):
     assert bwssb == [
         "general/bwssb-only.md",
         "general/terms.md",
-        "verticals/parastatal/boards.md",
+        "categories/parastatal/boards.md",
         "cities/bengaluru.md",
     ]
     bmtc = picked(setup_dir, agent="answer-writer", city="Bengaluru", parastatals=["BMTC"])
     assert "general/bwssb-only.md" not in bmtc and "general/answers-only.md" in bmtc
-    assert "cities/chennai.md" not in bmtc and "verticals/mobility/buses.md" not in bmtc
+    assert "cities/chennai.md" not in bmtc and "categories/mobility/buses.md" not in bmtc
 
 
 def test_size_limit_keeps_the_most_specific_notes(setup_dir):
@@ -147,15 +147,15 @@ def test_note_title_comes_from_its_heading(setup_dir):
     )
 
 
-def test_scope_decisions_note_reaches_every_parastatal_city_but_not_other_verticals():
+def test_scope_decisions_note_reaches_every_parastatal_city_but_not_other_categories():
     root = PROJECT_ROOT / "agent_setup"
-    note = "verticals/parastatal/scope-decisions.md"
+    note = "categories/parastatal/scope-decisions.md"
     for city in ("Surat", "Bengaluru", "Sample City A"):
         chosen, _ = select_notes(
             root, MemoryScope(agent="parastatal-discovery", city=city), "parastatal", 20000
         )
         assert note in [n.path for n in chosen], city
     chosen, _ = select_notes(
-        root, MemoryScope(agent="parastatal-discovery", city="Surat"), "upd", 20000
+        root, MemoryScope(agent="parastatal-discovery", city="Surat"), "ulg", 20000
     )
     assert note not in [n.path for n in chosen]

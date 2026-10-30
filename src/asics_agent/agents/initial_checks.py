@@ -18,12 +18,12 @@ from pydantic import BaseModel, Field
 from asics_agent.agent_setup import validate as validate_setup
 from asics_agent.agents.state import MasterState
 from asics_agent.applicability import match_rule
+from asics_agent.categories import agent_for, load_bank
 from asics_agent.cities import issues_for_city, load_register
 from asics_agent.llm import call_json
 from asics_agent.models import Issue, RunContext
 from asics_agent.services import Services
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
-from asics_agent.verticals import agent_for, load_bank
 
 _SCALE = re.compile(r"(?im)^\s*(?:score\s*)?(\d+(?:\.\d+)?)\s*(?:—|–|-|marks|if|where)")
 
@@ -158,7 +158,7 @@ def build_initial_checks(services: Services, step: str = "sources"):
         issues: list[Issue] = validate_setup(
             settings.agent_setup_dir,
             [c.name for c in configs.values()],
-            settings.vertical,
+            settings.category,
             {q.pillar for q in state["questions"].values()},
         )
         questions = state["questions"]

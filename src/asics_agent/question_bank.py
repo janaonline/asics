@@ -39,7 +39,7 @@ def _score(value) -> float | None:
         return None
 
 
-# Columns a vertical's bank may leave out: every question then applies to every unit.
+# Columns a category's bank may leave out: every question then applies to every unit.
 OPTIONAL_COLUMNS = {"Sl. No.": "", "Applicability": "Common.", "Evidence / Source Requirement": ""}
 _PART = re.compile(r"^\s*([A-Za-z]+\s*\d+[a-z])\s*(\d+)\s*$")  # e.g. UPD23a1: a part of UPD23a
 
@@ -47,11 +47,11 @@ _PART = re.compile(r"^\s*([A-Za-z]+\s*\d+[a-z])\s*(\d+)\s*$")  # e.g. UPD23a1: a
 def load_question_bank(
     path: Path, sheet: str | None = None, columns: dict[str, str] | None = None
 ) -> tuple[dict[str, Question], list[Issue]]:
-    """Load a vertical's question bank.
+    """Load a category's question bank.
 
     `sheet` names the sheet (default: "Question Bank", else the first sheet with the
     columns); `columns` maps our column names to the bank's own, e.g.
-    {"Tag": "MQ_SQ", "Score / Max Score": "Max Score"} (set in the vertical's settings).
+    {"Tag": "MQ_SQ", "Score / Max Score": "Max Score"} (set in the category's settings).
     """
     wb = load_workbook(path, read_only=True, data_only=True)
     rename = {actual.strip(): ours for ours, actual in (columns or {}).items()}

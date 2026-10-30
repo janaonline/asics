@@ -14,7 +14,7 @@ from openpyxl import load_workbook
 
 from asics_agent.models import Parastatal, Source
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
-from asics_agent.workbook import answers_pattern, is_scoring_sheet
+from asics_agent.workbook import answers_files, canonical_header, is_scoring_sheet
 
 NO_EVIDENCE = {"Insufficient Evidence", "Not Yet Assessed", ""}
 
@@ -48,15 +48,12 @@ class CityEvidence:
 
 
 def phase2_status(settings, city: str) -> Phase2:
-    """Is `city` ready for Step 3 in this vertical (settings: the vertical's)?"""
+    """Is `city` ready for Step 3 in this category (settings: the category's)?"""
     workspace = workspace_for(settings.outputs_dir, city)
     sources = sources_path(workspace, city)
     if not sources.exists():
         return Phase2(city, False, "Step 1 (find sources) hasn't been run for this city.")
-    answers = sorted(
-        (workspace / "answers").glob(f"*/{answers_pattern(settings)}"),
-        key=lambda p: p.stat().st_mtime,
-    )
+    answers = sorted(answers_files(workspace, settings), key=lambda p: p.stat().st_mtime)
     if not answers:
         return Phase2(
             city, False, "Step 2 (answer questions) hasn't been run for this city.", sources
@@ -92,8 +89,8 @@ def _code(question_id: str) -> str:
 
 
 def bank_ids(settings) -> dict[str, str]:
-    """{the bank's own ID: normalised ID} for the vertical's question bank."""
-    from asics_agent.verticals import load_bank
+    """{the bank's own ID: normalised ID} for the category's question bank."""
+    from asics_agent.categories import load_bank
 
     questions, _ = load_bank(settings)
     return {q.raw_id: q.id for q in questions.values()}
@@ -145,7 +142,7 @@ def load_evidence(status: Phase2, ids: dict[str, str] | None = None) -> CityEvid
     if sheet is None:
         return evidence
     rows = sheet.iter_rows(values_only=True)
-    header = [str(h or "").strip() for h in next(rows)]
+    header = [canonical_header(str(h or "").strip()) for h in next(rows)]
     col = {h: i for i, h in enumerate(header)}
 
     def get(row, name):

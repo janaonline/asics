@@ -1,13 +1,13 @@
 """Reads the scores out of a calculated scoring workbook and builds the results workbook.
 
-Every vertical's workbook has the same summary layout (see template.py), so the same code
-reads people's scores (merged copy) and the AI's (AI copy) for any vertical:
+Every category's workbook has the same summary layout (see template.py), so the same code
+reads people's scores (merged copy) and the AI's (AI copy) for any category:
 question/sub-question scores per row, and the overall score per row. Rows are cities, or
 "City – Agency"; a city's score is the average of its rows (equal weights).
 
 The results workbook (scoring/2027/results/ASICS_2027_Scores.xlsx) shows, per city, each
-vertical's score from people and from the AI, and the ASICS score as an Excel formula
-(the equal-weight average of the verticals), plus every question score side by side.
+category's score from people and from the AI, and the ASICS score as an Excel formula
+(the equal-weight average of the categories), plus every question score side by side.
 """
 
 from dataclasses import dataclass, field
@@ -17,8 +17,9 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
+from asics_agent.legacy_names import current_label
 from asics_agent.scoring.human import city_of
-from asics_agent.scoring.template import VerticalTemplate
+from asics_agent.scoring.template import CategoryTemplate
 
 _HEAD = PatternFill("solid", fgColor="DDE7F0")
 _PROVISIONAL = PatternFill("solid", fgColor="FFF6D5")
@@ -38,8 +39,8 @@ def _value(v) -> Value:
 
 
 @dataclass
-class VerticalScores:
-    vertical: str
+class CategoryScores:
+    scoring_code: str  # "UPD", "PARASTATAL": the category's scoring workbook code
     source: str  # "People" or "AI"
     path: Path
     overall: dict[str, Value] = field(default_factory=dict)  # row label -> overall score
@@ -67,12 +68,12 @@ class VerticalScores:
 
 
 def read_scores(
-    template: VerticalTemplate, path: Path, vertical: str, source: str
-) -> VerticalScores:
+    template: CategoryTemplate, path: Path, scoring_code: str, source: str
+) -> CategoryScores:
     """Scores from a workbook that has been calculated (see recalc.py)."""
     summary = template.summary
     ws = load_workbook(path, data_only=True)[summary.sheet]
-    scores = VerticalScores(vertical, source, path)
+    scores = CategoryScores(scoring_code, source, path)
     tag_col = next(
         (
             c
@@ -104,16 +105,21 @@ def _round(v: Value):
 
 
 def build_results(
-    scores: list[VerticalScores], path: Path, canon=None, only: set[str] | None = None
+    scores: list[CategoryScores],
+    path: Path,
+    canon=None,
+    only: set[str] | None = None,
+    titles: dict[str, str] | None = None,
 ) -> Path:
-    """`only`: the cities to show (the register's included cities); others are left out."""
-    verticals = list(dict.fromkeys(s.vertical for s in scores))
-    by = {(s.vertical, s.source): s for s in scores}
+    """`only`: the cities to show (the register's included cities); others are left out.
+    `titles`: {scoring code: category title} for the Category column of Question scores."""
+    codes = list(dict.fromkeys(s.scoring_code for s in scores))
+    by = {(s.scoring_code, s.source): s for s in scores}
     wb = Workbook()
     ws = wb.active
     ws.title = "City scores"
-    columns = []  # (vertical, source)
-    for v in verticals:
+    columns = []  # (scoring code, source)
+    for v in codes:
         columns += [(v, src) for src in ("People", "AI") if (v, src) in by]
     header = ["City", *[f"{v} ({src})" for v, src in columns]]
     sources = [src for src in ("People", "AI") if any(c[1] == src for c in columns)]
@@ -155,7 +161,7 @@ def build_results(
         row=note,
         column=1,
         value=(
-            "ASICS score = the average of the city's vertical scores (equal weights). Yellow = "
+            "ASICS score = the average of the city's category scores (equal weights). Yellow = "
             "provisional: some main questions aren't scored yet. NA = no question applies."
         ),
     )
@@ -164,7 +170,7 @@ def build_results(
     long = wb.create_sheet("Question scores")
     long.append(
         [
-            "Vertical",
+            "Category",
             "Question",
             "MQ_SQ",
             "Row",
@@ -175,7 +181,7 @@ def build_results(
             "Same score?",
         ]
     )
-    for v in verticals:
+    for v in codes:
         people, ai = by.get((v, "People")), by.get((v, "AI"))
         base = people or ai
         for code, label in base.questions:
@@ -187,7 +193,7 @@ def build_results(
             both = isinstance(p, float) and isinstance(a, float)
             long.append(
                 [
-                    v,
+                    (titles or {}).get(v, v),
                     code,
                     base.tags.get(code, ""),
                     label,
@@ -213,7 +219,7 @@ def build_results(
     return path
 
 
-def agreement(people: VerticalScores, ai: VerticalScores, leaf_codes: set[str]) -> dict:
+def agreement(people: CategoryScores, ai: CategoryScores, leaf_codes: set[str]) -> dict:
     """How closely the AI matches people (the golden dataset) on the questions people score
     directly (not the roll-ups)."""
     pairs = [
@@ -223,7 +229,7 @@ def agreement(people: VerticalScores, ai: VerticalScores, leaf_codes: set[str]) 
     people_only = sum(1 for p, a in pairs if isinstance(p, float) and not isinstance(a, float))
     same = sum(1 for p, a in both if abs(p - a) < 1e-9)
     return {
-        "Vertical": people.vertical,
+        "Category": people.scoring_code,
         "Scored by both": len(both),
         "Same score": same,
         "Agreement %": round(100 * same / len(both), 1) if both else None,
@@ -241,6 +247,8 @@ def add_eval_history(rows: list[dict], path: Path, label: str) -> Path:
     if path.exists():
         wb = load_workbook(path)
         ws = wb.active
+        for cell in ws[1]:  # an older file may have the old header
+            cell.value = current_label(cell.value)
     else:
         wb = Workbook()
         ws = wb.active

@@ -1,5 +1,5 @@
 """The app's "Agent setup" page: the team's memory notes (add, edit, archive), new
-verticals, and a read-only view of the agents, prompts and skills in agent_setup/."""
+categories, and a read-only view of the agents, prompts and skills in agent_setup/."""
 
 from pathlib import Path
 
@@ -8,8 +8,9 @@ import streamlit as st
 
 from asics_agent.agent_setup import (
     MemoryScope,
-    add_vertical,
+    add_category,
     archive_note,
+    categories,
     list_notes,
     load_agents,
     memory_block,
@@ -21,10 +22,9 @@ from asics_agent.agent_setup import (
     split_front_matter,
     system_prompt,
     validate,
-    verticals,
 )
 
-SCOPE_LABELS = {"general": "General (every run)", "city": "One city", "vertical": "One vertical"}
+SCOPE_LABELS = {"general": "General (every run)", "city": "One city", "category": "One category"}
 
 
 def render(settings, register, open_file, show_issue, question_bank):
@@ -53,7 +53,7 @@ def render(settings, register, open_file, show_issue, question_bank):
         issues = validate(
             root,
             [c.name for c in configs.values()],
-            settings.vertical,
+            settings.category,
             {q.pillar for q in question_bank().values()},
         )
         if not issues:
@@ -75,22 +75,22 @@ def memory_editor(root: Path, settings, configs):
 
     with st.expander("Add a note", icon=":material/add:", expanded=not notes):
         add_note_form(root, settings, configs)
-    with st.expander("Add a new vertical", icon=":material/create_new_folder:"):
+    with st.expander("Add a new category", icon=":material/create_new_folder:"):
         st.caption(
-            f"The current vertical is **{settings.vertical}**. Add a folder for another "
-            "ASICS vertical (e.g. Mobility) when its work starts; its notes are used "
-            "only in that vertical's runs."
+            f"The current category is **{settings.category}**. Add a folder for another "
+            "ASICS category when its work starts; its notes are used "
+            "only in that category's runs."
         )
-        name = st.text_input("Vertical name", key="new-vertical", placeholder="e.g. Mobility")
-        if st.button("Add vertical", disabled=not name.strip()):
-            folder = add_vertical(root, name.strip())
-            st.success(f"Added memory/verticals/{folder.name}/")
+        name = st.text_input("Category name", key="new-category", placeholder="e.g. Mobility")
+        if st.button("Add category", disabled=not name.strip()):
+            folder = add_category(root, name.strip())
+            st.success(f"Added memory/categories/{folder.name}/")
             st.rerun()
 
-    groups = {"general": [], "city": [], "vertical": []}
+    groups = {"general": [], "city": [], "category": []}
     for note in notes:
         groups[note.scope].append(note)
-    for scope, label in [("general", "General"), ("city", "Cities"), ("vertical", "Verticals")]:
+    for scope, label in [("general", "General"), ("city", "Cities"), ("category", "Categories")]:
         st.subheader(f"{label} ({len(groups[scope])})")
         if not groups[scope]:
             st.caption("No notes yet.")
@@ -109,17 +109,26 @@ def add_note_form(root: Path, settings, configs):
     target = ""
     if scope == "city":
         target = st.selectbox("City", [c.name for c in configs.values()], key="new-city")
-    elif scope == "vertical":
-        target = st.selectbox("Vertical", verticals(root, settings.vertical), key="new-vert")
+    elif scope == "category":
+        target = st.selectbox("Category", categories(root, settings.category), key="new-cat")
     title = st.text_input(
         "Title", placeholder="e.g. Where BWSSB publishes its budget", key="new-title"
     )
     text = st.text_area(
         "Note", height=180, key="new-text", placeholder="Write the context in plain language."
     )
-    with st.expander("Only for some parastatals, sections or agents (optional)"):
-        parastatals = st.text_input(
-            "Parastatal IDs, comma separated", key="new-p", placeholder="e.g. BWSSB, BMTC"
+    ulg = settings.unit == "ulg"  # one ULG per city: no parastatals to pick between
+    with st.expander(
+        "Only for some sections or agents (optional)"
+        if ulg
+        else "Only for some parastatals, sections or agents (optional)"
+    ):
+        parastatals = (
+            ""
+            if ulg
+            else st.text_input(
+                "Parastatal IDs, comma separated", key="new-p", placeholder="e.g. BWSSB, BMTC"
+            )
         )
         sections = st.multiselect("Sections", list(section_codes(root)), key="new-s")
         agents, _ = load_agents(root)
@@ -162,11 +171,11 @@ def note_card(root: Path, note, settings):
     where = {
         "general": "every run",
         "city": f"city: {note.target}",
-        "vertical": f"vertical: {note.target}",
+        "category": f"category: {note.target}",
     }[note.scope]
-    unused = note.scope == "vertical" and note.target != settings.vertical.lower()
+    unused = note.scope == "category" and note.target != settings.category
     with st.expander(
-        f"{note.title}  ·  {where}" + ("  (not used in this vertical)" if unused else ""),
+        f"{note.title}  ·  {where}" + ("  (not used in this category)" if unused else ""),
         icon=":material/description:",
     ):
         st.caption(f"memory/{note.path}")
@@ -202,7 +211,11 @@ def preview(root: Path, settings, configs):
     agents, _ = load_agents(root)
     agent = st.selectbox("Agent", list(agents), format_func=lambda a: agents[a].title)
     city = st.selectbox("City", [c.name for c in configs.values()] or ["(none)"])
-    parastatal = st.text_input("Parastatal ID (optional)", placeholder="e.g. BWSSB")
+    parastatal = (
+        ""
+        if settings.unit == "ulg"
+        else st.text_input("Parastatal ID (optional)", placeholder="e.g. BWSSB")
+    )
     section = st.selectbox("Section (optional)", ["(any)", *section_codes(root)])
     scope = MemoryScope(
         agent=agent,
@@ -211,7 +224,7 @@ def preview(root: Path, settings, configs):
         parastatals=[parastatal.strip().upper()] if parastatal.strip() else [],
         sections=[] if section == "(any)" else [section],
     )
-    chosen, skipped = select_notes(root, scope, settings.vertical, settings.memory_max_chars)
+    chosen, skipped = select_notes(root, scope, settings.category, settings.memory_max_chars)
     st.markdown(f"**Team notes used ({len(chosen)})**")
     for note in chosen:
         st.markdown(f"- memory/{note.path}")

@@ -1,10 +1,10 @@
-"""One run across verticals, cities and steps: e.g. Parastatal and UPD, for Bengaluru and
+"""One run across categories, cities and steps: e.g. Parastatal and ULG, for Bengaluru and
 Surat, Steps 1, 2 and 3.
 
-Stages run in step order, each step for every chosen vertical:
+Stages run in step order, each step for every chosen category:
 
-  Step 1 · Parastatal → Step 1 · UPD → [team reviews the Sources workbooks]
-  → Step 2 · Parastatal → Step 2 · UPD → Step 3 · Parastatal → Step 3 · UPD
+  Step 1 · Parastatal → Step 1 · ULG → [team reviews the Sources workbooks]
+  → Step 2 · Parastatal → Step 2 · ULG → Step 3 · Parastatal → Step 3 · ULG
 
 Steps 1 and 2 are ordinary `BatchRun`s (with Step 1's review of the parastatals found, unless
 switched off); Step 3 is the AI scorer. A stage only does what its gate allows: Step 2 needs
@@ -31,8 +31,8 @@ STEP_TITLES = {1: "Find sources", 2: "Answer questions", 3: "Score"}
 @dataclass
 class Stage:
     step: int
-    vertical: str  # vertical name, e.g. "upd"
-    title: str  # e.g. "Step 2 · UPD · Answer questions"
+    category: str  # category name, e.g. "ulg"
+    title: str  # e.g. "Step 2 · ULG · Answer questions"
     status: str = "waiting"  # waiting | running | needs_review | done | failed | skipped
     note: str = ""  # outcome, in plain language
     batch: BatchRun | None = None
@@ -45,30 +45,30 @@ class PlanRun:
     """Runs the stages in a background thread. The app shows `stages`, the current batch's
     live progress, and its review; `continue_after_review()` resumes after the pause."""
 
-    settings: object  # base settings; each stage uses settings_for(vertical)
-    verticals: list[str]
+    settings: object  # base settings; each stage uses category_settings(category)
+    categories: list[str]
     cities: dict[str, str]  # slug -> name
     steps: list[int]
     practice: bool = False
     review_parastatals: bool = True  # Step 1: pause to review the parastatals found
     pause_after_sources: bool = True  # pause after Step 1 for the Sources workbook review
     options: RunOptions = field(default_factory=RunOptions)
-    services_for: object = None  # (vertical settings) -> Services; injectable for tests
+    services_for: object = None  # (category settings) -> Services; injectable for tests
     stages: list[Stage] = field(default_factory=list)
     status: str = "running"  # running | waiting_for_review | waiting_for_sources | finished
     error: str | None = None
 
     def __post_init__(self):
-        from asics_agent.verticals import load_verticals
+        from asics_agent.categories import load_categories
 
         self.started = datetime.now()
         self.id = f"{self.started:%Y%m%d-%H%M%S}-{uuid.uuid4().hex[:4]}"
-        found, _ = load_verticals(self.settings.agent_setup_dir)
-        titles = {name: found[name].title if name in found else name for name in self.verticals}
+        found, _ = load_categories(self.settings.agent_setup_dir)
+        titles = {name: found[name].title if name in found else name for name in self.categories}
         self.stages = [
             Stage(step, v, f"Step {step} · {titles[v]} · {STEP_TITLES[step]}")
             for step in sorted(self.steps)
-            for v in self.verticals
+            for v in self.categories
         ]
         where = (
             next(iter(self.cities.values()))
@@ -103,10 +103,10 @@ class PlanRun:
         self._resume.set()
 
     # -- the work --------------------------------------------------------------------------
-    def _settings(self, vertical: str):
-        from asics_agent.verticals import settings_for
+    def _settings(self, category: str):
+        from asics_agent.categories import category_settings
 
-        return settings_for(self.settings, vertical)
+        return category_settings(self.settings, category)
 
     def _services(self, vs):
         if self.services_for:
@@ -151,7 +151,7 @@ class PlanRun:
     def _batch(self, stage: Stage) -> None:
         from asics_agent.workbook import city_outcome
 
-        vs = self._settings(stage.vertical)
+        vs = self._settings(stage.category)
         step = "sources" if stage.step == 1 else "answers"
         inputs = {
             "only_pillars": None,
@@ -183,14 +183,14 @@ class PlanRun:
     def _score(self, stage: Stage) -> None:
         from asics_agent.scoring import workflow
 
-        vs = self._settings(stage.vertical)
+        vs = self._settings(stage.category)
 
         def progress(i, n):
             stage.progress = (i, n)
 
         report = workflow.ai_score(
             vs,
-            vs.vertical_code,
+            vs.scoring_code,
             cities=list(self.cities.values()),
             practice=self.practice,
             on_progress=progress,

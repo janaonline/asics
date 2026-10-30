@@ -24,7 +24,7 @@ When scoring:
   partial evidence of current practice.
 - If the evidence answers only part of the question, say which part is missing.
 
-# Rules that apply to every vertical and every city (v2)
+# Rules that apply to every category and every city (v2)
 - A rubric 0 (or a "NO" input that scores 0) needs AFFIRMATIVE ABSENCE: every relevant
   instrument or page was in the Citation Sheet and read, nothing was found, and you list what
   you checked. Otherwise the result is "not found": leave the score/input blank.

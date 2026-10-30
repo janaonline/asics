@@ -41,7 +41,7 @@ TYPES = {
     "Transport corporation": "transport_corporation",
     "Development authority": "development_authority",
     "Other": "other",
-    "City government": "city_government",
+    "City government": "ulg",
 }
 TYPE_LABELS = {v: k for k, v in TYPES.items()}
 # Yes/No column -> (Parastatal field, value assumed when the cell is left blank)
