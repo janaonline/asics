@@ -24,7 +24,7 @@ BENGALURU = CityConfig(
         Parastatal(
             id="BWSSB",
             name="Bangalore Water Supply and Sewerage Board",
-            type="water_supply_board",
+            type="water_supply_entity",
             revenue_raising=True,
             capex_mandate=True,
             notes=CONFIRM,
@@ -32,7 +32,7 @@ BENGALURU = CityConfig(
         Parastatal(
             id="BMTC",
             name="Bangalore Metropolitan Transport Corporation",
-            type="transport_corporation",
+            type="public_bus_transport_operator",
             revenue_raising=True,
             capex_mandate=True,
             notes=CONFIRM,

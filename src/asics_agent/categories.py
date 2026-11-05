@@ -58,6 +58,9 @@ class Category:
     question_columns: dict = field(default_factory=dict)
     outputs: str = "."
     scoring_workbook: str = ""
+    # The team's scoring templates (one file per section: UPD, SC, DPG). A category with these
+    # is scored in copies of them (scoring/template_scoring.py); without, in `scoring_workbook`.
+    scoring_templates: tuple = ()
     shared_rules: str = "shared-rules"
     agents: dict = field(default_factory=dict)  # role -> agent name
     description: str = ""
@@ -91,6 +94,7 @@ def _parse(path: Path) -> Category:
         question_columns=dict(meta.get("question_columns") or {}),
         outputs=str(meta.get("outputs") or "."),
         scoring_workbook=str(meta.get("scoring_workbook") or ""),
+        scoring_templates=tuple(str(t) for t in (meta.get("scoring_templates") or [])),
         shared_rules=str(meta.get("shared_rules") or "shared-rules"),
         agents=agents,
         description=text[match.end() :].strip() if match else text.strip(),
@@ -180,6 +184,7 @@ def category_settings(settings, name: str):
         question_columns=tuple(sorted(v.question_columns.items())),
         outputs_dir=outputs,
         scoring_workbook=_resolve(PROJECT_ROOT, v.scoring_workbook) if v.scoring_workbook else None,
+        scoring_templates=tuple(_resolve(PROJECT_ROOT, t) for t in v.scoring_templates),
     )
 
 

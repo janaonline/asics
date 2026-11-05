@@ -33,6 +33,7 @@ from asics_agent.links.accessibility import check_url
 from asics_agent.links.trust import best_official, host_of, is_official_host, rate_website
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue, Parastatal, Question, RunContext
+from asics_agent.parastatal_types import FALLBACK_TYPE, TYPE_CODES, ULG_TYPE, canonical_type
 from asics_agent.progress import report
 from asics_agent.run_options import current_options
 from asics_agent.services import Services
@@ -126,7 +127,7 @@ def build_parastatal_discovery(services: Services):
             else Parastatal(
                 id=ULG_UNIT_ID,
                 name=run.ulg or f"{run.city_name} city government",
-                type="ulg",
+                type=ULG_TYPE,
                 found_by="Your team",
                 why_included="The city government is what this category assesses.",
             )
@@ -184,12 +185,9 @@ def build_parastatal_discovery(services: Services):
         parastatals = list(known)
         added = []
         for item in reply.parastatals:
-            kind = (
-                item.type
-                if item.type
-                in {"water_supply_board", "transport_corporation", "development_authority"}
-                else "other"
-            )
+            kind = canonical_type(item.type or "")
+            if kind not in TYPE_CODES:  # unknown or missing: the common questions only
+                kind = FALLBACK_TYPE
             evidence = [u for u in item.evidence_urls if u in urls]
             reason = item.why_included.strip()
             if item.status == "needs_review" and not reason.upper().startswith("NEEDS REVIEW"):

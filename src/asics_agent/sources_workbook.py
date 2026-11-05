@@ -19,6 +19,7 @@ from openpyxl.styles import Alignment, Font
 from asics_agent.cities import FLAGS, TYPE_LABELS, TYPES, YES
 from asics_agent.links.manual import apply_saved_copies
 from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal, Question, Source, WebsiteCheck
+from asics_agent.parastatal_types import ULG_TYPE_LABEL, canonical_type, known_type
 from asics_agent.workbook import (
     _FILLS,
     _HEADER_FILL,
@@ -253,9 +254,7 @@ def read_sources_workbook(path: Path, cache_dir: Path):
         if not pid or not get("Parastatal Name"):
             team("error", f"{where}: every parastatal needs an ID and a name.")
             continue
-        kind = next(
-            (code for label, code in TYPES.items() if label.lower() == get("Type").lower()), None
-        )
+        kind = canonical_type(get("Type")) if known_type(get("Type")) else None  # old names read
         if kind is None:
             team("error", f"{where}: the Type of {pid} must be one of: {', '.join(TYPES)}.", pid)
             continue
@@ -429,7 +428,7 @@ def write_sources_workbook(
             )
             ws.cell(row=r, column=mapping["Website Check"]).fill = _FILLS[colour]
     _add_dropdown(ws, mapping["Include?"], ["Yes", "No"])
-    _add_dropdown(ws, mapping["Type"], list(TYPES))
+    _add_dropdown(ws, mapping["Type"], [*TYPES, ULG_TYPE_LABEL])  # the ULG row has its own type
     for label in FLAGS:
         _add_dropdown(ws, mapping[label], ["Yes", "No"])
 

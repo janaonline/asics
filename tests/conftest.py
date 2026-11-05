@@ -34,3 +34,35 @@ def run_steps(services):
         return build(services).invoke(inputs)
 
     return run
+
+
+@pytest.fixture(scope="session")
+def practice(tmp_path_factory):
+    """A practice Step 1, 2 and 3 for the Parastatal category (sample cities, scripted AI).
+
+    Returns (the practice scoring folder, the settings the run used, the run)."""
+    import time
+
+    from asics_agent.config import get_settings
+    from asics_agent.plan import PlanRun
+    from asics_agent.practice import practice_services
+
+    tmp = tmp_path_factory.mktemp("step3")
+    base = dataclasses.replace(
+        get_settings(), outputs_dir=tmp, outputs_root=None, scoring_dir=tmp / "scoring"
+    )
+    plan = PlanRun(
+        base,
+        ["parastatal"],
+        {"sample_city_a": "Sample City A"},
+        [1, 2, 3],
+        practice=True,
+        services_for=lambda vs: practice_services(vs),
+        review_parastatals=False,
+        pause_after_sources=False,
+    ).start()
+    end = time.time() + 180
+    while plan.status not in {"finished", "failed"} and time.time() < end:
+        time.sleep(0.2)
+    assert plan.status == "finished", plan.error
+    return tmp / "scoring" / "practice", base, plan

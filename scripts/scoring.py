@@ -3,6 +3,8 @@
 uv run python scripts/scoring.py check     # workbooks follow the conventions? cities match?
 uv run python scripts/scoring.py prepare   # make each intern's copy from the assignments
 uv run python scripts/scoring.py merge     # merge interns' work, calculate, update results
+                                           # (Parastatal: merges the files uploaded in the app's
+                                           # Step 3 > People's scoring into the merged workbooks)
 uv run python scripts/scoring.py ai --category parastatal --question UPD1a --city Bengaluru
                                            # the AI scores cities Step 2 has answered, from
                                            # Step 2's answers and Citation Sheet only
@@ -47,8 +49,19 @@ def main():
         if name not in known:
             parser.error(f"unknown category '{name}' (choose from: {', '.join(known)})")
     codes = [category_settings(settings, name).scoring_code for name in dict.fromkeys(names)]
-    if args.step == "merge":
-        reports = [workflow.merge(settings, codes or None)]
+    in_templates = [  # categories scored in the team's templates: submissions, not interns' files
+        c for c in (category_settings(settings, n) for n in (names or known)) if c.scoring_templates
+    ]
+    template_codes = {c.scoring_code for c in in_templates}
+    if args.step in ("merge", "prepare"):
+        old = [c for c in codes if c not in template_codes]
+        reports = []
+        if args.step == "prepare":
+            reports += [workflow.prepare(settings)] if old or not names else []
+            reports += [workflow.prepare_templates(c) for c in in_templates]
+        else:
+            reports += [workflow.merge(settings, old or None)] if old or not names else []
+            reports += [workflow.merge_templates(c) for c in in_templates]
     elif args.step == "ai":
         if not codes:
             parser.error("choose a category with --category, e.g. --category ulg")

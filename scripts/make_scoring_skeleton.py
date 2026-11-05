@@ -1,7 +1,7 @@
 """Generate a draft scoring workbook for a category from its question bank.
 
-    uv run python scripts/make_scoring_skeleton.py                       # Parastatal
     uv run python scripts/make_scoring_skeleton.py --category ulg
+    (not for Parastatal: it is scored in copies of the team's templates, see scoring_templates)
     uv run python scripts/make_scoring_skeleton.py --methodology other.xlsx   # another sheet
 
 By default the questions come from the category's own question bank (the one Steps 1 and 2
@@ -29,6 +29,11 @@ def main():
     args = parser.parse_args()
     category = old_option(args.vertical) if args.vertical else args.category
     settings = category_settings(get_settings(), category)
+    if settings.scoring_templates:
+        parser.error(
+            f"{settings.category_title} is scored in copies of the team's templates "
+            "(scoring_templates in its settings), so it needs no draft workbook."
+        )
     out = (
         args.out
         or settings.scoring_workbook

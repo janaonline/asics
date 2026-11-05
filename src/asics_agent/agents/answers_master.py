@@ -26,6 +26,7 @@ from asics_agent.agents.initial_checks import build_initial_checks
 from asics_agent.agents.rollup import compute_rollups
 from asics_agent.agents.sections import build_section_agent, section_for, section_nodes
 from asics_agent.agents.state import MasterState
+from asics_agent.bank_version import bank_version
 from asics_agent.batch import Batcher
 from asics_agent.links.accessibility import check_url
 from asics_agent.links.database import write_links_db
@@ -189,6 +190,9 @@ def build_answers_graph(
             {
                 "run": run.model_dump(),
                 "agent_setup_fingerprint": fingerprint(services.settings.agent_setup_dir),
+                "bank_version": bank_version(
+                    services.settings.question_bank, state["questions"]
+                ).as_dict(),
                 "memory_used": sorted({m for a in all_answers for m in a.memory_used}),
                 "applicability": applicability,
                 "counts": {

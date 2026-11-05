@@ -37,7 +37,7 @@ FOLDERS = [
         "kept for comparison.",
     ),
     (
-        "scoring/2027/ai/<CODE>_ai.xlsx (outside outputs)",
+        "scoring/2027/ai/<CODE>_ai.xlsx or <CODE>_<SECTION>_AI.xlsx (outside outputs)",
         "Step 3: the scoring workbook. Its first sheet, Scores (start here), is the one to use.",
     ),
     (
@@ -152,6 +152,10 @@ def write_index(settings) -> Path:
         vs = category_settings(settings, category.name)
         scored = scored_cities(vs.scoring_dir, vs.scoring_code)
         scoring = ai_file(vs.scoring_dir, vs.scoring_code)
+        if vs.scoring_templates:  # scored in copies of the team's templates: link the first
+            from asics_agent.scoring.compare_run import ai_files
+
+            scoring = next(iter(ai_files(vs)), scoring)
         for city in register.values():
             info = city_row(vs, city.name, scored)
             ws.append([city.name, category.title, info["stage"], NEXT[info["stage"]]])

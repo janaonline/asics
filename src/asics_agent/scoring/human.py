@@ -62,7 +62,10 @@ class Plan:
 
 
 def city_of(label: str) -> str:
-    return label.split(SEPARATOR)[0].strip()
+    """The city of a row label ("Bengaluru – BWSSB", "Bengaluru - BWSSB"...): see split_label."""
+    from asics_agent.scoring.name_resolution import split_label
+
+    return split_label(label)[0]
 
 
 def match_cities(labels: list[str], cities) -> tuple[dict[str, str], list[str]]:
@@ -111,6 +114,9 @@ def write_assignments_template(path: Path, scoring_workbooks: dict[str, str]) ->
         "code starting with UPD1.",
         '  Cities: city names separated by commas, or "All". To split a question between '
         "interns, give each a different set of cities.",
+        "A category scored in the team's templates (Parastatal) has no row on the Categories "
+        "sheet: put its code (PARASTATAL) in the Category column of the Assignments sheet, and "
+        'questions like "UPD*", "SC 1" or "DPG 5*".',
         "After saving, open the app's Scoring page (or run scripts/scoring.py prepare) to make "
         "each intern's copy. Interns work only in their own copy.",
     ]:
@@ -160,8 +166,12 @@ def _split(text: str) -> list[str]:
     return [p.strip() for p in re.split(r"[,;\n]", text) if p.strip()]
 
 
-def read_plan(path: Path, templates_dir: Path, register=None) -> tuple[Plan, dict]:
-    """Read the assignments workbook; returns (plan, {scoring code: CategoryTemplate})."""
+def read_plan(
+    path: Path, templates_dir: Path, register=None, skip: frozenset | set = frozenset()
+) -> tuple[Plan, dict]:
+    """Read the assignments workbook; returns (plan, {scoring code: CategoryTemplate}).
+    Rows of the categories in `skip` (scored in the team's templates, see human_copies) are not
+    read here."""
     problems: list[str] = []
     wb = load_workbook(path, data_only=True)
     sheets = {s: sheet_name(wb.sheetnames, s) for s in (CATEGORIES_SHEET, ASSIGNMENTS_SHEET)}
@@ -170,6 +180,8 @@ def read_plan(path: Path, templates_dir: Path, register=None) -> tuple[Plan, dic
             return Plan({}, [], [f'The assignments workbook has no "{sheet}" sheet.']), {}
     categories, templates = {}, {}
     for r, v in _sheet_rows(wb[sheets[CATEGORIES_SHEET]], CATEGORY_COLUMNS, problems):
+        if v["Category"].upper() in skip:
+            continue
         file = templates_dir / v["Scoring workbook"]
         if not file.exists():
             problems.append(
@@ -184,6 +196,8 @@ def read_plan(path: Path, templates_dir: Path, register=None) -> tuple[Plan, dic
     for r, v in _sheet_rows(wb[sheets[ASSIGNMENTS_SHEET]], ASSIGNMENT_COLUMNS, problems):
         where = f"Assignments sheet, row {r}"
         scoring_code = v["Category"].upper()
+        if scoring_code in skip:
+            continue
         if scoring_code not in templates:
             problems.append(
                 f'{where}: the category "{v["Category"]}" isn\'t on the Categories sheet.'

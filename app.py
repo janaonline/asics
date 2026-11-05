@@ -1322,7 +1322,13 @@ def files_page():
     import city_view_page
 
     city_view_page.render(
-        city_folders(), open_file, zip_folder, header, answers_patterns(settings), settings.unit
+        city_folders(),
+        open_file,
+        zip_folder,
+        header,
+        answers_patterns(settings),
+        settings.unit,
+        settings,
     )
 
 
@@ -1518,7 +1524,9 @@ def step3_page():
 def scores_page():
     import scoring_page as page
 
-    page.render_scores(settings, open_file)
+    configs, _ = register()
+    slug = st.session_state.get("city")
+    page.render_scores(settings, open_file, configs[slug].name if slug in configs else None)
 
 
 def help_page():

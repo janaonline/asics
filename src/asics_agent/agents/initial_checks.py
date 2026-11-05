@@ -17,7 +17,8 @@ from pydantic import BaseModel, Field
 
 from asics_agent.agent_setup import validate as validate_setup
 from asics_agent.agents.state import MasterState
-from asics_agent.applicability import match_rule
+from asics_agent.applicability import get_rules, match_rule, override_notes
+from asics_agent.bank_version import bank_version
 from asics_agent.categories import agent_for, load_bank
 from asics_agent.cities import issues_for_city, load_register
 from asics_agent.llm import call_json
@@ -78,6 +79,14 @@ def build_initial_checks(services: Services, step: str = "sources"):
         issues += issues_for_city(register_issues, city.name)
         questions, bank_issues = load_bank(settings)
         issues += bank_issues
+        if questions:
+            issues.append(
+                _issue(
+                    "info",
+                    "Question bank version: "
+                    f"{bank_version(settings.question_bank, questions).version}",
+                )
+            )
 
         workspace = workspace_for(settings.outputs_dir, city.name)
         run_id = datetime.now().strftime("%Y%m%d-%H%M%S-") + uuid.uuid4().hex[:4]
@@ -162,8 +171,14 @@ def build_initial_checks(services: Services, step: str = "sources"):
             {q.pillar for q in state["questions"].values()},
         )
         questions = state["questions"]
+        in_parastatals = settings.unit != "ulg"  # applicability overrides are for parastatals
+        for problem in get_rules().problems:
+            issues.append(_issue("warning", problem, team=True))
+        if in_parastatals:
+            for q, note in override_notes(questions):
+                issues.append(_issue("warning", f"CONFIRM {q.raw_id}: {note}", q.id, team=True))
         for q in questions.values():
-            if match_rule(q.applicability) is None:
+            if match_rule(q.applicability, q.id if in_parastatals else None) is None:
                 issues.append(
                     _issue(
                         "warning",
@@ -177,8 +192,9 @@ def build_initial_checks(services: Services, step: str = "sources"):
             if q.max_score is None:
                 issues.append(
                     _issue(
-                        "warning",
-                        f"{q.raw_id}: no maximum score in the question bank. Please add one.",
+                        "info",
+                        f"{q.raw_id}: no maximum score in the question bank, so it is not "
+                        "scored (the source may say why). Add a maximum score to score it.",
                         q.id,
                         team=True,
                     )

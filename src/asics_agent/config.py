@@ -52,6 +52,7 @@ class Settings:
     question_bank_sheet: str = ""
     question_columns: tuple = ()  # (our column name, the bank's column name) pairs
     scoring_workbook: Path | None = None
+    scoring_templates: tuple = ()  # the team's templates, one per section (see categories.py)
     outputs_root: Path | None = None  # the outputs folder before the category's subfolder
     # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
     find_sources_max_uses: int | None = None

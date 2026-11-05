@@ -38,6 +38,8 @@ class StepTwoAnswer:
     notes: str
     source_needed: str
     question: str = ""  # the question's text as Step 2 answered it
+    answer_class: str = ""  # A1 | A2 | R | P | M | Needs review
+    confidence: str = ""  # High | Medium | Low
 
 
 @dataclass
@@ -161,5 +163,7 @@ def load_evidence(status: Phase2, ids: dict[str, str] | None = None) -> CityEvid
                 evidence=get(row, "Evidence Excerpt"),
                 notes=get(row, "Notes"),
                 source_needed=get(row, "Source Needed"),
+                answer_class=get(row, "Class"),
+                confidence=get(row, "Confidence"),
             )
     return evidence

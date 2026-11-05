@@ -1,0 +1,564 @@
+question_code,template,sheet,score_kind,max_score,input_headers,input_types,allowed_options,inputs_needed_for_score,evidence_columns,calculated_columns,formula_headers,score_levels,ai_coverage,reason,detailed_methodology
+DPG 1a,Parastatal_DPG_Template.xlsx,DPG 1a,calculated by template formula,5,Devolution scenario (A not devolved / B fully devolved / C partially devolved) | Acts explicit and non-overlapping (scenarios B and C),choice | choice,Devolution scenario (A not devolved / B fully devolved / C partially devolved): A/B/C | Acts explicit and non-overlapping (scenarios B and C): Yes/No,Devolution scenario (A not devolved / B fully devolved / C partially devolved) | Acts explicit and non-overlapping (scenarios B and C),Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Response Summary,0,,AI fills all,every input is needed; the row is written only when all are decided,"Step 1 — Check devolution status under the Municipal Act.
+Review the Municipal Act to determine whether the specific function/service is:
+
+A — Not devolved: the function is not assigned to the ULG at all.
+B — Fully devolved: the function is assigned to the ULG in full, and the parastatal also delivers it (i.e. a potential overlap exists).
+C — Partially devolved: only specific sub-functions are assigned to the ULG (e.g. domestic water supply to the ULG, bulk supply/production to the parastatal).
+
+Step 2 — Score based on which scenario applies.
+
+If A (not devolved): Score 5. There is no ULG claim to the function, so there is nothing to demarcate against — the parastatal Act's assignment stands on its own.
+
+If B (fully devolved, both deliver it): Check whether the Parastatal Act explicitly carves out or distinguishes the parastatal's role from the ULG's (e.g. the parastatal Act specifies it handles a particular aspect, area, or scale of the function, rather than simply repeating the ULG's full assignment).
+
+Score 5 if such a distinction is explicit in the Parastatal Act.
+Score 0 if both Acts assign the same function with no distinction between them.
+
+If C (partially devolved): Check whether the aspect assigned to the parastatal is explicit and does not overlap with the aspect assigned to the ULG (e.g. Municipal Act assigns domestic water supply to the ULG; Parastatal Act assigns bulk supply/production to the parastatal — no overlap).
+
+Score 5 if the two Acts' assignments are explicit and non-overlapping.
+Score 0 if the assigned aspects overlap, or if the parastatal's aspect is not clearly specified in its Act."
+DPG 1b,Parastatal_DPG_Template.xlsx,DPG 1b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and Municipal Act as the primary sources to determine the parastatal’s territorial/geographic jurisdiction.
+If the applicable legislation does not clearly define the jurisdiction, or provides for jurisdiction to be specified or altered through subsequent notification, check relevant government notifications/gazette publications and, where necessary, the parastatal’s official website for the current jurisdictional boundary.
+ 
+Score 5 — The parastatal’s jurisdiction is clearly defined through a specific boundary description, schedule, map reference, notified area or other legally identifiable territorial definition.
+Score 0 — The parastatal’s jurisdiction cannot be clearly established from the applicable legislation or subsequent legally valid notifications/orders."
+DPG 2a,Parastatal_DPG_Template.xlsx,DPG 2a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and Municipal Act as primary sources to determine the composition of the parastatal’s governing board and whether the legislation provides for ULG representatives. Where the composition, status or voting rights of members are not clear from the applicable legislation, check the parastatal’s official website or current board-member list.
+ 
+Score 5: ULG-elected representatives are members of the governing board with voting rights.
+Score 2.5: The ULG is represented on the governing board, but without voting rights or only as invitees.
+Score 0: No ULG representation on the governing board is provided for or found."
+DPG 2b,Parastatal_DPG_Template.xlsx,DPG 2b,calculated by template formula,5,Plans required to be submitted or tabled before ULG/council | Budgets required to be submitted or tabled before ULG/council | Annual or performance reports required to be submitted or tabled before ULG/council,choice | choice | choice,Plans required to be submitted or tabled before ULG/council: Yes/No | Budgets required to be submitted or tabled before ULG/council: Yes/No | Annual or performance reports required to be submitted or tabled before ULG/council: Yes/No,Plans required to be submitted or tabled before ULG/council | Budgets required to be submitted or tabled before ULG/council | Annual or performance reports required to be submitted or tabled before ULG/council,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Response Summary,0,,AI fills all,every input is needed; the row is written only when all are decided,"Check the relevant Parastatal Act and Municipal Act for provisions requiring the parastatal to submit or table its plans, budgets and reports before the ULG/council.
+The requirement may arise either:
+through a specific provision applicable to the parastatal (The requirement may be provided through a general provision covering these documents or through specific provisions for each); or
+through a general/blanket provision in the Municipal Act requiring public authorities, boards, corporations or other agencies operating within the municipal area to submit specified plans, budgets, reports or related documents to the ULG/council.
+ 
+Score 1.67 points each where:
+plans are required to be submitted/tabled;
+budgets are required to be submitted/tabled; and
+annual/performance reports are required to be submitted/tabled.
+
+Score 0 for each component where no such requirement exists.
+ 
+Where all three are provided for, award the full score of 5.
+ 
+Submission only to the State Government or another authority should not be counted as submission to the ULG/council."
+DPG 3,Parastatal_DPG_Template.xlsx,DPG 3,typed points,10,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,10 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the official website of the relevant parastatal.
+
+Score 10 if an official website of the relevant parastatal exists, opens without error, and shows content updated within the last 12 months (verifiable ""last updated"" date or dated content such as a recent notice/circular). 
+
+Score 0 if no official website is found."
+DPG 4,Parastatal_DPG_Template.xlsx,DPG 4,typed points,,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,not scored: the template gives no Max Score,left for a person,no Max Score in the template (the team does not score it),[Note: The scoring of this question has not been undertaken in the manual exercise as he universe of legislation and subordinate legislation governing the parastatals are not fully clear. Awaiting support from the state teams before manually scoring this question.]
+DPG 5a,Parastatal_DPG_Template.xlsx,DPG 5a,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Availability and currency — 0.625
+Score 0.625: Budget for the current FY or either of the immediately preceding two FYs is publicly available on the website.
+Score 0: Budget cannot be found/accessed on the website., or the latest available budget is older than the permitted period.
+ 
+Part B: Open-data format — 0.625
+Score 0.625:  Budget information is available in an open, structured and reusable data format, such as:
+1. CSV;
+2. XLS/XLSX;
+3. ODS;
+4. structured HTML table; or
+5. another downloadable structured dataset.
+
+Score 0 — Budget information is available only in a non-open or non-reusable format, including:
+1. PDF, whether searchable or scanned;
+2. image files;
+3. unstructured webpages;
+4. documents containing tables that are not provided as structured downloadable data.
+ 
+The open-data format should allow budget figures to be readily extracted, analysed and reused without manual transcription."
+DPG 5b,Parastatal_DPG_Template.xlsx,DPG 5b,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Availability and currency —0.625
+Score 0.625 —Quarterly financial statements are publicly available on the website, and the latest available statements are not older than two years.
+Score 0 — Quarterly financial statements cannot be found/accessed on the website, or the latest available statements are older than the permitted period.
+ 
+Part B: Open-data format — 0.625
+Score  0.625 — Quarterly financial statements are available in an open, structured and reusable data format, such as:
+1. CSV;
+2. XLS/XLSX;
+3. ODS;
+4. structured HTML table; or
+5. another downloadable structured dataset.
+
+Score 0 — Quarterly financial information is available only in a non-open or non-reusable format, including:
+1. PDF, whether searchable or scanned;
+2. image files;
+3. unstructured webpages; or
+4. documents containing financial tables that are not provided as structured reusable data.
+ The open-data format should allow financial figures to be readily extracted, analysed and reused without manual transcription."
+DPG 5c,Parastatal_DPG_Template.xlsx,DPG 5c,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Availability and currency —0.625
+Score 0.625: The annual report is on the website, and the latest available report is not older than two years.
+Score 0: The annual report cannot be found/accessed on the website, or the latest available report is older than the permitted period.
+ 
+Part B: Open-data format — 0.625
+Score 0.625: Key information contained in the annual report is also available in an open, structured and reusable format, such as:
+1. CSV;
+2. XLS/XLSX;
+3. ODS;
+4. structured HTML tables; or
+
+Score 0: The annual report is available only as a document or other non-structured format, including:
+1. PDF, whether searchable or scanned;
+2. DOC/DOCX;
+3. image files;
+4. e-publications; or
+5. webpages containing narrative information without structured reusable data.
+ 
+The open-data format should allow key annual-report information to be extracted, analysed and reused without manual transcription."
+DPG 5d,Parastatal_DPG_Template.xlsx,DPG 5d,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Availability and currency — 0.625
+Score 0.625: Data on civic works/projects and/or information on ongoing projects is on the website, and the latest available information is not older than two years.
+Score 0: Data on civic works/projects and/or information on ongoing projects cannot be found/accessed on the website, or the latest available information is older than two years.
+ 
+Part B: Open-data format — 0.625
+Score 0.625 — Information on  civic works/projects and/or ongoing projects is available in an open, structured and reusable format, such as:
+1. structured HTML webpage/table or project dashboard;
+2. CSV;
+3. XLS/XLSX;
+4. ODS;
+ 5. Other downloadable structured dataset containing identifiable plan/project information.
+
+Score 0 — Information is available only in a non-structured or non-reusable format, such as:
+1. PDF, including searchable PDF;
+2. scanned document;
+3. image-only plan/project information;
+4. individual project pages or notices that do not provide structured, reusable data;
+5. project information presented only through images or unstructured text."
+DPG 5e,Parastatal_DPG_Template.xlsx,DPG 5e,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Check availability and currency — 0.625
+Score 0.625: At least one set of minutes from the current FY or immediately preceding FY is on the website.
+Score 0: Meeting Minutes cannot be found/accessed on the website or is older than the permitted period.
+Record the FY/year/date of the latest information found in a separate evidence field even where the score is 0.
+ 
+Part B: Minimum format/accessibility — 0.625
+Score 0.625: Meeting Minutes available in a searchable/text-readable and downloadable document (Searchable PDF, HTML, DOC/DOCX)
+Score 0: Meeting Minutes is available but does not meet that standard (Scanned/image-only minutes; image gallery)"
+DPG 5f,Parastatal_DPG_Template.xlsx,DPG 5f,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Availability and currency — 0.625
+Score 0.625: At least the parastatal's parent act, allied rules, and government orders or notifications are available on the website. 
+Score 0:Score 0: If the parastatal's parent act/enabling legislation is not found  on the website.
+ 
+Part B: Open-data format — 0.625
+Score 0.625 — The parastatal's parent act, allied rules, and government orders or notifications are  available in a searchable/text-readable and downloadable document (Searchable PDF, HTML, DOC/DOCX)
+Score 0: Parastatal's parent act, allied rules, and government orders or notifications are  available but do not meet that standard given above ."
+DPG 5g,Parastatal_DPG_Template.xlsx,DPG 5g,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Check availability — 0.625
+Score 0.208 if each of the following are publicly available on the website:
+(1) The parastatal’s organisational structure/organogram; and
+(2) Details of key officers, including name/designation and at least one official contact detail (phone number and/or email address).
+(3) Current PIO/APIO details are available
+
+Score 0 if none are on the website.
+ 
+Part B: Minimum format/accessibility — 0.625
+Score 0.208 each if the organisational strucure/organogram, details of key officers and current PIO/APIO details are available in a searchable and readable format, such as:
+a searchable webpage;
+searchable/downloadable PDF or document;
+structured table or directory.
+Score 0 if each are only available non-searchable/non-readable format, such as an image-only organogram, scanned list or image-based directory/PIO details."
+DPG 5h,Parastatal_DPG_Template.xlsx,DPG 5h,typed points,1.25,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 1.25 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Part A: Availability and currency — 0.625
+Score 0.625: Service-level benchmark/performance information is on the website, and the latest available information is not older than two years.
+Score 0 — Performance information cannot be found/accessed on the website, or the latest available information is older than the permitted period.
+ 
+Part B: Open-data format — 0.625
+Score 0.625 — Performance information is available in an open, structured and reusable format, such as:
+1. CSV;
+2. XLS/XLSX;
+3. ODS;
+4. structured HTML table/dashboard; or
+5. another downloadable structured dataset containing service-level or performance information.
+
+Score 0: Performance information is available only in a non-open or non-reusable format, including:
+1. PDF, whether searchable or scanned;
+2. image/chart without the underlying data;
+3. narrative webpage without structured data; or
+4. other formats that do not allow the information to be readily extracted, analysed and reused.
+
+The open-data format should allow service-level or performance information to be analysed and reused without manual transcription.
+ 
+Note: For Development Authorities whose functions are limited to planning and preparation of spatial/development plans, mark this indicator ‘NA’.
+Where a Development Authority also performs operational or service-delivery functions — such as building/development permissions, land allotment/development, infrastructure provision, housing, estate management or other citizen-facing services — assess this indicator against the performance information relevant to those functions."
+DPG 6,Parastatal_DPG_Template.xlsx,DPG 6,typed points,10,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,10 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Part A: Check availability and currency — 5.0
+
+Score 10: If there is a currently applicable Charter is available on the website. Do not treat it as outdated solely because it predates the preceding FY if it remains in force. There may be no annual publication requirement;
+Score 0: Charter cannot be found/accessed on the website."
+DPG 7a,Parastatal_DPG_Template.xlsx,DPG 7a,calculated by template formula,3.33,Web-based grievance channel or endorsed app functioning | Telephone grievance channel dedicated or designated | Grievance acknowledgement and tracking available,choice | choice | choice,Web-based grievance channel or endorsed app functioning: Yes/No | Telephone grievance channel dedicated or designated: Yes/No | Grievance acknowledgement and tracking available: Yes/No,Web-based grievance channel or endorsed app functioning | Telephone grievance channel dedicated or designated | Grievance acknowledgement and tracking available,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Response Summary,0,,AI fills all,every input is needed; the row is written only when all are decided,"Check the parastatal’s official website and other officially notified grievance channels. Score based on the following components:
+
+1. Web-based grievance channel or the parastatal endorsed app— 1.11marks
+Score 1.11 if an official website/portal/app provides a functioning mechanism through which a grievance can be lodged online. A dedicated grievance form, integrated government grievance portal/mobile app or equivalent mechanism qualifies.
+ 
+2. Telephone grievance channel — 1.11 marks
+Score 1.11 if a dedicated or clearly designated helpline, call centre or telephone number is provided for complaints or grievances.
+A generic office switchboard should not qualify unless it is explicitly identified as a channel for lodging grievances.
+ 
+3. Grievance acknowledgement and tracking — 1.11 marks
+Score 1.25 if the grievance mechanism provides for acknowledgement and subsequent tracking of a registered grievance through a complaint/reference number, status-tracking facility or equivalent mechanism.
+ 
+Where all 3 components are available, award the full score of 3.33"
+DPG 7b,Parastatal_DPG_Template.xlsx,DPG 7b,typed points,3.33,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,3.33 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the parastatal’s official website and check whether there are dedicated portal through which citizens can apply for access to the different services the parastatla provides.
+
+Look for identifiable measures such as (non-exhaustive):
+1. For Development Authorities: Portal to apply for approvals, portals to pay tax (?)
+2. For Water Supply Entities : Paying the water bill, apply for targeted water schemes, apply for water connection
+3. For Bus Transport Entities: Apply for travel passess particulalry for students, women, senior citizens and persons with disabilities.
+
+Score 3.33,  if such portals exist in the parastatal's website. 
+Score 0, if such portals are inaccessible, defunct or unavailable on the website."
+DPG 7c,Parastatal_DPG_Template.xlsx,DPG 7c,typed points,3.33,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,free / partial credit: range check 0 to 3.33 only (top level 3 is below the Max Score 3.33),AI fills all,typed points (score 0 to Max) + evidence,"Check the parastatal’s official website and identify whether it has information on the union, state or parastatal specific schemes it implements. 
+
+Do not award credit if the scheme is only mentioned but not detailed (?)
+
+Look for identifiable measures such as (non-exhaustive):
+1. For Development Authorities: Information of land pooling schemes, town planning schemes, Affordable housing schemes
+2. For Water Supply Entities : SUJAL Mission in Odisha; BWSSB's Cauvery Water Supply Scheme, Stage V; Hyderabad Metropolitan Water Supply and Sewerage Board's 20-kilolitre free water scheme;
+3. For Bus Transport Entities: FAME-II, e-Bus Sewa, Shakthi Yojana in Karnataka, Priyadarshini Scheme in Kerala
+
+Score 3,  if the parastatal's website has information on the schemes it implements.
+Score 0, if information in inaccessible or unavailable on the website."
+DPG 8a,Parastatal_DPG_Template.xlsx,DPG 8a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 1.25 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the parastatal Act and rules first. Also review the applicable T&CP/planning Act, Municipal Act  to identify whether a citizen-participation requirement applies to the parastatal directly or to all authorities preparing the relevant category of plan. 
+
+Score 5 if the applicable law/rules mandate a defined citizen-participation process before finalisation/approval of the plan, including publication of a draft plan and invitation of objections/suggestions, public hearing, consultation or equivalent. 
+
+Score 2.5 if participation is provided for but is discretionary (may), or applies only to specified plan types/stages. If the mandate provides for a citizen participation forum with a shall provision. 
+
+Score 1.25 if the citizen participation forum is discretionary.
+
+Score 0 if no applicable requirement is found. Record the legal provision, plan type, form of participation prescribed, and whether the provision uses mandatory or discretionary language."
+DPG 8b,Parastatal_DPG_Template.xlsx,DPG 8b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the parastatal’s official website and the latest applicable plan/planning exercise. Check the plan document, consultation reports, public notices, minutes/proceedings of consultations or public hearings, and other relevant records available on the website. 
+
+Score 5 if there is publicly verifiable evidence that citizens were provided an opportunity to participate through objections/suggestions, public hearings, consultations or an equivalent process before the plan was finalised. 
+
+Score 2.5 if there is credible evidence that consultation took place, but the process cannot be fully verified from official records—for example, where only a consultation notice, minutes/proceedings, a reference in the final plan, media reports, or other partial documentation is available.
+
+Score 0, if there is no evidence for public consultations in the plan preperation process taking place."
+SC 1,Parastatal_SC_Template.xlsx,SC 1,calculated by template formula,10,Yr1 Year and Type | Yr1 Own revenue (Rs crore) | Yr1 Other revenue (Rs crore) | Yr1 Capital receipts (Rs crore) | Yr1 Revenue expenditure (Rs crore) | Yr1 Capital expenditure (Rs crore) | Yr2 Year and Type | Yr2 Own revenue (Rs crore) | Yr2 Other revenue (Rs crore) | Yr2 Capital receipts (Rs crore) | Yr2 Revenue expenditure (Rs crore) | Yr2 Capital expenditure (Rs crore) | Yr3 Year and Type | Yr3 Own revenue (Rs crore) | Yr3 Other revenue (Rs crore) | Yr3 Capital receipts (Rs crore) | Yr3 Revenue expenditure (Rs crore) | Yr3 Capital expenditure (Rs crore),text | number | number | number | number | number | text | number | number | number | number | number | text | number | number | number | number | number,,Yr1 Own revenue (Rs crore) | Yr1 Revenue expenditure (Rs crore) | Yr1 Capital expenditure (Rs crore) | Yr2 Own revenue (Rs crore) | Yr2 Revenue expenditure (Rs crore) | Yr2 Capital expenditure (Rs crore) | Yr3 Own revenue (Rs crore) | Yr3 Revenue expenditure (Rs crore) | Yr3 Capital expenditure (Rs crore),Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Yr1 Own revenue % | Yr2 Own revenue % | Yr3 Own revenue % | Years with any data | Years with valid data | Average own revenue % | Response Summary,0,,AI fills some,the template scores from at least 2 valid years: the row is written when 2 or more years have every needed figure (an incomplete year is left out); fewer is left for a person. Optional inputs may stay blank: Yr1 Year and Type; Yr1 Other revenue (Rs crore); Yr1 Capital receipts (Rs crore); Yr2 Year and Type; Yr2 Other revenue (Rs crore); Yr2 Capital receipts (Rs crore); Yr3 Year and Type; Yr3 Other revenue (Rs crore); Yr3 Capital receipts (Rs crore),"Check  the ULG's budget documents, record for each year: own revenue (tax and non-tax revenue, excluding all government grants and transfers), other revenue, capital receipts, revenue expenditure and capital expenditure. Enter all amounts in crore and population in lakh. 
+Use Actuals where available; otherwise Revised Estimates (RBE); otherwise Budget Estimates (BE); record the type used for each year.
+
+Total expenditure = revenue expenditure + capital expenditure. For each year, own revenue % = own revenue ÷ total expenditure.
+
+Use the average of the latest 3 years available (minimum 2 years), from 2019-20 onwards.
+
+Score = average own revenue % × 10, capped at 10 (e.g. 50% = 5; 100% or more = 10).
+
+If budget data for at least 2 years is not available, score 0."
+SC 2,Parastatal_SC_Template.xlsx,SC 2,calculated by template formula,10,Yr1 Year and Type | Yr1 Capital expenditure (Rs crore) | Yr1 Population Census 2011 (lakh) | Yr2 Year and Type | Yr2 Capital expenditure (Rs crore) | Yr2 Population Census 2011 (lakh) | Yr3 Year and Type | Yr3 Capital expenditure (Rs crore) | Yr3 Population Census 2011 (lakh) | Benchmark highest per-capita capex same type (Rs),text | number | number | text | number | number | text | number | number | number,,Yr1 Capital expenditure (Rs crore) | Yr1 Population Census 2011 (lakh) | Yr2 Capital expenditure (Rs crore) | Yr2 Population Census 2011 (lakh) | Yr3 Capital expenditure (Rs crore) | Yr3 Population Census 2011 (lakh) | Benchmark highest per-capita capex same type (Rs),Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Yr1 Per-capita capex (Rs) | Yr2 Per-capita capex (Rs) | Yr3 Per-capita capex (Rs) | Years with any data | Years with valid data | Average per-capita capex (Rs) | Response Summary,0,,left for a person,needs a benchmark across cities (and census population); one city's sources cannot supply it,"Check the budget (and/or financial statements, as applicable) of the parastatal for the last three years. 
+
+Using the same budget data as UCR1 (Actuals where available; otherwise RBE; otherwise BE), for each year: per capita capex = capital expenditure ÷ population. 
+Enter amounts in crore and population (as per Census 2011) in lakh.
+
+Use the average of the latest 3 years available (minimum 2 years), from 2019-20 onwards.
+Score: the Indian city with the highest per capita capex scores 10. All other cities are scored relative to it: (city's per capita capex ÷ highest Indian city's per capita capex) × 10, capped at 10.
+If budget data for at least 2 years is not available, score 0.
+
+Do not pool figures across dissimilar parastatal types (e.g. a transport corporation vs. a development authority)."
+SC 3,Parastatal_SC_Template.xlsx,SC 3,calculated by template formula,10,Yr1 Year and Type | Yr1 Budgeted income BE (Rs crore) | Yr1 Actual income (Rs crore) | Yr2 Year and Type | Yr2 Budgeted income BE (Rs crore) | Yr2 Actual income (Rs crore) | Yr3 Year and Type | Yr3 Budgeted income BE (Rs crore) | Yr3 Actual income (Rs crore),text | number | number | text | number | number | text | number | number,,Yr1 Budgeted income BE (Rs crore) | Yr1 Actual income (Rs crore) | Yr2 Budgeted income BE (Rs crore) | Yr2 Actual income (Rs crore) | Yr3 Budgeted income BE (Rs crore) | Yr3 Actual income (Rs crore),Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Yr1 Budget variance % | Yr2 Budget variance % | Yr3 Budget variance % | Years with any data | Years with valid data | Average budget variance % | Response Summary,0,,AI fills some,the template scores from at least 2 valid years: the row is written when 2 or more years have every needed figure (an incomplete year is left out); fewer is left for a person. Optional inputs may stay blank: Yr1 Year and Type; Yr2 Year and Type; Yr3 Year and Type,"For each year, record the budgeted income (the original Budget Estimate, BE) and the actual income of the parastatal, in crore. 
+Record the year and type in the Year/Type column (e.g. '2023-24 BE').
+
+Budget variance = |actual income − budgeted income| ÷ budgeted income.
+Use the average variance of the latest 3 years available (minimum 2 years), from 2019-20 onwards.
+
+Score 10 if the average variance is 15% or below; score 0 if it is above 15%.
+If budget data for at least 2 years is not available, score 0."
+SC 4a,Parastatal_SC_Template.xlsx,SC 4a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and rules to determine whether preparation of annual financial statements or annual accounts are legally mandated.
+
+Score 5 if the applicable framework requires the parastatal to prepare such annual financial statements or annual accounts using mandatory language such as “shall” or “must”.
+Score 2.5 if the applicable framework permits or enables preparation of such annual financial statements or annual accounts using discretionary language such as “may”, but does not make it mandatory.
+Score 0 if no provision for preparation of a annual financial statements or annual accounts is found."
+SC 4b,Parastatal_SC_Template.xlsx,SC 4b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant parastatal’s website to determine whether annual financial statements or annual accounts have been prepared and is publicly available, irrespective of whether it is legally mandated.
+Score 5 if annual financial statements or annual accounts are publicly available online. It should not be older than two years. 
+Score 0 if no annual financial statements or annual accounts are publicly available online."
+SC 5a,Parastatal_SC_Template.xlsx,SC 5a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and rules to determine whether the parastatal is legally mandated to  conduct and prepare internal audits. 
+
+Score 5 if the applicable framework requires the parastatal to prepare internal audit reports using mandatory language such as “shall” or “must”.
+Score 2.5 if the applicable framework permits or enables preparation of such internal audit reports using discretionary language such as “may”, but does not make it mandatory.
+Score 0 if no provision for preparation of internal audit reports  is found."
+SC 5b,Parastatal_SC_Template.xlsx,SC 5b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the parastatal website for audit documents, if the parastatal has a position of internal auditor, or if there are tenders or notices put out to appoint an internal auditor.
+
+Score 5: If there is a position for an auditor (filled or tendered for) and if audit reports are available. The audit reports should not be older than 2 years.
+Score 2.5: If either the audit reports documents are available or there is a position for an auditor (filled or tendered for).
+Score 0: Neither is found.
+
+Note: Internal audit means audit of processes or controls. It is not limited to financial audit, and goes beyond the process of accounts to cover HR processes, performance management and risk management, among other internal processes and controls."
+SC 6a,Parastatal_SC_Template.xlsx,SC 6a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and rules to determine whether preparation of annual budget are legally mandated to be prepared within a specific time period
+
+Score 5 if the applicable framework requires the parastatal to prepare such annual budget within a specified time period using mandatory language such as “shall” or “must”.
+Score 2.5 if the applicable framework permits or enables preparation of such annual budget within a specified time period using discretionary language such as “may”, but does not make it mandatory.
+Score 0 if no provision for preparation of a annual budget within a specified time period is found."
+SC 6b,Parastatal_SC_Template.xlsx,SC 6b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant parastatal’s website to determine whether latest annual budget has been prepared and is publicly available.
+Score 5 if the annual budget is publicly available online and was approved within the specified timeline. 
+Score 0 if there are no mandated timelines or if the annual budget is not publically available"
+SC 7a,Parastatal_SC_Template.xlsx,SC 7a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and rules to determine whether preparation of annual financial statements or annual accounts are legally mandated to be prepared within a specific time period
+
+Score 5 if the applicable framework requires the parastatal to prepare such annual financial statements or annual accounts within a specified time period using mandatory language such as “shall” or “must”.
+Score 2.5 if the applicable framework permits or enables preparation of such annual financial statements or annual accounts within a specified time period using discretionary language such as “may”, but does not make it mandatory.
+Score 0 if no provision for preparation of a annual financial statements or annual accounts within a specified time period is found."
+SC 7b,Parastatal_SC_Template.xlsx,SC 7b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant parastatal’s website to determine whether annual financial statements/annual accounts have been prepared and is publicly available.
+Score 5 if annual financial statements/annual accounts are publicly available online and was approved within the specified timeline. 
+Score 0 if there are no mandated timelines or if the annual financial statements/annual accounts are not publically available."
+SC 8a,Parastatal_SC_Template.xlsx,SC 8a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and rules to determine whether preparation of a medium-term (3–5 year) and/or long-term (>5 year) fiscal plan is legally mandated.
+Score 5 if the applicable framework requires the parastatal to prepare such a fiscal plan using mandatory language such as “shall” or “must”.
+Score 2.5 if the applicable framework permits or enables preparation of such a fiscal plan using discretionary language such as “may”, but does not make it mandatory.
+Score 0 if no provision for preparation of a medium-term or long-term fiscal plan is found."
+SC 8b,Parastatal_SC_Template.xlsx,SC 8b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant parastatal’s website to determine whether a medium-term (3–5-year) and/or long-term (> 5-year) fiscal plan has been prepared and is publicly available, irrespective of whether such a plan is legally mandated.
+Score 5 if a current medium-term and/or long-term fiscal plan is publicly available online. It should not be older than two years. 
+Score 0 if no medium-term or long-term fiscal plan is publicly available online."
+SC 9,Parastatal_SC_Template.xlsx,SC 9,typed points,10,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,10 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the parastatal website for the latest available audited annual financial statements to determine whether it follows a double-entry accounting system in practice.
+ 
+Score 10: if the financial statements demonstrate use of double-entry accounting, which is indicated by the preparation of a Balance Sheet together with the relevant income/expenditure or equivalent financial statements.
+Score 0: if only a Receipts and Payments Statement or other cash-based statement is available; the applicable accounting framework refers to or requires double-entry accounting, but the published financial statements do not demonstrate its use in practice; or
+financial statements sufficient to establish the accounting system cannot be located.
+ 
+Do not score solely on the basis of a provision in an Act, accounting manual, guideline or other document stating that double-entry accounting should be followed. The assessment should be based on the evidence for the accounting system indicated in the financial statements actually prepared by the ULG/parastatal."
+SC 10,Parastatal_SC_Template.xlsx,SC 10,typed points,10,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,10 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and rules to determine whether the law mandates a minimum tenure of at least two years for the chief executive/executive authority.
+
+Score 10 if the law mandates a minimum tenure of at least two years. 
+Score 0 if the law does not mandate a minimum tenure of at least two years.
+
+Note: This refers to the bureaucratic/administrative head of the parastatal. For example, the Managing Director, Commissioner, Chief Executive Officer or equivalent executive authority, and not the Chairperson or political head."
+SC 11,Parastatal_SC_Template.xlsx,SC 11,calculated by template formula,10,Chief executives in last five years (count) | Names and tenure periods,number | text,,Chief executives in last five years (count),Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Response Summary,0,,AI fills some,needed inputs are all-or-nothing; optional inputs may stay blank: Names and tenure periods,"Check appointments and transfers of the chief executive/executive authority over the last five years. Use the parastatal’s official website as the primary source. If these do not provide a complete appointment history, supplement the assessment with reliable secondary sources, such as the SUPREMO portal for the executive record sheet of IAS officers (where relevant), RTI requests with the parastatals, and credible media reports. Score 10 if one chief executive has served during the five-year period.
+
+Score 5 if 2–3 chief executives have served during the five-year period.
+Score 0 if more than 3 chief executives have served during the five-year period."
+SC 12a,Parastatal_SC_Template.xlsx,SC 12a,typed points,5,Working staff permanent and contractual | Population Census 2011 (number of people) | Benchmark highest staff per lakh,number | number | number,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Staff per lakh population | Ratio to benchmark | Response Summary,0,,left for a person,needs a benchmark across cities (and census population); one city's sources cannot supply it,"Collect data on the parastatal's working staff strength (permanent and contractual staff) from the ULG website, budget documents/establishment schedules, or RTI/formal data request where necessary. 
+Staff per lakh population = working staff ÷ population × 1,00,000.
+Population: Census 2011 for Indian cities;
+
+Score: the Indian city with the highest staff per lakh population scores 10. 
+All other cities are scored relative to it: (city's staff per lakh ÷ highest Indian city's) × 10, capped at 10.
+If staffing data is not available, score 0."
+SC 12b,Parastatal_SC_Template.xlsx,SC 12b,calculated by template formula,5,Women staff | Total staff permanent and contractual | Benchmark highest proportion of women staff %,number | number | number,,Women staff | Total staff permanent and contractual | Benchmark highest proportion of women staff %,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),Proportion of women staff % | Response Summary,0,,left for a person,needs a benchmark across cities (and census population); one city's sources cannot supply it,"Collect sex-disaggregated data on the parastatal's permanent and contractual staff for the latest assessment year.
+Calculate the proportion of women among the total parastatal staff using the following formula:
+
+Proportion of women staff (%) = (Number of women staff ÷ Total number of permanent and contractual staff) × 100
+ 
+Score 5: Award 5 marks to the city with the highest proportion of women staff.
+Other cities: Award marks proportionately using the formula:
+Score = (Proportion of women staff in the city ÷ Highest proportion of women staff among assessed cities) × 5"
+UPD 1a,Parastatal_UPD_Template.xlsx,UPD 1a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"5 | 2.5 | 0 (methodology lists 10 | 2.5 | 0; the cell takes 0 to 5, so the top level is entered as 5 and the others as written)",AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act/Rules and the State Town and Country Planning Act to determine whether the parastatal is required to coordinate with the ULG(s) while preparing its sectoral plans.
+Identify the nature of the ULG’s formal role in the plan-making process and score as follows:
+10 — ULG approval/concurrence is mandatory with terms such as 'shall consult' 
+2.5 — Consultation with the ULG is discretionary with terms such as “may consult”.
+0 — No formal role for the ULG in preparation of the parastatal’s plan can be established.
+ 
+Where different provisions apply to different plans prepared by the parastatal, assess the principal sectoral plan relevant to the service being evaluated."
+UPD 1b,Parastatal_UPD_Template.xlsx,UPD 1b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"5 | 0 (methodology lists 10 | 0; the cell takes 0 to 5, so the top level is entered as 5 and the others as written)",AI fills all,typed points (score 0 to Max) + evidence,"Check the latest available plan-making cycle for evidence of ULG participation in the parastatal’s plan-making process, irrespective of whether such participation is legally mandated.
+
+Score 10 where there is evidence of ULG participation. Such evidence may include plan documents, consultation records, meeting minutes, ULG resolutions/comments, responses to ULG inputs, or information published on the parastatal/ULG website.
+
+Score 0 where there is no such evidence.
+
+Where different provisions apply to different plans prepared by the parastatal, assess the principal sectoral plan relevant to the service being evaluated."
+UPD 2a,Parastatal_UPD_Template.xlsx,UPD 2a,typed points,2.5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,2.5 | 1.25 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and Town and Country Planning Act.
+
+Score 2.50 if the parastatal 'shall/is required to' ensure that its sectoral plan is consistent with the applicable city or municipal plan.
+
+Score 1.25 if the law provides that such alignment is discretionary. ('May' provision)
+
+Score 0 if no such provision exists.
+
+For example, a provision stating that a water supply plan shall conform to the applicable city/municipal plan would score 2.5, while a provision stating that the authority may have regard to such a plan would score 1.25."
+UPD 2b,Parastatal_UPD_Template.xlsx,UPD 2b,typed points,2.5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,2.5 | 1.25 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the Board’s current water supply/sewerage master plan, or equivalent sectoral planning document, together with the applicable Master Plan.
+ 
+Score 2.5 if the water plan demonstrates substantive spatial alignment with the city’s master plan: It explicitly draws reference to the city master plan, uses the master plan’s growth/service areas and/or land-use framework to determine network expansion and major infrastructure siting, and also refers to the master plan or its projections as an input.
+
+Score 1.25 if there is partial alignment: the water plan refers to the master plan and/or uses its population, density or land-use projections, but does not clearly demonstrate that these inputs determine the spatial location of network expansion, service areas or major infrastructure.
+
+Score 0 if there is no identifiable evidence that the Master Plan or its spatial/population framework informs water planning."
+UPD 2c,Parastatal_UPD_Template.xlsx,UPD 2c,typed points,2.5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,2.5 | 1.25 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the relevant Parastatal Act and Town and Country Planning Act.
+
+Score 2.5 if the parastatal 'shall/is required to' ensure that its sectoral plan is consistent with the applicable municipal/city plan.
+
+Score 1.25 if the law provides that such alignment is discretionary. ('May' provision)
+
+Score 0 if no such provision exists.
+
+For example, a provision stating that a transport plan shall conform to the applicable city/municipal plan would score 2.5, while a provision stating that the authority may have regard to such a plan would score 1.25."
+UPD 2d,Parastatal_UPD_Template.xlsx,UPD 2d,typed points,2.5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,2.5 | 1.25 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the transport corporation's current transport/mobility master plan, network expansion plan, or equivalent sectoral planning document, together with the applicable city/municipal Master Plan.
+
+Score 2.5 if the transport plan demonstrates substantive spatial alignment with the city/municipal's master plan: it explicitly draws reference to the city master plan, uses the master plan's growth corridors, land-use framework and/or density projections to determine route planning, station/depot siting or network expansion, and refers to the master plan or its projections as an input.
+
+Score 1.25 if there is partial alignment: the transport plan refers to the master plan and/or uses its population, density or land-use projections, but does not clearly demonstrate that these inputs determine the spatial location of routes, stations or major infrastructure.
+
+Score 0 if there is no identifiable evidence that the Master Plan or its spatial/population framework informs transport planning."
+UPD 3a,Parastatal_UPD_Template.xlsx,UPD 3a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 5 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Check the Water Supply Board/utility Act, rules, tariff regulations and other binding legal instruments. Assess whether the legal framework requires the Board to address the needs of economically vulnerable groups and women in decisions relating to access, affordability and service delivery.
+Do not award credit for generic obligations such as “public interest”, “universal supply”, “adequate service” or “service to all” unless these are translated into a specific legal requirement relating to affordability, service access, coverage or the needs of women.
+ 
+Part A – Urban Poor: Affordability and access – 2.5 marks
+Look for identifiable legal requirements such as:
+concessional, lifeline or differentiated tariffs for EWS/BPL/low-income households;
+concessions relating to connection charges, deposits or other service-access costs;
+requirements to provide services to slums, informal settlements, low-income or underserved areas;
+tenure-neutral or other provisions enabling access irrespective of land tenure/status;
+minimum/lifeline supply or alternative service arrangements for underserved populations.
+ 
+Score 2.5: There is a clear mandatory requirement (“shall”, “must” or equivalent) addressing affordability or access for economically vulnerable groups.
+Score 1.25: The legal framework permits or encourages such measures (“may” or equivalent), but does not make them mandatory.
+Score 0: No specific legal provision addressing affordability or access for economically vulnerable groups is found.
+ 
+Part B – Women: Gender-responsive access and service delivery – 2.5 marks
+Look for identifiable legal requirements such as:
+consideration of women’s needs in water and sanitation planning or service provision;
+requirements relating to location, accessibility or safety of shared/public water infrastructure;
+gender-sensitive planning, assessment or consultation requirements;
+service or design requirements intended to reduce barriers faced by women in accessing water and sanitation services.
+ 
+Score 2.5: There is a clear mandatory requirement (“shall”, “must” or equivalent) addressing women’s access or service-delivery needs.
+Score 1.25: The legal framework permits or encourages consideration of women’s needs (“may” or equivalent), but does not make it mandatory.
+Score 0: No specific legal provision addressing women’s access or service-delivery needs is found."
+UPD 3b,Parastatal_UPD_Template.xlsx,UPD 3b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 5 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Check the Board’s current water supply/sanitation plan, applicable policy documents, active schemes, tariff/connection-concession orders and service or design standards. Assess whether the needs of economically vulnerable groups and women are recognised and translated into specific policies, schemes, targets, projects or service-delivery measures. 
+
+Check for implementation, whether or not such measures are legally mandated.
+
+Do not award full credit for generic language such as “public interest”, “all consumers”, “universal service” or “inclusive development”. Credit should depend on how well identified needs translate into specific, operational measures.
+ 
+Part A – Urban Poor: Affordability and inclusion in service coverage – 2.5 marks
+Look for measures such as:
+concessional/lifeline tariffs or reductions in connection charges, deposits or other service costs;
+policies or schemes targeting EWS/BPL, slum, informal-settlement or low-income households;
+explicit inclusion of slums/informal or underserved settlements in service-area, demand or network planning;
+targeted network extension or service-coverage commitments;
+alternative service-delivery arrangements where household connections are not feasible;
+defined coverage, connection, tariff or service targets/projects for economically vulnerable groups.
+ 
+Score 2.5: The needs of economically vulnerable groups are addressed through a comprehensive policy or scheme and translated into specific operational measures, targets, projects or service commitments relating to affordability and/or access.
+Score 1.25: Economically vulnerable groups are explicitly recognised, but the response is limited to broad policy intent, isolated provisions or measures without clearly defined operational targets/projects.
+Score 0 — No identifiable consideration of affordability or service access for economically vulnerable groups is found.
+ 
+Part B – Women: Gender-responsive planning and service delivery – 2.5 marks
+Look for measures such as:
+policies or schemes specifically addressing women’s water and sanitation access;
+gender/GESI analysis or screening in water-supply or sanitation planning;
+siting of shared infrastructure to address women’s time, distance or physical burden;
+safety or accessibility measures at community/public water or sanitation facilities;
+gender-responsive design or service standards;
+defined targets, projects or investments addressing identified barriers faced by women.
+Scoring
+Score 2.5: Women’s needs are addressed through a comprehensive policy or scheme and translated into specific operational/design measures, targets or projects.
+Score 1.25: Women are explicitly identified and their needs recognised, but this is limited to broad policy intent or isolated provisions without clearly defined operational/design measures, targets or projects.
+Score 0: No identifiable consideration of women’s access or service-delivery needs is found.
+Score 0 if there is no identifiable equity/accessibility consideration."
+UPD 4a,Parastatal_UPD_Template.xlsx,UPD 4a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 5 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Check the transport authority/corporation Act, other Acts (Companies Act/Road Transport Corporation Act/Motor Vehicles Act), rules, fare policies and other binding policy instruments.
+
+Part A – Urban Poor: Affordability and inclusion in service coverage – Score 2.5
+Check the transport authority/corporation Act, applicable transport legislation, rules, regulations and other binding legal instruments. Assess whether the legal framework requires the parastatal to address the mobility needs of economically vulnerable groups.
+
+Do not award credit for generic obligations such as “public interest”, “adequate transport”, “efficient service” or “service to all” unless these are translated into a specific requirement relating to affordability, service coverage or access.
+Look for identifiable legal requirements such as (non-exhaustive):
+concessional, subsidised or differentiated fares for EWS/BPL/low-income users;
+consideration of affordability in fare determination;
+provision or maintenance of services to underserved, peripheral or low-income areas;
+minimum service coverage or socially necessary routes;
+feeder, last-mile or other access provisions aimed at underserved populations.
+ 
+Score 2.5: There is a clear mandatory requirement (“shall” or “must”) addressing affordability, service coverage or access for economically vulnerable groups.
+Score 1.25: The legal framework permits or encourages such measures (“may”), but does not make them mandatory.
+Score 0: No specific legal provision addresses the mobility needs of economically vulnerable groups.
+
+Part B – Women: Safety and mobility – Score 2.5
+Check the transport authority/corporation Act, applicable transport legislation, rules, regulations and other binding legal instruments. Assess whether the legal framework requires the parastatal to address women’s safety and mobility needs.
+
+Do not award credit for generic obligations relating to passenger safety, public convenience or service to all unless women are specifically identified or the provision clearly addresses gender-specific mobility or safety needs.
+Look for identifiable legal requirements such as:
+consideration of women’s safety or mobility in transport planning or service provision;
+safety requirements relating to vehicles, stops, terminals or other passenger facilities that specifically address women;
+provision of women-specific facilities, reserved spaces or other service-design measures;
+requirements relating to safe first- and last-mile access for women;
+gender-sensitive planning, assessment, consultation or service-design requirements.
+ 
+Score 2.5: There is a clear mandatory requirement (“shall” or “must”) addressing women’s safety or mobility needs.
+Score 1.25: The legal framework permits or encourages such measures (“may” ), but does not make them mandatory.
+Score 0:  No specific legal provision addressing women’s safety or mobility needs is found."
+UPD 4b,Parastatal_UPD_Template.xlsx,UPD 4b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,"free / partial credit: range check 0 to 5 only (parts are added up: Part A, Part B)",AI fills all,typed points (score 0 to Max) + evidence,"Check the Corporation’s current transport/mobility plan, service-delivery framework, applicable policy documents and active schemes. Assess whether the mobility needs of identified vulnerable groups are recognised and translated into specific policies, schemes, targets, projects or service-delivery measures. 
+
+Check for implementation, whether or not such measures are legally mandated.
+
+Do not award full credit for generic language such as “public interest”, “all commuters”, “universal service” or “inclusive development”. Credit should be based on the extent to which identified needs are translated into specific and operational measures.
+ 
+Part A – Urban Poor: Affordability and inclusion in service coverage – 2.5 marks
+Look for measures such as:
+concessional, subsidised or differentiated fares for EWS/BPL/low-income users;
+policies or schemes addressing affordability of public transport;
+specific commitments to serve low-income, informal, peripheral or underserved settlements;
+inclusion of such areas within route/network planning;
+last-mile or feeder-connectivity measures for underserved settlements;
+defined targets, routes, projects or service-expansion commitments addressing these needs.
+ 
+Score 2.5: The needs of economically vulnerable groups are addressed through a comprehensive policy or scheme and are translated into specific operational measures, targets, routes, projects or service commitments.
+Score 1.25: The needs of economically vulnerable groups are explicitly recognised, but the response is limited to broad policy intent, isolated measures or provisions without clearly defined operational targets/projects.
+Score 0:  No identifiable consideration of affordability or service access for economically vulnerable groups is found.
+ 
+Part B  – Women: Gender, safety and mobility – 2.5 marks
+Look for measures such as:
+policies or schemes specifically addressing women’s safety and mobility;
+gender/GESI assessment or screening in transport planning;
+women-focused safety measures in vehicles, stops, terminals or public-transport infrastructure;
+first- and last-mile measures addressing women’s mobility constraints;
+service-design measures responding to identified mobility patterns or safety concerns;
+defined targets, projects, service standards or investments addressing women’s mobility and safety.
+ 
+Score 2.5: Women’s mobility and safety needs are addressed through a comprehensive policy or scheme and are translated into specific operational measures, targets, projects or service standards.
+Score 1.25: Women’s mobility or safety needs are explicitly recognised, but are addressed only through broad policy intent, isolated measures or provisions without clearly defined operational targets/projects.
+Score 0: No identifiable consideration of women’s mobility or safety needs is found."
+UPD 5a,Parastatal_UPD_Template.xlsx,UPD 5a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the Water Supply Board/utility Act, rules, service regulations, and other binding legal instruments. Assess whether the legal framework requires the Board to integrate environmental sustainability into planning and delivery of water and sanitation services.
+Do not award credit for generic references to the “environment”, “public interest” or compliance with project-specific environmental clearances unless environmental considerations are required to inform the Board’s own planning, investment or service-delivery decisions.
+ 
+Look for identifiable legal requirements relating to areas such as: (non-exhaustive) sustainable water-source management and protection, groundwater protection, conservation and demand management, reduction of water losses, wastewater treatment/reuse, pollution prevention, climate resilience, environmental flows or environmentally sustainable service delivery.
+ 
+Score 5: There is a clear mandatory requirement (“shall”, “must” ) requiring environmental sustainability considerations to inform the Board’s planning and/or service-delivery functions.
+Score 2.5: The legal framework permits or encourages consideration of environmental sustainability (“may”), but does not make it mandatory.
+Score 0: No specific legal requirement is found."
+UPD 5b,Parastatal_UPD_Template.xlsx,UPD 5b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the Board’s current water supply/sanitation plan, applicable policy documents, active programmes/schemes and operational frameworks. Assess whether environmental sustainability considerations are translated into specific policies, programmes, targets, projects or operational measures.
+ 
+Check for implementation, whether or not such measures are legally mandated.
+ 
+Do not award full credit for generic references such as “sustainable development”, “efficient service”, “environment friendly” or “public interest” unless these are translated into specific operational measures.
+ 
+Look for identifiable measures such as (non-exhaustive):
+source-sustainability measures, including diversification of water sources, reduction of dependence on stressed sources, source-protection plans or groundwater-recharge measures;
+water-conservation and demand-management measures, including universal/targeted metering, leak detection, pressure management or conservation-oriented service standards;
+defined non-revenue water (NRW) or transmission/distribution loss-reduction targets, programmes or projects;
+wastewater treatment, recycling or reuse measures, including defined reuse targets or projects for non-potable uses;
+pollution-prevention or catchment/source-protection measures linked to the Board’s own planning or operations;
+climate-resilience measures for water and wastewater infrastructure, including drought preparedness, flood-proofing, source-risk assessment or contingency planning;
+energy-efficiency or renewable-energy measures in pumping, treatment or wastewater operations;
+defined targets, projects, budgets or investments relating to environmental sustainability;
+monitoring indicators or service standards that track source sustainability, water losses, reuse, energy use, resilience or other environmental outcomes.
+ 
+Score 5: Environmental sustainability is addressed through a comprehensive policy, programme or planning framework and translated into specific targets, projects or operational measures across the Board’s water and/or sanitation functions.
+Score 2.5: Environmental sustainability is explicitly recognised, but is limited to broad policy intent, isolated measures or provisions without clearly defined targets/projects.
+Score 0:  No identifiable environmental sustainability consideration is found."
+UPD 6a,Parastatal_UPD_Template.xlsx,UPD 6a,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the transport authority/corporation Act (Road Transport Corporation Act/Motor Vehicles Act/Companies Act), rules, and other binding legal instruments. Assess whether the legal framework requires the Corporation to integrate environmental sustainability into its planning, investment and service-delivery decisions.
+Do not award credit for generic references to “sustainable transport”, “public interest”, “environment protection” or compliance with project-specific environmental clearance requirements unless the provision requires environmental considerations to inform the Corporation’s own planning, investment or service-delivery decisions.
+ 
+Look for identifiable legal requirements relating to (non-exhaustive):
+transition to cleaner or lower-emission vehicles and fuels;
+reduction of transport-related emissions or energy consumption;
+prioritisation or strengthening of public transport;
+integration of public transport with walking, cycling or other non-motorised transport;
+multimodal integration or measures to reduce dependence on private motor vehicles;
+integration of land-use and transport planning;
+climate-resilient transport infrastructure or operations;
+environmental considerations in major transport investments or service planning.
+ 
+Score 5: There is a clear mandatory requirement (“shall” or “must”) requiring environmental sustainability considerations to inform the Corporation’s planning, investment and/or service-delivery functions.
+Score 2.5: The legal framework permits or encourages consideration of environmental sustainability (“may”), but does not make it mandatory.
+Score 0: No specific legal requirement requiring the Corporation to consider environmental sustainability in its planning, investment or service-delivery functions is found."
+UPD 6b,Parastatal_UPD_Template.xlsx,UPD 6b,typed points,5,,typed points,,,Chapter | Provision | Clause | Page Number | Scorer Comments (Why the score was given) | Additional Comments | Source Link or Evidence Document | Latest Information (FY or Year or Date),,0,5 | 2.5 | 0,AI fills all,typed points (score 0 to Max) + evidence,"Check the Corporation’s current fleet plan, route/network plan, mobility or service-delivery plan, environmental/sustainability policy, active programmes/schemes and annual reports. Assess whether environmental sustainability considerations are translated into specific policies, programmes, targets, projects or operational measures, irrespective of whether such measures are legally mandated.
+ 
+Check for implementation, whether or not such measures are legally mandated.
+ 
+Do not award full credit for generic references such as “sustainable transport”, “green mobility” or “environment-friendly”. Credit should depend on whether these commitments translate into specific, operational measures.
+
+Look for identifiable measures such as (non-exhaustive):
+defined targets or programmes for transition to electric, CNG, hybrid or other cleaner/lower-emission vehicles;
+fleet-retirement or replacement plans targeting older or high-emission vehicles;
+emissions-reduction, fuel-efficiency or energy-consumption targets;
+renewable-energy or energy-efficiency measures in depots, terminals, charging infrastructure or operations;
+route or network-planning measures intended to increase public-transport use or reduce unnecessary vehicle kilometres;
+integration with walking and cycling infrastructure at stops, terminals or interchanges;
+multimodal integration measures, such as coordinated interchanges, feeder connectivity or integrated ticketing;
+measures to improve service coverage or frequency with the objective of shifting trips from private vehicles to public transport;
+climate-resilience measures for fleet, depots, terminals or transport operations;
+defined targets, projects, budgets or investments relating to emissions reduction, cleaner mobility, energy efficiency or modal integration;
+monitoring indicators that track fleet emissions, fuel/energy consumption, clean-fleet share, ridership, mode shift or other environmental outcomes.
+ 
+Score 5:  Environmental sustainability is addressed through a comprehensive policy, programme or planning framework and translated into specific targets, projects or operational measures across the Corporation’s transport functions.
+Score 2.5: Environmental sustainability is explicitly recognised, but is limited to broad policy intent, isolated measures or provisions without clearly defined targets/projects.
+Score 0: No identifiable environmental sustainability measure is found."

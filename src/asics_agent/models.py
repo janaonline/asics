@@ -5,15 +5,10 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
-from asics_agent.legacy_names import canonical_unit
+from asics_agent.parastatal_types import canonical_type, known_type
 
-ParastatalType = Literal[
-    "water_supply_board",
-    "transport_corporation",
-    "development_authority",
-    "other",
-    "ulg",  # the ULG category assesses the city government itself
-]
+# A type code from parastatal_types.py (or ULG_TYPE for the ULG unit); checked on `Parastatal`.
+ParastatalType = str
 
 Accessibility = Literal["Public", "Not human-verified"]
 VerificationStatus = Literal["Verified", "Not verified", "Human Verification Required"]
@@ -49,6 +44,8 @@ class Question(BaseModel):
     methodology: str = ""
     evidence_requirement: str = ""
     rationale: str = ""
+    # Columns the bank has that we don't use (a bank may gain columns later); kept, not dropped
+    extra: dict[str, str] = Field(default_factory=dict)
     parent_id: str | None = None
     children: list[str] = Field(default_factory=list)
 
@@ -81,6 +78,9 @@ class Parastatal(BaseModel):
     has_annual_budget: bool = True
     has_chief_executive: bool = True
     notes: str = ""
+    aliases: list[str] = Field(
+        default_factory=list
+    )  # other spellings (the register's "Other names")
     include: bool = True  # the research team's decision in the Sources workbook
     team_notes: str = ""  # the research team's own notes, never overwritten
     # Filled in by the parastatal discovery agent
@@ -94,8 +94,14 @@ class Parastatal(BaseModel):
 
     @field_validator("type", mode="before")
     @classmethod
-    def _old_type_names(cls, value):
-        return canonical_unit(value) if isinstance(value, str) else value
+    def _type_code(cls, value):
+        """Old names (water_supply_board, "Water supply board"...) are read as the current ones."""
+        if not isinstance(value, str):
+            return value
+        code = canonical_type(value)
+        if not known_type(code):
+            raise ValueError(f"unknown parastatal type {value!r}")
+        return code
 
 
 class CityConfig(BaseModel):

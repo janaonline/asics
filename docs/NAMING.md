@@ -49,6 +49,16 @@ The scoring code `UPD` for ULG is only a file-name prefix kept so existing scori
 not renamed. It is not a category and not the section. It should become `ULG` when the SC and DPG
 questions arrive.
 
+### People's scoring files (not a database yet)
+
+| Concept | Name |
+|---|---|
+| a scoring file's origin | `source`: `human` (an uploaded template) or `ai` (Step 3) |
+| who filled it in | `scorer` (a person's typed name; the AI's is `AI`) |
+| one uploaded file | **submission**, `submission_id` = `<UTC timestamp>_<scorer slug>_<hash8>` |
+| its record | sidecar `<submission_id>.json`: `source`, `scorer`, `uploaded_by`, `uploaded_at`, `file_sha256`, `template_name`, `template_sha256`, `bank_version`, `category`, `section`, `rows_read`, `issue_count` |
+| folders | `scoring/2027/human/<category>/<section>/submissions/` and `.../copies/`; merged: `scoring/2027/merged/<SCORING_CODE>_<SECTION>_human.xlsx` (AI: `scoring/2027/ai/<SCORING_CODE>_<SECTION>_AI.xlsx`) |
+
 ## 3. Proposed PostgreSQL names
 
 snake_case, plural table names, `id` primary keys, `<table>_id` foreign keys. Nothing here has
@@ -109,6 +119,24 @@ NULL-in-unique trap. In the Parastatal category there is one row per parastatal;
 exactly one row per question. A composite foreign key
 `(city_id, category_id, unit_id) → units (city_id, category_id, id)` keeps an answer from pointing
 at another city's unit, and `question_id` must belong to the same category.
+
+### `submissions` (people's uploaded files)
+`id` (`submission_id`), `category_id`, `section_id`, `source` (`human`), `scorer`, `uploaded_by`,
+`uploaded_at`, `file_name`, `file_sha256` (unique per category), `template_sha256`, `bank_version_id`,
+`rows_read`, `issue_count`, `replaces_submission_id` (the same scorer's earlier file), `stored_path`.
+The file itself is never edited; a merge only reads it.
+
+### `name_decisions` (what was decided about a name in an uploaded file)
+`id`, `submission_id` → submissions, `kind` (`city` | `parastatal`), `as_written`, `city_as_written`
+(for a parastatal), `action` (`map` | `new` | `skip`), `city_id` → cities (by `slug`), `parastatal_code`,
+`parastatal_type`, `state`, `ulg_name`, `other_name_in_register` (bool), `decided_by`, `decided_at`.
+The latest decision per (kind, city as written, name as written) is pre-filled for the next upload.
+A place with `action = new` is people's scoring only: `registered = false`, shown as "Not in register -
+AI cannot score yet". Names compare after folding case, spaces and dashes (`norm_name`).
+
+### `parastatal_aliases`
+`id`, `parastatal_id` → parastatals, `alias` (the register's "Other names" on the Parastatals sheet; the
+Cities sheet already has them as `cities.aliases`).
 
 ### `answer_scores` (Step 3, needed beside `answers`)
 `id`, `answer_id` → answers, `scorer` (`ai` | person), `score`, `confidence`, `comment`, `scored_at`.

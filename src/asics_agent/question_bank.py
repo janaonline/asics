@@ -42,6 +42,8 @@ def _score(value) -> float | None:
 # Columns a category's bank may leave out: every question then applies to every unit.
 OPTIONAL_COLUMNS = {"Sl. No.": "", "Applicability": "Common.", "Evidence / Source Requirement": ""}
 _PART = re.compile(r"^\s*([A-Za-z]+\s*\d+[a-z])\s*(\d+)\s*$")  # e.g. UPD23a1: a part of UPD23a
+# Columns the loader uses. Any other column in the bank is kept on Question.extra.
+KNOWN_COLUMNS = {*REQUIRED_COLUMNS, "Unit of Assessment", "Rationale", "Origin"}
 
 
 def load_question_bank(
@@ -140,6 +142,7 @@ def load_question_bank(
         prefix, number, letter = match.groups()
         prefix = prefix.upper()
         tag = cell(row, "Tag").upper()
+        inferred_tag = not tag  # a blank Tag is worked out from the code below
         if not pillar_code:
             pillar_code = prefix
             issues.append(
@@ -158,6 +161,19 @@ def load_question_bank(
                     ref=raw_id,
                     message=f"Row {row_no}: ID prefix {prefix} differs from "
                     f"section code {pillar_code}",
+                )
+            )
+        if inferred_tag:  # e.g. DPG 4, SC 7 have no Tag in the source: "4" is an MQ, "6a" an SQ
+            tag = "SQ" if letter else "MQ"
+            issues.append(
+                Issue(
+                    phase="initial_checks",
+                    severity="info",
+                    ref=raw_id,
+                    audience="team",
+                    message=f"Question Bank row {row_no}: {raw_id} has no Tag. We treated it "
+                    f"as an {tag} because of its code. Please add the Tag in the question bank "
+                    "if that is wrong.",
                 )
             )
         if not number and tag == "SQ" and parent:
@@ -213,6 +229,11 @@ def load_question_bank(
             methodology=cell(row, "Detailed Methodology"),
             evidence_requirement=cell(row, "Evidence / Source Requirement"),
             rationale=cell(row, "Rationale") if "Rationale" in col else "",
+            extra={
+                name: _clean(row[i])
+                for name, i in col.items()
+                if name not in KNOWN_COLUMNS and i < len(row) and _clean(row[i])
+            },
         )
         if question.tag == "MQ":
             parent = question

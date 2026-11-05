@@ -42,8 +42,27 @@ Rules:
    copied word for word from that citation (1-3 sentences). Both are checked in code: an
    input with a wrong ID or a quote that isn't in the source is discarded.
 
+11. If the task has a SCORE line, the template takes your points directly: give "score" as a
+   number from 0 to the Max Score (apply rule 8 first if there is a SCALE line). If the task
+   has none, leave "score" null: the template's formulas work the points out from your inputs.
+   Where the task lists input columns for a question whose points are calculated, every
+   column the question's points depend on needs a value or the whole row is left for a person:
+   give a value only for what the source states; leave the rest "" and say what is missing.
+12. "latest_information" is the financial year, year or date the evidence is about (e.g.
+   "FY 2023-24", "Act as amended 2019"); "" if the source doesn't say.
+
+13. If the task has an ALLOWED SCORES line, "score" must be exactly one of the values it lists:
+   they are the points the template's Points cell takes, as a person would type them. Nothing is
+   converted for you; a value that is not listed is discarded and the row is left for a person.
+   If the task has a PARTIAL CREDIT line instead, give the points the question's parts add up to,
+   any value from 0 up to the Max Score. If the task lists no input columns for a question whose
+   points are calculated, or says the figures are by year, give the years you can fill completely
+   (the template scores from at least 2 years) and leave a year blank rather than half-fill it.
+
 JSON keys:
   "inputs": {"<column name exactly as given>": "<value>" or number or ""},
+  "score": number or null (only when the task has a SCORE line),
+  "latest_information": string,
   "citation_id": string,
   "quote": string,
   "chapter": string, "provision": string, "clause": string (where in the document, if known),

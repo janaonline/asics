@@ -30,17 +30,18 @@ from typing import Literal
 from openpyxl import load_workbook
 from pydantic import BaseModel, Field
 
+from asics_agent.bank_version import settings_version, write_sidecar
 from asics_agent.categories import ULG_UNIT_ID, agent_for
 from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.scoring.human import (
-    SEPARATOR,
     _code_matches,
     _input_problem,
     city_of,
     match_cities,
 )
+from asics_agent.scoring.name_resolution import split_label
 from asics_agent.scoring.phase2 import (
     NO_EVIDENCE,
     CityEvidence,
@@ -66,6 +67,10 @@ class ScoreReply(BaseModel):
     clause: str = ""
     comments: str = ""
     confidence: Literal["high", "medium", "low"] = "low"
+    # Only for a scoring template (scoring/template_scoring.py): the points where the template's
+    # Score is typed, and the period the evidence is about
+    score: float | int | str | None = None
+    latest_information: str = ""
 
 
 @dataclass
@@ -168,7 +173,7 @@ def plan_tasks(
         for label in sheet.rows:
             city = mapping.get(city_of(label))
             if city in ready:  # "City – Agency" rows, or the city government itself
-                agency = label.split(SEPARATOR, 1)[1].strip() if SEPARATOR in label else ULG_UNIT_ID
+                agency = split_label(label)[1] or ULG_UNIT_ID
                 tasks.append(Task(code, label, city, by_name[city].state, agency))
     return tasks, ready, problems
 
@@ -234,6 +239,9 @@ REASONS = {
     "citation_changed": "Step 2's citation is no longer in the reviewed Citation Sheet",
     "check_failed": "The AI's citation or quote failed the check",
     "undecided": "The citation didn't settle every input",
+    "off_level": "The AI's score was not one of the question's allowed scores: not written",
+    "years": "Fewer years of figures were found than the template needs (at least 2)",
+    "template_problem": "The template has a problem (a header the AI cannot read): fix it",
     "failed": "The AI call failed: run Step 3 again",
 }
 _KIND_BY_START = [
@@ -253,7 +261,8 @@ def same_question(a: str, b: str) -> bool:
     a, b = _normalise(a.split(">:<")[-1]), _normalise(b.split(">:<")[-1])
     # Measured on the Parastatal and UPD banks: rewordings of the same question score 0.72+,
     # different questions under the same code score 0.33 or less.
-    return a == b or SequenceMatcher(None, a, b).ratio() >= 0.6
+    # autojunk off: with it on, texts of 200+ characters get a falsely low ratio.
+    return a == b or SequenceMatcher(None, a, b, autojunk=False).ratio() >= 0.6
 
 
 # A band written inline, e.g. "...Act.10 — ULG approval... 7.5 — formal consultation...".
@@ -267,7 +276,7 @@ _SCORE_WHERE = re.compile(r"\bScore\s+(\d+(?:\.\d+)?)\s+(?:where|if|when)\b", re
 def methodology_scale(details: dict[str, str]) -> tuple[float, float] | None:
     """(top band, Max Score) when the methodology's bands go above the Max Score, e.g.
     UPD 1a: bands 10 / 7.5 / 5 / 2.5 / 0 against a Max Score of 5."""
-    from asics_agent.scoring.skeleton import _LEVEL
+    from asics_agent.scoring.bands import LEVEL as _LEVEL
 
     try:
         maximum = float(details.get("Max Score", ""))
@@ -308,6 +317,68 @@ def _for_person(task: Task, sheet: QuestionSheet, reason: str, log: dict) -> Sco
     return cell
 
 
+def check_step2(
+    code: str, agency: str, asked: str, evidence: CityEvidence, log: dict
+) -> tuple[StepTwoAnswer | None, list, str | None]:
+    """The checks before the model is asked (shared by every Step 3 path): (answer, the agency's
+    reviewed sources, None), or (answer or None, [], why a person must score it)."""
+    answer = evidence.answers.get((agency, re.sub(r"[\s\-]", "", code)))  # "UPD 1a" = UPD1a
+    if answer is None:
+        return (
+            None,
+            [],
+            "Step 2 has no answer for this question and agency "
+            "(was the agency added after Step 2?).",
+        )
+    log["step2_status"] = answer.status
+    log["step2_answer"] = answer.answer[:1500]
+    if asked and answer.question and not same_question(asked, answer.question):
+        return (
+            answer,
+            [],
+            f"The scoring workbook's question {code} (\"{asked[:120]}\") isn't the "
+            f'question Step 2 answered under that code ("{answer.question[:120]}"). Build '
+            "the scoring workbook from the same question bank as Steps 1 and 2.",
+        )
+    if answer.status in NO_EVIDENCE or not answer.citation_id:
+        needed = f" Source needed: {answer.source_needed}" if answer.source_needed else ""
+        status = answer.status or "no status"
+        return answer, [], f"Step 2 found no evidence ({status}).{needed}"
+    sources = [c for c in evidence.citations if c.parastatal_id in (agency, "ALL")]
+    if not any(s.citation_id == answer.citation_id for s in sources):
+        return (
+            answer,
+            [],
+            f"Step 2 cited {answer.citation_id}, which is no longer "
+            "a reviewed, verified Citation Sheet row. Run Step 2 again.",
+        )
+    return answer, sources, None
+
+
+def check_reply_evidence(reply, sources: list, agency: str):
+    """(source, its full text, None), or (None, "", why the AI's answer is discarded): the
+    citation must be a reviewed row for the agency and the quote must be word for word in it."""
+    source = next((s for s in sources if s.citation_id == reply.citation_id.strip()), None)
+    full = _full_text(source) if source else ""
+    if source is None:
+        return (
+            None,
+            "",
+            f'The AI cited "{reply.citation_id}", which isn\'t a '
+            f"reviewed Citation Sheet row for {agency}. Its answer was "
+            f"discarded. AI comments: {reply.comments}",
+        )
+    if not reply.quote or _normalise(reply.quote) not in _normalise(full):
+        return (
+            None,
+            "",
+            f"The AI's quote couldn't be found word for word in "
+            f"{source.citation_id}, so its answer was discarded. AI comments: "
+            f"{reply.comments}",
+        )
+    return source, full, None
+
+
 def score_one(
     services, task: Task, sheet: QuestionSheet, details: dict[str, str], evidence: CityEvidence
 ) -> ScoredCell:
@@ -317,40 +388,11 @@ def score_one(
         "question": details.get("Question", ""),
         "at": datetime.now().isoformat(timespec="seconds"),
     }
-    answer = evidence.answers.get((task.agency, task.code))
-    if answer is None:
-        return _for_person(
-            task,
-            sheet,
-            "Step 2 has no answer for this question and agency "
-            "(was the agency added after Step 2?).",
-            log,
-        )
-    log["step2_status"] = answer.status
-    log["step2_answer"] = answer.answer[:1500]
-    asked = details.get("Question", "")
-    if asked and answer.question and not same_question(asked, answer.question):
-        return _for_person(
-            task,
-            sheet,
-            f"The scoring workbook's question {task.code} (\"{asked[:120]}\") isn't the "
-            f'question Step 2 answered under that code ("{answer.question[:120]}"). Build '
-            "the scoring workbook from the same question bank as Steps 1 and 2.",
-            log,
-        )
-    if answer.status in NO_EVIDENCE or not answer.citation_id:
-        needed = f" Source needed: {answer.source_needed}" if answer.source_needed else ""
-        status = answer.status or "no status"
-        return _for_person(task, sheet, f"Step 2 found no evidence ({status}).{needed}", log)
-    sources = [c for c in evidence.citations if c.parastatal_id in (task.agency, "ALL")]
-    if not any(s.citation_id == answer.citation_id for s in sources):
-        return _for_person(
-            task,
-            sheet,
-            f"Step 2 cited {answer.citation_id}, which is no longer "
-            "a reviewed, verified Citation Sheet row. Run Step 2 again.",
-            log,
-        )
+    answer, sources, reason = check_step2(
+        task.code, task.agency, details.get("Question", ""), evidence, log
+    )
+    if reason:
+        return _for_person(task, sheet, reason, log)
     ctx = ToolContext(services=services, citations=sources)
     try:
         reply, _, _ = call_json(
@@ -370,26 +412,9 @@ def score_one(
     log.update(reply.model_dump(), tools_used=ctx.log)
 
     # The evidence must be a real Citation Sheet row, quoted word for word.
-    source = next((s for s in sources if s.citation_id == reply.citation_id.strip()), None)
-    full = _full_text(source) if source else ""
-    if source is None:
-        return _for_person(
-            task,
-            sheet,
-            f'The AI cited "{reply.citation_id}", which isn\'t a '
-            f"reviewed Citation Sheet row for {task.agency}. Its answer was "
-            f"discarded. AI comments: {reply.comments}",
-            log,
-        )
-    if not reply.quote or _normalise(reply.quote) not in _normalise(full):
-        return _for_person(
-            task,
-            sheet,
-            f"The AI's quote couldn't be found word for word in "
-            f"{source.citation_id}, so its answer was discarded. AI comments: "
-            f"{reply.comments}",
-            log,
-        )
+    source, full, reason = check_reply_evidence(reply, sources, task.agency)
+    if reason:
+        return _for_person(task, sheet, reason, log)
 
     values, notes = {}, []
     for spec in sheet.inputs:
@@ -820,6 +845,7 @@ def run_ai_scoring(
         recalculate(out, settings.scoring_dir / ".cache")
     except RecalcUnavailable as exc:
         report.problems.append(str(exc))
+    write_sidecar(out, settings_version(settings))  # which question bank this file was made with
     if results and not codes:  # a full run; a few questions is a trial, not "scored"
         _mark_scored(settings.scoring_dir, scoring_code, report.cities)
     return report

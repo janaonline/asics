@@ -20,7 +20,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 from openpyxl.worksheet.datavalidation import DataValidation
 
-from asics_agent.applicability import match_rule
+from asics_agent.applicability import applies_to, match_rule
 from asics_agent.models import Issue, Parastatal, Question
 from asics_agent.scoring.template import COMMENTS, EVIDENCE, POINTS
 
@@ -30,7 +30,8 @@ _HEAD = PatternFill("solid", fgColor="DDE7F0")
 _INPUT = PatternFill("solid", fgColor="FFF6D5")
 _GREY = PatternFill("solid", fgColor="E7E6E6")
 _PART = re.compile(r"^\s*Part\s+([A-Z])\s*:\s*(.+?)\s*[—–-]+\s*([\d.]+)\s*$", re.M)
-_LEVEL = re.compile(r"(?:^|\n)\s*(?:Score\s+)?(\d+(?:\.\d+)?)\s*(?:[—–-]|:|if\b)", re.I)
+from asics_agent.scoring.bands import LEVEL as _LEVEL  # noqa: E402
+
 DETAILS = [  # label on the question sheet -> column of the Questions sheet (1-based)
     ("Group", 3),
     ("Original ID", 2),
@@ -130,8 +131,8 @@ def _scored(questions: dict[str, Question]) -> dict[str, Question]:
 
 
 def _applies(question: Question, agency: Parastatal) -> bool:
-    rule = match_rule(question.applicability)
-    return True if rule is None else rule[1](agency)
+    applies = applies_to(question, agency)
+    return True if applies is None else applies
 
 
 def _header(ws, row: int, values: list, widths: dict[int, int] | None = None):

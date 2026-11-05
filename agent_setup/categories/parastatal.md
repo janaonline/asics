@@ -7,7 +7,11 @@ unit: parastatal
 question_bank: data/question_banks/Parastatal_ASICS_Question_Bank.xlsx
 # This category's folder inside outputs/: outputs/Parastatal/cities/<City>/
 outputs: Parastatal
-scoring_workbook: scoring/2027/templates/ASICS_2027_Parastatal_Scoring_Workbook_DRAFT.xlsx
+# Scored in copies of the team's templates, one file per section (Step 3 fills a copy of each).
+scoring_templates:
+  - scoring/2027/templates/Parastatal_UPD_Template.xlsx
+  - scoring/2027/templates/Parastatal_SC_Template.xlsx
+  - scoring/2027/templates/Parastatal_DPG_Template.xlsx
 shared_rules: shared-rules
 steps:
   1:
@@ -20,8 +24,8 @@ steps:
   3:
     score: question-scorer
 ---
-The parastatal agencies that serve each city: water supply boards, transport corporations,
+The parastatal agencies that serve each city: water supply entities, public bus transport operators,
 development authorities and others. Step 1 discovers them, checks each one's official website
 and builds its Citation Sheet; Step 2 answers the Parastatal question bank (UPD, DPG and SC
-sections), each applicable question separately for every parastatal; Step 3 scores each answer in the Parastatal scoring workbook, one
-row per city and agency.
+sections), each applicable question separately for every parastatal; Step 3 fills a copy of each of the team's UPD, SC and DPG
+scoring templates, one row per city and parastatal.

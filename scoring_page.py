@@ -12,6 +12,7 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from asics_agent.hosting import can_open
 from asics_agent.legacy_names import current_label
 from asics_agent.scoring import human, workflow
 from asics_agent.scoring.ai import scored_cities
@@ -30,7 +31,7 @@ def _file_card(report, path: Path, open_file, key: str) -> None:
             return
         row = buttons.container(horizontal=True)
         if (
-            open_file
+            can_open(open_file)
             and path.suffix == ".xlsx"
             and row.button(
                 "Open",
@@ -105,6 +106,17 @@ def show_report(report: workflow.StepReport, open_file=None, key: str = "report"
             with st.expander(f"Other files ({len(rest)})"):
                 for i, path in enumerate(rest):
                     _file_card(report, path, open_file, f"{key}-o{i}")
+    if report.unregistered:
+        st.warning(
+            f"**Merged, but not in the register ({len(report.unregistered)}).** The AI cannot "
+            "score these yet: " + "; ".join(report.unregistered) + ".",
+            icon=":material/warning:",
+        )
+    if report.skipped:
+        with st.container(border=True):
+            st.markdown(f"**Skipped by your choice ({len(report.skipped)})**")
+            for line in report.skipped:
+                st.markdown(f"- {line}")
     if report.next_steps:
         st.markdown("**What next**")
         st.markdown("\n".join(f"{n}. {step}" for n, step in enumerate(report.next_steps, 1)))
@@ -292,6 +304,22 @@ def _readiness(settings, register, practice: bool) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+@st.cache_data(show_spinner=False)
+def _template_codes(paths: tuple, mtimes: tuple) -> list[str]:
+    """The question codes of the category's templates (their question sheets)."""
+    from openpyxl import load_workbook
+
+    from asics_agent.scoring.template_import import read_structures
+
+    codes = []
+    for path in paths:
+        try:
+            codes += list(read_structures(load_workbook(path)))
+        except Exception:
+            continue
+    return codes
+
+
 def _ai_section(settings, register_fn, category_picker=None) -> None:
     scoring_code = workflow.step3_category(settings)
     st.markdown(f"#### AI scoring · {settings.category_title}")
@@ -348,7 +376,12 @@ def _ai_section(settings, register_fn, category_picker=None) -> None:
     if category_picker:
         category_picker()  # the category comes after the cities
     template = None
-    if not practice:
+    if settings.scoring_templates:  # the team's templates: the questions are their sheets
+        question_codes = _template_codes(
+            tuple(str(p) for p in settings.scoring_templates),
+            tuple(p.stat().st_mtime for p in settings.scoring_templates if p.exists()),
+        )
+    elif not practice:
         _, templates, _ = workflow._plan(settings)
         template = templates.get(scoring_code)
         if template is None:
@@ -357,11 +390,14 @@ def _ai_section(settings, register_fn, category_picker=None) -> None:
                 "assignments workbook (see People's scoring below)."
             )
             return
+        question_codes = list(template.questions)
+    else:
+        question_codes = []
     codes = st.multiselect(
         "Questions (leave empty for all)",
-        list(template.questions) if template else [],
+        question_codes,
         key="step3-codes",
-        disabled=practice,
+        disabled=practice and not settings.scoring_templates,
         placeholder="All questions",
     )
     if soffice() is None:
@@ -403,6 +439,11 @@ def _ai_section(settings, register_fn, category_picker=None) -> None:
 
 
 def _people_section(settings, open_file) -> None:
+    if settings.scoring_templates:  # the team's templates: upload, check, store, merge
+        import people_page
+
+        people_page.render(settings, open_file)
+        return
     st.markdown("#### People's scoring")
     st.caption(
         "Interns score in Excel; their scores are the golden dataset for checking the AI. For "
@@ -418,8 +459,18 @@ def _people_section(settings, open_file) -> None:
         "it as often as you like."
     )
     row = st.container(horizontal=True)
-    if row.button("Open the assignments workbook", icon=":material/assignment_ind:"):
-        open_file(workflow.assignments_path(settings))
+    assignments = workflow.assignments_path(settings)
+    if can_open(open_file) and row.button(
+        "Open the assignments workbook", icon=":material/assignment_ind:"
+    ):
+        open_file(assignments)
+    row.download_button(
+        "Download the assignments workbook",
+        assignments.read_bytes(),
+        file_name=assignments.name,
+        key="dl-assignments",
+        icon=":material/download:",
+    )
     if row.button("Check workbooks", icon=":material/rule:"):
         with st.spinner("Checking…"):
             st.session_state["scoring-report"] = workflow.check(settings)
@@ -463,8 +514,19 @@ def _interns(settings, open_file) -> None:
         if picked.selection.rows:
             a = plan.assignments[picked.selection.rows[0]]
             path = human.intern_file(settings.scoring_dir, a.category, a.intern)
-            if path.exists() and st.button(f"Open {path.name}", icon=":material/table_view:"):
-                open_file(path)
+            if path.exists():
+                row = st.container(horizontal=True)
+                row.download_button(
+                    f"Download {path.name}",
+                    path.read_bytes(),
+                    file_name=path.name,
+                    key=f"dl-copy-{path.name}",
+                    icon=":material/download:",
+                )
+                if can_open(open_file) and row.button(
+                    f"Open {path.name}", icon=":material/table_view:"
+                ):
+                    open_file(path)
         for path in sorted((settings.scoring_dir / "merged").glob("*_human.xlsx")):
             st.markdown(f"**Latest merge · {path.stem.replace('_human', '')}**")
             st.dataframe(
@@ -472,7 +534,17 @@ def _interns(settings, open_file) -> None:
                 hide_index=True,
                 width="stretch",
             )
-            if st.button("Open merged workbook", key=f"open-{path}", icon=":material/table_view:"):
+            row = st.container(horizontal=True)
+            row.download_button(
+                "Download merged workbook",
+                path.read_bytes(),
+                file_name=path.name,
+                key=f"dl-merged-{path.name}",
+                icon=":material/download:",
+            )
+            if can_open(open_file) and row.button(
+                "Open merged workbook", key=f"open-{path}", icon=":material/table_view:"
+            ):
                 open_file(path)
 
 
@@ -499,10 +571,15 @@ def render_step3(settings, open_file, register_fn, category_picker=None) -> None
 # -- Scores (view only) --------------------------------------------------------------------
 
 
-def render_scores(settings, open_file) -> None:
+def render_scores(settings, open_file, city: str | None = None) -> None:
     from ui import header
 
     _titles(settings)
+    if settings.scoring_templates:  # scored in the team's templates: consolidated and compare
+        import compare_page
+
+        compare_page.render(settings, open_file, city)
+        return
 
     header(
         "Scores",
@@ -569,15 +646,25 @@ def render_scores(settings, open_file) -> None:
         view = view[view["Same score?"] == "No"]
     st.dataframe(_shown(view), hide_index=True, width="stretch", height=420)
     row = st.container(horizontal=True)
-    if row.button("Open the results workbook", icon=":material/table_view:"):
+    if can_open(open_file) and row.button(
+        "Open the results workbook", icon=":material/table_view:"
+    ):
         open_file(path)
     row.download_button(
         "Download it", path.read_bytes(), file_name=path.name, icon=":material/download:"
     )
     ai = settings.scoring_dir / ("practice/ai" if path == practice else "ai")
     for copy in sorted(ai.glob("*_ai.xlsx")):
-        if row.button(
-            f"Open the AI's workbook ({_title(copy.stem.replace('_ai', ''))})",
+        label = _title(copy.stem.replace("_ai", ""))
+        row.download_button(
+            f"Download the AI's workbook ({label})",
+            copy.read_bytes(),
+            file_name=copy.name,
+            key=f"dl-ai-{copy}",
+            icon=":material/download:",
+        )
+        if can_open(open_file) and row.button(
+            f"Open the AI's workbook ({label})",
             icon=":material/smart_toy:",
             key=f"open-{copy}",
         ):

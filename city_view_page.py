@@ -60,6 +60,7 @@ def _citations(path: str, mtime: float, evidence: str):
 
 ANSWERS = ["ASICS_Parastatal_*.xlsx"]  # set by render() for the category being viewed
 ULG = False  # set by render(): the category's unit is the city's ULG, not its parastatals
+SETTINGS = None  # set by render(): the category's settings (for the question bank)
 
 
 def show(frame: pd.DataFrame) -> pd.DataFrame:
@@ -111,9 +112,10 @@ def render(
     header,
     answers: list[str] = ANSWERS,
     unit: str = "parastatal",
+    settings=None,
 ) -> None:
-    global ANSWERS, ULG
-    ANSWERS, ULG = answers, unit == "ulg"
+    global ANSWERS, ULG, SETTINGS
+    ANSWERS, ULG, SETTINGS = answers, unit == "ulg", settings
     header(
         "City files",
         "Everything in each city's workbooks, viewable here. To change "
@@ -337,6 +339,38 @@ def answers_frame(path: Path) -> pd.DataFrame:
     return read_sheet(path, sheet) if sheet else pd.DataFrame()
 
 
+def bank_notes(frame: pd.DataFrame, path: Path) -> tuple[pd.DataFrame, str | None]:
+    """A "Bank note" column (retired question, question changed...) and, when the file was made
+    with another question bank than today's, a plain note. Never an error: old files must open."""
+    if SETTINGS is None or "Question ID" not in frame:
+        return frame, None
+    try:
+        import json
+
+        from asics_agent import bank_version as bv
+        from asics_agent.bank_status import context_for
+
+        ctx = context_for(SETTINGS)
+        questions = frame["Question"].astype(str) if "Question" in frame else [""] * len(frame)
+        flags = [
+            ctx.flag(q, t)
+            for q, t in zip(frame["Question ID"].astype(str), questions, strict=False)
+        ]
+        try:
+            recorded = json.loads((path.parent / "run_summary.json").read_text()).get(
+                "bank_version"
+            )
+        except (OSError, ValueError):
+            recorded = None
+        if not recorded and (embedded := bv.embedded_version(path)):
+            recorded = embedded.as_dict()
+        return frame.assign(**{"Bank note": flags}), bv.version_note(
+            recorded, bv.settings_version(SETTINGS)
+        )
+    except Exception:
+        return frame, None
+
+
 def answers_tab(files, citations, parastatals, open_file) -> None:
     if not files["answers"]:
         st.info("No answers yet. Run Step 2 for this city.")
@@ -346,6 +380,9 @@ def answers_tab(files, citations, parastatals, open_file) -> None:
     if frame.empty:
         st.warning("This workbook has no scoring sheet.")
         return
+    frame, bank_note = bank_notes(frame, path)
+    if bank_note:
+        st.info(bank_note)
     left, middle, right = st.columns(3)
     owners = sorted(frame["Parastatal"].dropna().astype(str).unique())
     chosen = [] if ULG else left.multiselect("Parastatal", owners, placeholder="All", key="ans-p")
@@ -381,6 +418,7 @@ def answers_tab(files, citations, parastatals, open_file) -> None:
             "Score",
             "Citation ID",
             "Reviewer Decision",
+            "Bank note",
             "Question",
         ]
         if c in view

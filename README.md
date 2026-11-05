@@ -84,7 +84,7 @@ outputs/
   ULG/                     the ULG category's folder (an older outputs/UPD/ still works)
   _app/                    the app's own files (error log, uploads)
   _old/                    files from earlier versions
-scoring/2027/ai/PARASTATAL_ai.xlsx      Step 3: the scoring workbook (first sheet: Scores)
+scoring/2027/ai/PARASTATAL_<SECTION>_AI.xlsx   Step 3: the AI's copies of the team's UPD, SC and DPG templates
 ```
 
 ## The city register
@@ -339,7 +339,7 @@ A city's category score is its overall score in that workbook; for Parastatal it
 average of the city's agencies. The ASICS score is the average of the categories (equal
 weights). "?" means nothing is scored yet; yellow cells in Excel are provisional.
 
-Everything lives in `scoring/2027/`:
+Everything lives in `scoring/2027/` (the older path; see the templates section below for Parastatal):
 
 | Folder | What's in it |
 |---|---|
@@ -356,19 +356,110 @@ nobody needs to open it. **Check workbooks** lists anything that would stop scor
 up: a sheet whose name and code differ, missing columns, cities that don't match the city
 register.
 
-### The Parastatal scoring workbook (draft)
+### Step 3 in the team's templates (Parastatal)
 
-`templates/ASICS_2027_Parastatal_Scoring_Workbook_DRAFT.xlsx` was generated from the
-methodology sheet in the UPD layout: one sheet per question, one row per city and agency
-(`Bengaluru – BWSSB`), an **Applies?** column from the question's Applicability and the
-agency's type, and summary and city sheets with the same roll-up formulas as UPD. Each
-question has a simple input (a score, or one per "Part A/B" where the methodology splits the
-points) for the experts to replace with their own. Its first sheet lists what to check. To
-regenerate it (e.g. after Step 1 finds more agencies):
+The Parastatal category is scored in the team's three scoring templates
+(`scoring/2027/templates/Parastatal_UPD_Template.xlsx`, `_SC_` and `_DPG_`; listed under
+`scoring_templates` in `agent_setup/categories/parastatal.md`). Step 3 makes a **copy of each**
+and fills it in the way a person would, so people and the AI can be compared side by side:
 
-```bash
-uv run python scripts/make_scoring_skeleton.py
-```
+- one file per section: `scoring/2027/ai/PARASTATAL_UPD_AI.xlsx`, `PARASTATAL_SC_AI.xlsx`,
+  `PARASTATAL_DPG_AI.xlsx` (the category is in the name because the ULG's own file is
+  `UPD_ai.xlsx`), laid out exactly like the template, with a row per city and parastatal;
+- the AI writes only the **input columns** the template asks for (Yes/No parts, numbers, a
+  choice, or the points where the template takes typed points), the **evidence** (source link,
+  chapter, provision, clause, page, latest information) and the **comments**. It never writes a
+  formula, a header or another sheet. Each value is checked against the column's own allowed
+  values first: a bad one is reported on the Step 3 page and not written;
+- the template's **own formulas calculate the score**. They are recalculated with LibreOffice
+  and the file is checked against the one before (tables, validations, protection, names...);
+  if anything differs, or LibreOffice is missing, the uncalculated file is kept and the page
+  says the score calculates when the file is opened in Excel;
+- a new city or parastatal gets the template's own Configuration row (the same in all three
+  files) and a row under each question that applies to it. Other cities' rows are never
+  touched; a copy of the file is kept in `ai/history/` before every change;
+- **typed points** must be one of the question's allowed scores, exactly as a person would type them into
+  the Points cell (which takes 0 to the Max Score): `UPD 1a` (methodology 10 / 2.5 / 0, Max Score 5) allows
+  5 / 2.5 / 0. Nothing is converted; a score that is not allowed is not written and is listed as an issue with
+  the question, the value and the allowed scores. Questions whose parts are added up (for example `DPG 5a-5h`,
+  `UPD 3a`) keep the range check only. `docs/AI_COVERAGE.csv` shows each question's `score_levels`;
+- `SC 1` and `SC 3` follow their template formula, which scores from at least 2 valid years: the row is written
+  when 2 or more years have every figure ("Based on 2 of 3 years" is added to the comment); fewer is left for a
+  person. A header that is a formula (not plain text), empty or repeated stops that question with a "template
+  problem" message instead of being dropped;
+- a calculated question is written only when every input its score needs has a value, so a
+  missing figure never shows as a calculated 0. Questions that need other cities' data (a
+  benchmark: SC 2, 12a, 12b) and DPG 4 (the team did not score it) are left for a person;
+- `PARASTATAL_<SECTION>_AI.ai_info.json` records who scored (AI), the model, the agent-setup
+  fingerprint (prompt version), the question bank version and the template it was made from.
+
+The rules for evidence are unchanged: Step 2's answer and its Citation ID only, a quote that is
+in the saved page word for word, nothing from the web.
+
+**People's files** are uploaded in the app: **Step 3 > People's scoring** (no copying files into
+folders, and nothing needs Excel on the server):
+
+1. Choose the section (UPD, SC or DPG), type the **scorer's name** (it is typed, never taken from
+   the file name) and drag in one or more filled templates. Only plain `.xlsx` files are accepted
+   (no macros), up to 25 MB; they are read with openpyxl only, so no macro or formula runs.
+2. Each file gets a **preview** before anything is stored: which template it matches, the sheets
+   and rows read, rows with a score, rows and sheets ignored and why, formula cells with no saved
+   value (save the file in Excel first), retired or changed questions, values the template does not
+   allow, and cities or parastatals the register does not know. A file from the wrong template gets
+   a plain-language error.
+3. **Save** stores it as an immutable submission:
+   `scoring/2027/human/<category>/<section>/submissions/<timestamp>_<scorer>_<hash8>.xlsx` with a
+   sidecar `.json` (uploader, scorer, date, file hash, template hash, question bank version, rows
+   read, issues) and an `index.json` registry. Nothing is overwritten or edited; the same file
+   uploaded twice is recognised and not stored twice; every stored file has a download button.
+4. **Merge and calculate** builds `scoring/2027/merged/PARASTATAL_<SECTION>_human.xlsx` from the
+   submissions (derived and re-runnable; the template's formulas calculate it). A blank never
+   overwrites a value. A person who uploads again replaces only their own earlier values, for the
+   rows in the new file (the earlier file is kept). If two people give different scores or inputs
+   for the same question and row, both are listed under **Needs a look**, nothing is chosen for
+   them, and that row stays blank until they agree. A calculated question is merged only when all
+   its inputs are filled, and a city or parastatal the register does not know is not merged.
+5. The Scores page reads the merged files.
+
+**Cities and parastatals the register does not know.** The preview has a **Cities and parastatals** table:
+each name as written in the file, the register's match (exact, an "Other name", a close spelling or none)
+and a choice: **Map to existing**, **Add as new** or **Skip**. "Add as new" keeps the place in people's
+scoring only (you give its state, and the type when the file does not say; nothing is invented): the register
+is not touched, the Scores page shows it as "Not in register - AI cannot score yet", and the AI still needs
+the register for Steps 1-3. "Map to existing" can also write the name into the register as an "Other name"
+(one cell; a copy of the register is kept in `data/cities/history/`). Choices are saved with the submission,
+pre-filled the next time the same spelling appears (you can change them), and used by every merge; skipped
+rows are listed after the merge. **Names to add to the register** lists what the research lead would add by
+hand, with a CSV download. Row labels match whatever the dash, spaces or capitals ("Bengaluru - BWSSB" =
+"Bengaluru – BWSSB").
+
+The assignments workbook and **interns' copies** are optional: put `PARASTATAL` in the Category
+column of the Assignments sheet, questions like `UPD*`, `SC 1`, `DPG 5*`, and **Make interns'
+copies** makes a copy of each section's template with the rows ready (yellow) and a Step 2
+evidence sheet. The workbook can be downloaded, edited and uploaded back (the old one is kept in
+`assignments/history/`). `uv run python scripts/scoring.py merge` does the same merge from the
+command line. On a server, set `ASICS_HOSTED=1` to hide the "Open in Excel" buttons; every file
+has a Download button either way.
+
+The **Scores** page then shows, for the city and category chosen in the sidebar (read-only):
+
+- **Consolidated**: *People | AI | Difference*, like `Parastatal_Consolidated_Scoring.xlsx`: each
+  section out of 10 per city and the total (the average, only when every section has a score),
+  per parastatal, and per question with the main question's roll-up;
+- **Compare**: question by question and parastatal by parastatal, both scores, the difference,
+  a status (both / only people / only AI / retired / question changed) and the evidence side by
+  side, with **Only where they differ**; a percentage shows only from 20 compared rows;
+- **Files**: downloads of the AI's workbooks and the compare workbook (also written by
+  `scripts/compare_human_ai.py`, with the consolidated views as extra sheets), and what was read
+  and ignored in each file. A note says when the people's file, the AI's file and the question
+  bank in use do not match.
+
+ULG will work the same way once it has templates: the views are driven by the category's
+templates and its unit (one row per city for the ULG). A category without `scoring_templates`
+keeps the older workbook path above (`scripts/make_scoring_skeleton.py` drafts one).
+
+The old Parastatal draft workbook and its AI copy are kept in `scoring/2027/templates/archive/`
+and `scoring/2027/ai/archive/`.
 
 ---
 
@@ -567,6 +658,7 @@ the **Technical Log**.
 ├── city_view_page.py               # the app's City files view (read-only)
 ├── docs/source_prompts/            # the original prompt the rules come from
 ├── scoring_page.py                 # the app's Step 3 · Score and Scores pages
+├── people_page.py                  # Step 3 · People's scoring: upload, preview, save, merge
 ├── scoring/2027/                   # scoring workbooks: templates, interns' copies, merged, AI, results
 ├── scripts/  run_pipeline.py  recheck_links.py  create_city_register.py
 │             scoring.py  make_scoring_skeleton.py
@@ -592,6 +684,40 @@ the **Technical Log**.
 │   └── applicability.py  question_bank.py  llm.py  services.py  models.py  config.py  progress.py
 └── tests/                      # offline tests (practice mode)
 ```
+
+## Updating the question bank from the team's workbook
+
+The Parastatal bank is built from the team's question workbook (sheets `UPD`, `SC`, `DPG`, found
+by name; columns by header text). A copy of the current workbook, the three scoring templates
+and the Implementation Note are in [docs/reference/](docs/reference/).
+
+```bash
+uv run python scripts/build_question_bank.py docs/reference/Bengaluru_Parastatal_Pilot_NC19102026_1.xlsx --dry-run
+uv run python scripts/build_question_bank.py NEW_WORKBOOK.xlsx
+```
+
+It prints what was added, removed, or changed (text, max score, applicability, tag), anything it
+did not understand, the question x parastatal-type table, and every difference from the
+templates' `Question_Index`. The previous bank is moved to `data/question_banks/archive/`.
+Every bank has a **version** (`<source>@<date>#<hash>`, on its "Bank Info" sheet); Step 2 records
+it in `run_summary.json` and Step 3 beside the AI workbook, and the City files page says when a
+file was made with another bank. A question code can be reused for a different question: old
+answers are never remapped, they are flagged. Who a question applies to is read from the
+Applicability text with [data/applicability_rules.yaml](data/applicability_rules.yaml).
+
+## Comparing people's scores with the AI's
+
+```bash
+uv run python scripts/compare_human_ai.py FILLED_UPD.xlsx FILLED_SC.xlsx FILLED_DPG.xlsx
+```
+
+Reads the filled scoring templates (sheet name = question code; columns by header, so renamed,
+reordered or extra columns are fine) and writes one workbook per city to `scoring/2027/compare/`:
+`Compare` (one row per unit and question: both scores, difference, an exact-match "Agrees?",
+inputs and sources side by side, the AI's class and confidence, a status), `Summary` (agreement
+by section, AI class and parastatal type; a percentage shows only from 20 compared rows,
+`--min-rows`) and `Review list` (unknown parastatals or questions). The design for storing all
+of this is in [docs/DB_DESIGN.md](docs/DB_DESIGN.md).
 
 ## Adding a new section (e.g. a new pillar in the question bank)
 
@@ -817,7 +943,7 @@ Step 1 is the expensive step: it searches the web. It is kept down by:
   - The ASICS page header and the small shared styles are in [ui.py](ui.py).
 
 - **New city:** the team adds a row to the city register.
-- **New parastatal type:** add it to `TYPES` in [cities.py](src/asics_agent/cities.py) and give it a rule in [applicability.py](src/asics_agent/applicability.py).
+- **New parastatal type:** add one entry to `PARASTATAL_TYPES` in [parastatal_types.py](src/asics_agent/parastatal_types.py) and, if questions apply to it only, a rule in [data/applicability_rules.yaml](data/applicability_rules.yaml). Old type names in saved files are read by the same module.
 - **Website scoring:** the weights and bands are at the top of [links/trust.py](src/asics_agent/links/trust.py).
 - **Prompts, skills, agents:** `agent_setup/` (see [agent_setup/README.md](agent_setup/README.md)). Each category's `shared_rules` prompt goes to every one of its agents (`prompts/shared-rules.md` for Parastatal).
 - **Settings:** `.env`; see `.env.example`.
