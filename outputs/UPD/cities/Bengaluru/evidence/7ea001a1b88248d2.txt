@@ -1,0 +1,1825 @@
+SOURCE URL: https://prsindia.org/files/bills_acts/acts_states/karnataka/2023/Act6of2023Karnataka.pdf
+
+[page 1]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DISCLAIMER: This document is being furnished to you for your information by PRS Legislative Research 
+(PRS). The contents of this document have been obtained from sources PRS believes to be reliable. These  
+contents have not been independently verified, and PRS makes no representation or warranty as to the  accuracy, 
+completeness or correctness. In some cases the Principal Act and/or Amendment Act may not be  available.  
+Principal Acts may or may not include subsequent amendments. For authoritative text, please  contact the relevant 
+state department concerned or refer to the latest government publication or the gazette notification. Any person 
+using this material should take their own professional and legal advice before acting on any information contained 
+in this document. PRS or any persons connected with it do not accept any liability arising from the use of this 
+document. PRS or any persons connected with it shall not be in any way responsible for any loss, damage, or 
+distress to any person on account of any action taken or not taken on the basis of this document. 
+The Bengaluru Metropolitan Land Transport Authority Act, 2022 
+ 
+Act No. 6 of 2023 
+ 
+ 
+ 
+ 
+Keywords: 
+ 
+Aggregator, Influence Area, Infrastructure
+Amendment appended: 10 of 2026 
+
+[page 2]
+KARNATAKA ACT NO 06 OF 2023 
+THE BENGALURU METROPOLITAN LAND TRANSPORT AUTHORITY ACT, 2022 
+ 
+Arrangement of Section 
+Sections: 
+1. Short title, extent and commencement 
+2. Definitions 
+3. Declaration of the Bengaluru Urban Mobility Region and alteration of its 
+limits 
+4. Constitution of the Bengaluru Metropolitan Land Transport Authority 
+5. Powers of the Chairperson 
+6. Discharge of functions of the Chairperson in his absence 
+7. Term of office and conditions of service of Non-official members 
+8. Resignation, removal or suspension of Non-official members 
+9. Declaration of conflict of interest 
+10. Terms of working of the Authority 
+11. Secretariat of the Authority 
+12. Constitution of Executive Committee 
+13. Committees constituted by the Authority for specific subject matters  
+14. Duties and functions of the Authority 
+15. Duties and Functions of the Executive Committee 
+16. Duties and functions of the Chief Executive Officer 
+17. Powers of  the Authority 
+18. Power to give directions to urban transport agencies, infrastructure development 
+agencies and traffic management agencies 
+19. Power to approve major Urban Transport projects 
+20. Preparation of policies 
+21. Preparation of Comprehensive Mobility Plan 
+22. Integration of land-use and transport planning in the preparation of Master 
+Plan 
+23. Revision of Comprehensive Mobility Plan 
+24. Preparation and approval of Sectoral Mobility Investment Program and City 
+Mobility Investment Program 
+25. Preparation and approval of Annual Implementation Plan 
+26. Revision of City Mobility Investment Program 
+27. Works of Urgent Nature 
+28. Traffic Management Plan 
+29. Mode of executing contracts on behalf of the Authority 
+30. Fund of the Authority 
+31. Grants and loans by the Government and other entities 
+32. Power of the Authority to lend 
+33. Power of the Authority to raise finances and borrow 
+34. Sinking fund 
+35. Budget of the Authority 
+36. Annual report 
+37. Accounts and audit 
+38. Returns 
+39. Penalty for failure to comply with rules, regulations, orders and directions of 
+the Authority 
+40. Failure by the State Government departments or agencies 
+41. Offences by companies 
+
+[page 3]
+42. Fines when realized to be vested with the Authority 
+43. Penalties not to affect other liabilities 
+44. Cognizance of offences 
+45. Chapter to have effect in addition to other Acts 
+46. Delegation of powers 
+47. Notice of suit against the Authority 
+48. Restriction on execution 
+49. Service of notice etc 
+50. Public notice 
+51. To fix reasonable time for notice, etc 
+52. Authentication 
+53. Power to make rules 
+54. Power to make regulations and procedures 
+55. Removal of difficulties 
+56. Power of the State Government to issue directions 
+57. Protection of action taken in good faith 
+58. Recovery of penalty 
+59. Restriction on power of local authority 
+60. Effect of other Laws 
+61. Power to amend the Schedule 
+ 
+ 
+STATEMENT OF OBJECTS AND REASONS 
+Act 0 6 of 2023:- A Bill to provide for the constitution of the Bengaluru 
+Metropolitan Land Transport Authority for Urban Mobility Region in the city of Bengaluru 
+and for regulation of the development, operation, maintenance, monitoring, supervision of 
+urban mobility within Urban Mobility Region and for the matters connected therewith or 
+incidental thereto; 
+ 
+Whereas multiple institutions or agencies like Bangalore Development Authority, 
+Bengaluru Metropolitan transport Corporation, Bruhat Bengaluru Mahanagara  Palike,  
+Bangalore  Metro  Rail  Corporation  Limited , and Transport Department are responsible 
+for planning, developing, implementing and managing activities relating to Urban Mobility 
+in the above institutions and departments are empowered under different legisla tions to 
+deal with the matters relating to Urban Mobility within a certain framework; 
+  
+ And whereas multiplicity of institutions, departments, and independent legislations 
+that they are bound to follow are currently causing overlap in responsibilities and  
+functions, which impede the process of planning and implementation of major 
+transportation schemes aimed at streamlining and improving urban mobility; 
+ And whereas the National Urban Transport Policy lays down a framework for 
+integration of various functi ons of institutions and departments to enable holistic 
+transport planning; 
+ And whereas the policies, programmes and initiatives of national and state level 
+institutions or agencies involved in promoting and/or influencing economic and 
+infrastructure devel opment, education, health, establishment and management of 
+markets, environmental protection etc. may have an impact on the transport and mobility 
+in the city of Bengaluru and the impact of such policies, programmes and initiatives need 
+to be assessed and addressed while planning for urban mobility; 
+  
+ Hence, the Bill 
+[L.A. Bill No.29 of 2022, File No. SAMVYASHAE  26 SHASANA 2022]  
+
+[page 4]
+[Entry 5 of List II of the Seventh Schedule to the Constitution of India]   
+[Published in Karna taka Gazette Extra -ordinary No.20 in part -IVA 
+dated:12.01.2023] 
+  
+
+[page 5]
+KARNATAKA ACT NO 06 OF 2023 
+(First published in the Karnataka Gazette Extra-ordinary on the 12th day of January, 2023) 
+ 
+THE BENGALURU METROPOLITAN LAND TRANSPORT AUTHORITY ACT, 2022 
+ (Received the assent of the Governor on the 11th day of January, 2023) 
+ 
+An Act  to provide for the constitution of the Bengaluru Metropolitan Land 
+Transport Authority for Urban Mobility Region in the city of Bengaluru and for regulation 
+of the development , operation, maintenance, monitoring, supervision of urban mobility 
+within Urban Mobility Region. 
+Whereas it is expedient to provide for the constitution of the Bengaluru 
+Metropolitan Land Transport Authority for Urban Mobility Region in the city of Bengal uru 
+and for regulation of the development, operation, maintenance, monitoring, supervision of 
+urban  mobility  within Urban Mobility Region and for the matters connected therewith or 
+incidental thereto for the purposes hereinafter appearing; 
+ Whereas multi ple institutions or agencies like Bangalore Development Authority, 
+Bengaluru Metropolitan Region Development Authority, Bangalore Traffic Police, Bangalore 
+Metropolitan Transport Corporation, Bruhat Bengaluru Mahanagara Palike,  Bangalore  
+Metro  Rail  Cor poration  Limited and Transport Department are responsible for planning, 
+developing, implementing and managing activities relating to Urban Mobility in the city of 
+Bengaluru and its surrounding region and each of the above institutions and departments 
+are empowered under different legislations to deal with the matters relating to Urban 
+Mobility within a certain framework; 
+ And whereas multiplicity of institutions, departments, and independent legislations 
+that they are bound to follow are currently causing overlap in responsibilities and 
+functions, which impede the process of planning and implementation of major 
+transportation schemes aimed at streamlining and improving urban mobility; 
+ And whereas the National Urban Transport Policy lays down a framework fo r 
+integration of various functions of institutions and departments to enable holistic 
+transport planning; 
+ And whereas the policies, programmes and initiatives of national and state level 
+institutions or agencies involved in promoting and/or influencing ec onomic and 
+infrastructure development, education, health, establishment and management of 
+markets, environmental protection etc. may have an impact on the transport and mobility 
+in the city of Bengaluru and the impact of such policies, programmes and initi atives need 
+to be assessed and addressed while planning for urban mobility; 
+ Be it enacted by the Karnataka State legislature in the seventy third year of the 
+Republic of India, as follows:- 
+CHAPTER - I 
+Preliminary 
+ 
+1. Short title, extent and commencement. - (1) This Act may be called 
+the Bengaluru Metropolitan Land Transport Authority Act, 2022. 
+(2) It extends to the whole of Urban Mobility Region. 
+(3) It shall come into force on such date as the State Government may by 
+notification in the official Gazette, appoint. 
+2. Definitions.- In this Act unless the context otherwise requires,- 
+(a) “Aggregator” means an intermediary or market place, digital or 
+otherwise for a passenger or a group  of passengers to connect  with the driver of 
+a transport vehicle for the purpose of transportation needs of that passenger or a 
+group of passengers; 
+(b) "Authority" in relation to any Urban Mobility Region means the 
+Bengaluru Metropolitan Land Transport Authority constituted under section 4; 
+(c) "Bengaluru Metropolitan Area" means the Bengaluru Metropolitan Area 
+as defined under clause (c) of section 2 of the Bangalore Development Authority 
+Act, 1976; 
+
+[page 6]
+(d) “Central Government” means the Government of India; 
+(e) “Chairperson" means the Chairperson of the Authority as specified 
+under section 4 and shall also include any other person acting as the chairperson 
+of the Authority in the absence of chairperson; 
+ 
+(f) "Chief Executive Officer" means the Chief Executive Officer of the 
+Authority appointed under sub-section (2) of section 11; 
+(g) “City Mobility Investment Program” means a five-year (or such period as 
+decided by the State Government) comprehensive investment program for the 
+development of Urban Mobility in the Urban Mobility Region prepared by the 
+Authority as provided in section 24; 
+(h) "Comprehensive Mobility Plan" means the policy document outlining 
+the policies, strategies and related actions for the provision of safe, clean and 
+efficient urban transport and the enhancement of mobility of people and goods in 
+the Urban Mobility Region, covering all elements of  urban mobility under an 
+integrated land use and transport planning process; 
+(i) “Electronic record” means as defined under clause (t) of sub-section (1) 
+of section 2 of the Information Technology Act, 2000 (Central Act 21 of 2000); 
+(j) “Executive committee” means  the executive committee of the 
+Authority constituted under section 12; 
+(k) "Fund" means the Bengaluru Metropolitan Land Transport Authority 
+Fund created under section 30; 
+(l) “Influence area” means the transit influence area as notified by the 
+Authority; 
+(m) “Infrastructure development agency” means agency involved in 
+development of city infrastructure such as road, bridges, water supply, drainage 
+system, electricity supply, tele - communication cables, gas pipelines and any 
+other utility agencies, whether public or private, in the Urban Mobility Region; 
+(n) “Major Urban Transport Project” means the project undertaken for 
+expansion of the road network including road widening, construction of new 
+roads, grade separators, etc., projects relating to multi -modal integra tion and 
+transit oriented development, changes and/or expansion in the current bus or 
+rail or metro network, projects involving choice of one mode over another, any 
+project which in the opinion of the Authority may have an impact on urban 
+mobility in Urban  Mobility Region and any other project stipulated by the State 
+Government; 
+(o) “Medium Term” means plans and projects having a duration of up to 
+five years or as specified by the Authority; 
+(p) "Member" means member of the Authority as appointed under sub -
+section(1) of section 4; 
+(q) “Planning Authority” means the planning authority as defined under 
+sub-section (7) of section 2 of the Karnataka Town and Country Planning Act, 
+1961 (Karnataka Act 11 of 1963); 
+(r) "Regulation" means regulation made by the Authority under this Act; 
+(s) “Regulatory authority” means and include any statutory authority, 
+body, agency, department exercising regulatory functions relating to urban 
+mobility by virtue of the powers vested with them under the relevant legislations 
+such as the Motor Vehicles Act, 1988 (Central Act 59 of 1988), the Road 
+Transport Corporations Act, 1950 (Central Act 64 of 1950), the Karnataka Police 
+Act, 1963 (Karnataka Act 4 of 1964), the Karnataka Traffic Control Act, 1960 
+(Karnataka Act 18 of 1960), the Karnataka State Road Safety Authority Act, 2017 
+(Karnataka Act 45 of 2017), the Karnataka Motor Vehicles Taxation Act, 1957 
+
+[page 7]
+(Karnataka Act 35 of 1957) and the Karnataka Motor Vehicles Rules, 1989; 
+(t) "Rules" mean rules made by the State Government under this Act; 
+(u) “Schedule” means schedule appended to this Act; 
+(v) “Sectoral Mobility Investment Program” means the investment program 
+prepared by the respective Urban Transport Agency as specified in section 24 in 
+accordance with the Comprehensive Mobility Plan; 
+(w) “Short Term” means plans and  projects of duration of  up  to  two 
+years or as specified by the Authority; 
+ 
+(x) “Social media” means any web or mobile based platform that enables 
+the Authority to communicate interactively with the  general  public  and enables 
+exchange of user generated content; 
+(y) “Special invitee” means a person nominated by his respective 
+department to act as a special invitee of the Authority under sub -section (1) of 
+section 4 and who shall attend only such meetings of the Authority, as the 
+Authority deems fit, without having voting rights whatsoever; 
+(z) "State Government” means the Government of Karnataka;  
+(aa) “Sustainable Urban Transport” shall mean projects conceived to reduce 
+the use of private vehicles and increase the use of public transport and non -
+motorised modes like w alking and cycling, either referred to individually or 
+collectively; 
+(bb) “Traffic Management Agencies” shall mean and include agencies involved in the 
+day-to-day management of traffic such as Bangalore Traffic Police (BTP), parking 
+management agencies, tr ansport authorities or any other agency or agencies assigned with 
+the task of traffic management; 
+(cc) “Urban Local Body” means and includes town panchayat and town or city 
+municipal council as defined in the Karnataka Municipalities Act, 1964 (Karnataka A ct 22 
+of 1964), and the City Corporation as defined in the Karnataka Municipal Corporations 
+Act, 1976 (Karnataka Act 14 of 1977) and the Bruhat Bengaluru Mahanagara Palike as 
+defined in the Bruhat Bengaluru Mahanagara Palike Act, 2020 (Karnataka Act 53 of 2020); 
+(dd) “Urban Mobility” means with its all grammatical variations all aspect of 
+transport infrastructure, facilities, vehicles and services available to the general public in 
+an Urban Mobility Region, including but not limited to private transport veh icles and 
+services and all modes and means of transportation within the categories specified under 
+Schedule; 
+(ee) “Urban Mobility Region” means the area comprising the Bengaluru 
+Metropolitan Area and such other areas as the State Government may notify from  time to 
+time by specifying its territorial limit for the purpose of applicability of this Act on such 
+terms and conditions as deemed fit; 
+(ff) “Urban Transport Agency” means and includes both the private and public 
+agencies engaged in providing of Urban Mobility in Urban Mobility Region; and 
+(gg) “Works of urgent nature” means work or activity or  plan that need to be 
+undertaken to restore road or transport connectivity  and facilities affected by any disaster 
+as defined in the Disaster Management Act, 2005 (Central Act 53 of 2005). 
+ 
+CHAPTER – II 
+Declaration of Urban Mobility Region 
+ 
+3. Declaration of the Bengaluru Urban Mobility Region and alteration 
+of its limits. - (1) The State Government may, by notification, declare Bengaluru 
+Urban Mobility Region from time to time, by specifying its territorial limit for the 
+purpose  of  applicability of  this Act on  such terms and conditions as deemed fit: 
+ 
+Provided that, the State Government, may, by notification, make alteration or 
+change any area within Bengaluru Urban Mobility Region. 
+
+[page 8]
+ (2) A map showing the boundary of the Bengaluru Urban Mobility Region as 
+declared under this section shall be published in at least two English and two Kannada 
+news-papers, having wide circulation in such Urban Mobility Region and be  advertised in 
+electronic form, social media and website, within such Urban Mobility Region. 
+ 
+CHAPTER–III 
+The Bengaluru Metropolitan Land Transport 
+Authority 
+4. Constitution of the Bengaluru Metropolitan Land Transport 
+Authority.- (1) The State Government sha ll, as soon as possible after the 
+commencement of this Act, but not later than six months from the date of its 
+commencement, by notification, establish an Authority to be called the Bengaluru 
+Metropolitan Land Transport Authority consisting of the followin g members, 
+namely:- 
+ 
+(a) The Chief Minister of Karnataka Ex-officio Chairperson 
+(b) The Minister in charge of Bengaluru 
+Development 
+Ex-officio 
+Vice-Chairperson 
+(b1) One Minister representing Bengaluru 
+Metropolitan Area 
+Ex-officio Member 
+(c) The Minister in charge of Transport Ex-officio 
+Vice-Chairperson 
+(d) The Chief Secretary to the State 
+Government 
+Ex-officio Member 
+(e) The Additional Chief Secretary or Principal 
+Secretary to the State Government, Urban 
+Development Department 
+Ex-officio Member 
+(f) The Additional Chief Secretary or Principal Secretary 
+to the State Government, Transport Department 
+Ex-officio Member 
+(g) The Additional Chief Secretary or Principal Secretary 
+to the State Government, Finance Department 
+Ex-officio Member 
+(h) The Addition al Chief Secretary or Principal Secretary 
+to the State Government, Public Works Department 
+Ex-officio Member 
+(i) The Additional Chief Secretary or Principal Secretary 
+to the State Government, Women and Child 
+Development Department 
+Ex-officio Member 
+(j) The Mayor, Bruhat Bengaluru Mahanagara Palike Ex-officio Member 
+(k) The Commissioner, Directorate of Urban Land 
+Transport 
+Ex-officio Member- 
+Secretary 
+(l) The Commissioner of Police, Bengaluru City Ex-officio Member 
+(m) The Commissioner, Transport and Road Safety Ex-officio Member 
+(n) The Chief Commissioner, Bruhat Bengaluru 
+Mahanagara Palike 
+Ex-officio Member 
+(o) The Commissioner, Bangalore Development Authority Ex-officio Member 
+(p) The Commissioner, Bangalore Metropolitan Region 
+Development Authority 
+Ex-officio Member 
+(q) The Director, Department of Town and 
+Country Planning 
+Ex-officio Member 
+(r) The Member -Secretary, Karnataka State Pollution 
+Control Board 
+Ex-officio Member 
+(s) The Managing Director, Bangalore Metro Rail 
+Corporation Limited 
+Ex-officio Member 
+(t) The Managing Director, Bangalore 
+Metropolitan Transport Corporation 
+Ex-officio Member 
+(u) The Managing Director, Bengaluru Rail Infrastructure 
+Development Enterprises 
+Ex-officio Member 
+
+[page 9]
+Limited 
+(v) The Divisional Railway Manager, Bengaluru South 
+Western Railway 
+Special Invitee 
+(w) The Regional Officer, Karnataka, National Highways 
+Authority of India 
+Special Invitee 
+(x) Three experts in the field of urban mobility, 
+corporate governance or Law, Finance or Transport 
+economics, as the State Government may nominate 
+Non-official 
+Members 
+(y) Two representatives from civil society organizations 
+working in the field of urban mobility and allied areas, 
+as the State Government may nominate 
+Non-official 
+Members 
+(z) Three representatives from institutions or 
+associations representing the private sector and 
+professional bodies, as the State Government may 
+nominate 
+Non-official 
+Members 
+(aa) Two representatives from academic 
+institutions with expertise in urban mobility, 
+as the State Government may nominate 
+ Non-  official 
+Members 
+ 
+Provided that, the Chairperson may invite any officer of the Government or any 
+other person who, in the opinion of the Chairperson has expertise in Urban Mobility related 
+matters to participate in the deliberations of the Authority. 
+(2) Members and Special Invitees, as the case may be, referred to under clauses (a) 
+to (w) of sub-section (1) shall continue as members and Special Invitees, as the case may 
+be, as long as they hold position in Government department or Urban Local Bodies or 
+Authority and cease to be a member or Special Invitee, as the case may be, of the Authority 
+upon relinquishment of such post or position. 
+(3) The headquarters of the Authority shall be at Bengaluru. 
+(4) The Authority shall be a body corporate by the name aforesaid having perpetual 
+succession and a common seal with power, subject to the provisions of this Act, to acquire, 
+hold and dispose of property both movable and immovable and to contract and sue and be 
+sued in its name. 
+(5) No act or proceedings of the Authority shall be invalid by reason of the existence 
+of the vacancy in or defect in the constitution of the Authority. 
+5. Powers of the Chairperson. - The Chairperson of the Authority shall 
+have powers of general superint endence, directions, and control in respect of all 
+administrative matters of the Authority. 
+6. Discharge of functions of the Chairperson in his absence. - In the 
+event of the Chairperson being unable to discharge the Authority’s functions, the 
+Minister for Bengaluru Development shall be the Chairperson: 
+Provided that, in the event of the Minister for Bengaluru Development being the 
+Chief Minister, the Minister for Transport shall be the Chairperson. 
+Provided further that, in the absence of the Minister of Transport, the Chief 
+Secretary to the State Government shall preside over the meeting. 
+7. Term of office and conditions of service of Non -official members.- 
+The terms of appointment and allowances payable to, and other conditions of 
+service of the Non-official members, shall be such as may be prescribed: 
+Provided that, the Non-official members shall hold office for a period of not exceeding three 
+years. They may be re-appointed for a further period of three years. 
+8. Resignation, removal or suspension of Non -official members. - (1) 
+Any Non -official member may, by notice in writing, addressed to the Authority, 
+resign from the Authority: 
+ Provided that, the Non -official member, who has given notice of resignation, shall 
+continue to hold office till the acceptance of the resignation by the Authority. 
+(2) The State Government may, by order, remove any Non -official member 
+
+[page 10]
+from office, if such Non-official member,- 
+(a) is, or at any time has been, adjudged as an insolvent; 
+(b) has been convicted of an offence which, in the opinion of  the State 
+Government, involves moral turpitude; 
+(c) has acquired such financial or other interest as is likely to affect 
+prejudicially his functions as a member; 
+(d) has so abused the position as to render his continuance in office 
+prejudicial to the public interest; 
+(e) has become physically or mentally incapable of performing his 
+functions under the Act; 
+(f) has acted against the code of conduct specified by the Authority from 
+time to time; or 
+(g) If he is so disqualified by or under any law. 
+(3) No Non-official member as specified under sub-section (1) shall be removed from 
+office under clause (c) or clause (d) unless the Authority has held an enquiry and given a 
+reasonable opportunity of hearing to such person and if there is a cause for removal, 
+recommend to the State Government of such decision. 
+(4) If a casual vacancy occurs in the office of a Non -official member, either by reason 
+of death, resignation, removal or otherwise, such vacancy shall be filled up, as soon as 
+possible, by the State Government and such Non -official member shall hold office only for 
+the remainder of the term for which the replaced person would have been a Non -official 
+member. 
+ 9.  Declaration of conflict of interest. - (1) If any member, Special Invitee or Non -
+official member has interest pertainin g to any matter which may be laid for discussion 
+before the Authority, such person shall make self -declaration to the Chairperson in such 
+format as may be prescribed in the rules. 
+(2) If the Chairperson is satisfied that such a person has an interest in th e matter 
+laid down for discussion before the Authority, the Chairperson shall direct such person to 
+abstain from participation on discussion of that matter. 
+10. Terms of working of the Authority. - (1) An ordinary meeting shall generally be 
+held at least twice every year. 
+(2) The Chairperson shall have the power to call for a special meeting as deemed 
+necessary. 
+(3) The minutes of the proceedings of each meeting shall be recorded in a book 
+maintained for the purpose or as an electronic record. 
+(4) The quorum  for a special or ordinary meeting shall be one third of the total 
+members of the Authority. 
+(5) All the issues arising before the Authority shall be decided by consensus in the 
+meetings of the Authority. 
+(6) All orders and decisions of the Authority shall  be authenticated by the Chief 
+Executive Officer or any other officer of the Authority duly authorized by the Authority.  
+11. Secretariat of the Authority. - (1) The Directorate of Urban Land Transport 
+shall be the secretariat of the Authority. 
+(2) The Commissioner of the Directorate of Urban Land Transport shall be the Chief 
+Executive Officer of the Authority. 
+12. Constitution of Executive Committee. - (1) The Authority shall constitute an 
+Executive Committee to assist in the discharge of its functions in the  manner as specified in 
+the regulations. The Executive Committee shall consist of the following members, namely: - 
+(a) The Chief Secretary to the State 
+Government 
+Ex-officio 
+Chairperson 
+(b) The Additional Chief Secretary or the Principal 
+Secretary to the State Government, Urban 
+Ex-officio Member 
+
+[page 11]
+Development 
+Department 
+(c) The Chief Commissioner, Bruhat Bengaluru 
+Mahanagara Palike 
+Ex-officio Member 
+(d) The Commissioner, Bangalore Development Authority Ex-officio Member 
+(e) The Commissioner, Bangalore Metropolitan Region 
+Development Authority 
+Ex-officio Member 
+(f) The Commissioner of Police, Bengaluru Ex-officio Member 
+(g) The Commissioner, Transport and Road Safety Ex-officio Member 
+(h) The Director, Department of Town and Country 
+Planning 
+Ex-officio Member 
+(i) The Managing Director, Bangalore Metro Rail 
+Corporation Limited 
+Ex-officio Member 
+(j) The Managing Director, Bengaluru Metropolitan Transport 
+Corporation 
+Ex-officio Member 
+(k) The Managing Director, Bengaluru Rail Infrastructure 
+Development Enterprises Limited 
+Ex-officio Member 
+(l) One non-official member of the Authority with expertise in 
+the field of urban mobility 
+Non-Official Member 
+(m) One non-official member of the Authority representing civil 
+society organizations working in the field of urban mobility 
+and allied areas 
+Non-Official Member 
+(n) One non -official member of the Authority representing 
+institutions or associations representing the private sector 
+and professional bodies 
+Non-Official Member 
+(o) One non -official member of the Authority representing
+ academic institutions, with 
+expertise in urban mobility 
+Non-Official Member 
+(p) The Chief Executive Officer of the Authority Ex-officio Member 
+Secretary 
+ 
+ (2) The Executive Committee may invite any other member of the  Authority or any 
+other expert as deemed necessary to participate in its deliberations. 
+ (3) All issues arising before the Executive Committee shall be decided by consensus 
+and in the event of no consensus being reached, the decision shall be taken by simp le 
+majority of the members present. 
+ (4) The Executive Committee shall meet at least once in each quarter. 
+(5) The procedure to be followed by the Executive Committee in discharging its 
+duties and all other matters including the allowances or fees for atte nding the meetings of 
+the Executive Committee shall be such as may be specified in the regulations.  
+ 
+13. Committees constituted by the Authority for specific subject matters. - (1) 
+The Authority may from time to time appoint committees consisting of such me mbers, as it 
+thinks fit and may associate with such committee in such manner and for such period as 
+required, any expert whose assistance or advice it may desire, and refer to such 
+committees for inquiry and report, any subject relating to the purposes of this Act. 
+ 
+(2) Every committee shall carry out the instructions given to it by the Authority and 
+every final decision of such committee shall, subject to any rule to the contrary, be laid 
+before the Authority for confirmation. 
+ 
+(3) The procedure to be foll owed by the committees and all other matters including 
+the allowances or fees for attending the meetings of the committee shall be such, as 
+specified in the regulations. 
+ 
+
+[page 12]
+CHAPTER IV 
+Duties, functions and powers of the Authority 
+ 
+14. Duties and functions of  the Authority. - (1) Notwithstanding anything 
+contained in any other law for the time being in force and without prejudice to the 
+foregoing power, the duties and functions of the Authority shall include the following, 
+namely:- 
+ 
+(a) Promote seamless mobility through sustainable urban transport and integration 
+of land use and transport planning in the Urban Mobility Region by causing to prepare 
+and update regularly, the Comprehensive Mobility Plan for the Urban Mobility Region;  
+(b) Review and approve the City Mobility Investment Program prepared in 
+accordance with the Comprehensive Mobility Plan; 
+(c) Put in place frameworks, regulations, and mechanisms to establish an effective 
+coordination mechanism, encompassing all strategic and  operational matters, among 
+various Urban Transport agencies, Infrastructure Development agencies and Traffic 
+Management agencies providing facilities and services in the Urban Mobility Region;  
+(d) Cause preparation of plans and implementation of travel d emand management 
+measures such as congestion pricing, parking regulations, tolling, special purpose lanes 
+etc. to regulate travel demand in the Urban Mobility Region; 
+(e) Adopt standards and guidelines issued by the State Government, Central 
+Government and  agencies there -under from time to time, with modifications, where 
+necessary or cause to develop and publish additional standards and guidelines relating to 
+Urban Mobility in Urban Mobility Region. The Urban Transport Agencies, Infrastructure 
+Development A gencies and Traffic Management Agencies shall be bound by such 
+standards issued by the Authority in implementation of the Urban Mobility projects 
+undertaken by them. Where no standards specified by the Authority, the Urban Transport 
+Agencies shall adopt th e existing standard and/or guidelines specified by the State 
+Government, Central Government, or agencies there -under them and in their absence, 
+follow the generally accepted industrial standards; 
+(f) Establish a fully operable monitoring, verification, rep orting and evaluation 
+framework to monitor the performance indicators and service level benchmarks, and to 
+ensure effective implementation of policies, plans, regulations related to Urban Mobility by 
+all concerned agencies; 
+(g) Develop detailed frameworks for financial arrangements between Urban Mobility 
+agencies in the Urban Mobility Region, for planning, project implementation and 
+integrated management of mobility and transport networks; 
+(h) Assign the development, construction, repair, operation, and man agement of 
+any integrated or stand -alone Urban Mobility facilities and services that aid and enhance 
+the efficiency or service levels of Urban Mobility in the Urban Mobility Region to the 
+concerned Urban Transport Agencies, Infrastructure Development Agenc ies and Traffic 
+Management Agencies; 
+ (i) Establish appropriate frameworks for engagement of private sector in planning, 
+development and management of mobility service delivery and effective contract execution 
+by the Urban Transport Agencies, Traffic Manag ement Agencies and Infrastructure 
+Development Agencies; 
+(j) Prepare norms for implementation of transportation projects on Public Private 
+Partnership framework or through other financing mechanisms or instruments;  
+ (k) Assist, aid, and advise the State Go vernment on Urban Mobility matters in the 
+Urban Mobility Region including, providing inputs for policy formulation for 
+comprehensive, integrated and efficient urban mobility in the Urban Mobility Region;  
+
+[page 13]
+(l) Recommend to the State Government on matters rel ating to implementation of 
+any policy measures, issuance of permits, registration of vehicles, operation of mobility 
+services, handling of goods, management of traffic flow, passenger movement or any other 
+matter relating to licensing issues pertaining to Urban Mobility. The State Government 
+may either through issuance of necessary directions to the concerned Urban Transport 
+Agencies as specified under section 56, implement such regulations or where such 
+recommendation requires any administrative measures t o be taken, take such necessary 
+measures; 
+(m) Review and provide feedback or implement any direction, order rules and 
+regulation, policy bye-laws, Notification issued by the State Government or any committee 
+or panel notified by the State Government, in respect of Urban Mobility; and 
+ (n) Ensure effective implementation of the provisions of this Act in the Urban 
+Mobility Region and perform such other functions and duties as may be prescribed.  
+(2) Notwithstanding anything contained in this section, the State  Government may, by 
+notification, add, omit, or assign any power, function and duty, which in its opinion, is 
+required to be exercised, performed and discharged for accomplishment of objects of the 
+Act. 
+ 15. Duties and Functions of the Executive Committee. -Notwithstanding 
+anything contained in any other law for the time being  in force, and in particular, and 
+without prejudice to the foregoing power, the Executive committee shall have the following 
+functions, namely:- 
+(a) assist the Authority in discharging any of its functions under this Act; 
+(b) oversee the  preparation  of  various  policies,  plans,  regulations, 
+schemes, and programmes under this Act; 
+(c) cause to implement rules, regulations, policies, directions, guidelines, 
+bye-laws, programmes, advisories, circ ulars issued by the State Government or 
+the Authority from time to time; and 
+(d) perform such functions and duties as the Authority may specify from 
+time to time for effective implementation of this Act in the Urban Mobility Region. 
+16. Duties and functions of  the Chief Executive Officer. -Notwithstanding 
+anything contained in any other law for the time being  in force, and without prejudice to 
+the foregoing  power,  the  Chief  Executive Officer shall discharge the following duties and 
+functions under the overall guidance and control of the Authority, namely:- 
+(a) ensure implementation of the decisions of the Authority; 
+(b) appoint officers, employees and supporting staff as specified in the 
+regulations and prepare and review as appropriate, performance related terms 
+and conditions of services for the employees; 
+(c) appoint consultants, professionals and experts, who are technically 
+qualified and have knowledge of and experience in transport planning, 
+management, operations, economics, finance, engineering, urban planning,  law, 
+business or such other disciplines related to Urban Mobility, as deemed 
+necessary to assist the Authority in discharge of its functions; 
+(d) prepare, update as required and ensure the implementation of the 
+Comprehensive Mobility Plan for the Urban Mobility Region; 
+(e) prepare the City Mobility Investment Program for the Urban Mobility 
+Region; 
+(f) ensure effective co -ordination encompassing all strategic and 
+operational matters, among various Urban Transport Agencies, Infrastructure 
+Development Agencies and Traffi c Management Agencies providing facilities and 
+services in the Urban Mobility Region in accordance with the frameworks, 
+regulations and mechanism, if any, approved by the Authority; 
+(g) ensure compliance to the standards either issued by the Central 
+Government, the State Government or the Authority, as the case may be, in the 
+
+[page 14]
+implementation of the Urban Mobility projects undertaken by the concerned 
+agencies; 
+(h) design, develop and publish performance indicators and service level 
+benchmarks, at least annu ally, for Urban Mobility within the Urban Mobility 
+Region; 
+(i) develop appropriate policies or standards for comprehensive, 
+integrated and efficient urban mobility in the Urban Mobility Region  and publish 
+the same for compliance by various public and private agencies associated with 
+provision of Urban mobility and related infrastructure and services, with the prior 
+approval of the Authority or the State Government as applicable; 
+(j) initiate, plan, prepare, assign or undertake implementation and 
+operations of Travel Demand Management measures to regulate travel demand in 
+the Urban Mobility Region; 
+(k) undertake effective communication and outreach campaigns to create 
+commuter awareness on use of sustainable urban transport, respecting the 
+rights of pedestrians and cycl ists, compliance to traffic norms or other matters 
+relating to Urban Mobility and ensure dissemination of relevant information by 
+all Urban Transport Agencies, Infrastructure Development Agencies and Traffic 
+Management Agencies, within the Urban Mobility Region; 
+(l) design, develop and implement protocols for sharing of both spatial and 
+non-spatial data and its collation from Urban Transport Agencies, Infrastructure 
+Development Agencies and Traffic Management Agencies, individuals or any other 
+agency generating , collecting or having information on any matters relating to 
+Urban Mobility and establish and maintain a central database and appropriate 
+analytical tools and/or appropriate intelligent transport systems to aid in taking 
+an informed decision on Urban Mobility issues; 
+(m) promote innovation and research in urban mobility by building 
+partnerships with the academic institutions, initiating or sponsoring research 
+studies either through the Authority or through separate entities set up for this 
+purpose by the Authority; and 
+(n) enhance technical and human resource capacity of the Authority’s 
+officials and staff on an annual basis. 
+(o) enter into agreement or tie -up or collaboration with other domestic or 
+international mobility management and land transport authorities or 
+organisations engaged in the functions similar to that of the Authority for the 
+purpose of sharing and transfer of knowledge, conducting research and skill 
+development programmes, etc.; 
+(p) proactively take up initiatives to improve quality of mobility 
+governance by establishing detailed institutional arrangements and 
+communication protocols between the Authority and the Urban Transport 
+Agencies; and 
+(q) such other functions and duties as the Authority may delegate or 
+specify from time to time. 
+ 
+ 17. Powers of   the Authority. - (1) Notwithstanding anything contained in any 
+other law for the time being in force, the Authority shall have the following powers, 
+namely:- 
+(a) accept, acquire, hold, surrender, transfer or re -convey security 
+(including security provided in a financing arrangement) of any kind in any form 
+whatsoever; 
+(b) borrow, lend, fund and/or facilitate financing of all Urban Mobility 
+related investment seeking funds managed by the Authority, for the 
+implementation of the projects, plans, schemes, and proposa ls included in the 
+
+[page 15]
+City Mobility Investment Program to ensure development of comprehensive, 
+integrated and planned Urban Mobility in the Urban Mobility Region; 
+(c) devise regulations, guidelines and provide guidance and input to all 
+Urban Transport Agencies, I nfrastructure Development Agencies and Traffic 
+Management Agencies on matters pertaining to data sharing, and data access 
+and intellectual property rights of data collated and shared; 
+(d) render advice or recommend for building sustainable operational 
+frameworks for Urban Mobility systems included in schedule; 
+(e) serve as the nodal agency for formulation of all policies, regulations, 
+rules, procedures, protocols for ensuring effective governance of integrated Urban 
+Mobility in the Urban Mobility Region; 
+ 
+(f) promote Urban Transport Agencies to achieve inter-modal integration, 
+including preparation of plans for physical, service and fare integration 
+components and ensure implementation of such plans; 
+(g) regulate new modes of Urban Mobility introduced by itself or any othe r 
+agency, which is not within the ambit of the Motor Vehicles Act, 1988 (Central 
+Act 59 of 1988) and take necessary measures in relation thereto; 
+(h) monitor and audit compliance of all programmes, policies, plans and 
+projects of all agencies related to Urban Mobility with the Comprehensive Mobility 
+Plan and the City Mobility Investment Program; 
+(i) monitor performance of the Urban Mobility system on parameters such 
+as safety, efficiency, suitability, etc. and submit a report to the State Government 
+at such intervals as may be specified in the regulations or as deemed necessary 
+by the State Government; 
+(j) recommend, monitor, and advise on levy, imposition, collection, 
+recovery of fees, charges for parking, Urban Mobility facilities and fares for 
+services of Urban Transport Agencies as may be notified time to time by relevant 
+authorities; 
+(k) monitor the use of funds for Urban Mobility and ensure audit of 
+accounts and loans; 
+(l) devise, oversee, and ensure co -ordinated enforcement of all 
+mechanisms relating to traffic and  Urban   Mobility  matters  in  consultation 
+with concerned authorities to promote safety guidelines, including vehicular, 
+pedestrian and road safety, with respect to Urban Mobility for the Urban Mobility 
+Region as may be prescribed; 
+(m) initiate shared programmes fo r augmenting human resource and 
+technical capacities of all public agencies related to Urban Mobility; 
+(n) mandate and co -ordinate sharing of data in such manner and format 
+as specified in regulations by the Urban Transport Agencies, Infrastructure 
+Development Agencies and Traffic Management Agencies, aggregators, 
+individuals, or any other agencies generating, collecting, or having information on 
+any matters relating to Urban Mobility services; 
+(o) ensure enforcement of regulations made under this Act; and 
+(p) such other powers as may be prescribed by rules. 
+ 
+(2) Subject to the other provisions of this Act, the exercise of powers by the 
+Authority under sub -section (1) shall override any rule, regulation, order, direction, 
+notification, or any other action under any law made by the State Legislature for time 
+being in force, that are inconsistent with such exercise of powers by the Authority.  
+
+[page 16]
+18. Power to give directions to urban transport agencies, infrastructure 
+development agencies and traffic management agencies. - (1) To ensure effective 
+implementation of the objects and purposes of this Act, notwithstanding anything 
+contained in any other law for the time being in force, the Authority may give such 
+directions with regard to the implementation of any Urban Mobility serv ice or 
+infrastructure project within the Urban Mobility Region, as it may deem fit, to the relevant 
+agencies responsible for providing the urban mobility and related infrastructure. Such 
+directions shall be binding on such agencies and departments under th e urban local 
+bodies and State Government and shall override any contrary or conflicting order, 
+direction issued by any such agencies and departments. 
+(2) The authority may take such measures as it may deem appropriate to 
+ensure implementation of the plans approved by the Authority. 
+19. Power to approve major Urban Transport projects. - (1) The Authority shall 
+have power to approve all major Urban Transport projects proposed for or in the Urban 
+Mobility Region to be developed by the Urban Transport Agencies, Inf rastructure 
+Development Agencies and Traffic Management Agencies or any other agencies under the 
+State Government or any local Government agency, from the perspective of consistency 
+with the Comprehensive Mobility Plan and in a time bound manner as specifi ed in the 
+regulations. 
+(2) No authority, agency, department under the State Government shall 
+initiate any public, private or public -private partnership project concerning 
+Urban Mobility without obtaining prior approval of the Authority. The Approval of 
+the Authority shall be necessary to seek any financial assistance from the State 
+Government including the regular budgetary allocations, any external aided 
+funding as well as the Central Government sponsored funding. 
+(3) Upon receipt of request under sub -section (1) for approval of any 
+project, the Authority shall undertake such inquiry as required and may grant or 
+reject such request as specified under regulations: 
+Provided that, the Authority shall have the power to issue certain conditions while 
+granting approval to a request. 
+(4) In case any person or authority does anything contrary to the decision 
+given under sub-section (3) or in the absence of the approval of the Authority, the 
+Authority shall direct such agencies to pull down, demolish or remove any 
+development un dertaken contrary to such decision or approval and such 
+agencies shall recover the cost of such pulling down, demolition or removal from 
+the person or the authority concerned. 
+ 
+CHAPTER - V 
+Preparation of policies and Comprehensive Mobility Plan 
+ 
+20. Preparation of policies. - (1) The Authority shall prepare and 
+implement the following policies in connection with Urban Mobility and shall 
+update periodically the existing policies on Urban Mobility in consultation with 
+the Urban Transport Agencies, Urban Local Bodies, Traffic Management 
+Agencies, Urban Development Department, etc. All such policies shall be placed 
+in public domain for public feedback before finalized,- 
+(a) Parking policy; 
+(b) Non-motorised transport policy; 
+(c) Transit-oriented development policy; 
+(d) Multi-modal Integration policy; and 
+(e) Freight Transport policy. 
+ 
+(2) The Authority may take up preparation of such other urban mobility policies as 
+deemed necessary. 
+
+[page 17]
+21. Preparation of Comprehensive Mobility Plan. - (1) The Authority 
+shall notify its intent to prepare a Comprehensive Mobility  Plan  in  such manner 
+and form as specified by regulations. 
+ 
+(2) The Authority shall cause to prepare a Comprehensive Mobility Plan for 
+the Urban Mobility Region within two years from the date of its intent to prepare 
+a Comprehensive Mobility Plan to ensure integrated, comprehensive and planned 
+development of Urban Mobility in the Urban Mobility Region, in conjunction with 
+various Urban Mobility policies prepared under section 20 and the land use plan 
+applicable to the Urban Mo bility Region. Such plan shall include but not be 
+limited to the following, namely:- 
+(a) Integration of social, economic, and spatial development policies and 
+plans to advance sustainable urban transport; 
+(b) Various types of infrastructure, facilities, and other works; 
+(c) complete road network in the city (preferably converging at one sq. km. 
+grid); 
+(d) existing and proposed route plans of public transport; 
+(e) hierarchy of roads (local, collectors, sub arterial, arterials and urban 
+high ways) established based on travel demand; 
+(f) standards governing the roads of all levels of hierarchy; 
+(g) pedestrian path, cycle tracks, drains (within the public road) and the 
+standards governing them; 
+(h) accessible mobility and transport for persons who are persons with 
+benchmark disability and p erson with disability as defined under the Rights of 
+persons with Disabilities Act, 2016 (Central Act 49 of 2016); 
+(i) various public transport systems and services; 
+(j) procedures and processes to resolve any issues in relation to any 
+existing urban mobility services being operated; 
+(k) mechanisms that will govern the implementation of such plans to 
+achieve the objects and purpose of this Act; 
+(l) the City Mobility Investment Program comprising of the Sectoral  
+Mobility Investment Programs submitted by the relevant Urban Transport 
+Agencies, Infrastructure Development Agencies and Traffic Management Agencies 
+as specified in the regulations; and 
+(m) such other matters that may be necessary for the development and 
+implementation of such plans: 
+ 
+Provided that, in the event there is any other authority and/or committee 
+constituted under any other law for the time being in force to formulate, develop or 
+implement any plan or scheme in relation to Urban Mobility within the Urban Mobility 
+Region, the Authority shall discharge its functions under this section and any other 
+authority shall necessarily consult the Authority and take its suggestions and inputs into 
+account in the discharge of its functions. The plans so developed  by any other authority 
+and/or committee shall be in compliance with the Urban Mobility policies of the Authority:  
+ 
+Provided further that, prior to constitution of this Authority, if a Comprehensive 
+Mobility Plan has already been approved by the Government , the Authority shall, if 
+necessary, undertake the responsibility of any modification or revision of such 
+Comprehensive Mobility Plan and implement it in accordance with the Act.  
+(3) Before finalizing any plan as under this Act, the Authority shall cause 
+to pu blish a draft plan by making a copy thereof available for inspection and 
+publishing a notice in such form and manner as specified in the regulations, 
+inviting objections and suggestions from any person with respect to the draft plan 
+before such date as may  be specified in the notice, subject to a maximum period 
+
+[page 18]
+of two months from the date of publication of the notice. The Authority shall after 
+adequate opportunity, as deemed appropriate, to the concerned person and after 
+considering such suggestions, objections, and representations, if any, finalize the 
+draft plan. 
+(4) After finalization of the plan based on objections/suggestions received, 
+the Authority shall submit such plan to the State Government for its approval 
+and the State Government may approve the plan with or without modifications as 
+in its opinion are necessary or reject the plan, with such directions to the 
+Authority to prepare a new plan based on the recommendation issued by the 
+State Government in relation thereof. 
+(5) The Authority shall publish the p lans approved by the State 
+Government as specified in sub-section (4), not later than two years from the date 
+of notification of the intent to prepare a Comprehensive Mobility Plan under sub -
+section (2). 
+(6) The Authority may suo -moto or on the direction of th e State 
+Government cause to review the existing Comprehensive Mobility Plan whenever, 
+in its opinion, it has become necessary and expedient to do so in public interest. 
+ 
+22. Integration of land -use and transport planning in the 
+preparation of Master Plan.- (1) The Planning Authority  in  the  Urban Mobility 
+Region shall prepare the land use plan as part of preparation or revision of 
+Master Plan of the city or local planning area by taking into consideration the 
+Comprehensive Mobility Plan in its entirety. 
+ 
+(2) The Planning Authority shall necessarily consult the Authority during 
+the preparation or revision of the Master Plan. 
+(3) In case the Authority deems it appropriate to suggest modifications in 
+the Master Plan prepared by the Planning Authority, with a view to achieve land 
+use and transport integration, it shall forward the suggested changes to the 
+concerned Planning Authority for inclusion in the Master Plan.  The suggestions, 
+if any, made by the Authority shall be duly considered and incorporated in the 
+draft of the Master Plan and the draft of the Master Plan shall be sent to the 
+Authority for its concurrence. Where such sug gestions are not incorporated 
+mutatis mutandis, the planning authority shall provide a detailed explanation 
+with the reasons for the same. 
+ 
+(4) The Authority shall communicate its concurrence or otherwise along 
+with its considered opinion to the Planning Autho rity and the State Government 
+within the time as may be specified. 
+23. Revision of Comprehensive Mobility Plan. - At least once in every 
+five years, the Authority shall cause to revise and publish the Comprehensive 
+Mobility Plan and the provisions of section 21  shall mutatis mutandis apply in 
+respect of each such revision of the Comprehensive Mobility Plan: 
+ 
+Provided that, in case the Master Plan for the Urban Mobility Region or parts of 
+Urban Mobility Region are taken up for revision, the Comprehensive Mobility  Plan may 
+also be revised concurrently even amid a five-year cycle. 
+ 
+CHAPTER - VI 
+Sectoral and City Mobility Investment Program and Annual Implementation Plan  
+ 
+24. Preparation and approval of Sectoral  Mobility Investment 
+Program and City Mobility Investment Program.- In order to achieve the goals 
+of the Comprehensive Mobility Plan and to  plan  for  financing  the projects 
+
+[page 19]
+proposed in the Comprehensive Mobility Plan, the Authority shall prepare the 
+City Mobility Investment Program comprising of the Sectoral Mobility Investment 
+Program of the relevant Urban Transport Agencies, Infrastructure Development 
+Agencies and Traffic Management Agencies as specified in the regulations to be 
+implemented in the Urban Mobility Region as below:- 
+(a) The Sectoral Mobility Investment Program shall be aligned with the 
+goals of the Comprehensive Mobility Plan; 
+(b) The Sectoral Mobility Investment Program shall be prepared in 
+consultation with the Authority; 
+(c) The Sectoral Mobility Investment Programs shall be incorporated by the 
+Authority with or without modification in the City Mobility Investment Program; 
+(d) The City Mobility Investment Program shall be for short to medium 
+term planning horizon towards achieving the objects of Compreh ensive Mobility 
+Plan; and 
+(e) The City Mobility Investment Program shall be part of the 
+Comprehensive Mobility Plan. 
+25. Preparation and approval of Annual Implementation Plan. - (1) 
+Based on the City Mobility Investment Program and  respective Sectoral  Mobility 
+Investment Programs, the Urban Transport Agencies, Infrastructure Development 
+Agencies and Traffic Management Agencies shall prepare the Annual 
+Implementation Plan at the beginning of each year in the format as specified in 
+the regulations. The A nnual Implementation Plan shall comprise of the following 
+components, namely:- 
+(a) The list and spatial mapping of new projects and ongoing projects to be 
+taken up in the current financial year along with completion schedule, in the 
+order of priority set forth in the City Mobility Investment Program; 
+(b) Yearly expenditure estimates and the sources of funding for each of the 
+projects to be taken up in the current financial year; and 
+(c) List of additional projects proposed to be taken up and which were not 
+part of the approved City Mobility Investment Program, along with the sources of 
+funding and justification for inclusion of such projects in the City Mobility 
+Investment Program. These additional projects shall align with the 
+Comprehensive Mobility Plan goals and promote sustainable urban transport. 
+(2) The Authority shall review and approve the Annual Implementation Plan 
+prepared and submitted by the Urban Transport Agencies, Infrastructure Development 
+Agencies and Traffic Management Agencies, with or without modifica tions, within the time 
+frame as may be prescribed in the rules. 
+26. Revision of City Mobility Investment Program.- The Authority shall 
+review and make necessary revisions to the City Mobility Investment Program 
+once a year, taking into consideration the newly approved projects under the 
+Annual Implementation Plans, delays in implementation of any project or any 
+other circumstances etc. Such revision undertaken shall be binding on the Urban 
+Transport Agencies, Infrastructure Development Agencies and Traffic 
+Management Agencies. The Authority shall submit the revised City Mobility 
+Investment Program to the State Government for information. 
+27. Works of Urgent Nature. - (1) The Urban Transport Agencies, 
+Infrastructure Development Agencies and Traffic Management Agencies may take 
+up works which are not part of City Mobility Investment Program or the Annual 
+Implementation Plan, only if such works are of urgent in nature. In such cases, 
+they shall comply with the standards specified by the Authority in taking up such 
+works and in case of any deviation from the standards, the justification for the 
+same shall be provided. 
+
+[page 20]
+(2) Where the Urban Transport Agencies, Infrastructure Development Agencies 
+and Traffic Management Agencies takes up any work under sub -section (1), it shall  
+intimate the same to the Authority before commencement of the work and shall file a 
+detailed report with justification for taking up the work urgently and its compliance with 
+the standards specified by the Authority, within thirty days from the date of 
+commencement of such work: 
+ 
+Provided that, if the justification for taking such work in urgency or deviating from 
+the standards specified by the Authority provided by the Urban Transport Agencies, 
+Infrastructure Development Agencies and Traffic Management Ag encies is not to the 
+satisfaction of the Authority, the Authority shall direct them to modify or reconstruct the 
+work as per the specified standards or to remove such works. 
+ 
+CHAPTER - VII 
+TRAFFIC MANAGEMENT PLAN 
+ 
+28. Traffic Management Plan.- (1) The Authority shall  prepare  or cause 
+to be prepared a Traffic  Management  Plan,  at  least once  a  year,  with the 
+Traffic Management Agencies, consisting of following components in accordance 
+with the regulations, if any, specified by the Authority, namely:- 
+(a) detailed traffic flow plan for the road networks within Urban Mobility 
+Region including restrictions on the flow or movement of certain types of vehicles 
+like freight vehicles, vehicles of construction purpose etc., traffic calming 
+measures including partial o r full closure of  streets  to  motorized traffic or 
+regulation of movement of vehicles during certain hours of the day, Traffic 
+management plans for special occasions, incident management plan, emergency 
+evacuation plans etc.; 
+(b) signal phase optimization plans to ensure seamless  mobility  of people 
+including differently abled, senior citizens and children; 
+(c) corridor based and area -based traffic management plans for corridors 
+or areas indicated by the Authority; 
+(d) enforcement plan consisting of human resource s, devises, equipment 
+and vehicles and Information Technology systems; and 
+(e) Parking Management plans for the whole or parts of Urban Mobility 
+Region. 
+(2) The Traffic Management Plan approved by the Authority shall be 
+adhered to by all the Traffic Management Agencies without any deviation. 
+(3) The Authority and Traffic Management Agencies shall take efforts to 
+use information technology for efficient enforcement mechanisms. 
+(4) In case of need to make any changes in the Traffic Management Plan 
+depending on the local situation, the same may be made by the Traffic 
+Management Agencies but such changes shall be recorded and weekly report of 
+such changes and deviations made shall be submitted by Traffic Management 
+Agencies concerned. 
+(5) If such deviations or changes, with jus tifications, in traffic 
+management plan are necessitated on continuous basis, then Traffic 
+Management Plan shall be modified accommodating such changes by the 
+respective agencies. 
+(6) Traffic management plans and amendments to them shall be widely 
+disseminated by the concerned Traffic Management Agencies for the information 
+of general public. 
+ 
+CHAPTER – VIII 
+CONTRACTS 
+ 
+29. Mode of executing contracts on behalf of the Authority. - (1) Every 
+
+[page 21]
+contract shall, on behalf of the Authority, be made by the Chief Executive Of ficer 
+or any other officer of the Authority as may be generally or specially empowered 
+in this behalf by the Authority and such contractor class of contracts, as 
+specified in the regulations shall be sealed with the common seal of the 
+Authority: 
+ 
+Provided that, no contract exceeding such value or amount as the State 
+Government may specify in this behalf shall be made, unless it has been previously 
+approved by the State Government. 
+(2) Subject to the provisions of sub -section (1), the form and manner in 
+which any contracts shall be made under this Act shall be as specified by 
+regulations. 
+ 
+(3) No contract which is not in accordance with the provisions of this Act 
+and rules and regulations made there-under shall be binding on the Authority. 
+ 
+CHAPTER  -  IX 
+FINANCE, ACCOUNTS AND AUDIT 
+ 
+30. Fund of the Authority. - (1) The Authority shall establish a 
+Bengaluru Metropolitan Land Transport Authority Fund for the purposes of 
+implementation of provisions of the Act and shall comprise the following, 
+namely:- 
+(a) Portion of funds from the Central Government allocations as under 
+shall be deposited in the Fund Account: 
+(i) part of the proceeds accruing to the National Investment Fund and 
+allocated for use, specifically in the development of urban mobility 
+projects and such other proceeds  from the Finance Commission of 
+India, as received by the State Government and as decided by the State 
+Government; and 
+(ii) part of any grant and fund received through allocations (including 
+budgetary allocations) by the Central Government, as decided by the 
+State Government. 
+(b) Part of any grant and fund received through allocations (including 
+budgetary allocations) from the State Government; 
+(c) Revenue collected from the following sources shall be deposited in the 
+Bengaluru Metropolitan Land Transport Authority Fund account: 
+(i) part of the proceeds collected on account of cess called Green Tax, 
+wherein Green Tax means a tax levied on vehicles to control air pollution, as 
+notified by the State Government under the Karnataka Motor Vehicles Taxation 
+Act 1957, the Motor Vehicles Act, 1988 or its amendments, as the case may be; 
+(ii) part of the proceeds, as notified by the State Government, from 
+advertisement charges, additional registration charges, congestion tax, 
+betterment charges, multipurpose smart cards for ticketing, devel opment 
+charges, parking charges, premium Floor Area Ratio charges, additional cess on 
+petrol and diesel, conversion fee on existing land use and additional fees on 
+registration fees on all property transfers which take place along the influence 
+area of transit-oriented development within the Urban Mobility Region; 
+(iii) part of the proceeds from any tax/cess/surcharges or similar levies 
+notified by the State Government with a view for betterment of Urban Mobility 
+systems (including transport vehicles, infrastructure, and services) and directed 
+to be credited to the Fund; 
+(iv) part of the proceeds from any tax / cess / surcharges or similar levies 
+
+[page 22]
+notified by the State Government for any Urban Mobility infrastructure 
+development related matters leading to enhancement of land-value; 
+(v) any aid, bequest, subsidy, donation, gift, subscription, loan or other 
+sums lawfully received; 
+(vi)  all interests, profits and other moneys accruing to or borrowed by the 
+Authority for the purpose of this Act; and 
+(vii) All money received by or on behalf of the Authority by virtue of this 
+Act. 
+(d) All the money and receipts received by the Urban Transport Agencies 
+dealing with Urban Mobility service, facilities and infrastructure, from the Central 
+Government, State Government, by way of budgetary allocations  or grant or 
+transfer or loan and funds from external  funding  agencies  or  any other sources 
+as may be notified by  the  State Government from time to time and the same 
+may be released by the Authority to the agency concerned as per the City Mobility 
+Investment Program, Sectoral Mobility Investment Program and Annual 
+Implementation Plan. 
+ 
+(2) The State Government shall constitute a seed fund along with the 
+establishment of the Authority and shall, every year make a grant to the 
+Authority at least  of a sum equivalent to the administrative expenses of the 
+Authority till the Authority is able to meet its administrative expenses out of its 
+own resources. 
+(3) Except as otherwise directed by the State Government, all the money 
+and receipts specified in the foregoing provisions and forming part of the Fund 
+shall be deposited in any scheduled bank as defined in the Reserve Bank of India 
+Act, 1934 (Central Act 2 of 1934) or invested in such securities as may be 
+approved by the State Government. 
+ 
+(4) The amount form ing part of the Fund, except those received under 
+clause (d) of sub -section (1), shall be subject to the provisions of and for the 
+purposes of this Act, be utilized for meeting the following, namely:- 
+(a) expenses of the Authority in the discharge of its funct ions having 
+regard to the purposes for which such grants, loans or borrowings are 
+received and for matters connected there with or incidental thereto; 
+(b) salary, allowances, other remuneration and facilities provided to the 
+members, officers and other employees of the Authority; 
+(c) any expenses lawfully incurred by it, including legal, survey and other 
+fees and costs; 
+(d) any recurring expenditure towards technical and human resource 
+capacity building of staff of the Authority; and 
+(e) expenses on objects and purposes authorized under the Act. 
+ 
+(5) A part of the proceeds received in the B engaluru Metropolitan Land 
+Transport Authority Fund , as decided by the Authority, shall be utilized for 
+providing financial assistance to the concerned Urban Transp ort Agencies, 
+Infrastructure Development Agencies and Traffic Management Agencies for the 
+purpose for which such amount is earmarked as per the City Mobility Investment 
+Program, Sectoral Mobility Investment Program and Annual Implementation Plan, 
+in the manner and subject to conditions applicable thereto. 
+(6) The Authority shall create separate sub -funds in respect of the 
+amounts received under clause (d) of sub -section (1) and as required to ensure 
+that the objects and the purpose of this Act achieved in an effective manner. 
+(7) The Authority may create sub -funds as required to ensure that the 
+
+[page 23]
+objects and purpose of this Act achieved in an effective manner. 
+(8) The Authority shall leverage Corporate Social Responsibility Funds 
+and/or implement projects in partnership with non-Governmental Organisations. 
+(9) The Authority shall carry out the management of the Fund either on its 
+own or through an authorized representative. 
+(10) The Authority shall formulate institutional arrangements including 
+regulations, procedures and protocols for effective administration and 
+management of funds. 
+31. Grants and loans by the Government and other entities. - 
+The Central Government or the State Government or other entities may make 
+such grant, contribution, aid, assistance, advance and loan to the Authority 
+as may be deemed necessary for the performance of its functions under this 
+Act and all such grant, contribution, aid, assistance, advance and  loan so 
+made shall be on such terms and conditions, as may be determined by the 
+Government or entity making the grant, contribution, aid, assistance, 
+advance and loan. 
+32. Power of the Authority to lend. - The Authority may make 
+such grants, advances and loans  to any agency engaged dealing in Urban 
+Mobility, within the Urban Mobility Region as may be deemed necessary and 
+all grants, loans and advances so made shall be on such terms and 
+conditions, as may be determined by the Authority making grants, advances 
+or loans. 
+33. Power of the Authority to raise finances and borrow. - (1) 
+Subject to previous sanction of the State Government and such other terms 
+and conditions as may be specified, the Authority may, from time to time, 
+raise finances or borrow money required fo r the purposes of this Act through 
+loans or debentures or issuing bonds or any other financial instrument from 
+sources other than the State Government and the Central Government. 
+(2) Loans borrowed and debentures issued under this section shall be 
+guaranteed by the State Government as to the repayment of principal and the 
+payment of interest at such rate as may be fixed by the State Government. 
+(3) The Authority shall be competent to mortgage or create charge by the 
+way of security on any of its properties or asse ts for loan obtained under this 
+section. 
+34. Sinking fund. - (1) The Authority shall maintain a sinking 
+fund for re -payment of amount borrowed by it and shall deposit into the 
+sinking fund every year, such sum as may be sufficient for re -payment  
+within the period fixed for the amount so borrowed. 
+(2) The sinking fund or part thereof shall be applied in or towards the discharge of 
+the loan for which such fund was credited and until such loan is wholly discharged, it 
+shall not be applied for any other purpose. 
+35. Budget of the Authority. - (1) The Authority shall, by such 
+date in each year, as may be prescribed, prepare and submit to the State 
+Government for the next financial year, showing the estimated receipts and 
+expenditure of the Authority during that financial year in such form as may 
+be prescribed. 
+(2) The budget prepared by the Authority, in so far as it does not require any 
+revenue contribution from the State Government, shall be final and shall be adopted by 
+the Authority without the need for any prior appro val of the State Government. However, 
+the budget prepared by the Authority, to the extent that it requires any revenue 
+contribution from the State Government, shall be subject to the final approval from the 
+State Government and shall be subject to such cha nge or terms and conditions as the 
+State Government may propose in this regard. 
+36. Annual report.- (1) The Authority shall prepare for every year, 
+
+[page 24]
+a report of its activities during the year and submit the report to the State 
+Government, in such form, on or before such date as may be prescribed. 
+(2) The Authority shall, at the end of each financial year, submit an 
+audited annual statement to the State Government including, but not limited to 
+the following, namely:- 
+(i) Amount of debt or loan raised; 
+(ii) Details of the investment made during the year; 
+(iii) Mode of repayment of the debt or loan raised, including the amount 
+that has been earmarked for the Sinking Fund; 
+(iv) Amount of securities that have been created or raised; and 
+(v) Any other matter specified by the State Government. 
+ 
+(3) The State Government shall lay the annual report with compliance 
+before each House of the State Legislation. 
+37.  Accounts and audit.- (1) The Authority shall maintain proper 
+books of accounts, annual statement of accounts and such other books as 
+may be prescribed. 
+(2) The accounts of the Authority shall be subject to an annual audit by 
+the Accountant General of the State and any expenditure incurred by the 
+Accountant General in connection with such audit shall be payable by the 
+Authority. 
+(3) The Accountant General or any person appointed by him in connection 
+with the audit of accounts of the Authority shall have the same right, privilege, 
+and authority in connection with such audit as the Accountant General has in 
+connection with the audit of the Government acco unts and in particular shall 
+have the right to demand the production of books, accounts, connected vouchers 
+and other documents and papers. 
+(4) A copy of the audit report shall be submitted to the State Government, 
+the Authority and any other relevant person o r authority specified by the State 
+Government. 
+(5) The State Government shall lay the accounts and audit report with 
+compliance before each House of the State Legislation. 
+38. Returns.- The Authority shall furnish to the State Government such 
+reports, returns and other information as the State Government may, from time to 
+time require. 
+ 
+CHAPTER - X 
+OFFENCES AND PENALTIES 
+ 
+39. Penalty for failure to comply with rules, regulations, orders and 
+directions of the Authority. - If any person fails to comply with the rules, 
+regulations, orders or directions of the Authority, the person shall be punishable 
+with fine which may extend up to one lakh rupees and for a second or 
+subsequent violation or non -compliance with fine which may extend up to two 
+lakh rupees and in the case of continuing violation or non -compliance with 
+additional fine which may extend up to five thousand rupees for every day during 
+which the violation or noncompliance continues. 
+ 
+40. Failure by the State Government departments or agencies. - (1) 
+Where violation under this Act is committed by any department or agency of the 
+State Government, the head of the department or agency shall deemed to be 
+guilty of the offence and shall be liable to be proceeded against and punished 
+accordingly: 
+
+[page 25]
+ 
+Provided that, nothing contained in this section shall render such head of the 
+department or agency liable to any punishment, if the person proves that the offence was 
+committed without the person’s knowledge or that the person exercised all due diligence 
+to prevent such offence. 
+ 
+(2) Notwithstanding anything contained in sub-section (1), where an offence under 
+this Act has been committed by a department or agency of the State Government and it is 
+proved that the offence has been committed with the consent or connivance of or is 
+attributable to any neglect on the part of any officer other than the head of the 
+department or agency, such officer shall be deemed to be guilty of that offence and shall 
+be liable to be proceeded against and punished accordingly. 
+41. Offences by companies. - (1) If the person committing a default or 
+contravention under this Act is a company, every  person,  who,  at  the  time 
+such default or contravention occurred, was in -charge of and was responsible for 
+the conduct of the business of the company, as well as  the company, shall be 
+deemed liable for the default or contravention and shall be liable to be proceeded 
+against and punished accordingly: 
+Provided that, nothing contained in this sub -section shall render any such person 
+liable to any punishment provided under this Act, if he proves that the default or 
+contravention was committed without his knowledge or that he exercised all due diligence 
+to prevent the commission of such default or contravention. 
+ 
+(2) Notwithstanding anything contained in sub -section (1), where an offence under 
+this Act has been committed by a company and it is proved that the offence has been 
+committed with the consent or connivance of or it is attributable to any neglect on the part 
+of  any  director,  manager,  secretary, such director , manager, secretary or other officer 
+shall be deemed to be guilty of that offence and shall be liable to be proceeded against and 
+punished accordingly. 
+Explanation: For the purpose of this section,- 
+(a) "company" shall mean a body corporate and includes a firm or other 
+association of individuals; and 
+(b) "director" shall include director of a company and in relation to a 
+partnership firm shall mean partner in the firm. 
+ 
+42. Fines when realized to be vested with the Authority.-The proceeds 
+of all fines realized in connection with this Act shall vest in the Authority with a 
+right to appropriate such realized fine, as may be prescribed. 
+43. Penalties not to affect other liabilities. - The penalties imposed 
+under this Act shall be in addition to and not in derogation of any  liability in 
+respect of payment of compensation, which the offender may have incurred, under 
+any other provisions of any other Act. 
+44. Cognizance of offences. - No court shall take cognizance of any 
+offence punishable under this Act or rules or regulations ma de there-under, save 
+on a complaint made by the State Government or the Authority. 
+45. Chapter to have effect in addition to other Acts. - The provisions of 
+this chapter shall be in addition to and not in derogation of the provisions in any 
+other law, for the time being in force. 
+ 
+CHAPTER - XI 
+MISCELLANEOUS 
+46. Delegation of powers. - The Authority may, by notification in the 
+official Gazette, declare that any power exercisable by it or any of its officers under 
+this Act, except the power to make rules, under section  53 and power to make 
+regulations under section 54, may also be exercised by such officer of the 
+Authority as specified therein in such cases and subject to such conditions, if any, 
+
+[page 26]
+as may be specified therein. 
+ 
+47. Notice of suit against the Authority. - (1) N o suit or other 
+proceedings shall be instituted against the Authority or any member or any 
+employee of the Authority or against any person acting under the direction of the 
+Authority, the member or officer of the Authority for anything done or purporting 
+to have been done in pursuance of the Act or rules, regulations or  bye -law made 
+there under, without giving notice in writing to the Authority, before two months 
+of the intended suit or other proceedings and of the cause thereof nor after six 
+months from the accrual of the cause of such suit or other proceedings nor after 
+tender of sufficient amends. 
+(2) A suit to  obtain an urgent or immediate  relief against  the  Authority 
+or any member or any officer or employee of the Authority in respect of any act 
+done or purporting to be done by such officer or servant in his official capacity 
+may be instituted with the leave of the Court, without serving any notice as 
+required by sub-section (1) but the Court shall not grant relief in the suit whether 
+inter-alia or othe rwise except after giving to the Authority, officer or servant, as 
+the case may be, a reasonable opportunity of showing cause in respect of relief 
+prayed for in the suit: 
+Provided that, the Court shall, if it is satisfied after hearing the parties that no 
+urgent or immediate relief need be granted in the suit, return the plaint for presentation to 
+it after complying with requirements of sub-section(1). 
+(3) No suit as described in sub -section (1) shall be instituted after the 
+expiry of six months from the date o n which the cause of action arises, unless it 
+is a suit for recovery of immovable property or for a declaration of title thereto. 
+(4) Nothing contained in sub-section (1) shall be deemed to apply to a suit 
+in which the only relief claimed is an injunction of which the object would be 
+defeated by giving of the notice or the postponements of the institution of the 
+suit. 
+48. Restriction on execution.- No execution or attachment process shall 
+be issued against any Urban Mobility work or any property vested in the 
+Authority. 
+49. Service of notice etc. - Every notice or other document required by 
+this Act or any rules or regulations made there -under shall be signed by the Chief 
+Executive Officer with his common seal and shall  be  deemed  to  have been duly 
+served upon the party or parties concerned if the service has been effected in any 
+one of the following manners, namely:- 
+(i) by personal service; 
+(ii) by registered post; 
+(iii) by affixing it at the house or principal place of business of the party 
+concerned as the case may be; and 
+(iv) by pu blication in widely circulating one prominent Kannada and 
+English daily news-paper within the jurisdiction area of the Authority, 
+in their two consecutive issues; or 
+(v) by electronic communication like e-mail: 
+ 
+Provided that, in case where the party to be served is a registered company, a 
+partnership firm, a body corporate, a local authority, a society or other body, the notice 
+shall be served upon the principal officer of the said firm or organization as determi ned by 
+the Chief Executive Officer in his discretion and it shall then be deemed to have been duly 
+served on each director or partner or member of the said firm or organization. 
+Provided further that, in case the party to be served is a minor or a lunatic,  it shall 
+be served upon his guardian as determined by the Chief Executive Officer in his discretion.  
+50. Public notice.- Every public notice given under this Act shall be in 
+writing under the signature of the Chief Executive Officer with his common seal 
+
+[page 27]
+and shall be caused to be widely known in the locality affected thereby, affixing 
+copies at conspicuous public places within the said locality and by publishing the 
+same in one prominent Kannada and English daily news paper, having circulation 
+in the Urban Mobi lity Region, in their two consecutive issues. Such public notice 
+shall also be published on the official website and social media of the Authority. 
+51. To fix reasonable time for notice, etc. - Where any notice, order or 
+other document issued or made under this  Act or any rules or regulations made 
+there-under requires anything to be done, for the doing of which no time has been 
+fixed in this Act or the rules or regulations made thereunder, the notice, order or 
+other document shall specify a time of not less than one week for doing the same. 
+ 
+52. Authentication.- All permissions, orders, decisions, notices and 
+other documents of the Authority shall be authenticated by the signature of the 
+Chief Executive Officer or any other officer authorized by the Authority in this  
+behalf. 
+53. Power to make rules.- (1) The State Government may, after previous 
+publication by notification in the official Gazette, make rules for the purpose of 
+carrying in to effect the provisions of this Act. 
+(2) In particular and without prejudice to the gene rality of the foregoing 
+power, such rules may provide for all or any of the following matters namely:- 
+(a) allowances payable to non-official members under section 7; 
+(b) prescribe the form of declaration  of conflict of interest under section 9; 
+(c) the procedure to be followed for borrowing money by way of loans or 
+debenture and their repayment under sub-section (1) of section 33; 
+(d) the form of the budget of the Authority and the manner of preparing 
+the same under sub-section (1) of section 35; 
+(e) the form of the annual report and the date on or before which it shall be 
+submitted to the State Government under sub -section  (1)  of section 
+36; 
+(f) the form of the balance -sheet and statement of accounts under sub -
+section(1) of section 37; 
+(g) the form of the audit report and the dat e on or before which it shall be 
+submitted to the State Government under sub -section  (4)  of section 
+37; 
+(h) fine to be levied for failure to comply with the provisions; and 
+(i) other matters which are, or may be, prescribed under this Act. 
+ 
+(3) Every rule made under this Act shall be laid, as soon as may be after it 
+is made, before the Legislature of the State, while it is in session, immediately 
+following for a total period of fourteen days, which may be comprised in one 
+session or in two successive sessions, and if , before the expiration of the session 
+in which it is so laid or the session immediately following the Legislature making 
+any modification in the rule or decides that the rule should not be made, the rule 
+shall thereafter have effect only in such modified form or stand annulled, as the 
+case may be;  so  however,  that  any such modification or annulment shall be 
+without prejudice to the validity of anything previously done under that rule. 
+54. Power to make regulations and procedures.- (1) The Authority may, 
+by notification, make regulations, procedures and protocols for administration 
+consistent with this Act and the rules made there -under with prior approval of 
+the State Government, for enabling it to perform duties and functions under this 
+Act and without prejudice to the generality of the foregoing power, as follows:- 
+(i) the procedure to be followed by the committees under sub - section 
+(3) of section 13; 
+(ii) the manner of assisting the Authority by the executive committee in 
+
+[page 28]
+discharge its functions under section 15; 
+(iii) the procedure to be followed by the executive committee in 
+discharging its duties under section 15; 
+(iv) the appointment of officers, employees and supporting staff under 
+clause (b) of section 16; 
+(v) the manner, form and report submitted to the State Government 
+regarding performance of urban mobility  system  under  section 17; 
+(vi) the manner to undertake inquiry to grant or reject urban transport 
+project under sub-section (3) of section 19; 
+(vii) the procedure for preparation of the Comprehensive Mobility Plan in 
+a time bond manner under section 21; 
+(viii) the form and manner of publishing draft plan and notice under sub-
+section (3) of section 21; 
+(ix) the procedure for preparation of City Mobility Investment Program 
+under section 24; 
+(x) preparation of Annual Implementation Plan in the f ormat under 
+sub-section (1) of section 25; 
+(xi) preparation of Traffic Management Plan under sub -section (1) of 
+section 28; 
+(xii) specify the class of contract that may be entered by the Authority 
+under sub-section (1) of section 29; 
+(xiii) the procedure to formulate arrang ement for effective administration 
+and  management of funds under sub -section (10) of section 30; 
+and 
+(xiv) other matters, which are or may be specified under this Act. 
+ 
+(2) Such regulations, procedures and protocols may be made in respect of any 
+matter which is  required to be or may, in the opinion of the Authority be provided by the 
+regulations. 
+55.  Removal of difficulties.- (1) If any difficulty arises in giving effect to 
+the provisions of this Act, the State  Government  may  by  notification  make 
+such provisions not inconsistent with the provisions of this Act, as appear to it to 
+be necessary or expedient for removing the difficulties: 
+ 
+Provided that, no such notification shall be issued after the expiry of the two years 
+from the date of commencement of this Act. 
+(2) If any notifications issued under sub -section (1), such notifications shall lay 
+before each house of the State Legislature. 
+56. Power of the State Government to issue directions. - (1) Without 
+prejudice to the provisions of this Act, the Authority shall,  in exercise of its 
+powers or discharge of its functions and duties under this Act, be bound by such 
+directions on questions of policy, other than those relating to technical and 
+administrative matters, as the State  Government  may  give  in  writing, fro m 
+time to time: 
+Provided that, the Authority shall, as far as possible, be given an opportunity to 
+express its views before any direction is given. 
+(2) The decision of the State Government whether a question is on policy 
+or not shall be final. 
+(3) The State Government may give any directions to the concerned urban 
+transport agency for implementation of the regulatory measures as mentioned in 
+clause (l) of sub -section (1) of section 14 and such urban transport agency shall 
+be bound by such directions: 
+Provided that, the urban transport agency shall, as far as practicable, be given an 
+opportunity to express its views before any direction is given under this sub-section. 
+
+[page 29]
+(4) In case there is any dispute between the Authority and the other 
+authorities, local bodies, b ody corporate, department or other agencies of the 
+State Government, the matter shall be resolved at the State Government  level 
+and the decision of the State Government shall be final and binding on the 
+parties involved in such dispute: 
+Provided that, the  State Government shall not pass an order in any such dispute, 
+without affording such persons or body an opportunity of being heard or offering 
+explanation. 
+57. Protection of action taken in good faith. - No suit, prosecution or 
+other legal proceedings shall lie against the State Government or the Authority or 
+any officer or any member or other employee, for anything, which is done or 
+intended to be done under this Act or the rules or regulations made there -under, 
+in good faith. 
+58. Recovery of penalty. -Any penalty payable under this Act and rules 
+and regulations made there-under and directions issued there-under, if not paid, 
+shall be recovered as if it were an arrear of land revenue. 
+59. Restriction on power of local authority.- Notwithstanding anything 
+contained in any law for the time being in force, no rule, regulation or bye -law 
+which is inconsistent with any provision of this Act or any rules or regulations 
+made there-under, shall be applicable within the Urban Mobility Region notified 
+under section 3. 
+60. Effect of other Laws.- (1) The provisions of this Act and the rules and 
+regulations made there -under shall have effect, notwithstanding anything in 
+consistent therewith, contained in any other law. 
+(2) Notwithstanding anything to the contrary contained in any other law, 
+development plan or master plan of the area, any development in accordance with 
+the provisions of this Act or rules and regulations made there -under, shall not be 
+illegal or unauthorised,  in absence of any permission, approval or sanction 
+required under such other law, for such development, has not been obtained. 
+61. Power to amend the Schedule.- (1) The State Government may by notification 
+add, amend or omit any of the entries in the Schedule. 
+(2) Every notification issued under sub-section (1) shall be laid before both Houses 
+of the State Legislature.  
+
+[page 30]
+SCHEDULE 
+Urban Mobility 
+  
+Urban Mobility consists of modes of transport ranging from walking and bicycle to 
+urban fre eways, bus, metro and regional rail systems, intelligent transport systems of all 
+kinds and road ways and private vehicles in Urban Mobility Region. This shall include various 
+types of collective and individual transport which fall into the following funct ional categories, 
+namely:- 
+ 
+(1) Public Transportation (Mass Transportation or Transits). - includes 
+systems that are available for use by all persons who pay the established fare. These 
+modes operate on fixed routes and with fixed schedule within the Urban Mobility 
+Region and include the following, namely:- 
+(i) Bus systems; 
+(ii) Tramways; 
+(iii) Commuter Rail; 
+(iv) Metro Railway; 
+(v) Mono-Rail; 
+(vi) Cable car; 
+(vii) Bus Rapid Transit System (BRTS); 
+(viii) Light Rail Transit(LRT);and 
+(ix) Any other mode irrespective of its fuel and propulsion type which me et 
+the requirements of the above definition. 
+ 
+(2) Para Transit. - includes systems provided by operators within Urban 
+Mobility Region and available to person who hires them for individual and multiple 
+trips, and/or do not operate on a fixed schedule with fixed stops, and include the 
+following, namely:- 
+ 
+(i) Autos or Shared autos or vans or tempos; 
+(ii) Any transport vehicle operated under an aggregator; 
+(iii) Taxi Cabs, Hire a Cab; and 
+(iv) Any other mode irrespective of its fuel and propulsion type which meet 
+the requirements of the above definition. 
+ 
+(3) Non-Motorised Transport (NMT). - Non- Motorised transport modes 
+include walking, bicycle, cycle rickshaw and other green modes of transport that do 
+not consume energy or cause pollution. 
+ 
+(4) Urban Freight.- The movement of freight vehicles whose primary purpose 
+is to carry goods or freight into, out of and within Urban Mobility Region. 
+ 
+(5) Intelligent Transport System (ITS). - Intelligent Transportation System 
+(ITS) are those utilizing technologies and systems engineering concepts to de velop 
+and improve transportation systems of all kinds. These include, but are not limited to 
+the following, namely:- 
+ 
+(i) Passenger Information System(PIS); 
+(ii) Public Transport prioritization; 
+
+[page 31]
+(iii) Electronic Fare Collection; 
+(iv) Electronic road pricing; 
+(v) Public Transport Operations Management, dispatching, 
+scheduling and supervision; 
+(vi) Safety and security; 
+(vii) Traffic management and control; 
+(viii) Traffic Surveillance;  
+(ix) Public Transport Ticketing; 
+(x) Internet or web-based application; and 
+(xi) Helpline system. 
+ 
+(6) Parking facilities, enforcement, operation and management systems. 
+(7) Urban roads and associated street furniture within the Urban Mobility 
+Region. 
+(8) Safety elements in respect of all forms of urban transport. 
+ 
+(9) Foot paths, pedestrian sub ways, and foot over bridges. 
+(10) Any other mode or means of transport that the State Government may 
+notify time to time. 
+ 
+The above translation of ಬೆಂಗಳೂರು ಮಹಾನಗರ ಭೂಸಾರಿಗೆ ಪ್ರ ಾ ಧಿಕಾರ ಅಧಿನಿಯಮ, 
+2022  (2023 ರ ಕರ್ನಾಟಕ ಅಧಿನಿಯಮ ಸಂಖ್ಯೆ : 06)  be published in the official Gazette 
+under clause (3) of Article 348 of the Constitution of India. 
+  
+ 
+ 
+THAAWARCHAND GEHLOT 
+GOVERNOR OF KARANATAKA 
+ 
+By Order and in the name of 
+the Governor of Karnataka, 
+ 
+ 
+G.SRIDHAR 
+Secretary to Government 
+Department of Parliamentary 
+                                                                               Affairs and Legislation 
+ 
+
+[page 32]
+ 3  
+ (ii) ๻ಡ ಪ ౳ ൟ෽ೕ೧๭ದ ಘಡ ( ๭) ತ ฆ฿ಯ, ಈ ෨ಂൽನದඝ౬  
+ಪ౳ ൟ෽ೕ೧ಸತಕౙ ൿ౪ , ಎಂದฉ:- 
+“ 
+(๭-1) ෨ಖ౲  ನಗರ ෽ೕಜಕฆ, ಡ ౳ೕಟฑ  
+෍ಂಗิฆ ඩ ౳ ඌ౽ರ 
+ಪದඛ෦ತ౨  ಸದಸ౲  
+(๭-2) ಡ ౳ೕಟฑ  ෍ಂಗิฆ ඩ ౳ ඌ౽ರದ ಅ ඌ౽ರ 
+฿౲ ඪ ౨ ෽ಳಜನ ನಗರ ඩยಃಗಳ 
+ಆ෷ಕ౨ ฆ 
+ಪದඛ෦ತ౨  ಸದಸ౲ ฆ 
+(๭-3) ಡ ౳ೕಟฑ  ෍ಂಗิฆ ඩ ౳ ඌ౽ರದ ಅ ඌ౽ರ 
+฿౲ ඪ ౨ ෽ಳಜನ ನಗರ ඩยಃಗಳ ಅಪರ 
+෨ಖ౲  ನಗರ ෽ೕಜಕฆ 
+ಪದඛ෦ತ౨  ಸದಸ౲ ฆ 
+“ 
+         
+ಕකბಟಕ ฃಜ౲ ඩಲರ ಆඃ๎ඝ๬ರ 
+ಮൡ ౨ ಅವರ ກಸคನย ౵, 
+ 
+೧. ๏ ౳ೕಧฑ 
+ಸ౽ბರದ ౽ಯბದ๏ბ 
+๸ಸൽೕಯ ವ౲ ವ๻ರಗำ ಮൡ ౨ 
+๎ಸನ ರಚච ಇมಒ. 
+  
+ 
+DEPARTMENT OF PARLIAMENTARY AFFAIRS AND LEGISLATION SECRETARIAT 
+NOTIFICATION 
+NO: DPAL 97 SHASANA 2025, BENGALURU, DATED:08.01.2026 
+ූರತ ๸เඋನದ ಅ ඝ೎ ౟ೕದ 348 ರലಯย ౵ ฃಜ౲ ඩಲคಂದ ಅ ඌಂತತั๭ದ 
+෍ಂಗิฆ ಮ ๻ನಗರ ේ๬คಡ ඩ ౳ ඌ౽ರ (ൟൿ౪ ಪല) ಅ ඌඛಯಮ, 2025  (2026ರ 
+ಕකბಟಕ ಅඌඛಯಮ ๸ಒ౲ : 10)ರ ූ๝ಂತರವඝ౬  ಅඌಂತ ಆಂಗ౵  ಪಠ౲ ๅಂൿ ಕකბಟಕ 
+ฃಜ౲ ಪತ౳ ದย ౵ (ූಗ IV-A) ಪ౳ ಕഔಸ෎ಃಂൿ ಆඃ๏ಸมಜං,-  
+KARNATAKA ACT NO. 10 OF 2026 
+(First published in the Karnataka Gazette Extra-ordinary on the 8 th day of January, 2026) 
+ 
+THE BENGALURU METROPOLITAN LAND TRANSPORT AUTHORITY 
+(AMENDMENT) ACT, 2025 
+ (Received the assent of the Governor on the 7 th day of January, 2026) 
+ 
+An Act to amend the Bengaluru Metropolitan Land Transport Authority Act, 
+2022. 
+ 
+Whereas it is expedient to amend the Bengaluru Metropolitan Land 
+Transport Authority Act, 2022 (Karnataka Act 06 of 2023) for the purposes 
+hereinafter appearing: 
+ 
+
+[page 33]
+4 
+Be it enacted by the Karnataka State Legislature in the seventy sixth year of 
+the Republic of India as follows, namely:- 
+ 
+1. Short title and commencement .- (1) This Act may be called the 
+Bengaluru Metropolitan Land Transport Authority (Amendment) Act, 2025. 
+ 
+(2) It shall come into force at once. 
+ 
+2. Amendment of section 2.- In the Bengaluru Metropolitan Land 
+Transport Authority Act, 2022 (Karnataka Act 06 of 2023) (herein after referred to 
+as the Principal Act), in section 2, in clause (cc), for the words, brackets and figures 
+“Bruhath Bengaluru Mahanagara Palike as defined in the Bruhat Bengaluru 
+Mahanagara Palike Act, 2020” (Karnataka Act 53 of 2020)”,  the words, brackets 
+and figures “Greater Bengaluru Authority, as defined in the Greater Bengaluru 
+Governance Act, 2024 (Karnataka Act 36 of 2025)” shall be substituted. 
+ 
+3. Amendment of section 4.-  In the Principal Act, in section 4, in sub-
+section (1), in the table,- 
+ 
+(i)  for clause (j) and the entries relating thereto, the following shall be 
+substituted, namely:- 
+“ 
+(j) The Mayors of the City Corporations under 
+the jurisdiction of the Greater Bengaluru 
+Authority 
+Ex-Officio Members 
+” 
+(ii) for clause (n) and the entries relating thereto, the following shall be 
+substituted, namely:- 
+“ 
+(n) The Commissioners of the City Corporations 
+under the jurisdiction of the Greater 
+Bengaluru Authority 
+Ex-Officio Members 
+                                                                                                                                      ” 
+(iii) after clause (n) as so substituted, the following shall be inserted, namely:- 
+“  
+(n-1) The Chief Town Planner of the Greater 
+Bengaluru Authority 
+Ex-Officio Member 
+(n-2) The Additional Chief Town Planner of the 
+City Corporations under the jurisdiction 
+of the Greater Bengaluru Authority 
+Ex-Officio Members  
+                                                                                                                                      ” 
+
+[page 34]
+ 5  
+ 
+4. Amendment of section 12.-  In the Principal Act, in section 12, in sub-
+section (1), in the table,- 
+ 
+(i)  for clause (c), the following shall be substituted, namely:- 
+ 
+“ 
+(c) The Chief Commissioner, Greater 
+Bengaluru Authority 
+Ex-Officio Member 
+                                                                                                    ” 
+(ii) after clause (c) as so substituted, the following shall be inserted, namely:- 
+ 
+“ 
+(c-1) The Chief Town Planner, Greater 
+Bengaluru Authority 
+Ex-Officio Member 
+(c-2) The Commissioners of the City 
+Corporations under the jurisdiction of 
+the Greater Bengaluru Authority 
+Ex-Officio Members 
+(c-3) The Additional Chief Town Planner of the 
+City Corporations under the jurisdiction 
+of the Greater Bengaluru Authority 
+Ex-Officio Members  
+                                                                                                  ” 
+The above translation of ෍ಂಗิฆ ಮ๻ನಗರ ේ๬คಡ ඩ ౳ ඌ౽ರ (ൟൿ౪ ಪല) 
+ಅඌඛಯಮ, 2025 (2026ರ ಕකბಟಕ ಅඌඛಯಮ ๸ಒ౲ : 10) be published in the official 
+Gazette under Article 348 of the Constitution of India. 
+  
+THAAWARCHAND GEHLOT 
+GOVERNOR OF KARNATAKA 
+ 
+By Order and in the name of 
+the Governor of Karnataka, 
+ 
+G. Sridhar 
+Secretary to Government 
+Department of Parliamentary Affairs 
+and Legislation 
+ 
+ 
+ 
+ 
+ 
+          
+ 
+ಮುದÎಕರು ²ಾಗೂ ಪÎಾಶಕರು:- ಸಂಕಲ£ಾĩಾĸಗಳ, ಕ£ಾಟಕ ªಾಜÍಪತÎ, ಸಾĸ ೇಂದÎ ಮುದÎಾಲಯ, ¦ೆಂಗಳರು 
+R.N.I.  No. KARBIL/2001/47147  POSTAL REGN. No. RNP/KA/BGS/2202/2017-19 
+Licensed to post without prepayment   WPP No. 297

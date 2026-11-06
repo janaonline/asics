@@ -7,21 +7,10 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 .langgraph_api/
-outputs/*
-!outputs/.gitkeep
 
 # scoring: practice runs and LibreOffice working files
 scoring/*/practice/
 scoring/*/.cache/
-
-# scoring results and people's files: never commit (the repo is public)
-scoring/*/ai/
-scoring/*/human/
-scoring/*/merged/
-scoring/*/evals/
-scoring/*/results/
-**/submissions/
-data/cities/history/
 
 # keys and Office lock files
 .env.*

@@ -1,0 +1,82 @@
+{
+  "run": {
+    "run_id": "20261104-173804-69a3",
+    "city": "sample_city_a",
+    "city_name": "Sample City A",
+    "state_name": "Sample State",
+    "ulg": "Sample City A Municipal Corporation",
+    "workspace": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/practice/cities/Sample City A",
+    "output_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/practice/cities/Sample City A",
+    "cache_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/practice/cities/Sample City A/evidence"
+  },
+  "agent_setup_fingerprint": "5486d15bc78d",
+  "parastatals": [
+    {
+      "id": "SWB",
+      "name": "Water Board",
+      "type": "water_supply_entity",
+      "revenue_raising": true,
+      "capex_mandate": true,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "From the state portal.",
+      "include": true,
+      "team_notes": "",
+      "found_by": "Your team",
+      "governing_act": "Sample Act, 1964",
+      "current_status": "Active",
+      "why_included": "Supplies water to the city.",
+      "official_website": "https://bwssb.example.gov.in/",
+      "website_check": {
+        "url": "https://bwssb.example.gov.in/",
+        "score": 90,
+        "band": "Official",
+        "reasons": [
+          "Government web address (gov.in / nic.in) (+40)",
+          "Linked from 1 other government website(s): urban.example.gov.in (+20)",
+          "Opens properly and shows real content (+10)",
+          "Says it is run by the government or hosted by NIC (+10)",
+          "Has Right to Information (RTI) details (+5)",
+          "Its social media account (samplewaterboard) is also linked from a government page (+5)"
+        ],
+        "opens": false
+      },
+      "other_websites": []
+    },
+    {
+      "id": "STC",
+      "name": "Sample Transport Corporation",
+      "type": "public_bus_transport_operator",
+      "revenue_raising": true,
+      "capex_mandate": false,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "Evidence: https://urban.example.gov.in/parastatals From the state portal.",
+      "include": true,
+      "team_notes": "",
+      "found_by": "Agent",
+      "governing_act": "Sample Act, 1964",
+      "current_status": "Active",
+      "why_included": "Runs the city's buses.",
+      "official_website": "https://stc-transport.example.org/",
+      "website_check": {
+        "url": "https://stc-transport.example.org/",
+        "score": 50,
+        "band": "Probably official",
+        "reasons": [
+          "Linked from 1 other government website(s): urban.example.gov.in (+20)",
+          "Opens properly and shows real content (+10)",
+          "Lists a government email address (md@stc.samplestate.gov.in) (+10)",
+          "Has Right to Information (RTI) details (+5)",
+          "Its name or short name is in the web address or page title (+5)"
+        ],
+        "opens": false
+      },
+      "other_websites": []
+    }
+  ],
+  "counts": {
+    "sources": 6,
+    "verified": 5
+  }
+}

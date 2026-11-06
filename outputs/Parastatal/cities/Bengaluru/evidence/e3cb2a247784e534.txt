@@ -1,0 +1,358 @@
+SOURCE URL: https://etenders.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndViewTender&service=direct&sp=SVpIkYb9HCJc5huxfMWcRDA%3D%3D
+
+Screen Reader Access
+
+ 13-Oct-2026 
+
+ Search
+
+ |
+
+ Active Tenders
+
+ |
+
+ Tenders by Closing Date
+
+ |
+
+ Corrigendum
+
+ |
+
+ Results of Tenders
+
+ Government eProcurement System
+
+ [https://gepnicreports.gov.in/eprocreports/etenders/] MIS Reports
+
+ Tenders by Location
+
+ Tenders by Organisation
+
+ Tenders by Classification
+
+ Tenders in Archive
+
+ Tenders Status
+
+ Cancelled/Retendered
+
+ Downloads
+
+ Debarment List
+
+ Announcements
+
+ Awards
+
+ Site compatibility
+
+ [https://gepnic.gov.in] 
+
+ [http://india.gov.in] 
+
+ [https://gem.gov.in] 
+
+ [http://eprocure.gov.in/cppp] 
+
+ View More Details
+
+ Tender Details 
+
+ Basic Details
+
+ Organisation Chain
+ Rail Infrastructure Development Company (Karnataka) Limited - K-RIDE
+
+ Tender Reference Number
+ KRIDE/BSRP/C2 and C4-1080HH/Rail/2024
+
+ Tender ID
+ 2024_KRIDE_207299_1
+ Withdrawal Allowed
+ Yes
+
+ Tender Type
+ Open Tender
+ Form Of Contract
+ Supply
+
+ Tender Category
+ Goods
+ No. of Covers
+ 2
+
+ General Technical Evaluation Allowed 
+ No
+
+ ItemWise Technical Evaluation Allowed
+ No
+
+ Payment Mode
+ Offline
+ Is Multi Currency Allowed For BOQ
+ Yes
+
+ Is Multi Currency Allowed For Fee
+ No
+ Allow Two Stage Bidding
+ No
+
+ Payment Instruments
+
+ Offline
+
+ S.No
+ Instrument Type 
+
+ 1
+ Demand Draft
+
+ 2
+ Bank Guarantee
+
+ 3
+ NEFT
+
+ 4
+ R-T-G-S
+
+ Covers Information, No. Of Covers - 2
+
+ Cover No
+ Cover Type
+ Description
+ Document Type
+
+ 1
+ Fee/PreQual/Technical
+ Receipt copy of Tender fee Payment
+ .pdf
+
+ Copy of Tender Security(EMD)
+ .pdf
+
+ Technical Bid
+ .pdf
+
+ 2
+ Finance
+ Financial Bid(BOQ)
+ .xls
+
+ Document download date is over you cannot download the documents
+
+ Tender Fee Details, [Total Fee in ₹ * - 50,000]
+
+ Tender Fee in ₹ 
+
+ 50,000
+
+ Fee Payable To
+ Rail Infrastructure Development Company (Karnataka
+ Fee Payable At
+ Rail Infrastructure Development Company (Karnataka
+
+ Tender Fee Exemption Allowed
+ No
+
+ EMD Fee Details
+
+ EMD Amount in ₹ 
+
+ 1,36,00,000
+ EMD Exemption Allowed
+ No
+
+ EMD Fee Type 
+ fixed 
+ EMD Percentage
+ NA
+
+ EMD Payable To
+ Rail Infrastructure Development Company (Karnataka
+ EMD Payable At
+ Rail Infrastructure Development Company (Karnataka
+
+ Foreign Currency BOQ Details
+
+ S.No
+ Currency
+
+ Conversion rate in ₹ 
+
+ 1
+ US Dollar
+
+ 85.7853
+
+ 2
+ European Euro
+
+ 88.8924
+
+ 3
+ Japanese yen
+
+ 0.5471
+
+ Work Item Details
+
+ Title
+ Supply of 19000 MT 60E1 UIC 60f 1080 HH Grade Rails for Bengaluru Suburban Railway Project 
+
+ Work Description
+ Supply of 19000 MT 60E1 UIC 60f 1080 HH Grade Rails for Bengaluru Suburban Railway Project
+
+ NDA/Pre Qualification
+ Please refer Tender documents.
+
+ Independent External Monitor/Remarks
+ NA
+
+ Tender Value in ₹ 
+ 1,35,30,73,729 
+
+ Product Category
+ Civil Construction Goods 
+ Sub category
+ NA 
+
+ Contract Type
+ Tender
+ Bid Validity(Days)
+ 180
+ Period Of Work(Days)
+ 365 
+
+ Location
+ Bangalore
+ Pincode
+ 560010 
+ Pre Bid Meeting Place
+ Bangalore 
+
+ Pre Bid Meeting Address
+ K-RIDE,#8, 1st Floor, Samparka Soudha, Dr. Rajkumar Road, Opposite Orion Mall Rajajinagar 1st Block, Bengaluru-560010 
+ Pre Bid Meeting Date
+ 20-Sep-2024 11:00 AM 
+ Bid Opening Place
+ Bangalore
+
+ Should Allow NDA Tender
+ No 
+ Allow Preferential Bidder
+ No
+
+ Tenderer Class
+ NA 
+
+ Critical Dates
+
+ Published Date
+ 06-Sep-2024 09:00 AM
+ Bid Opening Date
+ 31-Jan-2025 03:30 PM
+
+ Document Download / Sale Start Date
+ 06-Sep-2024 09:00 AM
+ Document Download / Sale End Date
+ 30-Jan-2025 03:00 PM 
+
+ Clarification Start Date
+ 06-Sep-2024 09:00 AM
+ Clarification End Date
+ 26-Sep-2024 03:00 PM
+
+ Bid Submission Start Date
+ 06-Sep-2024 09:00 AM 
+ Bid Submission End Date
+ 30-Jan-2025 03:00 PM
+
+ Tenders Documents 
+
+ NIT Document
+
+ S.No
+ Document Name
+ Description
+ Document Size (in KB) 
+
+ 1
+
+ Tendernotice_1.pdf 
+
+ Invitation for Tender
+
+ 275.63
+
+ Work Item Documents
+
+ S.No
+ Document Type 
+ Document Name
+ Description
+ Document Size (in KB) 
+
+ 1 
+ Tender Documents 
+
+ 1080techbid_5sep24.rar
+
+ Technical Bid 
+ 1974.73 
+
+ 2 
+ BOQ 
+
+ BOQ_226702.xls
+
+ Bill of Quantities 
+ 329.50 
+
+ Latest Corrigendum List 
+
+ S.No
+ Corrigendum Title
+ Corrigendum Type
+ View 
+
+ 1
+ Notice for Withdrawl
+ Cancellation of Tender
+
+ 2
+ Corrigendum12
+ Date
+
+ 3
+ Corrigendum11
+ Other
+
+ 4
+ Corrigendum15
+ Technical Bid
+
+ Tender Inviting Authority
+
+ Name
+ General Manager Procurement
+
+ Address
+ K-RIDE,#8, 1st Floor, Samparka Soudha, Dr. Rajkumar Road, Opposite Orion Mall Rajajinagar 1st Block, Bengaluru-560010
+
+ Back
+
+ Visitor No:10636113
+
+ Contents owned and maintained by concerned Departments in coordination with Finance Department and Information Technology Department, Government of India 
+
+ Designed, Developed and Hosted by
+ [http://www.nic.in] National Informatics Centre
+
+ Version : 1.09.24 17-Jul-2026
+
+ (c) 2017 Tenders NIC, All rights reserved.
+Site best viewed with a screen resolution 1920 x 1080. 
+ Portal policies

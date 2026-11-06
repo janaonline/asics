@@ -1,0 +1,948 @@
+SOURCE URL: https://apps.bbmpgov.in/bcap/PDF/Executive%20summary_English%2018072025.pdf
+
+[page 1]
+ 
+ 
+Executive Summary 
+Bengaluru Climate Action and Resilience Plan 
+
+[page 2]
+ 
+1 
+ 
+BCAP – Executive Summary 
+  
+The Bengaluru Climate Action and Resilience Plan 
+(BCAP), initiated in 2021 and formalized in 2023, is the 
+city’s first data -driven climate roadmap developed by 
+BBMP and the Government of Karnataka with C40 
+Cities and WRI India. Aligned with IPCC AR6 and the 
+Paris Agreement, it aims for net-zero emissions by 
+2050 with interim targets. Based on a 2019–2020 GHG 
+inventory and climate risk assessment, it addresses 
+seven key sectors including energy, transport, and 
+waste. Over 40 agencies and stakeholders contributed 
+through a collaborative, consensus -driven approach. 
+Implementation is led by a dedicated Cli mate Action 
+Cell with MERL systems. 
+KEY INFLUENCING FACTORS 
+ON THE PLAN 
+FRAMEWORK AND 
+METHODOLOGY 
+SECTORAL GOALS AND 
+ACTIONS FOR MITIGATION 
+AND ADAPTATION 
+VISION, OBJECTIVE & SCOPE OF 
+BCAP 
+ 
+GOVERNANCE & KEY 
+STAKEHOLDER  
+Contents  
+INTRODUCTION 
+Data-Driven Framework 
+Robust Implementation Framework 
+Multi-Stakeholder Governance 
+Seven Sectoral Interventions 
+Executive Summary 
+KEY HIGHLIGHTS OF THE REPORT 
+
+
+[page 3]
+ 
+2 
+ 
+BCAP – Executive Summary 
+INTRODUCTION  
+BENGALURU CLIMATE ACTION PLAN 
+The Bengaluru Climate Action and Resilience Plan (BCAP) emphasizes on the city ‘s climate 
+and holistic wellbeing of its people by addressing the contributors and impacts of climate 
+change tackling both on equal footing for Bengaluru. Each of these factors have an extensive 
+effect on Bengaluru's progression towards becomi ng a resilient, inclusive, and equitable 
+future. 
+BCAP was launched on November 27, 2023,  by the Bruhat Bengaluru Mahanagara Palike 
+(BBMP), under the leadership of Shri Rakesh Singh, Administrator  - Bruhat Bengaluru 
+Mahanagara Palike and Additional Chief Secretary, Urban Development Department, Gok and 
+Shri Tushar Girinath, Chief Commissioner, BBMP.    BCAP aligns with global climate goals 
+under the C40 Cities network and sets ambitious targets to ac hieve net-zero emissions by 
+2050.  
+ 
+Figure 1:BACP launch event 
+VISION, OBJECTIVE & SCOPE  
+Vision: Towards a Net Zero and Climate-Resilient Bengaluru 
+The Bengaluru Climate Action and Resilience Plan (BCAP) prioritizes human well-being in the 
+city's battle against climate change by pledging to address the causes and effects of the 
+phenomenon equally, as both have significant effects on directing Bengaluru's shift towards 
+a resilient, inclusive, and equitable future. 
+ 
+
+
+[page 4]
+ 
+3 
+ 
+BCAP – Executive Summary 
+The vision rests on three pillars  
+a. Consensus through stakeholder engagement 
+b. Collaboration across state and non-state actors 
+c. Coherence in policy, planning, and implementation for sustainable, integrated climate 
+action. 
+OBJECTIVE   
+The Bengaluru Climate Action and Resilience Plan (BCAP) targets GHG mitigation, climate 
+adaptation, and equitable resilience through data -driven, inclusive strategies. It integrates 
+climate action into urban planning, strengthens adaptive capacity, and ensures co-benefits for 
+vulnerable groups, backed by a robust monitoring framework to enable a just, low -carbon 
+transition. 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 2: Objectives of BCAP 
+These objectives are implemented across seven priority sectors.
+ 
+Figure 3: Sectors of BCAP 
+ 
+ 
+ 
+
+
+[page 5]
+ 
+4 
+ 
+BCAP – Executive Summary 
+SCOPE OF BCAP  
+The Bengaluru Climate Action and Resilience Plan (BCAP) aims to integrate climate action 
+into all aspects of urban planning, governance, and development within the BBMP jurisdiction. 
+It addresses both greenhouse gas mitigation and climate adaptation, aligning with national 
+and global climate commitments. 
+The plan spans multiple urban sectors, including energy, transport, waste, water, air quality, 
+green spaces, and disaster management. It promotes a coordinated approach involving 
+various government departments, agencies, and community stakeholders. BCAP is supported 
+by a dedicated Climate Action Cell and a system for ongoing monitoring, evaluation, and 
+learning to ensure its goals remain responsive and effective. 
+Key Scope Parameters of BCAP 
+Parameter Details 
+Spatial Coverage BBMP Jurisdiction (713 sq. km), 8 Zones, 198 Wards (now 
+225) 
+Population Covered Approx. 10 million (as of 2019) 
+Target Year for Net-Zero 2050 
+Interim GHG Reduction 
+Targets 16% by 2030, 26% by 2040, 56% by 2050 
+Sectors Covered Energy & Buildings, Transport, Solid Waste, Air Quality, 
+Water & Wastewater, Urban Greening, Disaster Risk 
+Institutional Involvement 40+ government agencies, parastatals, academic, and civil 
+society partners 
+Implementation & 
+Monitoring Mechanism 
+Climate Action Cell, MERL (Monitoring, Evaluation, 
+Reporting, Learning) 
+Review Frequency Every 5 years (overall plan); 3 years (targets and actions) 
+Table 1: Scope of BCAP 
+ 
+ 
+ 
+ 
+
+[page 6]
+ 
+5 
+ 
+BCAP – Executive Summary 
+KEY INFLUENCING FACTORS ON THE PLAN 
+Bengaluru (formerly Bangalore), the fifth most populous urban agglomeration in India, has 
+emerged as one of the nation’s fastest-growing metropolitan regions. Since the 1990s, the city 
+has witnessed substantial economic liberalization, industrial expansion, and tech nological 
+advancement—transformative forces that have significantly reshaped its demographic profile 
+and spatial structure. 
+The jurisdiction of the Bruhat Bengaluru Mahanagara Palike (BBMP), the city’s municipal 
+corporation, spans approximately 713 square kilometers. This area was home to 8.5 million 
+residents in 2011, with estimates indicating a rise to nearly 10 million by 2019. The BBMP 
+currently comprises eight administrative zones and, following a delimitation exercise in 2023, 
+225 wards—reflecting ongoing efforts to align governance with the pace of urban expansion. 
+However, Bengaluru’s rapid urbanization over the past two decades has brought with it a range 
+of critical challenges. Unplanned sprawl, declining green cover, pressure on infrastructure, and 
+deteriorating environmental conditions have contributed to a reduction in overall livability and 
+pose a threat to the city’s long-term economic competitiveness. 
+These urban stresses are further compounded by the increasing frequency and intensity of 
+climate-related hazards, including 
+ 
+Figure 4: Key Climate Variable (BCAP Report) 
+Considering these challenges, it is imperative for Bengaluru to develop a comprehensive 
+Climate Action and Resilience Plan. This plan will act as a strategic roadmap for climate- 
+ 
+
+
+[page 7]
+ 
+6 
+ 
+BCAP – Executive Summary 
+responsive and evidence -based urban management, aligned with India’s Nationally 
+Determined Contributions (NDCs) and global climate commitments. It aims to integrate 
+climate risk mitigation, sustainable urban development, and resilience -building measures—
+ensuring Bengaluru’s transformation into a livable, inclusive, and future-ready city.  
+Bengaluru joined the C40 cities network in 2017. Bengaluru became the 3rd city in India to 
+have a climate action plan under the C40 City’s network.  The BBMP started the preparation 
+of the Bengaluru Climate Action and Resilience Plan (BCAP) in August 2021.  
+The BCAP development followed a robust timeline spanning 2+ years post-initiation after its 
+initiation, adhering to global planning standards. It combined data -driven technical 
+assessments with extensive localized consultations, ensuring a participatory and inclusive 
+approach. With support and review from the C40 Cities  network, the plan is aligned with 
+international climate goals, including pathways to net-zero emissions and enhanced urban 
+climate resilience. 
+ 
+Figure 5: Timeline of BCAP 
+The Vulnerability and Risk Assessment  analyzed key demographic and socio -economic 
+parameters, spatially mapping factors like age, gender ratio, literacy, housing conditions, and 
+access to services such as water, sanitation, electricity, and healthcare. It also assessed 
+exposure to five climate hazards  across critical sectors including water, waste, transport, 
+energy, and urban biodiversity. 
+ 
+GREENHOUSE GAS EMISSIONS 
+Baseline Inventory for Bengaluru 
+Bengaluru’s GHG inventory, prepared under the GPC BASIC framework, assesses both 
+emission sources and carbon sinks across key sectors. 
+ 
+
+
+[page 8]
+ 
+7 
+ 
+BCAP – Executive Summary 
+In 2019, the city’s total emissions stood at 18.73 million 
+metric tonnes of CO₂e, primarily from energy use in 
+residential (27%) and commercial (26%) buildings, and on -
+road transport (20%). Electricity usage alone contributed 
+59% of emissions due to relian ce on fossil fuel -based 
+power. On the other hand, between 2001 and 2022, the city 
+maintained or added 924 ha/year of tree canopy, offsetting 
+some emissions with a carbon sequestration potential of 
+approximately 0.20 million metric tonnes CO₂/year. This 
+inventory supports evidence -based mitigation planning 
+and tracking of climate action progress. 
+FRAMEWORK AND METHODOLOGY 
+The Bengaluru Climate Action Plan (BCAP) is built on three pillars—commitment, evidence, 
+and action-based planning—and follows the C40 Cities Climate Action Planning Framework. 
+It addresses four core components: reducing GHG emissions with a net -zero target by 2050, 
+building resilience through risk and vulnerability assessments, strengthening governance and 
+collaboration, and ensuring inclusivity and equitable benefits. The plan prioritizes human well-
+being, environmental protection, and economic growth, al igning with global, national, and 
+state-level climate commitments, including India’s NDCs and Karnataka’s State Action Plan 
+on Climate Change (KSAPCC). 
+Methodology and Tools used 
+ 
+Figure 7: Methodology and Tools 
+ 
+ 
+Figure 6:WRI India analysis for BBMP 
+jurisdiction based on GHG-GPC framework 
+
+[page 9]
+ 
+8 
+ 
+BCAP – Executive Summary 
+SECTORAL GOALS AND ACTIONS  
+Seven priority sectors have been identified for developing mitigation and 
+adaptation/resilience strategies for Bengaluru to transition towards a carbon neutral and 
+resilient city. 
+Action prioritization 
+High priority Actions that have greater mitigation and adaptation potential, that need to be carried out 
+immediately.  
+Medium priority  Actions with moderate mitigation and adaptation potential as compared to other actions.  
+Low priority    Actions that have lower mitigation and adaptation potential as compared to other actions.  
+ 
+ENERGY AND BUILDINGS 
+The Energy and Buildings sector constitutes the primary source of greenhouse gas (GHG) 
+emissions in the city. The proposed interventions are structured across three key pillars: 
+decarbonization of the existing electricity grid, transition towards energy-efficient appliances 
+and zero-carbon-ready building infrastructure, and capacity enhancement through targeted 
+awareness programs and technical training modules. A total of 41 actions have been 
+identified within this sector, derived from five Action Tracks. Each action is aligned with 
+defined goals, measurable targets, and co-benefits, contributing holistically to climate change 
+mitigation, adaptation, and resilience. 
+Sector Goal/Objective Action Tracks 
+ 
+Energy and 
+Buildings 
+Adopt a multipronged approach to a low -carbon future 
+by decarbonizing Bengaluru's grid electricity, promoting 
+energy efficiency, green and low -carbon buildings, and 
+clean cooking fuels guided by five targeted action 
+tracks. 
+01 
+ 
+ 
+ 
+02 
+ 
+ 
+03 
+ 
+ 
+ 
+04 
+ 
+ 
+ 
+05 
+ 
+ 
+Promote energy efficient 
+appliances and clean fuels 
+across sectors. 
+ 
+Promote green buildings with 
+efficient design features. 
+Increase non-fossil fuel share in 
+grid electricity to 68% by 2030 
+and 89% by 2050. 
+Use behavioral science in IEC 
+programs to encourage energy -
+saving habits. 
+Create a roadmap for clean 
+cooking fuel transition 
+Approach for energy and buildings sector 
+ 
+Ongoing initiatives in the city  Stakeholders 
+• Energy Conservation Act and Amendment (Central Act, 2022) 
+• Electricity Act and Amendment (Central Act, 2003 and 2007) 
+• Karnataka Electricity Reforms Act, 1999  
+• Karnataka Electricity Regulatory Commission Regulation, 2000  
+• Karnataka Model Building Bye-laws, 2016  
+• Karnataka Electricity Regulatory Commission - net metering regulations  
+ 
+KREDL, BESCOM, KSPCB, PWD, 
+KPTCL, PCKL, MSME Development 
+Institute, Energy Department BBMP 
+
+
+[page 10]
+ 
+9 
+ 
+BCAP – Executive Summary 
+TRANSPORTATION 
+The BCAP has identified a four-pronged approach for arriving at actions to reduce emissions 
+from the transport sector and build resilience against climate change. This is based on the 
+sectoral analysis, gap assessment, and barriers in the transport sector.  Avoid, Shift, and 
+Improve identifies three primary ways to reduce GHG emissions from transport on the 
+demand side.66 Bengaluru’s transport system is vulnerable to various climate hazards faced 
+by the city; hence, it needs a resilient transport system to withstand and respond to the same. 
+A total of 49 actions have been identified within this sector, derived from six Action Tracks. 
+Each action is aligned with defined goals, measurable targets, and co -benefits, contributing 
+holistically to climate change mitigation, adaptation, and resilience. 
+Sector Goal/Objective Action Tracks 
+  
+ 
+Transportation 
+Promote low -carbon mobility solutions, with a 
+strong focus on Public Transport (PT), Non-
+Motorized Transport (NMT) infrastructure and 
+cleaner fuels for reducing GHG emissions, 
+improving air quality and enhancing Bengaluru’s 
+livability. 
+01 
+ 
+ 
+ 
+ 
+ 
+02 
+ 
+ 
+ 
+ 
+ 
+03 
+ 
+ 
+ 
+ 
+04 
+ 
+ 
+ 
+ 
+05 
+ 
+ 
+ 
+ 
+06 
+ 
+ 
+Promote compact urban growth and 
+integrated transport planning to 
+place 92% of new households in 
+TOD zones by 2050. 
+Boost public and non -motorized 
+transport use through multimodal 
+systems and demand management, 
+reaching 85% mode share by 2050. 
+Upgrade NMT infrastructure for 
+safer, accessible mobility aligned 
+with growing sustainable transport 
+share. 
+Facilitate cleaner vehicle adoption 
+via finance, policy, and R&D to 
+achieve 90% clean private vehicles 
+and 75% clean buses by 2050. 
+Encourage low -emission freight 
+through incentives and fleet reforms 
+to reach 47% clean freight vehicles 
+by 2050. 
+Build climate -resilient transport 
+systems to prevent disruptions and 
+infrastructure damage during 
+extreme events. 
+Approach for energy and buildings sector 
+ 
+Ongoing initiatives in the city  Stakeholders 
+• The Motor Vehicles Act, 1988 (Central Act 59 of 1988)  
+• Central Motor Vehicles Rules, 1989  
+• The Karnataka Motor Vehicles Rules, 1989  
+• The Karnataka Motor Vehicles Taxation Act, 1957 (Karnataka Act 35 
+of 1957)  
+• The Road Transport Corporations Act, 1950 
+ 
+BDA, BBMP, BMRCL, KRIDE, BIAL, BMTC 
+KSRTC, BMRDA, BWSSB, BESCOM, KIADB, 
+BIAAPA, BTP, DULT, DTCP, NHAI, PWD, 
+UDD, KSDMA, KLCDA, KFD, KSPCB, 
+KSFESD 
+ 
+ 
+
+
+[page 11]
+ 
+10 
+ 
+BCAP – Executive Summary 
+SOLID WASTE MANAGEMENT 
+The BCAP adopts an Integrated Solid Waste Management (ISWM) approach, informed by 
+emission scenarios, current system performance, and sectoral challenges. This approach 
+focuses on waste diversion, recycling, recovery of by -products, and climate -resilient 
+infrastructure. It supports both mitigation and adaptation goals, aligning with the Paris 
+Agreement’s 1.5°C target and strengthening the city’s preparedness for climate -related 
+disruptions. A total of 49 actions have been identified within this sector, deri ved from Four 
+Action Tracks. Each action is aligned with defined goals, measurable targets, and co-benefits, 
+contributing holistically to climate change mitigation, adaptation, and resilience. 
+Sector Goal/Objective Action Tracks 
+ 
+ 
+Solid Waste 
+Management 
+Support and enhance circular economy, improved 
+technology solutions and scientific waste 
+management practices to achieve net zero 
+greenhouse gas emissions from solid waste sector 
+ 
+01 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+02 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+03 
+ 
+ 
+ 
+ 
+ 
+ 
+04 
+Enhance waste segregation at 
+source to divert waste from landfills. 
+Target: 100% segregation by 2025; 
+waste diversion from landfills: 60% 
+by 2030, 75% by 2040, and over 90% 
+by 2050. 
+ 
+Promote decentralized waste 
+management to strengthen 
+resource recovery and circular 
+economy. 
+Target: Recycling of paper and 
+plastic waste to exceed 60% by 
+2030, 75% by 2040, and 90% by 
+2050. 
+Implement scientific landfills with 
+gas capture systems and repurpose 
+closed dump sites.  
+Target: Achieve gas capture of 25% 
+by 2030, 50% by 2040, and 75% by 
+2050. 
+Develop inclusive, safe, and climate-
+resilient solid waste management 
+infrastructure and services. 
+Approach for energy and buildings sector 
+ 
+Ongoing initiatives in the city  Stakeholders 
+• Solid Waste Management Rules, 2016  
+• Construction and Demolition Waste Management Rules, 2016  
+• Plastic Waste Management Amendment Rules, 2021  
+• Swachh Bharat Mission, Ministry of Housing and Urban Affairs, GoI 
+(2014 onwards)  
+• BBMP SWM Bye-laws, 2020  
+ 
+BBMP-IT department, Transport 
+department, BBMP, BSWML, KSPCB, Gas 
+agencies, MSME Development institute, 
+Industries dept, Slum development board. 
+ 
+ 
+ 
+ 
+ 
+
+
+[page 12]
+ 
+11 
+ 
+BCAP – Executive Summary 
+AIR QUALITY 
+Based on a comprehensive assessment of gaps and barriers in the air quality sector, the BCAP 
+outlines a four -pronged strategy to address both ambient and indoor air pollution. This 
+approach focuses on prevention, mitigation, and enhancing resilience —particularly in public 
+health—through improved monitoring, data management, and the development of 
+information, education, and communication (IEC) initiatives. A total of 35 actions have been 
+identified within this sector, derived from Five Action Tracks. Each action is aligned with 
+defined goals, measurable targets, and co-benefits, contributing holistically to climate change 
+mitigation, adaptation, and resilience. 
+Sector Goal/Objective Action Tracks 
+ 
+ 
+Air Quality 
+Maximize air quality improvement co -benefit 
+opportunities from BCAP by enabling a shift to 
+clean energy, improved technology, appropriate 
+urban planning and greening solutions, and 
+improved monitoring systems. 
+01 
+ 
+ 
+ 
+ 
+ 
+02 
+ 
+ 
+ 
+ 
+ 
+ 
+03 
+ 
+ 
+ 
+ 
+ 
+04 
+ 
+ 
+ 
+ 
+ 
+ 
+05 
+Prevent air pollution at source 
+through comprehensive strategies 
+across sectors informed by 
+evidence.  
+Reduce/maintain ambient air 
+pollution levels to prescribed 
+standards and minimise air pollution 
+impacts through suitable local 
+planning, urban design, and 
+greening efforts.  
+Ensure implementation of WHO 
+indoor air quality standards and 
+guidelines in all public buildings by 
+2030 and all other buildings by 2040.  
+Develop a city -level comprehensive 
+health action plan for tackling health 
+risks posed by short - and long-term 
+exposures to air pollution.  
+Create/improve infrastructure and 
+capacities to develop a robust 
+evidence-based and result -oriented 
+AQ management paradigm through 
+monitoring, evaluation, feedback 
+loop, and knowledge creation and 
+dissemination to encourage 
+behavioural shifts.  
+Approach for energy and buildings sector 
+ 
+ 
+ 
+ 
+ 
+Ongoing initiatives in the city  Stakeholders 
+• Air (Prevention and Control of Pollution) Act, 1981 
+• Environment Protection Act, 1986 
+• Motor Vehicles Act, 1988 
+• National Ambient Air Quality Standards, 2009 • National Green 
+Tribunal Act, 2010  
+ 
+Food and Civil Supplies Dept, RTO, BBMP, 
+KREDL, KSPCB, BTP, Transport Dept 
+, BMRCL, BMTC, BESCOM, BBMP Health 
+Department. 
+ 
+ 
+ 
+
+
+[page 13]
+ 
+12 
+ 
+BCAP – Executive Summary 
+WATER, WASTEWATER AND STORMWATER 
+The BCAP adopts an Integrated Urban Water Management (IUWM)  approach to address 
+water, wastewater, and stormwater challenges. Based on an assessment of service 
+performance, treatment-related emissions, and sectoral gaps, this approach enables the city 
+to enhance water security, improve service delivery, and build resilience. It also supports 
+climate adaptation and mitigation by addressing the water–energy–GHG emissions nexus. A 
+total of 35 actions have been identified within this sector, derived from Five Action Tracks. 
+Each action is aligned with defined goals, me asurable targets, and co -benefits, contributing 
+holistically to climate change mitigation, adaptation, and resilience. 
+Sector Goal/Objective Action Tracks 
+      
+Water, 
+Wastewater and 
+Stormwater 
+Enhance Bengaluru’s resilience to climate change 
+by adopting an Integrated Urban Water 
+Management Approach including freshwater, 
+wastewater and stormwater systems. 
+ 
+ 
+01 
+ 
+ 
+ 
+02 
+ 
+ 
+ 
+ 
+ 
+03 
+ 
+ 
+ 
+ 
+ 
+ 
+04 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Enhance access to safe and 
+reliable water and sanitation 
+services for all.  
+Ensure water security by 
+conserving water resources, 
+recycling and safe reuse of 
+wastewater, and diversifying the 
+city's sources of water.   
+Restore and enhance sponge 
+spaces to increase groundwater 
+recharge and decrease 
+stormwater runoff through 
+green infrastructure 
+technologies.   
+Adopt improved technologies 
+and nature -based solutions for 
+efficient and equitable 
+wastewater treatment that are 
+aligned to the city's mitigation 
+goals.  
+Approach for energy and buildings sector 
+   
+Ongoing initiatives in the city  Stakeholders 
+• Water (Prevention and Control) Act, 1974 
+• National Water Mission  
+• Karnataka State Water Policy, 2019  
+• The Karnataka Groundwater (Regulation and Control of Development 
+and Management) Act  
+•   BWSSB Act, 1964  
+• Bengaluru Water Supply and Sewerage (Rainwater Harvesting) 
+(Amendment) Regulation, 2019  
+ 
+BBMP, Slum development board,  
+BESCOM, BWSSB, RTO, CGWB, 
+KSPCB, KGWA 
+ 
+
+
+[page 14]
+ 
+13 
+ 
+BCAP – Executive Summary 
+URBAN PLANNING, GREENING AND BIODIVERSITY 
+A three -pronged approach —climate-conscious, nature-integrated, and people-centric—
+guides the action framework for urban planning, greening, and biodiversity. Based on sectoral 
+analysis and gap assessment, the strategy emphasizes reducing emissions, enhancing 
+climate resilience, and preserving natural ecosystems. Urban planning must ali gn with the 
+city's ecological context while promoting equitable and inclusive access to services and 
+infrastructure, ultimately improving quality of life. A total of 33 actions have been identified 
+within this sector, derived from Five Action Tracks. Each action is aligned with defined goals, 
+measurable targets, and co -benefits, contributing holistically to climate change mitigation, 
+adaptation, and resilience. 
+Sector Goal/Objective Action Tracks 
+ 
+Urban Planning, 
+Greening and 
+Biodiversity 
+Improve Bengaluru’s climate resilience, livability 
+and GHG mitigation potential by adopting climate -
+aware urban planning, greening and biodiversity 
+management measures 
+ 
+01 
+ 
+    
+ 
+ 
+02 
+ 
+ 
+ 
+ 
+03 
+ 
+ 
+ 
+04 
+ 
+ 
+ 
+05 
+Promote compact development 
+through mixed use, walkable 
+neighborhoods.   
+Develop climate -resilient and 
+nature-integrated plans for the city 
+and city region through participatory 
+planning practices.    
+Adopt nature-based solutions (NBS) 
+as an urban planning and design 
+tool to improve resilience and 
+livability.  
+Conserve, restore, and manage the 
+city’s biodiversity.    
+Improve access to essential 
+services and infrastructure, 
+including safe and affordable 
+housing for all.  
+Approach for energy and buildings sector 
+ 
+Ongoing initiatives in the city  Stakeholders 
+• The Karnataka Town and Country Planning (KTCP) Act, 1961 
+• Revised Master Plan, 2015 (RMP 2015) for the Bengaluru 
+Metropolitan Area, prepared under the provisions of the KTCP Act, 
+1961  
+• Revised Structure Plan, 2031 (RSP 2031) for Bengaluru Metropolitan 
+Region, prepared under provisions of the BMRDA Act, 1985  
+• BBMP Act, 2020  
+• Karnataka Preservation of Trees Act, 1976 and Rules, 1977  
+• Karnataka Biological Diversity Rules, 2005, under The Biological 
+Diversity Act, 2002  
+ 
+UDD, BBMP, BMRCL, KRIDE, BIAL, BMTC, 
+KSRTC, BMRDA, BWSSB, BESCOM, 
+BIAPPA, KIADB, BTP, DULT, DTCP, DPAR, 
+Forest Dept, KSRSAC, EMPRI, KBB, 
+BMRDA, KLCDA 
+ 
+ 
+ 
+ 
+ 
+
+
+[page 15]
+ 
+14 
+ 
+BCAP – Executive Summary 
+DISASTER MANAGEMENT 
+Bengaluru is increasingly vulnerable to climate and environmental hazards, worsened by rapid 
+urbanization and population growth. A four -pronged strategy aligned with the Sendai 
+Framework guides the city’s disaster risk reduction efforts —focusing on data -driven 
+preparedness, coordinated response and relief, effective recovery, and long -term resilience 
+building. A total of 23 actions have been identified within this sector, derived from Four Action 
+Tracks. Each action is aligned with defined goals, measurable  targets, and co -benefits, 
+contributing holistically to climate change mitigation, adaptation, and resilience. 
+ 
+Sector Goal/Objective Action Tracks 
+ 
+Disaster 
+Management 
+Build an informed and proactive city supported by 
+data-led and citizen-centric planning which is well 
+prepared to efficiently reduce vulnerabilities and 
+risks from extreme climate and environmental 
+events with zero loss of life and minimal loss to its 
+natural resources and local economy. 
+01 
+ 
+ 
+ 
+ 
+ 
+02 
+ 
+ 
+ 
+ 
+ 
+03 
+ 
+ 
+ 
+ 
+04 
+ 
+ 
+ 
+ 
+Create a comprehensive   spatio -
+temporal database pertaining to 
+climate hazards, impacts, and 
+vulnerabilities.    
+Create a robust policy framework for 
+disaster management including 
+policies for addressing loss and 
+damage from climate and 
+environmental hazards.    
+Empower citizens, civil society, and 
+local platforms to adopt a 
+decentralized and inclusive 
+approach towards DRR.  
+Enhance ecosystem capacity to 
+reduce disaster risk through faster 
+and better response.  
+ 
+Approach for energy and buildings sector 
+ 
+Ongoing initiatives in the city  Stakeholders 
+• The Disaster Management Act, 2005  
+• The Disaster Management (National Disaster Response Force) 
+Rules, 2008  
+• The Karnataka State Disaster Management Policy, 2020  
+• National Disaster Management Plan, 2019  
+• Karnataka State Disaster Management Plan, 2020–21  
+• Indian Standard Protection of Buildings and Allied Structures against 
+Lightning Code of Practice, 1991  
+• Indian Standards on Earthquake Engineering, 1993  
+ 
+BUD, KSNDMC, KSRSAC, BESCOM, 
+BWSSB, Transport, SWM, Urban Planning, 
+Forestry, Horticulture, BDA, BMRDA, LDA, 
+Department of Finance 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+[page 16]
+ 
+15 
+ 
+BCAP – Executive Summary 
+GOVERNANCE OF BCAP AND INSTITUTIONAL STRUCTURES. 
+The governance framework of the Bengaluru Climate Action and Resilience Plan (BCAP) is 
+strategically designed to embed climate action into the city’s urban governance ecosystem, 
+ensuring alignment with existing policies, mandates, and administrative hierarchie s. It 
+recognizes that effective climate action requires an integrated, whole -of-government 
+approach that brings together diverse institutional actors. Accordingly, BCAP establishes a 
+collaborative governance structure that leverages the functional roles and mandates of core 
+urban bodies such as the Bruhat Bengaluru Mahanagara Palike (BBMP), Bangalore 
+Development Authority (BDA), Bangalore Water Supply and Sewerage Board (BWSSB), 
+Bengaluru Electricity Supply Company (BESCOM), Bengaluru Metropolitan Transport  
+Corporation (BMTC), and others. This coordination is anchored in the plan’s three 
+foundational governance principles — consensus, collaboration, and coherence — which aim 
+to foster institutional ownership, policy integration, and cross -sectoral action for  both 
+greenhouse gas mitigation and climate resilience. 
+To institutionalize and operationalize this framework, the BCAP proposes the establishment 
+of a dedicated Climate Action Cell (CAC) within BBMP. The CAC is conceived as the central 
+node responsible for steering the implementation, coordination, and continu ous monitoring 
+of all climate actions under the plan. It will be supported by sectoral task forces, technical 
+working groups, and strategic knowledge partners such as WRI India and C40 Cities, ensuring 
+access to robust data, scientific expertise, and globa l best practices. In addition to 
+programmatic oversight, the CAC will facilitate capacity-building across departments, enable 
+policy convergence, and lead the preparation of climate budgets and performance reports. 
+The cell is envisaged not merely as a tec hnical unit but as a city -level catalyst for climate 
+leadership and multi -stakeholder engagement, driving Bengaluru’s transition towards a net -
+zero, climate-resilient, and inclusive urban future. 
+ 
+CONCLUSION 
+The Bengaluru Climate Action and Resilience Plan (BCAP) represents not just a technical 
+roadmap, but a foundational shift towards integrating climate action into the city’s 
+mainstream development agenda. Its success will hinge on sustained political will, 
+coordinated institutional action, and inclusive civic participation. By building on evidence, 
+sectoral interlinkages, and a participatory planning process, the BCAP offers a pragmatic yet 
+adaptive framework for city-wide and localized interventions. 
+To move from planning to execution, the Plan underscores the importance of enabling 
+mechanisms such as a Project Preparation Facility and clear channels for resource 
+mobilization. Equally critical is the need to foster an informed and inclusive public disc ourse 
+on climate resilience, which empowers communities, strengthens accountability, and embeds 
+climate action within everyday governance. 
+As Bengaluru evolves, so too must its climate governance frameworks. The BCAP sets the 
+direction for this transformation—offering a living, collaborative blueprint that city agencies, 
+communities, and stakeholders can collectively build upon to shape a low -carbon, climate-
+resilient future. 
+
+[page 17]
+ 
+16 
+ 
+BCAP – Executive Summary 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                                
+                                                                 
+                                                         Scan to reach our website

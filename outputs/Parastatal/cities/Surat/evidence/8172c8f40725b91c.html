@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8">
+		<meta name="description" content="GUJARAT WATER SUPPLY & SEWERAGE BOARD" >
+		<meta name="author" content="National Informatics Centre">
+		<meta name="keyword" content="water">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>GWSSB</title>
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/ionicons.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/custome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/bower_components/select2/dist/css/select2.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/skins/_all-skins.min.css">
+		<link rel="stylesheet" type="text/css" href="https://ws.gujarat.gov.in/css/loader.css" />
+		<script type="text/javascript" src="https://ws.gujarat.gov.in/bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ws.gujarat.gov.in/js/jquery.ui.min.js"></script>
+		<script type="text/javascript" src="https://ws.gujarat.gov.in/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<link rel="shortcut icon" href="https://ws.gujarat.gov.in/img/GWSSB.png">
+		 
+		 <!--  accebssibility widget-->
+		<link rel="stylesheet"
+			href="https://img1.digitallocker.gov.in/ux4g/UX4G-CDN-accessibility/css/accesibility-style-v2.1.css" />
+			
+		 <!--  translation-plugin bhashini -->
+		<link rel="stylesheet" href="https://translation-plugin.bhashini.co.in/v2/website_translation_utility.css" />
+		<script type="text/javascript" src="https://translation-plugin.bhashini.co.in/v2/website_translation_utility.js"
+			data-pos-x="2" data-pos-y="0" translation-language-list="en,hi,gu"></script>
+	
+
+	 <style>
+	 .skin-blue .main-header .logo
+	 {
+		 background-color: #3c8dbc;
+	 }
+	 </style>
+  </head>
+<body class="skin-blue layout-top-nav">
+<div class="wrapper">
+<header  class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+	
+	  <div class="navbar-header">
+	   <a href="https://ws.gujarat.gov.in/index.php" class="logo"> 
+			<span class="logo-mini"><b>W</b>S</span>
+			<span class="logo-lg"><img src="https://ws.gujarat.gov.in/img/GWSSB.png" height="55px" id="logo" width="55px" style="margin:10px"/></span>
+		</a>
+	   <a href="https://ws.gujarat.gov.in/index.php" class="navbar-brand">               
+                 <h3 style="margin-top:-13px;">GUJARAT WATER SUPPLY & SEWERAGE BOARD</h3>
+				      <h5>Goverment of Gujarat</h5>
+                </a>
+	   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+      <a class="navbar-brand" href="#"></a>
+    </div>
+		
+		<div class="collapse navbar-collapse pull-right" id="navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="https://ws.gujarat.gov.in/">HOME</a></li>
+				<li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Complaint <span class="caret"></span></a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="https://watersupply.gujarat.gov.in/support/ticket/submit">New Complaint</a></li>
+						<li><a href="https://watersupply.gujarat.gov.in/support/ticket/status">Complaint Status</a></li>
+					</ul>
+				</li>
+				<li><a href="https://ws.gujarat.gov.in/index.php?page=hargharjalyojna">HAR GHAR JAL</a></li>
+				<li><a href="https://ws.gujarat.gov.in/index.php?page=user/index">Log In</a></li>
+			</ul>
+		</div>
+	  </div>
+</header>
+<!-- end: Header --><div id="loader-wrapper">
+	<div id="loader"></div>
+	<div class="loader-section section-left"></div>
+	<div class="loader-section section-right"></div>
+
+</div>
+<div class="content-wrapper" >
+<section class="content"> 
+<div id="error_msg_display"></div>
+  							
+ <div class="modal fade" id="modal-lg">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header hidden">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        <div class="modal-body">
+            <style type="text/css">
+              /* .modal-body {
+                        height: 450px !important;
+                        overflow-y: auto;
+                    } */
+            </style>
+          <div class="container1">
+            <div class="row1">
+              <div class="cm121">
+                <div class="col-height cm50">
+				<!--<a href="#" title="Heart Health Awareness"><img
+                                          src="https://ws.gujarat.gov.in/images/GIC_event.jpg" alt="Heart Health Awareness"
+                                          border="0" class="img-responsive img-thumbnail"></a>
+                                  <hr />-->
+				<p style="text-align:justify;">
+                    <strong>“iGOT Karmayogi is an initiative of the Government of India. The Government of Gujarat has onboarded all its employees and officers onto the iGOT Karmayogi platform. Users are encouraged to visit the iGOT Karmayogi portal <a href="https://igotkarmayogi.gov.in/#/" target="_blank">(https://igotkarmayogi.gov.in/#/)</a> and enroll in the wide range of courses available. Participation in these courses will enhance individual skills and overall efficiency, which in turn will support the Government of Gujarat in strengthening effective and responsive governance.</strong>
+				</p>
+				   <!--<a href="https://suryanamaskar.gsyb.in/" title="ai-grand-challenge"><img src="https://ws.gujarat.gov.in/images/suryanamaskar.jpeg" alt="img-fluid" border="0" class="img-responsive img-thumbnail"></a>
+				  <a href="#" title="ai-grand-challenge"><img src="https://ws.gujarat.gov.in/images/Image1.jpeg" alt="ai-grand-challenge" border="0" class="img-responsive img-thumbnail">
+                  <a href="#" title="ai-grand-challenge"><img src="https://ws.gujarat.gov.in/images/Image2.jpeg" alt="ai-grand-challenge" border="0" class="img-responsive img-thumbnail">
+                  <a  href="https://infinite.vibrantgujarat.com/tu/registration" target="_blank" title="vibrantgujarat"><img src="https://ws.gujarat.gov.in/images/vgsr.jpg" alt="vibrantgujarat" border="0" class="img-responsive img-thumbnail"></a>-->
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger btn-xs" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+	</div>
+</div> 
+<div class="container">
+<div class="col-md-12 panel">
+<!--<div><marquee style="color: #b90000; font-size: 18px; vertical-align: sub; font-weight:600; padding-top:5px;"> 
+    1.&nbsp;તા.૦૭.૦૫.૨૦૨૪ મે મંગળવારના રોજ મતદાન અવશ્ય કરીએ. &nbsp;&nbsp;2.&nbsp;સહકુટુંબ મતદાન એજ લોકશાહીનું સન્માન. &nbsp;&nbsp;3.&nbsp;અમે ગુજરાતની નારી કરીશું મતદાનમાં મોટી ભાગીદારી.
+</marquee></div>-->
+   <div class="col-md-12"> 
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Department Details</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="box-group" id="accordion">
+                <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
+                <div class="panel box box-primary">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                        GWSSB
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseOne" class="panel-collapse collapse in">
+                    <div class="box-body">
+                      <p class="text-justify">Gujarat Water Supply & Sewerage Board (GWSSB), established under Gujarat Act No.18 of 1979, 
+					  for rapid development and proper regulation of water supply and sewerage services in the 
+					  State of Gujarat. GWSSB (The Board) is committed to ensure sustainable water supply and 
+					  sanitation services in the State of Gujarat for accomplishing the basic health and hygiene 
+					  levels leading to Socio-economic Development, Communal harmony and Peace in the society.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel box box-danger">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                       WASMO
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseTwo" class="panel-collapse collapse">
+                    <div class="box-body">
+                     <p class="text-justify"> WASMO was created for bringing perceptible systemic changes through a paradigm shift in 
+					  the role of governance from provider to facilitator and citizens engagement in drinking 
+					  water service delivery at users level in rural areas of Gujarat State. In 1993, the 73rd 
+					  Amendment to the Constitution created a paradigm shift in the drinking water sector. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel box box-success">
+                  <div class="box-header with-border">
+                    <h4 class="box-title">
+                      <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        GWIL
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="collapseThree" class="panel-collapse collapse">
+                    <div class="box-body">
+                    <p class="text-justify"> Gujarat Water Infrastructure Limited (GWIL) is a registered company of Govt. 
+					 of Gujarat. The registered office is situated in Gandhinagar in the state of 
+					 Gujarat.
+					Our Mission is to establish bulk water pipe grid based on Narmada water in 
+					Gujarat state for satisfying water needs of Gujarat state through bulk supply 
+					for the growth of Gujarat.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-md-6">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title"></h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+				  <!--<div class="item active">
+                    <a href='https://amritmahotsav.nic.in/' target='_blank'><img src="https://ws.gujarat.gov.in/images/banner2.jpg" alt="Azadi ka Amrit Mahotsav"></a>
+                  </div>-->
+                  <div class="item active">
+                    <img src="https://ws.gujarat.gov.in/images/GWSSB.png" alt="GWSSB">
+					<div class="carousel-caption">
+                     Gujarat Water Supply & Sewerage Board
+                    </div>
+                  </div>
+                  <div class="item">
+				   <img src="https://ws.gujarat.gov.in/images/WASMO.png" alt="WASMO">
+                    <div class="carousel-caption">
+                       Water And Sanitation Management Organisation
+                    </div>
+                  </div>
+                  <div class="item">
+				   <img src="https://ws.gujarat.gov.in/images/GWIL.png" alt="GWIL">
+                    <div class="carousel-caption">
+                      Gujarat Water Infrastructure Limited
+                    </div>
+                  </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span class="fa fa-angle-left"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span class="fa fa-angle-right"></span>
+                </a>
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+      </div>
+   </div>
+   <div class="col-md-12"> 
+		<div class="col-md-4">
+<h4>Total Pumping</h4>	
+ <ul>
+  <li>GWSSB
+   <ul>
+   <li>LEVEL 1 :303</li><li>LEVEL 2 :97</li><li>LEVEL 3 :552</li></ul> 
+  </li>
+  <li>GWIL
+  <ul>
+   <li>Total :48</li></ul> 
+</ul> 				  
+		</div>
+		<div class="col-md-4" style="padding: 7%;">
+                <a class="btn btn-block btn-social btn-success" href="https://watersupply.gujarat.gov.in/support/ticket/submit">
+                <i class="fa fa-plus"></i> New Complaint
+              </a>
+			  <br/>
+			  <br/>
+              <a class="btn btn-block btn-social btn-warning" href="https://watersupply.gujarat.gov.in/support/ticket/status">
+                <i class="fa fa-paper-plane"></i> Complaint Status
+              </a>	
+		</div>
+		<div class="col-md-4">
+
+<h4>1916 Complaint Status Graph Date : 01-04-2017 To  08-03-2021</h4>
+<hr />
+  <div class="chart" style="width: 100%;">
+	<canvas id="canvas"></canvas>
+  </div>
+</div>
+</div>
+<div class="col-md-12">
+  <div class="col-md-6">
+	<h5>USEFUL LINKS FOR ONLINE APPLICATIONS</h5>
+	<ul class="list-group">
+	  <li class="list-group-item">
+		<a href="http://watersupply.gujarat.gov.in/" target="_blank">ERP</a>
+	  </li>
+	  <li class="list-group-item">
+		<a href="https://ws.gujarat.gov.in/index.php?page=training/training_calendar_public" target="_blank">Training</a>
+	  </li>	
+	  <li class="list-group-item">
+		  <a href="https://ws.gujarat.gov.in/index.php?page=dailytanker" target="_blank">Daily Progress Report Of Water Tankers</a>
+	  </li>
+      <li class="list-group-item">
+		  <a href="https://fasgwssb.gujarat.gov.in" target="_blank">GWSSB Online FAS (Account)</a>
+	  </li>
+	  <li class="list-group-item">
+		  <a href="http://www.wbs.jaiminisoftware.com/" target="_blank">Water Billing Software</a>
+	  </li>
+	  <li class="list-group-item">
+		  <a href="https://ssgwssb.gujarat.gov.in" target="_blank">Spot Sources Mapping (HandPump/Borewell) </a>
+	  </li>
+	  <li class="list-group-item">
+		  <a href="http://117.247.91.66:8088/GWSSB/login" target="_blank">Asset Mapping (BISAG)(OLD)</a>
+	  </li>
+	  <li class="list-group-item">
+		  <a href="https://gujarat.ncog.gov.in/GWSSB/login" target="_blank">Asset Mapping (BISAG)<mark style="color:red;">New</mark></a>
+	  </li>
+	  <!--<li class="list-group-item">
+		  <a href="https://dmsws.gujarat.gov.in/" target="_blank">Document Management System</a>
+	  </li>	-->  
+	</ul>
+  </div>
+  <div class="col-md-6 col-12">
+                  <h5>Contact Information</h5>
+                  <ul class="list-group">
+                      <li class="list-group-item">
+                          <strong>Computer Cell Email:</strong> <a>gwssbdocs[at]gmail[dot]com </a>
+                      </li>
+                      <li class="list-group-item">
+                          <strong>Control Room (Helpline No. 1916):</strong> <a>gwssbhocontrol[at]gmail[dot]com</a>
+                      </li>
+                      <style>
+                      .fa.fa-twitter-square {
+                          font-family: sans-serif;
+                      }
+
+                      .fa.fa-twitter-square::before {
+                          content: "𝕏";
+                          color: black;
+                      }
+                      </style>
+                      <li class="list-group-item">
+                          <strong>Follow Us:</strong>
+                          <div class="pt-2">
+                              <a href="https://www.facebook.com/WSDGujarat/?ref=content_filter" target="_blank"
+                                  class="text-primary">
+                                  <i class="fa fa-facebook-square fa-3x"></i>
+                              </a>
+                              <a href="https://twitter.com/WSDGujarat?s=20" target="_blank" class="ml-2 text-info">
+                                  <i class="fa fa-twitter-square fa-3x"></i>
+                              </a>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+			  <div><a href="https://pmcares.gov.in/en/" target="_blank"><img src="https://ws.gujarat.gov.in/images/PMCARES.jpg" alt="PMCARES" border="0" style="width: 228px;height:50px"></a></div>
+  </div>
+</div>
+</div>
+<br/>
+<div class="col-md-12"></div>
+<script type="text/javascript">
+        $(document).ready(function () {
+          $("#modal-lg").modal("show");
+        });
+        var barChartData = {
+			width:320,
+			height: 243,
+            labels: ["Total Received", "Total Solved", "Total Pending"],
+            datasets: [{
+				label: 'Helpline',
+				hoverBorderColor : "#000",
+				backgroundColor: [
+                "#20B2AA",
+                "#006400",
+                "#800000"  
+				],
+				hoverBackgroundColor: [
+                "#20B2AA",
+                "#006400",
+                "#800000"  
+				],
+                borderWidth: 1,
+                data: [54271,54271,0,0 ]
+            }]
+        };
+        window.onload = function() {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myBar = new Chart(ctx, {
+                type: 'bar',
+                data: barChartData,
+                options: {
+                    responsive: true,
+                    legend: {
+                        display: false
+                    },
+                    title: {
+                        display: false
+                    }
+                }
+            });	
+        };
+</script>
+
+ </section>
+</div>
+
+<!-- accessibility panel start-->
+<div class="uwaw uw-light-theme gradient-head uwaw-initial paid_widget" id="uw-main">
+    <div class="relative second-panel">
+        <h3>Accessibility options by UX4G</h3>
+        <div class="uwaw-close" onclick="closeMain()"></div>
+    </div>
+    <div class="uwaw-body">
+        <div class="h-scroll">
+            <div class="uwaw-features">
+
+                <div class="uwaw-features__item reset-feature" id="featureItem_sp">
+                    <button id="speak" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-speaker"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Screen Reader</span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon_sp"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem">
+                    <button id="btn-s9" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-bigger-text"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Bigger Text</span>
+                        <div class="uwaw-features__item__steps reset-steps" id="featureSteps">
+                            <!-- Steps span tags will be dynamically added here -->
+                        </div>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-st">
+                    <button id="btn-small-text" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-small-text"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Small Text</span>
+                        <div class="uwaw-features__item__steps reset-steps" id="featureSteps-st">
+                            <!-- Steps span tags will be dynamically added here -->
+                        </div>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-st"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-lh">
+                    <button id="btn-s12" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-line-hight"></span>
+                        </span>
+                        <span class="uwaw-features__item__name">Line Height</span>
+                        <div class="uwaw-features__item__steps reset-steps" id="featureSteps-lh">
+                            <!-- Steps span tags will be dynamically added here -->
+                        </div>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-lh"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-ht">
+                    <button id="btn-s10" onclick="highlightLinks()" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-highlight-links"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Highlight Links</span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ht"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-ts">
+                    <button id="btn-s13" onclick="increaseAndReset()" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-text-spacing"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Text Spacing</span>
+                        <div class="uwaw-features__item__steps reset-steps" id="featureSteps-ts">
+                            <!-- Steps span tags will be dynamically added here -->
+                        </div>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ts"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-df">
+                    <button id="btn-df" onclick="toggleFontFeature()" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-dyslexia-font"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Dyslexia Friendly</span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-df"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-hi">
+                    <button id="btn-s11" onclick="toggleImages()" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-hide-images"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Hide Images</span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-hi"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-Cursor">
+                    <button id="btn-cursor" onclick="toggleCursorFeature()" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-cursor"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Cursor</span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-cursor"
+                            style="display: none"></span>
+                    </button>
+                </div>
+
+                <div class="uwaw-features__item reset-feature" id="featureItem-ht-dark">
+                    <button id="dark-btn" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__name">
+                            <span class="light_dark_icon">
+                                <input type="checkbox" class="light_mode uwaw-featugres__item__i" id="checkbox" />
+                                <label for="checkbox" class="checkbox-label">
+                                    <!-- <i class="fas fa-moon-stars"></i> -->
+                                    <i class="fas fa-moon-stars">
+                                        <span class="ux4g-icon icon-moon"></span>
+                                    </i><i class="fas fa-sun">
+                                        <span class="ux4g-icon icon-sun"></span></i>
+                                    <span class="ball"></span>
+                                </label>
+                            </span>
+                            <span class="uwaw-features__item__name">Light-Dark</span>
+                        </span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ht-dark"
+                            style="display: none; pointer-events: none"></span>
+                    </button>
+                </div>
+                <!-- Invert Colors Widget -->
+                <div class="uwaw-features__item reset-feature" id="featureItem-ic">
+                    <button id="btn-invert" class="uwaw-features__item__i"
+                        data-uw-reader-content="Enable the UserWay screen reader"
+                        aria-label="Enable the UserWay screen reader" aria-pressed="false">
+                        <span class="uwaw-features__item__icon">
+                            <span class="ux4g-icon icon-invert"> </span>
+                        </span>
+                        <span class="uwaw-features__item__name">Invert Colors</span>
+                        <span class="tick-active uwaw-features__item__enabled reset-tick" id="tickIcon-ic"
+                            style="display: none"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Reset Button -->
+    <div class="reset-panel">
+        <!-- copyright accessibility bar -->
+        <div class="copyrights-accessibility">
+            <button class="btn-reset-all" id="reset-all" onclick="resetAll()">
+                <span class="reset-icon"> </span>
+                <span class="reset-btn-text">Reset All Settings</span>
+            </button>
+            <a href="https://www.ux4g.gov.in" target="_blank" class="copyright-text" contenteditable="false"
+                style="cursor: pointer;">
+                <span class="uwaw-features__item__name ux4g-copy ux4g-copyright">Created by</span>
+                <img src="https://www.ux4g.gov.in/assets/img/logo/ux4g-logo.svg" alt="logo" loading="lazy" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<button id="uw-widget-custom-trigger" class="uw-widget-custom-trigger" aria-label="Accessibility Widget"
+    data-uw-trigger="true" aria-haspopup="dialog">
+    <img
+        src="data:image/svg+xml,%0A%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_1506)'%3E%3Cpath d='M16 7C15.3078 7 14.6311 6.79473 14.0555 6.41015C13.4799 6.02556 13.0313 5.47894 12.7664 4.83939C12.5015 4.19985 12.4322 3.49612 12.5673 2.81719C12.7023 2.13825 13.0356 1.51461 13.5251 1.02513C14.0146 0.535644 14.6383 0.202301 15.3172 0.0672531C15.9961 -0.0677952 16.6999 0.00151652 17.3394 0.266423C17.9789 0.53133 18.5256 0.979934 18.9101 1.55551C19.2947 2.13108 19.5 2.80777 19.5 3.5C19.499 4.42796 19.1299 5.31762 18.4738 5.97378C17.8176 6.62994 16.928 6.99901 16 7Z' fill='white'/%3E%3Cpath d='M27 7.05L26.9719 7.0575L26.9456 7.06563C26.8831 7.08313 26.8206 7.10188 26.7581 7.12125C25.595 7.4625 19.95 9.05375 15.9731 9.05375C12.2775 9.05375 7.14313 7.67875 5.50063 7.21188C5.33716 7.14867 5.17022 7.09483 5.00063 7.05063C3.81313 6.73813 3.00063 7.94438 3.00063 9.04688C3.00063 10.1388 3.98188 10.6588 4.9725 11.0319V11.0494L10.9238 12.9081C11.5319 13.1413 11.6944 13.3794 11.7738 13.5856C12.0319 14.2475 11.8256 15.5581 11.7525 16.0156L11.39 18.8281L9.37813 29.84C9.37188 29.87 9.36625 29.9006 9.36125 29.9319L9.34688 30.0112C9.20188 31.0206 9.94313 32 11.3469 32C12.5719 32 13.1125 31.1544 13.3469 30.0037C13.5813 28.8531 15.0969 20.1556 15.9719 20.1556C16.8469 20.1556 18.6494 30.0037 18.6494 30.0037C18.8838 31.1544 19.4244 32 20.6494 32C22.0569 32 22.7981 31.0162 22.6494 30.0037C22.6363 29.9175 22.6206 29.8325 22.6019 29.75L20.5625 18.8294L20.2006 16.0169C19.9387 14.3788 20.1494 13.8375 20.2206 13.7106C20.2225 13.7076 20.2242 13.7045 20.2256 13.7013C20.2931 13.5763 20.6006 13.2963 21.3181 13.0269L26.8981 11.0763C26.9324 11.0671 26.9662 11.0563 26.9994 11.0438C27.9994 10.6688 28.9994 10.15 28.9994 9.04813C28.9994 7.94625 28.1875 6.73813 27 7.05Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_1506'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A" />
+    <span>Accessibility Options</span>
+</button>
+<script src="https://img1.digitallocker.gov.in/ux4g/UX4G-CDN-accessibility/js/weights-v1.js"></script>
+<script>
+document.getElementById('uw-widget-custom-trigger').addEventListener('click', function() {
+    openMain();
+});
+</script>
+<!--accessibility panel end-->
+
+<!--<footer class="main-footer" style="position: fixed;bottom: 0px;height: 45px;width:100%;"><strong>Designed & Developed By  <a href="http://guj.nic.in">National Informatics Centre Gujarat State Centre </a>.</strong> Block-13 2nd floor, New Sachivalaya, Gandhinagar(Gujarat)</footer>-->
+
+<footer class="main-footer">
+    <div class="row align-items-center">
+        <div class="col-12 text-center">
+            <div class="footer_menus">
+                <a href="https://watersupply.gujarat.gov.in/right-to-information" class="footer-link">Right to
+                    Information</a> |
+                <a href="https://watersupply.gujarat.gov.in/contact" class="footer-link">Contact Us</a> |
+                <a href="https://watersupply.gujarat.gov.in/disclaimer" class="footer-link">Disclaimer</a> |
+                <a href="https://watersupply.gujarat.gov.in/gwssb-privacy-policy" class="footer-link">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright and Information -->
+    <div class="row">
+        <!-- Left Column (Copyright) -->
+        <div class="col-12 col-md-4 text-center text-md-left mb-2 mb-md-0">
+            <strong>Copyright © GWSSB</strong>
+        </div>
+
+        <!-- Center Column (Last Update) -->
+        <div class="col-12 col-md-4 text-center mb-2 mb-md-0">
+            <strong>Last Update : <span>13-10-2026</span></strong>
+        </div>
+
+        <!-- Right Column (Designed & Developed By) -->
+        <div class="col-12 col-md-4 text-center text-md-right">
+            <strong class="support_by">Designed & Developed By:
+                <a href="http://guj.nic.in" target="_blank">National Informatics Centre Gujarat State Centre</a>
+            </strong>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="https://ws.gujarat.gov.in/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="https://ws.gujarat.gov.in/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script src="https://ws.gujarat.gov.in/bower_components/datatables.net-bs/js/dataTables.fixedColumns.min.js"></script>
+<script src="https://ws.gujarat.gov.in/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="https://ws.gujarat.gov.in/plugins/fastclick/fastclick.js"></script>
+<!--<script src="https://ws.gujarat.gov.in/js/chart_bar.js"></script>-->
+<script src="https://ws.gujarat.gov.in/plugins/chartjs/Chart.min.js"></script>
+<script src="https://ws.gujarat.gov.in/lib/js/app.min.js"></script>
+<style>
+    .iframe-container {    
+    padding-bottom: 100%;
+	width:80%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.iframe-container iframe,
+.iframe-container object,
+.iframe-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<script>window.jQuery || document.write('<script src="https://ws.gujarat.gov.in/js/jquery.min.js"><\/script>')</script>
+<script type="text/javascript">
+(function(a) {
+    a.createModal = function(b) {
+        defaults = {
+            title: "TEST",
+            message: "Your Message Goes Here!",
+            closeButton: true,
+            scrollable: false
+        };
+        var b = a.extend({}, defaults, b);
+        var c = (b.scrollable === true) ? 'style="height: 75%;overflow-y: auto;"' : "";
+        html = '<div class="modal fade" id="myModal">';
+        html += '<div class="modal-dialog">';
+        html += '<div class="modal-content">';
+        html += '<div class="modal-header">';
+        html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
+        if (b.title.length > 0) {
+            html += '<h4 class="modal-title">' + b.title + "</h4>"
+        }
+        html += "</div>";
+        html += '<div class="modal-body" ' + c + ">";
+        html += b.message;
+        html += "</div>";
+        html += '<div class="modal-footer">';
+        if (b.closeButton === true) {
+            html += '<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>'
+        }
+        html += "</div>";
+        html += "</div>";
+        html += "</div>";
+        html += "</div>";
+        a("body").prepend(html);
+        a("#myModal").modal().on("hidden.bs.modal", function() {
+            a(this).remove()
+        })
+    }
+})(jQuery);
+$(document).ready(function() {
+	
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 0);
+});
+
+ </script>
+ 
+</body>
+</html>

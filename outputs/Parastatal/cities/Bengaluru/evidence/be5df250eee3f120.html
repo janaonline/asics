@@ -1,0 +1,1048 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <script src="Js/sha512.js" type="text/javascript"></script>
+    <title>
+
+</title>
+  
+
+  <script src="Js/sha512.js" type="text/javascript"></script>
+    <link href="css/Mystyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/stylenew.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css" />    
+    <script src="Js/jquery-3.7.1.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript" language="javascript">
+         function Validation() {
+             //debugger 
+                  var username = document.getElementById('txtuser').value;
+         //alert(username);
+         var pwd = document.getElementById('txtpwd').value;
+
+            document.getElementById('ctl00_ContentPlaceHolder1_hfvalue').value = pwd;
+        
+             document.getElementById('ctl00_ContentPlaceHolder1_hdn_pass').value = SHA512(pwd);
+             document.getElementById('txtpwd').value = SHA512(pwd); 
+             if (userid == "") {
+                 alert('Please Enter UserName');
+                 return false;
+
+             }
+             if (pwd == "") {
+                 alert('Please Enter Password');
+                 return false;
+             }
+             
+             return true;
+         }
+
+        
+
+
+    </script>
+    <style type="text/css">
+        body
+        {
+            /*background: #eee !important;	*/
+        }
+        @media screen and (max-width: 768px)
+        {
+            .wrapper3
+            {
+                display: none;
+            }
+        
+        }
+        .wrapper2
+        {
+            margin-top: 80px;
+            margin-bottom: 80px;
+            margin-right: 80px;
+            width: 20%;
+            float: right; /*border:1px solid #eee;*/
+        }
+        .wrapper3
+        {
+            /*margin-top: 80px;
+    width:20%;
+  margin-bottom: 80px;*/
+            margin: 10px;
+            width: 72%;
+            float: left;
+            height: 40%;
+            border-radius: 5px; /* border: 1px solid #eee;*/
+        }
+        .btn {
+    display: inline-block;
+    border-left: 0 none #e6e6e6;
+	border-right: 0 none #e6e6e6;
+	border-top: 0 none #e6e6e6;
+	border-bottom: 0 none #b3b3b3;
+	display: inline;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    margin-left: .3em;
+    font-size: 14px;
+    font-weight:bold;
+    line-height: 20px;
+    color: #333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-color: #e6e6e6;
+    background-repeat: repeat-x;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+}
+
+        .wrapper4
+        {
+            margin-top: 80px;
+            margin-bottom: 60px; /* margin-left:10%;*/
+            width: 25%;
+            float: left;
+            border: 1px solid #eee;
+        }
+        .wrapper4 p
+        {
+            margin-bottom: 80px;
+            font-variant: normal;
+            display: table-row;
+        }
+        .slidecontent
+        {
+            width: 100%;
+            border: 1px solid #eee;
+        }
+        
+        .form-signin
+        {
+            max-width: 180px;
+            padding: 15px 15px 45px;
+            margin: 0 auto;
+            margin-left: 780px;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        .imagenutton
+        {
+            background-image: url("~/images/Close_button_top.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            border-style: solid;
+        }
+        .modalBackground
+        {
+            background: rgba(223,223,223,0.5); /*filter:alpha(opacity=30);*/
+        }
+        .modal
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 99;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            -moz-opacity: 0.8;
+            min-height: 100%;
+            width: 100%;
+        }
+        
+        .loading
+        {
+            font-family: Arial;
+            font-size: 10pt;
+            border: 5px solid #67CFF5;
+            width: 200px;
+            height: 180px;
+            display: none;
+            position: fixed;
+            background-color: White;
+            z-index: 999;
+        }
+        /* .form-signin-heading,
+	.checkbox {
+	  margin-bottom: 30px;
+	}
+
+	.checkbox {
+	  font-weight: normal;
+	}
+
+	.form-control {
+	  position: relative;
+	  font-size: 16px;
+	  height: auto;
+	  padding: 5px;
+		@include box-sizing(border-box);
+
+		&:focus {
+		  z-index: 2;
+		}
+	}
+
+	input[type="text"] {
+	  margin-bottom: 10px;
+	  border-bottom-left-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+
+	input[type="password"] {
+	  margin-bottom: 20px;
+	  border-top-left-radius: 0;
+	  border-top-right-radius: 0;
+	}
+	
+}*/
+        
+        
+.cal_Theme1 .ajax__calendar_container{
+background-color: #005387;
+border:solid 1px #005387;
+width:203px;
+}
+
+.cal_Theme1 .ajax__calendar_header  {
+background-color: #ffffff;
+margin-bottom: 4px;
+}
+
+.cal_Theme1 .ajax__calendar_title,
+.cal_Theme1 .ajax__calendar_next,
+.cal_Theme1 .ajax__calendar_prev    {
+color: #004080;
+padding-top: 3px;
+}
+
+.cal_Theme1 .ajax__calendar_body    {
+background-color: #ffffff;
+border: solid 1px #77D5F7;
+}
+
+.cal_Theme1 .ajax__calendar_dayname {
+text-align:center;
+font-weight:bold;
+margin-bottom: 4px;
+margin-top: 2px;
+color: #004080;
+}
+
+.cal_Theme1 .ajax__calendar_day {
+color: #004080;
+text-align:left;
+}
+
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+.cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+.cal_Theme1 .ajax__calendar_active  {
+color: #004080;
+font-weight: bold;
+background-color: #DEF1F4;
+}
+
+.cal_Theme1 .ajax__calendar_today   {
+font-weight:bold;
+color:white;
+}
+
+
+.completionList {
+border:solid 1px Gray;
+margin:0px;
+padding:3px;
+overflow:auto;
+background-color: #FFFFFF;     
+} 
+.listItem {
+color: #191919;
+} 
+.itemHighlighted {
+ background-color:gray; 
+ color:white;      
+ }
+        .slider
+        {
+            width: 1024px;
+            height: 20px;
+            width: 1024px; /*margin: 2em auto;*/
+        }
+        
+        .slider-wrapper
+        {
+            /*width: 100%;
+	height: 400px;*/
+            width: 774px;
+            height: 346px;
+            position: relative;
+        }
+        
+        .slide
+        {
+            float: left;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 3s linear;
+        }
+        
+        .slider-wrapper > .slide:first-child
+        {
+            opacity: 1;
+        }
+        .auto-style1 {
+            height: auto;
+            width: 1111px;
+        }
+        .auto-style3 {
+            /*width: 100%;
+	height: 400px;*/
+            width: 774px;
+            height: 346px;
+            position: relative;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+    <script type="text/javascript">
+
+  
+   $(document).ready(function () {
+       $('#txtpwd').bind('paste', function (e) {
+         e.preventDefault();
+         alert("You cannot paste here! ");
+      });
+ });
+
+// $(document).ready(function () {
+//     $('#txtpwd').bind('copy', function (e) {
+//         e.preventDefault();
+//         alert("You cannot paste text into this textbox!");
+//     });
+
+
+//     $('#txtpwd').bind('paste', function (e) {
+//         e.preventDefault();
+//         alert("You cannot paste text into this textbox!");
+//     });
+// });
+
+        function Hidepopup() {
+            $find('ModalPopupExtender1').hide();
+        }
+        //Function to Show ModalPopUp
+        function Showpopup() {
+            $find('ModalPopupExtender1').show();
+        }
+        (function () {
+
+            function Slideshow(element) {
+                this.el = document.querySelector(element);
+                this.init();
+            }
+
+            Slideshow.prototype = {
+                init: function () {
+                    this.wrapper = this.el.querySelector(".slider-wrapper");
+                    this.slides = this.el.querySelectorAll(".slide");
+                    this.previous = this.el.querySelector(".slider-previous");
+                    this.next = this.el.querySelector(".slider-next");
+                    this.index = 0;
+                    this.total = this.slides.length;
+                    this.timer = null;
+
+                    this.action();
+                    this.stopStart();
+                },
+                _slideTo: function (slide) {
+                    var currentSlide = this.slides[slide];
+                    currentSlide.style.opacity = 1;
+
+                    for (var i = 0; i < this.slides.length; i++) {
+                        var slide = this.slides[i];
+                        if (slide !== currentSlide) {
+                            slide.style.opacity = 0;
+                        }
+                    }
+                },
+                action: function () {
+                    var self = this;
+                    self.timer = setInterval(function () {
+                        self.index++;
+                        if (self.index == self.slides.length) {
+                            self.index = 0;
+                        }
+                        self._slideTo(self.index);
+
+                    }, 3000);
+                },
+                stopStart: function () {
+                    var self = this;
+                    self.el.addEventListener("mouseover", function () {
+                        clearInterval(self.timer);
+                        self.timer = null;
+
+                    }, false);
+                    self.el.addEventListener("mouseout", function () {
+                        self.action();
+
+                    }, false);
+                }
+
+
+            };
+
+            document.addEventListener("DOMContentLoaded", function () {
+
+                var slider = new Slideshow("#main-slider");
+
+            });
+
+
+        })();
+
+    </script>
+
+    <style type="text/css">
+        
+       
+     /*.loading {
+            font-family: Arial;
+            font-size: 10pt;
+            width: 50px;
+            height: 50px;
+            display: none;
+            position: fixed;
+            z-index: 999;
+        }*/
+        
+         .modalBackgroundx {
+            background-color: Black;
+            filter: alpha(opacity=60);
+            opacity: 0.6;
+        }
+
+        .modalPopupx {
+            background-color: #FFFFFF;
+            width: 300px;
+            border: 3px solid #0DA9D0;
+            border-radius: 12px;
+            padding: 0;
+        }
+
+            .modalPopupx .header {
+                background-color: #2FBDF1;
+                height: 30px;
+                color: White;
+                line-height: 30px;
+                text-align: center;
+                font-weight: bold;
+                border-top-left-radius: 6px;
+                border-top-right-radius: 6px;
+            }
+
+            .modalPopupx .body {
+                padding: 10px;
+                min-height: 50px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            .modalPopupx .footer {
+                padding: 6px;
+            }
+
+            .modalPopupx .yes, .modalPopupx .no {
+                height: 23px;
+                color: White;
+                line-height: 23px;
+                text-align: center;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+
+            .modalPopupx .yes {
+                background-color: #2FBDF1;
+                border: 1px solid #0DA9D0;
+            }
+
+            .modalPopupx .no {
+                background-color: #9F9F9F;
+                border: 1px solid #5C5C5C;
+            }
+
+    </style>
+<link href="/bwssbtoc/WebResource.axd?d=RpBQhv03Cr0jBgzZpc4t0P1gb_csz_oy0knzCz2yHURQ4fv9oZBYds1Y0AiThtPymu8QxtZTd965r1FnKOsmolzIaJ-rRbbGD_lGKhYzJySZuNq0dI_kAMp2IfUyDDF-pMOiadxHu7PTvPgUVqDo3Q2&amp;t=638654713640000000" type="text/css" rel="stylesheet" /></head>
+<body>
+<div id="background">
+<div id="page">
+<div id="header">
+				<div id="logo">
+                <img src="images/bwssb.jpg" alt="LOGO" height="112" />                
+                 </div>
+                 <div style="float:right; margin-top:10px;">
+                     <img src="images/NIClogo.png" alt="LOGO" height="80px" width="200px" />
+                 </div>
+                 <div class="headercontent">
+                <p>Transfer of Connection/Ownership</p>
+                </div>
+               
+                
+    </div>
+    <form name="aspnetForm" method="post" action="./" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="2ouom7goLbDfQhpsb7UyeojWlxHMpjiYX88QaiXhmhHLOLsdmm0ErJfXNHBUfmm7yjvHvX1qHP2ub7HOpWCMCcVHznNI2duqjvKMSPc5cxUYKaNpJbvDQBfIb8GxF03KTrwDgfqCL/BtoivUf8f+NEwV5qikGC9eMQLFb0zslKZ9fqpkIdYb5dIHGk+9jtbWcjDKyzr2p1ShqIFbsBqHgN5QxK9QTCcFSUVmjq4aVtqnjl9M4S8/pbLo07pid6/PYAyxd2Psuan4r8yWhglGCeFvKTLmv+qaVBDKTK6ohd+20t+BN8oxaXgQz002fhUBiuuQiOjrhVnVADTbgNd1IhMelf/JdNqPx+Bl6WRrqu6K9sjGtDPHzuP0E34SsztL4FRuzjeTaB3qxi+JtM/srA7R0N0P5y2lelQFfsgBLO+0wjHExdT6JfJZfKJgGZMVcYNZYwEwDbv/Nw+fwjgACJlCDVZefedeW15pysyjRtjXYH5vqSEma+VaiOuaKT3HWsX/HXY4RdoJdZ7qHEdMFnSFmQH+g76t6YsHb90IoYZsJXU766FDkw6n9s85BNKKEcy7p3hpJg1/PV37mu1xCj8j/sa3YFAbL4JTBf5meBWNsuDxEdJIue5urmRTbrV5hHexzXlr+3Kx/XfNYCaq4fap+6xfi4K5UEWYXQnnBlBuuYF1xMLMhxrGou7SZ6FkUTFy2WzVyDtlYtJDWzCoiikf/Hzr5G/0dEs7Mk93+GfKqWrILA+KjVnsrl+qwUV2m9dx7/QOWOhjv5Xs7svLOZjod4jijOPssO7RP0HxNVI=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/bwssbtoc/WebResource.axd?d=_SMekAuJB8MsVkNoO5M3Cxb0NzN-teuthYiBdAWLdeqAEG5CYNM6YBcCGEwhnvYBlkobPNFphdRphEIOrmIVreCSZgfmajEPZMbHc-PHmpo1&amp;t=638518073968514959" type="text/javascript"></script>
+
+
+<script src="/bwssbtoc/ScriptResource.axd?d=-ja7T-mPSWCJDJR4jyWBAsrFhTKy6olVCLLNXqQn9JHyJ8hiNBFUEyfryKv1hS2JeJXsSJl-L7zBOMSavydFjMnM9EFe1deuStStu3msJZ9xu4QxNaDnRyFbTpsB2cKhAXFCq7IyKeLzesrNiYabIQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="/bwssbtoc/ScriptResource.axd?d=L5OHB92XP2uEOtjKvWgENdf0nhMdmJY6PmU2qoUGz5VtZg9h-sjHNslFPadQkXqnAsX2fQLdtZd6uxWMttrA-doIqBcUL1R6Nyjm1XSkwMoTPFPIh1_PJFexQYOvWbQSRVQmb1VOTFzrwBGLlU774Q2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=tQHkBfFhz4fQDvo1hsBpqihAI3rwKmM8cnG_m0Fu1A7GcB419t2DYF8SgAxdXQAXBPVxUwtqp3Kc6dFhKDtgtUHqlO6_ISplF-Jz0RjCLoNWEZ1B4RFleGf2rVnSJ-s1A2Fpd5s1NnbsCkjDKi6f2Q2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=D19FonlJ3w00yUbFCwmqazmQ6zenJ9iCusEgBSoX7bsuZFyeSgaSPpfld4zhH4V1SgQ51GCywAuCg-42-XeTsWY2Z38_z6o4GWMalS9IqryWCtIuk1VHB3Tl16HDQFr2pmZ0DiOdKgLEIm7ssOGX0Q2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=I010pYQN8cbREDCsV4G8WEC2gwfUIgF1IDTNaql3HLcsT19iuIcjT4Ltafvlrk0fa3bAi2TUkB9DEKeF6a__qsM0dAclQuCyWnz9rYUqSmsPQgG2yfapNcmr01z3SI_jQbBJCu0VrKfXO661MJzsog2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Op_SmPKWvYmOF4tSuqTrZ-PDwk27rYcZqBd0btB8kLjr4y2enhkPHKMXmtFx8G2w_1xZ8B4axwCx9DNKqQ_-pwsBrwqsMFQXC_vyqIt3g3wLt2DJ7dtpYS1A-x5no46kGyQBnLg4ok5a7IwQny8ZRw2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Mw-wbnwWS0Xm7yt_JCqXtX6qrRK0eoUbOsdcQ4JQdHEqTaaNKYAb_SeAeWZhJCXjS5nG0l38e6ohl10B-qyyR2YYmypOuHUB41qt2hZI52FEmFI2CaA5iVGtshpLp7GmTL8_aDv-JO6MvDc-HSeNCpjWpl2dzA-2DueU-1hKiQs1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=hIrLgM00RhlkNqok9hcpwzNwqaiis6BxFgL2WCAdxkQ_ujtD0VCTgKEgAxssc0Vsx_G9AqdFKM30VntCamqz18WM5kToP-m37aS-UNcDvbq7dTAKOWz1391ZQLWntYMSG3lX5CIpALaXIjIiyjnlS8FbaVJzEKj20VHaiXXCOFpD3RVy21dNE8Shs-EcCH0U0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=VnQpnDUSdI4j3lQGVI_zYgvlgEU0C0WEJV1k7zRDvdsK1bCl-NTF5zmgB6sxaJqlE4-DdwrbLs2tBUqtemj31-PDlABsxqvRCcKDEaCx5sY9ID17sUyqqGARHyXhnrRZ3HLcGgo4hpqglOWhiDHLTanJp4TkgwV-WF8cCar6kwp5iM3_N9iQXoHkQO0nIKu00&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=GcOWIWdGz_Zf7ZQo6xHd2dgAmKvv908CzcXIj8cKS1upSe9NX7YSpk-UXC-A3XRCbf1KY3e2iJrSiJzwdlU344T6M1kmur5fdDFRD72U5zkmQX7WYF5xzU2VegHFtzSpXYPtotY94133bN9UNTRbKcp7Nis5N19twJVeKiaO8hM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=UY2alrPtUwD8ZipDkJkyDmQVfOujBI4tEvFONE03igI2wScpLci4rzL9T_crFsCukWtRKksblzsRPXDf2S4FbiopWy7Q3Aej_0fzrx4U1ShGwFxuNv0XE-JmOV74Vo8WNuJML1cdtQiStPwPqpfD8nRvd5li1A5CoYZVCQnCjik1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=lgEstM-y3OLWvHHzjz_UibUdmgbWt09vTK1tubnffbe_0ClxVGWcmBu3TpWtarAYg0DmGHLbgBewcwDPd9Wj0rctduhhk-uhecgi5PSWISEqYB8Rpde-E9Fhk8K-zlv_OF39-1NAipMJZMoVp18rWnA2G7lqbXWOP9plMajouEY1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=HZBzp-jq3c_9i8XTHqyb7MOFE3vX_wCbW3vph2eTmCY-noqsSUysx-ZXu-gtt-ML72RWu1MHl58zrLDXSgAg5OFianU6S8SDeo8cdW819fhRS5QSIIT2GTQyBO27EnjexS7Tt-xs8kooIvZ3L_M9WEpyec7vRRQa8SMSpgLzcrNfjnlrap7kTy__8iWb3y6d0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=DZr_Eh0byTpevA91HDu33qLRzcFcV4Pn5abmCN41uk34lVNW8gy2zW6YLMt5Y2Y3FB0Y093DYxiAxWMLhCZtdorQlo-X47YYQ9wwB6PWpqBnD4sKj-qce1sEpZIrUquzGKMlXumnRpTcjL0Gwor3TqsDWc3gtmWcehwFTnKuVcg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=37IZJS-nE4A6A7LeO9rMSk-_UrcWNu5xIpe8b7HWKonT2cYIpAkPxmP2X9JLwqNdhRSNR0J7lz0D6I_KROKuJa1wlbueo5jY7JD7IwY15jukHW1j8EbzXTsW7QpsXd77ebnih9Jx1FLxt22JubDpqDkkMdrH7_yBiJ21eYrabLA1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=M-07x-f76rgHxYHcg0ULBTw81PN3mjPmWZBWp5Bva1kQ0zgg78DwrUaxLGtc5bmuMylnHSayU38xBrtJvGUiTjPX_OgV7Sz-ey0_IwJ_gU1aZ17otAfGZyPZQRANTX9FrN2CBiYSnVOuPJo2t7Br48-QFNNIBdTryWmjww8Pdqg-OQuevS4kZBdg7UWDWBMD0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=mpOKuZy6MInpVmy8Li52C52G1VG3vksyq9H8roI7cswj5ccc1_HkJXTlGZo8Fgu6sNlWnHrYsSFQWfGaE7SDmaoeoGKc3uUJa3vq0Df_6TgmSt3dlYRdxb4ukEQiPUv6iVkpEEczPQaUjbHU5spU5cIRME-uR7jPuJCz_8YQG901&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Jfty4Ov6_ZIFZrvaPCuU4x6X_qC8ZiAJOKnyN70IKLH42Hi_bQ1Wl15ZB90Ypk54HxqRdU_SFXFIOz9Ibp3-iWW_F5AnMmwFCjPCpW5vcPUGFYrvj28Ayj0xT30mRvZkyNQqW-wKvhVPHfXGm-gG5g2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=EaFV2aO_R2oqujPwQp06OPujWOJOrG1ul4HtFv0ZdBV4i2j8rc63PUGh1S2PHvVexnMYdJNbcI34V40deZAXpsbyiaAjjLpeg41ULKA4FK83nS0VozBPCdPb8RKTZ0SNqeow69pF9eDfL9SluZ3Ax-E15sgsdD8d2VzpLjd_ZeI1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=KCFjIhDzawoawSn5j0jzJIBnaFGu9w0W4XLS5Yb4K5y-4dwHCoylFnlEggF7sbj45D4YibVm-YbgZT-VGA6MKJYvZGehpInPU-uod3qlcrUN2MmKOzRjpq32zvXoAb5an2bJMioDArh2795LmWAq-3sqpKjWggYLI7TTkvc1gRE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=1qnKEvVJriXieFyoyWtNOfoVEXaiUaOZwjc0MQaLeFsa_joLvdjjxjZafBbO8gXtYTGktLGgHr9Yn_nhL7uPr_GjxBn1PgS1oUu8_aqLMFpyXUKuGGw5Nbjw5N0xkWGe7iMOz6qiR-TeJDN1M3dkO9io0r9RVp0NCcpZDLy4BE41&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=aB4ta_ka8GeAYi1ussRE95Hw-mW-3dDPvIEjN_JHFnawi6JMpZEUP0xwjntX5a8URUezIxZXmJ1WMJLjN4mhM8g9B0uAPgsLA77OUSaP23pNK1OcXqvtX7NJGxuT14ZMVW6p8pVGqOHH3OtYdeiWaw2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=RM-YuMl97giHtC9fe7RS3eHVF8YBTDyVc-rd-rlMs0vuP2XA7W119PTAb8M6_WzxgD2JDr8dTIJqTUJO1tXkvYLrnQ1WOdpLjX2uB_hy-qGgLOm-lEgxZ-SOw4o4bDmo-8L4E1fHWqCO3Qx467mrAQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=d_DFgthA2WGtSZcjDp4aeQMCxTmPU5VJ0yiZEJP7b_65zP4HMnZKd5FxNAaa8N6h8bGU9QmXqYkE7T4NJx95vV2PEAdm3EYG_Wplr5kYc_I9pp_WK2JoSCyRrCMRVHDPXpzBDjmnvRgwiSTrKz1k7w2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=io1eBQ6Kn1YNJcNZa1VJe48vTeRfmQ4napGUm1HZjhHTWFg15hmoxX3l1DtejU156b2T8FD6U1Wigzx1DYtRjBJiGosVkVnErmnyf3w3QjiuYdxJs4KtMlPa-xQMynPKY86CMWVFOtNW75sTb8AORA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=MSuaiy2TSdLKp-ksVGCD91KE0JxmeHsKhAh0i77WlpRmoviO9t38kmr9RFYBJjLkjXGHQFZbDZEu08cBYyLz345sEiizKEvKsmBKpC32mX2W3hK8_9oERC8JQcrXq8tiSVLlPLUU0X7aFNW71DonifF4CK5MDmUXUda9Zq9Rkx81&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=413RTS6kWChay6FNcRAdKt4kuRBl5Mt3a7XrYeSgBC6AZNQ6ecmV8go0fgQEJrNZEaT5dOodbivoKOpfu1wjbgSsq93K__Cvosbpv3GReTA5gkeWxvHl6BtjT09NYyq7KU7eQckjDBdifNGpyUTBUMC9uN_DplVAc0qaxGbEh47GIVOpfaaaHSgOABZwWUAL0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=W5-tVfoNnSXvnmsaw4NVDFosfioBuF-Y7NdGcR9uKsfoZE9TXaf_QTgA7PPx8AqWkGaTIXTS70PcXISOUiWyjIDqArLZ08bJqogwcTgZtGml2DrzaaO33ImwUJEfnkpAs5eC2M0F9vFeKsRVsrzOTS_qXU8qOLd9_9SQtyF8OwM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Qfr6WVKEO9sSOrtqANyghxbTH9BRi4ZNSLq67TnDS-uaxOiITZLmlWDOrH57599SLELOCu5psjEpobLGdcsvLOl2H5jSokETQ0RoIy_-f9cpgT3RMEK2vags_y4S6_lOpuocByVtWU9wMrt20gOVYQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=H_0MYqhAaceqX4RhGB2EkxF0iztKwr_KgYnvFBMSEEocNbSdP1eD5IPKQXL9KDstNmxjkczSASJLqtdVw15PYOMnzosh6v9MQj1h-Z7UZNMoLhH9PiTwDg4bDc-5H_JvcvUFXWo5nPwlsAlCa7z1YA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=3rdJkhfJjdONsF2UTbpk94kzXnIisoMuXRUqFqfF-FrqUI2w1tBujsGttxibZUAD4k9Vy8OP20GdhcsWKguEr6OdNJUg4NxpqM4fMsXCkfeilYjdWD_8GLRm7J2E1qfAkw8hgFSYlfN--kmW_MWAIg2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=vBJ3dCDvbylMKmUKZYnjfWpDy3_DDTVWws1aKtaASMulNce3jYt2ZgFCPBEdS7hMQkF5QIIUm4OsK4RkhJaA_TtVO35eMENOov9kpyq8zCOwTp4panOD1WNAh3bXy-WoliTnpwSWZeMRc_DBzJRIdg2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=c25rGTUgktdrCvhRd2qrU8zrr0jvntnUx3CfplIKPTyZEgCs8xCTv_pEeR4Uht4ZU74Yi6CVJ5gQ7QxtTNAI3wnXY497yr9FNuXY9y7CvE22GszOOYzWvYRZR6b1TJXrbAa9Cc0bKzLjnuytcGGw4g2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=iwXrHDUCnhj-F5mvX_uu7cgbomPoC_twnsP5WdY2SffL27SLcK8pSw7RN5DpjJi_DPYLKrrnpD1-7Mc5-1RyVELAOnlfojraE6kPn69zuEvl8pLhrbNur0KVDjLyzeRBo2zD9bkOOq4FNwHgP4Nj34K8QlZZkiijdW89FGyhrHn8i-p6ONfX0n0RiJHY3rX-0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=FocToTZqJGTuL76A67UkF_pfXVTJRsbLtdSLhBT2HWR0UBJTApvr8n9u5ZZYYkOrGkerWJFxHjyBwp9tbhRRs8rERtrbQQVozDTCvZNBkoPgQRx7GV_n7ZVIFXYWeayzW4YGheeKe-1P6ajhnFB8YcwAtAnBFhfcckawvefIzj01&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=pCA0ZJTOBAGecrfX2H8nHm5DSIYJRcmlxyh57w-R1e3H6a1bJjKp2e5cWl3e8z2jdsqlHcVW5daEqAG1WR1lui2A6g81uVTEVEBkOl18I5xr6iExWCf0xX6BKctGVZVSWBD1uo-a5JzLwi_Bqfjj321CLg5uelUe6jKyapW6EZE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=gdImqrSvMx2VXpHwIdAB9RC3L_-Lfjdtg3wWssvEeHhYg2X36vIQwsdTkj3d53yDbGesHV4sChpZJ0GTISoltZVHZkQxzsu3RReb4Rd5N85wP0mq1grFFFuyRYxr8RqSWhyi1MZ1fn6gKvCusUTDVQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=yrcVHMBHbvG4XvDOw_bn_IP4IHPerExgU_B91SUgSXsYCRWq1-mUGnem0Y5YenCxGxdhX2h6WJ15QKK9c_TM0vxzZUbCCwDNu-9GpvYoelKVy8a_XOXBXnuW4RUmKySjfGTcezW_XIp3-PyMvqIY1YqS2Ef_7XAL_j21wPnadlg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=xMLpi_UZtUthKellI5espmzTDT2bpRw8RhYdONCVEb6uhKbrk0MGQ-NHAchXcVFvl3u6lh3G8kur1jAXJVd1MwXUj-JgyPqMtS525M_6tlqFmGR5-nchjklzVNAbUcgzMnUeo_h3_rQDMmxCFtaPo7ldhnrAHynZWdfcwb3V9S01&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=btUKnyYTa8jF9s6YjZOEB-Tj40FSrLY8qB3NQ2VaRT-BI9UnO5wRr5KmTmVFVbunFG4tngYmzuvbhCcEYs-iqK0FOaxPueJxkjQgnnQewLDfbphFff1Ds1OltNnCLMbsoMKxWm1-ND7VXuMdVV2yaHxGMugYBhqobh3oq_M_CLA1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=9FKYr8qfNP_mwVVmm2lVWIyTKpGtQUIGeyTmadVR1R9snywDduGw48WFMLuSClG3oSChGPQHWZpgr_cE53kPSbfMkBETGEqSXTBKTaCc772xZz8_1hW99tGhI5nnfWJVuixfbL_t-4ZTdyasM8WYujHkpD4LY8wYidoWFvF-wzw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Cztj1rAhM4pscIW9i1S7aUrBG2u2Jq1erU5DVACgaLm083iWzrRYkRPkTLxrJy04o_p3pPzv8XLnNPlfhAzbiFwZa9RDrgqGcKleZLe-cv3bv76iCqhY10VV8y-uTokBvvqrAMZ-EOQVgwmwFOPEoA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=8GYBa9KqdxFEYriY0DKTl55VeoTlH4Sc0ZyohbJSCeMryp2CZ9DyPWWMOOHSTW4JPNmQPsizlEkiO9KKa8Vx0cNePokQhyjiicFdMxFIaXhajEKHlFqE_kKj2whGYW_6MCwNbqiwU3sd_d1qLifbZl-OeVlGIhdroaMJzIe0VW01&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=gHV5H2u4VGeh_x2dNgI77bnufl2jJoBtj3F2Awx6vWVwgnaeIi9G7tl1FeCj3zB0iXgKIrmLMr8EunEeqmsZhINYenBpMdwGhquQEtlzJWyqNZ5wmDj51fTKuh_rgj5SMh2QPkHy4u5rsyn2Te8eWAzgDrREPjSd0pORy3Unhuw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=BaRiMeyZYad8kgf2bg_iR5YsmvBRyvRBcoZxplH1rYpgwFu4msttXNEpmUcmFW-O6OSHjuXICJndxj-yDnkEjXDbqHZPRjBcdFJ7zGpoRh9IxeNTtrn3JdvzfG6omf263as7RcoK7g0XqYugicSLNaD_PciK57tND_Mv8mGtq_41&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=vUMZJfET3-BewiPQHvKBdLTHor_CsyMsKxpo4i1gJso-ItXiA7dbCdrA4LnTIzzSxHnrWe_wf4IjsVrNg0THOf1fS4ws72RIqPW-S9slhIEQZJs6oQwTMrXZtvA7AnjVrer5mLQSiZ1zp3FgSNLnpQROAHKfA4pzg26kCogtLKw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=IHxkGI1qpV3VZrR3bgJKyD43sn1oc-CL_r7Lh60uDZvogfiO76MyFU6ovJ-KJ934vwmwE1gst_Rm59HcHAMR8k2ihf6O2Rox8LzRrszo-B2PIcXwCgJQX0FPbZs8FXN2FW-98oQ05VJuBrahsG4PpA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=UypyBzo9ALArQ2nz8S-Y0xIklVT4gyMobfSkn-rWOnT_rJ9UQ1-7gQuxL4p_Mcn9hMJzplo6jayP-ctBrp_pFmxT_KyHB0hayW61t9TqOzN8fbMirFXIanCpNgIx6XQ2TxNT9HmMsV_ZL4rh9TCnq7NwmPxRzOlTusylhTfAceI1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=4WPPDpfiYZuK6Ma1f5RIJzzaLdF72Nz1oybL__ITdgKrGcQziHIHIyVQxWQjC6ikJB-UQ1HdUWn2SjQMuOUbOFBNa3tDgKX9OwEQv6DO98OHutQGN3leEu2McOyHM2QLMiZep3iG3_mRuyu1X9e8KorEXcE4qwgPZFl-Fi_2hT01&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=M0z1jrLFF8RmPo-uV3rwpzjpKlWfJdDHZumDnACvlj0KIX_NFXTIIl2jjfOaW7L3yGUOAGgzRE-x8TzItnjB6aW6reX4i8TDvQWjFl9YfI9upZVh6GKB_ELqj7pm-Y6Ab6BFSrvdvsFD5nGNGYUB2w2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=dMJ3ggMAt2BRmoSJD7TTatSkNbbItEMsw4h5QZ1OmNbKze0Ko4lkrZIa7mleyeTbyRFYaZRKy6UXDb3NGhCokwImmuu37XDhtaD1dzeWKw-w7XN-RbNM4it0vLBtVnjKGpoF-5XDD5siScP-ib46MA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=U5wwFXQbGVzRoRDFf9dLDerif74xXSLFET7ZG8SCL9wxj7174L3fBU1Mk0RyohHH0qjtn-PiXIqJQEs0BVIp1HlGGpUy23q_a4PaO_gOM3HsvB4elij3XWXiRAWcx522t8nWlz_DdMThbp3iRP5YyQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Ze78J8WVJG5CCLD-mnBsKhtmjFYDYQIoOusIfmV4sypHRsUMM1Qngvkf31esC2D5W3sbWheVNcmg_JUxQtPHvekqt9bpNqCqQML5ZjtO1v44BslPkILsSWzSne0ulgNs8SNQ6bODJY8aOJJ67o2RUQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=mNR9Mt9aze8rbE5J2kEAYT8qSfdqsLeuXHLidIrQwZuUUyF3C1h6P2y9MiPsTaNnp-Y2glx49ocmbICPasZPecH8XNcZLzwb9uIowdzo12mr1tXO8uyO6kxPlZ5edaGFde35yZNW7j5t8EAL3PSYdQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=_bMBpkMjp-qtOiRsewxfBF4nMCx0a2iZsAY2Z_yFXIogOIg9RpzwraWbBGGe-ZyCh60JYRo-Mf3Os0jP4KkN57aHVodEcsvESaC4AU3izvm7BfemjqVYhlF-bAltey95yCqAHA1uhC77bG1HT9YC9Q2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=KspOtvT3emVy2YJ80JZoZmDYXMHCJPa-R1lZbxRPXGhKsxhdIFZ02TiYErEqTUFA0cMoFWbhPB77koXz7tc2Ouz3wwPlqzooIg1P70mpkhrkEu0cvRJfQrc3fxiqSuxMJJPtT5meBSz-p6s3j_5Jmw2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=oeOWxp9EnNfawQPJWlTOJ1JE67wJxFjM7mj0nFUpEM9-WAqNQi8ixXhXaU6O6eEqpbc2wnk5KWdBE8x7H8dIfu4WDvNWIxq7sUwd4XmVkq-mmGvMsscJI1Toqu_Ct8M5StFXbK4ZrI5h8BgcvblAng2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=s26aPfZIJE3EVVpOMfRiuLnBq1mjBJ6unIEdSyIqufeLnnjS9_RHR7CEH1lKpIlKyXSj2ufgRHxtU0VJTcBANErFHH2WCX1AfwduB1aMOOZytQxY1fWi1r9nrV69S0_f7YafJAIBfpXzraD-2cJau2cufaE7Cm0_jbE_upbUW-o1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=cUeGRi9pG9W6bnndIMbP0xkzJHsA-hQ4Z9Y21-3ekrOZYzzfkFNf8HwiISsX9FTvajJxNZHowlDCEVkaEo1Ewl4E_UHi9RKS4o4Ih4Va0571lpx-aaIVLjLJJxkdGyUR957-JL40QxvW75xbVj73JABdVrcHb33a4YT2VE8kcnM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=MgXb2vd8nirNHmxX3pubsL2majfdpqqKnLFnMa6mvheOYftQbDGwzUUDFXgU5CBb6Zgcy4oyO_ZuzNJKcCDU2mmYT51VPGW5bEeVlYvijJW9KzX5gV7djV0SFSNrM0MVSmCL7WA7g1j5Q7tnEo9OAuhwetTtxmAohfB8VJpjztMMnnzFvfj0wQyBwBlqXbfN0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Xfq0OzJZ-LfB4BKBgXHvDBu0NSrbMDBcE1Wi2Rwu9M5Xg0M4j_MEPrV9uHIrFyj8Q0MxdbE9YICa9GfVLIAsF6UnOJ3WyesFI3SHVgGfVtgpIhHIZl-Q-HW9hRnOU3FTYUgCOZ8pi1TE2NvKnJJQwpRfmjuPF64bkPnCoJ8XE5g1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=hojKsrAy3lgAnNf7n4O20VuMlCuad1ZSRz2JroLg3tD1j3V827s5nVj-__neqL8vPitCxlb_ueZ2wdnUTuk9DbfLxy-vpHymZhlu5YiE7yMqBGMBtSDYnAZVaw2FG0XaPVNY568q1HFcW8KwNNPBtbsZNCB19_c0D_lKG5QbE9E1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=m6jDks9zy8Ay21kY6-SWcNET3nw6ig4FWNSZeHr1ZED9wdXERaKc3LwYKCJtMq4ywa0v37k9cD-yS6jbDyKQVq3KG6uGqgb0g3Qkln5ux8IfUtKfLbpx269rQnbPIc_Ch5dzGPi-h5W_pS63oVFRnxKM0e5-d9Y4k4Rg8WBeVTw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=_OcxxJ7McU7Mtx4UqTSUPW4zYC27rhkgOCHZF6kiseiqMBTIPH4QwEmKZHytz5_RTSXFnWbNIBCk-5EH2kk6gA3W1ZtlzpmGnk2XlrH2eA0kcSrwkQCXgST-bc0M0OSVo6yLQWGb0ZXyLwR2V0-d_goJzRAv9joyQz4ajAcQ9j2ij0AEV_raoWCb0LOsgPog0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=6U9K50CmaT8AhnlCh9dmjgNFijTAijn9X-hRT9xeNL9U9nh1Nx1I4VABVMWRxfvW4TgeL6cigS8IuV-golDn-LC5V0jOHWTV-HPvdo7N7E-jt1KbWQbZezzJyElCDzoedmxg8y7mQUtf0H4mbXaMptpkouIiQyAHkc47-_wYcoc1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=6oElwu1dqnlVLfdsVAUcCCovCfy9ehfEH8HDz5oQ597FDHyOFoA7ZNIwYbCYqt3l0hQ-NOoa6gDby6kTB1up2VgBAgNUO0aXCw5KEZjTaShHrVPjlqlniznJDmyk3vf_xkYqDD0zg0HOIDHLuQXmcKAgLTX5-Hc8C0qKAvt2BZM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=oq4ntpMW-KpEmSe6MjkVC4dMaNZT6bQ6dmvB_LMm_chycgK1FcRmfMp2fkdQJCXwLUC94uFTqM_YaOx1OmSezH__1qkbx3yjjAwkEOYoYwwcEknNtFyzozDBGixkYtnbkctLu3I_7yxEiG5S6bhfNBnuR7nYpAovNCxhaInb1pa_WGa6aMs0Ch5bCu_oV4t70&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=UTP__wiN_qGtMej0Bq8zvfoUJBrhHtzNzmNCjyS5SKkSNcQXxUmjL3HqxN0ov858htukDoj7QUJf0JHFjrzgLJes3RZ8XaWLhXCffYdXswKpmZB-x7NsjcNga6CIvjHZloT_yNepOqQwH4McRL8lvw36vvCJVPt7uuMyCDbVbZg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=88_vKTLc6XRA-M8v_sISJsNuvw8Bg1mL4aeUBf7iLEKFJP1ETQTIuV9Ul5gpt8wQecoRKKLuN54ZcvhmKzxUGARH-vzKPLAB8Pd0hkUH87l-Atf-HGVNNl-wW_-zztHjyGcxtN2r6YyJ8fE3ss86Q0Hkt3UQducn_P870YuJbsY1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=51ZkmazwrVvIg20svPf8hrtsJ5K1QP9g-J5p5E0MfU_I9gJpSUVwSEjEtz_uAs_XU88cyqaXB6EqXgfDonDmE_PvJYp8Fo2NSJ0h8a0cJc-ScUMff3VX1ETdsOdhHI_iuesL14pc_uKNibcQIl_YN1X6iJHV1eoM1JQ2NXDbDL41&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=tu5u-PO-V70KVWeybsoH4thNsCiMeBfnMidLzl359VqptnDb4YbqPin2OMGvxRW9gVzdy0hpEbije7F7OXUGgJAZJefOs5llEslSzoIWpfF8KB3m4idvfJpC8xeiwNNc9EYEOFzhObE38g3zTZCM-DEyWfA6HeK4T09m-4S6_d81&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=A9xhf91iW5u7_TX_YKy7MslpRjjVHGK8f3fUbEoDjvVl9u7zvoYNoWm0gZjXTjCdkit9wyi-6KMVlikNhmwmaVo0mJXh2Iayl8bPeW1MueQnHfBX0mDFng4f-bAS-TQi0rUj0WL_SWwH-_4b2KrbBnyR0Z9BqWQdNmlNnWx81Eg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=9w455TEW_fiHv65Dn0MigIetyVA0Db8e-ieRVPGITeJptjk4r2WAv7EJDKdlOdrA9SuqUlasMrk7-ZzIe5VptanlwFbCAtPjwLjtpPRc48e729vkH2A5_P60yUJ1-1ybY0wgaqYc10rcyD916MthLLtOuQtlojRKXkaf2Wx5e801&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=mpvwMqI71V_GwWioTYtALbNcDttYAMMGcpaT1X3PuZQTh5mSTMPv3gnh0RU-C_qQTrLod0nV1nCYcx2d2NXCQkj_-XGE5KmjJgr7ooQy-JBc0z7UH4k1oNfQrwcUGnF7IqOsseYbAisBTcTcy5dN1_BHuOgOk2pgv2tMr72749s1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=oDHTzNytnLjqDUF9zLzW-_r_W6thunD6X2E4wt7D_WaCpoI2HXZLsxlDw3UcSdxfFnmwSc4brbeCxlLrZu4LqA6rNokYbBfDd9oZHL_7cIuGnBNvd4jSAC5UiAfJnhjCRE1eXtD1bMPJ9i5Ql16epr3ldO0PBnlLmJv9FZnydQU1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=dWPd9HS9h3TP06rQY8med767cQ5tM4DpZhv5aNmSrTHZEh-Xz3JPk8JIyyNfT_8alJ0v3-EjQBvqbXOYhZDQgHDIRiSaXvqHN0UDoYWlMzrEmP7KQxfj1qGcEks5tqkTyS7IqR4pAlDdtgg6w9LAp4wqoL5Vzy8Bb0tkCbnNgnI1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=NWKcIivsmAZ3OL4UTNDzQSrx6x4Ck1UcEImoFJ_IcBHX-qVgi2kZ3o3YZzllAQabEtae20JjEnCUqLXIzKXMJr38agz0s3e2Q7TKbAQt8M9DZtHIFzOzNCoE9DCHw_F5mARN6Iw4pbO2yzlMNl5UMA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=f_5QbDtELR1yBYpvYUJD6wsUIa6s-BoJiMw61xe0hNrJheBP1bRlN1mdGzlB6l6NIATIPBPklTVbgbaYqL9NyrWKPftTRxElcXJkB8B5rXJp0EP7C9SD_UqOQx-HBZ5QC4hGGnKcozeQL8z0R4bpO8meANldri2jzYWSr7Idjig1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=ehUy-glI9v0oEcI6aVMfOp4yWqDHREvLzqesL3vGfSInSK4Hm8A0KYTGgCmyauICIZvfH4yd_S9heM9vWHMFtysXk_kC12u25Y6XiNXjrJbCF9pxMXY6l9SicgvC7bFrUyAcTmjclgbGmD6huoKPvmKxkIgSl85_dS6dtwcISPc1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=H52dsJ8jcqLGpd2LyagCXSGbJREEhX6DNzDleZig_B832pmnW1T_Z22FkHXEh7zkiIwSLbfftV3FMEKvfb9AgLHVLquBcwKfqozkN-5mX0pkp5BbJPCd7fHjpbEmNSMSyaPSmI0eJy1LcamPGVA4Gh0o2XiNCHf46C1nQQSe09ybEa-x63H3m5hgFmunuqYN0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=xMVVqB2LTgxyqanlbDhZ8uMGb7YefJkKQNmnF8m3D4tmRDbVTDH6XQ1hgV89_QG51VpKWjDIyJrWqrksbc6pILhJHzCfLm5u1EnydW2HW3iTxK8c1AoWkAeymlVCJv6WuXzBv7zca74_Zen4pSyAPQdMnZmVSoAtstW3beh0rkU1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=5ppy30wGaEgOB6T4pxNcjiAR3sdZswNxY33QuxM3pvPomaMSdSui93xPncIaygt27gJZQ-eHzO_9d7ylx5nsggSsx4LVp1HrSW1_7HYa3OUAI4ONqdsXR_FjC84Y4kcvh6PwDckR0GVvTS3KWfubA7DuTEIsbpIfaBU4KCvlgM3_xPVXgS3tvAC8X_h_GQ0i0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=aX6teoljzOZAAJJaYW5EXTZi8hMX86CCTrd7PIAM0vdxxQJ9RVqww69uP3Q-CPje53qwpVu3rCCBgTRehIAV5rxDu9VUvnpWl91xS-CI_6v5dxjOOpHtbs3bIrvf4p6ffBim__CM5gVj-lPKNFWQrW4HZ7vn9ssd3_6Csm-9U5xjKHKm2U3vhPhqmj0sYFU_0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=txjS-OxEw5JjQySYJbf7uEY2MKEvh8ZIpCGjsq4d4AqYpkLRJ3yYsv2FZvr5D1sHPZKCD1CxWPOs8Pff4vuAgNfgenpa3YnYyK5cLDLiXIOhK-VWjZ_bjdl3jWBGjbyTMMIYKRqKLrY_yTFInZ4jpwpGC-6QDv4SY-mQvG7Nrww1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=yJ8wxDtEy9SJiSObjOUH0yKaAvsPPkyUCMN8XjrYY3KfhMJHzJkJWDT4jrNcVDx9RjdwwQlPSl_aIkrAnFWrT2y5kTzv8R0-C1HHZ0godBYmaUuZ117jqUa_6kEFBHPUBY2UW1u8fsaMknxFYlty7YEbbbeLiHOrMULP35pLqtA1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=nWhOBa_19hHPl46r4LraUTt-kNzvwC7Tmqcdis5vsnPVClNxwsNy-Fm0BJX2IU_HOeRGZtK7GTYSLQevREl2qAlz65_PFUn7axuWwObQezwXcwmYvY9l9Y3Eo5rMopOhX4Yioak5XOXyyp8MY67e-qD4FDHzByxERZBNnvO16xU1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Ays2DvuTzSP9TYyneR1BX9ymsiXg5SgOrghetQsenLo52AdgYWhdQhav8Ke7tYE4xdAmRfgZFoLabN9o-WgGI_4iU8LHpxxDdlI1_wyDTox6m1xPZwm8P3T6ufqOw2ynOhkH0iDbD9lN2kE3hojRdz0FqTQhhLBei-1ZzPbZPvA1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=oRM-uEn-5O5UXcm4C3NeLJW4B-cN6XqEH98Q09P3wzLb2aq8rJ_lPQrhG_7iyN4UWDhCw9FAzjz5rzn7sReWjQdEVIN0d3bny_vFSEu6sj9JZIol3nX_lQsaJwGtcR9uRnBTUha24pfr6at49yCPbNuz7FBCV3U7z5aTnpVhuuw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=135mB3H5LPUDKHStCNUaSnaDKneYTQ6K-fEYynejuC2bHK7H1AEyMXUTFM5HtUTWRbGr2r5PiBfAyxnxgmj5CEUXcvEptxyn8G_c77xKR2aDEH1iAr5OXU3Pc0zhWpuXiHVebNVgE2YcVTnpcaQoJ_enja1a31s7x4NP7Vbj3DQ1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=jXLTWZkh-mMH1jrNUVt2thS2F_-0-to1sMgSHD4dw7wpdQv1PKl9icax9fHJQ_GblpgOLY2thnr9ZgXgZd-wMuqGISEOAshvmkJz-x5g9JUACKjMtTcah_gGmmg6ctCDgfLMS0ZeysenKP9ecHEFMVAfk-r71CSTW3mi9bZ5pLM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Uk8PFYgJGcu9uAVK6GIO5g5_Owz2UeImwdc79arz7d1KEilh1i9Bh7VAj2On-Nn0XZhVOz8rDLBzicxv_Flt8ai0f8brQeavLG1xYWDd5ufrwWwC06xkWf8nVpK_ACmzlCXIOqU3KGfkf5evjZgbaWyI1o_qJfeQCpimTu10m3U1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=q0OQyRE82FFrZ2HXpYgQXyW_1Pb7_LGvD_KY0svZ615oSSUElSB_y5aVi61_caQNSgoWj4mjtqj_CWFdyRPxfv0Ob3ls7_oYsjbQB6XQHsvW_4oXa7G86Dhp9UK1FmAddfpo4sJv55NGAlJLoxq6RJrWX_3uTZZMDgpEz645WIM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=sKgxM-ZDaGrNtLCCFebKkq3KtoGIk1-0QOaLNmv9J4KGw88Bp72v0vDmxAerVg9ty558SwNFDFPUW7o4TJx7fjGg8Qvenb-OIVw03npikCvFjb4ml0d7AJQ-Fb4MoLYMVR2GYsoIXNAUitKZJcK8wyov6LePrCf_mNtg_o78aP41&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=CRKbFdHNsc6eYyj-w0OXF9-DtxLQQ9LDXG1Pc9oDeqswZoxmZ1cTyDnU0IsmeIc7kKOoKSuATJzq-sZj5sdPdiuzbfsire1Cuut2n2OQfvt06GrAZaH-PwFUBIs2dUmgnE-zTX9u5KFaMYY6ffmUzTcuh4wowug_DoOiY7LchaM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=ACitcilX9aJWi8yy6-RHzCNKimvRz1is2v4SLoN25HtZNp2e6IoYyqtY0HJKQSO1zzoqiqhkMk7NAkylVR1kOtgQYhICZsUyNxh_wIEVkSuz2j5MbJrNFA0yrUEtXVYHkXVWg30VIVb_Q0QS1_1kbrTT2mrtFM0H4GaOURgwHxg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=gz1am0E8skTQa8Ilgo1wsCIgkdXd0AVbmrrJsurtIh0m_r4z6h-t1s9WuvxBKzjC_Xg0TeKTddZeYZUWeG9nCOPAcdDC-M70fAF7tltfG3DiHzzLYTgt4gsx-aK4D_IOp1g95tRDQDbc1_rdOGECHTX3gcKIHblSVKkqSZOUG_01&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=UQOrAfp2BcAmnNRBJzkIKN_wgcTDVLAetUg6SnokKY-tHeEevxmzDHFtQeuZI3uHb7Ai7OD2z3DaCPfOP28Sk-5yH47OapULTby0YFxTNRCbIydmdutk8fOnOUF9YgVBpWrBPzLriy5qqRFoKa72Ed-rBlpv2WyeF5M_ndlQnog1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=w4vF_Pb4UMrD4aoIf_OdG75_eCPf632eWsn3g-IFbTiw1fBcSppBt81tIDAXtQhhacrDiNMk5ZPjOnimmz5_P_Dj3lhLdAL18kVqJxRSMDU8J298qJ4xQYgwnlvQ9HfRZP5i_xXIlnLi6X1seDosqwS6s5JlkL4nT_4KYyo1IGQ1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=BFcLGFSv0afO6IZ1dbxYifYURUkSiQ9NPbS4mriFetLjoopES6HmPTMrOYFekC35qbxRjkUz3dSW8p_aAihsfTz5lWV3mxUTculJwjLDBFG1QY1OchAGc_vMuLKQ7xR_dTLrC0g56LZW9Egp6LNCKc142RP6ppyDkSm9bCJGJ-I1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=PmLZhr2k4P4A1hgaN_bxea2Qnp13q0TzFZ5Xb5xkcvUHBfc1FIktHTr7ZmUkOz47A_P4bNsmlQ4_E5olPoxCrQDgqygxMiM8iOt-Bd_Zqc5NeW49aPHPQ80LHQK8bzH93q_vQSwIYZr9dYp0dq4WgwPX005ZLVySD2TsASelHBk1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=VNZZrPjDPP0ZNTRLqlWo6oOe3OjeNktMhDPrlCSgKIOpsNmXNAQCzjiQWF7GOiETxHVLuwHn1GNec9gDqsX1MUum8-YqpfoIXmRmnUU82wpw5YYCk0kKWrZ7VZqDNSOoCK-BuRNT20AfrwrV4mwiuqFOwyWyv4s6FMcIu8O7p9o1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=hrhqKmz2fS_2w4cKTkt4urZHxAW83aKCWhvg95gKqhujXf3ckXcjJYQUYpjl6vFdxM_UWgaRmb4R1ohcF-VhpCzhWwPy5V6NqFcJy7OtD_dsQvrWNhcDqu8tfY6tqreFtDDUjrOFvPc99rV6shSIl_1YN4Hb5JFjHQ97R406zvE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=L6vAWOaZxZQENeUAW3IsQy1Nk_WY6Hz2ymH1vhv3mvQTJxZNrH2v4Ldw1E86RrmvVWUqGVsI8zCSqZYe5Utks0ExPIqr413bqK2Q5o65-MEg1q1ZqHYFL3zivlOyjQU1KmyB7kkXqg-Biztzrx3DMHsh5BZ7yUAs_wMcMQcqDBmMohNngoVLYAIsHiCx4YhL0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=hcWeV75vHzfm3kTwtb03b-FsVIPkA4VLVlPrfCeCZHWvoNlOvYmx2wvKzqYSQGfLw4_KYILmS29MZarfDVNQNpYPwI5rR1zHtg8P1Ock1w_6YP8SBAg21Ysw3j8cxwhFKtrMbZv43C0hb8awYX3iAtJXMQs1X7Z8XTPYyuWTh_g1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=K2-rC2EuaNI8mXV-mE_0G8Dv7U-QsGpdZ7saA1CGc1moRqVQDLpKkXzu4-blT9fdFYhWc86jDkcwqBF0LNG97ay7PtotEmuR6TnahxeEp8R8dUjp5bql7Gbv7JH90kRGDkWsyYG2C78sA9Ag-CHHu-bO5FGjpHlpu4hfxFTS4Ho1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=eZuSDF7qH4YAXITnYhGNYJI6bvH3FnLWZ9L_VaFOikouJohxRPVxo5gxAIl8Sj6qGueZ7OTjdhFf1mFBSQR2NZ6YV3iRWMAlJ1TBtbOYQpjlEUhpCiSyIbTEkfRnsrLcl0up36YOCQsgjHKfQ-hVaJQVarLTZdufmcVK590qjgQ1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=hyv7AI1xgcBUzEEmE_eSetB9T52vpJ6yGrxEh_hAWkk8AxPBZAsUfzAhqQS6XrF-7nac8NQojKphtx38W84F5yL1hCpkB108MaKNrh1Kv_OL4AcegyAbS5Nyd-OBZcYL2eW8-oOjHoAglernGNW7lsFC0rXFnf1X88M9evyb9tM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=TwtX37-KLPZiSiMjB6eW6CHxLF1FnymQlFqFRAVOIYJlM0hNwPNfY5YzP7vQlmM_jy3EMj7fJyxeemPb3MsjJvtoYmRcrb8Eu475aUPa3ZuhrWc5FSRNEfyCkjTv-0WYtqtPis5wuiFNrO9_HhQPfe6SP4WADNipvWHPS-Ux1Fw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=FMlwWk546tzux5MeTXg3xWGKCjst40twEHhmjt_ywgjHHE2W5GRS3kycZ5R28PGc8Pu8fPcZJ_r2Nsdsi5nGZw1vWyjrs_M4zrKaBHbjHYZPP0uOZcX4AHgX3-oVTStZVWu6ZXibhoIQSFjOJnInULEuRLAW6q-HkeKYonCj_Ec1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=JErcaJTtkwm2ei6TZ6Mome2NzkQFt7jSKusAkcZncKIner0Qpql7ej3IzEeWXwJaSjpMXf0Emyrbaw5s8plp_Oprww_ueS6ZYxrjeDax-J2s0BZICt_pUelMax2H3Le6H0QwgbyH3jhrjS_cU1W5BNzgbWDFciGcxa06pR-dHNmMOa1B65hCD8CKkzVSiRoF0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=J__k16tGsnGg22cZ4KHWt05GA-ulCR0H0-dG7-tNtVYIIvxxVo4LIY6J_PFfscCqREB7rDu5tUh55JkUFp4eJ9ldar4mIvoTSfsg_nQf1nKy8vK6CcQmbS_z2m-GJcW6cgdbAHxdUDrQVNJuvGamcaSuDJdShlxHc5nItYJNsoVZg4vzDBcTr0J-71yk0Viz0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=DcWIJv5aMSkCms3sgddQ8-aLXaJt5CIkaT6XPsDmDXOKJc7yF94moNeUk3hfSe9rIit1hPhw0AVJcCwFmPxGB2rObcqru5MKoFBPW9dRbqpV3qo5ZmKXhbgduYFqMFTsX6Np-EGtZdrdj9SX4SqYG27RsqFl8xZOk08ok1gI6xk1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=WJQX32mfqi7A6bnJHfxKhQHa7kuiH3vhRVgGtAZDRNaYskA_07FNeaXy5fEiOXnBOzeApw-SbcIwCj-Dd8yFZ9UHLybbZYsiD7NkC39OqlDTX2XzRmV2jjaMKBBfRcarGH1ySOb6pcVVJRgWhtGrWACGKhwLCqLWg-s_vt2sRD81&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=2eMFowH08KIiy0SzVBZz75w09NJVi0kcRN2Y0iWTrw9Kerif5X9rvyZrlhX_46jqsSS4sj4-0a7znVOrmWMwxAWonpfknDc7-6g7QNqzJ_AAyCjeksgBOBKGXH-B5EslrV05cbjlRkZzUq-9hrmaDGjV7SjVC3PCajnNDV8vzqDO9YN53BYc3TMOmKYE4Ab60&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=6Rttl18g9hVlSDf13quWEd7JS4J-N71wPo5L2fIOfcNIy4kA1ai3Rv4JPM6ISACJkC45BKvrQzJujHtu63pyQdmpBvTQPTii0K3b0frDYC7JBcCFKsgiZIoK_onol4TPXhl71nCbGNVIllW51KGk_A8Ti1NRTGFUGieF-fuMu_M1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=mBAon_qUGWRIzBnfE6jr_RSIuK9RBf5lCrynoYnGVw2eCmydBXR_AyhbUkIRYL1fcbHQZnRn7KSnwvICP_bbZK5XXC-iyRg4JvmuLPG8I3BSsQD-wjsN_XX8LuR6l2YbMzJd7ZO9sYD7w5zrDOOvUUVGxPYG3OT_u-qiuvufn4U1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=V1JoK7A5XBGDBCgjIpSVP5mLp3G5EYS_JzNCtBZXEtVMfklMDXyFgIN2Pc1TyM_E2s0kMEDbXebBdLPvCdxIbjXqKSfEofaOin7YnuSsm4qWSrH_BdvdyhA4qKC1i0McTQg8wXgMd_R_PW0ZNsnEhIdc3tCJdzGEgaY_-h0Q6GE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=eR_npqcmaQT1dCy8MyowKhG9hHGYnNx1P73R9SHogxHuWM11QqUPufl5VCSd5QBcelBLMrUeefzmfUV4pV3QE36W8JIUEWehAaRANodBt8ufyl0CjQVqBy0BPKw3o6ZDHdsefnRVx3hJQgSk_zRxLMqNw9yPkvyW3vnJ7qkZUF41&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=zi_KPwxgrydHSGSZbVqTZ0Hmb_7hiSSfttSxJ7UoRi6a_AawBW5Wbxl9rvGqpseqlbao1eTnBM1kN7h93s-jVSKWC1KkJZ3c4vNVZN6Gq-tYm4JTQK7BywGYLAuakqkwPYrZ8t7Fn0rB8Gx7JDDqlI-_2r07Ro1gMqtKB20JKgU70F1Gc_SY27V0tdIybpgP0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=U4tt87P4TGeSgnnVBuz3bHwjxizpiUX86AlXiZSb0EIVbE_vnNkCsc9VgX52224sTHGTQeXhvg3wmZn2ED082PZWbA_GenYWFJQrbEr68tDv1LmFMHrcQCG2w9O6JFXMAgR4r7wgJo696dKUnY7Jkex5pTM8ZHgch86Ice6lqTY1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=QzAbTw-496ZUJa5QCX0IZT2CGCko14Ipg2-eX_Ipymh5QWjTUlqBpJ71W1TV1FTR1_9baPxuBAZPqtRqzK4SoCRRs4ZwObTmNS1gpL4meAYNj6iinkx9mNEvTeaaOnCA7qcHBVO6QiOTF-VRG0ox4lSzyYCL-WaYHXcRwFR7gABkwqmus2m6T4q1NPA5af7q0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=7LjNrwjAS-b_zE75bNVo5W7MfGLjWe8Yl5joEs5ZsDkCKwGAlI6XwT7Qhyal3Mtde2PxricTUbQGHNfcen7-cCFukv3TeXpqrsDnB8No0cOmYDq2ie4rjq75a_RP9vYbt7N5p6S83zgRlxMXLbfCE5gKZRtOgr5Cd5u-2wmB-MQ1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=XMsFLKM_tV29KQU1O91CdvN69euOE1ik3piiUqbGmMuGd9gNf63Qh8lmLq2TosZXDaFJl9DQtQyWS4VDsuNPgz0oWGyF1s1hOGWmzMO_LlDprhY9Tb0mvFL1S5OVgbyn2YFsj7JFiqVq2X6FqTFUgiMswkbQMGIraFn1h0YP5fU1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=vBJZ5Hc8MZ-Zx080zOFvGC2mNLHd8UiwuXiU3RmJxZvQoEaFsSgu4Qbu5UCVr-YP_JzMYx0WmDvjhFDGH3fK1Pya78NDkuRQkOxm6A10V5eWv0_KG9Oh5o4MUlfBEQvHzKCKsMi8mgDPa9O2ZEOqtuFRIadLxjQGZBadrYiPWfE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=LN0lFw3_HXB-V33ET-TBpgdhriOKklEVCnkiQ2rFw8OXenXWUVVFmRZLaDNxqr0seR9b6f3n6544LoXM35Ot5Rljt3k4N7PzkFW46NDtpTMDjw2zlfXPcPLvCdcTW7Whosb8umPlY6PL54EeMIpL-A2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=4lWoy8CzjwHBeskKLNuEi6Era0iiwBK7GmBTexTCWVSzAuANQUl787zKPIQLidaiW-ILNwdjLsi7ZsDff7u5t50MWisUwlPu_o6VEVXFGzAlHoC0-D1N3-Zex8Hz3QNaDyAeKwBb8hwXkRjP1hQZ0SoHjhbzx_TuTcP05D7j_Zt_GNko8fCmwUmvgx3gvJNm0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=i2kV6VWu3CrIYwdyp8fpd_Lzb1rZ9vKXDr1_CqYcizDEn0xxY0lKNg3x5AwKq8fxJiqj9tKFCzn7q596QGuahZeJTmgrpxJyZMvZdJMTYp2P-nANOuVgIW9f5Ectv5EFNc8egEk9TwKA3a54bhQLLg2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=FmdpR_vr5Ioirs6Qoww3Bqea6x7L509zInULJ-5_ZLJbZ_brwc-NoYGOfvTi-OJHT9nVqshESLXIjWX7rj7bdhKyJbAt921qO6HpPIXUJMabpvjwJ0RvwvgP6jp_IQiUxNcZdEfSqBghAFefhs4lgNytASrTgLE41iww5v12aqg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=25NX_sOJQ1gyMe9WhP2uY0bMuFw2cKZjqNWFiIAO9fUULN7T8mqqDI8GpsGwD3wx_NrgmmnmxMKQ1kv4qi2xlg5RiVmkKQnQ5HvERcwpCgkkBJu2Yo2EMNOM3CweKjb4fH9krq7f_GnhAfIARw2_Edykq3-bT2o6dxNYd54A2BY1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=qMSOIAq1C_prGJFIsZzVZAx6ut07JRNhqwOgHZ66UgX3lvYnZi2Oawpfw-SFJJFp6OK1FZdnUc670gjqlCdOPmACluLmztgqdqhFroQzmOdYC6qysNLO8NMs7lKise6ZmBORRw_ubE7EE2ro1s-H9ocC3mGlaPFDL0GqX6z985g1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=nD3jqbw4SnVOP7qpbTelRNlPtJxVcwf2h9DW1_3vbc686lr5B5HsjuSCaeNw70S9-wDWtC_dvnHUT2cmMbwKUhhUGaQDIzStsqakw2vLdXkqvLJpRh5LvgaAtZVhe6yR5ZqKReMMr-LRlNsiX08jmceEqCtksA5bXPpVzRuJBvE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Dx1g3UT3vhh6ypF3JiSVN-KSJe94OgFp14tiKgcaeUOXYlNgL7IqKsVNEguve5tfzDSTEt3MVYMPpVYanzS43t8mfzJBYub8Z6ihJSYbfrdWWfpxpZ78cbOU_BO9eyBeQ8c6OOg0Do5Z0_fix1W5GGUiqIX-b7egI0KfjDdOviw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Fv3CnS_XDz_I5MWEL-p4yla7FnChyy1xt-AAiMXJD5kP7I7CJvoil6u6PEUe1gn-quXQQx1I2NVzY04BC1DT3Z7Qd2jF_KwxspkVlMW_3AAFK0jiwJUZFL5XCXC9jLV-FQADnVJwHEyjdBPKzOorJ23DYLZeJUros0cBzCF6l5c0caCYyDtSCFXPA8AWf5UH0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=KdMnaSfPWKNFYVPuATkNPiisQoclM6CcqGFP9oWMHw8rF2WbAQDrhXRX8NgrwMRwyTli94XazK1tX4_pHgFE4st4TDIt5HUPXD7Sh_PmbC8GiendGAPiXM84uuvqBnU2AjHfVizxYDAZ8H25ojd8ZdyULdswDdXldLYvHbkE94VGtFjjvWoVKO93pOGrFXatALkng4-r9gXMvxRx1IP9Yg2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=OOG6b82wcXS2KTJO9hgPb1SqALpBi1ezGd-BXuQEENsGunrkHwAs6ksfjMp6248YUPYXwGRMAGcZrqWJuxuMyWIL-8n-hH9d7l_les6xUaPJF0bDbItLeEZeOvQF2AQkgcbJBYiBqDdeCOSNpoT4sw2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=mYts_qpUXu7KidHjzAUkzB7c5QapHWZ9wgjJF7rAt1yxhsQCRWWxRzTtduGaCGvvV7DlpSRSUl-EiO7xZy6xPFCHsGqAbZpRmIYzo9sMXRcglkpSDbB2FGAjlCZrpbuILj8zlalDXr49kwGT78ullTW11FkgpcXThZ_DoxF3jCM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=VmrU8kVasVmi6AcQk49SblMhlUrHxoq35ca-ekucfgz6W0L-GskSjzCvYk6LqdV811TY45VgDT1OwfeAo77Y1iCo_jXcCWy3_iw-Rdt3flw580AniNHOJryiiJH3Z0XS9R69zr7G9a-V1JpAhJfN5aW5Z7J2Ss5HgtOg7wmZu7adHUoLqQEuH-2JsgZCjlGG0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=N5qwjbr4itQ710mfWnJzRVQc-Y3O96kxvyuOfqlxAsVw8w0xZFdtxwZyp51r1qaRaVnmgRgU-apK1TiFg5jgz77MntxgMz0xsKtSLHIngM8ni8IpDW1XuQvH39qZbQp9_qz1EdfLo4LUhkKs59VaTbHdCyz9ePtJkgjkX_ZHIHXyrx-uL_E7NVh2pZlDmwHO0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=kSLVRuWcYpCp3MwDiEgoC8PXf7ZxHRO8GJc9n-9BME_YsZIYL0x6ZicVw_tHYf99d0qdDxOtiRABj1yFZF4IOdIwNNuvuYPAHuWV_OwjPn1i0Ss2s0jX6KPOcRKuSxIEhQPfOhkCCHX19E_FydKHwQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=BibsdhJNeBDQOYNNS1cBBLMX8BWNS1S4rxHn0DXa8cgT5p5hbJ0lo3pMqFwb2onAe1D0PHVwlvpuNpy_SwbsfITKeVcHfq5ljPQrWrq9uVOJRRnc4_2A10sg3N3lFFEV0ffHZgG06ea_z-RIQgBoPg2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=-5lTywuZnDQeU0LZe-nSYcE0cVvQUCVG6wmsZj9YgTXQ4tcvwGeDSibwrEXkIo1tci_hiAX7cG3zTc-fUFXjrNKECT9O1l2NDtou4MNyNsGWznBEcXMGT86V-1IpMHPSphR5Ifq7xHMflorfx4cNKuu4MrvnVDJEZsCaEGzZDrE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=ZKNCb8R01g2U_LTInJYS0H1CyepIwB-mcURvtqZZgop8O7Hox2X4x9MESWVnDHJusxttL5jZ6XGChReucvqgm5XrdZ1yPeemiPjb9kGHmuOnT6hZlOFBmlfYh22LZT1iWhryzBjOwEf7FM8oRnBLsnHbXqXBFmJ37E5fH3sKCLM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=uDOLN3P9C6B6AwiFFlaM08eXQ9cjyFIsepf6mbmTmvBKzcjD2F2eS2TULWjwOLE90BceA4M-xJ_MFRLYmpJAYTLLTWZCxNXIKCHV0_At7IzyYkBjzCSxPIWPxzDZL9oaCDvNRgA2zFR8icMasjTCKmxuTYkplFSweR0NKAJsEzs1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=RZCEjwS7rHujXw0q7K_eeTJbanWKgIqFu2gOu6cXK1HwdLCZYSHdi-JtF4B5slRRcdhrSyqxyRLbb-zphoN6EqlEhi--ZrIdLNIcUzfnFbkeXXHuGKZmglSY9ImsPQNUXQQo8t-HJLUmWbCh5HFpDA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=z7x3Fcp2VLKiA2ZQzIsHgT8PbALg2bN4JfttUBrq9lpdEe6ieS7wNFpT398_ndxDgh_jZi2xBe59uz0XL-WmmsTtJ2vbGVdiMRVKwLa95ZHjumovBt_todqEvP2Us70NpvVMImTKd3-ZzBG1j7wDTlU_IfWpEzzdm6zPbfe8Slw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=DKRMT_qaDobEyIkqiW7ZN1Ra0YprB_FvaeguDd2Z9UFsEB_WPvrO0DPdEP4Rkz4U9eKbyqc_QbCwEhdN31-ZOWlNrQZk0IUpMcVCnqCwHI_lLMfogInfsq3Q81glGR4r3sN0ybwn6M9RW02PRT6rDy-Ovu3uxIGYdtEIwcb8q6A1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=tWcB4qEjYh70v3i7rZARwmclaDaUCTEuShFufq37U0EiM0DyUIxzfKUVD43FlQlFn1xgXyPzr5QvZ1538sNKfkRMNGVv0RBTmfVgMR0gRP24bsKsxyU1sZpWJTorLDb9mdgicA_M4Xp9DyAvdKKjDQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=4ysXCw_iKMMOxKUGOEb_OT8RgoNfRegdn-oiR6x-FeCwLvmOx6uD_n6YL_tNe9ZihT06mkeW9r24BbNlzwF63HGT7dN0KAtSEtm4zkZZvCoAo5bsiWJrRnSBiqjvDa352IDOOOXwUAlvY4tub1wnPncYM9vEY100uGEOsvwqpTA1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=G1RHSrLhOce_oGNZ9zZIOg8NpxXikkS6NyfTd9Xi7HcSK-aljz3EGFcGyrSz7rKT92kgqQ24KMx7Dgxhfqq67xoNxZ29rdLoi8UspeyLI0UhRG_-_5j9iP5DD7vLDpQ1zuN5rCxs2OoVn89EGFXDFw2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=fW2fZ53ivl27CAE4A3162BkUJhSHfK8MhKKl3IaUV26jeGXm5j7squQP03I-PssF4A1_LeOwGTIPNyBtVQJUymIYjnL2c2OM1pabqUBTn9qYi4tvn5vJocJmYsEZWxgQY0bCI9OhSaAYnheUyVs5aCSm1jjbeaYbG4ugQWljReE1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=IKTVpkYg1x1DTfvHoaBPE8dZ-z5nRoW614VtVNRhMjCIfvKiRfklvXWrWN1Nafll2LWY77LauzJqpK48jKqanQVA2MRErzTCo8YFAeQldt6F86vecAK8vfn-vD3u8W1_69m0joaZKXHYNuqA59Y9KgYQ_DxOQIHtltm-9gDXQfw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=EfZLuxpoWJ9-8x8odgmfgpTIKhYB0JLm4abpyavH8KL7wVMphhvA0lW7QXCGCjHRIt7KraSulwp9pDVlrZb4u3y8-6K10VE6PxfqfFQKek82qzi2klXo89K05x2KMUEXNyYyuUr8mke0OXmxS1a66AgrJRPgs34flC55tDEmFNU1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=1zxgpknucd0B_oKyAOrVQAeB4GPP1Llp6hkQ_UQI-h6CX1gInOhnhU4OugmiOrypKeNs_JeStD-pPrSEeT5ZnmVtrZowvEg2nseHoS1NKUYC6bmKKX9pds_DrzG74VGJ9-FQeTDEHF0Xf4MWibrLrmaeRBglMfbhEBd-GdF8MBg1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=gCjzLbEjGqyLl8UGTlQ6GwUp5NVvdeYvgcQRonX3o15yz_i4d0DpuWXBRNKk592eK2kovb_VebNnYlPtTZHtEdYY15c3D-3pPGgMWz3GHXBlBZxquN63wgELQPt6kSKfHBOw_cOXRz2AgdULDTzhfw2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=RcwgfRnhq9kMVUx97sOqhrYw8pqK4xkDEljkcw34YO_LX37MnGlcACfBg0N58KRNTqISgPp65sXYwEK-QOrG4j_gPwW4rBoHlPgpLKTCxpqwD5aYBJR-UPmoukr1x8b4m-RdhEc1ETA5BphmwsJpsFU0vNKR5xAa4V-LIOpvMAw1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Gc6E8DxFt7YjjCStYc3qCchvSbLg8rnKdZGISHCFeEq2FniZUVVZBS4pCfMYOo8WVl_RVZ7ORCxgDVi7yMwJoHVihE-Ph_SrogNjKVCz2fBa77NWmroEBbK2mkM4SwWa1nM-Chi_hqgIrbRQqwrHh1VZWYoxDt71URCK2XrGYrM1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=8kKBU7cZC8obk-RxxmrGDHZrPKKSBzARO5PwYcrDas4PdYM4s-oDZO-ReDo5f12GVu2S2hcCERYjBN6Bh9zW-j4p2D1pa9my2JRpXiXrBWPSSpArDUKVazCjmFQAY8Hmuvy9Q1qSQEgGWxMeJXJ9UZvYyDDkI4i9qUa3kazK5_E1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=ln84m7R42FL7cswNanlZlhhhZeoUsD3Krt9y4xAAP9VMV54YUi48eel2pJQxRnD7xQGqAgXFOVGjwjgPzi9S2S2J96YgtN09N8A3Z68afkgzU-fUbU1QKnT8hgk-LeJ6vh0_FmKgKoPfZMXfAyhFbrfUi8YlJgR2vAj1Nbt2i881&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=D-Pkck8sd-x7n3oM1YM6jX6iAFFfk0uA3O1ug9MHY0gM6UajC0JbogUf2rhaI3hNIglZRvrA22KZKjBYBd_P_BX09izCD6BEKeJ9ee5TwwdKR-E5y-Sm0IF695C5sQf6LpKwdz-us-JX4z74Fx5NR1P0G2X__Bq3bw46z01a2p81&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=0tUC0Ky2VYvoHKcfDuQlpJYiLCDwDJo5FaMnlSj4YviYkLoqFrTLIcIBuk2clJDyyt-E3F-UbCgiouiIibYVuXcxcG91HvecbZnu5uOVLqMSmDLETVy56_KTKl9C15OT3MJwC72sMNQ_Ks4myn_BlonsJD_z4VZT4qB8XMVDruI1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=9iOFz_of09AuJoGycDyZ7_7CeBaCQZZO1CK2ibc_I3f2QrJGOBJqo27aoCHXyaU3SNoN90ifuY8FN_Fml2PXZDkO6Tp6vbNsiZUiGyoCDNvrx2Jpmy_SCTXl8djkSnHRDeLi77vqJCfk-eee6U-kJv9GY6EMILJyKJQu6UTZ1m01&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=OkGgaiCwj3H-2qMV9CFCMqFdG_xotgp8ioXfhTFjnOTsLOvHstadnyGVrebKXwE1506dx20aj9zfkBh7WqSRFnBghPbyfu2V7VqDKjzA9KlKa620P9gV3TBdYGE4Bn6e9sy6LgC9jkMoTQn_vXNnRA2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=JzX9iJ5mKYtfwcVyShhwAp8mH7Z3N_tusJHlbiRw9h3wG7eVh9MqG7VXvaNM6qW6QPMNnNyyUsKAvAgkFeCN4g6b7kQjUiyz8f9ZUyMVGwOVtEXdxBSIle0aw5nRVzGwYSaBX4WxtYMVUOjP_aTGFQ2&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=giiWrl_Z8FW8O1_7E9JDrVeRYcECHvYWjihkQbcsg1elPzHBB5SMhHyaFCy8rQ1-KVjVfd1h-NZ6rXbXGurYfeBEEjw2jd8-vmxiSuueKay4H7fXyjHskVhdqKd4rvjgzqsqY_h0BqoLhPxv4oVOhjPdBMJCDOULsET_FcmTcys1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=6JRWP_Nl87_AdbGjNZCtDIVxXl1mY0dl13rpZ1SCi7Bx3jLyp60q0jyY4wLu_3Qlzuw_ABhJjhVPlOKL3JWwt4ZBs4aFYY-nlSRKTmwBNuOwVpiidruqLCCBOQujCVpCw_LEmxAYU8-86w7cix-aS-kUGnuoRcYFA6hUKJwfbQY1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=Vkk0XH3QIS_5bEILHCKy9Y4wLLMb5lySEIIxY60bCSDrbwXJhKYZ5TzYaNxPARbLMG6W96JQTFsnFXSe3W6z8RLXbaE3GQCVRLeouAbDp1c6Ila0ULTzSpbTIc8HGaRKnCd1pNguQq1nREF8_Jjx3h1bHMm-ygfIkUF2ZXaBGl2kaetKIhzpXjQvnvcrazka0&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<script src="/bwssbtoc/ScriptResource.axd?d=cQG8g-R5H57L_3MUzYOumsCnhas9J6Cc_ecVH_Ui7IMO5ccpqhFpsAR6-K7QY859ys2Nw8ujcLHu8re5Aubls1KqbbEUu_SWJUnkdHPvSJEVaIIYqxGOQ_QfRNlGLt4G9ROhUrtuCVGx3lojrH3HOqrNN0hYrUWiM8eupNyyDZI1&amp;t=ffffffffda74082d" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="088850B2" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="+UitLCvP2SbZ4eg8x/KNW0qnZYXtJWXamXUUWsg1uanjnTnYFoAxPXjRAyaW/QOjPAoqfaZ+g+fdIKNxTROcetf6vMINYwAToS0Ny36KEdafPHhpeM9mEKmVxdLDGdypIngY9VIFWTgxT8p4tFx/LjGc8PKLYzKq3StmQbro6qZ0ZeuKDlTgDXAvb0iKZNZKskRnEKY9PLrQ35jzXIX9uWV5DV7tjhNYs/VLRuqDYHDrGm5gHre3VT0gT8dcOTX6cUJvOmMDnsCr1lp97hfTx74YU45h43aIAdpEemupQJM=" />
+</div>
+    <div>
+    <div id="contents">
+				<div class="box">
+					<div>
+						<div class="body">
+        
+    <div id="adbox" class="auto-style1">
+ 
+        <div class="wrapper3">
+            <div class="slider" id="main-slider">
+                <!-- outermost container element -->
+                <div class="auto-style3">
+                    <!-- innermost wrapper element -->
+                    <img src="images/property-deal.jpg" width="300px" alt="First" class="slide" /><!-- slides -->
+                    <img src="images/Ownership1.jpg" width="300px" alt="Second" class="slide" />
+                    <img src="images/Owner.jpg" width="300px" alt="Third" class="slide" />
+                </div>
+            </div>
+        </div>
+        <div class="user_card">
+
+            <div class="d-flex justify-content-center form_container" style="margin-top:5px">
+                <div>
+                    <input name="ctl00$ContentPlaceHolder1$txtuser" type="text" maxlength="30" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$txtuser\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="txtuser" class="input100" placeholder="Username" style="height:18px;" />
+                    
+                </div>
+                <div>
+                    
+                     
+               
+                
+
+                    
+                
+
+                    
+    
+                 
+                </div>
+                <div >
+                  
+                  </div>
+                <div>
+                    
+                    
+                </div>
+                 <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customControlInline" />
+                        <label class="custom-control-label" for="customControlInline">
+                            Remember me</label>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center mt-3 login_container">
+                    
+                    
+                </div>
+                                <div class="form-group">
+                   
+                </div>
+                <div class="d-flex justify-content-center mt-3 login_container">
+                              <input type="hidden" name="ctl00$ContentPlaceHolder1$hfvalue" id="ctl00_ContentPlaceHolder1_hfvalue" />
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hdn_pass" id="ctl00_ContentPlaceHolder1_hdn_pass" />
+                    <div class="d-flex justify-content-center mt-3 login_container" >
+                    
+                     
+                      
+                        
+                    </div>
+
+                    
+                    <input type="submit" name="ctl00$ContentPlaceHolder1$loginbtn" value="Login" onclick="return Validation();" id="ctl00_ContentPlaceHolder1_loginbtn" class="login100-form-btn" style="height:40px;" />
+                    
+                </div>
+              </div>
+            <div class="mt-4">
+                <div class="d-flex justify-content-center links">
+                    Don't have an account? <a href="Register.aspx" class="ml-2" style="color:red; font-size:22px">Sign Up</a>
+                    
+                </div>
+                <div class="d-flex justify-content-center links">
+                    <a href="Forgotpassword.aspx" style="color:Yellow; font-size:22px">Forgot your password?</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="testimonials" class="box">
+            <div>
+                <div>
+                    
+                    <p>
+                        Change in ownership of property having BWSSB Water Supply and Sanitary / only Water
+                        Supply /only Sanitary connection will have to reflect the change of ownership against
+                        the connection number(RRNUMBER) alloted by the Bangalore Water Supply and Sewrage
+                        Board. In order to obtain the service, the consumer requires to apply online through
+                        this site by way of paying a nominal fee of Rs.250/-.
+                    </p>
+                    <p style="color:red; font-weight:bold;">
+    <strong>Note:</strong> When applying for Name Change/Ownership Change, please use this portal only if there is no additional construction or reconstruction since the sanctioning of Water and Sanitary connection from BWSSB to the premises. 
+
+    If any additional construction or reconstruction has taken place in the premises, kindly apply through <strong>Online Water Connection - Jaladhare portal</strong> using URL 
+        <a href="https://owc.bwssb.gov.in/" target="_blank" style="color:darkblue; text-decoration:underline;">
+        https://owc.bwssb.gov.in/
+    </a>
+</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-9 col-md-12"> 
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 style="align-items:center">
+                        <i class="fa fa-flag-o red"></i><strong>Dashboard<span id="ctl00_ContentPlaceHolder1_Dmylbl">(Oct-2026)</span></strong> </h2>
+                    <div style="float: right;">
+                        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ToolkitScriptManager1', 'aspnetForm', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+                        <div><input type="submit" name="ctl00$ContentPlaceHolder1$ShowAllApplications" value="Show All Applications" id="ctl00_ContentPlaceHolder1_ShowAllApplications" class="login100-form-btn" color="Blue" style="width:268px;" />
+                         <input name="ctl00$ContentPlaceHolder1$fromdatetxt" type="text" id="ctl00_ContentPlaceHolder1_fromdatetxt" class="m-wrap medium" Placeholder="Select From Date Here ... " AutoComplete="off" />
+                                    
+                                    
+                       <input name="ctl00$ContentPlaceHolder1$todatetxt" type="text" id="ctl00_ContentPlaceHolder1_todatetxt" class="m-wrap medium" Placeholder="Select To Date Here ... " AutoComplete="off" />
+                                    
+                                    
+                                    <input type="submit" name="ctl00$ContentPlaceHolder1$datesearchbtn" value="GO" id="ctl00_ContentPlaceHolder1_datesearchbtn" class="btn" />
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table bootstrap-datatable countries">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Particulars
+                                </th>
+                                <th>
+                                    Details
+                                </th>
+                                
+                                <th>
+                                    Performance
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Time Limit As Per Public Service Guarentee Act
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Limitlbl">10</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_limitgreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_Limitblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">100%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Received
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Recdeivedlbl">727</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_Applicariongreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100" style="width:100%;">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_Applicarionblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100" style="width: 27%">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">23%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Total Approved
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Approvedlbl">110</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_Approvedgreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width:15%;">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_Approvedblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="43" aria-valuemin="0" aria-valuemax="100" style="width:85%;">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">57%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Minimum Time(Days)
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Minimumlbl">1</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_mingreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100" style="width:90%;">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_minblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100" style="width:10%;">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">93%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Median Time(Days)
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Medianlbl">8</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_Medgreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:20%;">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_Medblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">20%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Average Time(Days)
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Averagelbl">4</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_Avggreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:60%;">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_Avgblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:40%;">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">20%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Maximum Time(Days)
+                                </td>
+                                <td>
+                                    <span id="ctl00_ContentPlaceHolder1_Maximumlbl">11</span>
+                                </td>
+                                
+                                <td>
+                                    <div class="progress thin">
+                                        <div id="ctl00_ContentPlaceHolder1_maxgreen" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width:-10%;">
+                                        </div>
+                                        <div id="ctl00_ContentPlaceHolder1_maxblue" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:110%;">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">20%</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    
+
+        </div>
+        </div></div>
+        </div>
+        </div>
+    
+
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.CalendarBehavior, {"cssClass":"cal_Theme1","format":"dd/MM/yyyy","id":"ctl00_ContentPlaceHolder1_CalendarExtender1"}, null, null, $get("ctl00_ContentPlaceHolder1_fromdatetxt"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.CalendarBehavior, {"cssClass":"cal_Theme1","format":"dd/MM/yyyy","id":"ctl00_ContentPlaceHolder1_CalendarExtender7"}, null, null, $get("ctl00_ContentPlaceHolder1_todatetxt"));
+});
+//]]>
+</script>
+</form>
+   
+    <div id="footer">
+            <div>
+                <ul class="navigation">
+                    <li class="active"><a href="#">Contact us</a> </li>
+                    <li><a href="#">Disclaimer</a> </li>
+                </ul>
+                <div id="connect">
+                    <a href="#"  class="pinterest" title="pinterest"></a>
+                    <a href="https://www.facebook.com/pg/Bangalore-Water-Supply-and-Sewerage-Board-2189192654681132/" target="_blank" title="facebook" class="facebook">
+                    </a><a href="#"  class="twitter" title="twitter">
+                    </a><a href="#"  class="googleplus" title="googleplus">
+                    </a>
+                </div>
+            </div>
+            <p>
+   &nbsp; @ Copyright&nbsp; NIC, Bengaluru &nbsp;&nbsp;&nbsp; BWSSB :Last Software
+                    Updated on 04-07-2026. <span id="ctl00_lblBuildDate"></span> 
+            </p>
+        </div>
+    </div>
+    
+
+     
+   
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+<head>   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
+	<meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>Right to Information</title>
+	<link href="/rti_portal/static/assets/fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Bootstrap core CSS -->
+	<link href="/rti_portal/static/assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/rti_portal/static/assets/css/style.css" rel="stylesheet">
+	<link href="/rti_portal/static/assets/css/responsive.css" rel="stylesheet">
+	<link href="/rti_portal/static/assets/css/themecolor.css" rel="stylesheet">
+	<link href="/rti_portal/static/assets/css/owl.carousel.min.css" rel="stylesheet">
+	<link href="/rti_portal/static/assets/css/owl.theme.default.min.css" rel="stylesheet">
+	
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" href="/rti_portal/static/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+	<link rel="icon" href="/rti_portal/static/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+	<link rel="icon" href="/rti_portal/static/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+	<link rel="manifest" href="/rti_portal/static/assets/img/favicons/manifest.json">
+	<link rel="mask-icon" href="/rti_portal/static/assets/img/favicons/safari-pinned-tab.svg" >
+	<link rel="icon" href="/rti_portal/static/assets/img/favicons/favicon.ico">			
+	<!-- Scripts -->
+	<script src="/rti_portal/static/assets/js/jquery-3.4.1.js" ></script>
+	<script src="/rti_portal/static/assets/js/popper.min.js"></script> 
+	<script src="/rti_portal/static/assets/js/bootstrap.min.js" ></script>	 
+	<script src="/rti_portal/static/assets/js/custom.js" ></script>	
+	<script src="/rti_portal/static/assets/js/owl.carousel.min.js" ></script> 
+	<script src="/rti_portal/static/assets/js/custom-owl-carousel.js" ></script>
+		
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel();	
+    
+        $('#menu-btn').on('click', function() {
+			$('#mySidenav').toggleClass('active');
+		});
+    });
+	</script>		
+</head>
+<body>
+	
+
+
+        <div class="middle-bar">
+            <div class="container-fluid">
+                <!-- top-bar start-->
+               
+               <div class="top-bar">
+				    <div class="dlab-topbar-right">
+				        <ul class="nav">
+				
+				            <li><button class="access-btn" onclick="increaseFont()">A+</button></li>
+							<li><button class="access-btn" onclick="window.location.href='/rti_portal/'">A</button></li>
+				            <li><button class="access-btn" onclick="decreaseFont()">A-</button></li>
+				            <li><button class="access-btn" onclick="toggleContrast()">High Contrast</button></li>
+				
+				            <li class="nav-item">
+				                <a href="/rti_portal/site/faq" class="border-0">
+				                    <i class="fa fa-question-circle mr-2 text-theme" aria-hidden="true" style="font-size: 12px;"></i>
+				                    FAQ
+				                </a>
+				            </li>
+				
+				            <li class="nav-item">
+				                <a href="/rti_portal/site/help" class="border-0">
+				                    <i class="fa fa-info-circle mr-2" aria-hidden="true"></i>
+				                    Help
+				                </a>
+				            </li>
+				
+				            <li class="nav-item">
+				                <a href="/rti_portal/site/contactus">
+				                    <i class="fa fa-phone-square mr-2" aria-hidden="true"></i>
+				                    Contact Us
+				                </a>
+				            </li>
+				
+				            <li class="nav-item">
+				                <div class="dropdown">
+				                    <a aria-expanded="false" aria-haspopup="true" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+				                        <span id="selected">Language</span>
+				                        <span class="caret"></span>
+				                    </a>
+				
+				                    <ul id="language" class="dropdown-menu dropdown-menu-right" style="min-width: auto !important;" onclick="langUrl()">
+				                        <li id="en"><a class="px-2 text-white" href="/rti_portal/en/">English</a></li>
+				                        <li id="gu"><a class="px-2 text-white" href="/rti_portal/gu/">Gujarati</a></li>
+				                    </ul>
+				                </div>
+				            </li>
+				
+				        </ul>
+				    </div>
+				</div>
+
+                <!-- top-bar end -->
+                <div class="row py-2 align-items-center">                    
+                     <div class="col-12 col-sm-6 col-md-4 logo-admin">
+		                 <a class="emblem_of_india" href="/rti_portal/">
+		                     <img class="float-left gog" style="width: auto;" src="/rti_portal/static/assets/img/government-of-gujarat.svg" alt="">
+		                     <img class="float-left gogi-2" style="width: auto;" src="/rti_portal/static/assets/img/government-of-gujarat-iwdms-2.0.svg" alt="" >
+		                 </a>
+             		</div>	
+                    <div class="col col-md-4 col-iwdms">
+                        <div class="text-center iwdms">
+                            <h3 class="text-theme font-weight-bold m-0 text-nowrap">
+                                Right to Information
+                            </h3>
+                            <p class="m-0">
+                                An Initiative of Government of Gujarat
+                            </p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="col col-sm-6 col-md-4 digital-india">
+                     <br><br>
+							<p style="text-align:right; margin-top:-4pt;margin-bottom:0pt;" >Contact No: 079-232-58077</p>
+                 			<p style="text-align:right; margin-top:-4pt;margin-bottom:2pt;" >Email id: onlinerti-support[at]gujarat[dot]gov[dot]in </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+<script>
+
+let fontLevel = 0;
+let increaseCount = 0;
+let decreaseCount = 0;
+
+const maxIncrease = 5;
+
+function updateFont(){
+    document.querySelectorAll("p, span, a, div, td, th, li, label").forEach(function(el){
+
+        if(!el.dataset.baseSize){
+            el.dataset.baseSize = parseFloat(window.getComputedStyle(el).fontSize);
+        }
+
+        let newSize = parseFloat(el.dataset.baseSize) + (fontLevel * 2);
+        el.style.fontSize = newSize + "px";
+    });
+}
+
+function increaseFont(){
+
+    if(increaseCount >= maxIncrease){
+        alert("Maximum Font Increase Limit Reached");
+        return;
+    }
+
+    fontLevel++;
+    increaseCount++;
+
+    updateFont();
+}
+
+function decreaseFont(){
+
+    let allowedDecrease = increaseCount + 3;
+
+    if(increaseCount === 0 || decreaseCount >= allowedDecrease){
+        alert("Maximum Font Decrease Limit Reached");
+        return;
+    }
+
+    fontLevel--;
+    decreaseCount++;
+
+    updateFont();
+}
+
+function toggleContrast(){
+    document.body.classList.toggle("high-contrast");
+}
+
+</script>
+<!-- middle-bar end -->
+
+	  
+ 	<!-- middle-bar end -->
+    <!-- Navigation -->
+    
+    <style>
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+    
+    <div class="main-menu">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i> Menu</span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/rti_portal/"><i class="fa fa-home"></i>
+                                Home</a></li>
+                        <li><a href="/rti_portal/site/user-manual"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                                User Manual</a></li>
+                        <li><a href="/rti_portal/site/faq"><i class="fa fa-question-circle text-white" aria-hidden="true"></i>
+                                FAQ</a>
+                        </li>
+                        <li><a href="/rti_portal/site/help"><i class="fa fa-info-circle text-white" aria-hidden="true"></i>
+                                Help</a>
+                        </li>
+                        <li><a href="/rti_portal/site/download-format"><i class="fa fa-download text-white" aria-hidden="true"></i>
+                                Download</a>
+                        </li>
+                        <!-- <li><a href="rti_feedback.html"><i class="fa fa-bullhorn"
+                                    aria-hidden="true"></i>Feedback</a></li>
+                        <li><a href="rti_mobile-app.html"><i class="fa fa-mobile" aria-hidden="true"></i>Mobile
+                                App</a></li> -->
+                                
+                         
+                         
+                         <!-- we are putting this -->
+                         <!--<li><marquee style="color:red;"><h4><b> RTI Portal will be unavailable between 11:00 PM on 10/08/2026 to 03:00 AM on 11/08/2026 for maintenance activity. Any inconvenience is regretted.</b> </h4> </marquee></li>-->
+                    </ul>                    
+                </div>
+                  <a href="/rti_portal/site/login" class="btn btn-sm btn-theme2" style="position: absolute; right: 20px; top: 5px;"><i class="fa fa-sign-in pr-2"></i>
+                        Login / Register</a> 
+            </div>
+        </nav>
+    </div>
+
+	  
+<section class="main-banner">
+	<div class="h-100">
+		<img class="img-fluid w-100"
+			src="/rti_portal/static/assets/img/RTI-BAnner-EN.jpg"
+			alt="">
+	</div>
+</section>
+<section class="news">
+	<div class="container-fluid">
+		<div class="row">
+			
+			<!-- 
+			<div class="col-sm-12">
+				<h5><align="center" style="color:red;"> RTI Portal will be unavailable between 11:00 PM on 10/08/2026 to 03:00 AM on 11/08/2026 for maintenance activity. Any inconvenience is regretted. </h5> </Center>
+			</div>
+			 -->
+			 
+			<div class="col-sm-12">
+				<div class="news-bg">News</div>
+				<p id="marquee" class="mb-0">RTI Application is in phased-wise roll-out. </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+	
+	<main>	
+		<!-- Page Content -->
+		 <div class="grievance-statistics mt-4 mb-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-lg-6 mb-4">
+                        <div class="h-100">
+                            <div class="card-body py-0">
+                                <h4 class="font-weight-bold text-theme"> What is RTI ?</h4>
+                                <p class="m-0 text-justify">The Right to Information Act, simply known as RTI, is a revolutionary act that aims to promote transparency in government institutions in India. The Act came into existence in 2005, after sustained efforts of anti-corruption activists. It is termed revolutionary because it opens government organizations up for scrutiny. Equipped with knowledge about RTI, a common man can demand any government agency to furnish information. The organization is bound to provide the information, that too within 30 days, failing which the officer concerned is slapped with a monetary fine. <a href="#" class="text-theme"></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6 mb-4">
+                        <div class="h-100">
+                            <div class="card-body py-0">
+                                <h4 class="font-weight-bold text-theme"> The objective of the RTI</h4>
+                                <p class="m-0 text-justify">The basic object of the Right to Information Act is to empower the citizens, promote transparency and accountability in the working of the Government, contain corruption, and make our democracy work for the people in real sense. An informed citizen is better equipped to keep necessary vigil on the instruments of governance and make the government more accountable to the governed. The Act is a big step towards making the citizens informed about the activities of the Government. <a href="#" class="text-theme"></a></p>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+	</main>	
+
+	  
+<style>
+.closearrow {
+            width: 50px;
+            height: 20px;
+            background-image: url("/rti_portal/static/assets/img/close-btn.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0px 0px;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+        }
+</style>
+ <!-- Footer -->
+    <footer class="bg-theme" style="position: relative;">
+        <div class="top-footer">
+            <div class="container-fluid">
+                <div class="row bg-secondary text-white">
+                    <div class="menu text-center">
+                        <ul class="nav">
+                            <li class="nav-item"><a href="/rti_portal/">Home</a></li>
+                            <li class="nav-item"><a target="_blank" href="https://artd.gujarat.gov.in/">ARTD</a></li>
+                            
+                            <li class="nav-item"><a target="_blank" href="https://dst.gujarat.gov.in/">DST</a></li>
+                            <li class="nav-item"><a target="_blank" href="https://gujaratindia.gov.in/">Gujarat Govt.</a></li>
+                            
+                            <li class="nav-item"><a target="_blank" href="https://gswan.gujarat.gov.in/gswan/home/RightToInformation">Gujarat State RTI Information</a></li>
+                            <li class="nav-item"><a target="_blank" href="https://rtionline.gov.in/">Central RTI Information</a></li>
+                            
+                            <li class="nav-item"><a href="/rti_portal/site/help">Help
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-fotter py-3">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col col-md-6 col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-6 my-2 privacy">
+                                <ul class="nav">
+                                    <li class="nav-item pr-4">
+                                        Visitors : <span id="visitorCounter"></span> 
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 my-2 text-lg-center">
+                                <span>Copyright � 2019 Government of Gujarat. All Rights Reserved.</span>
+                            </div>
+                        </div>
+                    </div>
+                    	
+							<button onclick="scrollToTop()" id="goTopBtn" title="Go to top">
+    							<img src="/rti_portal/static/assets/img/up-arrow.png" alt="Top" />
+						</button>
+	
+                     <!-- <div class="col-12 col-sm-auto col-md-6 col-lg-4 text-sm-right"> -->
+	                      <div class="col-12 col-sm-auto col-md-6 col-lg-4 d-flex justify-content-center">
+	                      <img src="/rti_portal/static/assets/img/Hewlett_Packard_Enterprise_logo.svg" alt="" style="height: 40px;">
+	                        
+	                        
+	 	                   
+                    		 
+								
+						
+								
+								<div id="contact-form1" class="contact-form1" 
+								     style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+								    <script src="https://cdn.userway.org/widget.js" data-account="WcHU9XzHF5"></script>
+								</div>
+						
+						
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+    $(document).ready(function() {  
+    
+    	
+		var data = {moduleName : "RTI" }
+    	$.ajax({
+            type: "GET",               
+            url: "/rti_portal/visitorCounter",
+            data: data,               
+            cache: false,
+            timeout: 600000,
+            success: function(data) {		             
+              //console.log(data);
+            	$("#visitorCounter").html(data);
+            },
+    	     error: function(XMLHttpRequest, textStatus, errorThrown) { 
+    	    }    
+        });	
+    });
+    </script>
+    
+    <script>
+
+     $(function () {
+        $('#contact-box').click(function () {
+            $('#contact-form').show();
+
+        });
+        $('.form-close').click(function () {
+            $('#contact-form').hide();
+            
+        });
+
+    });
+    
+    
+
+    $(function () {
+        $('#contact-box1').click(function () {
+            $('#contact-form1').show();
+
+        });
+        $('.form-close1').click(function () {
+            $('#contact-form1').hide();
+        });
+
+    }); 
+
+    function chatBot() {    
+		//alert("in ajax call");        
+   	 	$.ajax({
+            url: "/rti_portal/chatBot",            
+            type: 'POST',
+            data: {chatBot:"Call ChatBot"},
+            success: function(response) {
+	        	//alert("success..");
+     			//document.getElementById("chatbot").open();
+     			//window.open("https://10.10.6.20:4443/chatbot/login", "_self");
+     			
+     			 var win = window.open('https://onlinerti.gujarat.gov.in:8090/chatbot/login', 'Popup Window', 
+     		            'width=300, height=300, top=150, left=700, resizable=1, menubar=no', true);
+     		       win.focus();
+     		        
+     		         		        
+          	}
+          }); 
+   	}
+    
+    
+    window.addEventListener("scroll", function () {
+        if (document.documentElement.scrollTop > 200) {
+            document.getElementById("goTopBtn").style.display = "block";
+        } else {
+            document.getElementById("goTopBtn").style.display = "none";
+        }
+    });
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+
+
+    </script>
+</body>
+</html>
+

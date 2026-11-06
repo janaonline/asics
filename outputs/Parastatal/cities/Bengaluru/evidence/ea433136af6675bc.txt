@@ -1,0 +1,400 @@
+SOURCE URL: https://etenders.gov.in/eprocure/app?component=%24DirectLink&page=FrontEndViewTender&service=direct&sp=SlPza7vKo52uJdrULT%2FzxVw%3D%3D
+
+Screen Reader Access
+
+ 13-Oct-2026 
+
+ Search
+
+ |
+
+ Active Tenders
+
+ |
+
+ Tenders by Closing Date
+
+ |
+
+ Corrigendum
+
+ |
+
+ Results of Tenders
+
+ Government eProcurement System
+
+ [https://gepnicreports.gov.in/eprocreports/etenders/] MIS Reports
+
+ Tenders by Location
+
+ Tenders by Organisation
+
+ Tenders by Classification
+
+ Tenders in Archive
+
+ Tenders Status
+
+ Cancelled/Retendered
+
+ Downloads
+
+ Debarment List
+
+ Announcements
+
+ Awards
+
+ Site compatibility
+
+ [https://gepnic.gov.in] 
+
+ [http://india.gov.in] 
+
+ [https://gem.gov.in] 
+
+ [http://eprocure.gov.in/cppp] 
+
+ View More Details
+
+ Tender Details 
+
+ Basic Details
+
+ Organisation Chain
+ Bangalore Metro Rail Corporation Limited||Projects Division - AFC-BMRCL
+
+ Tender Reference Number
+ 4 AFC-DM
+
+ Tender ID
+ 2025_BMRCL_222481_1
+ Withdrawal Allowed
+ Yes
+
+ Tender Type
+ Open Tender
+ Form Of Contract
+ Lump-sum
+
+ Tender Category
+ Works
+ No. of Covers
+ 2
+
+ General Technical Evaluation Allowed 
+ No
+
+ ItemWise Technical Evaluation Allowed
+ No
+
+ Payment Mode
+ Offline
+ Is Multi Currency Allowed For BOQ
+ No
+
+ Is Multi Currency Allowed For Fee
+ No
+ Allow Two Stage Bidding
+ No
+
+ Payment Instruments
+
+ Offline
+
+ S.No
+ Instrument Type 
+
+ 1
+ Bank Guarantee
+
+ 2
+ NEFT
+
+ 3
+ R-T-G-S
+
+ Covers Information, No. Of Covers - 2
+
+ Cover No
+ Cover Type
+ Description
+ Document Type
+
+ 1
+ Fee/PreQual/Technical
+ Scanned copy of transaction of tender fee / tender document cost.
+ .pdf
+
+ Proof of Tender Guarantee
+ .pdf
+
+ Eligibility and Qualification Criteria Documents as per ITT Clause C2.1.1(A)
+ .rar
+
+ Technical Proposal Documents as per ITT Clause C2.1.1(B)
+ .rar
+
+ Any other documents requested in the tender document.
+ .rar
+
+ 2
+ Finance
+ Pricing Document (BOQ) duly filled (Appendix-A to F).
+ .xls
+
+ Appendix-G monthly cash flows for the contract.
+ .pdf
+
+ Appendix-H Pricing of unqualified withdrawal of conditions, qualifications, deviations etc.
+ .pdf
+
+ Dully signed entire Pricing Document (Volume-6) - Unpriced.
+ .pdf
+
+ Document download date is over you cannot download the documents
+
+ Tender Fee Details, [Total Fee in ₹ * - 59,000]
+
+ Tender Fee in ₹ 
+
+ 59,000
+
+ Fee Payable To
+ Bangalore Metro Rail Corporation Limited
+ Fee Payable At
+ Bangalore
+
+ Tender Fee Exemption Allowed
+ No
+
+ EMD Fee Details
+
+ EMD Amount in ₹ 
+
+ 88,00,000
+ EMD Exemption Allowed
+ No
+
+ EMD Fee Type 
+ fixed 
+ EMD Percentage
+ NA
+
+ EMD Payable To
+ Bangalore Metro Rail Corporation Limited
+ EMD Payable At
+ Bangalore
+
+ Work Item Details
+
+ Title
+ Design, Manufacture, Supply, Installation, Testing and Commissioning of Automatic Fare Collection System (SLE, SC and CCS) for Phase-2A and 2B and Integration with Existing AFC System
+
+ Work Description
+ Design, Manufacture, Supply, Installation, Testing and Commissioning of Automatic Fare Collection System (SLE, SC and CCS) for Phase-2A and 2B and Integration with Existing AFC System
+
+ NDA/Pre Qualification
+ Please refer Tender documents.
+
+ Independent External Monitor/Remarks
+ NA
+
+ Tender Value in ₹ 
+ NA
+
+ Product Category
+ Job Works 
+ Sub category
+ Automatic Fare Collection System 
+
+ Contract Type
+ Tender
+ Bid Validity(Days)
+ 180
+ Period Of Work(Days)
+ 441 
+
+ Location
+ Bangalore
+ Pincode
+ 560027 
+ Pre Bid Meeting Place
+ Bangalore 
+
+ Pre Bid Meeting Address
+ Bangalore Metro Rail Corporation Limited, III Floor, BMTC Complex, K.H Road, Shanthinagar, Bangalore-560027 Karnataka, India  
+ Pre Bid Meeting Date
+ 22-Jan-2025 11:00 AM 
+ Bid Opening Place
+ Bangalore
+
+ Should Allow NDA Tender
+ No 
+ Allow Preferential Bidder
+ No
+
+ Tenderer Class
+ NA 
+
+ Critical Dates
+
+ Published Date
+ 04-Jan-2025 11:00 AM
+ Bid Opening Date
+ 28-May-2025 03:30 PM
+
+ Document Download / Sale Start Date
+ 04-Jan-2025 11:00 AM
+ Document Download / Sale End Date
+ 27-May-2025 03:00 PM 
+
+ Clarification Start Date
+ 04-Jan-2025 11:00 AM
+ Clarification End Date
+ 20-Jan-2025 05:00 PM
+
+ Bid Submission Start Date
+ 17-May-2025 11:00 AM 
+ Bid Submission End Date
+ 27-May-2025 03:00 PM
+
+ Tenders Documents 
+
+ NIT Document
+
+ S.No
+ Document Name
+ Description
+ Document Size (in KB) 
+
+ 1
+
+ Tendernotice_1.pdf 
+
+ Tender Notification and Notice Inviting Tender
+
+ 610.02
+
+ Work Item Documents
+
+ S.No
+ Document Type 
+ Document Name
+ Description
+ Document Size (in KB) 
+
+ 1 
+ Tender Documents 
+
+ Volume2GCCSCCScheldule.pdf
+
+ Volume-2 GCC, SCC and Schedules 
+ 1698.86 
+
+ 2 
+ Tender Documents 
+
+ Volume6PricingDocumentBOQ.pdf
+
+ Volume-6 Pricing Document 
+ 1272.07 
+
+ 3 
+ Tender Documents 
+
+ Volume5InterfaceDocument.pdf
+
+ Volume-5 Interface Document 
+ 4465.99 
+
+ 4 
+ Tender Documents 
+
+ Volume3ERGS.pdf
+
+ Volume-3 ERGS 
+ 2140.41 
+
+ 5 
+ Tender Documents 
+
+ Volume3TS.pdf
+
+ Volume-3 ERTS 
+ 2627.59 
+
+ 6 
+ Tender Documents 
+
+ Volume4SHE.pdf
+
+ Volume-4 SHE Manual 
+ 1477.32 
+
+ 7 
+ Tender Documents 
+
+ Volume5Tenderdrawings.pdf
+
+ Volume-5 Tender Drawings 
+ 1384.87 
+
+ 8 
+ Tender Documents 
+
+ Volume1NITITTEQCFOT.pdf
+
+ Volume-1 NIT, ITT, EQC and FOT 
+ 4054.72 
+
+ 9 
+ BOQ 
+
+ BOQ_247861.xls
+
+ Addendum 5 BOQ 
+ 673.50 
+
+ Latest Corrigendum List 
+
+ S.No
+ Corrigendum Title
+ Corrigendum Type
+ View 
+
+ 1
+ Addendum 5 BOQ
+ BOQ
+
+ 2
+ Addendumno.6Date
+ Date
+
+ 3
+ Addendumno5dated17042025
+ Other
+
+ Tender Inviting Authority
+
+ Name
+ CE (Tele and AFC)
+
+ Address
+ Bangalore Metro Rail Corporation Limited, III Floor, BMTC Complex, K.H Road, Shanthinagar, Bangalore-560027 Karnataka, India 
+
+ Back
+
+ Visitor No:10636113
+
+ Contents owned and maintained by concerned Departments in coordination with Finance Department and Information Technology Department, Government of India 
+
+ Designed, Developed and Hosted by
+ [http://www.nic.in] National Informatics Centre
+
+ Version : 1.09.24 17-Jul-2026
+
+ (c) 2017 Tenders NIC, All rights reserved.
+Site best viewed with a screen resolution 1920 x 1080. 
+ Portal policies

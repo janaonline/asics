@@ -1,0 +1,3224 @@
+SOURCE URL: https://www.gujaratmetrorail.com/wp-content/uploads/Reports/ESMP-Surat-Metro-Version01-GMRCLenders-17122020-_RevAES-2-Final.pdf
+
+[page 1]
+Gujarat Metro Rail Corporation (GMRC) Limited  
+(SPV of Government of India and Government of Gujarat)  
+[Formerly known as Metro-Link Express for Gandhinagar and Ahmedabad (MEGA) Company 
+Limited] 
+ 
+ 
+ 
+ 
+ 
+FINAL REPORT 
+JANUARY2021 
+ 
+ 
+ 
+ 
+ 
+RITES LIMITED 
+(A Government of India Enterprise) 
+RITES Bhawan, Plot No.1, Sector-29 
+GURGAON-122001(INDIA) 
+www.rites.com 
+Environmental and Social Management Plan (ESMP) 
+for Surat Metro Rail Project (Phase-I) 
+ 
+ 
+GOVERNMENT OF INDIA 
+ 
+
+[page 2]
+ 
+ 
+    
+E    
+D    
+C    
+B 16/01/2021 Final Report 
+Dr. Sanjay K. Pradhan 
+(Social Safeguard Specialist) 
+Mr. S. Harinag 
+(Environmental Safeguard Specialist) 
+A 15/12/2020 Draft Report 
+Dr.Sanjay K.Pradhan 
+(Social Safeguard Specialist) 
+Mr.S. Harinag 
+(Environmental Safeguard Specialist) 
+Rev. Date Description Originated 
+Client: 
+ 
+ 
+ 
+Gujarat Metro Rail Corporation (GMRC) Limited 
+(SPV of Government of India and Government of Gujarat)  
+[Formerly known as Metro-Link Express for Gandhinagar and Ahmedabad (MEGA) Company Limited]  
+Project: 
+ENVIRONMENT AND SOCIAL MANAGEMENT PLAN (ESMP) 
+FOR SURAT METRO RAIL PROJECT (PHASE-1) 
+ 
+Prepared by:  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Doc. No.: 
+ 
+GMRC/ESMP/SURAT/PH-1/2019/0 
+ 
+File: 
+ 
+ 
+RITES/UE/Surat Metro/RT610-00042/2019 
+ 
+RITES LIMITED 
+(A Government of India Enterprise) 
+RITES Bhawan, Plot No.1, Sector-29 
+GURGAON-122001(INDIA) 
+www.rites.com 
+
+[page 3]
+ 
+Contents 
+Chapter 1 : Introduction ................................ ................................ ................................ ................... 1 
+1.1. BACKGROUND ............................................................................................................................. 1 
+1.2. PROJECT AREA ............................................................................................................................. 1 
+1.3. PROPOSED METRO RAIL SYSTEM IN SURAT CITY ........................................................................ 2 
+1.3.1. Stations ................................................................................................................................ 5 
+1.3.2. Permanent Way ................................................................................................................... 7 
+1.3.3. Rolling Stock, Traction and Signalling .................................................................................. 8 
+1.3.4. Ventilation and Air-Conditioning System ............................................................................ 8 
+1.3.5. Maintenance Depots ........................................................................................................... 9 
+1.3.6. Power Requirements ........................................................................................................... 9 
+1.3.7. Sub Station ........................................................................................................................... 9 
+1.3.8. Construction Activities....................................................................................................... 10 
+1.3.9. Project Cost Estimate ........................................................................................................ 10 
+1.3.10. Environmental and Social Impact Assessment .................................................................. 10 
+Chapter 2 : Environment and Social Management Plan ................................ ................................ .... 11 
+Chapter 3 : Environment and Social Monitoring ................................ ................................ .............. 33 
+3.1. ENVIRONMENT MONITORING PLAN ......................................................................................... 33 
+3.1.1. Pre-Construction Phase ..................................................................................................... 33 
+3.1.2. Construction Phase ............................................................................................................ 33 
+3.1.3. Operation Phase ................................................................................................................ 35 
+3.2. SOCIAL MONITORING PLAN ...................................................................................................... 37 
+Chapter 4 : Capacity Development and Training ................................ ................................ .............. 38 
+4.1. ESMP REPORTING ARRANGEMENT AND INSTITUTIONAL STRENGTHENING ............................ 38 
+4.2. REPORTING SYSTEM .................................................................................................................. 41 
+4.3. ESTABLISHMENT OF ENVIRONMENTAL DIVISION ..................................................................... 41 
+4.4. TRAINING ................................................................................................................................... 42 
+Chapter 5 : Cost Estimates ................................ ................................ ................................ .............. 43 
+5.1. ENVIRONMENTAL COST............................................................................................................. 43 
+5.2. SOCIAL COST .............................................................................................................................. 44 
+ 
+ 
+ 
+ 
+
+[page 4]
+ 
+LIST OF TABLES 
+Table 1.1: Salient Features of the Corridors ................................................................................................ 2 
+Table 1.2: Proposed Stations along Corridor-1 ........................................................................................... 4 
+Table 1.3: Proposed Stations along Corridor-2 ........................................................................................... 5 
+Table 1.4: Corridor‐wise Details of Capital Cost ........................................................................................ 10 
+Table 2.1: Environmental Management Plan – Design, Construction, and Operation ............................. 13 
+Table 2.2:  Environmental Management Plan – Design, Construction, and Operation ............................ 24 
+Table 3.1: Construction Stage Monitoring Schedule ................................................................................. 33 
+Table 3.2: Environmental Monitoring Cost during Construction .............................................................. 34 
+Table 3.3: Operation Stage Monitoring Schedule ..................................................................................... 35 
+Table 3.4: Environmental Monitoring Cost during Operation .................................................................. 36 
+Table 3.5: Social Monitoring Cost during Implementation ....................................................................... 37 
+Table 4.1: Environmental Division Cost ..................................................................................................... 42 
+Table 4.2: Cost for Training Program ......................................................................................................... 42 
+Table 5.1: Cost of Environmental Management Plan ................................................................................ 43 
+Table 5.2: R&R Benefits Cost ..................................................................................................................... 44 
+ 
+LIST OF FIGURES 
+Figure 1.1: Proposed Metro Corridors in Surat City .................................................................................... 3 
+Figure 1.2: Typical Drawing of Elevated Station .......................................................................................... 6 
+Figure 1.3: Typical Drawing of Underground Station .................................................................................. 6 
+Figure 1.4: Typical Drawing of Interchange Station .................................................................................... 7 
+Figure 4.1: Institutional Mechanism for ESMP Implementation (Construction Phase) ............................ 39 
+Figure 4.2:  Institutional Mechanism for ESMP Implementation (Operation Phase) ................................ 39 
+Figure 4.3:   Organizational Structure of ESMP ......................................................................................... 40 
+ 
+LIST OF ANNEXURES 
+Annexure 4.1: Details of Batching Plant .................................................................................................... 47 
+Annexure 4.2: Details of Muck Dumping Operations ................................................................................ 48 
+Annexure 4.3: Details of Machinery during Construction ......................................................................... 49 
+Annexure 4.4: Safety Check List ................................................................................................................ 50 
+Annexure 4.5: Accident Report ................................................................................................................. 52 
+Annexure 4.6: Pollution Monitoring .......................................................................................................... 54 
+Annexure 4.7: Format for Vibration Monitoring ....................................................................................... 56 
+Annexure 4.8: Restoration of Construction Sites ...................................................................................... 57 
+Annexure 4.9: Format for Keeping Records of Consent obtained by Contractor ..................................... 58 
+Annexure 4.10: Checklist for Environment Inspection .............................................................................. 59 
+Annexure 4.11: Summary Sheet ................................................................................................................ 60
+
+[page 5]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ESMP January 2021 1 
+ 
+Chapter 1 : Introduction 
+1.1. BACKGROUND 
+Surat, a city in the Indian state of Gujarat is the eighth largest city and ninth largest urban 
+agglomeration in India. The city with its center on the banks of river Tapti, is located 284 km 
+south of the state capital – Gandhinagar, and 289 km north of Mu mbai. The city is famous 
+for its diamond cutting and polishing and is also known as the Diamond City of Ind ia. 
+Traditionally, the major industries in the city were textile manufacturing and shipbuilding.  
+Recognizing the need to cater to ever increasing po pulation of the city and provide 
+commuters an environment friendly, fast and reliable travel option, presen t Government of 
+Gujarat decided to take steps to implement metro rail transit systems (MRTS) in cities 
+having population more than 2 Million. As a pa rt of this decision, Metro Rail Project for 
+Surat is being initiated as the city population is more than 5. 5 million. The detailed project 
+report (DPR) for Surat Metro Rail was prepared by Delhi Metro Rail Corporation (DMRC) in 
+June 2018. 
+In August 2012, S urat Municipal Corporation (SMC) proposed four routes for the Metro 
+project. The Government of Gujarat approved two corridors in January 2017. In March 2019, 
+Union Government approved the Surat Metro Rail Project with two metro rail corridors and 
+with a combined length of 40.35 km. The first corridor is proposed from Sarthana to Dream 
+City Line covering 21.61 km. The second corridor is proposed from Bhesan to Saroli covering 
+18.74 km. These two corridors will intersect at Majura Gate.  
+Gujarat Metro Rail Corporation (GMRC) L imited, a Special Purpose Vehicle (SPV) of 
+Government of Gujarat and Government of India,  is the implementing agency for Surat 
+Metro Rail Project Phase I. GMRC awarded the consultancy work to RITES Limited for 
+preparation of Enviro nmental Impact Assessment and Social Impact Assessment study 
+reports. The assignment will cover the Surat Metro Ra il project’s two corridors, i.e. from 
+Bhesan to Saroli and Sarthana to Dream city along with two depot sites. 
+1.2. PROJECT AREA 
+Surat city geographical area is about 327 sq. km  and the city is bounded by the Arabian Sea 
+on the west, Bharuch in the North, the Va lsad district in the south, the Dangs district in the 
+south-east, and the Tapi district in the east. The Tapi is the major river which passes through 
+the central parts of the district also throughout Surat city and flows towards the west. 
+Surat's climate is classified as tropical. The summers here have a good deal of rainfall, while 
+the winters have very little. April and May are the hottest mon ths. With the onset of 
+monsoons, temperature decreases appreciably in June. Industrial development in Surat 
+
+[page 6]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ESMP January 2021 2 
+ 
+district is attributed to the presence of many units  of diamond processing, textiles, and 
+chemical & petrochemical industries. 
+The Sitilink or Surat BRTS is a  bus rapid transit system  in the city, which is the available 
+public transpo rt system in Surat City. In the absence of adequate full -fledged public 
+transport system, the use of individual mo des such as cycles, 2 - wheelers, cars etc, and un -
+organized intermediate public transport (IPT) has increased in Surat City. Cycling and 
+walking constitute about 45% of the total trips and this feature needs to be integrated 
+within the upcoming public transport initiatives. 
+1.3. PROPOSED METRO RAIL SYSTEM IN SURAT CITY 
+Following t wo corridors have been finalized for implementation of Metro Rail Proje ct in 
+Surat:  
+• Corridor 1: Sarthana to Dream City (via Nana Varachha, Rly station, Majuragate,  
+Exhibition centre) 
+• Corridor 2: Bhesan to Saroli (via L P Savani, Majura Gate, Mithikhadi) 
+The proposed metro rail network is shown in Figure 1.1. All the components of project 
+description for proposed Metro Corridors in respect of alignment details, rolling stock, 
+power supp ly, traction system and signaling are detailed in project main features of the 
+proposed metro network are being reproduced below from DPR of Surat MRTS DPR.  
+The Phase I of metro implementation has a total length of 40.35 km with 38 stations. These 
+corridors provide connectivity to all congested, important, and densely populated areas of 
+the city. Details of the length of corrid ors, elevated/underground length and number of 
+stations are given in Table 1.1. 
+ 
+Table 1.1: Salient Features of the Corridors 
+S. NO ROUTE LENGTH IN KM STATIONS 
+1. Sarthana to Dream 
+City 
+Elevated  15.14 
+21.61 
+14 
+Underground  6.47 6 
+2. Bhesan to Saroli Elevated  18.74 18 
+TOTAL 40.35 37* 
+ *Interchange Station - Majura Gate Metro Station  
+ 
+Corridor 1: Sarthana to Dream City 
+The proposed alignment of Corridor -1 starts from Sarthana  and heads towards Dream City 
+and both are elevated stations. Total 20 stations have been proposed along the corridor of 
+which 1 4 stations are elevated and 6 stations are UG. Summary list of stations along the 
+corridor is given in Table 1.2. 
+
+[page 7]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP  January 2021 3 
+  
+Figure 1.1: Proposed Metro Corridors in Surat City 
+
+
+[page 8]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 4 
+ 
+Table 1.2: Proposed Stations along Corridor-1 
+S. No Station Name Chainage (m) Inter Station 
+Distance (m) 
+Elevated/ 
+Underground 
+0 DEAD END (-) 450 450.00 ELEVATED 
+1 Sarthana 0.0 1238.10 ELEVATED 
+2 Nature Park 1238.1 870.40 ELEVATED 
+3 Varcha Chopati Garden 2108.5 1088.10 ELEVATED 
+4 Shri Swaminarayan Mandir 3196.6 1040.40 ELEVATED 
+5 Kapodara 4237.0 1269.60 U/G 
+6 Labheshwar Chowk 5506.60 1162.30 U/G 
+7 Central Warehouse 6668.9 586.70 U/G 
+8 Surat Railway Station 7255.6 1231.40 U/G 
+9 Maskati Hospital 8487.00 1802.80 U/G 
+10 Chowk Bazar 10289.8 1431.90 U/G 
+11 Kadarshna Ni Nal 11721.7 592.10 ELEVATED 
+12 Majura Gate 12330.8 1297.70 ELEVATED 
+13 Rupali Canal 13611.5 1084.70 ELEVATED 
+14 Althan Tenament 14696.2 1147.30 ELEVATED 
+15 Althan Gam 15843.5 855.60 ELEVATED 
+16 VIP Road 16699.1 1109.30 ELEVATED 
+17 Surat Women ITI 17808.4 851.10 ELEVATED 
+18 Bhimarad 18659.5 1169.90 ELEVATED 
+19 Convention Centre 19829.4 880.90 ELEVATED 
+20 Dream City 20710.3 450.00 ELEVATED 
+ DEAD END 21160.3 450.00 ELEVATED 
+Source: DPR 
+ 
+Corridor-2: Bhesan to Saroli 
+The proposed alignment of Corridor -2 starts from Bhesan and heads towards Saroli, this 
+section is fully elevated. Total 18 stations have been proposed along this corridor. Summary 
+list of stations along the corridor is given in Table 1.3. 
+  
+
+[page 9]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 5 
+ 
+Table 1.3: Proposed Stations along Corridor-2 
+S. No Station Name Chainage (m) Inter Station 
+Distance (m) 
+Elevated/ 
+Underground 
+0 DEAD END -949.6   
+1 Bheshan 0 949.60 ELEVATED 
+2 Botanical Garden 950.6 950.60 ELEVATED 
+3 Ugat Vaarigruh 1617.5 666.90 ELEVATED 
+4 Palanpur Road 2738.9 1121.40 ELEVATED 
+5 L.P.Savani school 3831.6 1092.70 ELEVATED 
+6 Performing Art Centre 4421.8 590.20 ELEVATED 
+7 Adajan Gam 5155 733.20 ELEVATED 
+8 Aquarium 5770.1 615.10 ELEVATED 
+9 Badri Narayan Temple 6891.5 1121.40 ELEVATED 
+10 Athwa Chaupati 7863.5 972.00 ELEVATED 
+11 Majura Gate 9019.2 1155.70 ELEVATED 
+12 Udhana Darwaja 10646.2 16270.00 ELEVATED 
+13 Kamela Darwaja 11247.2 601.00 ELEVATED 
+14 Anjana Farm 12593.9 1346.70 ELEVATED 
+15 Model Town 13636.3 1042.40 ELEVATED 
+16 Magob 14744.00 1107.70 ELEVATED 
+17 Bharat Cancer Hospital  15899.4 1155.40 ELEVATED 
+18 Saroli 17341.8 1442.40 ELEVATED 
+ DEAD END   17791.8 450.00 ELEVATED 
+Source: DPR 
+1.3.1. Stations 
+Station Design is dependent on t he peak hour traffic load for each station. Accordingly, 
+maximum capacity required at any station for emergency evacuation has been adopted. 
+Typical station drawings of Elevated, underground and Interchange Stations are show n in 
+Figure 1.2 to Figure 1.4. 
+  
+
+[page 10]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 6 
+ 
+Figure 1.2: Typical Drawing of Elevated Station 
+ 
+ 
+Figure 1.3: Typical Drawing of Underground Station 
+ 
+ 
+  
+
+
+[page 11]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 7 
+ 
+Figure 1.4: Typical Drawing of Interchange Station 
+ 
+The stations are generally located on the road median. Length of each elevated station is 
+140m. All the stations are two -level stations. The concourse is planned along the whole 
+length of the platform with s taircases leading from either side of the road. The maximum 
+width of the station at concourse is 21m. Passenger facilities like ticketing, information, etc 
+are provided at the concourse level. 
+Structure of the underground station (type -1) is essentially a concrete box about 20~21m 
+wide, 14.6-m high and 190 or as per des ign long with an intermediate slab. Sides of the box 
+are made of 1.2 m thick RCC. The roof of station box is about 1.2 m thick. Structure of this 
+type-2 of underground station is essentially a concrete box about 10~11m wide, 20.5 ~ 22.0 
+m high and 190 or as per design long with an intermediate slab separating two Platforms. 
+1.3.2. Permanent Way 
+Gauge: Standard Gauge has been adopted for this metro railway . It permits sharper curves, 
+which is advantag eous for metro alignment in urban scenario and results in minim um 
+property demolition and property acquisition. The Land requirement for the maintenance 
+depots is also lower in Standard Gauge. Standard Gauge rolling stock results in recurring 
+saving in energy consumption during operation as for the same passenger carryi ng capacity, 
+gross weight of a metro coach is lower.  
+Formation: Ballast less track is proposed for elevated and underground stretches  and 
+depots to optimize maintenance and risk to road vehi cles. This will help reduce fugitive dust 
+emissions during operation.  
+
+
+[page 12]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 8 
+ 
+Welding: To minimize noise and vibrations, track joints are proposed to be welded. 
+1.3.3. Rolling Stock, Traction and Signalling 
+The required transport demand forecast is the governing factor for the choice of the Rolling 
+Stock. The forecasted Peak Hour Peak Direction Traffic calls for a Medium Rail Transit 
+System (MRTS).  
+• A short train consisting of 3 cars which can be increased fo r increasing the Passenger 
+Carrying Capacity of Trains with the  consideration of matching the growing traffic 
+demand. 
+• The rolling stock shall be Standard 1435 mm track gauge section having maximum 
+width of 2.9 m, Axle load of 16 tones and capacity of 3 coa ch units as 764 
+passengers. Seating arrangement will be longitu dinal and AC class accommodation 
+will be provided. 
+• Total traction and auxiliary power requirement are 30.25 MVA and 11.99 MVA to 
+fulfill the power demand of Sarthana to Dream city and Bhesan to  Saroli corridors in 
+2021, respectively.  
+• The system under norm al operating conditions will be an automatically operated 
+system utilizing Automatic Train Control and Automatic Train Protection (ATP) under 
+the overall control of a train driver and OCC operators. 
+• Computer Based Interlocking (CBI) signalling and continuo us automatic train control 
+with Automatic Train Protection (ATP) is proposed while telecommunication system 
+is integrated with Optical Fibre Cable, LED/LCD based boards, Mobile Radio, Mobile 
+system etc. 
+• Fare collection system is provided with automation in  association with Contactless 
+Smart Card and Retractable Flap Type Control Gates, Ticket Office Machine, TR, PTD 
+etc. 
+1.3.4. Ventilation and Air-Conditioning System 
+The underground stations of the cor ridor are built in a confined space. Many passengers 
+occupy concourse halls and the platforms, especially at the peak hours.  The platform and 
+concourse areas do not have adequate natural ventilation. It is, therefore, essential to 
+provide forced ventilation in the stations and inside the tunnel for the purpose of: 
+• Supplying fresh air for the physiological needs of passengers and the staff 
+• Removing body heat, obnoxious odors and harmful gases 
+• Removing large quantity of heat dissipated by the train equipment/fixtures 
+• Removing fumes and heat emitted by station equipment/fixtures 
+
+[page 13]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 9 
+ 
+1.3.5. Maintenance Depots 
+It is proposed to establish one depot - cum- workshop for each Corridor with following 
+functions: 
+(i) Major overhauls of all the trains. 
+(ii) All minor schedules and repairs. 
+(iii) Lifting for replacement of heavy equipment and testing thereafter.  
+(iv) Repair of heavy equipment’s. 
+The depots are to be developed with full/light/heavy repair facilities, stabling and light 
+inspection facilities.  
+1.3.6. Power Requirements 
+Power supply is required for the operation of Metro system for running of trains, statio n 
+services, workshop, depot, and other maintenance works within the premises of metro 
+system. The power requirement is for peak hour demand for traction and auxiliary 
+application. Some of assumptions to estimate the power supply are: 
+• Specific energy consum ption of rolling stock 60 kWh/1000 GTKM in case of 750V dc 
+Traction at Pantograph level is considered as per MOUD guideline  
+• Elevated/at –grade station load – initially 250 kW, which will incre ase to 300 kW in 
+the year 2046. 
+• Underground station load – initially 2000 kW, which will increase to 2200 kW in the 
+year 2046. 
+• Depot & Metro Bhawan auxiliary load - initially 2000 kW (each), which will increase 
+to 2200 KW in the year 2046. 
+1.3.7. Sub Station 
+Keeping in view the reliability requirements, Four Receiving Sub -stations (RSS) are proposed 
+to be set up for corridor – 1 (2 RSS) and corridor – 2 (2 RSS). This is an economical solution 
+without compromising reliability. Based on DMRC discussions with M/s Torrent Power, M/s 
+GETCO & Surat Municipal Corporation, it is prop osed to avail power supply for traction as 
+well as auxiliary services from the grid sub-stations at 66 kV voltages through cable feeders. 
+  
+
+[page 14]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 10 
+ 
+1.3.8. Construction Activities 
+Illustrative list  of construction activities is placed below. These activities typically inv olve 
+movement of earth and construction material, movement, and placement of pre -cast 
+elements:  
+• In-situ open foundations and piles of columns 
+• In-situ casting of columns 
+• Pre-cast segments or pre-cast non-segmental girders  
+• Boring of tunnels by Tunnel Boring Machine or open cut and cover / NATM. 
+• Cut and cover or NATM and blasting for construction of underground stations  
+• In-situ earth retaining structures like diaphragm wal ls, sheet piles, secant piles 
+etc 
+1.3.9. Project Cost Estimate 
+The overall Capital Cost for t he Surat Metro rail network under Phase -I at March 2017 price 
+level has been estimated at Rs.12,492 Crores including applicable Taxes & Duties of 1950.81 
+Crores. The details are tabulated in Table 1.4. 
+Table 1.4: Corridor‐wise Details of Capital Cost 
+S. No. Name of the Corridor Capital Cost 
+(Rs. Crore) 
+Taxes& Duties 
+(Rs. Crore) 
+Total 
+(Rs. Crore) 
+1. Sarthana – Dream City 6554 1211.91 7765.91 
+2. Bhesan–Saroli 3987 738.90 4725.90 
+ Total 10,541 1950.81  12,491.81  
+=12,492 
+Source: DPR for Surat Metro Rail Project, June 2018 
+1.3.10. Environmental and Social Impact Assessment 
+Initial Environmental and Social Impact Assessment was carried out by DMRC during DPR 
+stage. Detailed Environmental and Social Impact Assessment for phase I of Surat Metro Rail 
+Project has been carried out by RITES Limited in Year 2019 & 2020. ESMP on the basis 
+detailed EIA & SIA has been presented in the subsequent Chapters. 
+ 
+
+[page 15]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 11 
+ 
+Chapter 2 : Environment and Social Management Plan 
+ 
+The environmental management plans are primarily devised from environmental impact 
+assessment report. The EIA document specifically discusses  the environmental impacts 
+during the design, construction, and operational phases of the project. It identifies th e 
+positive and negative impacts on environmental receptors identified along alignment during 
+different phases of project and proposes the measures to minimize the impacts. After 
+identification of impacts and proposing mitigation measures it also proposes t he monitoring 
+plan to monitor the suitability of implemented mitigation measures during construction and 
+operational phases of project. The Environmental Management Plan (EMP) contains a 
+description of proposed remedial measures and monitoring plan for the  construction and 
+operational period of  the project. The EMP often contains construction/management 
+guidelines that specifically address how the project proponent/contractors are to 
+incorporate environmental considerations into their work. This chapter spe lls out the set of 
+measures to be undertaken during project construction and operation to mitigate or reduce 
+the adverse environmental impacts. 
+ 
+EMP contains set of mitigation measures for lessening of negative environmental impacts 
+through: a) changes in the design, construction practices, mai ntenance, and operation; and 
+b) additional actions taken to protect the biophysical and social environment, as well as 
+individuals who have been impacted adversely by a project. The extent and timing of 
+imitative actions are based on the significance of the predicted impacts. 
+The contractors  should consider ESMP document as guidebook for environment 
+management during construction and operational phases of the project. In case further 
+reference/discussion is required ov er any issue given in t his document, pr ovisions of EIA  
+reports, EHS manual and tender/contract document shall prevail. 
+ 
+During the construction phase, the civil contractor will be responsible of the implementation 
+of the most of the E&S mitigation measures in relation with the works. GMRC will be 
+responsible of some of the measures such as disclosure & supervision of E&S monitoring, 
+compensatory afforestation, management Plan for Flamingos. During the operational phase, 
+GMRC will hold the responsibility of implementation of ESMP. 
+ 
+E&S Monitoring :  During construction, the monitoring will be carried out by contractor 
+under the supervision of GMRCL.  
+ 
+Compensatory Afforestation: Compensatory afforestation should be done by GMRCL in 
+association with Forest Department at the identified sites. However , the contractor will be 
+responsible for transplantation of trees under the supervision of GMRCL. 
+ 
+Management Plan for Flamingos: PIU will take charge of Flamingo issue including the 
+operation phase in consultation with Deputy Conservator of Forest, Surat. 
+ 
+
+[page 16]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 12 
+ 
+Environment Management System is intended to facilitate implementation, tracking and 
+reporting on Environment Management Plan and Environment Monitoring Plan propos ed 
+for the project. Roles and responsibilities for preparation and Implementation o f 
+Environmental Management Plan (EMP) and Environmental Monitoring Plan (EMoP)  at 
+different stages of the project  are summarized in Table  2.1and Social Management plan is 
+given in Table 2.2. The Environmental and Social M anagement and Monitoring costs are 
+briefly given in the following table s however details are mentioned in the EIA & SIA Reports 
+for Surat Metro Rail Project.  
+ 
+
+[page 17]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 13 
+Table 2.1: Environmental Management Plan – Design, Construction, and Operation 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+EMP During Location and Design Phase 
+1.  Displacement 
+and private 
+property 
+acquisition, 
+impact of 
+environmentally 
+sensitive areas. 
+An analysis of alternatives has been undertaken as 
+part of the elaboration of the Detailed Project Report 
+(DPR) of the Project. However, this analysis does not 
+fully take into consideration the potential 
+environmental and social impacts of the solution 
+recommended by the DPR and the alternatives that 
+may exist. Therefore, in order to determine the 
+alignment which minimizes the environmental and 
+social impacts, GMRC will ensure that, for any civil 
+work packages of the Project (notably including the 
+viaducts, the stations, the depots), within the 
+framework of the detailed design studies, an analysis 
+of possible alternatives and alignment adjustments.  
+NA 
+ 
+- DPR and 
+design 
+consultant 
+PIU 
+2.  Loss of trees and 
+water bodies 
+Alignment designs to avoid or minimize impact are in 
+line with ESS1 and ESS 6 of World Bank and Forest 
+Conservation Act 1980. 
+NA - DPR and 
+design 
+consultant 
+PIU 
+3.  Visual intrusion To design aesthetic structures of viaduct and stations 
+on elevated sections.  
+NA - DPR and 
+design 
+consultant 
+PIU 
+4.  Archaeological 
+Monuments  
+No Impact on legally protected Archaeological 
+Monuments due to proposed alignments; accordingly, 
+ESS 8 of World Bank and The Ancient Monuments and 
+Archaeological sites and Remains Act, 1958 amended 
+in 2010 are not triggered. Though the EIA mentions 
+that no cultural heritage is to be found in the Project 
+area, should the case arise, GMRC and the contractors 
+shall apply measures that meet both applicable 
+NA - DPR and 
+design 
+consultant 
+PIU 
+
+[page 18]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 14 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+national legislation and World Bank ESS 8 related to 
+Cultural Heritage 
+EMP during Pre-construction Phase 
+1.  Disclosure Disclosure of EMP/EMoP measures for feedback to 
+various stakeholders; revise the EMP/EMoP measures 
+if necessary.  
+These measures are to be implemented are 
+compliance with ESS 10. 
+Once after 
+preparation of 
+EIA report 
+-   PIU PIU 
+2.  Loss of trees  The compensatory Forestation plan are in line with 
+Saurashtra Felling of trees (infliction of Punishment) 
+Act, 1951 & amendment Rule 2008, Forest 
+Conservation Act 1980 and ESS 6 of World Bank. 
+    PIU for 
+Compensat
+ory 
+Afforestati
+on; and 
+Contractor 
+for 
+Transplant
+ation  
+PIU  
+Implement compensatory 
+afforestation for 836 trees 
+along the corridor and 176 
+trees at Depot. 
+Implement 
+compensatory 
+afforestation for 762 
+trees along the corridor 
+and 319 trees at Depot 
+Four Times in a 
+Year for entire 
+construction 
+period 
+Four Times in 
+a Year for 
+entire 
+construction 
+period 
+77.60 85.96 
+3.  Site measures Prepare Environment, Health and Safety (EHS) 
+Manual in line with World Bank ESS guidelines and 
+National regulations. 
+NA - Contractor PIU  
+4.  Environmental 
+Management 
+and Monitoring  
+Implement institutional requirements for 
+implementation of EMP and EMoP. 
+Set up of Env. 
+Division 
+Set up of Env. 
+Division 
+166.31 166.31 PIU PIU  
+EMP during Construction Phase 
+1.  Soil erosion, 
+fugitive dust 
+generation, 
+Implement suitable construction methods and as per 
+EHS Manual  
+• Careful planni ng, timing of cut and fill operations 
+Part of EHS 
+manual 
+Part of EHS 
+manual 
+- - Contractor PIU  
+
+[page 19]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 15 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+muck disposal 
+and C&D waste 
+management  
+and re-vegetation shall reduce the Soil Erosion and 
+dust generation 
+• Contractor shall dispose the muck/dry soil 
+generated at construction sites at a mutually 
+agreed location by GMRC. 
+• Contractor shall carry out the recon ciliation for the 
+disposed soil and quantities shall submit to GMRC 
+on quarterly basis. 
+• Dry wheel wash facilities shall be provided at exit 
+gate, from where soil disposal shall be carried. 
+• Sufficient staff shall be made available at site to 
+control the dis posal of muck/soil from site such as 
+a supervisor, labors for wheel cleaning; brooms for 
+wheel cleaning and concrete pad where wheels 
+will be cleaned. 
+• The dumpers carrying the muck/dry soil must be 
+covered while plying o n the roads on the way to 
+disposal location. 
+• Contractor shall take due care that muck 
+generated during piling/ tunneling works does not 
+get contaminated with any contaminant. 
+• The onsite muck shall be monitored quarterly at 
+random location during piling work s in progress. In 
+case any polluted muck is produced; the muck shall 
+be handled and disposed as per provisions of 
+Hazardous and Other Wastes (Management and 
+Trans boundary Movement) Rules, 2016 and its 
+amendments 
+• Construction and Demolition Waste shall be 
+
+[page 20]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 16 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+disposed in accordance with the provisions of C &D 
+waste Handling Rules 2016 and its amendments. 
+• Contractor should submit the details to PIU as per 
+Annexure 8 of this document. 
+2.  Air and Noise 
+Pollution 
+• Vehicles and machinery are to b e maintained to 
+emission standards; periodic check of machinery 
+and vehicles; dust collectors and physical barriers 
+at bulk loading and un -loading areas; machinery 
+noise muffles etc and personal protective gear to 
+workers. 
+• Contractor should submit the deta ils to PIU as per 
+Annexure 1, 2, 3, 6 & 9 of this document. 
+• By implementing the proposed air and Noise  
+mitigation measures, the project is expected to 
+comply with the Indian Standards and WB ESF 
+guidelines. 
+Twice a month 
+for entire 
+construction 
+period 
+Twice a month 
+for entire 
+construction 
+period 
+34.06 34.06 Contractor PIU  
+3.  Vibration • Implement vibration monitoring and building 
+condition surveys at sensitive structures. 
+• Contractor should submit the details to PIU as per 
+Annexure 7 of this document. 
+Once in a 
+month at 17 
+locations, for 
+entire 
+construction 
+period at that 
+location 
+Once in a 
+month at 8 
+locations, for 
+entire 
+construction 
+period at that 
+location 
+61.20 28.80 Contractor PIU  
+4.  Water pollution • Implement measures such as sedimentation tanks 
+on site for batching plants 
+• Contractor shall try and reduce the water 
+consumption through use of energy efficient water 
+fixtures at sites and project offices 
+• Leakage of water shoul d not be allowed through 
+Four Times in a 
+Year at 6 
+locations for 
+entire 
+construction 
+period 
+Four Times in 
+a Year at 7 
+locations for 
+entire 
+construction 
+period 
+8.40 9.80 Contractor PIU  
+
+[page 21]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 17 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+pipes and valves 
+• Reuse of water used for curing and for other uses 
+to be planned 
+• Contractor should submit the details to PIU as per 
+Annexure 1, 2, 6 & 9 of this document. 
+• By implementing the proposed measures, the 
+project is expect ed to comply with Water 
+(Prevention and Control of Pollution) Act, 1974 & 
+its amendments and ESS 3 of World Bank. 
+5.  
+ 
+Soil pollution • Implement measures to prevent ingress of toxic / 
+heavy metals. Suitable storage area for such 
+materials shall be prepared and equipment shall be 
+made available for handling of these materials. 
+• Contractor shall take all n ecessary precautions 
+such that construction material, diesel, grease, 
+waste oil, chemicals etc. does not spill on ground. 
+• Regular monitoring of groundwater and soil 
+leachate shall be conducted at muck disposal areas 
+where possibility of ground water contam ination is 
+anticipated 
+• Contractor should submit the details to PIU as per 
+Annexure 2 & 6 of this document. 
+• By implementing the proposed measures,  the 
+project is expected to comply with Water 
+(Prevention and Control of Pollution) Act, 1974 & 
+its amendments and ESS 3 of World Bank. 
+Four Times in a 
+Year at 5 
+locations of 
+elevated 
+section && 3 
+muck samples 
+per km of UG 
+section for 
+entire 
+construction 
+period 
+Four Times in 
+a Year at 5 
+locations for 
+entire 
+construction 
+period 
+5.97 5.00 Contractor PIU  
+6.  Water supply; 
+wastewater and 
+solid waste 
+• Arrange for water supply; Implement measures as 
+per EHS Manual. 
+• The contractor shall prepare the waste 
+Part of EHS 
+manual 
+Part of EHS 
+manual 
+- - Contractor PIU 
+
+[page 22]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 18 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+disposal from 
+construction 
+activities 
+management plan and submit to the Project 
+Authority for concurrence.  
+• Contractor sha ll dispose -of hazardous wastes as 
+per the provisions of Hazardous and other wastes 
+(management and trans boundary movement) 
+rules 2016 and its amendments 
+• Contractor shall dispose -off nonhazardous solid 
+wastes, nonhazardous liquid wastes, and 
+biomedical was tes as per the provisions of EHS 
+manual. 
+7.  Incident 
+Management  
+Prepare Incident Management Plan with reporting 
+formats. 
+    Contractor PIU  
+8.  Environmental 
+Monitoring 
+Prepare Environmental Monitoring Plan for Air, Noise, 
+Soil, Water, Vibration and Ecological 
+Air: Twice a month for entire 
+construction 
+Noise: Twice a month for entire 
+construction 
+Soil: Four times in a Year for 
+entire construction 
+Water: Four times in a Year for 
+entire construction 
+Vibration: Once in a month for 
+one year 
+Ecology: Four times in a Year for 
+entire construction 
+114.64 82.67 Contractor PIU  
+9.  Availability of 
+institutional 
+capacity 
+Implement training and establish environment unit as 
+per EHS manual 
+Training to PIU 
+officials and 
+Establishment 
+of Environment 
+Unit 
+Training to PIU 
+officials and 
+Establishment 
+of 
+Environment 
+Unit 
+173.41 173.41 Contractor PIU  
+
+[page 23]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 19 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+10.  Tree protection/ 
+Cutting and 
+Disposal 
+ 
+• The compensatory Afforestation is planned in line 
+with Saurashtra Felling of trees (i nfliction of 
+Punishment) Act, 1951 & amendment Rule 2008, 
+Forest Conservation Act 1980 and ESS 6 of World 
+Bank. 
+• Contractor shall prepare an action plan for 2093 
+trees to be affected (Cut: 932 trees and Transplant: 
+1161) and trees proposed to be planted (ab out 
+3957 saplings) as per compensatory afforestation 
+norms 
+• The trees proposed for plant ation in the project 
+area are Gulmohar, Pipal, Neem, Karanj, Siris etc.  
+• Other than Contractor, no one can cut the 
+identified trees which are falling in the ROW. 
+• Biomass shall not be stored at site for more than 
+15 days. 
+• By implementing the proposed Afforestation 
+measures, the project is expected to comply with 
+World Bank ESF guidelines. 
+Four Times in a 
+year during 
+entire 
+construction 
+Four Times in 
+a year during 
+entire 
+construction 
+5.00 7.25 Contractor PIU  
+11.  Energy 
+Management 
+/Conservation 
+The contractor shall use and maintain lighting, tools, 
+and equipment of appropriate specifications to 
+conserve energy as per EHS guidelines. 
+Part of EHS 
+manual 
+Part of EHS 
+manual 
+- - Contractor PIU 
+12.  Traffic 
+Diversion/Manag
+ement 
+• Traffic Management and Engineering measures like 
+road widening, traffic segregation, one -way 
+movements, traffic diversions, acquisition of 
+service lanes, etc shall be implemented.  
+• By implementing these control m easures, the 
+project is expected to comply with the Indian 
+Standards and WB ESF guidelines. 
+    Contractor PIU  
+
+[page 24]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 20 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+ 
+13.  Management 
+Plan for 
+Flamingos 
+• No spillage or disposal of construction waste close 
+to Tapi River. 
+• Restriction of Construction activities near Tapi 
+River during winters. 
+• Regular monitoring of River Water Quality. 
+• An amount of Rs. 10.00 Lakh provided for Flamingo 
+Conservation. 
+• The project is expected to comply with the WB ESF 
+guidelines by Implementing the management plan 
+for flamingos 
+- 3 times in a 
+year at Tapi 
+River 
+ 10.00 PIU in 
+consultatio
+n with 
+Deputy 
+Conservato
+r of Forest, 
+Surat 
+PIU  
+14.  Construction 
+Material 
+Management 
+and House 
+Keeping 
+• Full height fence, barriers, barricades etc. shall 
+be erected around the site 
+• All stairways, pass ageways and gangways shall 
+be maintained without any blockages or 
+obstructions 
+• All surplus earth and debris shall be 
+removed/disposed-off to officially designated 
+dumpsites 
+• By implementing the proposed mitigation 
+measures, the project is expected to comply  with 
+Indian Standards and WB ESF guidelines 
+• Contractor should submit the details to PIU as per 
+Annexure 4, 5, 10 & 11 of this document. 
+Part of EHS 
+manual 
+Part of EHS 
+manual 
+- - Contractor PIU 
+EMP during Operation Phase 
+1.  Air Pollution • Air Quality monitoring need to be carried out at all 
+stations and depots locations.  
+2 days in a 
+week; 1 week 
+2 days in a 
+week; 1 week 
+22.68 20.52 PIU PIU  
+
+[page 25]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 21 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+in a season; 3 
+seasons in a 
+year for 3 years 
+at all 20 
+stations and 1 
+depot 
+in a season; 3 
+seasons in a 
+year for 3 
+years at all 18 
+stations and 1 
+depot 
+2.  Noise Pollution • Use ballast -less track with elastic and absorbent 
+fittings for Noise Control 
+• Green belt within the depot boundary  
+• Noise barriers at sharp curved portions, structures 
+falling within 20 m distance from the  alignment 
+and at sensitive receptors 
+• These mitigations measures proposed for Noise 
+Management is in accordance with Noise Pollution 
+(Regulation and Control) Rules, 2000 and its 
+amendment and ESS 3 of World Bank. 
+- - - - PIU PIU  
+Monitoring will be at a ll 
+metro stations  and at 
+Depot 
+Monitoring will be at all 
+metro stations  and at 
+Depot. 
+2 days in a 
+week; 1 week 
+in a season; 3 
+seasons in a 
+year for 3 years 
+at all 20 
+stations and 1 
+depot 
+2 days in a 
+week; 1 week 
+in a season; 3 
+seasons in a 
+year for 3 
+years at all 18 
+stations and 1 
+depot 
+3.78 3.42 
+Noise Barrier proposed for 
+a length of 9339 m 
+Noise Barrier proposed 
+for a length of 6690 m  
+- - 1120.68 802.80 
+3.  Vibration Vibration can be reduced by: 
+• proper design and maintenance of track and rolling 
+1-day 
+monitoring; 4 
+times in a year 
+1-day 
+monitoring; 4 
+times in a year 
+25.20 7.20 PIU PIU  
+
+[page 26]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 22 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+stock 
+• resilient soft base plates between rail and track 
+slab 
+• resilient rubber between the base plate and track 
+slab 
+for 3 years at 7 
+identified 
+sensitive 
+receptors 
+for 3 years at 2 
+identified 
+sensitive 
+receptors 
+4.  Soil Monitoring Soil quality monitoring to be checked at baseline 
+monitoring locations 
+4 times in a 
+year for 3 years 
+at 5 locations 
+4 times in a 
+year for 3 
+years at 5 
+locations 
+3.00 3.00 PIU PIU  
+5.  Water supply,   
+sewage and solid 
+waste disposal at 
+stations and 
+depots 
+• Implement measures including treatment and 
+reuse of waste water, rain water harvesting to 
+augment ground water. 
+• Organic waste shall be segregated and treated by 
+in-site bio composter technique. 
+• By implementing the proposed mitigation 
+measures, the project is expected to comply with 
+Indian Standards and ESS 3 of World Bank 
+  23.88 23.04 PIU PIU  
+6.  Incident 
+Management 
+Implement Incident Management Plan in accordance 
+with EHS Manual 
+Part of EHS 
+manual 
+Part of EHS 
+manual 
+- - PIU PIU 
+7.  Management 
+Plan for 
+Flamingos 
+ • Maintaining, and 
+restoring favorable 
+hydrological 
+conditions and water 
+quality at Tapi River. 
+• Minimizing human 
+disturbance from 
+boating, fishing, and 
+tourists etc near the 
+alignment crossing at 
+- - - 10 PIU in 
+consultatio
+n with 
+Deputy 
+Conservat
+or of 
+Forest, 
+Surat 
+PIU 
+
+[page 27]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 23 
+S. No Environmental 
+Impact 
+Mitigation Measure Frequency of Monitoring Cost in Rs. Lakh Implement
+ing Entity 
+Responsi
+ble Entity Corridor 1: Sarthana - 
+Dream City 
+Corridor 2: Bhesan - 
+Saroli Corridor 1 Corridor 2 Corridor 
+1 
+Corridor 
+2 
+Tapi River 
+• The project is 
+expected to comply 
+with the WB ESF 
+guidelines by 
+Implementing the 
+management plan 
+8.  Monitoring and 
+Grievances 
+• Implement mechanism to monitor progress of 
+implementation of the EMP/EMoP measures and 
+results achieved.  
+• Implement mechanism for project -level grievance 
+Redressal. 
+    PIU PIU 
+ 
+  
+
+[page 28]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 24 
+Table 2.2:  Environmental Management Plan – Design, Construction, and Operation 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+Social Management- Design Phase 
+1. Acquisition of land 
+affecting private 
+structures 
+and households 
+Acquisition of private land will be as per 
+The Right to Fair  Compensation and 
+Transparency in Land Acquisition,  
+Rehabilitation and Resettlement Act, 2013. 
+ 
+The affected people will be compensated 
+and assisted as per  the provisions given in 
+Entitlement Matrix i n respect of PAPs due 
+to implementation of Surat M etro Rail 
+Project (SMRP). 
+ 
+Resettlement & Rehabilitation activities of 
+SMRP will be  governed by the gener al 
+principles based on The Right to Fair  
+Compensation and Transparency in Land 
+Acquisition, Rehabilitation and 
+Resettlement Act, 2013 and RFCTLARR 
+(Gujarat Government) Act.2016. 
+ 
+Once Revenue 
+Department, 
+Government of 
+Gujarat 
+GMRC -- The cost is 
+tentative & depend 
+upon actual land 
+acquisition 
+(Revenue 
+Department) 
+2. Gender Action Plan Ensure that women’ s needs are equally 
+met through Resettlement Action Plan; 
+ 
+Ensure that compensation disbursement is 
+transparent and compensation shall be in 
+the name of both spouses. 
+ 
+Reserved seats for women in each coach 
+shall be included in each metro route 
+Once GMRC GMRC -- - 
+
+[page 29]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 25 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+operation.  
+ 
+CCTV cameras shall be installed to monitor 
+the security of women passengers inside 
+coach. 
+ 
+Information on mobile phone based 
+application for s ecurity o f women 
+commuters shall be disseminated through 
+at least one signage inside the coach. 
+ 
+The separate sanitary facilities in adequate 
+numbers at stations. 
+ 
+Adequate number of signboards shall be 
+provided to show the location of sanitary 
+facilities available at station. 
+ 
+Separate seating arrangement for women 
+and children, priority seating for pregnant 
+woman and elderly women shall be 
+provided in coaches. 
+ 
+ 
+ 
+3 Elders and people 
+with disability 
+It shall be ensured that train contains fully 
+accessible coaches. Staff shall be trained in 
+methods of assistance and be at hand on 
+request. 
+ 
+Once Contractor GC/GMRC -- - 
+
+[page 30]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 26 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+Stations for all levels should be fully 
+accessible with wide entrance and shall be 
+accessible by wheelchair. 
+ 
+For persons with hearing impairments an 
+electronic sign board shall be displayed on 
+each platform at noticeable locations. 
+ 
+For persons with Visual impa irments, an 
+electronic sign board shall be displayed on 
+each platform at noticeable locations. 
+ 
+Identification signage shall be provided on 
+the doors of wheelchair accessible coach. 
+ 
+Space for a wheelchair should be available 
+at the side of door. 
+ 
+The spac e shall be indicated inside and 
+outside the car by using the international 
+symbol of access; 
+ 
+Wheel stoppers and ring -strap or other 
+appropriate safety grip shall be provided 
+for wheelchair users.  
+ 
+An appropriate number of designated 
+seats for passengers with disabilities and 
+elderly people shall be provided near the 
+doors.  
+
+[page 31]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 27 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+ 
+Approach route shall no t have level 
+difference. If the station is not on the same 
+level as the walkway or pathway, it shall 
+have ramp. Walkway surfaces shall not be 
+non-slippery. 
+ 
+Approach walkway should have tactile 
+pavements for persons with visual 
+impairments. 
+ 
+The counters s hall have pictographic maps 
+indicating all the services offered at the 
+counter and at least one of the counter 
+staff should be sign language literate. 
+ 
+At least  one of the ticket gates shall be 
+minimum 900 mm wide to allow a 
+wheelchair user through and hav e a 
+continuous line of guiding pavers for 
+people with visual impairments. 
+The platform shall: 
+ 
+Have a row of warning pavers installed 
+before the track edge and shall have non -
+slip and level flooring. 
+ 
+All platforms shall inter -connect by means 
+of an access ible routes or lifts and way 
+finding references shall be available at 
+
+[page 32]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 28 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+decision points. 
+ 
+Colour shall be used to identify routes and 
+provide assistance in locati ng doors, walls 
+and hazards.  
+ 
+Structural elements such as columns shall 
+be colour contrasted or brightly marked to 
+assist visually impaired. 
+Social Management- Construction Phase 
+1 Gender Action Plan Safe lighting at work pl ace and workers 
+colony along with separate access to 
+female/male toilets and waiting areas shall 
+be ensured if women workforce deployed 
+at site; 
+ 
+First aid medical facilities at the working 
+sites for pregnant women, elderly and 
+children shall be ensure d if women 
+workforce deployed at site; 
+ 
+Ensure that women shall be consulted and 
+provided opportunities to help them get 
+benefits under the wage employment 
+during project construction. 
+ 
+It will be ensured that women workers are 
+paid at par with male workers. 
+ 
+Adherence to provision of labor law shall 
+Continuous 
+throughout 
+construction 
+Contractor, 
+PIU(GMRC), SHE 
+Personnel 
+GC and 
+GMRC 
+-- - 
+
+[page 33]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 29 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+be ensured for civil contracts. 
+ 
+If women workers are deployed at sites 
+then day crèche facilities shall be provided 
+to facilitate the wom en with infants 
+working on site. 
+ 
+Visible reporting desks is requires at 
+construction camps, work place. 
+ 
+To address Gender Based Violence (GVB) 
+the project has prepared  GAP. It shall 
+comprise: 
+• Integrate GVB into Information 
+Education Communication ( IEC) 
+strategy/materials, GRM, safety talks 
+and regular meetings.  
+• Community consul tation and 
+identification of GVB focal points 
+within the community. 
+• Training of labors on occupational 
+health and safety issues. 
+• Mapping the service providers for GVB 
+prevention and response. 
+ 
+Contractor shall c arry out awareness 
+programs for laborers on t he risks of 
+STDs/AIDS and human trafficking  in 
+coordination with Gujarat State AIDS 
+Control Society. 
+
+[page 34]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 30 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+ 
+2 Non- monetary 
+support 
+Arrangements for 
+PAPs 
+GMRC shall extend following support to 
+PAPs: 
+Support for getting compensation from 
+Revenue Department 
+ 
+Support for getting compensation and 
+grievance Redressal. 
+   --  
+ Disruption to 
+access from house 
+and shops to roads 
+7 days’ advance notice through poster and 
+leaflet before start of work. 
+Provide alternate access before disruption. 
+Restore permanent access as is where is 
+basis 
+Continuous 
+throughout 
+construction 
+Contractor, 
+PIU(GMRC) 
+GC and 
+GMRC 
+  
+ Differential 
+impacts on 
+vulnerable and 
+disadvantaged 
+population 
+7 days’ advance notice through poster and 
+leaflet before start of work. 
+Impacted disadvantaged population will be 
+treated case by case basis by provision of 
+temporary access and other assistance as 
+identified. 
+ 
+Continuous 
+throughout 
+construction 
+RAP 
+implementation 
+agency, 
+Contractor 
+GC and 
+GMRC 
+  
+Social Management- Operation Phase 
+1. Gender Action Plan It will be ensured that women, children 
+and elderly people accessible facilities shall 
+be provided at stations. 
+ 
+Provisions of separate queues for women 
+for buying t ickets for travel in Metro shall 
+be ensured, if required. 
+ 
+Separate seating for women and, priority 
+Continuous 
+During 
+operation 
+Station Manager GMRC -- Cost shall be 
+included in O&M 
+contract 
+
+[page 35]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 31 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+seating for pregnant women and elderly 
+citizens will be provided in the coaches. 
+ 
+Emergency i ntercom and video 
+surveillance shall be part of metro 
+operation system. 
+ 
+Separate toilets for men and women at 
+stations shall be provided; 
+ 
+Patrolling of platforms during night hours 
+by security personnel shall be ensured 
+ 
+Ladies security personnel to be deployed 
+for frisking women passengers; 
+ 
+Promote women’s employm ent in the 
+metro services sector. 
+ 
+2. Elders and people 
+with disability 
+Staff shall be trained in methods of 
+assistance and shall be available at hand 
+on request. 
+ 
+Good illumination shall be ensured at 
+stations to ensure the comfort of visually 
+impaired. 
+ 
+Automated kiosks shall be accessible for 
+wheelchair users and shall be clearly 
+marked with international symbol 
+     
+
+[page 36]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 32 
+Sr. 
+No 
+Project related 
+Social issues Mitigation Measures Frequency 
+Implementation 
+Agency/ 
+Authority 
+Supervision 
+Agency 
+Cost 
+(Lakh) Remarks 
+accessibility. 
+ 
+Braille buttons and audio announceme nt 
+system shall be ensured for persons with 
+vision impairments. 
+ 
+It will be ensured that stations operations 
+shall be easy to understand and operate 
+for persons wi th learning disabilities, 
+intellectual disabilities and elderly persons. 
+ 
+Information’s or he lp desks shall be close 
+to the station entrance and highly visible 
+upon entering the station. 
+ 
+In addition, they should be clearly 
+identifiable and accessible to w heelchairs 
+bound and normal users 
+ 
+Help desks shall have a map of the facility 
+and attendants  can view with passengers 
+when providing information’s. 
+
+[page 37]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 33 
+Chapter 3 : Environment and Social Monitoring 
+ 
+3.1. ENVIRONMENT MONITORING PLAN 
+3.1.1. Pre-Construction Phase 
+The environmental monitoring programme helps in signalling the potential problems 
+resulting from the p roposed project activities and will allow for prompt implementation of 
+corrective measures. Pre-construction phase monitoring has been done for the propos ed 
+project for air, noise, vibration, water, and soil quality . This will have to be followed by 
+monitoring of afforestation/transplantation. 
+3.1.2. Construction Phase 
+Monitoring schedule for the entire period of construction (5 Years) is summarized in Table 
+3.1. The number of locations could be modified based on need when the construction 
+commences. Monitoring sh ould be carried out by NABL Accredited/MoEFCC recognized 
+private or Government agency. The contractor will be responsible for carrying out 
+monitoring duri ng construction under the supervision of PIU. The results of air quality, 
+water quality, wastewater, vibration monitoring will be submitted to management quarterly 
+during construction phase.  
+ 
+Table 3.1: Construction Stage Monitoring Schedule 
+Parameter Locations and Frequency Reference/Standard Implementation 
+by / Approval by 
+Air  One day monitoring for Twice in 
+Month at four locations for each 
+corridor for entire construction 
+period.  
+• Guidelines for Ambient Air 
+Quality Monitoring, CPCB, 
+2003 
+• National Ambient Air 
+Quality Standards 2009  
+Contractor/PIU 
+Noise One day monitoring for Twice in 
+Month at four locations for each 
+corridor for entire construction 
+period. 
+• Protocol for Ambient Level 
+Noise Monitoring, CPCB, 
+May 2015 
+• ISO/ TC 108 (vibration) 
+Contractor/ PIU 
+Vibration Once in a month for a Year at 17 
+locations for Corridor 1 and 8 
+locations for Corridor 2 
+Water 
+(surface and 
+ground 
+water) and 
+wastewater 
+Once in a season, four   seasons 
+in a year at baseline monitoring 
+locations 
+• Guide Manual – Water and 
+wastewater analysis, CPCB 
+• Drinking water – 
+Specifications IS 10500: 
+2012 and CPHEEO Manual 
+2012 
+Contractor/ PIU 
+Soil Once in a season, four   seasons 
+in a year  at  baseline monitoring 
+US EPA test protocols Contractor/ PIU 
+
+[page 38]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 34 
+Parameter Locations and Frequency Reference/Standard Implementation 
+by / Approval by 
+locations 
+Ecology Terrestrial: Four times per year 
+along each corridor, at depots 
+and afforestation sites. 
+Aquatic: 3 samples & 3 times in 
+a year at Tapi River for 
+Phytoplankton, Zooplankton and 
+Benthos 
+As per Forest authorities & 
+SMC 
+ 
+ 
+Contractor/ PIU, 
+SMC & Forest 
+Department 
+ 
+The environmental monitoring cost during construction phase is estimated as Rs 114.64 
+Lakh and Rs 8 4.92 Lakh for Sarthana to Dream city and Bhesan to Saroli  corridor 
+respectively. The estimated cost towards environmental monitoring during construction will 
+be part of civil contract and details are given in Table 3.2. 
+Table 3.2:Environmental Monitoring Cost during Construction 
+S 
+No ITEM QUANTITY TOTAL COST 
+(Rs in Lakh) 
+Corridor I: Sarthana to Dream City 
+i.  Air Quality Monitoring 4 Samples X 24 times in a year X 5 Years  29.20 
+ii.  Noise Quality Monitoring 4 Samples X 24 times in a year X 5 Years  4.86 
+iii.  Soil Quality Monitoring 5 Samples X 4 times in a year X 5 Years  5.00 
+iv.  Soil Quality Monitoring for 
+Muck 3 muck samples per km for the UG section 0.97 
+v.  Water Quality Monitoring 6 Samples X 4 times in a year X 5 Years  8.40 
+vi.  Vibration Monitoring 17 Sample X 12 times in a year X 1 Year 61.20 
+vii.  Ecological Monitoring 4 times in a year X 5 Years  5.00 
+Env. Monitoring Cost for Corridor I: Sarthana to Dream City 114.64 
+ 
+Corridor II: Bhesan - Saroli 
+i.  Air Quality Monitoring 4 Samples X 24 times in a year X 5 Years  29.20 
+ii.  Noise Quality Monitoring 4 Samples X 24 times in a year X 5 Years  4.86 
+iii.  Soil Quality Monitoring 5 Samples X 4 times in a year X 5 Years  5.00 
+iv.  Water Quality Monitoring 7 Samples X 4 times in a year X 5 Years  9.80 
+v.  Vibration Monitoring 8 Sample X 12 times in a year X 1 Year 28.80 
+vi.  Ecological Monitoring 4 times in a year X 5 Years  5.00 
+vii.  Ecological Monitoring: 
+Aquatic 3 times in a year X 5 Years 2.25 
+Env. Monitoring Cost for CorridorII: Bhesan - Saroli 84.92 
+ 
+  
+
+[page 39]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 35 
+3.1.3. Operation Phase 
+The environmental monitoring schedule during operation phase for 3 years  is presented in 
+Table 3.3. The results of air quality, water quality, waste water, vibration will be submitted  
+to management bi-annually during operation phase. 
+ 
+Table 3.3:Operation Stage Monitoring Schedule 
+Parameter Frequency Reference/Standard Implementation 
+by / Approval by 
+Period 
+(years) 
+Air  2x24 hours in a week for 
+each season, Three 
+seasons in a year at all 
+metro stations and Depot 
+• Guidelines for 
+Ambient Air Quality 
+Monitoring, CPCB, 
+2003 
+•  National Ambient 
+Air Quality Standards 
+2009  
+PIU 3 
+Noise 2x24 hours in a week for 
+each season, Three 
+seasons in a year at all 
+metro stations and Depot 
+Metro Rail Transit 
+System, Guidelines for 
+Noise and Vibrations, 
+RDSO, Ministry of 
+Railways, September 
+2015 
+ 
+PIU  3 
+Vibration 24 hours, once in two 
+months at Sensitive 
+locations at 7 locations for 
+Corridor 1 and 2 locations 
+for Corridor 2 
+Water 
+(surface 
+and ground 
+water) 
+Once in a season, four   
+seasons in a year  at  
+baseline monitoring 
+locations 
+• Guide Manual – 
+Water and 
+wastewater analysis, 
+CPCB 
+• Drinking water – 
+Specifications IS 
+10500: 2012 and 
+CPHEEO Manual 
+2012 
+PIU 3 
+Wastewater Once in  a season, Four 
+seasons in a year at all 
+stations and Depot 
+Solid Waste Once in  a season, Four 
+seasons in a year at Depot 
+• Solid Waste 
+Management Rules 
+2016 
+PIU 3 
+Soil Once in a season, four   
+seasons in a year at 
+baseline monitoring 
+locations 
+US EPA test protocols PIU 3 
+Ecology Once in a season, four 
+seasons in a year at 
+Afforestation Sites 
+As per Forest 
+authorities & SMC 
+PIU, SMC & 
+Forest Dept. 
+3 
+ 
+
+[page 40]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 36 
+The environmental monitoring cost during operation phase is Rs 81.54 Lakh & Rs 61.53 Lakh 
+for Sarthana to Dream city and Bhesan to Saroli  corridors respectively. The estimated cost 
+towards environmental monitoring during operation will be the responsibilit y of PIU and 
+details are given in Table 3.4. 
+ 
+Table 3.4: Environmental Monitoring Cost during Operation 
+S 
+No ITEM QUANTITY TOTAL COST 
+(Rs in Lakh) 
+Corridor I: Sarthana to Dream City 
+i.  Air Quality Monitoring 21 Samples X 2 days X 3 times in a year for 
+3 Years  22.68 
+ii.  Noise Quality Monitoring 21 Samples X 2 days X 3 times in a year for 
+3 Years 3.78 
+iii.  Soil Quality Monitoring 5 Samples X 4 times in a year X 3 Years  3.00 
+iv.  Water Quality Monitoring 6 Samples X 4 times in a year X 3 Years  5.04 
+v.  Vibration Monitoring 7 Samples X 4 times in a year X 3 Year 25.20 
+vi.  Quality of Wastewater 21 Samples X 4 times in a year for 3 Years 17.64 
+vii.  Ecological Monitoring 4 times in a year X 3 Years  3.00 
+viii.  Solid Waste Characteristics 
+at Depot 1 Sample X 4 times in a year X 3 Year 1.20 
+Env. Monitoring Cost for Corridor I: Sarthana to Dream City 81.54 
+ 
+Corridor I: Bhesan - Saroli 
+i.  Air Quality Monitoring 19 Samples X 2 days X 3 times in a year for 
+3 Years  20.52 
+ii.  Noise Quality Monitoring 19 Samples X 2 days X 3 times in a year for 
+3 Years 3.42 
+iii.  Soil Quality Monitoring 5 Samples X 4 times in a year X 3 Years  3.00 
+iv.  Water Quality Monitoring 7 Samples X 4 times in a year X 3 Years  5.88 
+v.  Vibration Monitoring 2 Samples X 4 times in a year X 3 Year 7.20 
+vi.  Quality of Wastewater 19 Samples X 4 times in a year X 3 Years 15.96 
+vii.  Ecological Monitoring 4 times in a year X 3 Years  3.00 
+viii.  Ecological Monitoring: 
+Aquatic 3 times in a year X 3 Years 1.35 
+ix.  Solid Waste Characteristics 
+at Depot 1 Sample X 4 times in a year X 3 Year 1.20 
+Env. Monitoring Cost for Corridor II: Bhesan - Saroli 61.53 
+ 
+  
+
+[page 41]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 37 
+3.2. SOCIAL MONITORING PLAN 
+The internal monitoring for RAP, GAP and SEP implementation will be carried out by GMRC. 
+Independent Evaluation Agency will be hired by GMRC for mid and end term evaluation.  
+Social monitoring cost during implementation is given in Table 3.5. 
+ 
+Table 3.5: Social Monitoring Cost during Implementation 
+S.No ITEM Monitoring Agency Evaluation Agency Total Cost (Rs. in 
+Lakh) 
+1 RAP PIU(GMRC) Independent Evaluation 
+Agency 
+80.00 
+2 GAP PIU(GMRC) Independent Evaluation 
+Agency 
+3 SEP PIU(GMRC) Independent Evaluation 
+Agency 
+
+[page 42]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 38 
+Chapter 4 : Capacity Development and Training 
+ 
+4.1. ESMP REPORTING ARRANGEMENT AND INSTITUTIONAL 
+STRENGTHENING 
+Supervision involves periodic checking to ascertain whethe r activities are going according to 
+the plans. It provides necessary feedback for project management team to keep the 
+program on schedule. The supervision and reporting process with respect to 
+implementation status of mitigation measures during constructio n will initiate from the 
+contractor at the lowest rung who will report to the Project Implementation Unit (PIU) 
+through the Project Management Consultant (PMC).  
+During construction phase of the pro ject, the E SMP implementation comprises of the 
+following key activities: 
+• Implementing various mitigation and enhancement measures within the time 
+frame recommended 
+• Overseeing the implementing various mitigation and enhancement measures 
+and fine tuning/advo cating more measures, if needed, depending on site 
+conditions; 
+• Project level monitoring of key performance indicators to evaluate the 
+implementation of ESMP measures at the recommended intervals. 
+• Periodical reporting of status of E SMP implementation and mo nitoring results 
+and key performance indicators and  
+• Evaluation of E SMP measures implemented based on the data available from 
+project level monitoring and status reports and providing directions accordingly. 
+These activities to be carried out by various ag encies that will be involved in the 
+implementation of metro project. It is also to be noted that all these activities will be carried 
+out concurrently or at regular intervals and at different duration and location. This makes it 
+pertinent that all agencies  involved work within a predefine setup. The coordination model 
+proposed during construction and operation phases is presented in Figure 4.1 and Figure 
+4.2, respectively.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[page 43]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 39 
+Figure 4.1: Institutional Mechanism for ESMP Implementation (Construction Phase) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 4.2:  Institutional Mechanism for ESMP Implementation (Operation Phase) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Project Implementation Unit (PIU): The responsibility of implementing environmental 
+mitigation measures lies with the PI U. PI U in this project will be Gujarat Metro Rail 
+Corporation L td. (GMRC). The responsibility also includes various tasks such as notifying 
+various affected parties such as the resident and commercial establishment, facilitate  the 
+relocation of people, notify ot her utility departments such as telephone, water supply, 
+sewerage etc. which used the road for providing public utility services. 
+ 
+High Power Steering 
+Committee 
+ Project Coordinator 
+PIU,  
+GMRC Project Director, 
+Surat Metro Ph - I 
+PMC 
+Contractor 
+Funding 
+Agency 
+High Power Steering Committee 
+ 
+Project Coordinator 
+ 
+Monitoring agency 
+employed by GMRC/ other 
+relevant Govt. agencies 
+PIU 
+GMRC Project Director, 
+Surat Metro Phase I 
+ 
+Funding 
+Agency 
+
+[page 44]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 40 
+Project Management Consultant (PMC): The PIA will get the EMP implemented through the 
+Project Management Consultant (PMC) app ointed for managing engineering and 
+construction related activity. The PIU will deliver the responsibility of the implementation as 
+per the contract agreement. In order to effectively discharge the duties PMC will have a n 
+environmental officer/expert in th e project management unit. The environmental officer 
+will work for a full time basis at the site office. The officer must possess experience in the 
+environmental management of metro projects. 
+ 
+Project Contractor: Project contractor will implement the EMP m easures, enhancement 
+measures and measures as directed by PI U and PMC. The responsibility to implement the 
+EMP measures will be built in to the contractual agreement. The contractor shall submit a 
+report on compliance of  environmental mitigation measures p eriodically to the PMC. The 
+PMC will review and approve the Environmental Compliance Report (ECR) submitted by the 
+contractor and forward the ECR to PI U after approval. The PI U will then submit the ECR to 
+Joint Project D irector (JPD), environment which aft er review and monitoring will submit to 
+Independent Monitoring Panels through the Project Director, GMRC. The Project Director 
+accordingly submits report to the Funding Agency.  
+ 
+GMRC: GMRC as an apex organization shall initiate to coordinate process among  the 
+concern organization for ESMP implementation. GMRC shall take lead in  
+• Reviewing the progress of the project for the subsequent year- institution wise 
+• Reviewing and discussing the salient features of the report in t he year on 
+environmental aspects and their violations 
+• Organizing and coordinating training programs for all member organization 
+ 
+Environmental and Social Management Unit (ESMU)  needs to be set up by the GMRC for 
+implementation of E SMP and Environmental Mon itoring Plan (EMoP). The ESMP comprises 
+staff and structure is shown in Figure 4.3. 
+ 
+Figure 4.3:  Organizational Structure of ESMP 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  PROJECT DIRECTOR 
+  ADDITIONAL GENERAL MANAGER (ESMU) 
+ENVIRONMENTAL EXPERT 
+TECHNICAL ASSISTANT 
+Sr. SOCIAL DEVELOPMENT OFFICER 
+R & R OFFICER 
+
+[page 45]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 41 
+4.2. REPORTING SYSTEM 
+The monitoring report of environmental paramet ers (Air, Noise, Water and soil) will be 
+prepared by the environmental engineer and submitted to the Project Management 
+Consultant. 
+ 
+• The contractor will report to Construction Supervision Consultant (CSC) and CSC will 
+report to GMRC on compliance. GMRC may disseminate the information to all interested 
+parties. 
+• Non compliance of the monitoring will be seen by the GMRC. 
+• Photographic monitoring record will be maintained by the contractor. All material 
+source points, disposal locations, plant locations, camp lo cations, etc should be 
+photographed. 
+• A full record of construction activities will be kept as a part of normal contract 
+monitoring system under the various stages of construction. 
+• The following reporting format for various activities during construction are attached:  
+▪ Annexure 1: Details of Batching Plant 
+▪ Annexure 2: Details of Muck Dumping Operations 
+▪ Annexure 3: Details of Machinery during Construction 
+▪ Annexure 4: Safety Check List 
+▪ Annexure 5: Accident Report 
+▪ annexure 6: Pollution Monitoring 
+▪ Annexure 7: Vibration Monitoring 
+▪ Annexure 8: Restoration of Construction Sites 
+▪ Annexure 9: Keeping Records of Consent obtained by Contractor 
+▪ Annexure 10: Checklist for Environment Inspection 
+▪ Annexure 11: Summary Sheet 
+ 
+GMRC will be responsible for supervision and implem entation of the RAP , GAP  and SEP. 
+GMRC will prepare quarterly progress reports  and submit cop ies to AFD & KfW. The 
+Independent Evaluation Agency will submit draft and final reports of their assignment s to 
+GMRC, and AFD &  kfW and determine whether resettlem ent goals have been achieved . 
+Submission of the draft report would be carried out after completion of assignment and the 
+final report should be submitted after receiving feedback from GMRC and AFD & KfW. 
+4.3. ESTABLISHMENT OF ENVIRONMENTAL DIVISION 
+It is recomm ended that Project Authority establishes an Environment Division at the initial 
+stage of the project itself. This division should have an Environmental Officer and an 
+Environment Engineer. The task of the division would be t o monitor implementation of 
+environmental mitigation measures and environmental monitoring and it should report 
+directly to Chief Engineer of the Project Authority. Progress of the division should be 
+reviewed by an Environmental Advisor once in a year. The  Environmental Advisor should be 
+an experienced expert familiar with environmental management in similar projects. Cost for 
+the first ten years (including 10% annual increase) is given in Table 4.1. The estimated cost 
+
+[page 46]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 42 
+for 10 years is Rs 166.31 Lakh  for each corridor. The division will be  set up at one location 
+for both the corridor and capital & recurring costs are distributed equally among two 
+corridors. 
+ 
+Table 4.1: Environmental Division Cost 
+S No ITEM COST (Rs) 
+Corridor I Corridor II 
+A Capital Cost 
+Office Furnishings (Computer, furniture etc) LS 250,000 
+B 
+Recurring Cost 
+Man Power Cost (For 12 months)   
+Environmental Engineer/Officer @ Rs. 40,000/month 480,000 
+Environmental Assistant @30000/month 360,000 360,000 
+Office Maintenance and consumables @ Rs. 10,000/month 120,000 
+C Sub Total (A+B) 785,000 785,000 
+  Miscellaneous and unforeseen expenses, LS (10 % of C) 78,500 78,500 
+Total cost for establishment of cell for 1 Year 863,500 863,500 
+ Total cost for 10 years with 10% annual increase 16,631,450 16,631,450 
+ 
+4.4. TRAINING 
+The training for engineers, managers and workers will be impacted by GMRC on regular 
+basis to a) monitor implementation of approved EMS by Contractor b) monitor 
+environmental status during operation and c) mon itor disaster management during 
+operation. The cost is estimated to be Rs 7.10 Lakh for each corridor as given in Table  4.2. 
+The curriculum for all the corridors will be same. One extens ion officer for each corridor (is 
+considered and cost is distributed equally among the each corridor. 
+ 
+Table 4.2: Cost for Training Program 
+S. No. ITEM Cost (Rs) 
+1 Curriculum Development and course preparation 1 
+month Rs.50000 LS 
+50,000 
+2 Extension Officer (1 year)  Rs.30,000/month 360,000 
+3 Instructor 6 sessions of 3 days each (@ 30000/session) 180,000 
+4 Demonstration/Presentation Aids LS 70,000 
+5 Miscellaneous (Material etc) LS 50,000 
+Total 7,10,000 
+ 
+ 
+ 
+
+[page 47]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 43 
+Chapter 5 : Cost Estimates 
+ 
+5.1. ENVIRONMENTAL COST 
+The total estimated  cost o f environmental management and monitoring plan for the 
+proposed project is Rs 3656.44 Lakh  (Table 5.1). The details of each component given in 
+respective chapters. The cost towards environmental monitoring and rainwater harvesting 
+during construction phase  will be the part of Civil Contract and remaining cost will be the 
+part of Project Implementation Unit (PIU). 
+ 
+Table 5.1: Cost of Environmental Management Plan 
+S. 
+No Item 
+Amount in Rs. Lakh 
+Sarthana to Dream City Bhesan to Saroli 
+1.  Compensatory Afforestation & Transplantation 
+Compensatory Afforestation @ Rs. 
+1200 per Tree 17.57 15.98 
+Transplantation @ 9999 per Tree 52.39 63.69 
+Add. tree for transplantation @ 
+Rs. 1200 per Tree 7.64 6.29 
+2.  Noise Barriers @ 0.12 Lakh/meter 1120.68 802.80 
+3.  Rainwater Harvesting @ 22 
+Lakh/km 341.10 418.27 
+4.  Flamingo Conservation - 10.00 
+5.  Environmental Monitoring 
+A. During Construction  
+Air Quality Monitoring 29.20 29.20 
+Noise Quality Monitoring 4.86 4.86 
+Soil Quality Monitoring 5.97 5.00 
+Water Quality Monitoring 8.40 9.80 
+Vibration Monitoring 61.20 28.80 
+Ecological Monitoring 5.00 5.00 
+Ecological Monitoring - Aquatic - 2.25 
+B. During Operation 
+Air Quality Monitoring 22.68 20.52 
+Noise Quality Monitoring 3.78 3.42 
+Soil Quality Monitoring 3.00 3.00 
+Water Quality Monitoring 5.04 5.88 
+Vibration Monitoring 25.20 7.20 
+
+[page 48]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 44 
+S. 
+No Item 
+Amount in Rs. Lakh 
+Sarthana to Dream City Bhesan to Saroli 
+Quality of Waste Water  17.64 15.96 
+Ecological Monitoring 3.00 3.00 
+Ecological Monitoring - Aquatic 1.35 - 
+Solid Waste Characteristics at 
+Depot 1.20 1.20 
+6.  Training and Extension 7.10 7.10 
+7.  Environment Division (Cell) 166.31 166.31 
+8.  Waste Water Treatment through 
+Bio Digesters 21.72 21.42 
+9.  Effluent Treatment Plant (ETP) 39.24 28.22 
+Total in Rs. Lakh 1971.27 1685.17 
+Total Cost in Rs. Lakh for both the 
+Corridors 3656.44 
+ 
+5.2. SOCIAL COST 
+The estimated social cost of this project is based on data and information collected during 
+census and socio -economic surveys conducted in July, August, September 2019 and 
+February 2020 and the unit rates ar e provisional sums.  R&R benefits are proposed to be 
+provided in addition to c ompensation. The cost for implementation of Resettlement and 
+Rehabilitation Plan is given in Table 5.2. The total cost for R&R implementation plan is INR 
+4718.20 Lakh.  
+Table 5.2: R&R Benefits Cost 
+S. 
+No Description Unit Quantity Rate in 
+Rs. Lakh Amount in Rs. Lakh 
+1 Compensation for loss of private land and structure has been presented in capital cost of DPR 
+Compensation for Titleholders 
+ Residential PAFs     
+2 Annuity or employment no. 96 5.00 480.00 
+3 Subsistence allowance no 96 0.36 34.56 
+4 Transportation allowance no 96 0.50 48.00 
+5 Resettlement Allowance no 96 0.50 48.00 
+ Commercial PAFs     
+6 Annuity or employment no. 255 5.00 1275..00 
+7 Subsistence allowance no 255 0.36 91.80 
+8 Resettlement Allowance no 255 0.50 127.50 
+9 Transportation allowance no 255 0.50 127.50 
+10 Loss of Small traders/self-employment no 255 0.25 63.75 
+Compensation for Non-Titleholders 
+ Tenants     
+11 Rental Allowance no 115 0.04 4.60 
+
+[page 49]
+ 
+ESMP for Surat Metro Rail Project Phase-I 
+ 
+ 
+ESMP January 2021 45 
+S. 
+No Description Unit Quantity Rate in 
+Rs. Lakh Amount in Rs. Lakh 
+12 Shifting Allowance no 115 0.50 57.50 
+13 Financial assistance for loss of trade  no 81 0.25 20.25 
+ Squatters     
+14 Accommodation for residential PAFs no 57 7.50 427.50 
+15 Subsistence allowance no 57 0.36 20.52 
+16 Shifting Allowance no 57 0.50 28.50 
+17 Financial assistance for loss of trade  no 0 0.25 0.00 
+18 
+Rental Allowance (Rs.4000/- for 12 
+months) no 57 0.04 2.28 
+Kiosks (Vendors) 
+19 Subsistence allowance no 153 0.36 55.08 
+Vulnerable Group 
+20 One time financial assistance no 118 0.50 59.00 
+Cost for Implementation of LRP* 
+21 LRP Implementation cost (LS)     40.30 40.30 
+Cost for Implementation of SEP         
+22 
+SEP cost (Considered lump sum Rs.3000000 
+per year for 5 years) no 5 30.00 150.0 
+Cost for Gender Development Plan         
+23 Cost for GAP and HIV Awareness (LS)    50.00 50.00 
+Loss of Employment 
+24 
+Compensation for economic loss of 
+employees no 167 0.36 60.12 
+Compensation for Community Structures 
+25 Religious structures (LS) no 29 15.00 43.50 
+26 Community (Trust) structures (LS) no 5 10.00 50.00 
+27 Toilet (LS) no 6 10.00 60.00 
+28 Educational & health centre (LS) 6 5 25.00 150.00 
+General     
+29 Cost for NGO Recruitment LS 1 250.00 250.00 
+30 Cost for Independent Evaluation Agency  1 50.00 50.00 
+31 Training for Staffs no 15 0.50 7.50 
+32 
+Dissemination of Entitlement Matrix, RP 
+etc LS  5.00 5.00 
+33 Administrative Expenses LS  10.00 10.00 
+ Sub Total 4289.26 
+ Contigencies@10% of Sub Total 428.92 
+ TOTAL 4718.18 
+*LRP cost includes skill development, training programs, employment placements (in case PAP 
+meets requirements of available opportunities) etc. This has been calculated based on Ahmadabad 
+Phase-I metro project. 
+**NGO cost includes cost of man month, travel expenses, accommodation, telecom, and office 
+equipment and coordination charges.     
+ 
+ 
+*********  End of Main Report    ********* 
+
+[page 50]
+ 
+ 
+ 
+ANNEXURE 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+▪ Annexure 1: Details of Batching Plant 
+▪ Annexure 2: Details of Muck Dumping Operations 
+▪ Annexure 3: Details of Machinery during Construction 
+▪ Annexure 4: Safety Check List 
+▪ Annexure 5: Accident Report 
+▪ annexure 6: Pollution Monitoring 
+▪ Annexure 7: Vibration Monitoring 
+▪ Annexure 8: Restoration of Construction Sites 
+▪ Annexure 9: Keeping Records of Consent obtained by Contractor 
+▪ Annexure 10: Checklist for Environment Inspection 
+▪ Annexure 11: Summary Sheet 
+ 
+
+[page 51]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 47 
+ANNEXURE4.1 
+ 
+DETAILS OF BATCHING PLANT 
+(To be filled by the Contractor) 
+Name of Location ____________________ 
+Report for Batching Plant 
+Reporting Month…………………….. 
+Date of Submission…………………...  
+ 
+1. Environment Features of the surrounding area 
+1.1 Name and location of Batching Plant  
+ 
+ 
+1.2 Wind direction   
+1.3 Name (s), distance population and type of 
+settlements in a 1.5 km radius of site. 
+ 
+ 
+2. Details of Batching Plant and Mitigation Measures taken  
+2.1 Installed Capacity  
+2.2 Average Utilization   
+2.3 Last maintenance date  
+2.4 Details of Sedimentation tank  
+ 
+3. Explain Air Pollution Control Measures taken at the Batching Plant site 
+ 
+ 
+4. Explain Noise Pollution Control Measures taken at the Batching Plant site 
+ 
+ 
+Remark 
+ 
+Submitted Checked Approved 
+Signature ……………. Signature …………… Signature …………… 
+Name ………………… Name ……………… Name ………………… 
+Designation ………….   
+Contractor Environmental Engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+ 
+  
+
+[page 52]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 48 
+ANNEXURE4.2 
+DETAILS OF MUCK DUMPING OPERATIONS 
+ 
+(To be filled by the Contractor) 
+ 
+Dumping site location ____________________ 
+Reporting Month…………………….. 
+Date of Submission …………………. 
+ 
+1. Environment Features of the surrounding area 
+1.1 
+ 
+Location of Dumping site   
+1.2 Capacity of Dumping site  
+1.3 Safety measure taken at Dumping site (s) 
+1. 
+2. 
+3. 
+4. 
+5. 
+ 
+Remark 
+ 
+ 
+Submitted Checked Approved 
+Signature ……………. Signature …………… Signature …………… 
+Name ………………… Name ……………… Name ………………… 
+Designation ………….   
+Contractor Environmental Engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+ 
+  
+
+[page 53]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 49 
+ANNEXURE4.3 
+DETAILS OF MACHINERY DURING CONSTRUCTION 
+ 
+(To be filled Monthly by the Contractor)  
+ 
+Location Name   ____________________ 
+Reporting Month…………………….. 
+Date of Submission ………………….. 
+ 
+1. Details of Machinery Operation  
+1.1 Total machinery in operation (Nos.)  
+1.2 Number of pavers  
+1.3 Number of rollers  
+1.4 Number of excavators   
+1.5 Number of graders  
+1.6 Number of dumpers  
+1.7 Number of Cranes  
+1.8 No. of workshops with repairs facility (furnish 
+location and type of facility provided) 
+Workshop on Facility  
+Location  Provided 
+1.9 Number of vehicles in repair at each location   
+1.10 Details of waste disposal  
+1.11 Others  
+ 
+Remark 
+ 
+Submitted Checked Approved 
+Signature ……………. Signature …………… Signature …………… 
+Name ………………… Name ……………… Name ………………… 
+Designation ………….   
+Contractor Environmental Engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+ 
+  
+
+[page 54]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 50 
+ANNEXURE4.4 
+SAFETY CHECK LIST 
+(To be filled by the Contractor) 
+1 Contract No.  
+2 Name of Contractor  
+3 Representation   
+4 Name of Safety Officer  
+5 Date of Inspection   
+ 
+        Location 1 …………   Location 2 ……………                   Location 3 ………….… 
+Adequate at time of Inspection 
+Needs Improvement 
+Needs Immediate Attention 
+Location 1 Location 2 Location 3 Remark 
+A B C A B C A B C 
+General            
+House keeping            
+Stacking of Material           
+Passageway           
+Lighting            
+Ventilation            
+Others           
+Electrical           
+Switches            
+Wirings            
+Fixed Installation            
+Portable Lighting            
+Portable Tool           
+Welding Machine           
+Others           
+Fire Prevention            
+Fire Fighting Appliance            
+Dangerous Goods Store           
+Gas Welding Cylinders           
+Others           
+Others           
+Dust Control           
+Noise Control            
+First Aid Equipment            
+Washing Facility           
+Latrine           
+Canteen            
+Provision of Personal 
+Protective 
+          
+Helmet           
+Eye Protector           
+Ear Protector            
+Respirator            
+Safety Shoes           
+Safety Belts           
+Others           
+Remark 
+
+[page 55]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 51 
+ 
+Submitted Checked Approved 
+Signature ……………. Signature …………… Signature …………… 
+Name ………………… Name ……………… Name ………………… 
+Designation ………….   
+Contractor Environmental Engineer of  
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+
+[page 56]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 52 
+ANNEXURE4.5 
+ACCIDENT REPORT  
+(To be completed on Occurrence of Injury by the Safety Officer) 
+ 
+Type of Accident 
+ Fall of person from a height   Explosion  
+ Slip, trip or fall on same level  Fire 
+ Struck against fixed objects  Contact with hot or corrosive 
+substances 
+ Struck by flying or falling objects  Contact with poisonous gas or toxic 
+substances 
+ Struck by moving objects  Contact with electric current 
+ Struck / caught by cable   Hand tool accident 
+ Stepping on hail etc.  Vehicle / Mobile plant accident 
+ Handling without machinery  Machinery operation accident  
+ Crushing / burying   Other (please specify)  
+ Drowning or asphyxiation    
+ 
+Agent Involved in Accident  
+ Machinery   Excavation / underground working  
+ Portable power appliance   Floor, ground, stairs or any 
+working, surface 
+ Vehicle or associated equipment / 
+machinery 
+ Ladder 
+ Material being handled, used or 
+stored 
+ Scaffolding/gondola 
+ Gas, vapor, dust, fume or oxygen  Construction formwork, shuttering 
+and false work 
+ Hand tools  Electricity supply cable, wiring 
+switchboard and associated 
+equipment  
+ Floor edge  Nail, splinter or chipping  
+ Floor opening   Other (Please specify) 
+ Left shaft   
+ Stair edge   
+ 
+Unsafe Action Relevant to the Accident  
+ Operating without authority   Failure to use proper footwear 
+ Failure to secure objects  Failure to use eye protector  
+ Making safety devices 
+inoperative  
+ Failure to use respirator  
+ Working on moving or 
+dangerous equipment  
+ Failure to use proper clothing  
+ Using un-safety equipment   Failure to use warn others or given 
+proper signals 
+ Adopting unsafe position or 
+posture 
+ Horseplay 
+ Operating or working at unsafe 
+speed 
+ No unsafe action  
+ Unsafe loading, Placing, mixing 
+etc. 
+ Others (please specify) 
+
+[page 57]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 53 
+ Failure to use helmet   
+ 
+ No Protective gear  Unsafe layout of job, traffic etc. 
+ Defective protective gear  Unsafe process of job methods 
+ Improper dress / footwear  Poor housekeeping  
+ Improper guarding   Lack of warming system 
+ Improper  ventilation   Defective tool, machinery or 
+materials 
+ Improper illumination   No unsafe condition  
+ Improper procedure   Others (please specify) 
+ 
+Personal Factor Relevant to the Accident  
+ Incorrect attitude / motive   Unsafe act by another person  
+ Lack of knowledge or skill  No unsafe personal factor 
+ Physical defects  Other ( please specify) 
+ 
+Remark 
+ 
+Submitted Checked Approved 
+Signature ……………… Signature ………………….. Signature ………………… 
+Name …………………. Name ……………………… Name …………………….. 
+Designation ………….. Designation ……………….. Designation ……………… 
+Contractor Environmental engineer. 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+ 
+ 
+ 
+ 
+
+[page 58]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 54 
+ANNEXURE4.6 
+POLLUTION MONITORING 
+Construction site location __________________________________________ 
+Construction Stage: Report – Date: __________Month _______Year________ 
+Mitigation measures suggested in last report complied or Not………………………………………………… 
+If not reasons thereof……………………………………………………………………….…………………… 
+(Location at which monitoring to be conducted as per EMP) 
+Sl. No. Chainage 
+(km) 
+Details of 
+locations 
+Duration of 
+monitoring 
+Instrument
+s used Completion Monitoring 
+Parameters Standards Results 
+Reasons for 
+exceeding 
+standards 
+Mitigation 
+Measures 
+suggested 
+Type of area 
+(Residential / 
+Industrial / 
+Commercial) 
+Remark 
+1. Air Monitoring (As per National Ambient Air Quality Standards, CPCB (2009)  
+  As per 
+decision of 
+Engineer in 
+Charge 
+As per 
+Section 8.1 
+    PM2.5 60 µg/m3      
+PM10 100 µg/m3      
+SO2 80 µg/m3      
+CO 02 mg/m3      
+NOx 80 µg/m3      
+2. Water Monitoring (As per Drinking Water Quality Standards, IS 10500, 2012) 
+  As per 
+decision of 
+Engineer in 
+Charge 
+As per 
+Section 8.1 
+    pH 6.5-8.5      
+BOD Nil      
+COD Nil      
+TDS 500 mg/l      
+Chlorides 250 mg/l      
+Nitrates 45 mg/l      
+Sulphates 200 mg/l      
+Iron 0.3 mg/l      
+Calcium   75 mg/l      
+Lead 0.01 mg/l      
+3. Soil Monitoring  
+  As per 
+decision of 
+Engineer in 
+Charge 
+As per 
+Section 8.1 
+    pH <7.0 Acid 
+6.5–7.5 
+Neutral 
+>7.5 Alkaline 
+     
+Organic 
+Matter 
+0.5 -0.75 %      
+Sodium 0-1 %      
+Potassium 2-6 %      
+
+[page 59]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 55 
+Sl. No. Chainage 
+(km) 
+Details of 
+locations 
+Duration of 
+monitoring 
+Instrument
+s used Completion Monitoring 
+Parameters Standards Results 
+Reasons for 
+exceeding 
+standards 
+Mitigation 
+Measures 
+suggested 
+Type of area 
+(Residential / 
+Industrial / 
+Commercial) 
+Remark 
+Chloride 0-1 %      
+ Available 
+Nitrogen 
+280-560 
+kg/hac 
+     
+Phosphorou
+s 
+11.5 – 24.5 
+kg/hac 
+     
+Arsenic < 20 mg/kg      
+Cadmium < 1 mg/kg      
+Mercury < 1 mg/kg      
+Lead < 35 mg/kg      
+Electric 
+Conductivity 
+0.0-2.0 Non 
+Saline 
+4.1-8.0 Saline 
+16.0 Strongly 
+Saline 
+     
+4. Noise Monitoring (As per National Ambient Noise Standards, CPCB  
+  As per 
+decision of 
+Engineer in 
+Charge 
+As per 
+Section 8.1 
+    Lday Residential-55 
+dB(A) 
+Commercial-
+65 dB(A) 
+     
+Lnight Residential-45 
+dB(A) 
+Commercial-
+55 dB(A) 
+     
+Remark 
+ 
+Submitted 
+  
+Checked 
+ 
+Approved 
+Signature ………………  Signature ………………….. Signature ………………… 
+Name ………………….  Name ……………………… Name …………………….. 
+Designation …………..  Environmental Engineer of In-charge Officer (PIU) 
+Contractor  Construction Supervision Consultant  
+ 
+  
+
+[page 60]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP January 2021 56 
+ANNEXURE4.7 
+Format for Vibration monitoring 
+ 
+Construction site location __________________________________________ 
+Construction Stage: Report – Date: __________Month _______Year________ 
+Mitigation measures suggested in last report complied or Not………………………………………………… 
+If not reasons thereof……………………………………………………………………….…………………… 
+(Location at which monitoring to be conducted as per EMP) 
+ 
+ 
+ Format for Vibration monitoring 
+Sampling 
+code Location Date Start Time Stop Time Vibration level 
+(PPV in mm/s) Latitude Standard Longitude Remarks 
+1  
+    
+ 
+DGMS 
+(Directorate 
+General of Mines 
+and Safety) 
+   
+2  
+    
+    
+3  
+    
+    
+ 
+Submitted Checked Approved 
+Signature ……………… Signature ………………….. Signature ………………… 
+Name …………………. Name ……………………… Name …………………….. 
+Designation ………….. Environmental Engineer of In-charge Officer (PIU) 
+Contractor Construction Supervision Consultant  
+
+[page 61]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP                                                   January 2021 57 
+ANNEXURE 4.8 
+RESTORATION OF CONSTRUCTION SITES 
+(To be filled by the Contractor) 
+ 
+ 
+Construction site location __________________________________________ 
+ (Reporting by Contractor to PIU) 
+Construction stage: Monthly Report – Date ………Month ………Year. 
+ 
+Sl. 
+No. 
+Contract 
+Package 
+Labor 
+Camp 
+Construction 
+Camp 
+Plant 
+Site 
+Disposal 
+Locations Top Soil 
+O R O R O R O R Preserved Restored 
+            
+            
+            
+            
+            
+            
+            
+ 
+ 
+Remark 
+ 
+ 
+Submitted Checked Approved 
+Signature ……………… Signature ………………….. Signature ………………… 
+Name …………………. Name ……………………… Name …………………….. 
+Designation ………….. Designation ……………….. Designation ……………… 
+Contractor Environmental engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+ 
+ 
+  
+
+[page 62]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP                                                   January 2021 58 
+ANNEXURE 4.9 
+ 
+FORMAT FOR KEEPING RECORDS OF CONSENT OBTAINED BY CONTRACTOR 
+ 
+Construction site location ______________________ 
+Construction Stage: Report – Date: __________Month_______ Year________ 
+ 
+Sl. 
+No. 
+Contractor’s 
+Name Clearance Applicable 
+Acts Agencies Obtained 
+on 
+Valid 
+up to  Remarks 
+ Construction site location 
+        
+        
+        
+        
+        
+ 
+ 
+Remark 
+ 
+ 
+Submitted Checked Approved 
+Signature ……………… Signature ………………….. Signature ………………… 
+Name …………………. Name ……………………… Name …………………….. 
+Designation ………….. Designation ……………….. Designation ……………… 
+Contractor Environmental engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+ 
+ 
+  
+
+[page 63]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP                                                   January 2021 59 
+ANNEXURE 4.10 
+CHECKLIST FOR ENVIRONMENT INSPECTION 
+(Points / Issues to be covered) 
+ 
+ 
+Construction site location ____________________ 
+ 
+Date of Inspection_________________ 
+ 
+S. No. ESMP Measures 
+1 Provision of a personnel accountable for implementation of ESMP / Safety Measures with 
+Contractor 
+2 Consent of PCB to Establish Batching Plant 
+3 Consent of PCB to operate Batching Plant 
+4 Compliance of PCB Conditions for Batching Plant installation and operation 
+5 Whether compliance reported through monthly Progress report to In-Charge (PIU) 
+6 PUC taken for all Construction vehicles  
+7 Concrete platform with trap under bitumen boiler, Fuel Tank for Batching Plant and 
+generator set provided or not 
+8 Precautions to prevent contamination of soil by emulsion, oil and lubricant taken while 
+storing 
+9 Providing cover to fine construction material & bituminous mix during transportation  
+10 
+Muck /debris disposal: 
+a)  Present status of land 
+b) Closure and completion plan 
+11 
+Site specific traffic Safety management Plan: 
+a) Contractor installed the warning / regulatory Traffic signs at the construction site 
+b) The arrangement adequate 
+12 Safety equipment i.e. helmet, gloves, gumboot, mask, earplugs etc. provided to workers 
+13 Health Facility at camp and work site i.e. First Aid kit & suitable vehicle for conveyance in 
+case of emergency / accident 
+14 Permit for Procuring River sand 
+15 License from Department of mines for quarrying 
+16 Consent to establish / operation of crusher 
+17 Provision of labor camp with sanitation & potable water 
+18 Fire precautions at Plant and site Office 
+19 Air and noise monitoring done in camp site 
+20 Whether any cultural property is being impacted 
+21 Status of drainage provision in camp area  
+22 General House Keeping  
+ 
+Remarks: 
+ 
+Submitted Checked Approved 
+Signature ……………… Signature ………………….. Signature ………… 
+Name …………………. Name ……………………… Name ………………… 
+Designation ………….. Designation ……………….. Designation ………… 
+Contractor Environmental engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU) 
+
+[page 64]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP                                                   January 2021 60 
+ANNEXURE 4.11 
+SUMMARY SHEET 
+(To be filled monthly by supervisory staff and Submitted to GMRC) 
+ 
+ 
+Construction site location __________________________  
+Month_________________________________Date_________________________________ 
+ 
+S 
+No. Description Remarks 
+1 No Objection Certificate  
+A Cement Batching Plant  
+ Location 1  
+ Location 2  
+ Location 3  
+2 Pollution under Certificate  
+ Vehicles  
+ Machineries  
+3 No Objection Certificate for Diesel Gen set   
+ Location 1  
+ Location 2  
+4 Labor Camps  
+ No. of sites Identified   
+ Approved   
+ Opened   
+ Conforms to conditions imposed at the time of opening of 
+sites 
+ 
+ Closed  
+5 Workers  
+ No of workers employed  
+ No of male workers   
+ No of female workers  
+ No of day workers  
+6 Borrow Area  
+ No. of sites identified   
+ Approved  
+ Opened    
+ Quantity of available material  
+ Quantity of material Utilized  
+ Quantity of Topsoil preserved  
+ Quantity of top soil used  
+ No of sites closed  
+ No. of sites Rehabilitated   
+7 Quarry  
+ No. of sites identified  
+ Approved  
+ Opened   
+ Material available  
+ Material obtained  
+ No. of sites Rehabilitated   
+
+[page 65]
+ESMP for Surat Metro Rail Project Phase-I 
+ESMP                                                   January 2021 61 
+S 
+No. Description Remarks 
+8 Disposal Locations  
+ No. of sites identified  
+ Approved  
+ Opened   
+ Amount of Waste disposed   
+ Type of waste disposed  
+ No. of sites Rehabilitated   
+9 Road Safety  
+ Road Safety norms and approved Traffic plan   
+10 Cleaning of Culvert/ drains  
+ No. of culverts/ drains  
+ Nos Cleaned   
+11 Trees  
+ No of trees marked for cutting in field  
+ No of trees cut  
+ No of trees to be Planted  
+ Trees Planted  
+12 Haul Roads  
+ Adequacy of maintenance of Haul Road Network  
+ 
+Remarks: 
+ 
+Submitted Checked Approved 
+Signature …………… Signature ………………….. Signature ………………… 
+Name ……………… Name ……………………… Name …………………….. 
+Designation …………. Designation ……………….. Designation ……………… 
+Contractor Environmental engineer of 
+Construction Supervision 
+Consultant 
+In-charge Officer (PIU)

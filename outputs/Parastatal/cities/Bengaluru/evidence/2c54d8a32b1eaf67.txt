@@ -1,0 +1,141 @@
+SOURCE URL: https://www.karnatakaone.gov.in/Info/Public/BDA
+
+## Karnataka One, Your One Stop Solution for Government and Private Services
+
+ Guide Me
+
+ 080-42474411/8904085030
+
+ |
+
+ ONEHELPDESK@KARNATAKA.GOV.IN
+
+ Sign In
+
+ |
+
+ Sign Up
+
+ |
+
+ -A
+
+ A
+
+ +A
+
+ |
+
+ Kannada
+
+ |
+
+ Home
+
+ About Us
+
+ About BangaloreOne
+
+ About KarnatakaOne
+
+ Vision & Misssion
+
+ Objectives
+
+ Salient Features
+
+ Sign In
+
+ Services Offered
+
+ Online Services
+
+ Help
+
+ FAQ's
+
+ User Manual
+
+ Site Map
+
+ Quick Pay
+
+ Get Your Receipt
+
+ Contact Us
+
+ Bangalore Development Authority
+
+ BDA Department is integrating collection of fees for a set of BDA services with KarnatakaOne. It is Web Service Integration Model. Citizen will submit required supporting documents either through BDA Portal or BDA Department. On successful documents update, GSC Number will be provided either through BDA Portal or Department. On verification of documentation, BDA will decide amount to be paid with 7 working days. If Documentation is not proper, respective, GSC Number will be rejected. Citizen has to raise another request to process the same.
+
+ BDA will provide status of respective request (GSC Number) SMS to Registered Mobile Number of Citizen, comprising GSC Number along with Amount to be paid, else GSC Number is rejected with reasons.
+
+ Citizen can pay BDA Service Fees through KarnatakaOne Centers. KarnatakaOne Portal Integration will be available shortly.
+
+## B1Center:
+
+ Citizen has to furnish the BDA GSC Number to retrieve Property Details from the Department along with Amount.
+ B1 Operator collects demanded amount for the BDA GSC Number and commit the transaction.
+ On successful transaction, GSC Number will be provided in the B1 Receipt.
+
+## KARNATAKA ONE
+
+ To provide a single interface for anytime anywhere citizen centric services of the government and private businesses in an integrated,convenient, fair, effective, secure, sustainable and citizen-friendly...
+
+ Read More
+
+## ABOUT US
+
+ Services Offered
+
+ Online Services
+
+ Contact Us
+
+ Feedback
+
+ Grievance
+
+## OTHER PAGES
+
+ Sign Up
+
+ Help
+
+ KarnatakaOne Franchisee Registration
+
+ [https://sevasindhuservices.karnataka.gov.in/directApply.do?serviceId=2631] GramaOne Franchisee Registration
+
+ Terms and Conditions 
+
+ Website Policies
+
+ KOne Privacy Policy
+
+ KOne Refund Policy
+
+ [https://www.karnatakaone.gov.in/downloads/RFQ%20for%20procurement%20of%20Tab.pdf] RFQ
+
+ Our website is best viewed in: 
+
+ Last reviewed and updated on 14 July, 2026
+
+## Direct Contact 
+
+ Bangalore, Karnataka
+
+ 080-42474411/ 8904085030
+
+ 8095892826
+
+ onehelpdesk@karnataka.gov.in
+
+ [https://www.facebook.com/pages/KarnatakaOne/903956589628082] 
+ [https://twitter.com/KarnatakaOne] 
+ [https://play.google.com/store/search?q=karnatakaone&c=apps] 
+
+ This website belongs to Directorate of Electronic Delivery of Citizen Service (EDCS), DPAR (e-Governance), Government of Karnataka
+
+ [https://validator.w3.org/nu/?doc=https://www.karnatakaone.gov.in/] 
+
+ Empowered by: [http://www.cms.co.in/]
