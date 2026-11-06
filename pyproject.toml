@@ -44,3 +44,6 @@ ignore = ["E501"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+filterwarnings = [
+    "ignore:Data Validation extension is not supported:UserWarning",
+]
