@@ -28,6 +28,7 @@ from asics_agent.agents.sections import build_section_agent, section_for, sectio
 from asics_agent.agents.state import MasterState
 from asics_agent.bank_version import bank_version
 from asics_agent.batch import Batcher
+from asics_agent.cutoff import cutoff_text
 from asics_agent.links.accessibility import check_url
 from asics_agent.links.database import write_links_db
 from asics_agent.models import ALL_PARASTATALS, Issue, Source
@@ -193,6 +194,8 @@ def build_answers_graph(
                 "bank_version": bank_version(
                     services.settings.question_bank, state["questions"]
                 ).as_dict(),
+                "law_cutoff": cutoff_text(services.settings),
+                "undated_law_policy": services.settings.undated_law_policy,
                 "memory_used": sorted({m for a in all_answers for m in a.memory_used}),
                 "applicability": applicability,
                 "counts": {

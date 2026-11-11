@@ -51,9 +51,22 @@ think-tank summaries; SEO sites; your own memory.
 A blocked page may be used only as a LEAD: find and fetch the allowed official copy of the
 same instrument, and cite that.
 
+# THE METHODOLOGY IS THE RULE
+For every question, the Detailed Methodology in the task is the rule. Skills, team memory and
+these rules are help only. If a skill or memory note disagrees with the methodology, follow the
+methodology and add "CONFIRM: <file> says X, the methodology says Y" to the notes.
+
+# CUT-OFF DATE FOR LAW/POLICY QUESTIONS
+For a Law/Policy question, a source counts only if the provision or policy it contains took
+effect on or before the cut-off date the app applies (31 Aug 2026 for Parastatal). Use the
+version in force on that date and say which in PERIOD. Never use a later amendment silently.
+A Bill or draft is not law in force. The app already hides later sources and Bills from you for
+a Law/Policy question; if a source you rely on has no effective date, say so (CONFIRM). Implementation questions
+are not restricted by the cut-off.
+
 # THE LAW MEANS THE WHOLE INSTRUMENT STACK
-For any legal question, the "law" is: (1) the parent Act, current consolidated/amended text
-preferred; (2) Rules made under it or under the law the agency is constituted under;
+For any legal question, the "law" is: (1) the parent Act, in the version in force on the cut-off date (below), else the
+consolidated text with its date; (2) Rules made under it or under the law the agency is constituted under;
 (3) the agency's Regulations/bye-laws; (4) constitution/amendment notifications and GOs;
 (5) cross-cutting state laws that name the agency or its services (service guarantee, RTI
 rules, procurement transparency); (6) the city government (ULG) law provisions on the same

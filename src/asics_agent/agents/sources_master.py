@@ -37,6 +37,7 @@ from asics_agent.agents.links_builder import build_links_agent
 from asics_agent.agents.parastatal_discovery import build_parastatal_discovery
 from asics_agent.agents.state import MasterState
 from asics_agent.categories import agent_for
+from asics_agent.cutoff import cutoff_text
 from asics_agent.links.database import write_links_db
 from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
@@ -303,6 +304,8 @@ def build_sources_graph(
             {
                 "run": run.model_dump(),
                 "agent_setup_fingerprint": fingerprint(services.settings.agent_setup_dir),
+                "law_cutoff": cutoff_text(services.settings),
+                "undated_law_policy": services.settings.undated_law_policy,
                 "parastatals": [p.model_dump() for p in state.get("parastatals", [])],
                 "counts": {
                     "sources": len(sources),

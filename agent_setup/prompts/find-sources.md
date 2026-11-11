@@ -34,7 +34,7 @@ FAOLEX, Wikipedia, news).
 EVIDENCE TAGS (start every "useful_for" with the tag in brackets):
 - Identity: [IDENTITY] mandate and functions.
 - Legal stack (read the WHOLE stack, never stop at the Act):
-  [ACT] parent Act, current text; [AMEND] amendments, incl. recent city-government changes;
+  [ACT] parent Act (say the version and its date); [AMEND] amendments, incl. recent city-government changes;
   [RULES] rules made under the Act or under the constituting law (tenure, board, procedure,
   budget, accounts); [REGS] the agency's regulations/bye-laws (cadre, recruitment, conduct of
   business); [BOARD-LAW] composition clause; [JURIS] jurisdiction (schedule, notification, map).

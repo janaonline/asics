@@ -61,6 +61,9 @@ class Category:
     # The team's scoring templates (one file per section: UPD, SC, DPG). A category with these
     # is scored in copies of them (scoring/template_scoring.py); without, in `scoring_workbook`.
     scoring_templates: tuple = ()
+    # Law/Policy cut-off (ISO date, "" = none) and how to treat a source with no date (cutoff.py)
+    law_cutoff: str = ""
+    undated_law_policy: str = "confirm"
     shared_rules: str = "shared-rules"
     agents: dict = field(default_factory=dict)  # role -> agent name
     description: str = ""
@@ -95,6 +98,8 @@ def _parse(path: Path) -> Category:
         outputs=str(meta.get("outputs") or "."),
         scoring_workbook=str(meta.get("scoring_workbook") or ""),
         scoring_templates=tuple(str(t) for t in (meta.get("scoring_templates") or [])),
+        law_cutoff=str(meta.get("law_cutoff") or ""),
+        undated_law_policy=str(meta.get("undated_law_policy") or "confirm").strip().lower(),
         shared_rules=str(meta.get("shared_rules") or "shared-rules"),
         agents=agents,
         description=text[match.end() :].strip() if match else text.strip(),
@@ -114,6 +119,10 @@ def load_categories(root: Path) -> tuple[dict[str, Category], list[Issue]]:
         except (ValueError, yaml.YAMLError) as exc:
             issues.append(_issue(f"{where}: settings block can't be read ({exc})."))
             continue
+        if v.law_cutoff and _cutoff_date(v.law_cutoff) is None:
+            issues.append(_issue(f"{where}: law_cutoff must be a date like 2026-08-31."))
+        if v.undated_law_policy not in ("confirm", "block"):
+            issues.append(_issue(f"{where}: undated_law_policy must be confirm or block."))
         if v.unit not in UNITS:
             issues.append(_issue(f"{where}: unit must be one of {', '.join(UNITS)}."))
         for role in v.agents:
@@ -185,7 +194,21 @@ def category_settings(settings, name: str):
         outputs_dir=outputs,
         scoring_workbook=_resolve(PROJECT_ROOT, v.scoring_workbook) if v.scoring_workbook else None,
         scoring_templates=tuple(_resolve(PROJECT_ROOT, t) for t in v.scoring_templates),
+        law_cutoff=_cutoff_date(v.law_cutoff),
+        undated_law_policy=v.undated_law_policy
+        if v.undated_law_policy in ("confirm", "block")
+        else "confirm",
     )
+
+
+def _cutoff_date(text: str):
+    """The Law/Policy cut-off from a category file (YYYY-MM-DD), or None when it is empty or not a date."""
+    from datetime import date
+
+    try:
+        return date.fromisoformat(text.strip()) if text.strip() else None
+    except ValueError:
+        return None
 
 
 def agent_for(settings, role: str) -> str:

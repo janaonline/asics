@@ -356,6 +356,29 @@ nobody needs to open it. **Check workbooks** lists anything that would stop scor
 up: a sheet whose name and code differ, missing columns, cities that don't match the city
 register.
 
+### Methodology and the Law/Policy cut-off
+
+- **The Detailed Methodology is the rule**, in Step 2 and Step 3. It reaches the model word for word. Skill and memory files are help
+  only; if one disagrees with the methodology, the AI follows the methodology and adds `CONFIRM: <file> says X, the methodology says Y`.
+  Step 2's BAND (the methodology level or part an answer rests on) is checked against the methodology's levels and parts; a mismatch
+  adds a `CONFIRM:` note. Step 3 writes "Methodology: <band>" at the start of the Scorer Comments and checks it the same way.
+  A question whose methodology is only a placeholder note (DPG 4) is left for a person.
+- **Cut-off for Law/Policy questions.** `agent_setup/categories/parastatal.md` sets `law_cutoff: 2026-08-31` and
+  `undated_law_policy: confirm`. The Citation Sheet has two more columns, **Effective / As-of Date** (when the cited text or version
+  took effect, or its "amended up to" date; never the page's "last updated" or "Last Checked") and **Cut-off Check**
+  (`ok`, `later`, `unknown`, `Bill-draft`), filled by Step 1's source assessor. Older sheets load without them.
+  For a Law/Policy question only: a `later` source is not shown to the model and cannot be cited; a Bill or draft is not law in force;
+  an `unknown` source (including one with only a year) is used with a CONFIRM note and Confidence at most Medium
+  (`undated_law_policy: block` treats it like `later`); if every available source is `later` or a Bill, the answer is
+  **Human Verification Required** with `PENDING FETCH: <reason>` (never invented). Implementation questions can still use a `later`
+  source. Step 3 applies the same rule and leaves the row for a person ("Cut-off"). The setting is shown on **Run steps** and recorded in
+  `run_summary.json`, `sources_summary.json` and the AI file's `.ai_info.json`. The ULG has no cut-off unless its category file sets one.
+- **Old Citation Sheets:** `uv run python scripts/date_citation_sheets.py` fills the two columns into a **copy**
+  (`ASICS_<City>_Sources_dated.xlsx`, never the original) from the existing status text, free of cost, and reports how many rows it
+  could date (a year without a day stays `unknown` and is counted separately).
+- The **Question bank check** also lists help files that name a question no bank has, and questions with an empty level or a placeholder
+  methodology.
+
 ### Step 3 in the team's templates (Parastatal)
 
 The Parastatal category is scored in the team's three scoring templates

@@ -248,6 +248,8 @@ class FakeClaude(BaseChatModel):
                 "current_status": "Current",
                 "authority_score": 10,
                 "notes": "Official.",
+                "effective_date": "1964-04-01",
+                "form": "in force",
             }
         elif task == "answer_question":
             plan = _citation_with(user, "recorded its responses")

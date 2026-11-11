@@ -71,6 +71,10 @@ CITATION_COLUMNS = [
     ("Notes", []),
     ("Your Notes", []),
     ("Last Checked", []),
+    # When the cited text or version took effect (or its "amended up to" date), and whether that is
+    # on or before the Law/Policy cut-off. Optional on read: older sheets don't have them.
+    ("Effective / As-of Date", []),
+    ("Cut-off Check", []),
 ]
 COVERAGE_COLUMNS = [
     ("Parastatal", []),
@@ -110,7 +114,12 @@ GUIDE = [
         "evidence/manual/<Citation ID>.pdf (or .html or .txt), for example "
         "evidence/manual/BWSSB-07.pdf, in this city's folder. Then set Use for Answers? to Yes "
         "and run Step 1 again (or Step 2). The tool reads your saved copy, and Needs Attention "
-        "says if it can't be used.",
+        "says if it can't be used.\n"
+        'Effective / As-of Date is when the cited text or version took effect, or its "amended up '
+        'to" date; it is not the page\'s "last updated" date. Cut-off Check says whether that is '
+        "on or before the Law/Policy cut-off: ok, later, unknown or Bill-draft. A later or Bill-draft "
+        "source is not used for Law/Policy questions (it can still be used for Implementation "
+        "questions); an unknown one is used with a CONFIRM note. You can correct both columns.",
     ),
     (
         "3. Coverage sheet",
@@ -333,6 +342,8 @@ def read_sources_workbook(path: Path, cache_dir: Path):
                 notes=get("Notes"),
                 team_notes=get("Your Notes"),
                 checked_at=get("Last Checked"),
+                effective_date=get("Effective / As-of Date"),
+                cutoff_check=get("Cut-off Check"),
                 content_path=text_path,
                 snapshot_path=copy_path,
             )
@@ -443,6 +454,8 @@ def write_sources_workbook(
             "Verification Status": 24,
             "Notes": 55,
             "Your Notes": 30,
+            "Effective / As-of Date": 16,
+            "Cut-off Check": 14,
         },
     )
     ordered = sorted(sources, key=lambda s: (s.parastatal_id, s.citation_id))
@@ -470,6 +483,8 @@ def write_sources_workbook(
                     "Notes": s.notes,
                     "Your Notes": s.team_notes,
                     "Last Checked": s.checked_at,
+                    "Effective / As-of Date": s.effective_date,
+                    "Cut-off Check": s.cutoff_check,
                 },
             )
             for s in ordered
@@ -477,6 +492,7 @@ def write_sources_workbook(
         ["Citation ID"],
     )
     _add_dropdown(ws, mapping["Use for Answers?"], ["Yes", "No"])
+    _add_dropdown(ws, mapping["Cut-off Check"], ["ok", "later", "unknown", "Bill-draft"])
 
     ws = _new_sheet(
         wb, COVERAGE_SHEET, COVERAGE_COLUMNS, {"Question": 60, "Citations": 30, "Coverage": 40}

@@ -71,6 +71,8 @@ class ScoreReply(BaseModel):
     # Score is typed, and the period the evidence is about
     score: float | int | str | None = None
     latest_information: str = ""
+    # The methodology level or part the inputs rest on (e.g. "2.5", "Part A"); checked in code
+    band: str = ""
 
 
 @dataclass
@@ -239,6 +241,8 @@ REASONS = {
     "citation_changed": "Step 2's citation is no longer in the reviewed Citation Sheet",
     "check_failed": "The AI's citation or quote failed the check",
     "undecided": "The citation didn't settle every input",
+    "cutoff": "The cited source is not usable for a Law/Policy question (dated after the "
+    "cut-off, a Bill or draft, or undated and blocked): a person decides",
     "off_level": "The AI's score was not one of the question's allowed scores: not written",
     "years": "Fewer years of figures were found than the template needs (at least 2)",
     "template_problem": "The template has a problem (a header the AI cannot read): fix it",
@@ -249,6 +253,7 @@ _KIND_BY_START = [
     ("The scoring workbook's question", "mismatch"),
     ("Step 2 found no evidence", "no_evidence"),
     ("Step 2 cited", "citation_changed"),
+    ("Cut-off", "cutoff"),
     ("The AI", "check_failed"),
 ]
 

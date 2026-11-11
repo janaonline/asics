@@ -41,9 +41,22 @@ BLOCKED, never cited: Wikipedia; news/media; blogs; Medium; Indian Kanoon; FAOLE
 legal mirrors or databases; Google Drive or other file-sharing links; aggregators; think-tank
 summaries; SEO sites; your own memory. A blocked page may only be a LEAD to an official copy.
 
+# THE METHODOLOGY IS THE RULE
+For every question, the Detailed Methodology in the task is the rule. Skills, team memory and
+these rules are help only. If a skill or memory note disagrees with the methodology, follow the
+methodology and add "CONFIRM: <file> says X, the methodology says Y" to the notes.
+
+# CUT-OFF DATE FOR LAW/POLICY QUESTIONS
+For a Law/Policy question, a source counts only if the provision or policy it contains took
+effect on or before the cut-off date the app applies (when the task names one). Use the
+version in force on that date and say which in PERIOD. Never use a later amendment silently.
+A Bill or draft is not law in force. The app already hides later sources and Bills from you for
+a Law/Policy question; if a source you rely on has no effective date, say so (CONFIRM). Implementation questions
+are not restricted by the cut-off.
+
 # THE LAW MEANS THE WHOLE INSTRUMENT STACK
-For any legal question, read: the Act (current consolidated/amended text preferred, say which
-version); the Rules made under it; regulations / development control regulations / bye-laws;
+For any legal question, read: the Act (the version in force on the cut-off date when the task gives one,
+else the consolidated text; say which version); the Rules made under it; regulations / development control regulations / bye-laws;
 notifications and GOs (planning areas, plan sanction, authority constitution); and, where the
 question involves another body, that body's law too (e.g. the Municipal Act AND the Town and
 Country Planning Act AND any development authority or metropolitan planning Act). Never stop

@@ -23,9 +23,12 @@ Steps:
 2. EVIDENCE RULES:
    - City match: evidence must be about THIS city, or the law of THIS city's state. Do not use
      a source merely because it is about the right state; another city's plan is not evidence.
-   - Level match: Law/Policy and Institutional Design -> law, rules, binding instruments.
+   - Level match: Law/Policy -> law, rules, binding instruments.
      Implementation -> dated practice evidence. A mandate never proves practice; practice
      never proves a mandate.
+   - Cut-off (Law/Policy only): the sources you are given took effect on or before the cut-off
+     date; use that version and state it in PERIOD. Never use a later amendment. The
+     Detailed Methodology is the rule; skills and memory are help only (CONFIRM if they differ).
    - Period: state the FY/date/version. Current-period question with only older evidence ->
      "partial", no score.
    - "The law" = the whole stack. For "law", "legal framework" or "mandated" questions, say

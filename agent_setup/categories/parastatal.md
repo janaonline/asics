@@ -12,6 +12,12 @@ scoring_templates:
   - scoring/2027/templates/Parastatal_UPD_Template.xlsx
   - scoring/2027/templates/Parastatal_SC_Template.xlsx
   - scoring/2027/templates/Parastatal_DPG_Template.xlsx
+# Law/Policy questions may only use sources that took effect on or before this date. A later
+# source stays in the Citation Sheet and can still be used for Implementation questions.
+law_cutoff: 2026-08-31
+# A source whose effective date is unknown: "confirm" (use it with a CONFIRM note, Confidence at
+# most Medium) or "block" (treat it like a later source).
+undated_law_policy: confirm
 shared_rules: shared-rules
 steps:
   1:

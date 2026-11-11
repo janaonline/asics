@@ -15,6 +15,7 @@ from typing import TypedDict
 from langgraph.graph import END, START, StateGraph
 from pydantic import BaseModel, Field
 
+from asics_agent import methodology
 from asics_agent.agent_setup import validate as validate_setup
 from asics_agent.agents.state import MasterState
 from asics_agent.applicability import get_rules, match_rule, override_notes
@@ -24,6 +25,7 @@ from asics_agent.cities import issues_for_city, load_register
 from asics_agent.llm import call_json
 from asics_agent.models import Issue, RunContext
 from asics_agent.services import Services
+from asics_agent.skill_check import skill_problems
 from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
 
 _SCALE = re.compile(r"(?im)^\s*(?:score\s*)?(\d+(?:\.\d+)?)\s*(?:—|–|-|marks|if|where)")
@@ -232,6 +234,32 @@ def build_initial_checks(services: Services, step: str = "sources"):
                         team=True,
                     )
                 )
+        for q in state.get("questions", {}).values():
+            if methodology.is_placeholder(q.methodology):
+                issues.append(
+                    _issue(
+                        "warning",
+                        f"{q.raw_id}: {methodology.placeholder_reason(q.id)}",
+                        q.id,
+                        team=True,
+                    )
+                )
+            if not (q.assessment_level or "").strip():
+                issues.append(
+                    _issue(
+                        "info",
+                        f"{q.raw_id}: the Assessment Level is empty"
+                        + (
+                            " (a main question: its sub-questions carry the levels)."
+                            if q.is_rollup
+                            else ", so the Law/Policy cut-off cannot tell what kind of question it is."
+                        ),
+                        q.id,
+                        team=True,
+                    )
+                )
+        for where, message in skill_problems(services.settings):
+            issues.append(_issue("warning", message, where, team=True))
         if not (os.getenv("ANTHROPIC_API_KEY") or os.getenv("ANTHROPIC_AUTH_TOKEN")):
             issues.append(
                 _issue(

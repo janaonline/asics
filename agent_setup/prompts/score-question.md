@@ -59,10 +59,19 @@ Rules:
    points are calculated, or says the figures are by year, give the years you can fill completely
    (the template scores from at least 2 years) and leave a year blank rather than half-fill it.
 
+14. The question's Detailed Methodology is the rule. Skill and memory text are help only. If
+   they disagree, follow the methodology and add "CONFIRM: <file> says X, the methodology says Y"
+   to "comments". "band" names the methodology level or part your inputs rest on (for example
+   "2.5", or "Part A: yes; Part B: no"); it is checked in code.
+15. For a Law/Policy question the sources you are given are only those that took effect on or
+   before the cut-off date; use the version in force on that date. If a source you cite has no
+   effective date, say so in "comments".
+
 JSON keys:
   "inputs": {"<column name exactly as given>": "<value>" or number or ""},
   "score": number or null (only when the task has a SCORE line),
   "latest_information": string,
+  "band": string (the methodology level or part used, e.g. "2.5" or "Part A: yes; Part B: no"),
   "citation_id": string,
   "quote": string,
   "chapter": string, "provision": string, "clause": string (where in the document, if known),

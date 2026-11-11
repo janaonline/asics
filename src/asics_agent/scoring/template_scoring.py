@@ -18,10 +18,12 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
+from asics_agent import cutoff, methodology
 from asics_agent.agent_setup import fingerprint as setup_fingerprint
 from asics_agent.applicability import applies_to
 from asics_agent.bank_version import settings_version
 from asics_agent.categories import ULG_UNIT_ID, agent_for, load_bank
+from asics_agent.cutoff import cutoff_text
 from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
@@ -71,7 +73,7 @@ NOT_SCORED_REASONS = {
     "template_problem": "the template has a problem the team must fix (see the issues below)",
 }
 # why a row is left for a person that the team should see in the run's issue list, not only in the cell
-ISSUE_KINDS = {"off_level", "years", "template_problem"}
+ISSUE_KINDS = {"off_level", "years", "template_problem", "cutoff"}
 
 
 @dataclass
@@ -83,6 +85,7 @@ class TemplateTask:
     unit: str  # the parastatal's ID, or the ULG's
     label: str  # "City – BWSSB" (a parastatal) or the city (the ULG)
     parastatal: Parastatal
+    law_policy: bool = False  # the question's assessment level is Law/Policy (cut-off applies)
 
 
 @dataclass
@@ -244,6 +247,35 @@ def score_template_one(
     answer, sources, reason = check_step2(task.code, task.unit, spec.question, evidence, log)
     if reason:
         return _left(task, spec, reason, log)
+    # A Law/Policy question may only rest on sources that took effect by the cut-off.
+    rule = cutoff.rule_from(services.settings)
+    law = rule is not None and task.law_policy
+    screen = cutoff.screen_sources(sources, rule, law)
+    if law:
+        log["cutoff"] = {
+            "later": screen.later,
+            "bills": screen.bills,
+            "unknown": sorted(screen.unknown),
+        }
+        cited = next((s for s in sources if s.citation_id == answer.citation_id), None)
+        check = cutoff.check_of(cited, rule) if cited is not None else cutoff.UNKNOWN
+        blocked = check in (cutoff.LATER, cutoff.BILL) or (
+            check == cutoff.UNKNOWN and rule.undated == "block"
+        )
+        if blocked:
+            why = {
+                cutoff.LATER: f"is dated after {rule.label}",
+                cutoff.BILL: "is a Bill or draft, not law in force",
+                cutoff.UNKNOWN: "has no effective date and undated sources are blocked",
+            }[check]
+            return _left(
+                task,
+                spec,
+                f"Cut-off: Step 2 relied on {answer.citation_id}, which {why}. A Law/Policy "
+                f"question needs the version in force on {rule.label} (Pending fetch).",
+                log,
+            )
+        sources = screen.usable
     unit_word = services.settings.unit_label
     ctx = ToolContext(services=services, citations=sources)
     try:
@@ -267,6 +299,15 @@ def score_template_one(
 
     values: dict[int, object] = {}
     notes: list[str] = []
+    if law and source.citation_id in screen.unknown:  # undated source: use it, but say so
+        notes.append(cutoff.confirm_note(source.citation_id, rule))
+        if reply.confidence == "high":
+            reply.confidence = "medium"
+    band = reply.band.strip()
+    if flag := methodology.band_problem(
+        spec.details.get("Detailed Methodology", ""), spec.max_score, band
+    ):
+        notes.append(f"CONFIRM: {flag}")
     for col in spec.inputs:
         value = reply.inputs.get(col.header, "")
         if value in (None, ""):
@@ -333,7 +374,8 @@ def score_template_one(
         if col and text and complete:
             values[col] = text
     comments = [
-        f"AI ({reply.confidence} confidence), from Step 2 answer ({answer.status}) and "
+        (f"Methodology: {band}. " if band else "")
+        + f"AI ({reply.confidence} confidence), from Step 2 answer ({answer.status}) and "
         f"{source.citation_id}: {reply.comments}".strip()
         + (f" {based_on}" if based_on else ""),
         f'Quote: "{reply.quote}"',
@@ -480,6 +522,7 @@ def plan(settings, ais: dict[str, AITemplate], register, bank, codes=None, citie
                             unit_id,
                             label_for(settings.unit, city, parastatal),
                             parastatal,
+                            cutoff.is_law_policy(question.assessment_level),
                         )
                     )
     return tasks, ready, evidence, problems, skipped
@@ -645,6 +688,8 @@ def run_template_scoring(
             agent_setup_fingerprint=setup_fingerprint(settings.agent_setup_dir),
             bank_version=version.as_dict() if version else None,
             calculated=saved.calculated,
+            law_cutoff=cutoff_text(settings),
+            undated_law_policy=settings.undated_law_policy,
             last_run_id=run_id,
         )
         cities_info = info.setdefault("cities", {})

@@ -16,7 +16,7 @@ import pandas as pd
 import streamlit as st
 
 import ui
-from asics_agent import costs
+from asics_agent import costs, cutoff
 from asics_agent.applicability import applies_to
 from asics_agent.categories import category_settings, load_bank, load_categories
 from asics_agent.cities import load_register
@@ -335,6 +335,9 @@ def plan_page():
     for name in categories:
         if name in found:
             st.caption(f"**{found[name].title}:** {category_note(found[name].unit)}")
+            rule = cutoff.rule_from(category_settings(BASE_SETTINGS, name))
+            if rule is not None:
+                st.caption(cutoff.describe(rule))
     steps = (
         st.pills(
             "Steps",

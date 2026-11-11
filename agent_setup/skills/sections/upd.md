@@ -3,6 +3,9 @@ name: UPD
 title: Urban Planning & Design
 evidence_hints: master plan development plan development scheme layout consultation urban local body corporation concurrence notify representations conform consistent slum women disabilities tariff environment advisory committee
 ---
+- This file is help only. The question's Detailed Methodology is the rule: if this file and the
+  methodology differ, follow the methodology and add "CONFIRM: <this file> says X, the
+  methodology says Y".
 - For Law/Policy questions, quote the operative provision of the parastatal's Act, its Rules,
   or the Town and Country Planning Act, and state whether it uses "shall" or "may".
 - For Implementation questions, rely on the latest plan document, consultation record or
@@ -23,9 +26,6 @@ evidence_hints: master plan development plan development scheme layout consultat
   advice must be considered or answered.
 - UPD 2: each parastatal can take only some of the SQs; the MQ maximum is the sum of the
   SQs that apply to it.
-
-- Question-bank anomalies (Parastatal question bank):
-  - UPD 1a / UPD 1b: rubric bands are on a 0-10 scale but Max Score is 5. Record the band and
-    raw value with "SCALE-MISMATCH" in notes; proposed_score null; CONFIRM scale.
-  - UPD 3 and UPD 5 are grouping MQs with their own methodology text: apply that text as extra
-    guidance to their SQs.
+- UPD 1a / UPD 1b: the methodology's bands run to 10 but the Max Score is 5. Apply the
+  methodology: record the band it gives and add "CONFIRM: scale". Do not blank the score for this
+  reason alone.

@@ -161,6 +161,11 @@ class Source(BaseModel):
     content_path: str | None = None
     snapshot_path: str | None = None
     checked_at: str = ""
+    # When the cited text or version took effect (or its "amended up to" date): not the page's
+    # "last updated" and not checked_at. And whether that is on or before the Law/Policy cut-off:
+    # ok | later | unknown | Bill-draft (see cutoff.py). Both optional: old Citation Sheets lack them.
+    effective_date: str = ""
+    cutoff_check: str = ""
     # True when the team verified this row from a copy they saved by hand (evidence/manual/)
     team_saved_copy: bool = False
 

@@ -2,6 +2,7 @@
 
 import os
 from dataclasses import dataclass
+from datetime import date
 from functools import lru_cache
 from pathlib import Path
 
@@ -53,6 +54,10 @@ class Settings:
     question_columns: tuple = ()  # (our column name, the bank's column name) pairs
     scoring_workbook: Path | None = None
     scoring_templates: tuple = ()  # the team's templates, one per section (see categories.py)
+    # Law/Policy questions may only use sources that took effect on or before this date (None =
+    # no cut-off), and what to do with a source whose date is unknown: "confirm" or "block".
+    law_cutoff: date | None = None
+    undated_law_policy: str = "confirm"
     outputs_root: Path | None = None  # the outputs folder before the category's subfolder
     # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
     find_sources_max_uses: int | None = None

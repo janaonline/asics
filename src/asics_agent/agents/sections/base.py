@@ -22,6 +22,7 @@ from typing import Literal
 from langgraph.graph import END, START, StateGraph
 from pydantic import BaseModel
 
+from asics_agent import cutoff, methodology
 from asics_agent.agent_setup import (
     MemoryScope,
     section_codes,
@@ -178,13 +179,36 @@ def build_section_agent(code: str, services: Services):
         category = services.settings.category
         title, guidance, hints = section_guidance(root, q.pillar, category)  # read fresh
         query = f"{q.text} {q.methodology} {q.evidence_requirement} {hints}"
+        if methodology.is_placeholder(q.methodology):  # no rule to apply: a person answers it
+            return {
+                "draft": {
+                    "sufficiency": "insufficient",
+                    "valid": False,
+                    "blocked": methodology.placeholder_reason(q.id),
+                    "sources_reviewed": [],
+                }
+            }
+        # Law/Policy question: only sources that took effect on or before the cut-off (cutoff.py).
+        rule = cutoff.rule_from(services.settings)
+        law = rule is not None and cutoff.is_law_policy(q.assessment_level)
+        screen = cutoff.screen_sources(task.get("citation_sources", []), rule, law)
+        if screen.pending:
+            return {
+                "draft": {
+                    "sufficiency": "insufficient",
+                    "valid": False,
+                    "pending_fetch": screen.pending,
+                    "sources_reviewed": [],
+                }
+            }
+        offered = screen.usable
         texts: dict[str, tuple[Source, str]] = {}
         full: dict[str, str] = {}
-        for s in task.get("citation_sources", []):
+        for s in offered:
             if s.content_path and Path(s.content_path).exists():
                 full[s.citation_id] = Path(s.content_path).read_text(encoding="utf-8")
         ranked = sorted(
-            (s for s in task.get("citation_sources", []) if s.citation_id in full),
+            (s for s in offered if s.citation_id in full),
             key=lambda s: (q.id in s.question_ids, relevance(full[s.citation_id], query)),
             reverse=True,
         )[:MAX_SOURCES]
@@ -225,7 +249,7 @@ def build_section_agent(code: str, services: Services):
                     tools := ToolContext(
                         services=services,
                         run=task["run"],
-                        citations=list(task.get("citation_sources", [])),
+                        citations=list(offered),
                         progress_key=task["parastatal"].id,
                     )
                 ),
@@ -242,6 +266,16 @@ def build_section_agent(code: str, services: Services):
 
         used = texts.get(reply.citation_id.strip())
         problems = []
+        confirm = ""
+        if law and rule is not None:
+            if used is not None and used[0].citation_id in screen.unknown:
+                confirm = cutoff.confirm_note(used[0].citation_id, rule)
+            late = cutoff.period_after_cutoff(reply.answer, rule)
+            if late is not None:
+                problems.append(
+                    f"the answer's own period runs to {late.isoformat()}, after the "
+                    f"{rule.label} cut-off for Law/Policy questions"
+                )
         if reply.sufficiency != "insufficient":
             if used is None:
                 problems.append(
@@ -260,6 +294,7 @@ def build_section_agent(code: str, services: Services):
                 "replied": True,
                 "valid": not problems,
                 "problems": problems,
+                "cutoff_confirm": confirm,
                 "trimmed": trimmed,
                 "sources_reviewed": list(texts),
                 "source": used[0] if used else None,
@@ -274,7 +309,15 @@ def build_section_agent(code: str, services: Services):
         sufficiency, valid = d.get("sufficiency", "insufficient"), d.get("valid", False)
         # A citation is recorded only when it actually supports (part of) the answer.
         source: Source | None = d.get("source") if valid and sufficiency != "insufficient" else None
-        if sufficiency != "insufficient" and not valid:
+        held = d.get("pending_fetch") or d.get("blocked")
+        if held:  # a person has to act: no source in force at the cut-off, or no rule to apply
+            status = "Human Verification Required"
+            sufficiency, valid = "insufficient", False
+            d = {
+                **d,
+                "answer": ("PENDING FETCH: " if d.get("pending_fetch") else "NO RULE: ") + held,
+            }
+        elif sufficiency != "insufficient" and not valid:
             status = "Human Verification Required"
         elif sufficiency == "sufficient":
             status = "Answered — Verified Source"
@@ -292,7 +335,7 @@ def build_section_agent(code: str, services: Services):
                     f"{q.max_score:g}; capped. Confirm the methodology's scale."
                 )
             score = max(0.0, min(float(score), q.max_score))
-        if status == "Insufficient Evidence":
+        if status == "Insufficient Evidence" or held:
             score = None
 
         if source:
@@ -303,6 +346,15 @@ def build_section_agent(code: str, services: Services):
         if d.get("replied"):
             answer_class, confidence, band, flags = parse_class_line(d.get("notes", ""))
             notes += [f"Reviewer: {flag[0].upper()}{flag[1:]}" for flag in flags]
+        if held:
+            notes.append(f"CONFIRM: {'PENDING FETCH - ' if d.get('pending_fetch') else ''}{held}")
+        if d.get("cutoff_confirm"):
+            notes.append(d["cutoff_confirm"])
+            confidence = cutoff.cap_confidence(confidence)
+        if d.get("replied") and (
+            flag := methodology.band_problem(q.methodology, q.max_score, band)
+        ):
+            notes.append(f"CONFIRM: {flag}")
         if score_note and status != "Insufficient Evidence":
             notes.append(score_note)
         if d.get("sources_reviewed"):
