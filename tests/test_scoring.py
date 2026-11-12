@@ -1,7 +1,7 @@
 """Scoring: draft workbook, interns' copies, merge, reading scores, results workbook."""
 
 import pytest
-from openpyxl import load_workbook
+from openpyxl import Workbook, load_workbook
 
 from asics_agent.models import CityConfig, Parastatal, Question
 from asics_agent.scoring import human
@@ -130,7 +130,7 @@ def test_merge_copies_typed_cells_and_flags_conflicts(tmp_path, draft):
         assert wb["DPG5a"].sheet_state == "hidden"
         wb["DPG1a"].cell(row=sheet.rows["Beta – BWB"], column=score, value=value)
         wb.save(path)
-    result = human.merge_vertical(plan, templates, "PARA", tmp_path)
+    result = human.merge_category(plan, templates, "PARA", tmp_path)
     merged = load_workbook(result.path)["DPG1a"]
     assert merged.cell(row=sheet.rows["Beta – BWB"], column=score).value == 4
     assert str(
@@ -150,9 +150,36 @@ def test_city_scores_average_agencies_and_results_formula(tmp_path, draft):
     wb.save(draft)
     scores = read_scores(t, draft, "PARA", "People")
     assert scores.city_scores() == {"Alpha": (7.0, False), "Beta": ("NA", False)}
-    out = build_results([scores], tmp_path / "results.xlsx")
+    out = build_results([scores], tmp_path / "results.xlsx", titles={"PARA": "Parastatal"})
     sheet = load_workbook(out)["City scores"]
     assert sheet["B2"].value == 7.0 and sheet["C2"].value.startswith("=IFERROR(ROUND(AVERAGE(")
+    questions = load_workbook(out)["Question scores"]
+    assert questions["A1"].value == "Category" and questions["A2"].value == "Parastatal"
+
+
+def test_an_assignments_workbook_with_the_old_names_still_reads(tmp_path, draft):
+    path = human.write_assignments_template(tmp_path / "assign.xlsx", {"PARA": draft.name})
+    wb = load_workbook(path)
+    assert wb.sheetnames[1:] == ["Categories", "Assignments"]
+    wb["Categories"].title = "Verticals"  # as saved before the rename
+    wb["Verticals"]["A1"] = "Vertical"
+    wb["Assignments"]["A1"] = "Vertical"
+    wb["Assignments"].append(["PARA", "Asha", "DPG1a", "All"])
+    wb.save(path)
+    plan, templates = human.read_plan(path, draft.parent)
+    assert not plan.problems and list(plan.categories) == ["PARA"]
+    assert plan.assignments[0].category == "PARA"
+
+
+def test_the_evals_history_gets_the_new_header(tmp_path, draft):
+    from asics_agent.scoring.scores import add_eval_history
+
+    evals = tmp_path / "evals.xlsx"
+    wb = Workbook()
+    wb.active.append(["When", "Label", "Vertical", "Scored by both"])  # the old header
+    wb.save(evals)
+    add_eval_history([{"Category": "PARA", "Scored by both": 1}], evals, "run")
+    assert [c.value for c in load_workbook(evals).active[1]][:3] == ["When", "Label", "Category"]
 
 
 @pytest.mark.skipif(soffice() is None, reason="LibreOffice not installed")

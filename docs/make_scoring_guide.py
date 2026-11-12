@@ -80,7 +80,7 @@ para("Janaagraha · Annual Survey of India's City-Systems · for the research an
      size=8.5, after=4)
 
 heading("1. Where the scores come from")
-para("Every vertical (Parastatal, UPD, and those added later) goes through the same three steps "
+para("Every category (ULG, Parastatal, and those added later) goes through the same three steps "
      "in the app: **Step 1** finds the official sources and builds the **Citation Sheet**, which "
      "the team reviews; **Step 2** answers each question using only that sheet, citing the source "
      "and quoting it; **Step 3** scores each answer in the experts' scoring workbook. The AI "
@@ -88,9 +88,9 @@ para("Every vertical (Parastatal, UPD, and those added later) goes through the s
      "left for a person.")
 
 heading("2. Scoring as an expert: one workbook, one sheet")
-para("Open the vertical's workbook from the **Step 3 · Score** page (Open / Download), e.g. "
+para("Open the category's workbook from the **Step 3 · Score** page (Open / Download), e.g. "
      "**PARASTATAL_ai.xlsx**, and work only on its first sheet, **Scores (start here)**: one row "
-     "per question and agency (or per city, for city-level verticals such as UPD).")
+     "per question and agency (or per city, for the ULG category).")
 items([
     "**Filter Status.** Left for a person (orange) rows have no AI score yet; Scored by AI rows "
     "have one to check.",
@@ -114,26 +114,26 @@ table([
      "points from its inputs. **NA** where it doesn't apply to that agency; **?** while not scored."],
     ["Main question (MQ)", "Sum of its applicable sub-questions, scaled to the MQ's maximum (usually "
      "10). NA sub-questions are left out; any ? makes the MQ ?."],
-    ["Agency or city, per vertical", "Average of its scored main questions (out of 10). Provisional "
+    ["Agency or city, per category", "Average of its scored main questions (out of 10). Provisional "
      "while any MQ is ? (shown with a count)."],
-    ["City, per vertical", "**Parastatal:** average of the city's agencies (BWSSB, BMTC, BDA…). "
-     "**City-level verticals (UPD…):** the city's own row."],
-    ["City ASICS score", "Average of the city's vertical scores, equal weights."],
+    ["City, per category", "**Parastatal:** average of the city's agencies (BWSSB, BMTC, BDA…). "
+     "**ULG category:** the city's own row."],
+    ["City ASICS score", "Average of the city's category scores, equal weights."],
 ], [3.4, 14.4])
 para("Every level updates as you type in Excel. Results are in **ASICS_2027_Scores.xlsx** and on "
-     "the **Scores** page (after Update scores): each city and vertical, plus every question.",
+     "the **Scores** page (after Update scores): each city and category, plus every question.",
      before=2)
 
-heading("4. When a new vertical is added (e.g. Mobility)")
+heading("4. When a new category is added (e.g. Mobility)")
 items([
-    "A developer adds one settings file (**agent_setup/verticals/mobility.md**) naming its question "
-    "bank, what it assesses (agencies or the city government), its agents and its scoring workbook. "
+    "A developer adds one settings file (**agent_setup/categories/mobility.md**) naming its question "
+    "bank, what it assesses (agencies or the ULG), its agents and its scoring workbook. "
     "No new code.",
     "The experts provide the scoring workbook in the **same layout as UPD**: one sheet per question "
     "with its inputs and Points formula, a summary sheet, an overall-score row.",
-    "It then appears in the app's **Vertical** picker and **Run steps**, runs Steps 1–3 the same "
+    "It then appears in the app's **Category** picker and **Run steps**, runs Steps 1–3 the same "
     "way, gets its own **Scores (start here)** sheet, and adds a column to the results, so the "
-    "city's ASICS score averages one more vertical.",
+    "city's ASICS score averages one more category.",
 ])
 
 doc.save(OUT)

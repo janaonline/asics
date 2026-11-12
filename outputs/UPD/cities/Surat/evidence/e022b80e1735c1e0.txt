@@ -1,0 +1,3568 @@
+SOURCE URL: https://www.rmc.gov.in/rmcwebsite/docs/All_TPS/TP_35/CGDCR_2017_PART_2_PLANNING_REGULATIONS.pdf
+
+[page 1]
+ 
+ 
+ 
+ 
+COMPREHENSIVE  
+GENERAL  
+DEVELOPMENT  
+CONTROL  
+REGULATIONS –2017 
+   PART – II  
+PLANNING  REGULATIONS 
+Urban Development and Urban Housing Department 
+Block No.- 14, 9th Floor, New Sachivalaya, Gandhinagar - 382010.  
+Website: www.udd.gujarat.gov.in 
+Urban Development and Urban Housing Department 
+
+[page 2]
+
+
+[page 3]
+
+
+[page 4]
+
+
+[page 5]
+
+
+[page 6]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat  
+ 
+ 
+  
+COMPREHENSIVE GENERAL DEVELOPMENT 
+CONTROL REGULATIONS- 2017 
+ 
+ 
+PART – II 
+ 
+PLANNING REGULATIONS 
+Urban Development and Urban Housing Department 
+Block No.- 14, 9th Floor, New Sachivalaya, Gandhinagar - 382010.  www.udd.gujarat.gov.in 
+ 
+
+[page 7]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Urban Development and Urban Housing Department, Block No.- 14, 9th Floor, 
+New Sachivalaya, Gandhinagar - 382010. 
+Website – www.udd.gujarat.gov.in 
+
+[page 8]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat       i 
+Table of Contents 
+6 GENERAL PLANNING AND DEVELOPMENT  REGULATIONS ................................................................................. 1 
+6.1 Use Zone Classification& Permissible Uses .............................................................................................. 1 
+6.2 Permissible Uses with respect to road width. ........................................................................................ 10 
+6.3 Floor Space Index (F.S.I). ........................................................................................................................ 12 
+6.3.1 Floor Space Index (F.S.I) for different categories: .................................................................................... 12 
+6.3.2 Areas not counted towards computation of FSI: ..................................................................................... 20 
+6.3.3 Relaxation in Floor Space Index (FSI) ....................................................................................................... 21 
+6.4 Minimum area of building unit for different uses.  ............................................................................... 21 
+6.5 Road Access and Approaches to buildings ............................................................................................. 21 
+6.5.1 Road, Approach and Access ..................................................................................................................... 21 
+6.5.2 Land-Locked Building-Unit and Required road width. ............................................................................. 22 
+6.6 Building Height ....................................................................................................................................... 22 
+6.7 Margins .................................................................................................................................................. 23 
+6.7.1 Road side margin ...................................................................................................................................... 23 
+6.7.2 Rear& Other Side Margins ..................................................................................................................... 24 
+6.7.3 Permissible uses in Margin ....................................................................................................................... 29 
+6.7.4 Restriction on Development in Margin .................................................................................................... 30 
+6.8 Basement in a Building-unit, .................................................................................................................. 30 
+6.8.1 Margins .................................................................................................................................................... 31 
+6.8.2 Extent of Basement .................................................................................................................................. 31 
+6.8.3 Height of Basement .................................................................................................................................. 31 
+6.8.4 Permissible uses in basement .................................................................................................................. 31 
+6.8.5 Services .................................................................................................................................................... 31 
+6.8.6 Basement: (Core Walled City and Gamtal) ............................................................................................... 31 
+6.9 Addition to existing structure................................................................................................................. 32 
+6.10 Addition in building units with existing Buildings .................................................................................. 32 
+6.11 Development in Existing Chawls ............................................................................................................ 32 
+6.12 Development in Core Walled City of Ahmedabad by steel structure for maintenance purpose.  .......... 32 
+6.13 Row House and Tenement type buildings.............................................................................................. 33 
+6.14 Provision for Podium .............................................................................................................................. 34 
+6.15 Parking .................................................................................................................................................... 34 
+6.16 Open-to-Sky Space: ................................................................................................................................ 36 
+6.16.1 Building Dimensions: ........................................................................................................................... 36 
+6.16.2 General Requirement for Open‐to‐Sky space ..................................................................................... 37 
+6.17 Development of Land ............................................................................................................................. 37 
+6.17.1 Internal Road and Approach to Building and Common Plot ............................................................... 37 
+6.17.2 General Requirements for Internal Roads .......................................................................................... 38 
+6.17.3 Amalgamation and Subdivision of Building-unit ................................................................................. 39 
+6.17.4 Contribution of Land for any development in Non-TP Areas .............................................................. 39 
+6.17.5 Common Plot ....................................................................................................................................... 40 
+6.18 Development on Kabrastan, burial ground etc. ..................................................................................... 41 
+6.19 Development on Open Space Plots ........................................................................................................ 41 
+6.20 Discrepancy Removal ............................................................................................................................. 41 
+6.21 Development Work to be in Conformity with the Regulations .............................................................. 41 
+6.22 Re-Development  work on road having width 6.0 mts and less than 9.0 mts  ....................................... 41 
+7 GAMTAL (GM) & CORE WALLED CITY (CW) ........................................................................................................... 43 
+7.1 Minimum Area of a Building-unit ........................................................................................................... 43 
+7.2 SET BACK ................................................................................................................................................ 43 
+7.3 Building Height ....................................................................................................................................... 43 
+7.4 Permissible Ground Coverage ................................................................................................................ 43 
+7.5 CHOWK for Gamtal ................................................................................................................................. 43 
+
+[page 9]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     ii 
+7.6 Heritage Conservation Plan – Ahmedabad. ........................................................................................... 44 
+7.7 Regulation for Heritage Core Area: (Udawada Nagarpalika) ................................................................. 44 
+8 Other than GAMTAL (GM) & CORE WALLED CITY (CW) ........................................................................................ 47 
+8.1 GAMTAL EXTENSION (GME) ................................................................................................................... 47 
+8.2 RESIDENTIAL AFFORDABLE HOUSING (RAH) .......................................................................................... 47 
+8.2.1 Applicability of RAH .................................................................................................................................. 47 
+8.2.2 Floor Space Index and Density for RAH .................................................................................................... 47 
+8.2.3 Common Plot for RAH .............................................................................................................................. 48 
+8.2.4 Parking for RAH ........................................................................................................................................ 48 
+8.3 Transit Oriented Zone, Smart City Node And Transport Node (SPD4)  ................................................... 48 
+8.3.1 Applicability of SPD4 ................................................................................................................................ 48 
+8.3.2 Parking for SPD4 ....................................................................................................................................... 49 
+8.3.3 Other provisions for SPD4 ........................................................................................................................ 49 
+8.4 Special Areas .......................................................................................................................................... 49 
+8.4.1 Closed Textile Mills Zone (CZ) .................................................................................................................. 49 
+8.4.2 Regulations for Gandhi Ashram (AUDA) : Comprehensive Area Improvement Scheme (GACAIS)  .......... 50 
+8.4.3 Regulations for Knowledge Precinct, Central Business District (C5) &Science Park  ................................ 50 
+8.4.4 Regulations for Sabarmati Riverfront Development ................................................................................ 50 
+8.5 Restricted Zone  (RZ) .............................................................................................................................. 50 
+8.5.1 Restricted Residential Zone (VUDA) ......................................................................................................... 50 
+8.5.2 Restricted Residential Zone (JADA) .......................................................................................................... 50 
+8.5.3 Restriction Zone  RZ1 : ............................................................................................................................. 51 
+8.5.4 Restriction Zone RZ2 ................................................................................................................................ 51 
+8.5.5 Restriction Zone RZ3 ................................................................................................................................ 51 
+8.5.6 Restriction Zone RZ4 ................................................................................................................................ 51 
+8.5.7 Hazard Prone Area: .................................................................................................................................. 51 
+8.5.8 Defence Zone : ......................................................................................................................................... 51 
+8.5.9 Vacant Land .............................................................................................................................................. 51 
+9 MINING, QUARRYING AND BRICK KILN .................................................................................................................. 52 
+10 FUELLING & ELECTRIC VEHICLE (eV) CHARGING STATIONS ............................................................................. 53 
+10.1 Area of Building unit and Frontage ........................................................................................................ 53 
+10.2 Location .................................................................................................................................................. 53 
+10.3 Maximum Permissible Ground Coverage ............................................................................................... 53 
+10.4 Margins .................................................................................................................................................. 53 
+10.4.1 For Fuelling &eV Station:..................................................................................................................... 53 
+10.4.2 For Fuelling &eV Station with Service Station: .................................................................................... 53 
+10.5 Height, Floor Space Index & Common Plot ............................................................................................ 54 
+10.6 Parking .................................................................................................................................................... 54 
+10.7 Basement ............................................................................................................................................... 54 
+11 ADVERTISING DISPLAY & COMMUNICATION INFRASTRUCTURE ...................................................................... 55 
+11.1 Advertising Display Infrastructure .......................................................................................................... 55 
+11.1.1 Billboards I Hoardings in Marginal Space ............................................................................................ 55 
+11.1.2 Billboards/ Hoardings on Roof tops I Terrace ..................................................................................... 55 
+11.1.3 Billboards/ Hoardings on Public Roads ............................................................................................... 56 
+11.1.4 Billboards in Urban Renewal Project Areas ......................................................................................... 56 
+11.1.5 Heritage Buildings and Precincts ......................................................................................................... 56 
+11.1.6 General Restrictions: ........................................................................................................................... 56 
+11.2 Communication Infrastructure Telecommunication infrastructure/ microwave communication tower 56 
+11.2.1 Location: .............................................................................................................................................. 56 
+ 
+ 
+
+[page 10]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     iii 
+ 
+TABLES 
+TABLE 6.1 PROTECTION OF BUILDINGS STRUCTURES AND INFRASTRUCTURES IN HAZARD PRONE AREAS ............................................. 2 
+TABLE 6.2:CLASSIFICATION OF DESIGNATED AREAS IN DEVELOPMENT PLAN .................................................................................. 5 
+TABLE 6.3:USE PERMITTED IN EACH CATEGORY ............................................................................................................. 9 
+TABLE 6.4:USE CONTROL AS PER ROAD WIDTH. ...................................................................................................................... 11 
+TABLE 6.5:USE CONTROL AND F.S.I. : CATEGORY D1 AUDA. .................................................................................................. 12 
+TABLE 6.6: USE CONTROL AND F.S.I. : CATEGORY D1 GUDA - GMC. ...................................................................................... 13 
+TABLE 6.7: USE CONTROL AND F.S.I. : CATEGORY D1 GUDA – NON GMC. ............................................................................. 13 
+TABLE 6.8: USE CONTROL AND F.S.I. : CATEGORY D1 SUDA ................................................................................................... 14 
+TABLE 6.9: USE CONTROL AND F.S.I. : CATEGORY D1 VUDA .................................................................................................. 14 
+TABLE 6.10: USE CONTROL AND F.S.I. : CATEGORY D1 RUDA ................................................................................................ 15 
+TABLE 6.11: USE CONTROL AND F.S.I. : CATEGORY D2 JADA .................................................................................................. 16 
+TABLE 6.12: USE CONTROL AND F.S.I. : CATEGORY D2 BADA ................................................................................................. 16 
+TABLE 6.13: USE CONTROL AND F.S.I. : CATEGORY D2 JUUDA ............................................................................................... 17 
+TABLE 6.14: USE CONTROL AND F.S.I. : CATEGORY D2 BAUDA .............................................................................................. 17 
+TABLE 6.15: USE CONTROL AND F.S.I. : D3 AND D6 CATEGORY ............................................................................................... 18 
+TABLE 6.16: USE CONTROL AND F.S.I. : CATEGORY D4, D5, D7A ............................................................................................ 18 
+TABLE 6.17: USE CONTROL AND F.S.I. : CATEGORY  D7(B) ..................................................................................................... 19 
+TABLE 6.18: USE CONTROL AND F.S.I. : CATEGORY D8 & D10 ................................................................................................ 19 
+TABLE 6.19: USE CONTROL AND F.S.I. : CATEGORY D9 ........................................................................................................... 19 
+TABLE 6.20: USE AND MAXIMUM PERMISSIBLE F.S.I. FOR AGRICULTURE ZONE CATEGORIES D1 TO D7(B) ...................................... 19 
+TABLE 6.21: USE AND  MINIMUM BUILDING UNIT  REQUIREMENT ............................................................................................ 21 
+TABLE 6.22: EQUIVALENT CONVERSION OF FPS TO MKS. ....................................................................................................... 21 
+TABLE 6.23: BUILDING HEIGHT WITH RESPECT TO ROAD WIDTH. ............................................................................................... 22 
+TABLE 6.24: ROAD SIDE MARGIN : ALL CATEGORIES EXCEPT GMC AND D9: .............................................................................. 23 
+TABLE 6.25: MARGIN BETWEEN TWO BUILDINGS AND MARGIN FROM COMMON PLOT : ALL CATEGORY  EXCEPT GMC AND D9 ............ 24 
+TABLE 6.26: REAR AND  SIDE MARGINS : ALL CATEGORY  EXCEPT GMC & D9 ............................................................................ 24 
+TABLE 6.27: REAR AND  SIDE MARGINS : D1-RUDA, FOR DW-3, ONLY FOR BUILDING UNIT UP TO 500 SQ.MT AND BUILDING HEIGHT UP 
+TO 16.50 MT, ....................................................................................................................................................... 25 
+TABLE 6.28: MINIMUM ROAD AND OTHER SIDE MARGINS : RESIDENTIAL ZONE 1, 2 & RESIDENTIAL ZONE 3  FOR GMC ............... 25 
+TABLE 6.29: ROAD SIDE MARGIN (MTS).............................................................................................................................. 26 
+TABLE 6.30 : ROAD SIDE, SIDE AND REAR MARGINS FOR RESIDENTIAL RENEWAL ZONE I (RR -1)  FOR GMC .................................... 26 
+TABLE 6.31 :ROAD SIDE MARGINS FOR  COMMERCIAL  ZONE I (C -1) FOR GMC .......................................................................... 26 
+TABLE 6.32 :SIDE AND REAR MARGINS FOR  COMMERCIAL  ZONE I (C -1) FOR GMC .................................................................... 26 
+TABLE 6.33: MARGINS FOR GREEN INSTITUTIONAL ZONE I (GI-1) FOR GMC ............................................................................. 26 
+TABLE 6.34: MARGINS FOR  INSTITUTIONAL ZONE III (I-3) FOR GMC ........................................................................................ 27 
+TABLE 6.35: MARGINS FOR  INDUSTRIAL ZONE I AND II (GIDC-1 AND 2) FOR GMC .................................................................... 27 
+TABLE 6.36: MARGINS FOR  RECREATIONAL ZONE I (RE-1) FOR GMC ....................................................................................... 27 
+TABLE 6.37: MARGINS FOR INDUSTRIAL USE FOR GMC .......................................................................................................... 27 
+TABLE 6.38: MINIMUM SIDE AND REAR MARGINS FOR ALL BUILDING UNITS UPTO 500 SQ.MTS FOR DWELLING – 1 & 2  FOR GMC........ 27 
+TABLE 6.39: PERMISSIBLE GROUND COVERAGE IN GMC ........................................................................................................ 28 
+TABLE6.40: MINIMUM ROAD SIDE  MARGINS : CATEGORY D9 ................................................................................................ 28 
+TABLE 6.41: MINIMUM SIDE & REAR MARGINS FOR CATEGORY D9 OF DEVELOPMENT AREA ........................................................ 28 
+TABLE 6.42 : SCRUTINY CHARGES FOR STEEL STRUCTURE FOR MAINTENANCE PURPOSE IN CORE WALLED CITY OF AHMEDABAD. .......... 33 
+TABLE 6.43:WIDTH OF THE INTERNAL ROAD BASED ON THE LENGTH OF ROAD ............................................................................. 34 
+TABLE 6.44:PARKING REQUIREMENT ................................................................................................................................... 34 
+TABLE 6.45: MINIMUM DIMENSION OF OTS BASED ON BUILDING HEIGHT .................................................................................. 37 
+TABLE 6.46: PROVISIONS FOR THE LENGTH OF ROAD FOR LAYOUT, SUB-PLOTTING AND BUILDING APPROACH. .................................... 38 
+TABLE 6.47: RADIUS OF ROAD CURVATURE BASED ON WIDTH OF THE ROAD ................................................................................ 38 
+TABLE 6.48:MINIMUM SIDE OF BUILDING UNIT ..................................................................................................................... 39 
+TABLE 6.49:MINIMUM COMMON PLOT ............................................................................................................................... 40 
+TABLE 7.1: MAXIMUM PERMISSIBLE BUILDING HEIGHT IN CORE WALLED CITY AND GAMTAL FOR D1 TO D8 AND D10 CATEGORY ....... 43 
+TABLE 7.2: PERMISSIBLE GROUND COVERAGE ....................................................................................................................... 43 
+TABLE 7.3:MEMBERS OF HERITAGE CONSERVATION COMMITTEE (HCC) UDAWADA: ................................................................... 44 
+
+[page 11]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     iv 
+TABLE 8.1: MAXIMUM PERMISSIBLE BUILDING HEIGHT IN OTHER THAN CORE WALLED CITY AND GAMTAL FOR D1 TO D8 AND D10 
+CATEGORY ............................................................................................................................................................ 47 
+TABLE 8.2 CHARGEABLE FSI FOR RAH DWELLING .................................................................................................................. 48 
+TABLE 8.3: PARKING FOR RAH ........................................................................................................................................... 48 
+TABLE 8.4: PARKING FOR SPD4 ......................................................................................................................................... 49 
+TABLE 8.5: FSI FOR CLOSED TEXTILE MILLS ZONE (CZ) ........................................................................................................... 49 
+TABLE 10.1: MINIMUM FRONTAGE ..................................................................................................................................... 53 
+TABLE 10.2:MINIMUM PARKING FOR FUELLING / EV STATION .................................................................................................. 54 
+TABLE 11.1: MINIMUM MARGINAL SPACE ............................................................................................................................ 55 
+TABLE 11.2: BILLBOARDS/ HOARDINGS ON ROOF TOPS I TERRACE ............................................................................................ 55 
+TABLE 11.3: BILLBOARDS/HOARDINGS ON PUBLIC ROADS ....................................................................................................... 56 
+ 
+ 
+  
+
+[page 12]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat       1 
+6 GENERAL PLANNING AND DEVELOPMENT  REGULATIONS 
+6.1 Use Zone Classification& Permissible Uses 
+(1) Different Use Zones,  i.e. designated, in different development plans of different 
+development areas are grouped and against each use zone group the permissible uses shall 
+be as shown in table 6.2 below. Further these use zones are regulated as under:- 
+a. In case of D1 to D7 (A) and D7(B)  category, for different use zones, classified in Ta ble 
+6.2, the uses for development shall be in accordance with the Permissible uses, 
+specified for different use zones in Table 6.2; 
+b. development as envisaged by Municipality under D8 category;  
+c. as per purpose for which plot  is allotted by GIDC, and 
+d. development under D10 category 
+(2) Different uses permissible in various Use Zone (Designation in Development Plan) or general 
+land use either under Revenue Laws Or GIDC Act are specified in Table 6.2.  
+(3) Over and above specified in sub clause 1 and 2 above, the following conditions shall apply. 
+1. No development shall be permitted in area designated for water body, pond and talav in 
+Development Plan. Margins to be maintained from a designated water body shall be as 
+prescribed in these regulations. Provided that such restrictions shall not apply in case of if, it is 
+covered under special development regulations. 
+2. Any land designated under any legislation, for public purposes, the uses shall be permissible 
+as per the requirements of concerned department. 
+3. For land/plot allotted to Appropriate Authority under T.P. Scheme for Public Purpose shall be 
+utilized for uses under 'Public Purpose' irrespective of the applicable Zone or road widths. 
+4. If there are conditions where the prevailing uses  are in non -conformity with the notification 
+of the prevailing Development Plan, but In conformity with the previous Development Plan, 
+such uses shall be permitted until t he useful life of the building. R epair or structural 
+strengthening or retrofitting for functionality of existing use may be permitted. 
+5. For all Zones, except Transit Oriented Zone and Residential Affordable Housing Zone, if the 
+line of a Zone divides a Building unit , the permission may be granted as per following 
+conditions:- 
+1. the maximum permissible FSI available on either parts of such Building-unit shall be as 
+per the respective Zones,  
+2. Use in each part of the building unit shall be regulated as per Respective Zone, 
+3. For contiguous development , the maximum permissible built up area in the  building 
+unit shall be based on FSI of respective zone. 
+6. Fuelling Stations, Public-Institutional and Public Utility shall be permitted in any Zone. 
+7. Different uses permissible on a Building -unit shall be regulated according to the width of the 
+road on which it abuts.  
+8. The specific type of building uses permissible on a Building -unit shall be on the basis of the 
+respective zone and regulated by the road width it abuts on and the area of the Building-unit. 
+9. In case of  D8 category area, road line is demarcated by the competent municipalities or any 
+area acquired  for public purpose or for the work to be perform by the municipalities, in such 
+land no other use than purpose for which land is acquired shall be permitted by the 
+competent authority. 
+10. In D9 category area, other use than plot allotted  by GIDC. 
+11. Regulation identified for Local Area Plan (LAP), when prepared for an area, shall prevail over 
+these regulations.  
+12. For Eco-Sensitive Zone/Area shall also confirm the notification published by the “ Ministry of 
+Environment and Forest”, Notification no. S.O..1260 (E), Dated, 31st May 2012” and amended 
+from time to time. 
+13. In case of VUDA notwithstanding contained in these regulations the following additional 
+provisions shall apply. 
+1. For the residential development in th e villages falling within the air pollution 
+boundary, the development shall be carried out as per the following condition: 
+
+[page 13]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     2 
+• The minimum width of internal road in layout shall be 9.0 mt. 
+• Built up area on G.F. shall not exceed 30%. 
+• Tree plantation to the extent or 4 trees per building or 50 trees per 
+hectare is compulsory. 
+2. Setback: The Set back as mentioned table below from central line of relevant existing 
+road shall be provided where regular line of road. 
+Sr. No Road Distance from the centre 
+line (mt) 
+1 From Chhani GSFC to Jambuva bypass 20.0 
+2 From Pratapnagar road to end of Yamuna 
+mill 
+18.0 
+3 From Genda Circle upto Vadodara branch 
+canal via Bapu ni Dargah 
+18.0 
+4 From Tersali bus stand upto national 
+highway 
+15.0 
+5. From Bird Circle to Jetalpur underpass 12.0 
+ 
+• The land left open as set back shall be deemed to be part of the street. 
+• The competent authority may permit the F.S.I of any plot or a building 
+unit on the basis of its original area, if the owner of such a land is 
+prepared to release the effected land by road widening or for 
+construction of new road without claiming any compensation thereof. 
+3. For all other development areas including VUDA the following additional provisions 
+shall apply:- 
+• Public utility services buildings, which shall include buildings or works 
+developed or undertaken by to Govt. / Semi -Govt. or public undertaking 
+only, such as Sub -station, and receiving station of the electricity Board.  
+Building for infrastructure facilities like bus service, water supply, 
+drainage, s anitation, domestic garbage disposal, pumping station, 
+electricity, purification plant, police building post and telegraph and 
+telecommunication, public urinals, milk, octroi and public telephone 
+booth, fire brigade station, ward and zonal offices of appro priate 
+authority, taxies, scooter and cycle stand and  parking plot, garden, 
+nursery, playground and open spaces, canal, communication network first 
+aid medical center, primary health center, dispensary, library, reading 
+room and religious building/places o f public worship may be permitted in 
+all zones. The built -up area in case of religious building up/places public 
+worship shall not exceed 10% of plot area. 
+4. LANDUSE ZONING IN HAZARD PRONE AREAS. 
+In natural Hazard prone areas namely the earthquake prone zone s as per IS:1893, the cyclone prone 
+areas as per IS:875 Part -3 and flood prone areas as per the Flood Atlas prepared by the Central Water 
+Commission and/ or the flood departments of the State, the development shall be regulated to ensure 
+special protection  from hazards from hazards for any type of development irrespective of use zone. 
+Whereas the hazard prone areas identified as per the Vulnerability Atlas of India -1997(hereinafter 
+referred as Atlas) (or revisions thereof) prepared by Govt. of India or as m ay be prepared by State 
+Government from time to time shall be used for such regulations, as given in Appendix -B of the Atlas. 
+Further Action for protection from these hazards is to be dealt with taking into consideration the 
+Guidelines given in the Table hereunder. 
+Table 6.1 Protection of Buildings Structures and Infrastructures In Hazard Prone Areas 
+A. PROTECTION OF AREAS FROM EARTHQUAKES 
+i. In those areas where there are no dangers of soil liquefaction or settlements or landslides, all 
+building structures and infrastructures should be designed using the relevant Indian Standards 
+as provided in the Building Regulations and the National Building Code 
+
+[page 14]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     3 
+ii. Soils subjected to liquefaction potential under earthquake shaking, can  be  improved by 
+compaction to desired relative densities, so as to prevent the possibility of liquefaction. 
+1. Buildings and structures could be founded on deep bearing piles goin g to non- liquefiable dense 
+layers. 
+2. Steep slopes can be made more stable by terracing and construction of retaining walls and 
+breast walls, and by ensuring good drainage of water so that the saturation of the hill -slope is 
+avoided. 
+3. Any other appropriate engineering intervention to save the building structures or infrastructure 
+from the fury of the earthquake. 
+Note : The protective action given under (ii) to (v) will usually involve large amount of costs and should 
+only be considered in the case of large and  costly structures. For ordinary buildings the cost of 
+improvement of the site will usually be uneconomical, hence bad sites should be excluded by Land Use 
+Zoning. 
+B. PROTECTION FROM CYCLONIC WIND DAMAGE 
+• Buildings, structures and infrastructures in the cyclone prone areas should be designed 
+according to the Indian Standards and Guidelines as provided in the Regulations and the 
+National Building Code. 
+• Light utility structures used for electrical transmission and distribution, and towers for 
+communications, chimneystacks of industrial structures require special design 
+considerations against the cyclonic wind pressures, suctions and uplifts. 
+• In case the buildings, structures and infrastructures are founded on marine clay deposits it 
+will be advisable to adop t either under -reamed piled foundations, or individual column 
+footing with a reinforced concrete beam located at the level of the ground, or a 
+continuous reinforced concrete strip footing. 
+• Wherever, the top soil could become slushy due to flooding, the top  layer of 30 cm depth 
+of soil should not be considered for providing lateral stability 
+• In storm surge prone areas, it will be preferable to construct the community structures, 
+like schools, cyclone shelters, etc. by raising the level of the ground protected by provision 
+of retaining walls at sufficient distance away from the building, taken to such depth that 
+no erosion takes place due to receding storm surge. Alternatively, construct the 
+community structures on stilts with no masonry or bracing up to the p robable maximum 
+surge level. 
+C. PROTECTION OF AREAS FROM FLOODS  
+This may require one or more of the following actions. 
+• Construction of embankments against the water spills from the source of flooding like 
+rivers, large drain etc. 
+• Construction of high enough embankments/bund around the planning area. 
+• Raising the planning area above the high flood level. 
+• Construction/improvement of drainage paths to effectively drain the water from the 
+planning area. 
+• Construction of buildings and structures on deep foundations going below the depth of 
+scour or on stilts with deep enough foundations underwater. 
+• Flood proofing works such as the following:  
+i. Providing Quick Drainage facility, consisting of  
+ii. Revitalisation of secondary and primary drainage channels after establishing  the 
+drainage blockage points; 
+iii. Provision of additional waterways; 
+iv. Clearing of clogged cross drainage works; 
+• Providing Human and Animal Shelters for population living within embankments in the 
+form of raised platform or use of available high ground. 
+• Anti-erosion actions in affected areas. 
+• Any other suitable measure.  
+Note: 
+
+[page 15]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     4 
+1. Similar protection methods could be used against flooding caused in cyclone prone areas by 
+high intensity rains or by the storm surge. 
+2. The concept of land zoning should be kept in mind for  areas where protection works are taken 
+up to decide inter -se priority for location of structures considering possibility of failure of 
+protection works during extreme disaster events 
+5. For Railway Container Depot the permission shall be issued for developm ent for 
+structures for Railway Department. 
+ 
+ 
+ 
+
+[page 16]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat       5 
+Table 6.2:Classification of Designated Areas in Development Plan 
+Sr. 
+No 
+Use Zone (Designation in Development Plan) or general land use either under 
+Revenue Laws Or GIDC Act. 
+Conceptualised Zone Code Permissible Use referred as code.  
+(Codes detailed in table 6.3)  
+(1) (2) (3) (4) (5) 
+1 Core Walled City  Core Walled Area CW AS1, DW1, DW2, DW3, EDUI, H1, H2, HO1,INST, M1, 
+M2, PI, PU, REG, SP&L, REC, TEMP. 2 Walled City, Nucleus Vistar 1, Nucleus Vistar 2, Existing Nucleus Node, Gamtal, 
+Gauthan, Residential area A for Alang ADA, Bhavanath for JuUDA, City Area A  for 
+JADA, BADA, RUDA, and City Area B for RUDA. 
+Gamtal 
+GM 
+3 Village Extension, Gamtal Extension,Natural Growth of Village,Buffer zone of Gamtal  Gamtal Extension GME Those permissible in CW and EDU2. 
+4 Residential Zone, Mix Use (Other than Thangadh), Residential Zone -1 (other than 
+GUDA), Residential Zone -2, 3, 4, 5 for GUDA, City Area B for JADA & BADA, City Area C 
+for JADA, BADA&RUDA, City Area E for BADA, Residential Area B for Alang ADA, &N.A. 
+Residential Zone for KalavadADA,  
+Residential 1 
+R1 
+Those permissible in CW and AS2, AS3, AS4, EDU2, 
+H3, H02, HO3, M3, SE. 
+5 Residential Zone R2 (other than GUDA), Resudential Zone III ( VUDA ), City Area F 
+(BADA) 
+Residential 2 R2 Those permissible in R1. 
+6 Residential Zone R3 (other than GUDA & VUDA), Recreation Zone (GUDA), REZ Residential 3 R3 Those permissible in R1 except DW3, and DW3 for 
+area falling within 200 mts on either side of TOZ. 
+7 Residential Zone R1 GUDA  Residential 4 R4 Those permissible in R1. 
+8 Residential Renewal Zone (GUDA)  Residential 5 R5 DW3, PU, PI 
+9 Residential Affordable Housing Zone - 1, Residential Affordable Housing Zone Residential Affordable 
+Housing 
+RAH 
+ DW3, PU, PI, H1, H2, EDU1, EDU2, INST and 
+TEMP, 
+ Maximum aggregated 10% of total utilised FSI 
+for M1 / M2 / AS1 / ST / SE. 
+10 Restricted Residential Zone, Restricted Area, Flood Prone Area / Zone, Restriction Zone  
+RZ1, RZ2, RZ3, RZ4 of VUDA, Hazard Prone Area, Defence Zone,  
+Restricted Zone RZ Those permissible in R1 with condition specified in 
+the Regulation of Restricted Zone, H1 and H2 
+11 Local Commercial Zone, Commercial Zone excluding of UDA. Commercial 1 
+C1 
+AS1, AS2, AS3, AS4, DW1, DW2, DW3, EDUI, EDU2, 
+H1, H2, H3, HO1, HO2, INST, M1, M2, M3, PI, PU, REC, 
+REG, SP&L, SE, ST and TEMP. 
+12 Commercial Zone of UDA, Commercial Zone-I, Commercial Zone - II, Commercial Zone- 
+III (other than GUDA), Commercial Zone IV (other than GUDA) 
+Commercial 2 C2 Those permissible in C1.  
+13 Commercial Zone III & IV of GUDA Commercial - 3 C3 Those permissible in C1. 
+14 General Commercial Zone (GCZ), General Commercial Zone Commercial - 4 C4 Those permissible in C1 and TO. 
+15 Central Business District  Commercial – 5 C5 Those permissible in C1 and TO. 
+16 Industrial Zone General, Industrial Zone, Non Obnoxious & Non Hazardous Industrial 
+Zone, Light Industrial Zone, Industrial-A, GIDC. 
+Industrial Zone- 1 
+IZ1 
+AS2, AS3, AS4, EDU2, H1, H2, H3, IN1, IN2, M1, M2, 
+M3, PI, PU, REC, REG, SP&L, SE, ST and TEMP. 
+However, in a building used for IN1 or IN2, maximum 
+
+[page 17]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     6 
+Table 6.2:Classification of Designated Areas in Development Plan 
+Sr. 
+No 
+Use Zone (Designation in Development Plan) or general land use either under 
+Revenue Laws Or GIDC Act. 
+Conceptualised Zone Code Permissible Use referred as code.  
+(Codes detailed in table 6.3)  
+(1) (2) (3) (4) (5) 
+aggregated 20% of utilized FSI shall be permited for 
+DW2/ DW3 with units of built-up area of 66sq.mt. 
+17 Industrial Buffer Zone  Industrial Zone - 2 IZ2 Those permissible in IZ1 and IN3 & IN4. 
+18 GIDC Estate 1  Industrial Zone - 3 IZ3 IN1,IN2,IN3, M1,M2, and SE. 
+19 GIDC Estate 2 Industrial Zone - 4 IZ4 Those permissible in IZ3 and ST. 
+20 Heavy Industrial Zone, Industrial Zone- Special, Obnoxious & Hazardous Industrial  
+Zone 
+Industrial Zone - 5 
+IZ5 
+Reg, SE, ST, TR, PI, PU, I2,IN4, DW2&DW3 both up to 
+max. of 20% of utilized FSI with units of built-up area 
+of 66 sq.mt. 
+21 Industrial-B Industrial Zone - 6 
+IZ6 
+IN1, IN2, those permissible in C1, DW2&DW3 both up 
+to max. of 20% of utilized FSI with units of built-up 
+area of 66 sq.mt. 
+22 Mix Industrial Use Industrial Zone - 7 
+IZ7 
+AS2, AS3, AS4, DW1, DW2, DW3, EDU2, H1, H2, H3, 
+IN1, IN2, M1, M2, M3, PI, PU, REC, REG, SP&L, SE, ST 
+and TEMP. 
+23 Education Zone, Educational Purpose, Education, Religious & other Facilities, Service &  
+Institutional Purpose, Institutional,  Knowledge Precinct, Institutional Zone II, 
+Institutional Zone III, Institutional Zone IV (other than GUDA), Special Node I (I.T., 
+Finance Services and Related Activities), Special Node 1Special Node 2(Technology and 
+Bio tech Park), Special Node 2, Health Node,Knowledge Township (VUDA) 
+Knowledge and 
+Institutional Zone- 1 
+KZ1 
+AS2, DW1,DW2,DW3, EDU1,EDU2, HO1,HO2, HO3, 
+INST, M1, M2, PU,PI, REC, REG, SP&L, TEMP. 
+ 
+24 Institutional Zone –IV (GUDA) Knowledge and 
+Institutional Zone-2 KZ2 those permissible in KZ1 
+25 Essential Public Purpose, Public Service, Necessary Public Service, Public Purpose 
+(other than RUDA), Public & Semi-Public Purpose, Public Utility, Public Utility & 
+Services, Neighbourhood Centre & Town Centre, Public Purpose Building, Existing 
+Pubic Purpose, Public / Semi-public, Parking, Public Use 
+Public Purpose Zone - 1 
+PPZ1 
+PU, PI 
+26 Public Purpose (RUDA) Public Purpose Zone - 2 PPZ2 AG1, AG2, AG3, AS4, DW1, SP&L, ST, REC, AS4, REG, 
+EDU1,EDU2, INST, PI, PU. 
+27 Recreational, Recreational Zone 1, Recreational Zone 2, Green Institutional Zone -GI 1 Recreation Zone 
+REZ 
+DW1, PI, PU, REG, REC, SP&L, TEMP, Natural Reserve 
+and Sanctuary, Race Track, Shooting Range, Zoo, 
+Nursery, Stadium, Botanical Garden. 
+28 Parks, Gardens and Open Space  PGO P REC, SP&L REG, PI, PU, 
+29 Agriculture Zone, Agriculture, General Agriculture Zone Agriculture – 1 AGZ1 AG1, AG2, AG3, AS4, DW1, EDU1, EDU2, HO, INST, 
+
+[page 18]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     7 
+Table 6.2:Classification of Designated Areas in Development Plan 
+Sr. 
+No 
+Use Zone (Designation in Development Plan) or general land use either under 
+Revenue Laws Or GIDC Act. 
+Conceptualised Zone Code Permissible Use referred as code.  
+(Codes detailed in table 6.3)  
+(1) (2) (3) (4) (5) 
+IN3, PI, PU, REC, REG, SCK,  ST, SP&L, TEMP and TR. 
+30 Prime Agriculture, Agriculture (SP), Agriculture Special, High-tech Agriculture, Hi-Tech 
+Agriculture Use, Agriculture – 1 (GUDA) 
+Agriculture – 2 
+AGZ2 
+AG1, AG3, EDU1, EDU2, PI, PU, However service 
+apartment, bread and breakfast, guest house, hotel, 
+motel, lodging and boarding shall not be permitted. 
+31 Restricted Agriculture Zone Agriculture – 3 AGZ3 Zoo and Botanical Garden and Any activity under 
+taken by Government for infrastructure 
+32 Restricted Agriculture Zone (High Flood Zone) Agriculture – 4 
+AGZ4 
+AG1, TEMP (However service apartment, bread and 
+breakfast, guest house, hotel, motel, lodging and 
+boarding shall not be permitted) PI, PU. 
+33 Logistics Zone, Logistic Park, Transport Node, Transport & Communication, Public 
+Purpose (ST). 
+Logistics Zone 
+LZ 
+AS1, AS3, (DW2&DW3 both max. Upto 20% of utilised 
+FSI with units of built-up area of 66sq.mts for 
+industrial workers), H1, HO, INST, IN1,IN2, M1, M2, 
+M3, REG, SE, ST, TR, PI, PU. 
+34 Special Plan Development Zone of GIFT  Special Plan 
+Development Zone - 1 SPD1 As per GIFT Master Plan. 
+35 Special Plan Development Zone of Sabarmati Riverfront Development  Special Plan 
+Development Zone - 2 SPD2 As per SRFDCL Master Plan. 
+36 SPD- Science Park Special Plan 
+Development Zone - 3 SPD3 Those permissible in R1. 
+37 SPD-Gandhi Ashram Special Development Area Special Plan 
+Development Zone - 4 SPD4 Those permissible in R1. 
+38 Transport Oriented Zone, Smart City Node/ Transport Node, Highdensity zone 
+available in both the sides of  200 mtr. from the edge of the road.  
+Smart City & TOZ SPD5 Those permissible in R1,C1,REZ. 
+39 Closed Textile Mill Zone CZ CZ Those permissible in KZ1, RAH. 
+40 Forest Land Forest Zone FZ As per the permission of competent authority and 
+subject  to Defence and Central Govt. Regulation. 
+41 Fishing Beach Zone  Special Zone 1 
+SZ1 
+As per Environment Protection and CRZ criteria only 
+Temporary use from wooden and cloth made 
+materials   for fishing purpose activity. 
+42 Buffer Zone  Special Zone 2 SZ2 As  per IZ1 
+43 Hilly Area Special Zone 3 SZ3 AS per Environment Regulation 
+44 Heritage Zone  Special Zone 4 SZ4 Subject to Heritage Regulations 
+45 Residential Tourist Accommodation Zone Special Zone 5 SZ5 DW1, DW2, DW3, HO, M1, M2, M3, PI, PU, REC, REG, 
+
+[page 19]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     8 
+Table 6.2:Classification of Designated Areas in Development Plan 
+Sr. 
+No 
+Use Zone (Designation in Development Plan) or general land use either under 
+Revenue Laws Or GIDC Act. 
+Conceptualised Zone Code Permissible Use referred as code.  
+(Codes detailed in table 6.3)  
+(1) (2) (3) (4) (5) 
+and TO.  
+46 Special Tourism Project Area  Special Zone 6 SZ6 DW3, M2, M3, REC and TO. 
+47 Vacant Land Vacant Land VL No development permission 
+48 Heritage Area Heritage 
+HA 
+DW1,DW2, DW3, M1, M2, HO,  
+The owners of these heritage structures and buildings 
+shall be required to conserve the following original 
+aspects of their Buildings:  
+a) All Façades  
+b) Building Footprint 
+c) Character of Open Spaces such as 
+courtyards, khadki, streets, etc. 
+49 Mix Use Zone (Thangadh) Mix Zone 
+MUZ 
+AS1, AS2, AS3, AS4, DW1, DW2, DW3, EDU1, EDU2, 
+H1, H2, H3, HO,  IN1A, IN1 and IN2 for 
+Pottery/Ceramic Industries on Width of Proposed 
+Road Shall not be less than 9.0mt and 30 to 35% Land 
+shall be kept open for Loading/unloading & Storage, 
+INST, M1, M2, M3, PI, PU, REC, REG, SP&L, SE, ST and 
+TEMP. 
+50 For D8 & D10 category development area.    
+a. Gamtal  Area --- GMD8 AS1, DW1, DW2, DW3, EDU1, HO, INST, M1, M2, PI, 
+PU, REG, REC, SP&L and TEMP. 
+b. Outside the gamtal area but within and up to 200 mt from periphery of 
+gamtal boundary. 
+--- RMD8 Those permissible in GMD8 and AS2, AS3, AS4, EDU2, 
+HO, M2, SE, SCK 
+c. Outside the gamtal area but greater than 200 mt from periphery of 
+gamtal boundary. 
+ RMD9 Those permissible in CW and AS2, AS3, AS4, HO, IN1, 
+IN2, IN3, IN4, M2, M3, SCK, SE, ST  
+51 GIDC  GIDC As specified by GIDC 
+ Note:  
+1. The Use zone for Sr. no 50 and 51 are general land use uses controls or under GIDC Act. They are not designated under the GTP&UD Act. 
+2. In other than urban area, the regulations of D8 category shall be applicable with the condition of maximum building height permissible to be 16.5 mtr. 
+
+[page 20]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat       9 
+Table 6.3:USE PERMITTED IN EACH CATEGORY 
+Sr. 
+No. 
+Use Uses 
+Classification Code 
+(1) (2)  (3) 
+1 Dwelling‐1 DW1 Detached dwelling unit, Clinic not having indoor treatment facility.  
+2 Dwelling‐2 DW2 Semi‐detached dwelling unit, Row House, Tenement, Chawls, Farm House, 
+Clinic not having indoor treatment facility, Cottage Industry (not involving 
+use or installation of any kind which may create noise, vibration, fume 
+dust etc.) 
+Home occupant and cottage industry shall not be permitted in tenement 
+dwelling/ flats. Part of Residential building may be used for professional 
+requirements,  as office, by advocate, doctors, architects, engineers and 
+chartered accountants. 
+3 Dwelling‐3 DW3 Apartment, Hostel, Dharamshala, Pre‐school and Affordable Housing  
+4 Mercantile‐1 M1 Shop, Business, Restaurant, Shopping Centre, Light Home Workshop, LPG 
+Cylinder Godown, Service Establishment , Clinic, Fitness Centre 
+5 Mercantile‐2 M2 Shopping Mall, Laboratory,  Nursing Home Maternity Home, Kerosene 
+Depot, Corporate Offices, Call centres, Training Centres. 
+6 Mercantile‐3 M3 Whole sale Market, Indoor Hospital, Diamond Industry, Wholesale Market 
+and their ancillary uses, Activity Related to I.T. 
+8 Educational‐1 EDUI Primary Schools, Secondary Schools, Higher Secondary Schools, 
+9 Educational‐2 EDU2 College, Polytechnic, University and ancillary use. 
+10 Assembly‐1 AS1 Community Hall, Banquet Hall, Town Hall 
+11 Assembly‐2 AS2 Convention Centre, Exhibition Hall, Auditorium, Planetarium, Stadium, 
+Museum, Exhibition Halls, Wadi 
+12 Assembly‐3 AS3 Theatre, Cinema, Multiplex, Drive‐in Cinema,  Clubs, Golf Course  
+13 Assembly‐4 AS4 Party Plot, Garden Restaurants 
+14 Institutional INST 
+INST
+1 
+Research Centres, Hospital. 
+Dwelling-1,2 &3, Retail Shop and Restaurants as a part of Educational 
+Institute up to (20% of Utilised FSI) 
+15 Religious REG Temples, Church, Mosque, Gurudwara, Synagogue, Upashraya, Sant  
+Niwas or any Religious Structure. 
+16 Hospitality HO Bed and Breakfast, Guest House, Lodging and Boarding, Hotel, Motel, 
+Serviced Apartment  
+20 Service 
+Establishment 
+SE Auto Repair, Workshop, Wood Workshop, Fabrication, Workshop, Public‐
+Garage 
+21 Industrial‐1 IN1 All type of Light, Service Industries, Small Factories, Warehouses, 
+Newspaper Printing Press, Concrete Batching Plant, stone cutting and 
+polishing; Poultry Farm, Dairy, Assembly Plant, Shipping Recycling Unit, 
+Scrape Processing/Cutting Unit, Scrap Shorting Yard, Industrial Row House 
+21A Industrial‐1A IN1A All industries manufacturing tiles, feeting for bathroom and sanitary 
+wares, ceramic, ceramic store, clay, glass and also ancillary industries 
+related to manufacture of tiles, clay bricks, concrete blocks for paving and 
+other materials and their utensils. 
+22 Industrial‐2 IN2 All Industries except Obnoxious and Hazardous Industries, Junk Yard, 
+Textile Units, Ice Factory, Quarrying of Stone, Quarrying of Gravel , 
+Quarrying of Clay, Dumping of Solid Waste, Steel re-rolling, Metal 
+Manufacturing/sorting etc., Oil Processing/ Storage. 
+23 Industrial‐3 IN3 Slaughter House, Meat Processing Units, Leather Processing Units, Cold 
+Storage, Oxygen Plant, Agro Industries, Packaging, Mechanical  
+Engineering. 
+24 Industrial‐4 IN4 Fuel Storage, Storage of inflammable materials, Thermal Power Plant, 
+Power Plant, Gas Plant, Storage of Hazardous Materials, Obnoxious and 
+Hazardous Industries, Chemical Industries, Obnoxious and Hazardous 
+Uses, Dying House 
+25 Storage ST Warehouse, Godown, Cold Storage, Timber Mart, Steel Stockyard, Ice 
+Factory 
+
+[page 21]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     10 
+Table 6.3:USE PERMITTED IN EACH CATEGORY 
+Sr. 
+No. 
+Use Uses 
+Classification Code 
+(1) (2)  (3) 
+25A Small Center 
+(Kothar) 
+SCK building related to agricultural activities, small godowns / storage, having 
+building dimensions not exceeding 30 mtrs. X 12 mtrs 
+26 Transport TR Truck Terminal, Bus Terminal (by private enterprise), Transport Terminal 
+for Goods and Passengers 
+27 Agriculture‐1 AG1 Horticulture, Repair and Sale of agricultural equipment, Saw Mill, Brick 
+Kiln, Dairy Development, Fisheries, Animal Rearing and Breeding, Natural 
+Resource and Sanctuary, Tannery, Concrete Batching Plant, Cemetery, 
+Burial Ground, Regional Park, Way‐side Shop, Agricultural Vocational 
+Training Centre, Panjarapole, Roofing Tiles and Cement Pipes, Studio, 
+Animal Shed, Agro Based Storage, Farm House. 
+28 Agriculture‐2 AG2 Agricultural Vocational Training, Mining and Quarrying, Dumping of Solid 
+Waste, Shooting Range, Drive‐in Cinema, Golf Course, Ship Building or 
+Ship Breaking, Fishing ,aqua culture Processing of fish and industry based 
+on it port, harbour ferry hovercraft service marine transport ,Telephone 
+microwave or other means of communication facilities, salt pans and non -
+polluting salt processing activity Any Type activity permissible as per the 
+provision of the Environment Protection Act.1968 and Environment 
+(Projection Rules-1968) 
+29 Agriculture‐3 AG3 Poultry Farm, Agro‐based Godowns 
+30 Temporary Use TEM
+P 
+Fair, Circus, Exhibition, Mela, Pandal, Fisheries related activities 
+31 Public Utility PU Sub‐station, Bus Station and Terminals, Fuelling  and eV Station and 
+Storage with and without Service Station, Parking, Multi‐level Parking; 
+Infrastructure for Water Supply, Purification Plant, Pumping Station, 
+Electricity Sub‐station; Drainage, Sanitation, Domestic Garbage Disposal 
+Collection, Solid Waste Transfer Station; Pumping Station, Electricity, 
+Purification Plant, Fire Stations, or any development activity carried out by 
+appropriate authority for public purpose 
+32 
+ 
+Public‐
+Institutional 
+PI Any offices for appropriate authority, government and semi government, 
+Public assembly, Public facilities and amenities like Health Public facilities 
+and amenities like Transport and Communication, Public facilities and 
+amenities like public security, Public facilities and amenities like social 
+welfare Recreation of any Type, Post Office, Police –Chawki, ward office 
+33 Health-1 H1 PHC, Clinic, Dispensary 
+34 Health-2 H2 Indoor Hospital up to 20 Bed, Surgical Hospital, Nursing Home 
+35 Health-3 H3 Civil Hospital, Medical College and Research Centre, Hospital of more than 
+20 Bed, 
+36 Health-4 H4 Hospital for infectious diseases, Mental Hospital 
+37 Tourism Services TO Tourism Sponsored activity 
+38 Recreation Use REC Natural Reserve and Sanctuary,  race track, Shooting Range, Zoo, Gardens, 
+Recreation, Nursery, Botanical Garden, Green House, Play Fields, Forest 
+39 Sports and 
+Leisure 
+SP&L Sports Complex, Swimming Pool, Playfield, Camping Ground, Facility for 
+water sports, Theme/  Amusement Park, Aquarium, Zoo ,Botanical 
+Garden, Exhibition and Mela, motion picture hall 
+ 
+6.2 Permissible Uses with respect to road width. 
+1. Subject to other regulations, uses in a Building -unit shall be regulated according to the width 
+of the road on which it abuts as shown in table no 6.4. 
+2. The Industrial uses and Public Utility shall not be regulated on the basis of Road Width. 
+3. The extent of commercial (M1 & M2) uses in all Zones of D1 to D7 (A) and D7(B) category 
+except Commercial Zone ( C1 to C4) shall be regulated according to the width of the road on 
+which it abuts. 
+
+[page 22]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     11 
+4. All permissible non -residential uses in residential zones of whatever category may be 
+permitted on the ground floor or any other floor in a residential dwelling if provided with 
+separate means of access/staircase. 
+5. A part of residential building may be permitted for use as office in case of professional 
+requirements such as for advocates, doctors, architects, engineers, chartered accountants 
+etc. This is subject to a maximum 50 sq.mt and parking for this purpose shall be provided as 
+per commercial basis. 
+Table 6.4:Use control as per road width. 
+Sr. 
+No. 
+Road 
+Width 
+Building Uses Permissible Restrictions for Commercial 
+Use (M1 & M2) Core Wall (CW) 
+&Gamtal (GM) 
+Other than Core Wall 
+(CW) &Gamtal (GM) 
+(1) (2) (3) (4) (5) 
+1 less than 9 
+mt 
+DW1,DW2,DW3  DW1, DW2, REG,  
+ For JuUDA  DW3,  
+ For RUDA  DW3, M1, 
+M2  
+Ground Floor Only 
+2 9 mt and 
+less than 
+12 mt 
+All permitted in Sr. 
+No1 and M1,M2, 
+HO 
+All permitted in Sr. No1 
+and DW3, EDU1, REG, 
+AS1(G+1), M1 & M2. 
+Ground Floor Only 
+3 12 mt and 
+less than 
+18 mt 
+All permitted in Sr. 
+No. 2 and REG, PI 
+All permitted in Sr. No. 2 
+and AS1, PI, PU, TEMP. In 
+addition for RUDA M3, 
+HO, INST1, SP&L, REC, 
+IN1 , SE, M2, EDU2, AS3, 
+AS4. 
+ Ground and First Floor 
+Only. 
+ For RUDA  and D2 
+category, all floors, if  
+hollow plinth is kept 
+open for parking 
+Provided that such uses 
+shall be permitted in D2 
+category on less than 15m 
+wide road,  after keeping a 
+setback of 7.5m from the 
+centre line of the road 
+4 18 mt and 
+less than 
+24 mt 
+DW1, DW2, DW3, 
+M1, M2, REG, AS1, 
+HO, PI 
+DW1, DW2, DW3, M1 
+(Including 
+Multiplex/Cinema 
+theatre up to total 
+combined seating 
+capacity of 3 screens), 
+M2, REG, EDU1, EDU2, 
+INST, HO, AS1, AS4, SE, 
+TEMP, REC, SCK, PI and 
+PU. 
+All Floors 
+5 24 mt and 
+less than 
+30 mt 
+All permitted in Sr. 
+No. 4  
+All permitted in Sr. No. 4 
+and M1 (Including 
+Multiplex/ Cinema 
+theatre up to total 
+combined seating 
+capacity of 5 Screens).  
+All Floors 
+6 30 mt and 
+more 
+All permitted in Sr. 
+No. 5 and EDU1 
+All permitted in Sr. No. 5 
+and M3, ST, TR, SP&L, 
+SCK. 
+All Floors 
+Note:  
+1. Uses permissible in logistic zone shall be allowed irrespective of road width of TP Scheme 
+
+[page 23]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     12 
+2. Commercial use on ground and first floor shall be permitted on existing building or 
+otherwise abutting on a road which is  less than or equal to 12 mt s. Provided that a setback 
+of 7.5 mts, from the center line of the road is kept and provided further that  the land 
+falling in the setback shall be handed over to the competent authority without any 
+compensation. Also for the computation of FSI the area of building u nit prior to setback 
+shall be considered. 
+ 
+6.3 Floor Space Index (F.S.I). 
+6.3.1 Floor Space Index (F.S.I) for different categories: 
+The maximum permissible FSI, the chargeable FSI on a Building -unit for different categories and 
+different zones  shall be regulated as per the tables 6.5 to 6.20 In the tables, wherever zones are not 
+specified,  it shall be regulated to relevant provisions. In case of residential affordable housing purposes, 
+the rates for chargeable FSI shall be according to its policies. 
+Table 6.5:Use control and F.S.I. : Category D1 AUDA. 
+Sr. 
+No. 
+Use Zone 
+Code 
+FSI Permissible 
+Base (Free) Chargable (40% of 
+the jantri rate) Maximum 
+(1) (2) (3) (4) (5) (6) 
+1 Core Walled City CW 2.0 Nil 2.0 
+2 Gamtal GM 2.0 Nil 2.0 
+3 Gamtal Extension GME 1.2 Nil 1.2 
+4 Residential Zone I R1 1.8 0.9 2.7 
+5 Residential Zone II R2 1.2 0.6 1.8 
+6 Residential Zone III R3 0.3 Nil 0.3 
+7 Commercial Zone C2 1.8 0.9 2.7 
+8 Logistics Zone LZ 1 0.5 1.5 
+9 Industrial Zone –General IZ1 1.0 0.8 
+for commercial use 
+1.8 
+10 Industrial Zone – Special IZ5 1.0 Nil 1.0 
+12 Knowledge and Institutional 
+Zone 
+KZ1 1.8 Nil 1.8 
+13 Residential Affordable 
+Housing Zone 
+RAH As per base 
+zone / 1.8 
+0.9 (for RAH-1 only) 2.7 
+Affordable 
+HousingZone‐1 
+1.8 (for RAH1 
+use only) 
+0.9 (for RAH-1 only) 2.7 
+14 Recreation, Gardens and 
+open space 
+P 0.15 Nil 0.15 
+14 Central Business District C5 1.8 3.6 5.4 
+15 General Agricultural Zone AG1 As per table 6.20 
+16 Prime Agricultural Zone AG2 As per table 6.20 
+17 Special plan development 
+(SPD) zone - SRFDCL  
+SPD2 As per SRFDCL master plan. 
+18 SPD – Science Park SPD3 1.8 0.9 2.7 
+19 SPD – Gandhi Ashram 
+Special Development Area. 
+SPD4 As applicable Nil As applicable 
+20 Restricted Agriculture Zone AG3 As per table 6.20 
+22 Transit Oriented Zone  TOZ As Per Base 
+Zone 
+As applicable 4.0 
+Note : Ristricted Agriculture Zone - A3 means the lands bearing survey number as mentioned in the 
+Gazzate of India Extraordinary No. 2439 part II section 3 – Sub - section  (ii) published on dated 18-10-
+2013 by Ministry of Environment and Forest (MoEF) Government of India.   
+
+[page 24]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     13 
+ 
+Table 6.6: Use control and F.S.I. : Category D1 GUDA - GMC. 
+Sr. 
+No. 
+Use Zone Code FSI Permissible 
+Sector 
+Plot Size 
+(Sq. Mt.) 
+Max. Building 
+Height (Mt.) 
+(1) (2) (3)  (4) (5) (6) 
+1 
+Residential Zone I 
+R4 All NM 50 &≤ 
+135 10.5* 
+>135 & 
+≤540 
+13.0 * 
+16.0 
+2 Residential Zone II R1 All NM All Plot 
+Size 13 mt or G+2 
+3 
+Residential Zone III 
+R3 All NM <330 13.0 * 
+≥330 13.0 * 
+16.0 
+4 Residential Renewal 
+Zone – 1 
+R5 All 2.5  25.0 
+5 Commercial Zone I 
+C2 6, 11, 12, 16 
+& 23. 
+NM ≥1000 25.0 
+NM <1000 15.0 
+5, 21, 24. NM ≥1000 10.0 
+11 auctioned  
+plots for 
+commercial 
+NM 
+≥1000 35.0 
+6 Green Institutional 
+Zone 
+REZ All NM 
+All Plots 
+10.0 & Maximum 
+ground coverage 
+shall be 40 % 
+7 Institutional Zone II KZ1 All NM All Plots 15.0 
+8 Institutional Zone III KZ1 All 1.5 All Plots 30.0 
+9 GIDC Estate IZ3 All 2.0 All Plots 25.0 
+10 GIDC Estate IZ4 All 1.0 All Plots 25.0 
+12 Recreational Zone II R3 All 0.3 All Plots 8.0 
+Note:*means the maximum height does not include the hollow plinth. In all other cases the 
+hollow plinth shall be included in the height. NA means no FSI restrictions. 
+ 
+ 
+Table 6.7: Use control and F.S.I. : Category D1 GUDA – NON GMC. 
+Sr. 
+No. Use Zone Code FSI- Permissible 
+(Base) 
+FSI-
+Charge-
+able 
+FSI-Maximum 
+Permissible 
+(1) (2) (3) (4) (5) (6) 
+1 Residential Zone IV R1 1.8 0.45 2.25 
+2 Residential Zone V R1 1.5 0.75 2.25 
+4 Commercial Zone II C1 1.8 2.2 4.0 
+4A Commercial Zone III C3 1.25 2.75 4.0 
+5 Institutional Zone IV KZ2 1.2 0.30 1.5 
+6 Gamtal GM 2.0 Nil 2.0 
+7 Natural Growth of 
+Gamtal* 
+GME 1.25 Nil 1.25 
+8 Residential RAH As per Base Zone Nil As per Base Zone 
+
+[page 25]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     14 
+Table 6.7: Use control and F.S.I. : Category D1 GUDA – NON GMC. 
+Sr. 
+No. Use Zone Code FSI- Permissible 
+(Base) 
+FSI-
+Charge-
+able 
+FSI-Maximum 
+Permissible 
+(1) (2) (3) (4) (5) (6) 
+Affordable Housing 
+Zone 
+1.8 
+(for RAH use only) 
+0.9 (For 
+RAH only) 
+2.7 
+Nil 1.8 
+9 Agricultural Zone AG2 As per table 6.20 
+10 Hi Tech Agriculture 
+Use 
+AG2 As per table 6.20 
+11 Defence Zone RZ - - - 
+12 Special Planned 
+Development (SPD) 
+Zone- Gujarat 
+International Finance 
+Tech City 
+SPD1 As applicable Nil As Applicable 
+13 Recreational Zone I R3 0.3 Nil 0.3 
+Note:- Natural Growth of Gamtal (NGOG) – In Gamtal Extension Zone of Randheja Village, the 
+base FSI shall be 1.5 Maximum Permissible FSI shall be 2.0 of which 0.5 shall be permissible. 
+ 
+Table 6.8: Use control and F.S.I. : Category D1 SUDA 
+Sr. 
+No. Use Zone Code 
+Permissible FSI 
+Base 
+(Free) 
+Chargeable (at 40% of 
+Jantri rate) 
+Maximum 
+(1) (2) (3) (4) (5) (6) 
+1 Gamtal GM 2.0 Nil 2.0 
+2 Natural Growth of 
+Village 
+GME 1.2 Nil 1.2 
+3 Residential/ 
+Commercial 
+R1/C2 1.8 0.9 2.7 
+1.8 3.6** 
+2.2 4.0** 
+4 Industrial  IZ1 & IZ5 1.0 0.8 for commercial use. 1.8 
+5 Agriculture AG1 As per table 6.20 
+6 Recreational zone REZ 0.25 Nil 0.25 
+7 Educational Purpose KZ 1.2 Nil 1.2 
+8 Residential Zone* SPD5 0.6 3.4 *** 4.0 
+Note:  
+1. *500 mt on both the sides of 90 mt by ring road. 
+2. **200mt. on both the sides of 36.0mt. or 45.0 mtwide road 
+3. **If the line of 200 mt. on both sides of road 36 mt or 45 mt, divides a Survey No./Block 
+No./Final Plot No., the entire Maximum Permissible FSI shall be permissible for development, 
+irrespective of the part of the Survey No./Block No./ Final Plot No. This incentive shall not be 
+valid for Survey Numbers amalgamated with Survey Numbers outside this area after the date of 
+publication of the this notification.  
+4. ***Out of 3.4 FSI, Provided that 0.6 to 1.2 FSI shall be @ 20% of Jantri rate. 
+ 
+ 
+Table 6.9: Use control and F.S.I. : Category D1 VUDA 
+
+[page 26]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     15 
+Sr. 
+No 
+Use Zone Code Permissible FSI 
+Base 
+(Free) 
+Chargeable (at 40% 
+of Jantri rate) 
+Maximum 
+(1) (2) (3) (4) (5) (6) 
+1 Existing Nucleus / Gamtal GM 2.0 NIL 2.0 
+2 
+Residential Zone 1,  
+Commercial Zone 1 
+R1/C1 1.8 0.9 2.7 
+1.8 3.6** 
+Residential Zone 2 R2 1.2 1.3 2.5 
+2.4 3.6** 
+3 Residential Zone 3 R3 0.75 1.75 2.5 
+4 Restricted Residential Zone RZ 1.8 0.3 2.1 
+5 Natural growth of village GME 1.6 NIL 1.6 
+6 Industrial Zone IZ1 & 
+IZ5 
+1.0 NIL 1.0 
+7 Special Node1, Special Node 2, 
+Knowledge Township, Health 
+Node 
+KZ1 1.2 1.3 2.5 
+8 Agricultural Zone AG1 As per table 6.20 
+9 Recreation REZ 0.25 Nil 0.25 
+10 Restricted Area (RA) RZ 0.3 Nil 0.3 
+11 Restricted Zone RZ – 1, RZ-2. RZ 0.3 Nil 0.3 
+12 Restricted Zone RZ – 3, RZ - 4 RZ Nil Nil Nil 
+13 Public / Semi Public PPZ1 1.0 Nil 1.0 
+Note:  
+1. *500 mt on both the sides of 90 mt by ring road. 
+2. **200mt. on both the sides of 36.0mt. or 45.0 mt wide road 
+3. **If the line of 200 mt. on both sides of road 36 mt or 45 mt, divides a Survey No./Block 
+No./Final Plot No., the entire Maximum Permissible FSI shall be permissible for development, 
+irrespective of the part of the Survey No./Block No./Final Plot No. This incentive shall not be 
+valid for Survey Numbers amalgamated with Survey Numbers outside this area after the date of 
+publication of the this notification. 
+ 
+Table 6.10: Use control and F.S.I. : Category D1 RUDA 
+Sr. 
+No. Zone Code Base 
+F.S.I 
+Chargeable 
+F.S.I 
+Maximum Permissible 
+F.S.I 
+(1) (2) (3) (5) (6) (7) 
+1 City Area - A GM 2.25 - 2.25 
+2 City Area - B GM 2.00 0.5 2.5 
+3 Gamtal GM 2.25 - 2.25 
+4 Gamtal Extension GME 1.5 - 1.5 
+5 TOZ SPD5 1.8 2.2 4.0 
+6 Residential R1 1.8 0.9 2.7 
+7 Commercial C2 1.5 0.7 2.2 
+8 Recreational  REZ 0.15 - 0.15 
+9 Industrial  IZ1 1.2 0.3 1.5 
+10 Obnoxious & 
+Hazardous IZ5 1.2 0.3 1.5 
+11 Special Industrial IZ5 1.2 0.3 1.5 
+
+[page 27]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     16 
+12 Agriculture AG1 As per table 6.20 
+ 
+Table 6.11: Use control and F.S.I. : Category D2 JADA 
+Sr. 
+No. Use Zone Code Base FSI 
+(Free) 
+Chargeable FSI (at 
+40% of jantri rate) 
+Maximum 
+FSI 
+(1) (2) (3) (5) (6) (7) 
+1 Residential Zone (City Area A) GM 2.0 Nil 2.0 
+2 Residential Zone (City Area 
+B), Commercial Zone (City 
+Area B) 
+R1/C1 1.8 0.9 2.7 
+3 Residential Zone (City Area c), 
+Commercial Zone(City Area C) 
+R1/C1 1.8 0.9 2.7 
+6 Industrial Zone IZ1 & IZ5 1.0 NIL 1.0 
+7 Public Purpose Zone PPZ1 1.5 NIL 1.5 
+8 Agriculture Zone AG1 As per table 6.20 
+ 
+ 
+Table 6.12: Use control and F.S.I. : Category D2 BADA 
+Sr. 
+No. Zone Code Base FSI (Free) 
+Chargeable 
+FSI (at 40% of 
+jantri rate) 
+Maximum 
+FSI 
+(1) (2) (3) (5) (6) (7) 
+1 Gamtal GM 2.0 Nil 2.0 
+2 
+ 
+Village Extension 
+(villages Gamtal falling 
+within agriculture Zone 
+only for natural growth 
+of village) 
+GME 1.6 Nil 1.6 
+3 Residential Zone (R-1) R1 2.0 0.7 2.7 
+4 Residential Zone (R-2) R2 1.6 0.6 2.2 
+5 Commercial Zone C2 1.6 0.6 2.2 
+6 Industrial Zone IZ1 & IZ5 1.0 Nil 1.0 
+7 Public Purpose Zone PPZ1 1.5 Nil 1.5 
+8 Recreational  REZ 0.15 - 0.15 
+9 Agriculture Zone AG1 As per table 6.20 
+10 Agriculture (SP) Zone AG2 As per table 6.20 
+11 Transport and 
+Communication 
+LZ 1.0 0.5 1.5 
+Note :-  
+1. For city area E  Government order No: NRY -232017-6573-L Dt:9/10/2017. Notwithstanding 
+anything contained in the present GDCR the aforesaid variations and modifications with 
+notifications mentioned in the said order shall stand valid and continue so far as approval of 
+layout plan and building plan for "city area E" is concerned. The concern authority shall have 
+power and authority to proceed for necessary approval on the basis of afore mentioned 
+variations under prevailing GDCR at the rele vant time for Bhavnagar Area Development 
+Authority. 
+2. The maximum FSI permitted in City Area F shall be 2.7 from which base FSI shall be 1.8 and 
+chargable shall be 0.9. 
+ 
+
+[page 28]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     17 
+ 
+Table 6.13: Use control and F.S.I. : Category D2 JuUDA 
+Sr. 
+No. 
+Use Zone Code F.S.I. 
+Permissible 
+(Base) 
+F.S.I. Chargeable 
+(at 40% of jantri 
+rate) 
+F.S.I. Maximum 
+Permissible 
+(1) (2) (3) (4) (5) (6) 
+1 Bhavanath Area. GM 2.25 NIL 2.25 
+2 Gamtal Area (Walled 
+City of Junagadh) 
+GM 2.25 0.75 3.0 
+3 Gamtal (Other than 
+Walled City of 
+Junagadh) 
+GME 1.5 0.3 1.8 
+4 Residential Zone  R1 1.8 0.9 2.7 
+5 Industrial Zone IZ1 & 
+IZ5 
+1.2 0.3 1.5 
+6 Recreational Zone REZ 0.15 NIL 0.15 
+7 Public Purpose Zone PPZ1 1.0 NIL 1.0 
+8 Agriculture Zone  AG1 As per table 6.20 
+Note:-  
+The development permission for Eco Sensitive Area shall also confirm the notification published by 
+“Ministry of Environment and Forest, Notification No. S.O. 1260 (E), Dated, 31 st May 2012” attached in 
+Appendix. 
+As per the said notification authority has to prepared zonal master plan for “Girnar Eco-Sensitive Area” 
+The F.S.I. and built -up area under these Regulations shall prevail over the FSI and built -up area 
+prescribed in T.P. Schemes within and outside Gamtal and walled city area if any. In case of new 
+construction according to the provision of sanctioned revised development plan, where permissible 
+height is not achieved even after consumption of permissible FSI. Chargeable FSI may be permitted 
+subject to other provision of the regulation provided that the building unit shall be abut  on min. 12.0 
+Mt. road. Provided for such construction stability report shall be furnished for the existing and new 
+construction by Authorized structural Engineer Above additional FSI may be permitted on payment of an 
+amount towards additional infrastructure charge at the rate decided by appropriate authority from time 
+to time.  
+Provided that, in Gamtal area chargeable FSI can be allowed on road having width of 12.0 Mt. or more. 
+ 
+ 
+Table 6.14: Use control and F.S.I. : Category D2 BAUDA 
+Sr. 
+No. Use Zone Code 
+F.S.I. 
+Permissible 
+(Base) 
+F.S.I. Chargeable (at 
+40% of jantri rate)* 
+F.S.I. Maximum 
+Permissible 
+(1) (2) (3) (4) (5) (6) 
+1 
+ 
+Core area GM 2.5 Nil 2.5 
+2 
+Gamtal other than 
+Bharuch and 
+Ankleshwar 
+GM 1.5 Nil 1.5 
+3 Gamtal Extension GME 1.2 Nil 1.2 
+4 Residential Zone 1 R1 1.8 0.9 2.7 
+5 Residential Zone 2 R2 1.5 0.6 2.1 
+ 
+7 Industrial   Zone IZ1 1.0 Nil 1.0 
+
+[page 29]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     18 
+Table 6.14: Use control and F.S.I. : Category D2 BAUDA 
+Sr. 
+No. Use Zone Code 
+F.S.I. 
+Permissible 
+(Base) 
+F.S.I. Chargeable (at 
+40% of jantri rate)* 
+F.S.I. Maximum 
+Permissible 
+(1) (2) (3) (4) (5) (6) 
+8 Industrial Buffer IZ2 1.0 Nil 1.0 
+9 Institutional Zone KZ1 1.8 Nil 1.8 
+10 Recreational Zone REZ 0.15 Nil 0.15 
+11 Logistic Park  LZ 1 Nil 1 
+12 
+Restricted 
+Agricultural Zone 
+(High Flood Zone) 
+RZ 0.15 Nil 0.15 
+13 Agricultural Zone AG1 As per table 6.20 
+14 Public Utility Zone PPZ1 1 Nil 1 
+ 
+ 
+Table 6.15: Use control and F.S.I. : D3 and D6 Category 
+Sr. No. Conceptual Zone Code Permissible FSI. 
+(1) (2) (3) (4) 
+1 Gamtal GM 2.0 
+2 Residential 1  R1 1.2 
+3 Commercial 1 C1 1.2 
+4 Industrial 1 IZ1 1.0 
+5 Agriculture 1 AG1 As per table 6.20 
+6 Public Purpose PPZ1 1.0 
+7 Recreation REZ 0.15 
+8 Logistic Zone LZ 1.0 
+ 
+ 
+ 
+Table 6.16: Use control and F.S.I. : Category D4, D5, D7A 
+No. Conceptual 
+Zone Code Permissible 
+FSI. 
+F.S.I. Chargeable 
+(at 40% of jantri 
+rate)* 
+F.S.I. Maximum 
+Permissible 
+(1) (2) (3) (4) (5) (6) 
+1 Gamtal GM 2.0 Nil 2.0 
+2 Residential 1  R1 1.8 0.6 2.4 
+3 Commercial 1 C1 1.8 0.6 2.4 
+4 Industrial 1 IZ1 1.0 Nil 1.0 
+5 Industrial 6 IZ6 1 0.5 1.5 
+6 Industrial 7 IZ7 1.5 0.5 2.0 
+7 Agriculture 1 AG1 As per table 6.20 
+8 Public Purpose  PPZ1 1.0 Nil 1.0 
+9 Recreation REZ 0.15 Nil 0.15 
+10 Logistic Zone  LZ 1.0 Nil 1.0 
+11 Special Zone 1 SZ1 0.3 Nil 0.3 
+12 Special Zone 2 SZ2 1.0 Nil 1.0 
+13 Special Zone 5 SZ5 1.2  0.3 1.5 
+
+[page 30]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     19 
+14 Special Zone 6 SZ6 0.8 0.2 1.0 
+ 
+ 
+Table 6.17: Use control and F.S.I. : Category  D7(B) 
+No. Zone Code Permissible FSI. ChargebleF.S.I. Maximum F.S.I. 
+(1) (2) (3) (4) (5) (6) 
+1 Gamtal GM 2.0 Nil 2.0 
+2 Residential1  RZ1 1.8 Nil 1.8 
+3 Commercial 1 C1    
+4 Industrial 1 IZ1 1.0 Nil 1.0 
+5 Agriculture 1 AG As per table 6.20 6 Agriculture 2 
+7 Special Zone 1 SZ1 0.3 Nil 0.3 
+8 Special Zone 2 SZ1 1.0 Nil 1.0 
+9 Special Zone 6 SZ6 1.2  Nil 1.2 
+10 Public Purpose  PPZ 1.0 Nil 1.0 
+11 Recreation REC 0.15 Nil 0.15 
+12 Logistic Zone  LZ 1.0 Nil 1.0 
+ 
+Table 6.18: Use control and F.S.I. : Category D8 & D10 
+Sr. No. Use Permissible FSI. 
+(1) (2) (3) 
+1 Any use in Gamtal 2.0 
+2 Residential - Commercial use 1.2 
+3 Industrial use 1.0 
+4 Agriculture use 0.3 
+ 
+ 
+ 
+Table 6.19: Use control and F.S.I. : Category D9 
+No. Use FSI Maximum 
+Built up 
+Maximum Height 
+(1) (2) (3) (4) (5) 
+1 Residential 1.6 40% 13.00 mt 
+2 Commercial 1.6 40% 13.00 mt 
+3 Industrial 1.6 50% 13.00 mt 
+(Additional height as required for industrial purpose 
+as approved by Factory Inspector.) 
+ 
+ 
+Table 6.20: Use and Maximum Permissible F.S.I. for Agriculture Zone Categories D1 to D7(B) 
+No. Permissible Use FSI Ground 
+Coverage 
+Maximum 
+Permissible 
+Building Height 
+Remarks 
+(1) (2) (3) (4) (5) (6) 
+1. Dwelling‐1 0.1 5% 8mts 1. Only one farmhouse per 
+
+[page 31]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     20 
+2. Agriculture‐1&2,  
+Sports & Leisure,  
+Parks,  
+Assembly‐4 
+0.1 5% 15mts 
+Building‐unit shall be 
+permitted. 
+2. No subdivision of the land 
+shall be permissible. 
+3. Common Plot not required. 
+4. Minimum Area of any block 
+no./ survey no./Hissa 
+no./FP no. shall be 4000 sq 
+.mt, except Public utility & 
+public Institutions. 
+5. For Udwada ADA minimum 
+Area of any block 
+no./survey no./Hissa no./FP 
+no. shall be 2000 sq.mts, 
+except Public utility & 
+public Institutions. 
+6. Road Side Margin shall be 
+30.00 mt. 
+3. Religious, 
+Educational1&2, 
+Institutional, 
+Agriculture‐3,  
+Industrial 3,  
+Transport,  
+Storage,  
+Public Utility, 
+Public‐ 
+Institutional 
+0.45 15% 15mts 
+ 
+6.3.2 Areas not counted towards computation of FSI: 
+1. All interior open‐to‐sky spaces such as courtyards and chowk, utility ducts in any form, shape 
+and size required by Regulations.   
+2. Area used for parking at basement or hollow‐plinth or parking at any level.  
+3. Basement exclusively used for parking shall have  minimum clear height of 2.8 mt and 
+maximum height of 4.5 mt. In case of mechanized parking there is no restriction on maximum 
+height or number of level of basement floors used for parking subject to structural stability. 
+However other permissible uses shall be permitted in the basement, up to a maximum area of 
+25% of its the total built‐up area. Such non -parking use area shall be calculated towards the 
+computation of FSI.  
+4. Hollow plinth provided for parking with the following conditions:  
+a. Hollow plinth provided for the purpose of parking shall have maximum clear height of 
+3.5mts. 
+b. Hollow Plinth can have provision for electric meter room, room for telephone 
+distribution board, common toilet for both the genders, water room, servant room, and 
+security cabin and entrance foyer if the total area does not exceed 16.5 sq.mt. This area 
+shall not be considered towards computation of FSI.   
+5. Loft up to a maximum of 30% of the enclosing space.  
+6. Staircase, sky walks intermediate landing and stair cabin with the 
+following conditions:    
+a. Maximum landing width at floor level shall be two times the 
+width of stair (  x mts) including additional space  (0.5xmts) 
+provided at either side of the stair landing as common area  
+(illustrated across).  
+7. Lift, lift well with  lift cabin, stair cabin, lift landing of lift well and 
+water tank, including the walls provided as per Regulation no . 
+13.1.13 with the following conditions:  
+a. The width of the lift landing shall be considered equal to 
+the maximum width of the lift well including walls (x mts) 
+with an additional space (0.5  x mts) at either side of the lift 
+provided as common area as illustrated across.  
+b. The depth of the lift landing shall be two times the 
+
+
+[page 32]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     21 
+maximum width of the lift well including walls (x mts) as illustrated across.  
+8. The width of the lift landing shall be considered twice the width of the lift well including walls 
+including additional space provided at either side of the landing, and the depth shall be of 
+twice the width of the lift well as illustrated across.   
+9. Vehicular ramps and pedestrian ramps. 
+10. Electric room and electric substation as specified by Competent Electric Company.  
+11. Open‐to‐sky space used for solar‐water heating system, outdoor units for air‐conditioners or 
+mechanical ventilation shall be exempt from FSI.  
+12. Any common amenities construction allowable in the common plot having built up area upto  
+50.00 sq.mt. 
+13. Pergolas as defined in these regulations 
+14. Skip Floor, refuge area required as per fire prevention and life safety measures regulation.   
+6.3.3 Relaxation in Floor Space Index (FSI) 
+In case of Building -units affected by road widening or construction of new road, the owner may claim 
+compensation or FSI from the Competent Authority for the surrendered land. In case of FSI, the 
+Competent Authority shall permit the FSI of any such land /  plot or Building -unit on the basis of the 
+original boundary of the Building Unit. This is subject to conformity with all other requirements 
+mentioned in these Regulations as per the new boundary. Before securing Developmen t Permission on 
+any such Building-units, owner shall have to surrender the affected land. 
+6.4 Minimum area of building unit for different uses. 
+Generally minimum area of a Building -unit shall be 18sq.mt with no side less than 3.0  mts in width. 
+However to ensure that the purpose for which the building unit is put to uses meets the requirements 
+of minimum land size, the areas required for each building unit with reference to the use is shown 
+hereunder:- 
+ 
+Table 6.21: Use and  Minimum Building Unit  Requirement  
+Sr. 
+No. 
+Use Minimum Area of 
+Building unit in sq mt. 
+Sr. 
+No. 
+Use Minimum Area of 
+Building unit in sq mt. 
+1 
+Mercantile-2 500 
+6 
+Fuelling & eV 
+station w/o 
+service station 
+500 
+2 
+Education-1, 2  1000 
+7 
+Fuelling & eV 
+station with 
+service station 
+2000 (other than 
+category D7(B), D8, and 
+D10) 
+3 
+Assembly 1,2,3 & 4, 
+Institutional 
+Education-2 
+3500  
+(for AUDA Only) 
+500 (for category 
+D7(B), D8, and D10) 
+4 Assembly-1,2,3,4 1500 8 Hospitality 1000 
+5 Institutional 750    
+6.5 Road Access and Approaches to buildings 
+6.5.1 Road, Approach and Access 
+1. The conversion of road widths from length unit of feet to metric  shall be as specified in table  
+6.22. 
+ 
+Table 6.22: Equivalent Conversion of FPS to MKS. 
+Sr. No. Road Width(Feet) Road Width(Metres) 
+1 20.00 6.0 
+2 24.60 7.5 
+3 30.00 9.0 
+
+[page 33]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     22 
+Table 6.22: Equivalent Conversion of FPS to MKS. 
+Sr. No. Road Width(Feet) Road Width(Metres) 
+4 40.00 12.0 
+5 50.00 15.0 
+6 60.00 18.0 
+7 80.00 24.0 
+8 100.00 30.0 
+2. For Building-units along over-bridge or under-bridge, the total width of the DP/TP Road shall be 
+considered for regulating permissible uses, margins and height for proposed buildings. 
+6.5.2 Land-Locked Building-Unit and Required road width. 
+1.  In the case of a land -locked plot, which Is surrounded on all sides by other plots with no access 
+to any street or road, access of minimum 12mts shall be required through any adjoining plots or 
+plot which shall be nearest to the street or roads to the land locked plots, at the cost of owner 
+of the land lock plot and such other condition as may be prescribed by the Competent Authority   
+In case of land locked plot behind the existing  construction and where 12.0mt. wide approach  
+is not feasible, building upto height of 10.0mt. shall be permissible on the road of 9.0mt. width 
+and only individual bung alows /semi-detached/ row-houses shall be permissible on the road of 
+7.50mt.width. only where the land has received  non -agriculture permission prior to  the 
+publication of the preliminary notification of the comprehensive GDCR. For non -agriculture 
+permission granted af ter publication of CGDCR,  12.0mt. wide road shall be insisted and 
+development permission shall be granted accordingly. 
+2. Where there is no town planning scheme, for a 
+building unit/plot abutting on a Government Nalla 
+Road, the right of way/plot boundary shall be 
+considered as minimum 9.0mts from the centre line of 
+such Nalia Road. Road-side margin shall be considered 
+from this imaginary plot boundary thus established. 
+3. In Non -T.P.Area and Agricultural Zone, the 
+Development Permission shall be regulated as per the 
+road network proposed by the Appropriate Authority. 
+4. For plots in Non-T.P. Areas, the applicable Zone, permissible uses and regulations shall be as per 
+the original Survey No. of the owner. 
+6.6 Building Height 
+1. The height of building shall be regulated according to the width of the road on which it abuts   
+2. The maximum permissible building height shall be regulated according to the width of the road 
+on which it abuts as shown in table No. 6.23 
+Table 6.23: Building Height with respect to road width. 
+Category  of Authority / ULB 
+Width of Road 
+Less than 
+9.0 mts 
+9 mts and 
+less than 
+12.0 mts 
+12 mts 
+and less 
+than  
+18 mts 
+18 mts 
+and less 
+than  
+36 mts 
+36 mts & 
+above. 
+Building 
+Height (mts) 
+D1 except GMC* 
+and RUDA AREA 
+10 16.5 30 45* 70 
+D1-RUDA,D2  16.5 16.5 30 45* 70 
+D3, D6 11 11 11 11 11 
+D4, D5, D7(A) 10 16.5 30 45 45 
+D7(B), D8, D10 10 16.5 25 25 25 
+*70 mts height may be permitted on 18 mts and wider road within High density development area i.e. 
+
+
+[page 34]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     23 
+Table 6.23: Building Height with respect to road width. 
+Category  of Authority / ULB 
+Width of Road 
+Less than 
+9.0 mts 
+9 mts and 
+less than 
+12.0 mts 
+12 mts 
+and less 
+than  
+18 mts 
+18 mts 
+and less 
+than  
+36 mts 
+36 mts & 
+above. 
+200mt from the outer boundary of the road. Further to clarify, High Density Development means area 
+where maximum permissible FSI is more than 3.5.   
+3. If two buildings next to each other have different heights, required margin for taller building 
+shall be applicable. For example  - if one building is of 25mts and the adjacent building is of 
+45mts in height, the minimum margin between these two buildings shall be 9.0mts. 
+4. In case of required margin is not provided than the length of common wall between any two  
+semi-detached buildings shall not be less than 25% of the maximum width of the building 
+parallel to common wall joining together at every floor. 
+5. Maximum Permissible Building Height subject to clearance from the Airport Authority. 
+6.7 Margins 
+6.7.1 Road side margin 
+1. Road Side Margin in a Building -unit shall be regulated by the Road width it abuts on as 
+mentioned in the table no.6.24.                     
+2. For Building-units with two or more abutting roads, the Road -side margin shall be applicable on 
+all such abutting sides as illustrated in the figure. 
+ 
+ 
+ 
+ 
+ 
+ 
+3. Road side margin as per the road width or margin as per building height whichever is higher 
+shall be applicable. 
+ 
+ 
+Table 6.24: Road Side Margin : All Categories except GMC and D9: 
+Road Width 
+(mt.) 
+≤7.5 >7.5 
+& 
+≤9.0 
+> 9.0 & 
+≤12.0 
+> 12.0 
+& 
+≤15.0 
+>15.0 
+& 
+<18.0 
+≥18.0 
+& 
+<30.0 
+≥30.0 
+& 
+<45.0 
+≥45.0 
+Category D1 2.5 2.5 3.0 3.0 4.5 6.0 7.5* 9.0 
+D2 2.0 2.5 2.5 3.0 3.0 6.0 7.5 9.0 
+D3, D4, D5, D7(A) 2.0 2.5 2.5 3.0 3.0 6.0 6.0 6.0 
+D7(B), D8 2.0 2.5 2.5 3.0 3.0 4.5 4.5 4.5 
+Note:- 
+1. For Special buildings, Road side Margin shall be 12.0mt. 
+2. *For RUDA instead of 7.5 it shall be 6.0 mts if the building unit is upto 1000 sqmts and/or  
+height 25mts. 
+3. The road side margin for building unit area upto 1000 sq mtr. and/or height  upto 25.0 
+mtr. abutting on road width above 30.0 mtr. and upto 45.0 mtr.  shall be 6.00 mtr. for 
+D1-RUDA. 
+4. In case of D6 Category (Gandhidham) the Margin shall be regulated as per the 
+Gandhidham regulations. 
+ 
+
+
+[page 35]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     24 
+Table 6.25: Margin between two buildings and margin from common plot : All Category  except GMC and 
+D9 
+Building Height upto (mt) 10* 16.5 25 45 70 
+Margin between two 
+buildings 
+D1 except GMC 4.5 4.5 6.0 9.0 12.0 
+D1-RUDA,D2 4.5 4.5 6.0 9.0 12.0 
+D3, D6 4.5 4.5 - - - 
+D4, D5, D7(A) 4.5 4.5 4.5 6.0 6.0 
+D7(B), D8, D10 4.5 4.5 4.5 - - 
+Margin from Common 
+Plot(mt.) In all Category wise 
+3.00 mt. in case of building height up to 25.0 mt. and  6.00 mt. in case of 
+building height more than 25.0 mt. 
+Note: 
+1. BH means “Building Height”  
+2. Special buildings margin between two buildings and common plot as stated above.   
+3. Margins for D6 category shall be as per Schedule-18.   
+4.*For D3 category it shall be 11 mtr. 
+6.7.2 Rear& Other Side Margins 
+1. Rear and side margins for all categories shall be as per table 6.26. 
+2. In case of D1-RUDA, for DW-3, for Building unit up to 500 sq.mt and Building height up to 
+16.50 mt, the minimum side & rear margins shall be as per table 6.27. 
+3. Margins for GMC shall be as per table 6.28 to 6.39. 
+4. Margins and maximum permissible builtup area for D9 Category shall be as per Table no. 
+6.40 and 6.41   
+Table 6.26: Rear and  Side Margins : All Category  except GMC & D9 
+Sr.No. Use 
+Area of 
+Building Unit 
+(PS) in Sq.mt. 
+Required 
+Rear Margin 
+in mt. 
+Required  
+Side Margin 
+in mt. 
+Remarks 
+(1) (2) (3) (4) (5) (6) 
+1 Dwelling 1-2 PS ≤25 Not Required Not Required Only G+1 floor 
+PS > 25 & ≤80 - - 1.0 on any one side 
+including rear side 
+PS > 80 & 
+≤150 
+- - 1.5 on any one side 
+including rear side 
+PS>150 & 
+≤300 
+2.00 1.5 (Any one 
+side) 
+- 
+PS >300 & 
+≤500 
+3.00 2.0 (both 
+side) 
+- 
+PS > 500 3.00 3.0 (both 
+side) 
+- 
+2 Other than  
+Dwelling1-2 & 
+Industrial use 
+B.H. ≤ 16.5mt. 3.0 3.0* or PS ≤ 750.0 sq.mt., 
+required margins shall be 
+3.0 mts., for building 
+height upto 25.0 mt. 
+B.H. > 16.5mt. 
+& B.H. ≤25mt. 
+4.0 4.0* 
+B.H. > 25mt. 
+& B.H. ≤45mt. 
+6.0 6.0  
+B.H. > 45mt. 8.0 8.0  
+3 Industrial use PS ≤ 500 3.0 3.0  
+PS  > 500 & ≤ 
+1000 
+4.5 4.5  
+PS  > 1000 6.0 6.0  
+Note:  
+1 PS means “ Plot Size” and BH means “Building Height”. 
+2 In case of D6 Category (Gandhidham) the Margin shall be regulated as per the Gandhidham regulations. 
+ 
+
+[page 36]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     25 
+Table 6.27: Rear and  Side Margins : D1-RUDA, for DW-3, only for Building unit up to 500 sq.mt and 
+Building height up to 16.50 mt, 
+No. Area of building unit in Sq. mt. Required Rear or Side margin in mt. 
+1 Up to 80  1.5 any one side 
+2 Above 80 & up to 150 2.0 any one side 
+3 Above 150 &  up to 250  2.50 any one side 
+4 Above 250  &  up to 400  2.25 any two side  
+5 Above 400 3.00 all sides 
+ 
+Margins for GMC as shown in table 6.28 to 6.39. 
+Table 6.28: Minimum Road and other Side Margins : Residential zone 1 , 2 & Residential Zone 3  for 
+GMC 
+Sr. 
+No 
+Plot Size 
+(in Sq.mt) 
+Margin (in mt) Balcony and Projections (in mt.) For R1& 
+R3 
+Rear Sides May be covered 
+R1 & R3 R2 R1 & R3 R2 Front Side Rear Stair 
+landing 
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10) 
+1 50 1.5 
+N.A. 
+- 
+N.A. 
+1.2 X 5 - - - 
+2 70 1.5 - 1.2 X 7 - - - 
+3 
+ 
+81(Row) 2.0 - 0.45 X 4 - 0.45 X 4 - 
+81 
+(Twin) 2.0 1 side 2.0 - 0.45 X 4 0.45 X 4 - 
+4 90 2.0 1 side 2.0 - 0.45 X 4 0.45 X 4 - 
+5 135 2.15 1 side 2.0 1.20 X4 0.45 X 4 0.45 X 4 0.45 
+6 200 2.0 1 side 2.5 
+No Balcony Allowed 
+7 250 2.0 1 side 3.0 
+8 330 2.0 3.0 2.0 2.75 
+9 504 & 
+above* 
+3.0 
+4.0 
+2.0 
+3.0 
+10 750** 5.0 4.0 
+11 900** 6.0 4.5 
+12 1100** 7.0 5.0 
+13 1650 & 
+Above** 8.0 6.0 
+Note:  
+a. Residential Zone 1 means R1, Residential Zone 2 means R2, & Residential Zone 3 means R3. 
+b. * P.S. 504 & above category refer for R1 & R3 Zone. 
+c. ** P.S. denotes size for R2 Zone. 
+d. The End plots in different categories of plots with the area differing from its category  the margin 
+applicable shall be of the same category. Road side Margin:  
+e. Minimum Road Side Margin shall be 6.0 mt. along Town Road in  Residential Zone 1 & Resid ential 
+Zone 3. 
+f. Minimum Road Side Margin shall be 3.0 mt. along Town Road in  Residential Zone 3. 
+ 
+  
+
+[page 37]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     26 
+Table 6.29: Road Side Margin (Mts) 
+Sr. No. Plot Size(P.S.) in Sq.Mt. Along Town Roads (mt.) Along Interior Roads (mt.) 
+R1 R2 R3 R1 R2 R3 
+(1) (2) (3) (4) (5) (6) (7) (8) 
+1 50 & 70 6.0 N.A. 3.0 1.5 N.A. 1.5 
+2 81(Row & Twin) 6.0 N.A. 3.0 - N.A. - 
+3 90 6.0 N.A. 3.0 - N.A. - 
+4 135 6.0 N.A. 3.0 2.5 N.A. 2.5 
+5 200 & 250 6.0 N.A. 3.0 3.0 N.A. 4.0 
+6 330 6.0 6.0. 3.0 3.0 5.0 3.0 
+7 504 & above* 6.0 6.0 3.0 4.0 6.0 4.0 
+8 750** 7.0 
+9 900** 8.0 
+10 1100** 10.0 
+11 1650 & Above** 12.0 
+Note: 
+a. Residential Zone 1 means R1, Residential Zone 2 means R2, & Residential Zone 3 means R3. 
+b.* P.S. 504 & above category refer for R1 & R3 Zone 
+c. ** P.S. denotes size for R2 Zone. 
+d. The End plots in different categories of plots with the area differing from its category  the margin 
+applicable shall be of the same category.  
+ 
+Table 6.30 : Road side, Side and Rear margins for Residential Renewal Zone I (RR -1)  for GMC 
+Road Width 
+(mts) 
+Up to 
+10 
+Above 10 and 
+Up to 18 
+Above 
+18 
+Building Height 
+(mts) 
+Up to 
+15 
+Above 15 and 
+Up to 25 
+Road side 
+Margins (mts) 
+3.0 4.5 6.0 side and rear 
+Margins (mts) 
+3.0 4.0 
+ 
+Table 6.31 :Road side margins For  Commercial  Zone I (C -1) for GMC 
+Road Width (mts) Front Margins (mts) 
+Less than 12  4.5 
+12 mts and above  6.0 
+ 
+Table 6.32 :Side and Rear margins for  Commercial  Zone I (C -1) for GMC 
+Plot Size (sq. mts) side and rear Margins (mts) 
+Less than 1000 3.0 
+1000 and above  4.5 
+ 
+Table 6.33: Margins for Green Institutional Zone I (GI-1) for GMC 
+Plot Size(sq. mts) Margins (mts) Max Ground 
+Coverage(%) Front Rear Sides 
+50 x 50 (2500) 10.0 8.0 8.0 40.0 
+25 x 50 (1250)  8.0 6.0 6.0 40.0 
+25 X 40 (1000)  6.0 6.0 6.0 40.0 
+20 x 30 (600)  6.0 4.0 4.0 40.0 
+10 x 20 (200)  5.0 2.5 2.0 40.0 
+The end plots in different categories of plot with area differing from its category , the margin 
+applicable shall be of the same category. 
+The plot sizes shall be as per allotment by the government . 
+
+[page 38]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     27 
+ 
+Table 6.34: Margins for  Institutional Zone III (I-3) for GMC 
+Road Width (mts) Margins (mts) 
+Less than 24  4.5 
+24 mts and above width 6.0 
+Minimum margins on remaining Sides  4.5 
+ 
+ 
+Table 6.35: Margins for  Industrial Zone I and II (GIDC-1 and 2) for GMC 
+Road Width (mts) Margins (mts) 
+Min road side margin for plots abutting 30m t. and 
+above road  9.0 
+Min road side margin for plots abutting  less than  
+30mt. 6.0 
+All side margins for all plots   3.0 
+ 
+ 
+Table 6.36: Margins for  Recreational Zone I (Re-1) for GMC 
+Road Width (mts) Margins (mts) 
+Min road side margin for plots abutting “J” road  12.0 
+Min road side margin for plots other  than abutting “J” 
+road. 9.0 
+Minimum margin from river edge    30.0 
+All side margin for all plots  3.0 
+ 
+ 
+Table 6.37: Margins for Industrial use for GMC 
+Road Width (mts) Road side Margins 
+(mts) 
+Required side and rear Margins (mts) 
+Plot Area upto 1000 
+sq.mt. 
+Plot Area above 1000 
+sq.mt. 
+Upto 12  As per side margin 4.5 6.0 
+Above 12 and 
+upto 18 6.0 4.5 6.0 
+Above 18 and 
+upto 30 7.5 4.5 6.0 
+Above 30 9.0 4.5 6.0 
+ 
+ 
+Table 6.38: minimum side and rear margins for all building units upto 500 sq.mts for Dwelling – 1 
+& 2  for GMC 
+Area of building unit (sq.mts) Required rear margin Required side margin 
+Upto  150  2.25 mts Not required  
+Above 150 and upto 300 2.25 mts 1.5 mts (any one side) 
+Above 300 and upto 500 2.25 mts 3.0mts (both sides) 
+building unit area above 500 sq.mts and , the minimum side and rear margin other than  DW1,DW2  
+Area of building unit (sq.mts) Building height  Required margins (mts)  
+Upto 750 sq.mts Upto 25 mts 3.0 
+More than 750 sq.mts Upto 15 mts 3.0 
+Above 15 mts and upto 25 mts 4.0 
+Above 25 mts and upto 45 mts 6.0 
+ 
+
+[page 39]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     28 
+ 
+Table 6.39: Permissible Ground Coverage in GMC 
+Sr. No Zone Uses Ground Coverage (%) 
+1 
+Institutional Zone II 
+Educational, Public Utilities and 
+Facilities buildings  
+66% 
+Social sports and cultural buildings 33% 
+office and other buildings 40% 
+2 Institutional Zone III  30% 
+For Zones other than mentioned above G round coverage shall be the area remaining after providing 
+required margins 
+ 
+Table6.40: Minimum Road Side  Margins : Category D9 
+Residential Development: 
+Width of road (in M) Minimum road side margins (In mt.) 
+Up to 7.5 mt. 1.5 
+More than 7.5 mt.& up to 12 mt 3.0 
+More than 12 mt.&up to 20 mt. 4.5 
+More than 20 mt.&up to 30 mt. 6.0 
+More than 30 mt. 7.5 
+Note: No road side margin is required for plots admeasuring 25 sq. mt. Provided they are situated on 
+roads up to 7.5 mt width. 
+Industrial Development and Commercial Development : 
+Plot Size Front margin (In Mt.) 
+50 sq. mt. to 100 sq. mt. 3.0 
+101 sq. mt. to 200 sq. mt. 4.5 
+201 sq. mt. to 300 sq. mt. 4.5 
+301 sq. mt. to 500 sq. mt. 4.5 
+501 sq. mt. to 10,000 sq. mt. 6.0 
+10,001 sq. mt. to 50,000 sq. mt. 7.5 
+50,001 sq. mt. and Above 9.0 
+Public Uses: There shall be provided minimum margin of 9 mts from road side on any plot development 
+for public uses. 
+ 
+Table 6.41: Minimum Side & Rear Margins for Category D9 of Development Area 
+Residential Development 
+Plot size (sq. mt.) Margin (Mts) Maximum built up area. 
+Upto 25 Nil 75% 
+2 (on one side) 70% 
+More than 50& up to 100 2 (on one side or in the rear side) 65% 
+More than 100 &up to 250 2 (On one side) 60% 
+More than 250 & and up to 400 2.50 (on one side) 50% 
+More Than 400 3 on 2 side & rear. 40% 
+Industrial and Commercial Development 
+Plot size (sq. mt.) Rear margin (Mts) Side Margin (Mts) 
+I II 
+Up to 100 sq. mt. Nil Nil Nil 
+101 to 200 sq. mt. 1.5 - 1.5 
+201 to 300 sq. intr. 2.0 - 2.5 
+301 to 500 sq. intr. 3.0 - 3.0 
+501 to 1000 sq. mt. 3.0 3.0 3.0 
+10001 to 10,000 sq. mt. 4.5 4.5 4.5 
+
+[page 40]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     29 
+10,001 to 50,000 sq. mt 9.0 4.5 4.5 
+Above 50,000 sq. mt. 9.0 9.0 9.0 
+6.7.3 Permissible uses in Margin 
+1. For Dwelling 1 , 2  & 3 (Except Row house, cottage industries and pre-schools): 
+a. Ancillary uses such as parking garage, servant quarter, w.c. and bathroom shall be 
+permitted at any zone,  in side or rear marginal space but in no case in Road -side 
+margins; with maximum permissible ground coverage of 16.5 sq.mt. and maximum 
+permissible height of 3.0 mts. However such height may be relaxed in case of DW1 & DW2 
+for bathroom and w/c and may be permitted in margin at any floor other than road side. 
+b. Surface water tank up to 1.5 mts in height. 
+c. Open staircase, cantilever staircase with maximum width of 1.00 mts and landing 
+space of maximum 2.00  mts at floor level shall be permitted in side or rear margins 
+except on road side margin. 
+Provided that, for DW 1 & DW2, in case of plots not exceeding 150 sq. mtrs., 1.0 mtr wide stair may be 
+allowed. However, the stair may be allowed after keeping 1.5 mts margin if the plot abuts on 6.0 mts 
+wide road. Further if the plot abuts on 7.5 mts wide road the stair may be allowed from the plot 
+boundary. 
+d. Doors, windows or projections shall not be permitted along the common wall of the 
+adjoining property. No rainwater from the roof shall be drained in the adjoining 
+property. 
+e. Partition wall shall be allowed along the Building Unit boundary on common boundary of 
+semidetached building and on marginal space between two structures up to a maximum 
+height of 1.5mt. 
+f. Underground water tank, percolation well, bore well and pump room with a maximum 
+size of 2 mts X 2 mts and with a maximum height of 2 mts. 
+g. Margin shall not be required in case of building having approach from  internal road. 
+2. Building-units of all uses other than Industrial and Institutional: A structure  (only pre -fab) for 
+security cabin including toilet with maximum dimensions of 2 mts X 4 mts , with maximum 
+height of 3.0mts shall be permitted in the Road -side margin.  
+3. For Industrial and Institutional use: a security cabin structure up to a maximum ground 
+coverage of 16.5sq.mts with maximum height of 3.0mts shall be permitted in the road -side 
+margin. Such a structure shall be at a minimum distance of 4.5mts from the Building.  
+4. Pedestrian access path , ramp and stepped approach as prescribed shall be permissible in the 
+marginal space.  
+5. Common plot shall be permitted in the marginal space. 
+6. Vehicular Ramp: Connecting ground level with basement level -1 shall be permitted in side and  
+rear margin for: 
+ Building unit with area up to 2000 sq.mts and 
+ Building unit with building less than and equal to 25.0 mts  in height. 
+7. For a building unit using marginal space for providing electrical infrastructure such as substation 
+as per regulation Permissible uses in Margin in 6.7.3(8), underground water tank as per 
+regulations in Part III and others, these permissible uses shall be allowed only one marginal side 
+except road side margin. The other marginal spaces shall be kept clear and accessible at ground 
+level as illustrated above. 
+8. Electrical Infrastructure: Electrical Sub -station, Transformer room, Box -type transformer, 
+Section Feeder Pillar, Auxiliary Power Back -up System and meter room ac cording to the norms 
+of the Competent Electric Company shall be permitted in marginal space except road side 
+margin of the building unit. The area of such construction shall not be counted towards FSI. 
+9. Refuge Area for Building with height more than 25  mts: Cantilever Refuge area required may be 
+permitted as per Fire Preventions and Life Safety Measures Regulations 2016. 
+10. Fire Escape Staircase for Building with height more than 45  mts: Fire Escape Staircase required 
+as per Fire Preventions and Life Safety Measures Regulations 2016, shall be permitted in 
+marginal space except road-side margin. 
+
+[page 41]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     30 
+11. Parking shall be permitted in margins except in access path from gate to stair -case as illustrated 
+below. If contiguous with parking in hollow plinth, provided with minimum dimension of 6.00 
+mts, or contiguous with over all parking layout. 
+12. Basement shall be permitted within side and rear margins after leaving 3.0  mt margin from the 
+boundary of the  building unit. 
+13. In any marginal open space, weather sheds sun breakers horizontal or vertical projections shall 
+be permitted up to 0.60  mts. These projections may also be part of the façade  articulation at 
+various levels, but shall in no cases  they become a part of the habitable space. Such 
+projections shall be allowed above a minimum height of 2.4 mts from the ground level.  
+14. For any building units with following uses - Dwelling 1, Assembly  1 & 2, Education 1  & 2, 
+Institutional, Public Institutional; the building unit level may be permitted to be raised up to 
+plinth level. 
+15. Porch having 4.5 mt s minimum height shall be permitted in margin, at ground level subject to 
+the condition that 4.5 mts clear circulation space is kept for fire vehicles and machinery. 
+16. Special Buildings 
+a. The Road side margin may be permitted to be covered up to  6 mts. from the building line 
+with a projected cantilever structure (porch) at a height of not less than 3.00 mts from the 
+ground level. This cantilever structure shall not be counted towards computation of FSI. 
+b. Parking shall be permitted in road‐side mar gin after leaving minimum 6.0mts from the 
+Building unit boundary. This minimum 6.0  mts shall be utilised for shade giving trees and 
+plantation purpose. 
+17. Sky Walk shall be permissible in margin. However they shall no t be at height lesser than 10.50 
+mts.  
+6.7.4 Restriction on Development in Margin 
+1. The required marginal open spaces except permissible uses as per Regulation no.  6.7.3 shall be 
+kept permanently open to sky. 
+2. This space shall not be used for stocking materials or loose articles for the purpose of trade  or 
+otherwise, putting up fixed or movable platforms. 
+3. Parking shall be allowed in the  rear and side marginal space after keeping minimum required 
+margin in the case of  building height more than 25.00 mt.  
+4. Vehicular or Pedestrian ramp/s leading to parking  in floors above ground level shall not be 
+permitted in the margin. 
+5. The sunk in lower ground floor or basement provided for the purpose of light/ ventilation shall 
+not be permitted in the marginal open space. 
+6. No difference shall be permitted in the ground level of the marginal space of the building (in 
+cases where the permitted margin of the basement is lesser then the permitted margin of the 
+super structure). 
+6.8 Basement in a Building-unit, 
+The Basement shall be permitted on the following conditions. 
+
+
+[page 42]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     31 
+6.8.1 Margins 
+1. No Basement shall be permitted in the required Road side marginal space and within 
+required set back area in case of gamtal and core walled city.  
+2. The side and rear side margins for the basement shall be 3.0 0 mts from the Building -
+unit/Plot boundary. A com bined shared basement parking. shall be permitted using full 
+marginal space other than road side margin of building unit with the consent of the 
+adjoining building unit owner for new development.  
+3. For building-units with area less than 500 sq.mt, basement shall be permitted with margins 
+as per Regulation 6.7.3. However, minimum margin of 3.0 0 mts is required from the 
+common wall of adjacent existing building. 
+4. Basement shall be permitted under common plot, internal road and internal marginal space 
+for exclusive use of parking only with adequate structural safety during construction. 
+6.8.2 Extent of Basement 
+1. Basement shall be allowed for the purpose of parking for Building -units with area 250 
+sq.mts or more 
+2. Basement is permitted, irrespective of size, for all other permissible uses other than parking 
+at only one level and basement may be permitted at more levels as per required parking. 
+6.8.3 Height of Basement 
+Maximum clear Height of the Basement shall be 4.5 0 mts and minimum  clear height shall be 
+2.80 mts from fi nished basement to the bottom most soffit of beam/slab, whichever is 
+applicable. 
+6.8.4 Permissible uses in basement 
+1. Permitted uses in Basement are: parking, safe deposit vault, A.C. Plant, Grey water 
+treatment plant, Sewage treatment plant, Water tank, storage other than inflammable 
+material.  
+2. No habitable use shall be permitted in the basement. 
+3. Permitted uses in Baseme nt of a Hospital Building: Radiation -producing device, Radiation 
+Therapy Room, MRI or X-Ray room. 
+4. For basements exclusively for parking, any other permissible use is permitted only in 
+basement level-1 up to a maximum area of 25% of the total built -up-area of the basement 
+floor. This non-parking area shall be calculated towards the computation of FSI. 
+6.8.5 Services 
+No water connection or drainage connection shall be permitted in the Basement. In no case 
+shall a connection with normal drainage line be provided in the Basement. 
+6.8.6 Basement: (Core Walled City and Gamtal) 
+1. No basement shall be permitted within required set back. 
+2. While construction of ma basement adequate structural safety shall be adopted. 
+3. One level Basements for parking shall be permitted in building uni t area more than 300 sq.mts. 
+and two levels if  building unit area is more than  1500 sq.mts, 
+4. Permitted uses in Basement. 
+a) Parking, safe deposit vault, A.C. Plant, storage other than inflammable material.  
+b) No habitable use shall be permitted in the basement.  
+c) Permitted uses in Basement of a Hospital Building: Radiation‐producing device, Radiation 
+Therapy Room, MRI or X‐Ray room.  
+
+
+[page 43]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     32 
+d) For basements exclusively for parking, any other permissible use is permitted only in 
+basement level‐1 up to a maximum area of 25%  of the total built‐up‐area of the basement 
+floor. This non‐parking area shall be calculated towards the computation of FSI. 
+6.9 Addition to existing structure 
+1. The addition shall comply with the Regulations for construction of a new building. 
+2. For approved, ind ividual, existing, detached and semi -detached dwelling units, permissible 
+upper floors may be permitted as per sanctioned margins, staircase and projections.  
+3. Additions and/or alterations in core wall and gamtal: 
+a. Shall have to be carried out based on the g uidelines provided in the Heritage 
+Conservation Plan without compromising the original character of the buildings.  
+b. The addition shall comply with all Regulations for construction of a new building.  
+c. No addition or extension to a building shall be allowed unless the addition or extension 
+is such as would be permissible if the whole building were reconstructed from the plinth 
+with the open spaces required under the Regulations applicable to the site of the 
+building at the time of the proposed addition or extension.  
+d. No addition or extension to a building shall be allowed which would diminish the 
+minimum extent of open air space which is required by the Regulations applicable to 
+the site of the building at the time of the proposed addition or extension. 
+6.10 Addition in building units with existing Buildings 
+1. For Building-units with approved existing buildings, additional buildings shall be permitted 
+with compliance to Regulations for construction of a new building. 
+2. The additional buildings shall be permitted as per remaining FSI (i.e. after deducting the 
+utilised FSI of the approved existing building from the maximum permissible FSI of the 
+entire building-unit) with compliance to respective margins, permissible height, uses and all 
+other applicable regulations. 
+6.11 Development in Existing Chawls 
+Subject to the following conditions and provision of structural safety as per Regulation 16 in Part III , 
+owners of individual rooms of existing authorized chawls may be permi tted to make alterations or to 
+construct additional floors: 
+1. Additional Ground coverage area on ground floor shall not be permitted 
+2. Subject to other Regulations, owners of individual rooms may construct two additional 
+floors over the ground floor. 
+3. While permitting first floor or the second floor, no objection shall be taken regarding F.S.I., 
+built-up area and number of tenements in regard to the existing ground floor constructions. 
+Individual owners shall have to provide water closet and bathrooms. 
+6.12 Development in Core Walled City of Ahmedabad by steel structure for maintenance 
+purpose. 
+Repairing and maintenance  shall be commence by the owner of the building using steel structure as a 
+component of load bearing structure, while strengthening mud / clay / brick  masonary wall and slab 
+shall be casted using stone material as slab on following conditions.  
+1. Owner shall produce affidavit as prescribed and owner has to appoint register  as structural 
+engineer and clerk of works.  
+2. Owner  must take care that no harm could be occur to the surrounding existing construction 
+as well as lives. 
+3.  It shall not be permitted to change the use, height of the building, increase in total no. of 
+floor , built up , FSI etc.   
+4. No change in the area of building unit is permissible, Howev er, in case of  road line 
+demarcated by competent authority on the existing building, in such cases reduced building 
+unit area shall be permissible. 
+5. . Owner shall produce  sketch plan including built up area calculated by registered engineer 
+/architect and with photographs . 
+
+[page 44]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     33 
+6. Owner shall complete repairing/maintenance work within six months time limit, however, if 
+in any circumstances owner shall not complete repairing/ maintenance  work within 
+specified time limit, competent authority shall increase time limit for a maximum one year. 
+7. Owners shall inform the competent authority within 21 days after completion  of work. 
+8. Maintenance shall be carry out in such a manner that shall not d isturbed heritage 
+precincts/structure. 
+9. Applicant has to pay scrutiny fee with the application as table.6.42. 
+ 
+Table 6.42 : Scrutiny Charges for Steel Structure for maintenance purpose in Core Walled City of 
+Ahmedabad. 
+Use of building Built-up Area(sq.mts) Rate (Rs.) 
+(1) (2) (3) 
+Dwelling 1, 2 &3 for 
+Residential purpose only  
+Upto 25 1000/- 
+Above 25 to upto 60 1000/- + Rs.100 per s q.mts( for additional 
+built up area more than 25 sqmt) 
+Above 60  4500/- + Rs.150 per s q.mts( for additional 
+built up area more than 60 sq.mts) 
+Non Residence building  All  Rs.500 per sq.mts, but minimum Rs.10000 per 
+unit. 
+Note :-  
+a. in case of repairing started before grant of permission in such cases above charges shall be 
+two times of respective categories.  
+b. Provided that repairing and restoration shall be permitted as per provision of regulations of 
+CGDCR. Uses and FSI Utilised pri or to 05/06/2017 shall be permitted without considering the 
+road width. Such work shall be permitted only on the bases of structural report of registered 
+structural engineer category – 1.  
+c. Any repairing and restoration work shall be carried out under the s upervision of registered 
+structure engineer category – 1 with experience of minimum 10 years.  
+d. Hospitality uses shall be permitted on all floors without considering road width.  
+ 
+6.13 Row House and Tenement type buildings. 
+ROW TYPE BUILDINGS  
+1. The minimum area of plot on which row houses are to be constructed shall be 1000 sq.mts 
+2. The minimum length of common wall between the two adjacent row houses  / tenements shall 
+be 50% of the depth of the row house / tenements. 
+3. The minimum size of an individual sub -plot of a  row house shall be 40 sq.mt s. Maximum 
+permissible built up area shall not exceed 60% of an individual sub plot and the minimum width 
+of the plot shall not be less than 3.00 mts. 
+4. Minimum margin in the front shall be 2.0 0 mts. and rear margin shall be 2.5 0 mts. The end plot 
+in a row house shall also have minimum side margin of 2.00 mts. on the side abutting on road.  
+5. 5.00 mt s wide space open to sky shall be provided at the end of every such 10 continuous 
+houses of row houses.  
+6. Such row houses shall be ground + two floors structures with a maximum height of 10.00 mts. In 
+case of hollow plinth provided at ground floor for parking the height shall be considered from 
+the top of hollow plinth. A stair cabin, cover for internal courtyard, water tank will be allowed to 
+project beyond this. 
+7. Requirement for common plot shall be as prescribed irrespective of number of row houses to be 
+developed.  
+8. In case of tenements type building, The width of internal approaches/road for such 
+development shall be regulated in table 6.43. 
+
+[page 45]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     34 
+ 
+Table 6.43:Width of the Internal Road based on the length of Road  
+No. Length of road (in mts) Width of road for 
+residential use (in mts) 
+Width of road for non residential 
+use (in mts) 
+1 Up to 15 or less (Approach) 3.0 4.5 
+2 Above 15 and up to to 45 (Approach) 4.5 6.0 
+3 Above 45 and up to 150 7.5 9.0 
+4 Above 150 and up to 450 9.0 12.0 
+5 Above 450 12.0 18.0 
+Note: The aforesaid provision shall be applicable to industrial row type buildings. Such industrial 
+buildings may be used for activities permitted under industrial - 1 
+ 
+6.14 Provision for Podium 
+1. Definition: 
+Podium: A continuous projecting base or pedestrian under or around the building, generally used for 
+parking and movement of vehicle within the permissible area as specified in these regulations. 
+2. Podium – Podium parking may be allowed for the plots having area more than 4000 sq.m ts as 
+per the following requirements. 
+a. No podium shall be allowed in the front set back or margin. 
+b. Podium shall be allowed at a distance of 6.0mt. form the plot boundary all side. 
+c. The structural design of Podium slab and ramp should be of adequate strength to 
+bare the load of fire engines and vehicles. 
+d. The consent form The Chief Fire Officer shall be necessary before permitt ing the 
+aforesaid podium. 
+e. Common plot may be allowed at a raise level maximum upto 10. 00 mts , below 
+which  swimming pool, banquet hall, parking, may be permitted. Any such common 
+plot shall have a parapet which may not be less than 2.00 mts height. 
+f. Podium shall only be permitted for parking. 
+6.15 Parking 
+1. Parking spaces for vehicles shall be provided within the Building-unit for every new Building and 
+/or extension in existing building constructed for the first use and /or when the use of old 
+building is changed to any of the uses mentioned in the table below: 
+ 
+Table 6.44:Parking requirement 
+No. Type of Use Minimum Parking Required 
+Visitor's Parking 
+(% of required 
+parking) 
+(1) (2) (3) (4) 
+1 Dwelling-1, 
+Dwelling-2 
+ 1car parking - for more than 100 sq.mts and up to 
+300 sq.mts of plinth area per unit. Additional 1 car 
+parking for every 100.00 sq.mts or part there off of 
+plinth area per unit.  
+ This shall be permitted within the marginal space. 
+Nil 
+Dwelling-3 20% of Total Utilised FSI 10% 
+
+[page 46]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     35 
+Table 6.44:Parking requirement 
+No. Type of Use Minimum Parking Required 
+Visitor's Parking 
+(% of required 
+parking) 
+(1) (2) (3) (4) 
+2 Mixed Use 
+(Residential + 
+Commercial), 
+Mercantile, 
+Religious, 
+Hospitality, 
+Transport 
+ Dwelling-1,2 or 3, as the case may be. 
+ For other uses %of utilized F.S.I. :  
+­ 30% if building unit  up to 750 sq.mts. 
+­ 40% if building unit above 750 to 2000 
+sq.mts.  
+­ 50% if building unit more than 2000 
+sq.mts. 
+ Residential 10% 
+and 
+ Commercial 
+20% 
+ 
+3 Assembly-1,2&3 50% of Total Utilised FSI 20% of the 
+required parking Assembly-4 50% of Building-unit Area 
+Assembly- 
+Stadium l 
+1.25 sq.mts of parking area per person of the Total 
+stadium capacity 
+4 Institutional 
+Buildings, Public- 
+Institutional  
+Buildings 
+ 50% of Total Utilised FSI 
+ For Hospitals and nursing homes, additional 
+parking of Ambulance shall be provided at the 
+ground level. 
+20% 
+5 lndustrial-
+1,2,3&4; 
+Storage, 
+10% of the Total Utilised FSI Nil 
+6 Educational a. Primary & Pre-schools- 25% of the Total 
+UtilisedFSI 
+b. Secondary & Higher Secondary Schools - 40% of 
+the Total UtilisedFSI 
+c. Colleges and coaching classes -40% of the Total 
+UtilisedFSI, 
+d. Facility  for  drop-off  and pick-up shall be 
+provided within the premise. 
+10% 
+7 Sports & Leisure 25% of Building-unit Area 10% 
+8 Recreation 10% of Building-unit Area 10% 
+ Note:-50% of the visitor parking shall be provided at ground level. 
+2. Parking requirement for a Mixed -Use development shall be calculated on prorate basis of the 
+FSI consumed specific to the different uses. 
+3. Parking is permitted at any floor level above ground and at more levels of basement as per 
+required parking, with provision of vehicular ramp. 
+4. 50% of the required visitors parking shall be provided at the ground level. 
+5. 50% of all required parking shall be provided for cars. 
+6. Parking area includes parking space, driveway and aisles but excludes approach road, vehicular 
+lift and vehicular ramps. 
+7. Parking layouts with minimum size requirements for parking space, driveways and access lanes 
+shall be provided as prescribed.  
+8. Parking shall be permitted in side or rear margins except in approach road.  
+9. Parking shall also be perm itted in road -side margin after leaving clear margin of 4. 5 mts from 
+the building-unit boundary towards road -side. In case of building unit abutting more than one 
+road and having area up to 1000 sq.mts shall be permitted to utilise narrow road side margin for 
+parking.  
+10. Provided that, parking shall be allowed in any road side margin having building unit area up to 
+750 sq.mts. 
+
+[page 47]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     36 
+11. Parking area should be retained as effective parking space and shall be maintained with light 
+and ventilation system if provided in an enclosed area 
+12.   In cases where misuse of parking space is noticed, the use of the entire building shall be 
+discontinued by the Competent Authority. Building use shall be permitted only after the 
+required parking spaces are provided. High penalty shall be levied considering the period of 
+misuse of the parking space and the benefit derived out of misuse as decided by the Competent 
+Authority from time to time. 
+13.  For multi-level parking, a vehicular ramp shall be necessary. 
+14.  If parking is provided on any upper floors with vehicular elevator, vehicular ramp is not 
+necessary if parking space is provided with provision of floor sprinklers. 
+15.  Parking shall not be permitted within an Atrium. 
+16.  In case the maximum permissible FSI is not utilised, for any extension or additions in the future, 
+additional parking as per regulation shall have to be provided as required for this additional 
+utilised FSI. 
+17. Notwithstanding anything contained in clauses no. 1 to 16  above, ramp leading to basement or 
+upper floors and parking at gro und level shall be provided in such a manner that 4.5 mt s. clear 
+stretch of space is kept for the movement of fire equipment and machineries. Provided that in 
+case of parking to be provided in front margin as per clause no.  6.15(9) and 6.15(10) shall be 
+applicable. 
+18. In case of stacked parking – mechanized parking where in parking slots are provided at elevated 
+platform and an approach is common to the parking at the below elevated platform. The 
+calculations for parking shall be in a manner that the area cons idered for stacked parking shall 
+be equivalent to 1.5 times. For explanation: If a parking space provided is 500 sq.mts., it shall be 
+considered as 500 x 1.5 = 750 sq.mts.” 
+19. The competent authority, if finds its necessary to disallow parking considering the  safety on 
+account of flooding or otherwise, may restrict basement to be used for parking. 
+20. Vehicular Ramp: Connecting ground level with basement level -1 shall be permitted in side and  
+rear margin for: 
+a. Building unit with area up to 2000 sq.mts or and 
+b. Building unit with building less than and equal to 25.0 mts in height. 
+21. Parking requirements for heritage areas & other areas in core walled city.  
+a. For Heritage Structures, Buildings and Precincts identified in the Heritage Conservation Plan, 
+parking requirement s shall not be required if the proposed uses are hospitality and/or 
+sympathetic adaptive re‐use to residential.  
+b. Parking spaces for vehicles shall be provided within the Building‐unit for every new and / 
+building or extension in existing building construct ed for the first use and /or when the use 
+of old building is changed.  
+c. Parking shall not be required in the following cases: 
+i. Building‐unit with area less than 100 sq.mts for residential use, 
+ii. Building‐unit with area less than 60 sq.mts for non‐residential use,  
+6.16 Open-to-Sky Space: 
+Open‐to‐sky space shall be provided for natural light and ventilation in conformity with the following 
+Regulations. The location and dimensions of the open space shall be based on the dimensions of the 
+Building‐unit and the proposed building height, whichever is higher shall be applicable.  
+6.16.1 Building Dimensions: 
+1. For any Building having depth of 9.0 mts or more from its front open space, an open‐to‐sky 
+space with area of 5.6 sq.mts with no side less than 1.8 mts at plinth level shall be provided 
+for every 9 .0 mts depth. If the width of the Building is up to 4.5  mts, then the size of this 
+open to sky space shall be 3.0 sq.mts with no side less than 1.5 mts.  
+2. If the depth of the Building does not exceed 18mts a nd has openings at least on two sides 
+over a street or open to sky space of 2.4  mts or more in width, then above provision shall 
+not be applicable.   
+
+[page 48]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     37 
+ 
+3. In case additional open‐to‐
+sky space is provided 
+beyond the minimum 
+requirements, it shall be 
+counted to wards the 
+computation of the FSI.  
+The minimum width of any interior 
+open to sky space used for light or ventilation of the rooms shall be regulated based on the smaller 
+side of this open to sky space as follows:  
+ 
+Table 6.45: Minimum dimension of OTS based on building height 
+Sr.No. Building Height (in mts) Minimum dimension of the smaller size (in mts) 
+Gamtal& Core Walled City other than gamtal 
+1 ≤ 10 1.20 1.5 
+2 > 10 and ≤ 16.5 2.0 1.5 
+3 > 16.5 and ≤ 25  3.0 2.5 
+4 > 25 and ≤ 45  NIL 3.0 
+5 > 45  NIL 6.0 
+ 
+6.16.2 General Requirement for Open‐to‐Sky space 
+1. Every exterior or interior, open space shall be kept free from any erection thereon and shall 
+be kept open to sky with suitable and sufficient access.   
+2. No open drain except for rain water shall be constructed in any open space required by 
+these Regulations.  
+3. Every such interior or exterior open air space, unless the latter is a street, shall be 
+maintained for the benefit of such building exclusively and s hall be entirely within the 
+owner's own premises.  
+4. No construction work on a building shall be allowed if such work operates to reduce an 
+open air space of any other adjoining building belonging to the same owner to  an extent 
+less than what is prescribed by any of these Regulations in force at the time of the 
+proposed work to further reduce such open space if it is already less than what is 
+prescribed.  
+5. Every open space, whether exterior or interior, provided in pursuance of any Regulation, or 
+under an agreement lodged with the Authority shall be paved and be always kept free from 
+any erection thereon and open to the sky, except 23  cms cornice or 30cms eave or grill 
+with opening not less than 8  cms X 8  cms. No weather shade or other protection shall 
+overhang or project over the said open space or over a side set‐back so as to reduce the 
+width to less than the minimum provided under these Regulations. No open drain except 
+for rain‐water shall be free structure in any open space required by these Regulations.  
+6. Opening for ventilation shall open into an open to sky space with minimum dimension of 
+0.9 mts X 0.9 mts.  
+6.17 Development of Land 
+6.17.1 Internal Road and Approach to Building and Common Plot 
+1. Internal road width shall be measured from its origin to the next wider road it meets. 
+2. In case of single building the width of approach/ internal road shall be measured based on 
+the distance from the TP or DP road up to the edge of the building in case of hollow plinth, 
+or location of the farthest entrance of a building in case of solid plinth 
+3. In case of buildings connected internally or externally the length of internal road shall be 
+considered up to the edge of the hollow plinth of the farthest building (in case of building 
+
+
+[page 49]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     38 
+with hollow plinth) and up to the location of the farthest entrance of the building in case of 
+solid plinth. 
+4. In case of layout with two or more buildings of Dwelling -3 type dwelling units, commercial 
+units or independent establishments, the width of Internal Road on which the building 
+abuts shall be as applicable for a length of above 45 mts category. In case of more than two 
+buildings including Dwelling-1 and/or Dwelling-2 type, approach of as applicable width shall 
+be allowed up to the second dwelling unit only of Dwelling-1or Dwelling-2 type as per table 
+below. 
+5. The width of the Internal or Approach Road shall be based on the length and use of the 
+Building-unit as under: 
+ 
+6.17.2 General Requirements for Internal Roads 
+1. The Internal Road shall be provided up to each individual building. 
+2. Internal road width shall be measured in length from the farthest point of its origin to the 
+next wider road it meets. 
+3. In cases where the road is in continuation with any private road in the adjoining esta te or 
+any public road continuous to the estate, the length of the adjoining road of the public 
+road shall be added to the length of the internal road for the purpose of determining the 
+width of such road. 
+4. Curves at the junction: The curves shall be provide d at the junction of roads as prescribed  
+in table 6.35. However in case where approval has been granted for any building unit or a 
+lay out plan under any regulations the competent authority shall not insist to keep the 
+curvature as provided above. 
+Table 6.47: Radius of road curvature based on Width of the road 
+No. Width of the road in meters Radius of road curvature (meters) 
+1 Up to 6 3.0 
+2 More than 6.0 and up to 9 4.5 
+3 More than 9 upto 18 Half the width of the wider road whichever is higher, maximum 
+7.5 
+4 More than 18 9.0 
+Note: The width of the wider road shall be taken into consideration in determining the radius of the 
+curvature at the junction of roads of different widths. 
+Table 6.46: Provisions for the length of road for layout, sub-plotting and building approach. 
+Length of road / approach in 
+mt 
+Width of road / approach in mt 
+layout Sub plotting Building approach (for 
+campus planning) 
+Resi. Non resi. Resi. Non -resi. Resi. Non resi. 
+Upto 15  or less  6.0 6.0 3.0 4.50 3.0 4.50 
+Upto 45 6.0 6.0 4.50 6.0 4.50 6.0 
+Above 45 and upto 75  6.0 7.50 6.0 7.50 6.0 7.50 
+Above 75 and upto 150 7.50 9.0 7.50 9.0 7.50 9.0 
+Above 150 and upto 450 9.0 12.0 9.0 12.0 9.0 12.0 
+Above 450  12.0 18.0 12.0 18.0 12.0 18.0 
+Note :  
+1. Layout means the laying out of plots for the first time when land is converted from Agriculture 
+to Non Agriculture. 
+2. Sub Plotting means modification in the boundary of plot by sub dividing plot into more than one 
+sub plot. 
+3. Building Approach (for campus planning) means approach given to development  of a gated 
+environment. 
+4. The length of road for calculating the width shall be considered by separating the length from 
+junction. The length of smaller road shall be considered from the wider road. 
+
+[page 50]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     39 
+5. The shape of the plots and  the junction of the roads, at the corners shall be designed as 
+directed by the Competent Authority. 
+6. The alignment of the internal road or roads shall be regulated to be In continuation of the 
+public or private roads continuous to the applicant's Building Unit; but in case of 
+termination of an internal road or roads; a turning circle with diameter of 13.5mts or 
+12mts. x 6 mt. turning "T" shall be required at the cul -de-sac. This requirement may be 
+waived for such road with width of 7.5mts if the length does not exceed 110mts. 
+7. The Development Permission shall be regulated as per the proposed road network by the 
+competent authority.  
+8. For development area in non -T.P. area, the width of one road shall be decided by the 
+Competent Authority. 
+Provided that in case where approval has been granted for any building unit or a lay out plan under 
+any regulations the competent authority shall not insist to keep the curvature as provided above. 
+6.17.3 Amalgamation and Subdivision of Building-unit 
+The owner or developer shall be required to get the land reconstituted by the Competent authority as 
+‘Building unit’ or ‘Building units’ before amalgamation or sub-division of land.  
+1. In case of subdivision or amalgamation, the depth of building unit 
+shall be regulated as per sr.no. 3 here under. 
+2. Amalgamation of Building-unit abutting on a road with width equal or 
+more than 18.00 mt s, shall be permitted if depth of the Building -unit 
+shall not exceed three times the frontage of the Building -unit 
+abutting on road. 
+3. The minimum side of the building unit shall be in accordance with the 
+plot size as per the table. 
+Table 6.48:Minimum side of building unit 
+Sr. No. Building Unit Area(Sq.mt.) Minimum Side abutting to road (mt.) 
+1. ≤  60 3.0 
+2. > 60 to ≤ 100 4.0 
+3. > 100 to ≤ 200 5.0 
+4. > 200 to ≤ 500 7.0 
+5. > 500 10.5 
+Provided that building units not in conformity to the minimum size and specified in the aforesaid table 
+shall be exempted from the applicability of the above if they are subdivided or amalgamated prior to 
+Dt.31/03/2018. 
+4. Sub division of  building unit with existing structure may be approved but such newly 
+created sub division shall comply with the prevailing relevant provision of CGDCR. However 
+the provision of margins, for the existing building may be allowed as per the development 
+permission granted for the existing building. 
+6.17.4 Contribution of Land for any development in Non-TP Areas 
+1. For any development in confirmation with zoning or use, where the Town Planning Scheme 
+is not declared , the owner/ applicant shall contribute land to the competent authority for 
+infrastructure. Such contributed land shall be adjusted in town planning scheme prepared 
+in future. The extent of contribution shall be as under: 
+a. 40% of the land falls in D1 and D2 category. 
+b. For development in any area other than “6.17.4.1a” above, minimum 12.0 mts width of 
+one road, considered to be a cross over road shall be provided. Such road shall be a 
+public road and the land falling under such road shall be part of the land contributed 
+for infrastructure development. 
+2. Land contribution required under clause 6.17.4(1), may not be required in the following 
+cases. However for relaxing the land contribution, the competent authority shall record the 
+reasons in writing and then decide.  
+
+
+[page 51]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     40 
+a. Where permission was granted for a layout and order for non -agriculture purpose, 
+under land revenue code is passed by the competent authority before  28th March , 
+2018, the aforesaid provision of contribution of land shall not apply in case of plot less 
+than or equal to 1000 sq.mt s. While land contribution upto 20  % shall apply in case of 
+plot more than 1000 sq.mts. Nevertheless, the competent authority while granting such 
+relaxations, shall record the reasons in writing.  
+b. Land of closed textile mills and is to be used for industrial use only. 
+c. Land falls in Gamtal or Agriculture Zone. 
+3. Where the Town Planning Scheme is not prepared, the competent authority shall, for 
+proper access, circulation and mobility, prepare a road network plan. Such shall be in sync 
+with any, existing or development plan roads. 
+4. In case of any development permission other than for agriculture use in agriculture zone, 
+the contribution of land for amenities shall be applicable as stated in above. 
+6.17.5 Common Plot 
+1. Common plot is required for building unit of area 2000sq.mt or above in all zones other 
+than agriculture zone as per following regulations: 
+Table 6.49:Minimum common plot 
+Sr. 
+No. Use Area of the Building-
+unit/plot Size (Sq.mts) 
+Minimum Required Area of Common 
+Plot 
+1 Other than use mentioned 
+in Sr.No. 2 &3 below 
+≥ 2000   10 % of the area of Building-unit 
+ 8 %  of the area of Building-unit in 
+case of core walled city and gamtal 
+2 Industrial ≤ 5,000 Nil 
+> 5,000 and < 20,000 8 % of the area of Building-unit 
+≥ 20,000  1600 Sq.mts + 5 % of the area 
+exceeding of 20,000 Sq.mts 
+3 Religious, Educational-1&2, 
+Institutional, Assembly, 
+Public Institutional  
+≥ 2000  20 % of the building area  
+Note: For building units with area less than 2000  Sq.mts and having buildings with height more than 25  
+mts, a common plot shall be provided of 10% of the area of building unit or 200  Sq.mts, whichever is 
+more. 
+2. The Common Plot area shall be exclusive of approaches  but can be permitted in marginal 
+space. However it shall not be allowed within Atrium or any covered space. 
+3. The a rea of the Common Plot may be sub divided such that the minimum area of the 
+Common Plot shall be 200 sq.mts with no sides less than 10.0mts. while in case of RAH, the 
+Common Plot shall be provided with no sides less than 8.0 mts 
+4. Angle between adjacent sides of the Common Plot shall be 60 degrees or more. 
+5. No construction shall be permissible in the Common Plot except  Electric substation, 
+Transformer room, Auxiliary power generator, Box -type transformer, section feeder pillar, 
+meter  room,  over  and  underg round  water  tank  and  pump  room,  security  cabin, 
+Community/ Society common amenities shall be allowed to be constructed in the Common 
+Plot subject to the following requirements: 
+a. Maximum Ground Coverage of  15 % of the respective Common Plot. 
+b. Maximum Height of construction shall be 7.5 mts from the level of the Building Unit 
+except in the case of overhead water tank, where more height may be permitted. 
+c. Community/ Society common facility shall be permitted on a Common Plot. The area of 
+this Community/So ciety common facility having built up area only upto50.00sq.mt. 
+shall not be considered towards computation of FSI of the Building Unit. 
+d. Such a building shall be required to maintain the minimum margin requirements 
+between buildings with respect to the adj acent buildings and Road Side Margin as 
+prescribed. 
+
+[page 52]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     41 
+6. In case of Residential Use,  50% of the Common Plot may be allowed to be used as parking 
+space including drive way and aisles. Parking in common plot shall be permitted in road­ 
+side margin after leaving m inimum 1.5mts from the Building unit boundary. This minimum 
+1.5m shall be utilised for shade giving trees and plantation purpose. 
+7. In case of 'all other uses except Residential Used, complete area of the Common Plot may 
+be allowed to be used as parking spac e including driveway and aisles. Such parking shall be 
+permitted in road -side margin after leaving minimum 1.5mts from the building -unit 
+boundary. This minimum 1.5m shall be utilised for shade giving trees and plantation 
+purpose. 
+8. In cases where layout or s ubdivision of Building Unit is sanctioned with provision of 
+required Common Plot, Common Plot shall not be insisted in case of sub -division of such 
+sub-divided new Building -unit and / or amalgamation of such sub -plots and / or further 
+development of such sub-divided new Building-unit irrespective of its area. 
+9. The Owner shall be required to give an undertaking that the Common Plot shall be used 
+exclusively for the residents I occupants of the Building -unit.  On sanction of the 
+Development Permission, the Commo n Plot shall deem to have vested in the 
+society/association of the residents/ occupants. The Common Plot shall not be sold to any 
+other person. 
+6.18 Development on Kabrastan, burial ground etc. 
+The land occupied by the graveyards, kabrastan, burial grounds, crematoria and allied actions in the 
+Development Plan shall be kept permanently open. Competent Authority may permit structures to 
+be built for specific purpose. 
+6.19 Development on Open Space Plots 
+20 % of the area of the "Open Space Plots" provided under Town Planning Schemes may be utilised 
+for the construction with required margins for the common/institutional/community uses. Such 
+construction shall be permitted with basement, ground floor or a floor on hollow plinth.  In case the 
+building is on hollow pli nth in addition to the stair cabins and ramps . 5% of the total permissible 
+built-up area of this plot shall be allowed to be built -upon for the construction for store room, 
+security cabin, toilet etc. at the ground level.  
+6.20 Discrepancy Removal 
+Any discrepan cy found in the text of revenue survey no./block no. / final plot no.in 
+Development Plan, the Concern Competent Authority after following the prescribed procedure 
+of verification with each appropriate  authority with authorized revenue records/Final T.P.S.  
+Records can take appropriate decision for correction  of the the said discrepancy in revenue 
+survey no./block no. / final plot no.in Development Plan and Competent Authority while 
+sanctioning  the Development Permission accordingly. 
+6.21 Development Work to be in Conformity with the Regulations 
+All development work shall conform to the Development Plan proposals and the provisions made 
+under these regulations. If there is a conflict between the requirements of these Regulations and 
+Regulations for Town Planning   Schemes, the requirements of these Development Regulations 
+shall prevail except for the following conditions: 
+a) Any relaxation or special provisions mentioned against respective final plots shall prevail 
+above these regulations. 
+b) For any proposed road network, the proposed roads as per Town Planning Scheme shall 
+prevail. 
+6.22 Re-Development  work on road having width 6.0 mts and less than 9.0 mts 
+For dilapidated residential buildings over age of the building 35 years, type development shall be 
+permitted with following conditions:- 
+
+[page 53]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     42 
+1. Construction shall be on Hollow Plinth looking to the parking requirements. 
+2. Total height shall be permitted up to existing  height of the structure on site or maximum 16.5 
+mts whichever is less    
+3. Parking requirement may be relaxed by the concern sanctioning authority subject to new 
+construction shall be on full hollow plinth(Stilts). 
+4. No other relaxation except existing approved projection in the margin shall be allowed and 
+new construction shall be done as per provision of prevailing GDCR  
+5. No extra dwelling (Apartment) shall be permitted other than the existing authorized units 
+6. This new development and numbers of Dwelling units  shall be allowed for the existing 
+members only. 
+7. No amalgamation of such building units shall be permitted with other building unit/units. 
+ 
+  
+
+[page 54]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     43 
+7 GAMTAL (GM) & CORE WALLED CITY (CW) 
+In addition to the following specific regulations the general planning and development regulations 
+specified in chapter 6, shall be applicable to the core walled city of Ahmedabad , Heritage Core 
+Area: (Udawada Nagarpalika) and other gamtal.  
+7.1 Minimum Area of a Building-unit 
+Minimum area of a Building-unit shall be 18sq.mts with no side less than 3.0 mts in width.  
+7.2 SET BACK 
+1. The Set back of 3.00 m from central line of existing street shall be provided where regular 
+line of street is not prescribed. 
+2. The land left open as set back shall be deemed to be part of the street. 
+3. The competent authority shall permit the F.S.I. and Built-up of any plot or a building unit on 
+the basis of its original area, if the owner of such a land is prepared to release the effected 
+land by road widening or for construction of  new road without claiming any compensation 
+thereof. 
+4. Setback is not applicable to dead end streets and service lanes. 
+5. Setback should also be provided where prescribed line of street is less than 6.0 mt. But the 
+land so left shall be allowed to cover from first floor onwards at a minimum clear height of 
+3.60 mt from ground level. 
+7.3 Building Height 
+1. The maximum permissible building height shall be regulated according to the width of the 
+road on which it abuts and as prescribed in below table 7.1: 
+2. For Building -units abutting a khadki, chowk, fadia, alley or cul‐de‐sac, the maximum 
+permissible Building Height shall be regulated as per the width of the road leading to such 
+khadki, chowk, fadia, alley or cul-de-sac as mentioned in table 7.1 
+Table 7.1: Maximum Permissible Building Height in Core Walled City and Gamtal for D1 
+to D8 and D10 Category 
+Sr. No. Road Width(m) Maximum Permissible Building Height(m) 
+(1) (2) (3) 
+1 Upto7.50m Twice the width of the abutting road or 
+open space 
+2 Above7.50m and less than 12.00m 16.5 
+3 12.00m and above 25.00 
+Note : For D3 and D6 Category maximum permissible building height shall be 11 mts.  
+7.4 Permissible Ground Coverage 
+The ground coverage for core walled city of Ahmedabad shall be as specified in the table 7.2 
+Table 7.2: Permissible Ground Coverage 
+Sr.No. Building Unit Area Percentage of Ground Coverage Remarks 
+(1) (2) (3) (4) 
+1 ≤ 500 sqmts 100 %  
+2 >500 and ≤ 1500 sqmts 75 %  
+3 >1500 65%  
+In case of Gamtal, The permissible built up area on any floor including ground coverage shall not 
+exceed 75% of the building‐unit area. 
+ 
+7.5 CHOWK for Gamtal 
+No person shall erect, construct or reconstruct from foundation or plinth a building more than 9 
+Mts. in depth from its front without providing an open space or chowk open to sky from plinth 
+level for every 9 meters depth of the building, of at least 5.6 Sq.Mts. which may be reduced to a 
+minimum of 3.0 Sq.Mts.  with no side less than 1.5 Mts. case if the width of the property to be 
+developed is 4.5 meters or less.  This shall not be applicable to a building having door s and 
+
+[page 55]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     44 
+windows opening at least on two sides over streets or open compound not less than 2.4 meters 
+wide provided the depth does not exceed 18 meters. 
+7.6 Heritage Conservation Plan – Ahmedabad. 
+1. Structures, Buildings and Precincts in the Core Walled City shall be notified under  ‘Heritage 
+Areas’ by the Competent Authority as identified in the Heritage Conservation Plan prepared 
+by the Competent Authority with the help of Heritage Committee. The list of the Heritage 
+Areas shall be made available to the applicant on request. The remaining areas shall be 
+referred to as ‘Other Areas of Core Walled City’ in this Regulation.  
+2. Permissible Uses. 
+The owners of these heritage structures and buildings shall be required to conserv e the 
+following original aspects of their Buildings:  
+i. Façades  
+ii. Building Footprint  
+iii. Character of Open Spaces such as courtyards, khadki, streets, etc. 
+3. Tradable Development Right (TDR)for Heritage Area of Ahmedabad. 
+(1) Tradable Floor Space, may be provided for a Building‐unit with Heritage Structures or 
+Building, or for Building‐units within a Heritage Precinct. 
+(2) The Competent Authority shall notify the Heritage Conservation Plan, classifying the 
+buildings on the basis of their respective heritage value. The Comp etent Authority shall 
+issue Tradable Floor Space, as rates specified hereunder. 
+a. 50% of total utilized FSI for Highest Heritage Value; 
+b. 30% of total utilized FSI for High and Moderate Heritage Value; and 
+c. Nil for Non‐Listed. 
+(3) Maximum 10% of this Floor Space may be used for extensions or alterations to the existing 
+notified Heritage Building within the limit of maximum permissible FSI. The rest may be 
+utilized through TDR mechanism in other zones where chargeable FSI is permissible.  
+4. Additions or Extensions to existing Structure. 
+Additions and/or alterations shall have to be carried out based on the guidelines provided in 
+the  Heritage Conservation Plan without compromising the original character of the buildings.  
+7.7 Regulation for Heritage Core Area: (Udawada Nagarpalika) 
+The development within the core area of Udawada shall be in accordance to the provisions hereunder. 
+1. Definition: 
+(1) Heritage Core Area(HCA): Heritage Core Area means the area consisting of critical mass of 
+building having strangest architectural features of the  original dwelling units and heritage 
+streetscape as shown in the plan with brown verge. 
+(2) Heritage Conservation Committee (HCC) :  is a Committee nominated by the state 
+government for the purpose of implementation of the following with respect to the HCA  
+Table 7.3:Members of Heritage Conservation Committee (HCC) Udawada: 
+Sr. No. Name of Member Designation in committee 
+(1) (2) (3) 
+1 Prant officer, Valsad Chairman 
+2 Sarpanch Member 
+3 Town Planner, Valsad (Class-I) Member 
+4 Representative of Udavada Samast Anjuman Member 
+5 Architect Cum Heritage Expert - To be 
+appointed by Udavada Samast Anjuman Member 
+6 Junior Town Planner, Valsad Branch, Valsad 
+(Class-II) Member Secretary 
+ 
+2. Function of Heritage Conservation Committee (HCC): 
+
+[page 56]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     45 
+(1) Heritage Conservation Committee will control and regulate the use and development of 
+land within the HCA, including impositions of conditions and restrictions in regard to the 
+open space to be maintained for buildings, the percentage of building area for a  plot, the 
+locations, number,size,height,number of story’s and architectural character of building and 
+density of built up area allowed in specified area, the use and purpose to which a building 
+or specified area of land may or may not be appropriated, the  subdivision of plots, the 
+discontinuance of  objectionable uses of land , in any area in any specified periods parking 
+spaces, loading and unloading spaces for any building and the sizes of projection and 
+advertisement of the conservation plan, as per the  guidelines specified to them time to 
+time. 
+(2) Nothing mentioned in this regulation should be deemed to confer a right on the 
+owner/occupier of the plot to demolish and/or reconstruct and/or make alterations to this 
+heritage building/buildings in a HCA if in the opinion of the  heritage conservation 
+committee such demolition/reconstruction/alteration is undesirable. 
+(3) So as to preserve the beauty of the region, the heritage conservation committee shall have 
+the power to direct especially in, areas designated by them, that the exterior design and 
+height of buildings should have their prior approval. 
+(4) The size and shape of every plot shall be determined so far as may be to render it suitable 
+for building purpose and where the plot is already built upon to ensure tha t the building 
+complies with the provisions of the conservation from the heritage conservation 
+committee for any alteration of boundaries of plots of individuals and joint ownership. 
+3. Terms of References of the HCC: 
+(1) To advise the Competent Authority whether  development permission should be granted 
+and the condition of such permissions. 
+(2) To prepare a supplementary list of building, artifacts, structures, areas precincts of historic, 
+aesthetic, architectural, cultural of environmental significance and a supplem ent list of 
+natural features of environmental significance or scenic beauty including sacred groves,  
+kills, hillocks, water bodies (and the areas adjoining the same ,open areas,  wooded areas, 
+etc, to which this regulation shall apply 
+(3) To advise whether any relaxation, modification, alteration, or variance of any of the general 
+Development Control Regulation is called for 
+(4) To advise the Competent Authority in framing special regulation for HCA. 
+(5) To advise the Competent Author ity on applicability of Development proposal affecting 
+listed heritage buildings in HCA and on moving the Government to modify the same. 
+(6) To prepare special design and guidelines/publications for listed heritage buildings,  control 
+of height and essential façade characteristics such as mainten ance of special types of 
+balconies and other heritage items of the buildings and to suggest suitable design adopting, 
+appropriate material for replacements keeping the old form intact to the extent possible. 
+(7) To prepare guidelines relating to design element s and conversation principles to be 
+adhered to and to prepare other guidelines for the purpose of this regulation. 
+(8) To advise the Competent Authority on evaluating the cost repairs to be given to owners to 
+bring the existing buildings back to the original c ondition. For this purpose the Committee 
+may also try to help the UADA to raise funds through private resources.  
+(9) To advise the Competent Authority on any other issues as may be required from time to 
+time during the course of scrutiny of development permis sion and in overall interest of 
+heritage/environmental conservation.  
+(10) To appear before the Government either independently of through or on behalf of the 
+Competent Authority in cases of appeals related to listed heritage buildings in HCA.  
+4. Planning Regulation 
+(1) Amalgamation / Sub-division of the plots in the HCA shall not be allowed.  
+(2) No building(s)/structure(s) to its parts within the HCA shall be allowed to be demolished/ 
+reconstructed /repaired without the prior permission of the Heritage Conservati on 
+Committee. 
+
+[page 57]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     46 
+(3) Any change of use within the HCA may be permitted only after approval of the Heritage  
+Conservation Committee.  
+(4) No road widening of the existing roads/paths/small lanes/gullies would be permitted in the 
+HCA.   The main Iranshah road shall be c onverted into a pedestrian road. The road 
+widening in the buffer area shall not be allowed except in the specific area as approved by 
+the Heritage Conservation committee.  
+(5) Position and placement of landmarks, shrines and wells within the precinct are to be  
+retained. However in case of exigencies these can be shifted to a suitable within the 
+precinct with prior permission of the Heritage Conservation Committee. No additional 
+landmarks in the form of wayside shrines of crosses etc shall be permitted in the HCA.  
+(6) All the common open spaces and open spaces of the individual plots within the HCA shall 
+be maintained without being built upon.  
+(7) Permissible FSI allowed to be consumed in this HCA shall not exceed the net F.S.I of the 
+existing building.  
+(8) Basements shall not be permitted in any development or redevelopment in HCA.  
+(9) Existing street edge of the buildings shall be maintained. Existing buildings abutting a street 
+shall not enclose the verandahs using any masonry or other opaque partitions.  
+(10) Construction of the compound wall in the front shall not be permitted in cases where their 
+exists none originally. Whereas in cases where the compound wall already exists , the 
+reconstruction of the same could be permitted with the permission of Heritage 
+Conservation Commi ttee and which shall be essentially transparent in nature having a 
+height not more than 1.1 mts. above center line of the road. The design/section material 
+etc. to be used for the construction of compound wall should match with the precinct 
+character.  
+(11) Internal/ external staircases shall be maintained in its original form. In case where it has 
+dilapidated it shall be restored to its original condition and form using the same material as 
+it was originally made of . 
+No new additional staircases shall be permi tted. In cases where the additional staircases are essential 
+stability of the building and is not conspicuously visible from the access serving the plot with the prior 
+permission of the Heritage Conservation Committee.  
+(12) No stilts shall be permitted in any development proposal within the HCA.  
+(13) Permissible height shall not be more than 9.0 m.  
+(14) Plinth shall be 0.6m to 1.2m from Ground level.  
+(15) Height of the floor shall not be less than 2.7m & more than 3.0m. The HCC shall give their 
+opinion within 30 days of receiving the proposal from the Competent Authority. 
+  
+
+[page 58]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     47 
+8 Other than GAMTAL (GM) & CORE WALLED CITY (CW) 
+In addition to the following specific regulations the general planning and development regulations 
+specified in chapter 6, shall be applicable to all areas other than the core walled city of Ahmedabad, 
+Heritage Core Area: (Udawada Nagarpalika) and other gamtal.  
+8.1 GAMTAL EXTENSION (GME) 
+1. Gamtal extension means an area as demarcated in the development plan or where it is not 
+demarcated in the development plan it shall be an area as specified hereunder: 
+a. 300 mts  from the gamtal boundary if population less than 5000 and 
+b. 600 mtr from the gamtal boundary for others. 
+ 
+2. BUILDING HEIGHT 
+a. The maximum permissible building height shall be regulated according to the width of the 
+road on which it abuts and as prescribed below: 
+Table 8.1: Maximum Permissible Building Height in other than Core Walled City and 
+Gamtal for D1 to D8 and D10 Category 
+Sr. No. Road Width(m) Maximum Permissible Building Height(m) 
+(1) (2) (3) 
+1 Upto7.50m Twice the width of the abutting road or 
+open space 
+2 Above7.50m and less than 12.00m 16.5 
+3 12.00m and above 25.00 
+Note : For D3 and D6 Category maximum permissible building height shall be 11 mts.  
+ 
+b. For Building -units abutting a khadki, chowk, fadia, alley or cul‐de‐sac, the maximum 
+permissible Building Height shall be regulated as per the width of the road leading to such 
+khadki, chowk, fadia, alley or cul-de-sac as mentioned in table above. 
+ 
+8.2 RESIDENTIAL AFFORDABLE HOUSING (RAH) 
+Affordable Housing means residential development for providing Affordable Housing of dwelling 
+units up to 80 sq.mts along with ancillary commercial use up to 10% of the total utilized FSI. 
+8.2.1 Applicability of RAH 
+1. Affordable housing use shall be permitted all areas and zone except the following  
+conceptualized zone: 
+a. Core Walled City (CW)  Ahmedabad, Heritage Core Area: (Udawada  Nagarpalika) and 
+other gamtal, Residential 3, and 
+b. all types of industrial Zones viz. Industrial Zone  – General (IZ1), IZ2, Industrial Zone -  
+Special (IZ5), IZ6, IZ7, GIDC Estate ( IZ3 & IZ4), and 
+c. Agriculture Zone viz. AGZ1, AGZ2, AGZ3, AGZ4, REZ and 
+d. Special Plan Development zone- 2 ( SPD- 2), Special Plan Development zone- 3 (SPD-3). 
+2. These regulations for RAH shall also apply to development carried out under the affordable 
+housing policy (Mukhya Mantri Awas Yojana), Mukhya Mantri Gruh Yojana. 
+3. If the line of RAH Zone divides any Survey No./Block No./Final Plot No., the entire Maximum 
+Permissible FSI shal l be permissible for development of Residential Affordable Housing, 
+irrespective of the part of the Survey No./Block No./Final Plot No. that is not in RAH Zone. 
+This incentive shall not be valid for Survey Numbers amalgamated after the date of 
+publication of the Development Plan 
+8.2.2 Floor Space Index and Density for RAH 
+1. Minimum density for any proposed Residential Affordable Housing shall be 225 dwelling 
+units per hectare and part thereof.  
+2. Floor Space Index (FSI) shall be regulated as under: 
+
+[page 59]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     48 
+a. To avail the benefits of “RAH”, minimum FSI of 1.8 shall be utilized and maximum 2.7 
+would be permitted. 
+b. Base FSI shall be available as per relevant respective zone. Additional FSI be charged as 
+specified in Table 8. 2. where dwelling units of different size are propos ed, the charge 
+shall be prorate as per Schedule- 
+c. In addition to the provision other provisions, the areas of staircase, passages and 
+corridors shall also  be exempted for the computation of FSI. 
+ 
+Table 8.2 Chargeable FSI for RAH Dwelling 
+No. Residential Dwelling units built up area ( sq.mts) Additional FSI  Charge 
+(1) (2) (3) 
+1 up to 50 10% of jantri Rates  
+2 more than 50 and up to 66 20% of jantri Rates  
+3 more than 66 and up to 80 30% of jantri Rates  
+ 
+8.2.3 Common Plot for RAH 
+Common plot for affordable housing shall be 10%. 
+8.2.4 Parking for RAH 
+Parking shall be for the maximum permissible FSI and Minimum Requirements for Parking  shall be as 
+specified in table 8.3 
+Table 8.3: Parking for RAH 
+No. Type of Use Minimum Parking 
+Required Visitor’s Parking 
+(1) (2) (3) (4) 
+1 Affordable Residential Apartments 
+with dwelling units of built-up area 
+up to 66 sq.mts. 
+10% of utilised  FSI An additional 10%, of the 
+required parking space shall be 
+provided as Visitors parking. 
+2 Affordable Residential Apartments 
+with dwelling units of built-up area 
+more than 66 sq.mts. 
+20% of utilised FSI 10% of the required parking 
+space shall be provided as 
+Visitors parking. 
+3 Commercial Use 50% of respective 
+utilised FSI 
+20% of the required parking shall 
+be provided as Visitors parking. 
+ In case the maximum permissible FSI is not utilised, for any extension or addition in the future, 
+additional parking shall have to be provided as required for this additional utilised FSI. 
+ Parking requirements shall confirm to provisions of Planning Regulation no. 6.15. 
+8.3 Transit Oriented Zone, Smart City Node And Transport Node (SPD4) 
+8.3.1 Applicability of SPD4 
+1. These regulations shall apply for high density development in any zone except any industrial 
+zone. 
+2. For SPD4 areas, the competent authority shall prepare local area plans and seek approval of 
+it from the government.  
+3. In case of Metro Rail Transit (MRT) corridor the regulations of the Tr ansit Oriented Zone 
+shall be applicable only after finalization and notification of the MRT corridors by the State 
+Government of Gujarat. And any change in BRTS route shall be considered for TOZ 
+development at the time of approval replacing earlier route.    
+4. Regulations of sanctioned Local Area Plan shall prevail over these Regulations.  
+5. If the line of Transit Oriented Zone divides a Survey No./Block No./Final Plot No., the entire 
+Maximum Permissible FSI shall be permissible for development, irrespective of  the part of 
+the Survey No./Block No./Final Plot No., that is not in SPD4. This incentive shall not be valid 
+for Survey Numbers amalgamated with Survey Numbers outside this zone after the date of 
+publication of the Development Plan. 
+
+[page 60]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     49 
+8.3.2 Parking for SPD4 
+For Bu ilding‐units within the SPD4 with Commercial (Mercantile‐1) Use, the parking 
+requirement shall be as in Table 8.4. 
+Table 8.4: Parking for SPD4 
+Type of Use Minimum Parking 
+Required 
+Visitor’s Parking and Remarks 
+Mercantile‐1  35% of Total Utilised FSI 20% of the required parking shall be 
+provided as visitors parking  
+Note: 
+In case the maximum permissible FSI is not utilised, for any extension/additions in the 
+future, additional parking shall have to be provided as required for this additional utilised  
+FSI.  
+In case of Building-units affected by road widening , in such cases, the competent authority 
+may relax only affected road widening for road side margin and parking. 
+8.3.3 Other provisions for SPD4 
+The revenue generated from the sale of chargeable FSI for this zone shall be distributed between 
+Concern Urban Local body and Development authority, MRT  & Sardar Sarovar Narmada Nigam 
+Limited etc. as the case may be as decided by the Competent Authority. 
+8.4 Special Areas 
+8.4.1 Closed Textile Mills Zone (CZ) 
+1. Definition means: 
+a. "Textile Operations" means operations like spinning,  weaving, winding, warping, sizing, 
+processing and garment making, yarns, fabric making. 
+b. "Closed Textiles Mill/s" means textile mills registered u nder the Companies Act or 
+included in the list of textile mills which forms the part of Chief Justice Miyabhoy 
+Committee report or those mills where the property records or the revenue or such 
+other government records which certify that such mill is assessed as textile mill and had 
+textile operations. 
+c. "Closed Textile Mill Land" means such land which as per revenue records/city survey 
+records is used for closed textile mill. 
+2. Permissible Uses shall be as under: 
+a. Base Zone means the zone as designated in the sa nctioned development plan and the 
+base FSI shall be the FSI of the base zone.  
+b. Uses as per Knowledge and Institutional Zone (KZ) and Residential Affordable Housing 
+(RAH) and the permissible FSI shall be as specified in the table 8.5 
+ 
+Table 8.5: FSI for Closed Textile Mills Zone (CZ) 
+No. Proposed Use Base 
+FSI 
+Additional Chargeable FSI @ 
+40% Of Jantry Rate 
+Within TOZ Out Side TOZ 
+1 Knowledge Zone (KZ) & Residential 
+Affordable Housing (RAH) 1..8 2.2 0.9 
+c. In case of AUDA, for all closed textile mills, wherein the variation is made under 
+section 19 vide different notifications published on different dates, before 11.02.2013 
+(the date of publishing under section 13),the use and FSI shall be applicable as 
+sanctioned in relevant notifications, in any cases either the development permission 
+has been granted or not. 
+d. Within the CZ, the development of Dwelling unit 1,2,& 3 shall only be permitted on the 
+basis of no objection certificate from Gujarat Pollution Control Board. 
+e. In the land of closed textile mills, for the any development permission, any 
+owners/applicants intending to develop such land for any purpose other than  
+
+[page 61]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     50 
+industrial use shall contribute to the competent authority, land admeasure an 
+aggregate of 40% the portion of plot/ building unit/ final plot for which development 
+permission is sought. (incorporate modification done in notification dated 31/3/2018) 
+8.4.2 Regulations for Gandhi Ashram (AUDA) : Comprehensive Area Improvement Scheme 
+(GACAIS) 
+1. Conservation of Building having Historic, Architectural & Archaeological Significance. 
+a. The buildings in this area owned by Trusts Related to Gandhi Ashram Activities (TRGA) 
+area to be conserved retained and maintained in the original state. 
+b. The buildings above, if proposed for renewal or reconstruction by new building, these 
+shall be reviewed by the Competent Authority. 
+2. Slum Rehabilitation: The slums existing within this area needs to be rehabilitated on 
+available government/ municipal/ trust land within this area in due course of time for which 
+M.G.F. Trust and TRGA shall assist AMC. 
+3. Special Control Regulations 
+a. For area except in (B) shall be considered as Residential zone-1. 
+b. For building -units/ plot abutting Ashram Road from Wadaj Circle to Subhash Circle 
+owned by Govt, TRGA and AMC within GACAIS following control Regulations shall be 
+applicable. 
+c. Only residential and institutional uses like educational,cultural,social health,e tc public 
+purposes, tourist support facilities like hotel restaurant sale shop/showroom for art 
+gallery and handy craft, which shall be permitted. 
+d. Maximum permissible height shall be 10mts. 
+e. The colour of exterior portion of the building shall be aesthetica lly match with the 
+ambiance of Gandhi Ashram. Only white light sheds shall be permitted.   
+f. Every property in this area in the open space shall plant as many trees as prescribed by 
+the Competent Authority and maintain the same. 
+ 
+8.4.3 Regulations for Knowledge Precinct, Central Business District (C5) &Science Park 
+1. Local Area Plans, including measures for street development, parking management and 
+pedestrianization, shall be prepared for this precinct. 
+2. For Science Park SPD3 Uses and Planning regulation as per Resid ential 1 (R1) shall be 
+applicable.  
+8.4.4 Regulations for Sabarmati Riverfront Development 
+The regulations prepared by Sabarmati River front Development Corporation Ltd.(SRFDCL) has 
+prepared special Regulations pertaining to ground coverage, margins, height of building, use of 
+building etc. shall prevail. 
+8.5 Restricted Zone  (RZ) 
+This Zone includes Restricted Residential Zone (VUDA), Restricted Residential Zone 
+(JADA), Flood Prone Area / Zone, Restriction Zone  RZ1, RZ2, RZ3, RZ4 of VUDA, Hazard 
+Prone Area, Defense Zone. 
+8.5.1 Restricted Residential Zone (VUDA) 
+Residential Dwelling Units according to the regulations as Residential Affordable Housing. “50% 
+of the plot/building unit shall be permitted to be used as per the regulations governing the 
+Residential 1 (R1) and fo r the remaining area, only residential development with dwelling units 
+in accordance, to the regulations as Residential Affordable Housing shall be permitted. Provided 
+that such dwelling units shall not exceed 80 sq .mts and 50% which shall have maximum bui ltup 
+area of 40 sq.mts”. 
+8.5.2 Restricted Residential Zone (JADA) 
+All uses permitted mentioned Residential 1 (R1) Residential with height restriction up to 10 mts. 
+Use may be permitted subject to NOC Residential 1 (R1) from defense authority in this zone. 
+
+[page 62]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     51 
+The Ge neral Development Requirements i.e. minimum building unit area, FSI, common plot, 
+parking, basement and other shall be as per mentioned in regulations of Residential 1 (R1) is 
+applicable. 
+8.5.3 Restriction Zone  RZ1 : 
+All Structures / buildings or developments which are necessary to control floods/ prevent 
+pollution of the river/ pond/lake and its vicinity land shall be permitted. 
+8.5.4 Restriction Zone RZ2 
+All Structures  / buildings or developments which are necessary  to control floods/ prevent 
+pollution of the riv er/ pond/lake and its vicinity land shall be permitted. Also developments / 
+constructions not exceeding 5% of the building unit with ground floors only, and which would 
+preserve / conserve / enhance the natural scenery and landscape of the area shall be permitted. 
+8.5.5 Restriction Zone RZ3 
+No development shall be permitted in such areas. 
+8.5.6 Restriction Zone RZ4 
+All Structures  / buildings or developments which would preserve features, structures  or place 
+as historical, natural, architectural  or scientific interes t and of educational value. (which are 
+around Laxmi Vilas Palace, required to be kept open to preserve, conserve and development of 
+the area for natural scenery and landscape)   
+8.5.7 Hazard Prone Area: 
+Any kind of development permission is subject to NOC and permission of Competent Authority 
+8.5.8 Defence Zone : 
+Permissible uses are permitted As per defense and Central Government Authorities Regulation.  
+8.5.9 Vacant Land 
+No development activity shall be allowed in this area / Zone.  
+  
+
+[page 63]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     52 
+9 MINING, QUARRYING AND BRICK KILN 
+The following Regulations shall govern Mining, Quarrying and Brick Kiln operations and shall form 
+conditions for development permission: 
+     
+1. Any   mining,    quarrying    and    brick    kiln    operations    without    any blasting    shall be 
+permitted within a distance of  75mts from the boundary of any public road, railway line,   canal, 
+transmission  line  or  any  other  building.  
+2. Mining, quarrying and brick kiln operations which involves blasting shall not be permitted within 
+a distance of 200mts from any public road, railway line, canal, transmission line or any other 
+building.  
+3. No building operations shall be permitted on the plot  on which mining and quarrying and brick 
+kiln operations have been permitted, without the prior approval of the authority  
+4. The mining, quarrying and brick kiln shall be permitted for a stipulated period not exceeding 
+three years from the date of development permission at a time and shall be so prescribed in the 
+development permission. 
+5. The mining, quarrying and brick kiln operations shall not cause any nuisance to people in the 
+vicinity. 
+6. The mining, quarrying and brick kiln operations below the average groun d level shall be 
+permitted only for the extraction.   
+7. For Brick Kiln, every manufacturer of clay bricks, tiles or blocks shall use at least 25% of fly ash 
+  
+
+[page 64]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     53 
+10 FUELLING & ELECTRIC VEHICLE (eV) CHARGING STATIONS 
+Building‐units for use as Fueling & eV Stations shall comply with Petroleum Rules 1976 under the  
+Petroleum Act 1934 and electric charging station established under Electricity Act-2003. 
+10.1 Area of Building unit and Frontage 
+The minimum area and frontage of a Building‐unit for a Fuelling & eV Station or Fuelling & eV with 
+Service Station shall be as specified in table 10.1. 
+ 
+Table 10.1: Minimum Frontage 
+Sr. 
+No. 
+Fuelling &eV Station 
+Type 
+Minimum Area of 
+Building‐unit sqmts. 
+Minimum Frontage 
+on Road Side mts. 
+(1) (2) (3) (4) 
+1 Fuelling &eV  
+Station(without 
+Service Station) 
+500 16.5 
+2 Fuelling &eV with 
+Service Station 
+2000(other than category D7(B),D8 &D10) 30mts 
+500(for category D7(B), D8 &D10) 
+10.2 Location 
+1. Fuelling &eV Station may be permitted only on Road width of 18mts and more in any Zone. 
+2. The location of Fuelling &  eV Station or Fuelling &  eV with Service Station shall be at a distance 
+of 50mt, away from the junction of two or more roads among which one of them is wider than 
+18 mt. and it shall be 30 mt in case of other junctions. The minimum distance shall be computed 
+from the boundary line of the Building‐unit to the edge of the road as indicated in the 
+illustration. 
+3.  In the case the Station is provided along a main road which  has a service road or a marginal 
+access road, the access to the Station should be provided from the service road or the marginal 
+access road and not from the main road. 
+10.3 Maximum Permissible Ground Coverage 
+Irrespective of general provision of any zone Maxi mum Permissible Ground Coverage for 
+Fuelling &eV Station and Fuelling &eV with Service Stations shall be 45% of the Building‐unit 
+including the area of the canopy. 
+10.4 Margins 
+10.4.1 For Fuelling &eV Station: 
+1. Road side margin from canopy to the plot boundary shall be  as per Planning Regulation 6.7 
+subject to minimum 6.0mts. On all other sides, margin from canopy to the plot boundary shall 
+be 4.5mts and 6.0mts in the case of canopy having height up to 6.0mts and more than 6.0mts 
+from ground level respectively.  
+2. Marginal distance fr om curb site (Fuelling &eV Pedestal) to the plot boundary towards main 
+road shall be minimum 9.0mts and for other sides of the plot, it shall be 6.0mts.  
+3. Administrative building for the petrol pump shall have minimum road side margin as per 
+planning regulation 6.7; minimum side and rear margin of 3.0mts and as per Planning 
+Regulation 6.7. Zero margins can be provided towards canopy but minimum 6.0mts clear drive 
+way shall be provided to any curb site.  
+4. Minimum 6.0mts clear drive way shall be maintained between every curb site (Fuelling &eV 
+pedestal). 
+5. Minimum width of access road shall be 6.0mts. 
+10.4.2 For Fuelling &eV Station with Service Station: 
+1. Road side margin from canopy to the plot boundary shall be as per Planning Regulation no. 6.7 
+subject to minimum 6.0mts and all other sides shall be 6.0mts. Provision of above (2) and (4) in 
+Planning Regulation 6.7 will remain the same. 
+
+[page 65]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     54 
+2. While building of service station c an have zero margins towards canopy, subject to minimum 
+6.0mts towards road side and 3.0mts towards other sides of the plot. 
+3. Clear 6.0mts drive way between curb site (Fuelling &eV pedestal) and service station building 
+shall be provided. 
+4. Minimum width of access road shall be 6.0mts. 
+10.5 Height, Floor Space Index & Common Plot 
+The maximum allowable height shall be 7.5mts  and FSI shall be according to the relevant zone. 
+Also common plot shall not be required. 
+10.6 Parking 
+Every Fuelling &  eV Station and Fuelling &eV w ith Service Station should provide minimum 
+parking spaceson the basis of the Building unit Area as stated in the table below: 
+Table 10.2:Minimum parking for Fuelling / eV station 
+No Fuelling &eV station (area in sq.mts.) Minimum parking requirement 
+(1) (2) (3) 
+1 500 3 cars and 5 two‐wheelers 
+2 2000 (other than category D7(B) and D8) For every 500 sq.mts more than 
+1000sq.mts, additional parking for 1car and 
+2 two‐wheelers shall be required. 
+500 (for category D7(B) and D8) 
+10.7 Basement 
+No basement shall be allowed. 
+
+[page 66]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     55 
+11 ADVERTISING DISPLAY & COMMUNICATION INFRASTRUCTURE 
+Permission shall be required for any nature of outdoor Advertising Display Infrastructure or 
+Communication Infrastructure Telecommunication infrastructure/ microwave communication tower as 
+per Schedule 18 (other than sign boards for way -finding). This is applicable for but not limited to 
+Billboards with Liquid Crystal Display Board (LCD) Light emitting diodes (LED), Kiosks, Wall Signs, Glass 
+display, Vehicles (non-motorized and motorized etc.), floating balloons, digital display. 
+11.1 Advertising Display Infrastructure 
+11.1.1 Billboards I Hoardings in Marginal Space 
+1. One Billboard I Hoarding is permitted in the margin open space up to 500sq.mt area of the 
+Building Unit. Up to a maximum of two Billboards per Building Unit shall be permitted in the 
+marginal open space in Building Unit above 500 sqmt. 
+2. The Billboards/ Hoarding shall be permitted in the marginal space of the Building Unit as per 
+table 11.1. 
+Table 11.1: Minimum marginal space 
+Location 
+Road 
+Width 
+(mt.) 
+Max.Billboard/ 
+Hoarding Size 
+(w x h)(mt.xmt.) 
+Min. 
+Margin 
+Road Side 
+(mt.) 
+Min.Ground 
+Clearance 
+(mt.) 
+Max. 
+Height 
+(mt.) 
+(1) (2) (3) (4) (5) (6) 
+Marginal 
+Open 
+Spaces 
+Upto60 9.0x4.5 0.6 3.0 16.5 
+Above 
+60 
+12.0 x 6.0 
+ 1.5 3.0 16.5 
+3. Lighting may extend beyond the stipulated maximum height of for the billboards erected on 
+ground. 
+11.1.2 Billboards/ Hoardings on Roof tops I Terrace 
+The Billboards/ Hoardings on roof tops and terrace shall be permitted and shall be regulated as per 
+table 11.2. 
+Table 11.2: Billboards/ Hoardings on Roof tops I Terrace 
+Location 
+Road 
+Width 
+(mt.) 
+Max.Billboard/ 
+Hoarding 
+Size(wxh) 
+(mt.xmt.) 
+Max. no. of 
+billboard/ 
+hording size 
+Min. Margin (mt.) Max. Height 
+from top of 
+Terrace(mt.) Road 
+Side 
+Between 
+two 
+Bill 
+boards 
+(1) (2) (3) (4) (5) (6) (7) 
+On Roof 
+Tops 
+Terrace 
+up  to 
+60 
+12.0 x 6.0 2 (different 
+facing 
+directions) 
+1.5mt 
+from 
+parapet 
+1.5 7.5 
+ 
+Above 
+60 
+18.0 x 9.0 10.5 
+Notes: 
+1. On Roof Tops: Maximum permissible height of the Billboard/ Hoarding shall be considered 
+over and above the permissible/ existing height of the Building. 
+2. No Roof top Billboards/ Hoardings shall extend beyond the Building line of the building on 
+which it is erected, nor shall it extend beyond the roof in any direction. 
+3. Lighting may extend beyond the stipulated maximum height of for such billboards/ 
+hoardings within the building-unit. 
+
+[page 67]
+ 
+Comprehensive  Development Control Regulations – 2017, UD & UHD, Govt. of Gujarat     56 
+11.1.3 Billboards/ Hoardings on Public Roads 
+1. The Billboards/ Hoardings on Public Roads shall be permitted and shall be regulated as per 
+table 11.3. 
+Provided that, the competent authority shall decide with respect to the following for  
+which it shall record reasons in writing 
+Table 11.3: Billboards/Hoardings on Public Roads 
+Road Width (mt.) Minimum Ground 
+clearance(mt.) 
+Permissible Size of the Billboard/Hoarding 
+(width height) (mt. Xmt.) 
+(1) (2) (3) 
+Upto60 3.0 9.0mtsx 4.5mts{Wx 
+above60mt 3.0 12.0mtsx 6.0mts 
+2. The competent authority may allow/disallow exceptional size  the erection on specific 
+locations considering the safety. 
+11.1.4 Billboards in Urban Renewal Project Areas 
+These Billboards must confirm with these Regulations and with the Local Area Plan or special 
+restrictions for the area, which may include additional Regulations or requirements. 
+11.1.5 Heritage Buildings and Precincts 
+The Competent Authority can deny the permission on the ground s of protecting the ambience 
+of heritage buildings and precincts. 
+11.1.6 General Restrictions: 
+1. Billboards will be restricted in the following scenario: 
+2. Any Billboard which may obstruct the vision required for safe traffic movement 
+3. Any Billboard which in the opini on of the Competent Authority is likely to be confused with 
+authorized traffic signs or signals 
+4. Any Billboard containing the word "Stop" ,"Look" ,"Danger" or other similar word that might 
+mislead or confuse the travelers 
+5. Any Billboard that is attached to or printed on a rock or other natural objects*[Deleted ] 
+6. Any Billboard that is prohibited or restricted for the purpose of public appearance under local or 
+state or national law. 
+7. Any Billboard with over hang over public property which obstructs access or eg ress from any 
+building. 
+8. Any Billboard/ Hoarding containing unfair, vulgar matter or advertisement that is considered 
+objectionable in Competent Authority's opinion shall not be permitted. Advertisements that are 
+prohibited by the Government shall not be permitted. 
+9. Billboard/ Hoarding shall not project outside the boundary of the Building-unit. 
+10. The structure of the billboard/ hoarding or any lighting reflector shall not project outside the 
+boundary of the Building-unit. 
+11.2 Communication Infrastructure Telecommunication infrastructure/ microwave 
+communication tower 
+Provisions shall apply for Communication infrastructures such as Post &Telegraph, 
+Telephone, Wireless, Broadcasting, Cellular Mobiles, Internet, 'V' Set, ATM, Channel Discs 
+and Overhead lines (for tele phone, digital connections for internet and channels and 
+other similar forms of communication. 
+11.2.1 Location: 
+The communication Infrastructure shall be either placed on the building roof tops or 
+terraces at a distance of minimum 1.5mts from the parapet, or on t he ground or open 
+space within the premises subject to other Regulations. 
+…………………………

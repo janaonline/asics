@@ -9,7 +9,7 @@ class Args(BaseModel):
 
 def run(ctx: ToolContext, question_id: str) -> str:
     if not ctx.questions:
-        from asics_agent.verticals import load_bank
+        from asics_agent.categories import load_bank
 
         ctx.questions, _ = load_bank(ctx.services.settings)
     wanted = question_id.replace("-", " ").strip().upper()

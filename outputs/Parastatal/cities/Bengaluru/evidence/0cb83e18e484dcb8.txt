@@ -1,0 +1,844 @@
+SOURCE URL: https://ipgrs.karnataka.gov.in/Home/About
+
+Please wait…
+ ದಯವಿಟ್ಟು ನಿರೀಕ್ಷಿಸಿ…
+
+ Login
+ ಲಾಗಿನ್
+
+ Shri. D. K. ShivakumarHon’ble Chief Minister, Government of Karnataka
+
+ ಶ್ರೀ ಡಿ.ಕೆ. ಶಿವಕುಮಾರ್ಮಾನ್ಯ ಮುಖ್ಯಮಂತ್ರಿಗಳು, ಕರ್ನಾಟಕ ಸರ್ಕಾರ
+
+ Government of Karnatakaಕರ್ನಾಟಕ ಸರ್ಕಾರ
+
+ PRAJA SEVE Department
+ Government of Karnataka
+
+ ಪ್ರಜಾ ಸೇವೆ ಇಲಾಖೆ
+ ಕರ್ನಾಟಕ ಸರ್ಕಾರ
+
+ Home
+ ಮುಖಪುಟ
+
+ Dashboard ಅಂಕಿಅಂಶಗಳು
+
+ Praja Seve Abhiyana
+
+ ಪ್ರಜಾ ಸೇವೆ ಅಭಿಯಾನ
+
+ District wise Schedule
+
+ ಜಿಲ್ಲಾವಾರು ವೇಳಾಪಟ್ಟಿ
+
+ Gallery
+ ಗ್ಯಾಲರಿ
+
+ Videos and Tutorials
+
+ ವೀಡಿಯೊಗಳು ಮತ್ತು ಟ್ಯುಟೋರಿಯಲ್ಗಳು
+
+ GOs / Circulars
+ ಸರ್ಕಾರದ ಆದೇಶಗಳು / ಸುತ್ತೋಲೆಗಳು
+
+ Citizen Testimonials
+ ನಾಗರಿಕರ ಅಭಿಪ್ರಾಯಗಳು
+
+ Contact Us
+ ಸಂಪರ್ಕಿಸಿ
+
+ ಮುಖಪುಟHome
+
+ ನಮ್ಮ ಬಗ್ಗೆAbout Us
+
+## 
+ About Us
+ ನಮ್ಮ ಬಗ್ಗೆ
+
+## Details
+
+## 
+
+ Janaspandana-iPGRS, is a one-stop multi-model, robust, data-driven & paperless IT
+ platform to transform Karnataka’s Grievance Management System for registration,
+ processing and redressal of the public grievances regarding the delivery of services and
+ schemes of various Departments of Government of Karnataka.
+
+ With a vision to
+ transform the citizen experience Government of Karnataka launched the integrated
+ Public Grievance Redressal System (iPGRS) on 1st November 2021 - Kannada
+ Rajyotsava Day as per the budget announcement of 2018 and also based on the Hon’ble
+ High court of Karnataka order no: 41189/2017 dated 19.03.2020 and Government
+ Order No. DPAR 29 PRJ 2020 dated 06.12.2020.
+
+ The citizens can register their grievances pertaining to 40 + Department schemes/
+ services delivered by the Government of Karnataka. The iPGRS has also been integrated with
+ the PG portal of the Government of India (GoI)- CPGRAMS to receive and redress the
+ grievances registered on CPGRAMS. The information on the redressal of such grievances will
+ be sent to CPGRAMS through a web service. The citizens visiting CPGRAMS of GoI can
+ select Karnataka State and file their grievances directly in the iPGRS portal.
+
+ Salient features of Janaspandana (iPGRS)
+
+ Citizen Convenience: -
+
+ One-time mobile OTP-based registration for the citizen submitting their basic
+ details. The citizen can then submit multiple grievances pertaining to different
+ departments.
+ Click here to visit or register complain in CPGRAMS (Centralized Public Grievance
+ Redress and Monitoring System) CPGRAMS.
+
+ Intuitive key-word based search, which enables the citizen to clearly articulate
+ the grievances which are directly mapped to the last mile functionary (LMF/L1)
+ of the department based on the grievance location.
+
+ Janaspandana is integrated with service delivery IT applications like Seva
+ Sindhu, SAKALA, Karnataka Udyoga Mitra, Mojini, Suvidha, Social Security
+ Pensions, Rajiv Gandhi Housing Limited, E-mapana, Building Plan Approval
+ status – BBMP, Project view Details – RERA, Payment status of property Tax
+ - BBMP to provide contextual information to officials for effective resolution
+ of grievances.
+
+ Submission of Acton Taken Report (ATR) by L1/L2/L3 is mandatory and the
+ same is sent to citizens as a link in SMS for information.
+
+ Timely SMS alerts to citizens on registration and redressal of grievance.
+
+ Easy tracking of grievance status by entering the Grievance ID/ Mobile number.
+
+ Feedback collection: Outbound calls are made by the call centre to the citizens to
+ collect feedback on the quality of the grievance redressal process and the resolution
+ provided. The citizen can escalate the matter twice if he is not satisfied with the
+ resolution ensuring the process to be in sync with the intention of the iPGRS.
+
+ Defined Escalation Matrix with fixed timelines: - Accountability is ensured with the
+ reopening and escalation of grievances if the citizen’s feedback is “unsatisfactory”.
+
+ Live dashboards available at https://ipgrs.karnataka.gov.in/Home/Statistics for reporting and monitoring and reviewing the grievance redressal
+ at all stages by the Department Heads and District Heads.
+
+ The quality of redressal of grievances is reviewed periodically by the State Level.
+ Review Committee headed by the Chief Secretary, Govt. of Karnataka and the District
+ Level Review Committee headed by the concerned District Commissioners.
+
+        The iPGRS has also been integrated with the PG portal of the Government of India (GoI)- CPGRAMS to receive and redress the grievances registered on CPGRAMS. The information on the redressal of such grievances will be sent to CPGRAMS through a web service. The citizens visiting CPGRAMS of GoI can select Karnataka State and file their grievances directly in the iPGRS portal.
+
+        As of now more than 35000+ government employees from 40 + departments have been trained. Meetings with all the Heads of Departments, Deputy Commissioners, Chief Executive Officers are conducted on iPGRS and their feedback/opinion on the system is also taken.
+
+## ವಿವರಣೆಗಳು
+
+      ʼಜನಸ್ಪಂದನʼ - ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಏಕೀಕೃತ ಸಾರ್ವಜನಿಕ ಕುಂದುಕೊರತೆ ನಿವಾರಣಾ ವ್ಯವಸ್ಥೆ (iPGRS)ಯು ರಾಜ್ಯದ ವಿವಿಧ ಇಲಾಖೆಗಳ ಸೇವೆಗಳಿಗೆ ಮತ್ತು ಯೋಜನೆಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ಸಾರ್ವಜನಿಕ ಕುಂದುಕೊರತೆಗಳ/ ದೂರುಗಳ ದಾಖಲಾತಿಗಾಗಿ ನಿರ್ಮಿಸಲಾಗಿರುವ ಒಂದು ತಾಂತ್ರಿಕ ವೇದಿಕೆಯಾಗಿದೆ.
+
+        ದೂರುಗಳ ನಿವಾರಣಾ ಕ್ರಮದ ಬಗ್ಗೆ ನಾಗರಿಕರ ಅಭಿಪ್ರಾಯವನ್ನು ಸಂಗ್ರಹಿಸುವ ದೃಷ್ಟಿಯಿಂದ ಬಹು-ಮುಖಿಯಾದ, ಸದೃಢವಾದ, ದತ್ತಾಂಶ-ಆಧಾರಿತ ಮತ್ತು ಕಾಗದರಹಿತ ತಂತ್ರಾಂಶದ ವ್ಯವಸ್ಥೆಯನ್ನು 2018 ರ ಆಯವ್ಯಯ ಘೋಷಣೆಯನ್ವಯ ಮತ್ತು ಕರ್ನಾಟಕದ ಗೌರವಾನ್ವಿತ ಉಚ್ಚ ನ್ಯಾಯಾಲಯದ ಆದೇಶ ಸಂಖ್ಯೆ: 41189/ 2017 ದಿನಾಂಕ 19.03.2020 ಮತ್ತು ಸರ್ಕಾರಿ ಆದೇಶ ಸಂಖ್ಯೆ. DPAR 29 PRJ 2020 ದಿನಾಂಕ 06.12.2020 ಆದೇಶದಂತೆ ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ ದಿನ, 1 ನೇ ನವೆಂಬರ್, 2021 ರಂದು ಏಕೀಕೃತ ಸಾರ್ವಜನಿಕ ಕುಂದುಕೊರತೆ ನಿವಾರಣಾ ವ್ಯವಸ್ಥೆ (iPGRS)ಯನ್ನು ಲೋಕಾರ್ಪಣೆಗೊಳಿಸಲಾಯಿತು.
+
+        ಈ ವ್ಯವಸ್ಥೆಯಡಿ 40 + ಇಲಾಖೆಗಳ ಯೋಜನೆಗಳು/ಸೇವೆಗಳಿಗೆ ಸಂಬಂಧಿಸಿದಂತೆ ನಾಗರಿಕರು ತಮ್ಮ ದೂರನ್ನು ದಾಖಲಿಸಬಹುದು.
+
+ ಜನಸ್ಪಂದನದ ಪ್ರಮುಖ ಲಕ್ಷಣಗಳು (iPGRS)
+
+ ನಾಗರಿಕರ ಅನುಕೂಲತೆ: -
+
+ ನಾಗರಿಕರು ತಮ್ಮ ವಿಳಾಸ ಮತ್ತು ಮೊಬೈಲ್ ಸಂಖ್ಯೆ ಉಪಯೋಗಿಸಿ ಒಮ್ಮೆ ಆತನ/ಆಕೆಯ ಮೊಬೈಲ್ ಗೆ ಒಂದು ಬಾರಿ ಬರುವ ಓ.ಟಿ.ಪಿ ಉಪಯೋಗಿಸಿ ಅವರೇ ನೋಂದಾಯಿಸಿ ಕೊಳ್ಳಬಹುದು. ನಂತರ ವಿವಿಧ ಇಲಾಖೆಗಳಿಗೆ ಸಂಬಂಧಿಸಿದ ದೂರು/ಕುಂದುಕೊರತೆಗಳನ್ನು ದಾಖಲಿಸಬಹುದು.
+
+ ಕೀ ವರ್ಡ್ ಆಧರಿಸಿ ನಾಗರಿಕರು ಕುಂದುಕೊರತೆಗಳನ್ನು ಸ್ಪಷ್ಟವಾಗಿ ವ್ಯಕ್ತಪಡಿಸಬಹುದಾಗಿದೆ. ನಾಗರಿಕರು ಆಯ್ಕೆ ಮಾಡುವ / ದೂರು ದಾಖಲಿಸುವ ಸ್ಥಳವನ್ನು ಆಧರಿಸಿ ನೇರವಾಗಿ ಇಲಾಖೆಯ ಕ್ಷೇತ್ರದ ಅನುಷ್ಟಾನಾಧಿಕಾರಿ (Last Mile Functoneries (LMF/L1)ಗೆ ದೂರನ್ನು ನಿವಾರಣಾ ಕ್ರಮಕ್ಕಾಗಿ ಕಳುಹಿಸಲಾಗುತ್ತದೆ.
+
+ ಸಾರ್ವಜನಿಕರ ಕುಂದುಕೊರತೆಗಳನ್ನು ಪರಿಣಾಮಕಾರಿಯಾಗಿ ನಿವಾರಿಸಲು, ಸಂದರ್ಭೋಚಿತ ಮಾಹಿತಿಯನ್ನು ಅಧಿಕಾರಿಗಳಿಗೆ ಒದಗಿಸಲು ಜನಸ್ಪಂದನ ತಂತ್ರಾಂಶವನ್ನು ಸೇವಾ ಸಿಂಧು, FRUITS, ಸಕಾಲ, ಕರ್ನಾಟಕ ಉದ್ಯೋಗ ಮಿತ್ರ, ಮೋಜಿನಿ, ಸುವಿಧಾ, ಸಾಮಾಜಿಕ ಭದ್ರತಾ ಪಿಂಚಣಿಗಳು, ರಾಜೀವ್ ಗಾಂಧಿ ಹೌಸಿಂಗ್ ಲಿಮಿಟೆಡ್, E-mapana, ಕಟ್ಟಡ ಯೋಜನೆ ಅನುಮೋದನೆ ಸ್ಥಿತಿಗಾಗಿ - BBMP, ಯೋಜನಾ ವಿವರಗಳಿಗಾಗಿ - RERA, BBMP - ಆಸ್ತಿ ತೆರಿಗೆ ಪಾವತಿಯ ಸ್ಥಿತಿಗಾಗಿ - ಸೇವಾ ವಿತರಣಾ IT ಅಪ್ಲಿಕೇಶನ್ಗಳೊಂದಿಗೆ ಹಾಗೂ ದತ್ತಾಂಶಗಳೊಂದಿಗೆ ಸಂಯೋಜಿಸಲಾಗಿದೆ.
+
+ ಕ್ಷೇತ್ರದ ಅನುಷ್ಟಾನಾಧಿಕಾರಿ ಗಳು ತಾವು ದೂರು ನಿವಾರಣೆಗೆ ಕೈಗೊಂಡ ಕ್ರಮದ ವರದಿಯನ್ನು (ATR) Portal ನಲ್ಲೇ ಸಲ್ಲಿಸುವುದು ಕಡ್ಡಾಯವಾಗಿದೆ ಮತ್ತು ನಾಗರಿಕರ ಮಾಹಿತಿಗಾಗಿ ಅದನ್ನು SMS ನಲ್ಲಿ ಲಿಂಕ್ ಮೂಲಕ ಕಳುಹಿಸಲಾಗುತ್ತದೆ.
+
+ ಕುಂದುಕೊರತೆಯ ದಾಖಲೆ ಮತ್ತು ನಿವಾರಣೆಯ ಕುರಿತು ನಾಗರಿಕರಿಗೆ ಸಮಯೋಚಿತ SMS ಗಳನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತದೆ.
+
+ ಕುಂದುಕೊರತೆ ಐಡಿ/ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸುವ ಮೂಲಕ ಕುಂದುಕೊರತೆ ಸ್ಥಿತಿಯನ್ನು ತಿಳಿಯುವ ಅವಕಾಶ ಒದಗಿಸಲಾಗಿದೆ.
+
+ ಪ್ರತಿಕ್ರಿಯೆ ಸಂಗ್ರಹ: ಕುಂದುಕೊರತೆ ನಿವಾರಣಾ ಪ್ರಕ್ರಿಯೆಯ ಗುಣಮಟ್ಟ ಮತ್ತು ಒದಗಿಸಿದ ಪರಿಹಾರದ ಕುರಿತು ಪ್ರತಿಕ್ರಿಯೆಯನ್ನು ನಾಗರಿಕರಿಂದ ಸಹಾಯವಾಣಿಯಿಂದ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ. ನಾಗರಿಕನು ತೃಪ್ತನಾಗದಿದ್ದರೆ ಕುಂದುಕೊರತೆಯನ್ನುಮುಂದಿನಹಂತದ ಅಧಿಕಾರಿಗಳಿಗೆ ಸಲ್ಲಿಸುವ ಅವಕಾಶವಿದೆ.
+
+ ನಿಗದಿತ ಕಾಲಮಿತಿಯಲ್ಲಿ ಕುಂದುಕೊರತೆಗಳು ನಿವಾರಣೆಯಾಗದಿದ್ದಲ್ಲಿ ಮುಂದಿನ ಹಂತದ ಅಧಿಕಾರಿಗಳ ಲಾಗಿನ್ ಗೆ ಪರಿಹಾರ ಕ್ರಮಕ್ಕಾಗಿ ಕಳುಹಿಸಲಾಗುತ್ತದೆ.
+
+ ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರು ಮತ್ತು ಜಿಲ್ಲಾ ಮುಖ್ಯಸ್ಥರು ಎಲ್ಲಾ ಹಂತಗಳಲ್ಲಿ ದೂರುಗಳ ನಿವಾರಣೆಯನ್ನು ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು ಮತ್ತು ಪರಿಶೀಲಿಸಲು https://ipgrs.karnataka.gov.in/Home/Statistics ನಲ್ಲಿ ಸಮಯೋಚಿತ ವರದಿಗಳನ್ನು ನೀಡಲಾಗಿದೆ.
+
+ ಕ್ಷೇತ್ರಮಟ್ಟದ ಅನುಷ್ಠಾನಾಧಿಕಾರಿಗಳಿಂದ ನಿವಾರಿಸಲ್ಪಟ್ಟ ಕುಂದುಕೊರತೆಗಳ ನಿವಾರಣಾ ಗುಣಮಟ್ಟವನ್ನು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಸರ್ಕಾರದ ಮುಖ್ಯ ಕಾರ್ಯದರ್ಶಿಯವರ ಅಧ್ಯಕ್ಷತೆಯಲ್ಲಿ ರಾಜ್ಯ ಮಟ್ಟದ ಪರಿಶೀಲನಾ ಸಮಿತಿ ಹಾಗೂ ಸಂಬಂಧಪಟ್ಟ ಜಿಲ್ಲಾಧಿಕಾರಿಗಳ ಅಧ್ಯಕ್ಷತೆಯಲ್ಲಿ ಜಿಲ್ಲಾ ಮಟ್ಟದ ಪರಿಶೀಲನಾ ಸಮಿತಿಯನ್ನು ರಚಿಸಲಾಗಿದೆ.
+
+      ಭಾರತ ಸರ್ಕಾರದ CPGRAMS ಪೋರ್ಟಲ್ ನೊಂದಿಗೆ iPGRS ಸಂಯೋಜನೆಗೊಂಡಿದೆ. CPGRAMS ನಲ್ಲಿ ನೋಂದಾಯಿಸಲಾದ ಕುಂದುಕೊರತೆಗಳನ್ನು ಸ್ವೀಕರಿಸಿ, ಪರಿಹರಿಸಿ, ಮಾಹಿತಿಯನ್ನು ವೆಬ್ ಸೇವೆಯ ಮೂಲಕ CPGRAMS ಗೆ ಕಳುಹಿಸಲಾಗುತ್ತದೆ. ಭಾರತ ಸರ್ಕಾರದ CPGRAMS ಪೋರ್ಟಲ್ ಗೆ ಭೇಟಿ ನೀಡುವ ನಾಗರಿಕರು ಕರ್ನಾಟಕ ರಾಜ್ಯವನ್ನು ಆಯ್ಕೆ ಮಾಡಬಹುದು ಮತ್ತು iPGRS ಪೋರ್ಟಲ್ನಲ್ಲಿ ನೇರವಾಗಿ ತಮ್ಮ ಕುಂದುಕೊರತೆಗಳನ್ನು ಸಲ್ಲಿಸಬಹುದು.
+
+      40 + ಇಲಾಖೆಗಳ 35000 ಹೆಚ್ಚಿನ ಕ್ಷೇತ್ರದ ಅನುಷ್ಠನಾಧಿಕಾರಿಗಳಿಗೆ ತರಬೇತಿಯನ್ನು ನೀಡಲಾಗಿದೆ. iPGRS ವ್ಯವಸ್ಥೆಯ ಕುರಿತು ಎಲ್ಲಾ ಇಲಾಖೆಗಳ ಮುಖ್ಯಸ್ಥರು, ಜಿಲ್ಲಾಧಿಕಾರಿಗಳು, ಮುಖ್ಯ ಕಾರ್ಯನಿರ್ವಹಣಾಧಿಕಾರಿಗಳೊಂದಿಗೆ ಸಭೆಗಳನ್ನು ನಡೆಸಲಾಗುತ್ತದೆ ಮತ್ತು ಅವರ ಪ್ರತಿಕ್ರಿಯೆ/ಅಭಿಪ್ರಾಯವನ್ನು ಸಹ ತೆಗೆದುಕೊಳ್ಳಲಾಗುತ್ತಿದೆ.
+
+## 
+ Citizen Representation
+ ನಾಗರಿಕ ಪ್ರಾತಿನಿಧ್ಯ
+
+     Citizen Representation is for the petitioners to file a representation to the government officials as per
+ the order issued by honourable courts.A unique representation id would be generated for every representation which could be
+ accessed on the portal. Along with this, a message will be sent to the citizen’s registered mobile number alerting about the
+ representation id.The representation will be sent to the officer(Karnataka state)selected.The officer will file an Action Taken
+ Report(ATR) for every representation.The citizen could access the ATR on the platform, and its link would be sent as an SMS
+ to the registered mobile number of the citizen.
+
+     ಮಾನ್ಯ ನ್ಯಾಯಾಲಯಗಳು ಹೊರಡಿಸಿದ ಆದೇಶಗಳನ್ನು ಪಾಲಿಸಲು ಕೋರಿ ಸರ್ಕಾರಿ ಅಧಿಕಾರಿಗಳಿಗೆ ಮನವಿ ಸಲ್ಲಿಸಲು Citizen Representation Module ಅನ್ನು Petitioner/ನಾಗರಿಕರಿಗೆ ಒದಗಿಸಲಾಗಿದೆ. ಪ್ರತಿ ಮನವಿಗೂ ಪ್ರತ್ಯೇಕವಾದ ಐಡಿ ರಚಿತವಾಗುತ್ತದೆ. ಐಡಿಯ ಸಹಾಯದಿಂದ ಪೋರ್ಟಲ್‌ ಪ್ರವೇಶಿಸಬಹುದಾಗಿದೆ. Petitioner/ನಾಗರಿಕರಿಗೆ ನೋಂದಾಯಿತ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಗೆ ಸಂದೇಶದ ಮೂಲಕ ಐಡಿ ಸಂಖ್ಯೆಯನ್ನು ಕಳುಹಿಸಲಾಗುತ್ತದೆ. ಸಂಬಂಧಪಟ್ಟ ಅಧಿಕಾರಿಗೆ (ಕರ್ನಾಟಕ ರಾಜ್ಯ) ಮನವಿಯನ್ನು ಕಳುಹಿಸಲಾಗುವುದು. ಪ್ರತಿಯೊಂದು ಮನವಿಯ ಮೇಲೆ ಅಧಿಕಾರಿಗಳು ತೆಗೆದುಕೊಂಡ ಕ್ರಮದ ವರದಿಯನ್ನು (ATR) ಸಲ್ಲಿಸುತ್ತಾರೆ. Petitioner/ನಾಗರಿಕರಿಗೆ ಅವರ ನೋಂದಾಯಿತ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಗೆ ATR ಲಿಂಕ್ ಅನ್ನು SMS ಮೂಲಕ ಕಳುಹಿಸಲಾಗುತ್ತದೆ. ಕಳುಹಿಸುವ ಆ ಲಿಂಕ್‌ ಮೂಲಕ ATR ಅನ್ನು ನೋಡಬಹುದು.
+
+## Grievance Redressal Workflow
+
+## ಕುಂದುಕೊರತೆ ನಿವಾರಣ ಮಾದರಿ
+
+## Executives
+
+## ಅಧಿಕಾರಿ ವರ್ಗ
+
+ Name
+ Designation
+ E-mail ID
+
+ Shri D.K.Shivakumar
+ ಶ್ರೀ ಡಿ.ಕೆ. ಶಿವಕುಮಾರ್
+ Hon'ble Chief Minister
+ ಮಾನ್ಯ ಮುಖ್ಯಮಂತ್ರಿ
+ cm@karnataka.gov.in
+
+ Dr. Shalini Rajneesh, IAS
+ ಡಾ|| ಶಾಲಿನಿ ರಜನೀಶ್, ಭಾ.ಆ.ಸೇ
+ Chief Secretary to Government
+ ಸರ್ಕಾರದ ಮುಖ್ಯ ಕಾರ್ಯದರ್ಶಿ
+ cs@karnataka.gov.in
+
+ Additional Chief Secretary to Government
+ ಸರ್ಕಾರದ ಹೆಚ್ಚುವರಿ ಮುಖ್ಯ ಕಾರ್ಯದರ್ಶಿ
+ acs@karnataka.gov.in
+
+ Smt. Uma Mahadevan, IAS
+ ಶ್ರೀಮತಿ ಉಮಾ ಮಹಾದೇವನ್, ಭಾ.ಆ.ಸೇ
+ ACS -cum- Development Commissioner
+ ಸರ್ಕಾರದ ಅಪರ ಮುಖ್ಯ ಕಾರ್ಯದರ್ಶಿ ಹಾಗೂ ಅಭಿವೃದ್ಧಿ ಆಯುಕ್ತರು
+ acsegov@karnataka.gov.in
+
+ Shri Pankaj Kumar Pandey, IAS
+ ಶ್ರೀ ಪಂಕಜ್ ಕುಮಾರ್ ಪಾಂಡೆ, ಭಾ.ಆ.ಸೇ
+ ಸರ್ಕಾರದ ಪ್ರಧಾನ ಕಾರ್ಯದರ್ಶಿ, ಸಿಬ್ಬಂದಿ ಮತ್ತು ಆಡಳಿತ ಸುಧಾರಣೆಗಳ ಇಲಾಖೆ (ಇ-ಆಡಳಿತ)
+ Principal Secretary to Government,Department of Personnel and Administrative Reforms (e-Governance)
+ secyegov@karnataka.gov.in
+
+ Shri T Bhoobalan, IAS
+ ಶ್ರೀ ಟಿ ಭೂಪಾಲನ್, ಭಾ.ಆ.ಸೇ.
+ ಮುಖ್ಯ ಕಾರ್ಯನಿರ್ವಾಹಕ ಅಧಿಕಾರಿ
+ Chief Executive Officer
+ ceoceg@karnataka.gov.in
+
+ Sri. Siddalinga Reddy, KAS
+ ಶ್ರೀ. ಸಿದ್ದಲಿಂಗ ರೆಡ್ಡಿ, ಕ.ಆ.ಸೇ.
+ Administrative Officer,Sakala Mission
+ ಆಡಳಿತಾಧಿಕಾರಿ, ಸಕಾಲ ಮಿಷನ್
+ pdpgrs@karnataka.gov.in
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘PrajaSeva Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಪ್ರಜಾಸೇವಾ ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## 
+ Change Password
+ ಗುಪ್ತಪದ ಬದಲಿಸಿ
+
+ ×
+
+ Current Password:*
+ ಪ್ರಸ್ತುತ ಗುಪ್ತಪದ: * 
+
+ OTP:*
+ ಒಟಿಪಿ: * 
+
+ Get OTPಒಟಿಪಿ ಪಡೆಯಿರಿ
+
+ New Pasword:*
+ ಹೊಸ ಗುಪ್ತಪದ: * 
+
+ Close
+
+ Saveಉಳಿಸಿ
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## 
+ Change Password
+ ಗುಪ್ತಪದ ಬದಲಿಸಿ
+
+ ×
+
+ Current Password:*
+ ಪ್ರಸ್ತುತ ಗುಪ್ತಪದ: * 
+
+ OTP:*
+ ಒಟಿಪಿ: * 
+
+ Get OTPಒಟಿಪಿ ಪಡೆಯಿರಿ
+
+ New Pasword:*
+ ಹೊಸ ಗುಪ್ತಪದ: * 
+
+ Close
+
+ Saveಉಳಿಸಿ
+
+## 
+ Change Password
+ ಗುಪ್ತಪದ ಬದಲಿಸಿ
+
+ ×
+
+ Current Password:*
+ ಪ್ರಸ್ತುತ ಗುಪ್ತಪದ: * 
+
+ OTP:*
+ ಒಟಿಪಿ: * 
+
+ Get OTPಒಟಿಪಿ ಪಡೆಯಿರಿ
+
+ New Pasword:*
+ ಹೊಸ ಗುಪ್ತಪದ: * 
+
+ Close
+
+ Saveಉಳಿಸಿ
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+## 
+ Change Password
+ ಗುಪ್ತಪದ ಬದಲಿಸಿ
+
+ ×
+
+ Current Password:*
+ ಪ್ರಸ್ತುತ ಗುಪ್ತಪದ: * 
+
+ OTP:*
+ ಒಟಿಪಿ: * 
+
+ Get OTPಒಟಿಪಿ ಪಡೆಯಿರಿ
+
+ New Pasword:*
+ ಹೊಸ ಗುಪ್ತಪದ: * 
+
+ Close
+
+ Saveಉಳಿಸಿ
+
+## Choose
+
+ ×
+
+ ‘Grievance’ - Related to Govt Scheme/Service (will be routed to LMFs)
+ ಸರ್ಕಾರಿ ಯೋಜನೆ/ಸೇವೆಗೆ ಸಂಬಂಧಿಸಿದ 'ಕುಂದುಕೊರತೆ' (ಕ್ಷೇತ್ರ ಅನುಷ್ಠಾನಾಧಿಕಾರಿ (L1) ಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ ‘General Request/Request’ – ‘Will be routed to Department's secretary/HoD’
+ ‘ಸಾಮಾನ್ಯ ಕೋರಿಕೆ /ಮನವಿ’ – (ಇಲಾಖಾ ಕಾರ್ಯದರ್ಶಿ/ಇಲಾಖಾ ಮುಖ್ಯಸ್ಥರಿಗೆ ರವಾನೆಯಾಗುತ್ತದೆ) 
+
+ Close
+
+ ಹಕ್ಕುಸ್ವಾಮ್ಯ ನೀತಿCopyright Policy
+ ಖಾಸಗಿತನ ನೀತಿPrivacy Policy
+
+ ಬಾಹ್ಯ ಜಾಲತಾಣ ಸಂಪರ್ಕ ನೀತಿExternal linking Policy 
+ ಭದ್ರತಾ ನೀತಿSecurity Policy
+ ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳುTerms and Conditions
+ ಸಹಾಯHelp
+ ಪರದೆ ವಾಚಕScreen Reader Access
+ ಜಾಲತಾಣದ ಉತ್ತಮ ವೀಕ್ಷಣೆಗೆ ಕೆಳಗಿನ ಬ್ರೌಸರ್ ಗಳನ್ನು ಉಪಯೋಗಿಸಿ Site Best Viewed in browsers given below
+
+## About Us
+
+ ×
+
+ Close
+
+## 
+ ಹಕ್ಕು ಸ್ವಾಮ್ಯ ನೀತಿ
+ Copyright Policy
+
+ ×
+
+ Material featured on this site may be reproduced free of charge in any format or media without requiring specific permission. This is subject to the material being reproduced accurately and not being used in a derogatory manner or in a misleading context. Where the material is being published or issued to others, the source must be prominently acknowledged.However, the permission to reproduce this material does not extend to any material on this site, which is explicitly identified as being the copyright of a third party. Authorisation to reproduce such material must be obtained from the copyright holders concerned.
+
+ ಹಕ್ಕು ಸ್ವಾಮ್ಯ ನೀತಿ
+ (ಪ್ರಕಟಿತ ಮಾಹಿತಿ ಮುಕ್ತ ಬಳಕೆಗೆ ಲಭ್ಯವಿದ್ದರೆ)
+
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾಗಿರುವ ಮಾಹಿತಿಯನ್ನು ಮರು ಪ್ರಕಟಿಸಲು ಇ-ಮೇಲ್ ಮೂಲಕ ನಮಗೆ ಅಥವಾ ಜಾಲತಾಣ ಒಡೆತನದ ಸಂಸ್ಥೆಗೆ ತಿಳಿಸಿ ಮುಕ್ತವಾಗಿ ಬಳಸಿಕೊಳ್ಳಬಹುದು.
+
+ ಮಾಹಿತಿಯನ್ನು ಯಥಾವತ್ತಾಗಿ ಮರುಪ್ರಕಟಿಸಬಹುದೇ ಹೊರತು ಅದನ್ನು ತಿರುಚುವುದಕ್ಕಾಗಲಿ ಅಥವಾ ದಾರಿ ತಪ್ಪಿಸುವ ವಿಧಾನದಲ್ಲಿ ಬಳಕೆ ಮಾಡುವಂತಿಲ್ಲ.
+
+ ಮರು ಪ್ರಕಟಿಸುವಾಗ ಮತ್ತು ಮರು ಪ್ರಕಟಣೆಗೆ ಶಿಫಾರಸ್ಸು ಮಾಡುವಾಗ ಮಾಹಿತಿಯ ಮೂಲವನ್ನು ನಮೂದಿಸಬೇಕು.
+
+ ಮೂರನೇ ವ್ಯಕ್ತಿ ಮರು ಪ್ರಕಟಿಸಲು ಅವಕಾಶವಿರುವುದಿಲ್ಲ. ಒಂದು ವೇಳೆ ಮೂರನೇ ವ್ಯಕ್ತಿ ಮರು ಪ್ರಕಟಿಸಲು ಬಯಸಿದರೆ ಹಕ್ಕುಸ್ವಾಮ್ಯ ಹೊಂದಿರುವವರ ಅನುಮತಿ ಪಡೆದುಕೊಳ್ಳಬೇಕು.
+
+ ಹಕ್ಕುಸ್ವಾಮ್ಯ ನೀತಿ
+ (ಪ್ರಕಟಿತ ವಿಷಯಗಳ ಮರುಬಳಕೆಗೆ ನಿಬಂಧನೆಗಳಿದ್ದರೆ)
+
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾಗಿರುವ ಮಾಹಿತಿಯು ಹಕ್ಕುಸ್ವಾಮ್ಯಕ್ಕೆ ಒಳಪಟ್ಟಿರುವುದರಿಂದ ಅವುಗಳ ಮರು ಪ್ರಕಟಣೆಗೆ ಇ - ಆಡಳಿತ ಕೇಂದ್ರ ಇಲಾಖೆಯ ಅನುಮತಿ ಕಡ್ಡಾಯವಾಗಿದೆ.
+
+ ಅನುಮತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ಗೆ ಇ-ಮೇಲ್ ಮೂಲಕ ಮನವಿ ಮಾಡಬಹುದು.
+
+ Close
+
+## ಖಾಸಗಿತನ ನೀತಿPrivacy Policy
+
+ ×
+
+ Thanks for visiting website of PGRS, and reviewing our privacy policy.
+
+ We collect no personal information, like names or addresses, when you visit our website or mobile app. If you choose to provide that information to us, it is only used to fulfil your request for information.
+
+ We do collect some technical information when you visit to make your visit seamless. The section below explains how we handle and collect technical information when you visit our website or mobile app.
+
+ Information collected and stored automatically.
+
+ When you browse, read pages, or download information on this website, we automatically gather and store certain technical information about your visit.
+
+ This information never identifies who you are. The information we collect and store about your visit is listed below:
+
+ The Internet domain of your service provider (e.g. mtnl.net.in) and IP address (an IP address is a number that is automatically assigned to your computer whenever you are surfing the web) from which you access our website or mobile app.
+
+ The type of browser (such as Firefox, Netscape, or Internet Explorer) and operating system (Windows, Linux) used to access our site.
+
+ The date and time you access/accessed our site.
+
+ The pages/URLs you have visited, and If you reached this website from another website, the address of that referring website.
+
+ This information is only used to help us make the site more useful for you. With this data, we learn about the number of visitors to our site and the types of technology our visitors use. We never track or record information about individuals and their visits.
+
+ (ಜಾಲತಾಣವು ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಸಂಗ್ರಹಿಸದೇ ಇದ್ದರೆ)
+
+ ಸಾಮಾನ್ಯ ನಿಯಮಾನುಸಾರ, ಸಂದರ್ಶಕರು ಈ ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದಾಗ ಅವರ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಈ ಜಾಲತಾಣ ಅಥವಾ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನ್ನಲ್ಲಿ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ಸಂದರ್ಶಕರು ತಾವಾಗೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನೀಡಿದರೆ ಮಾತ್ರ ಪಡೆಯಲಾಗುತ್ತದೆ.
+
+## ಸಂದರ್ಶಕರ ಮಾಹಿತಿ
+
+ ಸಂದರ್ಶಕರು ಈ ಜಾಲತಾಣಕ್ಕೆ ಸಂದರ್ಶಿಸಿರುವುದನ್ನು ಸಾಂಖಿಕವಾಗಿ ದಾಖಲಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಈ ಜಾಲತಾಣಕ್ಕೆ ನೀವು ಭೇಟಿ ನೀಡುವಾಗ ಉಪಯೋಗಿಸಿದ ಬ್ರೌಸರ್, ಸರ್ವರ್ ಮತ್ತು ಡೊಮೇನ್, ದಿನಾಂಕ ಮತ್ತು ಸಮಯ, ಡೌನ್ಲೋಡ್ ಮಾಡಿಕೊಂಡ ದಾಖಲೆಗಳನ್ನು ದಾಖಲಿಸಲಾಗುತ್ತದೆ. ಆದರೆ, ಸಂದರ್ಶಕರ ಗುರುತು ಮತ್ತು ಅವರ ಬ್ರೌಸಿಂಗ್ ಚಟುವಟಿಕೆಗಳನ್ನು ನಾವು ಗುರುತಿಸುವುದಿಲ್ಲ (ನ್ಯಾಯಾಲಯಗಳು ವಾರೆಂಟ್ ಮೂಲಕ ಸಂದರ್ಶಕರ ವಿವರ ಪರೀಕ್ಷಿಸಲು ಬಯಸಿದ ಸಂದರ್ಭಹೊರತು ಪಡೆಸಿ.)
+
+## ಕುಕೀಸ್
+
+ ಸಂದರ್ಶಕರು ಜಾಲತಾಣದಲ್ಲಿ ಮಾಹಿತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳುವಾಗ ಜಾಲತಾಣಗಳು ತಂತ್ರಾಂಶದ ತುಣುಕನ್ನು ನೀಡುತ್ತವೆ. ಅದಕ್ಕೆ ಕುಕೀಸ್ ಎನ್ನಲಾಗುತ್ತದೆ. ಅಂತಹ ಯಾವುದೇ ಕುಕೀಸ್ ಗಳನ್ನು ಈ ಜಾಲತಾಣದಲ್ಲಿ ಅಥವಾ ಮೊಬೈಲ್ ಅಪ್ಲಿಕೇಶನಲ್ಲಿ ಬಳಸಲಾಗಿಲ್ಲ.
+
+## ಇ-ಮೇಲ್ ನಿರ್ವಹಣೆ
+
+ ಸಂದರ್ಶಕರು ಸಂದೇಶಗಳನ್ನು ಕಳುಹಿಸಿದಾಗ ಮಾತ್ರ ಆ ಕ್ಷಣಕ್ಕೆ ಅವರ ಇ-ಮೇಲ್ ಧಾಖಲಾಗುತ್ತದೆ ಮತ್ತು ಅವರಿಗೆ ಮಾಹಿತಿಯನ್ನು ನೀಡುವುದಕ್ಕೆ ಮಾತ್ರ ಅದನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಅದನ್ನು ಕಾಂಟ್ಯಾಕ್ಟ್ ಲಿಸ್ಟ್ ನಲ್ಲಿ ಸೇರಿಸಿಕೊಳ್ಳಲಾಗುವುದಿಲ್ಲ ಮತ್ತು ಇನ್ಯಾವುದೇ ಚಟುವಟಿಕೆಗೆ ಅದನ್ನು ಬಳಸಿಕೊಳ್ಳಲಾಗುವುದಿಲ್ಲ. ಸಂದರ್ಶಕರ ಗಮನಕ್ಕೆ ತಾರದೆ ಅದನ್ನು ಬಹಿರಂಗಪಡಿಸುವುದಿಲ್ಲ.
+
+## ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ಸಂಗ್ರಹ
+
+ ಸಂದರ್ಶಕರು ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಕೇಳಿದರೆ ಅಥವಾ ತಿಳಿಸಿದರೆ ಅದನ್ನು ಹೇಗೆ ಉಪಯೋಗಿಸಲಾಗುವುದು ಎನ್ನುವುದನ್ನು ತಿಳಿಸಲಾಗುತ್ತದೆ. ಇಲ್ಲಿ ತಿಳಿಸಲಾಗುವ ಮಾಹಿತಿಯಲ್ಲಿ ನಿಮಗೆ ನಂಬಿಕೆ ಬಾರದೇ ಇದ್ದಲ್ಲಿ ಅಥವಾ ಆ ವಿಚಾರಗಳ ಕುರಿತು ಅಭಿಪ್ರಾಯಗಳನ್ನು ವ್ಯಕ್ತಪಡಿಸಬಯಸಿದರೆ “ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ” ವಿಭಾದಲ್ಲಿರುವ ವೆಬ್ ಮಾಸ್ಟರ್ ಗಳನ್ನು ಸಂಪರ್ಕಿಸುವುದು ಅವಶ್ಯವಾಗಿದೆ.
+
+ ಸೂಚನೆ: ‘ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ’ ಎನ್ನುವ ಗೌಪ್ಯ ಹೇಳಿಕೆಯಲ್ಲಿ ನಿಮ್ಮ ಗುರುತು ಅಥವಾ ಸುಲಭವಾಗಿ ಗುರುತಿಸಲು ಸಹಕರಿಸುವ ಅಂಶಗಳನ್ನು ನಮೂದಿಸಲಾಗಿರುತ್ತದೆ.
+
+## ಸಂದರ್ಶಕರು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿ ನೀಡಿದರೆ
+
+ ಇಲಾಖೆ ಸಂದರ್ಶಕರ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ಒಂದು ವೇಳೆ ಸಂದರ್ಶಕರು ತಮ್ಮ ಪ್ರತಿಕ್ರಿಯೆಗೆ ಮರು ಪ್ರತಿಕ್ರಿಯೆ, ಹಿಮ್ಮಾಹಿತಿ, ಕೇಳಿದ ಪ್ರಶ್ನೆಗಳಿಗೆ ಉತ್ತರ ಪಡೆಯಲು ಬಯಸಿ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯಾದ ಇ-ಮೇಲ್, ಅಂಚೆ ವಿಳಾಸವನ್ನು “ಸಬ್ಮಿಟ್(submit)” ಮಾಡಿದರೆ ಮಾತ್ರ ಆ ಮಾಹಿತಿಯನ್ನು ಮರು ಪ್ರತಿಕ್ರಿಯೆ ಉದ್ದೇಶಕ್ಕಾಗಿ ಪಡೆದುಕೊಳ್ಳಲಾಗುತ್ತದೆ. ಸಂದರ್ಶಕರು ಕೇಳಿದ ಮಾಹಿತಿಯು ಬೇರೊಂದು ಇಲಾಖೆ ಅಥವಾ ಏಜೆನ್ಸಿಗೆ ಸಂಬಂಧಿಸಿದ್ದರೆ ಅವರೊಂದಿಗೆ ಸಂದರ್ಶಕರ ಮಾಹಿತಿಯನ್ನು ಹಂಚಿಕೊಳ್ಳಲಾಗುವುದು. ಕಾನೂನಿಗೆ ನಿಮ್ಮ ಮಾಹಿತಿ ಅವಶ್ಯವಾಗಿದ್ದರೆ ಆಗಲೂ ಹಂಚಿಕೊಳ್ಳಬಹುದು.
+
+ ಖಾಸಗಿ ಅಥವಾ ಲಾಭದಾಯಕ ವ್ಯವಹಾರದ ಉದ್ದೇಶಕ್ಕೆ ಸಂದರ್ಶಕರ ವಿವರವನ್ನು ಸಿದ್ಧಪಡಿಸುವುದಾಗಲಿ ಅಥವಾ ಸಂಗ್ರಹಿಸುವುದಾಗಲಿ ಇಲಾಖೆ ಮಾಡುವುದಿಲ್ಲ. ಪ್ರಶ್ನೆಗಳನ್ನು ಕೇಳುವುದಕ್ಕೆ ಮತ್ತು ಕಮೆಂಟ್ ಮಾಡುವುದಕ್ಕೆ ಸಂದರ್ಶಕರ ಇ-ಮೇಲ್ ನೀಡುವುದು ಕಡ್ಡಾಯವಾಗಿರುತ್ತದೆ, ಅದರ ಹೊರತು ಯಾವುದೇ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ನೀಡುವುದಕ್ಕೆ ಇಲಾಖೆ ಪ್ರೋತ್ಸಾಹಿಸುವುದಿಲ್ಲ.
+
+## ಜಾಲತಾಣ ಸುರಕ್ಷತೆ
+
+ ಈ ಸರ್ಕಾರಿ ಜಾಲತಾಣದ ಮಾಹಿತಿಯನ್ನು ಎಲ್ಲರಿಗೂ ನೀಡುವುದಕ್ಕೆ, ಅನಧಿಕೃತ ಬಳಕೆದಾರರು ಜಾಲತಾಣ ಪ್ರವೇಶಿಸುವುದು, ಜಾಲತಾಣದಲ್ಲಿನ ಮಾಹಿತಿಯನ್ನು ತಿರುಚುವುದು ಅಥವಾ ಹಾನಿಮಾಡುವುದನ್ನು ತಡೆಯುವುದಕ್ಕೆ ಮತ್ತು ಜಾಲತಾಣದ ಭದ್ರತೆ ದೃಷ್ಠಿಯಿಂದ ಹಾಗೂ ಸಂಪರ್ಕದಟ್ಟಣೆ ನಿವಾರಣೆಗಾಗಿ ಕಮರ್ಷಿಯಲ್ ಸಾಫ್ಟವೇರ್ ಪ್ರೋಗ್ರಾಮ್ ಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ.
+
+ ಅಧಿಕೃತ ಕಾನೂನು ಸಂಸ್ಥೆಗಳನ್ನು ಹೊರತುಪಡೆಸಿ, ಸಂದರ್ಶಕರ ಅಥವಾ ಬಳಕೆದಾರನ್ನು ವೈಯಕ್ತಿಕವಾಗಿ ಗುರುತಿಸಲು ಯಾವುದೇ ಪ್ರಯತ್ನಗಳನ್ನು ಮಾಡಲ್ಪಡುವುದಿಲ್ಲ. ಸಂದರ್ಶಕರ ಮಾಹಿತಿಯು ನಿಯಮಿತ ಅಳಿಸುವಿಕೆಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ.
+
+ ಅನಧಿಕೃತರು ಈ ಜಾಲತಾಣದಲ್ಲಿ ಮಾಹಿತಿಯನ್ನು ಸೇರಿಸುವುದು, ಬದಲಾಯಿಸುವುದು ಕಾನೂನು ಬಾಹೀರವಾಗಿದ್ದು, ಮಾಹಿತಿ ತಂತ್ರಜ್ಞಾನ ಕಾಯಿದೆ(2000)ರ ಅಡಿಯಲ್ಲಿ ದಂಡನಾರ್ಹವಾಗಿದೆ.
+
+ Close
+
+## ಬಾಹ್ಯ ಜಾಲತಾಣ ಸಂಪರ್ಕ ನೀತಿExternal linking Policy
+
+ ×
+
+ We do not object to you linking directly to the information that is hosted on our site and no prior permission is required for the same. However, we would like you to inform us about any links provided to our site so that you can be informed of any changes or updations therein. Also, we do not permit our pages to be loaded into frames on your site. Our Department’s pages must load into a newly opened browser window of the user.
+
+ ಬಾಹ್ಯ ಜಾಲತಾಣ ಸಂಪರ್ಕ ನೀತಿ (ಸಂಬಂಧಿತ ಇಲಾಖೆ ತಮ್ಮ ಜಾಲತಾಣದಲ್ಲಿ ಹೈಪರ್ಲಿಂಕ್ ಮಾಡಲು ಅನುಮತಿ ಬೇಕಿಲ್ಲವಾದರೆ)
+ ನಮ್ಮ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾದ ಮಾಹಿತಿಯನ್ನು ನೇರವಾಗಿ ಲಿಂಕ್ ಮಾಡುವುದಕ್ಕೆ ಯಾವುದೇ ಆಕ್ಷೇಪ ಇರುವುದಿಲ್ಲ.
+ ನಮ್ಮ ಪುಟಗಳು ನಿಮ್ಮ ಜಾಲತಾಣದ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ಪ್ರಕಟವಾಗುವುದನ್ನು ನಾವು ಬಯಸುವುದಿಲ್ಲವಾದ್ದರಿಂದ ಬಳಕೆದಾರರಿಗೆ ಅದು ಪ್ರತ್ಯೇಕ ವಿಂಡೋನಲ್ಲಿ ತೆರೆಯುವಂತೆ ಇರಬೇಕು.
+ ಬಾಹ್ಯ ಜಾಲತಾಣ ಸಂಪರ್ಕ ನೀತಿ (ಇಲಾಖೆ ಜಾಲತಾಣದಲ್ಲಿ ಹೈಪರ್ಲಿಂಕ್ ಮಾಡಲು ಅನುಮತಿ ಕಡ್ಡಾಯವಾಗಿದ್ದರೆ)
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಯಾವುದೇ ಹೈಪರ್ಲಿಂಕ್ ಗಳನ್ನು ನೀಡುವುದು ಮತ್ತು ಅದರ ಸ್ವರೂಪವನ್ನು ತಿಳಿಸುವುದಕ್ಕೆ ಅನುಮತಿ ಕಡ್ಡಾಯವಾಗಿರುತ್ತದೆ.
+ ಗೆ ಇ-ಮೇಲ್ ಮೂಲಕ ಮನವಿ ಮಾಡಿ ಇ - ಆಡಳಿತ ಕೇಂದ್ರ ಇಲಾಖೆಯ ಅನುಮತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಬಹುದು.
+ ಸರ್ಕಾರಿ ಜಾಲತಾಣಗಳನ್ನು ಬಿಡುವ ಮುನ್ನ ನೀಡಬೇಕಾದ ಸೂಚನೆ ಈ ಸಂಪರ್ಕಕೊಂಡಿ ಬೇರೊಂದು ಜಾಲತಾಣ ತೆರೆಸುತ್ತದೆ. ಆ ಜಾಲತಾಣದಲ್ಲಿನ ವಿಷಯ ವಸ್ತುಗಳ ಕುರಿತು ಹೆಚ್ಚಿನ ಮಾಹಿತಿ ಬೇಕಾದರೆ, ಅದೇ ಜಾಲತಾಣದಲ್ಲಿ ನಮೂದಾಗಿರುವ ಸಂಬಂಧಿತರನ್ನು ಸಂಪರ್ಕಿಸುವುದು.
+
+ Close
+
+## ಭದ್ರತಾ ನೀತಿSecurity Policy
+
+ ×
+
+ For site security purposes and to ensure that this service remains available to all users, this Government computer system employs commercial software programs to monitor network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage.
+
+ Except for authorized law enforcement investigations, no other attempts are made to identify individual users or their usage habits. Raw data logs are used for no other purposes and are scheduled for regular deletion.
+
+ Unauthorized attempts to upload information or change information on this service are strictly prohibited and may be punishable under the Indian IT Act (2000).
+
+ ಈ ಸರ್ಕಾರಿ ಜಾಲತಾಣವು ಎಲ್ಲರ ಬಳಕೆಗೆ ನೀಡುವುದಕ್ಕೆ, ಅನಧಿಕೃತ ಬಳಕೆದಾರರು ಜಾಲತಾಣ ಪ್ರವೇಶಿಸುವುದು, ಜಾಲತಾಣದಲ್ಲಿನ ಮಾಹಿತಿಯನ್ನು ತಿರುಚುವುದು ಅಥವಾ ಹಾನಿ ಮಾಡುವುದನ್ನು ತಡೆಯುವುದಕ್ಕೆ ಮತ್ತು ಜಾಲತಾಣದ ಭದ್ರತೆ ದೃಷ್ಠಿಯಿಂದ ಹಾಗೂ ಸಂಪರ್ಕ ದಟ್ಟಣೆ ನಿವಾರಣೆಗಾಗಿ ಕಮರ್ಷಿಲ್ ಸಾಫ್ಟವೇರ್ ಪ್ರೋಗ್ರಾಮ್ ಗಳನ್ನು ಬಳಸಲಾಗುತ್ತದೆ. ಅಧಿಕೃತ ಕಾನೂನ ಸಂಸ್ಥೆಗಳನ್ನು ಹೊರತು ಪಡೆಸಿ, ಸಂದರ್ಶಕರ ಅಥವಾ ಬಳಕೆದಾರನ್ನು ವೈಯಕ್ತಿಕವಾಗಿ ಗುರುತಿಸಲು ಯಾವುದೇ ಪ್ರಯತ್ನಗಳು ಮಾಡಲ್ಪಡುವುದಿಲ್ಲ. ಮಾಹಿತಿಯು ನಿಯಮಿತ ಅಳಿಸುವಿಕೆಗೆ ಒಳಪಟ್ಟಿರುತ್ತದೆ.
+
+ Close
+
+## ನಿಯಮಗಳು ಮತ್ತು ಷರತ್ತುಗಳುTerms And Conditions
+
+ ×
+
+ This website is designed, developed and maintained by Centre for Smart Governance, Government of Karnataka.
+
+ Though all efforts have been made to ensure the accuracy and currency of the content on this website, the same should not be construed as a statement of law or used for any legal purposes. In case of any ambiguity or doubts, users are advised to verify/check with the Department(s) and/or other source(s), and to obtain appropriate professional advice.
+
+ Under no circumstances will this Department be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use, of data, arising out of or in connection with the use of this website.
+
+ These terms and conditions shall be governed by and construed in accordance with the Indian Laws. Any dispute arising under these terms and conditions shall be subject to the jurisdiction of the courts of India.
+
+ The information posted on this website could include hypertext links or pointers to information created and maintained by non-Government/private organisations. PGRS is providing these links and pointers solely for your information and convenience. When you select a link to an outside website, you are leaving the PGRS website and are subject to the privacy and security policies of the owners/sponsors of the outside website.
+
+ PGRS, does not guarantee the availability of such linked pages at all times.
+
+ PGRS, cannot authorise the use of copyrighted materials contained in linked websites. Users are advised to request such authorisation from the owner of the linked website.
+
+ PGRS, does not guarantee that linked websites comply with Indian Government Web Guidelines.
+
+ ಜಾಲತಾಣದ ವಿನ್ಯಾಸ, ಅಭಿವೃದ್ಧಿ ಮತ್ತು ನಿರ್ವಹಣೆ: ಸೆಂಟರ್ ಫಾರ್ ಸ್ಮಾರ್ಟ್ ಗವರ್ನನ್ಸ್, (ಸಿ ಎಸ್ ಜಿ ), ಕರ್ನಾಟಕ ಸರ್ಕಾರ.
+
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾದ ಮಾಹಿತಿಯ ನಿಖರತೆ ಮತ್ತು ಸ್ಪಷ್ಟತೆಗೆ ಪ್ರಯತ್ನ ಮಾಡಲಾಗಿದೆ. ಇವುಗಳನ್ನು ಕಾನೂನಾತ್ಮಕ ವಿಷಯಕ್ಕೆ ಬಳಸಿಕೊಳ್ಳುವಂತಿಲ್ಲ. ಅಸ್ಪಷ್ಟತೆ, ಅನುಮಾಗಳಿದ್ದರೆ ಸಂಬಂಧಿತ ಇಲಾಖೆ, ವಿಷಯ ಪರಿಣಿತರು ಅಥವಾ ಇತರೆ ಮೂಲದಿಂದ ಪರಿಹರಿಸಿಕೊಳ್ಳಬಹುದು.
+
+ ಈ ಜಾಲತಾಣ ಸಂಪರ್ಕದಿಂದ ಉದ್ಭವಿಸುವ ತೊಂದರೆಗಳಿಂದ ಉಂಟಾಗುವ ಯಾವುದೇ ಹಾನಿ ಅಥವಾ ನಷ್ಟಕ್ಕೆ ಮಾಲಿಕತ್ವ ಹೊಂದಿರುವ ಇಲಾಖೆ ಹೊಣೆಯಾಗಿರುವುದಿಲ್ಲ ಮತ್ತು ಅದಕ್ಕೆ ಪರಿಹಾರವನ್ನು ನೀಡಲಾಗುವುದಿಲ್ಲ.
+
+ ಈ ಕರಾರು ಮತ್ತು ಷರತ್ತುಗಳನ್ನು ಭಾರತೀಯ ಕಾನೂನಿನ ಅಡಿಯಲ್ಲಿ ರೂಪಿಸಲಾಗಿದೆ. ಇವುಗಳಿಂದ ಯಾವುದೇ ಗೊಂದಲಗಳು ಉದ್ಭವಿಸಿದರೆ ನ್ಯಾಯಾಲಯದಲ್ಲಿ ಮಾತ್ರ ಪರಿಹರಿಸಿಕೊಳ್ಳಬಹುದು.
+
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾದ ಮಾಹಿತಿಯೊಂದಿಗೆ ಸರ್ಕಾರೇತರ/ ಖಾಸಗಿ ಸಂಸ್ಥೆಗಳು ನಿರ್ವಹಿಸುತ್ತಿರುವ ಬಾಹ್ಯ ಮಾಹಿತಿ ಅಥವಾ ಪಾಯಿಂಟರ್ ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿರಬಹುದು. ಇಲಾಖೆಯು ಮಾಹಿತಿ ನೀಡುವ ಅನುಕೂಲಕ್ಕಾಗಿ ಮಾತ್ರ ಅವುಗಳನ್ನು ಸಂಪರ್ಕಿಸಿರುತ್ತದೆ. ಲಿಂಕ್ ಗಳನ್ನು ಸಂಪರ್ಕಿಸಿದಾಗ ಖಾಸಗಿತನ ನೀತಿ, ಸುರಕ್ಷತಾ ನೀತಿಗೆ ಅನುಸಾರ ……… …………….ಇಲಾಖೆಯ ಈ ಜಾಲತಾಣದಿಂದ ಸಂದರ್ಶಕರು ಹೊರಹೋಗುವ ಅಥವಾ ಬೇರೊಂದು ವಿಂಡೋ ತೆರೆದುಕೊಳ್ಳುವ ಸಂದರ್ಭ ಉಂಟಾಗಬಹುದು.
+
+ ಇಲಾಖೆಯು ಈ ಜಾಲತಾಣದಲ್ಲಿನ ಬಾಹ್ಯಜಾಲತಾಣ ಕೊಂಡಿಗಳು ಎಲ್ಲ ಕಾಲಕ್ಕೂ ಕ್ರಿಯಾಶೀಲವಾಗಿರುವ ಭರವಸೆಯನ್ನು ನೀಡುವುದಿಲ್ಲ.
+
+ ಸಂಪರ್ಕಿತ ಬಾಹ್ಯ ಜಾಲತಾಣಗಳಲ್ಲಿನ ಹಕ್ಕು ಸ್ವಾಮ್ಯ ಮಾಹಿತಿಯ ಬಳಕೆಗೆ ಇಲಾಖೆ ಜವಾಬ್ದಾರರಾಗಿರುವುದಿಲ್ಲ. ಅಲ್ಲಿನ ಮಾಹಿತಿಯ ಬಳಕೆಗೆ ಸಂಬಂಧಿತರಿಂದ ಅನುಮತಿ ಪಡೆಯಬೇಕು.
+
+ ಸಂಪರ್ಕಿತ ಬಾಹ್ಯ ಜಾಲ ತಾಣಗಳು ಕೇಂದ್ರ ಸರ್ಕಾರದ ಜಾಲತಾಣ ಮಾರ್ಗದರ್ಶಿಗಳು ಅಥವಾ ಇತರೆ ಜಾಲತಾಣ ರಚನಾ ಮಾನದಂಡಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ರಚೆನೆಯಾಗಿರುವ ಭರವಸೆಯನ್ನು ಇಲಾಖೆ ನೀಡುವುದಿಲ್ಲ.
+
+ *********************************/**************************************
+ ಇಲಾಖೆಯ ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿ ಖಾಸಗಿತನ ನೀತಿಯನ್ನು ಪರಿಶೀಲಿಸಿದ್ದಕ್ಕೆ ಧನ್ಯವಾದಗಳು.
+
+ ಸಂದರ್ಶಕರ ಹೆಸರು, ವಿಳಾಸ, ಇ-ಮೇಲ್, ಮೊಬೈಲ್ ಸಂಖ್ಯೆಗಳನ್ನು ನಾವು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ. ನೀವು ಬಯಸಿದ್ದಲ್ಲಿ ನಿಮಗೆ ನೀಡಬೇಕಾದ ಪ್ರತಿ ಮಾಹಿತಿಗಾಗಿ ಮಾತ್ರ ನಿಮ್ಮ ವಿವರವನ್ನು ಸಂಗ್ರಹಿಸಾಗುತ್ತದೆ. ಸಂದರ್ಶಕರು ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದಾಗ ಕೆಲವು ತಾಂತ್ರಿಕ ಅಂಶಗಳನ್ನು ಈ ಕೆಳಗಿನಂತೆ ಸಂಗ್ರಹಿಸಲಾಗುತ್ತದೆ. ಸ್ವಯಂ ಸಂಗ್ರಹ ಮತ್ತು ಶೇಖರಣೆ
+
+ ಸಂದರ್ಶಕರು ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿ ಮಾಹಿತಿ ಪಡೆದುಕೊಂಡಾಗ ಅಥವಾ ಕಡತಗಳನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡಿಕೊಂಡಾಗ ಮಾತ್ರ ಈ ಕೆಳಗಿನ ಕೆಲವು ತಾಂತ್ರಿಕ ಅಂಶಗಳನ್ನು ಈ ಜಾಲತಾಣದಲ್ಲಿ ಸ್ವಯಂ ಸಂಗ್ರಹವಾಗಬಹುದು.
+
+ ನಿಮಗೆ ಸೇವೆ ನೀಡುತ್ತಿರುವ ಡೊಮೇನ್, ಐಪಿ ಸಂಖ್ಯೆ, ಸಂದರ್ಶಕರು ನಮ್ಮ ಜಾಲತಾಣವನ್ನು ಹೇಗೆ ಪ್ರವೇಶಿಸಿದರು
+
+ ಬ್ರೌಸರ್ ಮತ್ತು ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್
+
+ ಸಂದರ್ಶಕರು ನಮ್ಮ ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದ ಸಮಯ ಮತ್ತು ದಿನಾಂಕ
+
+ ಸಂದರ್ಶಕರು ಮಾಹಿತಿ ಪಡೆದ ಪುಟಗಳು/ಯು.ಎಲ್.ಆರ್
+
+ ಸಂದರ್ಶಕರು ಇನ್ನೊಂದು ಜಾಲತಾಣದ ಮೂಲಕ ಈ ಜಾಲತಾಣಕ್ಕೆ ಸಂದರ್ಶಿಸಿದ್ದರೆ, ಆ ಜಾಲತಾಣದ ವಿಳಾಸ
+
+ ಈ ಮಾಹಿತಿಯು ನಮ್ಮ ಜಾಲತಾಣವನ್ನು ಇನ್ನುಷ್ಟು ಬಳಕೆ ಸ್ನೇಹಿಯನ್ನಾಗಿಸಲು ಉಪಯುಕ್ತವಾಗಿರುತ್ತದೆ. ಇದು ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದ ಸಂದರ್ಶಕರ ಸಂಖ್ಯೆ ಮತ್ತು ಬಳಕೆ ಮಾಡಿದ ತಂತ್ರಜ್ಞಾನವನ್ನು ಮಾತ್ರ ತಿಳಿಸುತ್ತದೆ ಮತ್ತು ಸಂದರ್ಶಕರನ್ನು ಹಿಂಬಾಲಿಸುವುದಾಗಲಿ ಅಥವಾ ಅವರ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನಾಗಲಿ ಸಂಗ್ರಹಿಸಲಾಗುವುದಿಲ್ಲ.
+
+## ಕುಕೀಸ್:
+
+ ಸಂದರ್ಶಕರು ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದಾಗ, ತಂತ್ರಾಂಶದ ಒಂದರ ಸಣ್ಣ ತುಣುಕು ನಿಮ್ಮ ಕಂಪ್ಯೂಟರ್ ನಲ್ಲಿ ಡೌನ್ಲೋಡ್ ಆಗುತ್ತದೆ ಅದನ್ನೇ ಕುಕೀಸ್ ಎನ್ನಲಾಗುತ್ತದೆ. ಕೆಲವೊಂದು ಕುಕೀಸ್ ಗಳು ಭವಿಷ್ಯದಲ್ಲಿ ಸಂದರ್ಶಕರನ್ನು ಗುರುತಿಸಲು ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳುತ್ತವೆ. ಆದರೆ ಈ ಜಾಲತಾಣದಲ್ಲಿ non -persistent cookies ಅಥವಾ per-session cookiesಗಳನ್ನು ಮಾತ್ರ ಬಳಸಲಾಗಿದೆ.
+
+ emo
+
+ Per-session cookie ಅಥವಾ per-session cookiesಗಳು ಕೇವಲ ತಾಂತ್ರಿಕವಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿವಯೇ ಹೊರತು ಸಂದರ್ಶಕರ ವೈಯಕ್ತಿಕ ಮಾಹಿತಿಯನ್ನು ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ ಮತ್ತು ಸಂದರ್ಶನ ಮುಗಿದ ನಂತರೆ ಸ್ವತಃ ಅಳಿಸಲ್ಪಡುತ್ತವೆ. ಈ ಕೂಕೀಗಳು ಮಾಹಿತಿಯನ್ನು ಶಾಶ್ವತವಾಗಿ ಸಂಗ್ರಹಿಸುವುದಿಲ್ಲ ಮತ್ತು ಬಳಕೆದಾರರ ಹಾರ್ಡ್ ಡ್ರೈವ್ ಸಂಗ್ರಹವಾಗುವುದಿಲ್ಲ. ಸಂದರ್ಶಕರು ಜಾಲತಾಣದ ಬಳಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿದಾಗ ಸಕ್ರಿಯವಾಗುವ ಈ ಕೂಕೀಗಳು ಜಾಲತಾಣ ಬಳಕೆಯು ಮುಗಿದ ನಂತರ ನಿಷ್ಕ್ರಿಯವಾಗುತ್ತವೆ.
+
+ Close
+
+## ಸಹಾಯHelp
+
+ ×
+
+ The information available as an attachment is in Portable Document Format (PDF). Though the website is tested in various environments and browsers but to view the information properly, the browser needs to have the required plug-ins or software. For example, the Adobe Acrobat Reader is required to see all the pdfs. In case the system does not have requisite software, it may be downloaded from internet. The table given below depicts the required plug-ins needed to view the information in various file formats. Required Plug-ins / Browsers
+
+## 
+ Help of Various File formats :
+
+ ಜಾಲತಾಣದಲ್ಲಿನ ಪ್ರತಿ ವಿಭಾಗದಲ್ಲಿರುವ ಮಾಹಿತಿಯನ್ನು ಸಂಕ್ಷಿಪ್ತವಾಗಿ ನೀಡಲಾಗಿರುತ್ತದೆ.
+
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾಗಿರುವ ಮಾಹಿತಿಯು ಎಚ್.ಟಿ.ಎಂ.ಎಲ್, ಪಿಡಿಎಫ್ ಅಥವಾ ಜೆಪಿಇಜಿ ಮಾದರಿಯಲ್ಲಿರಬಹುದು. ಪಿ.ಡಿ.ಎಫ್. ದಾಖಲೆಗಳನ್ನು ಓದಲು “ಅಡೊಬೆ ರೀಡರ್” ತಂತ್ರಾಂಶವು ಬಳಕೆದಾರರ ಕಂಪ್ಯೂಟರ್ ಅಥವಾ ಸಿಸ್ಟಮ್ ನಲ್ಲಿ ಇರಬೇಕಾಗಿರುತ್ತದೆ. ತಂತ್ರಾಂಶ ಇಲ್ಲವಾದಲ್ಲಿ http://www.adobe.com/products/acrobat/readstep2.html ಇಲ್ಲಿಗೆ ಲಾಗಿನ್ ಆಗಿ ಉಚಿತವಾಗಿ ತಂತ್ರಾಂಶವನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡಿಕೊಳ್ಳಬಹುದು.
+
+ ಈ ಜಾಲತಾಣದಲ್ಲಿ ಪ್ರಕಟವಾದ ವಿಡಿಯೋ ಅಥವಾ ಆಡಿಯೋ ಕಡತಗಳನ್ನು ವೀಕ್ಷಿಸಲು ಅಡೋಬೆ ಫ್ಲ್ಯಾಶ್ ಪ್ಲೇಯರ್ ತಂತ್ರಾಂಶವು ಬಳಕೆದಾರರ ಕಂಪ್ಯೂಟರ್ ಅಥವಾ ಸಿಸ್ಟಮ್ ನಲ್ಲಿ ಇರಬೇಕಾಗುತ್ತದೆ. ತಂತ್ರಾಂಶವು ಇಲ್ಲವಾದಲ್ಲಿ https://www.adobe.com/products/flashplayer.html ಇಲ್ಲಿಗೆ ಲಾಗಿನ್ ಆಗಿ ಉಚಿತವಾಗಿ ತಂತ್ರಾಂಶವನ್ನು ಡೌನ್ಲೋಡ್ ಮಾಡಿಕೊಳ್ಳಬಹುದು.
+
+ ಅಂಧರಿಗೂ ಈ ಜಾಲತಾಣ ಬಳಕೆ ಸ್ನೇಹಿಯಾಗಿ ರೂಪಿಸಲಾಗಿದೆ. ಅದಕ್ಕಾಗಿ “ಇ-ಸ್ಪೀಕ್” ತಂತ್ರಾಂಶವನ್ನು ಅಥವಾ ಸಮಾನಾಂತರ ತಂತ್ರಾಂಶಗಳನ್ನು (ಜಾಲತಾಣದ ಅಡಿಟಿಪ್ಪಣಿಯಲ್ಲಿರುವ screen reader access ನ್ನು ಪರಿಶೀಲಿಸಿ) ಬಳಕೆದಾರರ ಕಂಪ್ಯೂರ್ ನಲ್ಲಿ ಅಳವಡಿಸಿಕೊಳ್ಳಬೇಕು.
+
+ ವರ್ಡ್, ಎಕ್ಸೆಲ್, ಪವರ್ ಪಾಯಿಂಟ್ ಪ್ರೆಸೆಂಟೆಷನ್ ಗಳಲ್ಲಿನ ಮಾಹಿತಿಯನ್ನು ಪಡೆದುಕೊಳ್ಳಲು ಸಂಬಂಧಿಸಿದ ತಂತ್ರಾಂಶಗಳನ್ನು ಹೊಂದಿರಬೇಕು.
+
+ ಮಾಹಿತಿ ಹುಡುಕುವುದು
+
+ ಬಳಕೆದಾರರಿಗೆ ಅನುಕೂಲವಾಗಲೆಂದು ಈ ಜಾಲತಾಣದಲ್ಲಿ ಆಂತರಿಕ ಮಾಹಿತಿಯನ್ನು ಹುಡುಕುವುದಕ್ಕೆ “ ಇಲ್ಲಿ ಹುಡುಕಿ” ಅವಕಾಶವನ್ನು ನೀಡಲಾಗಿದೆ. ಇಲ್ಲಿ ಕನ್ನಡದಲ್ಲೇ ಅಕ್ಷರ ಜೋಡನೆಗೆ ಅವಕಾಶವಿದೆ. ಕಡ್ಡಾಯವಾಗಿ ಕನ್ನಡ “ಯೂನಿಕೋಡ್ ಫಾಂಟ್” ಗಳನ್ನು ಮಾತ್ರ ಬಳಸಬೇಕು.ಇಂಗ್ಲಿಷ್ ನಲ್ಲೂ ಹುಡುಕುವುದಕ್ಕೆ ಅವಕಾಶವಿದೆ.
+
+ ಅಂತರ್ಜಾಲ ಸೌಲಭ್ಯ
+
+ ಅಂತರ್ಜಾಲ ಸಂಪರ್ಕ ನಿಧಾನವಾಗಿದ್ದಾಗ ಅಥವಾ ಅಸಮರ್ಪಕವಾಗಿದ್ದಾಗ ಜಾಲತಾಣದ ವಿನ್ಯಾಸದಲ್ಲಿ ಬದಲಾವಣೆ ಗೋಚರಿಸಬಹುದು ಅಥವಾ ಉಪ ಉಪಟಗಳು ತೆರೆದುಕೊಳ್ಳದೇ ಇರಬಹುದು.
+
+## 
+ ಮಾಹಿತಿಯನ್ನು ವೀಕ್ಷಿಸಲು ಮತ್ತು ಪಡೆದುಕೊಳ್ಳಲು
+
+ Document Type
+
+ Download (External website that opens in a new window)
+
+ PDF content
+
+ [http://get.adobe.com/reader/] Adobe Acrobat Reader 
+
+ Word files
+
+ [http://www.microsoft.com/downloads/en/details.aspx?familyid=3657CE88-7CFA-457A-9AEC-F4F827F20CAC&displaylang=en] 
+ Word Viewer (in any version till 2003)
+ - Microsoft Office Compatibility Pack for Word (for 2007 version)
+
+ Excel files
+
+ [http://www.microsoft.com/downloads/en/details.aspx?FamilyID=c8378bf4-996c-4369-b347-73edbd03aaf0&displaylang=EN] 
+ Excel Viewer 2003 (in any version till 2003)
+ - Microsoft Office Compatibility Pack for Excel (for 2007 version)
+
+ PowerPoint Presentations
+
+ [http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D3727-43AB-4F24-90B7-A94784AF71A4&displaylang=en] 
+ PowerPoint Viewer 2003 (in any version till 2003)
+ - Microsoft Office Compatibility Pack for PowerPoint (for 2007 version)
+
+ Flash content
+
+ [http://get.adobe.com/flashplayer/] Adobe Flash Player
+
+ Audio Files
+
+ [http://windows.microsoft.com/en-US/windows/downloads/windows-media-player] Windows Media Player
+
+ Close
+
+## ಪರದೆ ವಾಚಕScreen Reader Access
+
+ ×
+
+ The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.
+
+ Following table lists the information about different screen readers:
+
+ ಈ ಜಾಲತಾಣವು “ಜಗತ್ತಿನಾದ್ಯಂತ ಜಾಲ(World Wide Web Consortium -W3C)” ಮತ್ತು ವೆಬ್ ಕಂಟೆಂಟ್ ಅಕ್ಸೆಸಿಬಿಲಿಟಿ ಗೈಡ್ಲೈನ್ (WCAG) ಹಂತ 2.0 ಒಕ್ಕೂಟದಲ್ಲಿ ಕಾರ್ಯ ನಿರ್ವಹಿಸುತ್ತದೆ. ದೃಷ್ಟಿದೌರ್ಬಲ್ಯ ಹೊಂದಿದವರು JAWS, NVDA, SAFA, Supernova and Window-Eyes ನಂತಹ ಮುಂತಾದ ಪರದೆ ವಾಚಕ ತಂತ್ರಾಂಶಗಳನ್ನು ಬಳಸಿಕೊಂಡು ಜಾಲತಾಣದ ಮಾಹಿತಿಯನ್ನು ಧ್ವನಿ ರೂಪದಲ್ಲಿ ಪಡೆದುಕೊಳ್ಳಬಹು. ಈ ಕೆಳಗೆ ಸೂಚಿಸಲಾದ ಪಟ್ಟಿಯಲ್ಲಿ ಪರದೆ ವಾಚಕ ತಂತ್ರಾಂಶಗಳನ್ನು ಹೆಸರಿಸಲಾಗಿದೆ.
+
+ ಕೆಳಗಿನ ಟೇಬಲ್ ವಿವಿಧ ಸ್ಕ್ರೀನ್ ರೀಡರ್ಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿಯನ್ನು ಪಟ್ಟಿ ಮಾಡುತ್ತದೆ:
+
+ Sl. No.
+
+ Screen Reader
+
+ Website
+
+ Free/ Commercial
+
+ 1
+ Screen Access For All (SAFA)
+
+ [http://www.nabdelhi.org/NAB_SAFA.htm] 
+ http://www.nabdelhi.org/NAB_SAFA.htm
+
+ (External website that opens in a new window)
+
+ Free
+
+ 2
+
+ Non Visual Desktop Access (NVDA)
+
+ [http://www.nvda-project.org/] 
+ http://www.nvda-project.org/
+
+ (External website that opens in a new window)
+
+ Free
+
+ 3
+ System Access To Go
+
+ [http://www.satogo.com/] 
+ http://www.satogo.com/
+
+ (External website that opens in a new window)
+
+ Free
+
+ 4
+ Thunder
+
+ [http://www.screenreader.net/] 
+ http://www.screenreader.net/
+
+ (External website that opens in a new window)
+
+ Free
+
+ 5
+ WebAnywhere
+
+ [http://webinsight.cs.washington.edu/] 
+ http://webinsight.cs.washington.edu/
+
+ (External website that opens in a new window)
+
+ Free
+
+ 6
+ HAL
+
+ [http://webinsight.cs.washington.edu/] 
+ http://webinsight.cs.washington.edu/
+
+ (External website that opens in a new window)
+
+ Commercial
+
+ 7
+ JAWS
+
+ [http://www.freedomscientific.com] 
+ http://www.freedomscientific.com
+
+ (External website that opens in a new window)
+
+ Commercial
+
+ 8
+ Supernova
+
+ [http://www.yourdolphin.co.uk] 
+ http://www.yourdolphin.co.uk
+
+ (External website that opens in a new window)
+
+ Commercial
+
+ 9
+ Window-Eyes
+
+ [http://www.gwmicro.com] 
+ http://www.gwmicro.com
+
+ (External website that opens in a new window)
+
+ Commercial
+
+ Content owned and maintained by : Center for eGovernance, Government of Karnataka
+
+ Close
+
+## ಜಾಲತಾಣದ ಉತ್ತಮ ವೀಕ್ಷಣೆಗೆ ಕೆಳಗಿನ ಬ್ರೌಸರ್ ಗಳನ್ನು ಉಪಯೋಗಿಸಿSite Best Viewed in browsers given below
+
+ ×
+
+ The browsers with minimum required versions are:
+
+ Google Chrome Version 87.0 and above
+
+ Mozilla Firefox Version 83.0 and above.
+
+ ಅಗತ್ಯವಿರುವ ಕನಿಷ್ಠ ಆವೃತ್ತಿಗಳನ್ನು ಹೊಂದಿರುವ ಬ್ರೌಸರ್ಗಳು ಹೀಗಿವೆ:
+
+ ಗೂಗಲ್ ಕ್ರೋಮ್ ಆವೃತ್ತಿ 87.0 ಮತ್ತು ಹೆಚ್ಚಿನದು
+
+ ಮೊಜಿಲ್ಲಾ ಫೈರ್ಫಾಕ್ಸ್ ಆವೃತ್ತಿ 83.0 ಮತ್ತು ಹೆಚ್ಚಿನದು.
+
+ Close
+
+## Guidelines
+
+ ×
+
+ Close
+
+ Content and Data Owned & Maintained by :ಮಾಹಿತಿ ಮತ್ತು ದತ್ತಾಂಶ ಮಾಲೀಕತ್ವ ಹಾಗೂ ನಿರ್ವಹಣೆ:
+ [https://ceg.karnataka.gov.in/] 
+ Center for e-Governanceಇ-ಆಡಳಿತ ಕೇಂದ್ರ
+
+ [https://www.karnataka.gov.in/] 
+ ,Government of Karnatakaಕರ್ನಾಟಕ ಸರ್ಕಾರ
+
+ Copyright ©2021. All rights Reserved. Designed and Developed by : 
+ ಹಕ್ಕುಸ್ವಾಮ್ಯ ©2021. ಎಲ್ಲಾ ಹಕ್ಕುಗಳನ್ನು ಕಾಯ್ದಿರಿಸಲಾಗಿದೆ. ವಿನ್ಯಾಸ, ಅಭಿವೃದ್ಧಿ ಹಾಗೂ ತಾಂತ್ರಿಕ ನಿರ್ವಹಣೆ:
+ [https://csg.karnataka.gov.in/] 
+ Centre for Smart Governance (GOK) 
+ ಸೆಂಟರ್ ಫಾರ್ ಸ್ಮಾರ್ಟ್ ಗವರ್ನೆನ್ಸ್,ಕರ್ನಾಟಕ ಸರ್ಕಾರ
+
+ pgrs 
+ Content Last Updated on: 12/10/2026 
+ ಕೊನೆಯದಾಗಿ ಮಾರ್ಪಡಿಸಲಾಗಿದೆ: 12/10/2026

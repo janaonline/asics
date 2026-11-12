@@ -12,6 +12,8 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
+from asics_agent.hosting import can_open
+from asics_agent.legacy_names import current_label
 from asics_agent.scoring import human, workflow
 from asics_agent.scoring.ai import scored_cities
 from asics_agent.scoring.phase2 import phase2_status
@@ -29,7 +31,7 @@ def _file_card(report, path: Path, open_file, key: str) -> None:
             return
         row = buttons.container(horizontal=True)
         if (
-            open_file
+            can_open(open_file)
             and path.suffix == ".xlsx"
             and row.button(
                 "Open",
@@ -104,6 +106,17 @@ def show_report(report: workflow.StepReport, open_file=None, key: str = "report"
             with st.expander(f"Other files ({len(rest)})"):
                 for i, path in enumerate(rest):
                     _file_card(report, path, open_file, f"{key}-o{i}")
+    if report.unregistered:
+        st.warning(
+            f"**Merged, but not in the register ({len(report.unregistered)}).** The AI cannot "
+            "score these yet: " + "; ".join(report.unregistered) + ".",
+            icon=":material/warning:",
+        )
+    if report.skipped:
+        with st.container(border=True):
+            st.markdown(f"**Skipped by your choice ({len(report.skipped)})**")
+            for line in report.skipped:
+                st.markdown(f"- {line}")
     if report.next_steps:
         st.markdown("**What next**")
         st.markdown("\n".join(f"{n}. {step}" for n, step in enumerate(report.next_steps, 1)))
@@ -146,10 +159,39 @@ def _ai_summary(path: str, mtime: float) -> pd.DataFrame:
     return _shown(frame[[c for c in columns if c in frame.columns]])
 
 
+CODE_TITLES: dict[str, str] = {}  # scoring code -> category title ("UPD" -> "ULG"); see _titles
+
+
+def _titles(settings) -> None:
+    """The files and sheets are named by scoring code (UPD is the ULG's); the page says ULG."""
+    from asics_agent.categories import load_categories
+
+    found, _ = load_categories(settings.agent_setup_dir)
+    CODE_TITLES.clear()
+    CODE_TITLES.update({c.scoring_code: c.title for c in found.values()})
+
+
+def _title(code: str) -> str:
+    return CODE_TITLES.get(code, code)
+
+
 def _shown(frame: pd.DataFrame) -> pd.DataFrame:
-    """Score columns mix numbers with "?" / "NA": show them as text."""
+    """Score columns mix numbers with "?" / "NA": show them as text. Scoring codes (UPD) are
+    shown as the category's title (ULG)."""
     mixed = [c for c in frame.columns if frame[c].dtype == object]
-    return frame.astype({c: str for c in mixed}).replace({"nan": "", "None": ""})
+    frame = frame.astype({c: str for c in mixed}).replace({"nan": "", "None": ""})
+    if "Category" in frame:
+        frame = frame.assign(Category=frame["Category"].map(_title))
+    return frame.rename(
+        columns=lambda c: next(
+            (
+                f"{t}{c[len(code) :]}"
+                for code, t in CODE_TITLES.items()
+                if c.startswith(f"{code} (")
+            ),
+            c,
+        )
+    )
 
 
 @st.cache_data(show_spinner=False)
@@ -165,7 +207,7 @@ def _jobs() -> dict:
     return {"current": None}
 
 
-def _start_ai(settings, vertical, codes, cities, practice) -> None:
+def _start_ai(settings, scoring_code, codes, cities, practice) -> None:
     job = {
         "started": datetime.now(),
         "done": 0,
@@ -183,7 +225,7 @@ def _start_ai(settings, vertical, codes, cities, practice) -> None:
         try:
             job["report"] = workflow.ai_score(
                 settings,
-                vertical,
+                scoring_code,
                 codes=codes,
                 cities=cities,
                 practice=practice,
@@ -240,7 +282,7 @@ def _ai_result() -> None:
 def _readiness(settings, register, practice: bool) -> pd.DataFrame:
     outputs = settings.outputs_dir / "practice" if practice else settings.outputs_dir
     scoring = settings.scoring_dir / "practice" if practice else settings.scoring_dir
-    scored = scored_cities(scoring, workflow.step3_vertical(settings))
+    scored = scored_cities(scoring, workflow.step3_category(settings))
     rows = []
     for city in register.values():
         status = phase2_status(dataclasses.replace(settings, outputs_dir=outputs), city.name)
@@ -262,13 +304,35 @@ def _readiness(settings, register, practice: bool) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
-def _ai_section(settings, register_fn) -> None:
-    vertical = workflow.step3_vertical(settings)
-    st.markdown(f"#### AI scoring · {settings.vertical_title}")
+@st.cache_data(show_spinner=False)
+def _template_codes(paths: tuple, mtimes: tuple) -> list[str]:
+    """The question codes of the category's templates (their question sheets)."""
+    from openpyxl import load_workbook
+
+    from asics_agent.scoring.template_import import read_structures
+
+    codes = []
+    for path in paths:
+        try:
+            codes += list(read_structures(load_workbook(path)))
+        except Exception:
+            continue
+    return codes
+
+
+def _ai_section(settings, register_fn, category_picker=None) -> None:
+    scoring_code = workflow.step3_category(settings)
+    st.markdown(f"#### AI scoring · {settings.category_title}")
     st.caption(
         "The AI scores each question from its Step 2 answer and the reviewed Citation Sheet, "
         "with no web research. It must name the Citation ID and quote it word for word; both "
         "are checked. Where Step 2 found no evidence, the row is left for a person."
+    )
+    st.caption(
+        "Each ULG question is answered once per city."
+        if settings.unit == "ulg"
+        else "Each applicable question is answered separately for every parastatal in this "
+        "city. The parastatals can differ between cities."
     )
     practice = st.toggle(
         "Practice with sample data (free; uses the practice cities from Steps 1 and 2)",
@@ -309,21 +373,31 @@ def _ai_section(settings, register_fn) -> None:
     cities = st.multiselect(
         "Cities to score", ready, key="step3-cities", placeholder="Choose cities that are ready"
     )
+    if category_picker:
+        category_picker()  # the category comes after the cities
     template = None
-    if not practice:
+    if settings.scoring_templates:  # the team's templates: the questions are their sheets
+        question_codes = _template_codes(
+            tuple(str(p) for p in settings.scoring_templates),
+            tuple(p.stat().st_mtime for p in settings.scoring_templates if p.exists()),
+        )
+    elif not practice:
         _, templates, _ = workflow._plan(settings)
-        template = templates.get(vertical)
+        template = templates.get(scoring_code)
         if template is None:
             st.error(
-                f"There's no {vertical} scoring workbook on the Verticals sheet of the "
+                f"There's no {scoring_code} scoring workbook on the Categories sheet of the "
                 "assignments workbook (see People's scoring below)."
             )
             return
+        question_codes = list(template.questions)
+    else:
+        question_codes = []
     codes = st.multiselect(
         "Questions (leave empty for all)",
-        list(template.questions) if template else [],
+        question_codes,
         key="step3-codes",
-        disabled=practice,
+        disabled=practice and not settings.scoring_templates,
         placeholder="All questions",
     )
     if soffice() is None:
@@ -342,14 +416,14 @@ def _ai_section(settings, register_fn) -> None:
     ):
 
         def start():
-            _start_ai(settings, vertical, codes or None, cities, practice)
+            _start_ai(settings, scoring_code, codes or None, cities, practice)
             st.rerun()
 
         if practice:
             start()
         else:
             from asics_agent import costs
-            from asics_agent.verticals import load_bank
+            from asics_agent.categories import load_bank
             from ui import confirm_cost
 
             questions, _ = load_bank(settings)
@@ -365,10 +439,15 @@ def _ai_section(settings, register_fn) -> None:
 
 
 def _people_section(settings, open_file) -> None:
+    if settings.scoring_templates:  # the team's templates: upload, check, store, merge
+        import people_page
+
+        people_page.render(settings, open_file)
+        return
     st.markdown("#### People's scoring")
     st.caption(
         "Interns score in Excel; their scores are the golden dataset for checking the AI. For "
-        f"{settings.vertical_title}, each copy includes only cities Step 2 "
+        f"{settings.category_title}, each copy includes only cities Step 2 "
         "has answered, and a **Step 2 evidence** sheet with the citation for every row."
     )
     st.markdown(
@@ -380,8 +459,18 @@ def _people_section(settings, open_file) -> None:
         "it as often as you like."
     )
     row = st.container(horizontal=True)
-    if row.button("Open the assignments workbook", icon=":material/assignment_ind:"):
-        open_file(workflow.assignments_path(settings))
+    assignments = workflow.assignments_path(settings)
+    if can_open(open_file) and row.button(
+        "Open the assignments workbook", icon=":material/assignment_ind:"
+    ):
+        open_file(assignments)
+    row.download_button(
+        "Download the assignments workbook",
+        assignments.read_bytes(),
+        file_name=assignments.name,
+        key="dl-assignments",
+        icon=":material/download:",
+    )
     if row.button("Check workbooks", icon=":material/rule:"):
         with st.spinner("Checking…"):
             st.session_state["scoring-report"] = workflow.check(settings)
@@ -389,7 +478,7 @@ def _people_section(settings, open_file) -> None:
         with st.spinner("Making copies…"):
             st.session_state["scoring-report"] = workflow.prepare(settings)
     if row.button("Merge and calculate", icon=":material/calculate:"):
-        with st.spinner("Merging and calculating (about a minute per vertical)…"):
+        with st.spinner("Merging and calculating (about a minute per category)…"):
             st.session_state["scoring-report"] = workflow.merge(settings)
     if report := st.session_state.get("scoring-report"):
         st.markdown(f"##### {report.title}")
@@ -403,10 +492,10 @@ def _interns(settings, open_file) -> None:
         return
     rows = []
     for a in plan.assignments:
-        path = human.intern_file(settings.scoring_dir, a.vertical, a.intern)
+        path = human.intern_file(settings.scoring_dir, a.category, a.intern)
         rows.append(
             {
-                "Vertical": a.vertical,
+                "Category": a.category,
                 "Intern": a.intern,
                 "Questions": ", ".join(a.questions),
                 "Rows": len(a.rows),
@@ -424,9 +513,20 @@ def _interns(settings, open_file) -> None:
         )
         if picked.selection.rows:
             a = plan.assignments[picked.selection.rows[0]]
-            path = human.intern_file(settings.scoring_dir, a.vertical, a.intern)
-            if path.exists() and st.button(f"Open {path.name}", icon=":material/table_view:"):
-                open_file(path)
+            path = human.intern_file(settings.scoring_dir, a.category, a.intern)
+            if path.exists():
+                row = st.container(horizontal=True)
+                row.download_button(
+                    f"Download {path.name}",
+                    path.read_bytes(),
+                    file_name=path.name,
+                    key=f"dl-copy-{path.name}",
+                    icon=":material/download:",
+                )
+                if can_open(open_file) and row.button(
+                    f"Open {path.name}", icon=":material/table_view:"
+                ):
+                    open_file(path)
         for path in sorted((settings.scoring_dir / "merged").glob("*_human.xlsx")):
             st.markdown(f"**Latest merge · {path.stem.replace('_human', '')}**")
             st.dataframe(
@@ -434,12 +534,24 @@ def _interns(settings, open_file) -> None:
                 hide_index=True,
                 width="stretch",
             )
-            if st.button("Open merged workbook", key=f"open-{path}", icon=":material/table_view:"):
+            row = st.container(horizontal=True)
+            row.download_button(
+                "Download merged workbook",
+                path.read_bytes(),
+                file_name=path.name,
+                key=f"dl-merged-{path.name}",
+                icon=":material/download:",
+            )
+            if can_open(open_file) and row.button(
+                "Open merged workbook", key=f"open-{path}", icon=":material/table_view:"
+            ):
                 open_file(path)
 
 
-def render_step3(settings, open_file, register_fn) -> None:
+def render_step3(settings, open_file, register_fn, category_picker=None) -> None:
     from ui import header
+
+    _titles(settings)
 
     OPEN["file"] = open_file
 
@@ -451,7 +563,7 @@ def render_step3(settings, open_file, register_fn) -> None:
     )
     tabs = st.tabs(["AI scoring", "People's scoring"])
     with tabs[0]:
-        _ai_section(settings, register_fn)
+        _ai_section(settings, register_fn, category_picker)
     with tabs[1]:
         _people_section(settings, open_file)
 
@@ -459,8 +571,15 @@ def render_step3(settings, open_file, register_fn) -> None:
 # -- Scores (view only) --------------------------------------------------------------------
 
 
-def render_scores(settings, open_file) -> None:
+def render_scores(settings, open_file, city: str | None = None) -> None:
     from ui import header
+
+    _titles(settings)
+    if settings.scoring_templates:  # scored in the team's templates: consolidated and compare
+        import compare_page
+
+        compare_page.render(settings, open_file, city)
+        return
 
     header(
         "Scores",
@@ -501,35 +620,51 @@ def render_scores(settings, open_file) -> None:
             numbers = cities[cols].apply(pd.to_numeric, errors="coerce")
             cities[f"ASICS score ({source})"] = numbers.mean(axis=1).round(2)
     st.markdown(
-        "**City scores**: each vertical out of 10; the ASICS score is their average. "
+        "**City scores**: each category out of 10; the ASICS score is their average. "
         "Scores are provisional while main questions are not yet scored."
     )
     st.dataframe(_shown(cities), hide_index=True, width="stretch")
 
-    questions = _sheet(str(path), "Question scores", path.stat().st_mtime)
+    questions = _sheet(str(path), "Question scores", path.stat().st_mtime).rename(
+        columns=current_label  # an older results file has the old header
+    )
     st.markdown("**Question scores**")
     left, mid, right = st.columns(3)
-    vertical = left.selectbox("Vertical", ["All", *questions["Vertical"].dropna().unique()])
+    category = left.selectbox(
+        "Category",
+        ["All", *questions["Category"].dropna().unique()],
+        format_func=_title,
+    )
     city = mid.selectbox("City", ["All", *questions["City"].dropna().unique()])
     only = right.toggle("Only where people and AI differ", value=False)
     view = questions
-    if vertical != "All":
-        view = view[view["Vertical"] == vertical]
+    if category != "All":
+        view = view[view["Category"] == category]
     if city != "All":
         view = view[view["City"] == city]
     if only:
         view = view[view["Same score?"] == "No"]
     st.dataframe(_shown(view), hide_index=True, width="stretch", height=420)
     row = st.container(horizontal=True)
-    if row.button("Open the results workbook", icon=":material/table_view:"):
+    if can_open(open_file) and row.button(
+        "Open the results workbook", icon=":material/table_view:"
+    ):
         open_file(path)
     row.download_button(
         "Download it", path.read_bytes(), file_name=path.name, icon=":material/download:"
     )
     ai = settings.scoring_dir / ("practice/ai" if path == practice else "ai")
     for copy in sorted(ai.glob("*_ai.xlsx")):
-        if row.button(
-            f"Open the AI's workbook ({copy.stem.replace('_ai', '')})",
+        label = _title(copy.stem.replace("_ai", ""))
+        row.download_button(
+            f"Download the AI's workbook ({label})",
+            copy.read_bytes(),
+            file_name=copy.name,
+            key=f"dl-ai-{copy}",
+            icon=":material/download:",
+        )
+        if can_open(open_file) and row.button(
+            f"Open the AI's workbook ({label})",
             icon=":material/smart_toy:",
             key=f"open-{copy}",
         ):
@@ -538,4 +673,4 @@ def render_scores(settings, open_file) -> None:
 
 def city_scored_at(settings, city: str) -> str | None:
     """When the AI last scored this city (ISO time), for the Home page."""
-    return scored_cities(settings.scoring_dir, workflow.step3_vertical(settings)).get(city)
+    return scored_cities(settings.scoring_dir, workflow.step3_category(settings)).get(city)

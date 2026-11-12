@@ -1,4 +1,4 @@
-"""One run across verticals, cities and steps (the app's Run steps page)."""
+"""One run across categories, cities and steps (the app's Run steps page)."""
 
 import dataclasses
 import time
@@ -14,7 +14,7 @@ def _plan(tmp_path, steps, **kwargs):
     )
     return PlanRun(
         base,
-        ["parastatal", "upd"],
+        ["parastatal", "ulg"],
         {"sample_city_a": "Sample City A"},
         steps,
         practice=True,
@@ -30,22 +30,22 @@ def _wait(plan, until, timeout=120):
     return plan.status
 
 
-def test_all_verticals_run_steps_1_2_3_in_order(tmp_path):
+def test_all_categories_run_steps_1_2_3_in_order(tmp_path):
     plan = _plan(tmp_path, [1, 2, 3], review_parastatals=False, pause_after_sources=False)
     assert [s.title for s in plan.stages] == [
         "Step 1 · Parastatal · Find sources",
-        "Step 1 · UPD · Find sources",
+        "Step 1 · ULG · Find sources",
         "Step 2 · Parastatal · Answer questions",
-        "Step 2 · UPD · Answer questions",
+        "Step 2 · ULG · Answer questions",
         "Step 3 · Parastatal · Score",
-        "Step 3 · UPD · Score",
+        "Step 3 · ULG · Score",
     ]
     assert _wait(plan.start(), {"finished", "failed"}) == "finished", plan.error
     assert [s.status for s in plan.stages] == ["done"] * 6
     assert all("Scored Sample City A" in s.note for s in plan.stages[4:])
-    # each vertical keeps its own folders
+    # each category keeps its own folders
     assert any((tmp_path / "Parastatal" / "practice" / "cities").iterdir())
-    assert any((tmp_path / "UPD" / "practice" / "cities").iterdir())
+    assert any((tmp_path / "ULG" / "practice" / "cities").iterdir())
 
 
 def test_pauses_for_the_sources_review_before_answering(tmp_path):

@@ -1,0 +1,44 @@
+# Who a question applies to, decided from the question bank's "Applicability" text.
+#
+# The team can edit this file. How it works:
+#   * Each question's Applicability text is compared with the phrases below, top to bottom,
+#     ignoring capitals. The FIRST phrase that appears in the text decides.
+#   * Old and new wordings can sit side by side (e.g. "water supply board" and
+#     "water supply entity").
+#   * If no phrase matches, the app tells the team which question has wording it doesn't
+#     recognise (and includes it for every parastatal until a rule is added). It never guesses.
+#
+# Rule kinds:
+#   type_is      the parastatal's type is <value>      (type codes: parastatal_types.py)
+#   type_is_not  the parastatal's type is not <value>
+#   flag         the parastatal's Yes/No answer in the city register is Yes. Flags:
+#                revenue_raising, capex_mandate, has_annual_budget, has_chief_executive
+#   common       applies to every parastatal
+#
+# Order matters: put the more specific phrase first ("excluding development authorities"
+# before "development authorit"; "annual budget" before "common", because the text
+# "Common — all parastatal types with an annual budget" contains both).
+rules:
+  - {phrase: excluding development authorities, rule: type_is_not, value: development_authority}
+  - {phrase: water supply entity, rule: type_is, value: water_supply_entity}
+  - {phrase: water supply board, rule: type_is, value: water_supply_entity}  # earlier wording
+  - {phrase: public bus transport operator, rule: type_is, value: public_bus_transport_operator}
+  - {phrase: transport corporation, rule: type_is, value: public_bus_transport_operator}  # earlier wording
+  - {phrase: development authorit, rule: type_is, value: development_authority}
+  - {phrase: revenue-raising, rule: flag, value: revenue_raising}
+  - {phrase: capital-expenditure mandate, rule: flag, value: capex_mandate}
+  - {phrase: annual budget, rule: flag, value: has_annual_budget}
+  - {phrase: chief executive, rule: flag, value: has_chief_executive}
+  - {phrase: common, rule: common}
+
+# A question whose source text and intended audience differ. The rule here replaces the one the
+# text would give, for the Parastatal category only (the ULG has its own question list).
+# Every override is shown to the team as a CONFIRM message.
+overrides:
+  UPD 3b:
+    rule: type_is
+    value: water_supply_entity
+    confirm: >-
+      The question bank says "Common" for UPD 3b, but it is a water supply question, so it is
+      applied to Water Supply Entities only (the same assumption the scoring templates make).
+      This is an assumption, not a fact from the source. Please confirm.

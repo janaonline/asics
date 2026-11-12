@@ -42,6 +42,10 @@ STEP_DONE = {
 }
 
 
+# What Step 1 says for a ULG category, where the unit is the city's ULG and not its parastatals.
+STEP_DONE_ULG = {"parastatal_discovery": "Found the city's ULG and checked its website"}
+
+
 def friendly_error(exc: Exception) -> str:
     if isinstance(exc, anthropic.AuthenticationError):
         return (
@@ -119,6 +123,8 @@ class PipelineRun:
         self.result: dict | None = None
         self.error: str | None = None
         self._services = services
+        self.ulg = services.settings.unit == "ulg"  # the unit is the city's ULG, not parastatals
+        self.unit_label = services.settings.unit_label  # "ULG" or "Parastatal"
         build = build_sources_graph if step == "sources" else build_answers_graph
         self._graph = build(services, checkpointer=new_checkpointer())
         self._config = {
@@ -248,7 +254,9 @@ class PipelineRun:
                 if node == "discover":
                     found = (update or {}).get("parastatals", [])
                     self._say(
-                        f"Found {len(found)} parastatal(s): " + ", ".join(p.id for p in found)
+                        "Found the city's ULG"
+                        if self.ulg
+                        else f"Found {len(found)} parastatal(s): " + ", ".join(p.id for p in found)
                     )
                 elif node == "profile_parastatal":
                     for p in (update or {}).get("profiled", []):
@@ -271,7 +279,9 @@ class PipelineRun:
             elif node == "links_agent":
                 self.links_done += 1
                 self._say(
-                    f"Built the Citation Sheet for {self.links_done} of "
+                    "Built the Citation Sheet for the ULG"
+                    if self.ulg
+                    else f"Built the Citation Sheet for {self.links_done} of "
                     f"{self.links_total} parastatal(s)"
                 )
             elif node == "prepare_citations":
@@ -291,7 +301,7 @@ class PipelineRun:
                 if self.answers_done % 5 == 0 or self.answers_done == self.answers_total:
                     self._say(f"Answered {self.answers_done} of {self.answers_total} questions")
             if node in STEP_DONE and node != "prepare_citations":
-                self._say(STEP_DONE[node])
+                self._say(STEP_DONE_ULG.get(node, STEP_DONE[node]) if self.ulg else STEP_DONE[node])
 
 
 class BatchRun:
@@ -302,7 +312,7 @@ class BatchRun:
     built in turn, giving one Sources workbook per city.
     Step 2 (answers): each city is answered in turn from its Sources workbook, giving one
     answers workbook per city. There is no review pause.
-    Each city's files live in outputs/<Vertical>/cities/<City>/; the batch folder holds an
+    Each city's files live in outputs/<Category>/cities/<City>/; the batch folder holds an
     index of the cities in the run, and outputs/START_HERE.xlsx is updated at the end.
     """
 

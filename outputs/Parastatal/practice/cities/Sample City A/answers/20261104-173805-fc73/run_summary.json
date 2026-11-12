@@ -1,0 +1,41 @@
+{
+  "run": {
+    "run_id": "20261104-173805-fc73",
+    "city": "sample_city_a",
+    "city_name": "Sample City A",
+    "state_name": "Sample State",
+    "ulg": "Sample City A Municipal Corporation",
+    "workspace": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/practice/cities/Sample City A",
+    "output_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/practice/cities/Sample City A/answers/20261104-173805-fc73",
+    "cache_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/practice/cities/Sample City A/evidence"
+  },
+  "agent_setup_fingerprint": "5486d15bc78d",
+  "bank_version": {
+    "version": "Bengaluru_Parastatal_Pilot_NC19102026_1@2026-11-04#9d2acfb3",
+    "content_hash": "9d2acfb3514efdb7e8c14bf1e3e61d8edbaf1195bf99dd71146e2cb94d7a604b",
+    "source_file": "Bengaluru_Parastatal_Pilot_NC19102026_1.xlsx",
+    "source_sha256": "c1a28565b687d0e3b125aee5f1099f57647bb93987c3162865cdecdda8327508",
+    "built_at": "2026-11-04",
+    "questions": 69
+  },
+  "memory_used": [
+    "categories/parastatal/scope-decisions.md"
+  ],
+  "applicability": {
+    "SWB": [
+      "UPD 1",
+      "UPD 1a",
+      "UPD 1b"
+    ],
+    "STC": [
+      "UPD 1",
+      "UPD 1a",
+      "UPD 1b"
+    ]
+  },
+  "counts": {
+    "citations_used": 5,
+    "answers": 6,
+    "errors": 0
+  }
+}

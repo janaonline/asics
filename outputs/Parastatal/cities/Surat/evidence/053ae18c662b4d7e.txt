@@ -1,0 +1,722 @@
+SOURCE URL: https://gstcouncil.gov.in/sites/default/files/AAR/15_gsrtc_1.pdf
+
+[page 1]
+Page 1 of 16 
+ 
+GUJARAT AUTHORITY FOR ADVANCE RULING, 
+GOODS AND SERVICES TAX, 
+A/5, RAJYA KAR BHAVAN, ASHRAM ROAD,  
+AHMEDABAD – 380009.  
+ 
+ADVANCE RULING NO. GUJ/GAAR/R/2022/15 
+(In Application No. Advance Ruling/SGST&CGST/2021/AR/49) 
+                                                                                             Dated:22.03.22  
+Name and address of the applicant : M/s. Gujarat State Road Transport Corporation, 
+B-20, Central Work  Shop Compound, C entral Office, 
+Naroda, Ahmedabad, Gujarat, 382346 
+GSTIN of the applicant : 24AAACG5587H1ZI 
+Date of application : 21-12-21 
+Clause(s) of Section 97(2) of 
+CGST / GGST Act, 2017, under 
+which the question(s) raised.  
+: (b), (e) & (g) 
+Date of Personal Hearing : 18-2-22  
+Present for the applicant : Shri Rohan Thakkar, CA 
+ 
+Brief Facts 
+1.  M/s. Gujarat State Road Transport Corporation (hereinafter referred to as GSRTC for the 
+sake of brevity) submits as follows: 
+2. GSRTC operates more than 8700 buses daily basis and is engaged in intra state as well as 
+interstate passenger transportation 
+3. GSRTC submits that it is mainly engaged in the passenger transportation services  
+4. GSRTC entered agreement with M/s Ashapura  Trade and Transport Private 
+Limited ( hereinafter referred to as Ashapura) to provided space in its buses, on top of 
+the bus as well as in bus cabin,  for transporting parcels of Ashapura. The parcels 
+booked by Ashapura and transported by the bus es run by GSRTC from one station to 
+another station which comes in its  ( bus route)  scheduled route. GSRTC submits that it 
+is not issuing any consignment note, nor is engaged in door to door delivery of the 
+parcels booked by Ashapura. For the transportation of said parcels, GSRTC receives 
+consideration as per the agreement.  
+5. GSRTC submits that Ashapura is a courier agency or GTA.  
+6. GSRTC submits that the said activity is exempt in terms of Sr No 18 of 
+Notification No 12/2017-Central Tax (Rate) which reads as follows: 
+             Services by way of transportation of goods- 
+(a) by road except the services of- 
+(i) a goods transportation agency; 
+(ii) a courier agency; 
+(b) by inland waterways. 
+
+
+[page 2]
+Page 2 of 16 
+ 
+7. GSRTC submits that the  activity will be taxable when it is of a courier agen cy or a 
+goods transportation agency. Except that, all other activity of road transportation is 
+exempt.  
+ 
+8.  GSRTC submits as follows: 
+i.   As per Para 2(u) of Notification No 12/2017 -Central Tax (Rate), "courier agency" 
+means any person engaged in the door-to-door transportation of time -sensitive 
+documents, goods or articles utilising the services of a person, either directly or 
+indirectly, to carry or accompany such documents, goods or articles ; the following 
+are the essential elements to treat an activity in the category of ‘courier agency’ 
+A. The services can be rendered by any person who is engaged in a specific 
+service of door to  door transportation of time sensitive documents, goods or 
+articles; 
+B. The service is to be rendered by utilizing the services of a person, either 
+directly or indirectly; 
+C. The said person is to carry or accompany the said documents, goods or 
+articles. 
+D. Such transportation should be of time sensitive documents 
+ 
+       ii. The main activity which distinguishes a courier agency from ot her transport 
+agencies is that the courier agencies arranges transportation from  door of the 
+sender to the door of the addressee. In other words, the documents, goods, or 
+articles are expected to be picked by the representative of the courier agency 
+from t he premises of the sender and later transported and delivered to the 
+premises of addressee.  In the present case, GSRTC is not engaged in door to 
+door transportation of time sensitive documents. Rather, it is Ashapura which 
+is collecting documents and parce ls and it delivers to the ultimate customer at 
+their address. It is Ashapura which is engaged in door -to-door transportation 
+of documents and parcels.  GSRTC is merely transporting goods in its buses 
+that is being handed over by Ashapura from one destination and to be dropped 
+at another destination. GSRTC does not have a knowledge as to for whom the 
+document or parcel ultimately belongs to. 
+ iii. The term used in the definition is that the person must be engaged in the 
+door-to-door transportation. The term engage means to take part or devote 
+attention and effort, to employ ones’ self as per the Law Lexicon by P. Ramnatha 
+Iyer. While interpreting the expression ‘actively engaged in the conduct of 
+business’ occurring in section 2(7)(iii)(b) of the Fin ance Act, 1962, the Gujarat 
+High Court inter alia, observed as follows: 
+
+[page 3]
+Page 3 of 16 
+ 
+“The expression ‘engaged in’ is a term of various meaning depending on 
+the context in which it is used but ordinarily it is intended to signify 
+continuous occupation or employment; of action as well as physical 
+participation. However, the term is often employed to denote a present 
+obligation to devote time, attention and efforts to a particular activity, 
+although for a time being, there may not be any active participation or 
+wholesome involvement in such activity” - CIT v. Natvarlal Tribhovandas 
+(1973) 87 ITR 703 (Guj) 
+A person can, therefore, be said to be ‘engaged in’ providing a service, if he 
+carries on such a service, not as an isolated transaction, but as an organized 
+and fairly con tinuous activity. In the present context, to fit the activity of a 
+person in the definition of courier agency, ‘the organization must undertake 
+courier service as an organized and fairly continuous activity and not as an 
+isolated or occasional act or trans action. Since, GSRTC is engaged in the 
+activity of passenger transportation by virtue of its establishment under the 
+Road Transport Corporation Act, 1950 and therefore, is not engaged in the 
+business of courier agency.   In order to qualify the activity of a courier 
+agency, it must be engaged in transportation of time -sensitive documents, 
+goods or articles.  
+iv. In the present case, GSRTC is not engaged in door to door transportation 
+of time sensitive documents. Rather, it is Ashapura which is collecting 
+documents and parcels and it delivers to the ultimate customer at their 
+address. To deliver the documents on time is the responsibility of Ashapura 
+and not that of GSRTC. Ashapura merely uses the spaces of bus for the 
+purpose of transportation of the document s. It is Ashapura ’s discretion 
+whether to utilize the services of GSRTC or any other entity for the purpose 
+of delivering time sensitive documents and parcels to its customers.  
+V. Further, the buses run by GSRTC are as per the schedule framed by it and 
+not as per the instructions of Ashapura to deliver its time sensitive documents 
+and parcels that it has booked for its customers. It is  for Ashapura to select 
+and identify as to whether a particular bus will be able to transport its 
+documents in time that it has contracted with its customers or not. For 
+Ashapura, GSRTC is not changing its route or timings. Further, a person  may 
+have to deliver its documents in any part of India, however , GSRTC has its 
+operations in Gujarat and few other states, but not in the entire country. Thus, 
+the GSRTC is not engaged in transportation of time sensitive documents. 
+From the above, it is concluded that the activity done by GSRTC is not 
+classifiable under the definition of ‘courier agency’. 
+
+[page 4]
+Page 4 of 16 
+ 
+vi. As per section Para 2(ze) of Notification No 12/2017 -Central Tax (Rate), 
+"Goods transport agency" means any person who provides service in relation 
+to transport of goods by road and issues consignment note, by whatever 
+name called.  
+      vii. Para 2(zd) of Notification No 12/2017 -Central Tax (Rate) defines goods 
+carriage; “Goods carriage” has the meaning assigned to it in clause (14) of 
+section 2 of the Motor  Vehicles Act, 1988 (59 of 1988). As per Section 2(14) of 
+the Motor Vehicles Act,’’ Goods carriage” means any motor vehicle 
+constructed or adapted for use solely for the carriage of goods, or any motor 
+vehicle not so constructed or adapted when used for the carriage of goods;" 
+                  viii. Thus, it is not disputed that the buses of GSRTC are considered as goods 
+carriage in terms of definition as contained in section 2(14) of the Motor 
+Vehicles Act since it is  used for transportation of goods,  however, that will 
+not make GSRTC as a goods transport agency. 
+   ix. One of the conditions for levy of GST on transport of goods by Road is that 
+the consignment note must be issued.  Consignment Note is neither defined 
+in the Act nor in the notification No.12/2017-Central Tax (Rate). As a reason, 
+reference has been taken w.r.t meaning of the te rm ‘consignment note’ as 
+contained in the erstwhile Service Tax Law wherein the provisions regarding 
+issuance of consignment note is contained in Rule 4B of Service Tax Rules, 
+1994. 
+            x. As per Explanation to Rule 4B, ‘consignment note" means a document, issued 
+by a goods transport agency against the receipt of goods for the purpose of 
+transport of goods by road in a goods carriage, which is serially numbered, and 
+contains the name of the consignor and consignee, registration number of the 
+goods carriage in which the goods are transported, details of the goods 
+transported, details of the place of origin and destination, person liable for 
+paying service tax whether consignor, consignee or the goods transport agency’. 
+ 
+           xi. The consignment Note shall also contain the details of the consignment note 
+number and date, gross weight of the consignment. [2nd Proviso to Rule 4A of 
+Service Tax Rules, 1994] 
+ 
+          xii. GSRTC is issuing ‘Parcel Receipt’ and by no stretch of imagination, it can be 
+considered as consignment notes. Copy of ‘Parcel Receipt’ is enclosed.  
+ 
+          xiii.  In the following cases pronounced under the erstwhile Law, it has been 
+considered that w hen the transports did not issue consignment notes or GRs or 
+Challans or any documents containing the particular as prescribed in Explanation 
+to Rule 4B of the Service Tax Rules, 1994, the Transporters cannot be called 
+‘Goods Transport Agency’ and, hence, in these cases, the service of transportation 
+of goods provided by the transp orters would not be covered in the definition of 
+Goods Transport Agency. This principle has been held in: 
+ 
+o South Eastern Coal Fields Ltd v. CCE [2014 (8) TMI 857 – (Delhi-Tri)] 
+
+[page 5]
+Page 5 of 16 
+ 
+o Ultra Tech Cement Ltd. Versus Commissioner of Central Excise, 
+Kolhapur [2017 (11) TMI 297- (Mumbai- Tri)] 
+o Premier Industries India Ltd. Versus C.C.E., Indore [2017 (11) TMI 481 - 
+(Mumbai- Tri)] 
+o M/s. Kranti SSK Ltd. Versus Commissioner of Central Excise & Service 
+tax, Kolhapur [2017 (6) TMI 275- (Mumbai- Tri)] 
+o M/s Western Coal Fields  Ltd. Versus CCE, Nagpur [2017 (5) TMI 398 - 
+(Delhi- Tri)] 
+ 
+           xiv.  Since, in the present case, no consignment not e has been issued by GSRTC 
+for the goods transported of Ashapura, therefore, the activity done by GSRTC is 
+not classifiable under the category of ‘goods transport agency’. 
+(xv)   Thus, the activity performed by GSRTC is transportation of goods by   Road 
+other than courier agency and GTA and therefore, is exempt in terms of Sr . No 18 
+of Notification No 12/2017-Central Tax (Rate). 
+9.  GSRTC has submitted the following SAC codes: 
+  SAC Description 
+  9965 Goods Transport Services 
+108 Group 
+99651 
+  Land transport services of Goods 
+109   996511 Road transport services of Goods including 
+letters, parcels, live animals, household and 
+office furniture, containers and the like by 
+refrigerator vehicles, trucks, trailers, man or 
+animal drawn vehicles or any other 
+vehicles 
+110   996512 Railway transport services of Goods 
+including letters, parcels, live animals, 
+household and office furniture, intermodal 
+containers, bulk cargo and the like 
+111   996513 Transport services of petroleum and 
+natural gas, water, sewerage and other 
+goods via pipeline 
+112   996519 Other land transport services of goods 
+nowhere else classified 
+113 Group 
+99652 
+  Water transport services of goods 
+114   996521 Coastal and transoceanic (overseas) water 
+transport services of goods by refrigerator 
+vessels, tankers, bulk cargo vessels, 
+container ships and the like 
+115   996522 Inland water transport services of goods by 
+refrigerator vessels, tankers and other 
+vessels 
+116 Group 
+99653 
+  Air and space transport services of goods 
+117   996531 Air transport services of letters and parcels 
+and other goods 
+118   996532 Space transport services of freight 
+10.  GSRTC submits the definitions from the erstwhile Service Tax Law: 
+i. As per section 65(105)(zzzo) which taxes services pertaining to 
+transport of passenger embarking in India for domestic journey 
+
+[page 6]
+Page 6 of 16 
+ 
+or international journey reads as ‘Any service provided or to be 
+provided to any passenger, by an aircraft operator, in relation to 
+scheduled or non -scheduled air transport of such passenger 
+embarking in India for domestic journey or international 
+journey;’ 
+ii. Further, as per section 65(105)(zzn) which taxes transport of 
+goods by aircraft which reads as ‘Any service provided or to be 
+provided to any person, by an aircraft operator, in relation to 
+transport of goods by aircraft;’ 
+iii. Thus, in the above case, the aircraft remains same and used for 
+twin purpose, one for transporta tion of passenger as well as 
+another for transportation of goods. As per section 65(3b) of the 
+Finance Act, 1994, ‘ "aircraft operator"  means any person who 
+provides the service of transport of goods or passengers by 
+aircraft;’ 
+11.  Similar to above, GSRTC submits that they are  also providing services of 
+transportation of passengers as well as transportation of goods in its vehicles. Just as for 
+one air craft which carries passengers and goods, the two taxable categories are there, 
+viz., “transport of passenger by aircraft” and “transport of goods by aircraft”, similarly, 
+in the present case, the bus remains same, which is used for twin purpose., viz., 
+transport of passengers and transport of goods. As a reason, for transport of goods, the 
+activity will be stated as ‘transport of goods by Road’. Thus, as per the provisions of the 
+Motor Vehicles Act, 1988, the buses are also used for transportation of goods, hence, 
+will be considered as goods carriage.  
+12.   GSRTC cites section 65(105)(zzzp)  which taxes the t axable service of ‘Transport of 
+goods by Rail ’ which reads as ’ Any service provided or to be provided to  any person, 
+by any other person, in relation to transport of goods by rail, in any manner’ . Thus, 
+there is a separate category of taxable service which  taxes the services of transportation 
+of goods by Rail. 
+13. GSRTC has submitted the general procedure involved in transportation of goods by 
+Rail: (Source: http://www.publishyourarticles.net/knowledge -hub/business-
+studies/what-are-the-procedure-of-transporting-goods-by-railway-transport/811/) 
+i. Selection of the Train 
+This is the first step of transporting goods over railways. The first 
+thing to be selected whether goods are to be transported through a 
+passenger train or goods train.   The selection depends on how 
+quickly the goods are to be transported. If the goods are  to be 
+
+[page 7]
+Page 7 of 16 
+ 
+delivered at an early date, the passenger train will be preferred than 
+goods train. The nature of the commodity plays an important role in 
+deciding goods train or passenger train. If the goods are of perishable 
+nature, these are to be transported through a passenger train. 
+ii. Packing of Goods:. 
+After the selection of the train where the goods are to be dispatched, 
+the next step is to pack the goods properly. The goods are packed 
+either in wooden boxes or canvas sacks. The front side of the packets 
+should clearly state the name and address of the receiver, the name 
+of the station where goods are dispatched, railway zone and the 
+destination. Sometimes additional instructions like fragile or glass 
+with care is written to attract the attention of the railway people. 
+iii. Dispatch Note: 
+After proper packing, goods are delivered to the booking office. Two 
+notes called forwarding note and consignment are prepared. When 
+goods are carried through a passenger train, a forwarding note is 
+prepared and when goods are carri ed through a goods train, a 
+consignment note is prepared. 
+                         
+  iv   Booking of goods: 
+The railway booking office book the goods and issues a receipt 
+clearly stating whether goods are carried at owner’s risk or railway’s 
+risks. The boo king work is done after the receipt of goods properly 
+packed and a forwarding or consignment note. 
+ 
+v Dispatch of Railway receipt: 
+After booking the goods, the consignor obtains a railway receipt from 
+the railway authorities. This RR is dispatched to the consignee who on 
+presentation take the delivery of goods. The RR can be made self or on 
+the name of the receiver. When it is made un der the self name, it is 
+endorsed in favour of the consignee otherwise goods cannot be released. 
+ 
+14. GSRTC submits that i n transportation of goods through rail, the customer goes to 
+the booking office and delivers the goods. When the goods are given, the railway 
+authorities give the railway receipt. The railway authorities then transport the goods 
+from origin to the destination. At the destination, the recipient collects the goods from 
+the office of railway by showing the railway receipt. In this case, the activity is not taxed 
+under the category of ‘courier’ 
+15.  GSRTC submits that s imilarly, in transportation of goods in a vehicle which is 
+the service provided by GSRTC, the customer   provides services  of transportation of 
+goods handed over to it by Ashapura in its busies. The goods are then transported from 
+origin to the destination in the space provided in the buses. At the destination, the 
+recipient collects the goods from the office of GSRTC. Thus, this activity should also not 
+be taxed under the category of ‘Courier’ as well as it will not be considered as ‘GTA’ as 
+no consignment note is also issued. However, the activity of transportation of goods has 
+
+[page 8]
+Page 8 of 16 
+ 
+taken place, thus, it will squarely be covered in Sr No 18 of Notification No 12/2017 -
+Central Tax (Rate) .  
+ 
+16.  GSRTC has submitted that l ike the way the goods transported through rail gets 
+covered under the category of ‘transport of goods by rail’ (SAC code – 996512); 
+transport of goods through water gets taxed under the category of ‘ Coastal and 
+transoceanic (overseas) water transport services of goods by refrigerator vessels, 
+tankers, bulk cargo vessels, container ships and the like (SAC -996521) and Inland water 
+transport services of goods by refrigerator vessels, tankers and other vessels (SAC -
+996522)’ , transport of goods by air gets taxed under ‘transport of goods by aircraft’ 
+(SAC 996531), the transport of goods through road should also be treated as ‘transport 
+of goods by road’  as the operations performed under all the modes of transport 
+remains more or less same except that the mode of transport is different.  
+17.  GSRTC submits that  the activity done by it gets covered in Sr No 18 of 
+Notification No 12/2017 -Central Tax (Rate) and therefore exempted from payment of 
+GST.  
+18.  GSRTC cited Section 2(68) of the CGST Act, 2017 (also similar provision under 
+Gujarat GST Act, 2017) which defines job work as,  ‘job work’ means any treatment or 
+process undertaken by a person on goods belonging to another registered person and 
+the expression “job worker” shall be construed accordingly. 
+ 
+19. GSRTC submits that it is merely transporting goods given by Ashapura by 
+providing space in its bus from one location to another location. It is not doing any 
+treatment or process on the goods. The goods are merely transported from one location 
+to another location in the same condition. Not a single process on the goods is being 
+done by GSRTC. 
+20.  GSRTC cites that classification under GST  is to be taken as specified in the First 
+Schedule to the Customs Tariff Act, 1975 ; Section and Chapter Notes and the General 
+Explanatory Notes of the First Schedule, for the purposes of interpretation. 
+ 
+ 
+21.  Questions on which Advance Ruling sought: 
+(a) Whether GST will be applicable on the parcels of Ashapura that are being 
+transported by GSRTC ? 
+(b) Whether GSRTC is eligible to avail exemption in terms of Sr . No 18 of 
+Notification No 12/2017 -Central Tax (Rate) whereby GSRTC is transporting 
+parcels of Ashapura, but is neither GTA nor courier agency? 
+
+[page 9]
+Page 9 of 16 
+ 
+(c) What will be the rate at which GST is required to be charged by GSRTC, in 
+case at (b) above, it is held that GSRTC is not eligible for exemption? 
+(d) What will be the SAC code for the transportation of goods by Road other th an 
+courier and GTA provided by GSRTC? 
+(e) Whether the tax, in case it is required to be paid as held in (c) above, be 
+considered to be covered under Notification No 13/2017 -Central Tax (Rate) 
+whereby the service recipient is required to make payment of tax ins tead of 
+service provider? 
+ 
+Personal Hearing 
+ 
+22. Personal hearing granted on 18 -2-22 was attended by Shri Rohan Thakkar , CA  
+and they reiterated the submission. 
+ 
+Additional Submission by GSTRC: 
+ 
+23.  GSRTC vide letter dated 1-3-22 submitted a Sample Transport Receipt:  
+ 
+    
+23.1  The content of the Receipt is explained as follows: 
+i. Valsad to Vyara indicates that the parcels have been loaded at Valsad Depot 
+and Unloaded at Vyara Depot; 
+ii. Vapi Depot, indicates that the receipt has been generated from Vapi  Depot. 
+No 010042 represents the Serial Number of the Machine from which receipt is 
+generated. 
+iii. 31/07/20 17:06:16 represents date and time of parcel receipt; 
+iv. Total Distance 105 Kms represents total kilometer distance from the point of 
+loading of bus depot to point of unloading of the bus depot; 
+v. Units 17 represents number of parcels transported in a particular journey 
+vi. Receipt Number 2701 represents the document number. 
+vii. 259013 5060C represents conductor Duty Number 
+viii. 794B represents driver duty number; 
+ix. 53191547N – Machine hardware number.   
+x. GJ 18 Y 8843 represents the Bus number in which goods have been 
+transported. 
+
+
+[page 10]
+Page 10 of 16 
+ 
+23.2  GSRTC submits  that by no stretch of imagination, the parcel receipt referred 
+above will be categorized as consignment note. 
+23.3 GSRTC has submitted that it is not disputed that the buses of GSRTC are 
+considered as goods carriage in terms of definition as contained in section 2(14) of the 
+Motor Vehicles Act since it is used for transportation of goods,  however, that will not 
+make GSRTC as a goods transport agency. 
+ 
+24. GSRTC submitted that Parcel receipt can not be considered as consignment note 
+because it does not have name of consignor, consignee, details of the goods transported, 
+person liable for paying tax whether consignor, consigne e or the goods transport 
+agency. In the case of CCE & ST Raigad Vs JAC Logistics Pvt Ltd 2018 (5) TMI 1131 – 
+CESTAT Mumbai, it is held that an invoice which contains all essential ingredients as 
+laid down in rule 4B is no substitute for a consignment note.  An invoice creates a 
+liability of debt on the part of recipient of service. A consignment note, on the other 
+hand, carries with it a certain legal burden, the issuing of a consignment note is a 
+contractual undertaking made to the entity that handed over t he goods to the agency of 
+responsibility for safe delivery at the stipulated destination.  A consignment note also 
+creates binding responsibility for each consignment. Issue of monthly invoice does not, 
+ipso facto, creates such liability and hence cannot be substituted for a consignment note. 
+25. The relevant clause of agreement is reproduced as follows: 
+Clauses of the agreement 
+7(d) The  transportation of parcel, allied services and courier covers 
+accepted by the Licensee to place where there are no offices will be at the 
+sole risk of the Licensee. The licensor shall not be responsible, if such 
+parcels are misplaced or lost or any manner damage to the parcel or 
+courier. 
+ 
+7 (h) The total weight of the parcel, allied services and courier to be 
+transported on a bus shall not  exceed single parcel 80 kilograms and 
+parcel height 40 inch allowed only. 
+ 
+7 (n) The Licensor shall not be responsible for any loss or damage or 
+shortage that may be suffered by the Licensee due to withdrawal or 
+cancellation of buses, agitations, vandalism by the crew or outsiders, 
+strikes, war , flood, fire, accident natural calamities or any other cause 
+like act of god. 
+ 
+7(o) The Licensor reserves the right to transport their goods, daks and 
+other departmental (GSRTC) items by buses and the Licensee shall not 
+have any right to demand or claim charges for transport of these items. 
+ 
+7(r) The Licensee should take necessary s afety precautions for 
+passengers, Licensor's property and  other road users while transporting 
+parcels/ courier by the buses of the Licensor. The licensor shall not be 
+responsible for any loss or damage. 
+ 
+
+[page 11]
+Page 11 of 16 
+ 
+25.1  GSRTC submits that it is not responsible for a ny loss of goods that are being 
+transported by it and the responsibility to do safe transportation rests with that of 
+licencee and not that of GSRTC. Even GSRTC is not aware about the contents of the 
+goods that are being transported. Thus , on account of above reasons, the activity will 
+not be treated as ‘Goods Transport Agency’.  
+26. GSRTC referred Section 2 of the Custom Tariff Act, 1975 for classification 
+of the service provided by it. GSRTC submits that the essential character of the 
+activity done by it is the transport of goods and not the job work. In terms of 
+principles of classification, the activity will remain classified under ‘transport of 
+goods by road’ as it gives the essential character to the activity performed by 
+the GSRTC. The activity is c lassifiable under ‘transport of goods’ other than courier 
+and Goods Transport Agency, therefore, is covered under Sr No 18 of Notification No 
+12/2012-CT (R). 
+ 
+27. GSRTC cited the following case laws: 
+i. CCE v. Modi Rubber (2001) 133 ELT 515 (SC 3-member Bench) 
+ii. Oblum Electrical Industries (P) Ltd. v. CC 94 ELT 449 (SC) = AIR 1997 SC 3467 = 1997 
+AIR SCW 3557 = 1997(7) SCC 581 - followed in KR Steel Union v. CC 2001 AIR SCW 
+1541=2001(4) SCC 736 = 129 ELT 273 (SC 3 member bench) 
+CCE v. Acer India Ltd. (2004) 172 ELT 289 =(2004) 8 SCC 179= AIR 2004 SC 4805 = 137 
+STC 596 = 2004 AIR SCW 5496 
+iii Shriram Vinyl v. CC2001 (129) ELT 278 (SC 3 member bench) 
+iv CC v. Rupa and Co Ltd. 2004 AIR SCW 4241 = 170 ELT 129 (SC), 
+v. Mysore Minerals v. CIT 1999 AIR SCW 3146 = AIR  1999 SC 3185 = 239 ITR 775 = 106 
+Taxman 166 (SC) 
+vi CIT v. Gwalior Rayon Silk Mfg Co. - (1992) 62 Taxman 471 = 196 ITR 149 SC) 
+vii Hercules Tyre and Rubber Industries v. CCE 1983  (13) ELT 1017 (CEGAT) ' Asea 
+Brown Boveri Ltd. v. CCE 2000 (121) ELT 666 (CEGAT)' Baxter (1) P. Ltd. v. CC 2001 
+(130) ELT 652 (CEGAT) . Pitamber Coated Paper v. CCE 2003 (157) ELT 297 (CESTAT). 
+viii Tata Oil Mills Co. Ltd. v. CCE (1989) 4 SCC 541 = 43 ELT 183 = 82  STC 225 = AIR 
+1990 SC 27 (SC). 
+ix HMM Ltd. v. CCE - 1996 (11) SCC 332 = 87 ELT 593 (SC) 
+x New Holland Tractors v. CCE (2010) 253 ELT 249 (CESTAT) 
+xi Cochin Cements v. State of Kerala (2008) 18 VST 224 (Ker HC DB) 
+xii UOI v. Ranbaxy Laboratories (2008) 7 SCC 502 = AIR 2008  SC 2286 - quoted with 
+approval in N Kannadasan v. Ajoy Khose (2009) 7 SCC 1. 
+28. GSRTC vide letter dated 5-3-22 submitted that the activity carried out by 
+it will not be classified as support service under GST.  
+29. GSRTC submitted the following from Notification No. 11/2017-CT (R): 
+
+[page 12]
+Page 12 of 16 
+ 
+11 Heading 
+9967 
+(Supporting 
+services  in 
+transport) 
+5[(i) Services of goods 
+transport agency (GTA) in 
+relation to transportation of 
+goods (including used 
+household goods for 
+personal use). 
+Explanation.- “goods 
+transport agency” means any 
+person who provides service 
+in relation to transport of 
+goods by road and issues 
+consignment note, by 
+whatever name called. 
+2.5 Provided that credit of input tax 
+charged on goods and services 
+used in supplying the servic e has 
+not been taken. [Please refer 
+to Explanation no. (iv)] 
+  or 
+6 Provided that the goods transport 
+agency opting to pay central tax 
+@ 6% under this entry shall, 
+thenceforth, be liable to pay 
+central tax @ 6% on all the 
+services of GTA supplied by it.] 
+(ii) Supporting services in 
+transport other than (i) 
+above. 
+9 - 
+ 
+29.1 GSRTC has submitted five digit sub- classification as follows: 
+Heading 9967   Supporting services in transport  
+Group 99671   Cargo handling services 
+Group 99672   Storage and warehousing services 
+Group 99673   Supporting services for railway transport 
+Group 99674   Supporting services for road transport 
+Group 99675   Supporting services for water transport (coastal, transoceanic and 
+inland waterways) 
+Group 99676   Supporting services for air or space transport  
+Group 99679   Other supporting transport services 
+ 
+29.2 The six digit classification w.r.t ‘supporting service for road transport’ reads as: 
+Scheme of Classification of Services 
+S.No. Chapter, Section, 
+ Heading or  Group  
+Service Code 
+ (Tariff) 
+Service Description 
+(1) (2) (3) (4) 
+138 Group 99674   Supporting services for road transport 
+139   996741 Bus station services 
+140   996742 Operation services of national highways, state 
+highways, expressways, roads and streets; bridges 
+and tunnel operation services 
+141   996743 Parking lot services 
+142   996744 Towing services for commercial and private 
+vehicles 
+143   996749 Other supporting services for road transport 
+nowhere else classified 
+ 
+30. GSRTC submitted that six digit classifications reveals that the support service 
+for road transportation stated above assists in road transportation and is different from 
+the activity of transportation of goods by road. T hus, the activity o f transportation of 
+parcels of Ashapura will not be considered as support service on road transport. 
+
+[page 13]
+Page 13 of 16 
+ 
+ 
+Revenue’s submission 
+ 
+31.      Revenue has neither submitted its comments nor appeared for hearing. 
+ 
+Findings 
+ 
+32 .   At the outset we would like to make it clear that the provisions of CGST Act, 2017 
+and GGST Act, 2017 are in parimateria and have the same provisions in like matter and 
+differ from each other only on a few specific provisions. Therefore, unless a mention is 
+particularly made to such dissimilar provisions, a reference to the CGST Act would also 
+mean reference to the corresponding similar provisions in the GGST Act. 
+33. We have carefully considered the submissions made by GSRTC.  
+34. On reading of the Agreement entered by G SRTC with Ashapura, we find that 
+said agreement expired on 30 -6-20. Shri Thakkar  during the personal hearing, 
+submitted that GSRTC intends to do such activities , as detailed in agreement submitted 
+before us,  in future . GSRTC vide its  letter dated 18 -2-22 submitted that it intends to 
+carry on such activities  on the same terms and condition  ( as per submitted agreement)  
+in future and in anticipation of the same, GSTRC filed  the present application before us. 
+We, thereby,  hold that GSRTC has locus standi, a s per Section 95(a) to seek Ruling on  
+its proposed supplies to be undertaken by it and thus the  subject Advance Ruling 
+Application is admitted taking into account GSRTC’s letter dated 18-2-22.  
+35. The proposed activities, deduced from GSRTC’s submissions; and the agreement 
+with Ashapura, are as follows:  [We use the word Ashapura , which may be read 
+interchangeably as service recipient of GSRTC] 
+i. GSRTC invites tenders from agencies carrying out business of transportation 
+of parcels and specific allied services and courier. 
+ii. GSRTC intends to give space available on roof and dickeys of its buses 
+(except AC and volvo)  for transportation of the  said parcels of service 
+recipient. 
+iii. GSRTC intends to give space at its parcel offices / pick up sheds at its various 
+bus stands, for the service recipient.  Further, GSRTC to pro vide open spaces 
+in bus stations without parcel office, subject to availability of open space. 
+iv. GSRTC to permit recipient to use its weighing sc ales where  ever available. 
+Maintenance and stamping of those  weighing scales to be done to recipient 
+itself.  
+v. GSRTC charges two types of fees on the service recipient for the following: 
+a. Fees for transportation for parcel service: 
+b. Fees towards rent of parcel offices: 
+
+[page 14]
+Page 14 of 16 
+ 
+vi. Recipient to pay service tax under Transportation  of goods by road (para 8 of 
+the agreement). 
+36.  We find that GSRTC provides service s to such firms/ agencies  (its service 
+recipients) carrying on the business of transportation of parcels, specific allied services. 
+We agree with GSRTC that it itself is n ot a courier agency as it is not engaged in door to 
+door transportation of goods/articles/documents. It is a fact on record that Ashapura is 
+engaged in door to door transportation of its parcel goods but not GSRTC.  What we 
+find f rom the agreement is that GSRTC’s services to Ashapura  is supporting the 
+business of Ashapura, by transporting the parcels of Ashapura from one destination to 
+other, wherein Ashapura is both the consignor and consignee at the respective bus 
+stations. Ashapura utilises the services of GSRTC for enabling it ( Ashapura) for door to 
+door delivery of parcels.  Further, the specific activity of  GSRTC supplying parcel office 
+space/cabin/shed to Ashapura falls under the category of infrastructural support 
+services which is a subset of Busine ss Support Services.  We hold GSRTC supplies 
+Business Support Services  to its service recipient.  The standard agreement submitted 
+before us asserts our findings. 
+37. As already discussed, in the previous para, we find that GSRTC is not a Courier 
+Agency as it is not involved in door to door transportation of 
+goods/articles/documents.  
+38. We note that GSRTC transports goods, as detailed in agreement before us,  by 
+road in its buses. We note from Notification 11/2017- CT ( R ), a goods transport agency 
+means any person who provides service in relation to transport of goods by road and 
+issues consignment note, by whatever name called. In present case, GSRTC is providing 
+service in relation to transport of goods by road  and GSRTC issues parcel receipt. 
+Though not specifically mentioned in these parcel receipts, we infer  that both the 
+consignee and consignor will be Ashapura. We note that Parcel receipts do not have the 
+details of the goods transported. During the personal hearing, Shri Thakkar was not 
+able to clarify, if the details of the goods entered in the registers  maintained by recipient 
+will be matched with any line item on the parcel receipt.  
+39. Though GSRTC transports goods by road in its buses and issues parcel receipt, 
+we are not inclined to accord this activity of GSRTC to fall under goods transport 
+agency service for the following reasons 
+i. The service description in subject matter is Business Support Service  and 
+GSRTC supports the services to be supplied by Ashapura to its (Ashapura’s) 
+recipients. 
+ii. GSRTC in the said agreement at para 7(q) submits that it is not responsible or 
+liable in case the parcels, courier covers is lost or damaged in transit, in the 
+
+[page 15]
+Page 15 of 16 
+ 
+buses or premises or bus stations, recipient shall be solely responsible and 
+liable for the same. 
+What we find is that although a parcel receipt is issued by GSRTC, it absolves 
+itself from any responsibility of the parcels after receipt. Thus we find it hard 
+to equate this parcel receipt to a consignment note wherein the responsibility 
+of the goods being transported is not on the consignee. 
+ 
+iii. Further, the consideration received by GSRTC includes the following: 
+a. Charges for transportation of parcel  
+b. Charges for providing parcel office space. 
+40. We note that GSRTC cited  certain case laws at para  8(xiii) pertaining to GTA & 
+reverse charge liability in the service tax era. Firstly, our issue at hand is GST liability on 
+services supplied by GSRTC and not pertaining to service tax liability.  Second, we 
+concur with GSRTC that it is not providing servi ces of a goods transport agency as 
+discussed at para 39. We find that the said case laws cited by GSRTC are thereby no avail 
+for the twin reasons cited in this para. 
+ 
+41.  In continuum to holding that GSRTC is not supplying goods transport agency 
+service,  We also concur with GSRTC that its services will not be classified as supporting 
+services for road transport under SAC 99674. 
+42. We note that GSRTC has cited many a case laws at para  27. We fail to grasp the 
+reason why GSRTC has cited these case laws, as  the facts of the case laws are different 
+from the present facts. We find these cited case laws irrelevant to present facts . To 
+illustrate, the Modi Rubber case law pertains to Input duty credit / proforma credit in 
+central excise and its set off. The Oblum  electricals case law pertains to duty exemption 
+scheme in Customs. The Shriram vinyl case law pertains to eligibility of Notification 
+155/86- Customs. Rupa & Co case law pertains to Textile machinery imported under 
+EPCG.  Further, we note that GSRTC has c ited a few case laws pertaining to Income Tax 
+such as Mysore Minerals and Gwalior rayon silk case laws. The Hercules Tyre case law 
+pertains to the scope of Notification 47/72 - central excise. The Tata oil mills case law 
+pertains to exemption to soap on use  of rice bran oil in its manufacture. The HMM case 
+law pertains to metal screw cap on horlics bottle and applicability of Notification 201/79 - 
+central excise. New holland tractors case law pertains to eligibility of Notification 
+23/2004 and 6/2006 - central excise pertaining to captively consumed engines in 
+manufacture of tractors. We found that GSRTC made us do a futile exercise to go 
+through all these case laws  cited by it at para27, for the sole reason that these have no 
+bearing on the facts of the present case.  
+43.   In conspectus of aforementioned discussion and findings, we pass the Ruling, 
+
+[page 16]
+Page 16 of 16 
+ 
+ 
+ 
+RULING 
+1. In this specific scenario presented before us, GSRTC supplies Business Support 
+Service to its recipient.  
+2. SAC is 998599, covering Other Support Services n.e.c.; GST rate being 18%. 
+3. GSRTC is neither a GTA nor a courier agency, thus the Ruling with respect to 
+Question (b) & (e) is thereby not applicable, in view of aforementioned Ruling  at 
+Sr. No. 1. 
+ 
+ 
+  (ATUL MEHTA)                            (ARUN RICHARD)    
+    MEMBER (S)                                           MEMBER (C) 
+Place: Ahmedabad 
+Date: 22.03.2022

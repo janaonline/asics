@@ -23,9 +23,21 @@ are applied in code afterwards.)
 era=<era tag from the city notes, or n/a>; period=<FY/date/version shown | not stated>".
 A legacy-era governance document is never "Current".
 
+"effective_date" and "form" (for a legal, policy or regulatory text only; leave both "" for a
+website page, report or other non-legal source):
+  effective_date = the date the cited text or version TOOK EFFECT (commencement, in force from,
+        "w.e.f."), or its "amended up to <date>" date, as YYYY-MM-DD. If only a year or month is
+        shown, give what is shown (e.g. "2019") and it will count as unknown. It is NEVER the
+        web page's "last updated" date, a footer date, or the date the page was fetched.
+  form = "in force" (an Act, Rules or notification that is law), "bill" (a Bill, at any stage
+        before assent and commencement), "draft" (a draft rule or notification, not yet
+        notified), or "unknown". Never "in force" for a Bill or a draft.
+
 JSON keys:
   "useful": boolean (does the text actually support "What This Source Is Useful For"?),
   "useful_for": string (corrected, specific: "[TAG] <content + section/page + period>"),
   "current_status": string (format above),
   "authority_score": number 0-10,
-  "notes": string (concise: what the page contains, the text version, any limitation)
+  "notes": string (concise: what the page contains, the text version, any limitation),
+  "effective_date": string ("" when not a legal text or no date is shown),
+  "form": string ("in force" | "bill" | "draft" | "unknown" | "")

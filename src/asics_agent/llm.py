@@ -41,8 +41,8 @@ MAX_CONTINUATIONS = 4
 CACHE = {"cache_control": {"type": "ephemeral"}}  # prompt caching on every model call
 NETWORK_RETRY_PAUSES = (2.0, 5.0)  # seconds before each retry of a call whose connection failed
 NETWORK_ERRORS = (
-    httpx.TimeoutException,
-    httpx2.TimeoutException,
+    httpx.TransportError,  # timeouts, connection resets (ReadError), protocol errors, ...
+    httpx2.TransportError,
     anthropic.APITimeoutError,
     anthropic.APIConnectionError,
 )
@@ -323,7 +323,7 @@ def call_json(
     if scope is not None:
         scope.agent, scope.step = config.name, config.step
         budget = options.memory_max_chars or settings.memory_max_chars
-        notes_used, _ = select_notes(root, scope, settings.vertical, budget)
+        notes_used, _ = select_notes(root, scope, settings.category, budget)
         scope.used = [n.path for n in notes_used]
         if block := memory_block(notes_used):
             user = f"{block}\n\n# TASK INPUT\n{user}"

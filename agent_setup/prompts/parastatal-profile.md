@@ -4,7 +4,7 @@ Research one parastatal agency and establish, from official sources fetched this
 - the legal form (board / corporation / company / authority) and the provision it is
   constituted under;
 - its LEGAL INSTRUMENT STACK, layer by layer (located or not located):
-    1. parent Act - prefer the current consolidated/amended text; say which version;
+    1. parent Act - say which version, and the date it took effect or is amended up to;
     2. Rules made under the parent Act or under the law it is constituted under;
     3. the agency's own Regulations / bye-laws;
     4. constitution and amendment notifications, and GOs (including any recent restructuring

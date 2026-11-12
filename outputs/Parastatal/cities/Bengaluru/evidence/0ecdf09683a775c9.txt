@@ -1,0 +1,851 @@
+SOURCE URL: https://kride.in/wp-content/uploads/2026/03/ANNUAL-RETURN-2024-25-KRIDE.pdf
+
+[page 1]
+Page 1 of 20
+AC2325212_SRN_FORM_1771412983104
+All fields marked in * are mandatory
+Refer instruction kit for filing the form
+HindiEnglish
+Form language
+[Pursuant to sub-section (1) of section 92 of the
+Companies Act, 2013 and sub-rule (1) of rule 11 of
+the Companies (Management and Administration) Rules,
+2014]
+Annual Return (other than OPCs and Small
+Companies)
+Form No. MGT-7
+1771412983104
+I REGISTRATION AND OTHER DETAILS
+i *Corporate Identity Number (CIN) U60100KA2000SGC028171
+ii  (a) *Financial year for which the annual return is being filed (From date) (DD/MM/YYYY) 01/04/2024
+(b) *Financial year for which the annual return is being filed (To date) (DD/MM/YYYY) 31/03/2025
+Original
+ Revised(c) *Type of Annual filing
+(d) SRN of MGT-7  filed earlier for the same financial years
+iii
+Particulars As on filing date As on the financial year end date
+Name of the company RAIL INFRASTRUCTURE DEVELOPMENT
+COMPANY (KARNATAKA) LIMITED
+RAIL INFRASTRUCTURE DEVELOPMENT
+COMPANY (KARNATAKA) LIMITED
+Registered office address No.8, 1st Floor, Samparka Soudha,   Dr. Rajkumar
+Road, Rajajinagar, 1st
+Bloc,k,,NA,Bengaluru,Bangalore,Karnataka,India,
+560010
+No.8, 1st Floor, Samparka Soudha,   Dr. Rajkumar
+Road, Rajajinagar, 1st
+Bloc,k,,NA,Bengaluru,Bangalore,Karnataka,India,
+560010
+Latitude details 13.01 13.01
+Longitude details 77.55 77.55
+Registered Office_Address_K-
+RIDE.pdf
+(a) *Photograph of the registered office of the Company
+        showing external building and name prominently visible
+AA******0F(b) *Permanent Account Number (PAN) of the company
+*****ide.in(c) *e-mail ID of the company
++91********00(d) *Telephone number with STD code
+
+[page 2]
+Page 2 of 20
+(e) Website
+22/11/2000iv *Date of Incorporation (DD/MM/YYYY)
+Public companyv   (a) *Class of Company (as on the financial year end date)
+            (Private company/Public Company/One Person Company)
+Company limited by shares(b) *Category of the Company (as on the financial year end date)
+         (Company limited by shares/Company limited by guarantee/Unlimited company)
+State Government Company(c) *Sub-category of the Company (as on the financial year end date)
+        (Indian Non-Government company/Union Government Company/State Government Company/
+        Guarantee and association company/Subsidiary of Foreign Company)
+Yes
+ Novi *Whether company is having share capital (as on the financial year end date)
+Yes No
+vii  (a) Whether shares listed on recognized Stock Exchange(s)
+(b) Details of stock exchanges where shares are listed
+S. No. Stock Exchange Name Code
+viii Number of Registrar and Transfer Agent
+CIN of the Registrar and
+Transfer Agent
+Name of the Registrar and
+Transfer Agent
+Registered office address of
+the Registrar and Transfer
+Agents
+SEBI registration number
+of Registrar and Transfer
+Agent
+Yes
+ Noix * (a) Whether Annual General Meeting (AGM) held
+20/12/2025(b) If yes, date of AGM (DD/MM/YYYY)
+30/09/2025(c) Due date of AGM (DD/MM/YYYY)
+Yes
+ No(d) Whether any extension for AGM granted
+AB7201640(e) If yes, provide the Service Request Number (SRN) of the GNL-1 application form
+        filed for extension
+30/12/2025(f) Extended due date of AGM after grant of extension (DD/MM/YYYY)
+
+[page 3]
+Page 3 of 20
+(g) Specify the reasons for not holding the same
+1i *Number of business activities
+II PRINCIPAL BUSINESS ACTIVITIES OF THE COMPANY
+S.
+No.
+Main Activity
+group code
+Description of Main
+Activity group
+Business Activity
+Code
+Description of
+Business Activity
+% of turnover of
+the company
+1 F Construction 43
+Specialized
+Construction
+Activities
+100
+1i *No. of Companies for which information is to be given
+III PARTICULARS OF HOLDING, SUBSIDIARY AND ASSOCIATE COMPANIES (INCLUDING JOINT VENTURES)
+S.
+No.
+CIN /FCRN Other registration
+number
+Name of the
+company
+Holding/
+Subsidiary/Associate/Jo
+int Venture
+% of
+shares
+held
+1 U60230KA2021SGC142876
+BENGALURU
+INTEGRATED RAIL
+INFRASTRUCTURE
+DEVELOPMENT
+ENTERPRISE
+LIMITED
+Subsidiary 100
+i SHARE CAPITAL
+     (a) Equity share capital
+IV SHARE CAPITAL, DEBENTURES AND OTHER SECURITIES OF THE COMPANY
+Particulars Authorised Capital Issued capital Subscribed capital Paid Up capital
+Total number of equity shares 5000000000.00 1010392157.00 1010392157.00 1010392157.00
+Total amount of equity
+shares (in rupees) 50000000000.00 10103921570.00 10103921570.00 10103921570.00
+
+[page 4]
+Page 4 of 20
+Number of classes 1
+Class of shares
+Equity Shares
+Authorised Capital Issued capital Subscribed Capital Paid Up capital
+Number of equity shares 5000000000 1010392157 1010392157 1010392157
+Nominal value per share (in rupees) 10 10 10 10
+Total amount of equity shares (in
+rupees ) 50000000000.00 10103921570.00 10103921570 10103921570
+(b) Preference share capital
+Particulars Authorised Capital Issued capital Subscribed capital Paid Up capital
+Total number of preference
+shares 0.00 0.00 0.00 0.00
+Total amount of preference
+shares (in rupees) 0.00 0.00 0.00 0.00
+0Number of classes
+Class of shares Authorised Capital Issued capital Subscribed Capital Paid Up capital
+Number of preference shares
+Nominal value per share (in rupees)
+Total amount of preference shares (in
+rupees )
+(c) Unclassified share capital
+Particulars Authorised Capital
+
+[page 5]
+Page 5 of 20
+Total amount of unclassified shares 0
+(d) Break-up of paid-up share capital
+Particulars Number of shares Total Nominal
+Amount
+Total Paid-up
+amount
+Total
+premium
+Physical DEMAT Total
+(i) Equity shares
+At the beginning of the year 495092162 515299995 1010392157.0
+0 10103921570 10103921570
+Increase during the year 0.00 0.00 0.00 0.00 0.00 0
+i Public Issues 0 0 0.00 0 0
+ii Rights issue 0 0 0.00 0 0
+iii Bonus issue 0 0 0.00 0 0
+ iv Private Placement/ Preferential
+allotment 0 0 0.00 0 0
+v ESOPs 0 0 0.00 0 0
+vi Sweat equity shares allotted 0 0 0.00 0 0
+vii Conversion of Preference share 0 0 0.00 0 0
+viii Conversion of Debentures 0 0 0.00 0 0
+ix GDRs/ADRs 0 0 0.00 0 0
+x Others, specify
+Decrease during the year 0.00 0.00 0.00 0.00 0.00 0
+i Buy-back of shares 0 0 0.00 0 0
+ii Shares forfeited 0 0 0.00 0 0
+iii Reduction of share capital 0 0 0.00 0 0
+iv Others, specify
+0
+At the end of the year 495092162.00 515299995.00 1010392157.0
+0
+10103921570.
+00
+10103921570.
+00
+(ii) Preference shares
+
+[page 6]
+Page 6 of 20
+Particulars Number of shares Total Nominal
+Amount
+Total Paid-up
+amount
+Total
+premium
+At the beginning of the year 0 0 0.00 0 0
+Increase during the year 0.00 0.00 0.00 0.00 0.00 0
+i Issues of shares 0 0 0.00 0 0
+ii Re-issue of forfeited shares 0 0 0.00 0 0
+iii Others, specify
+0
+Decrease during the year 0.00 0.00 0.00 0.00 0.00 0
+i Redemption of shares 0 0 0.00 0 0
+ii Shares forfeited 0 0 0.00 0 0
+iii Reduction of share capital 0 0 0.00 0 0
+iv Others, specify
+0
+At the end of the year 0.00 0.00 0.00 0.00 0.00
+ISIN of the equity shares of the company
+0ii Details of stock split/consolidation during the year (for each class of shares)
+Class of shares
+Before split /  Consolidation Number of shares
+Face value per share
+After split / consolidation Number of shares
+Face value per share
+iii Details of shares/Debentures Transfers since closure date of last financial year (or in the case of the first return at any time
+since the incorporation of the company)
+  Nil
+
+
+[page 7]
+Page 7 of 20
+Number of transfers
+Attachments:
+1.        Details of shares/Debentures Transfers
+0
+iv Debentures (Outstanding as at the end of financial year)
+    (a) Non-convertible debentures
+*Number of classes
+Classes of non-convertible debentures Number of units Nominal value
+per unit
+Total value
+(Outstanding at the
+end of the year)
+Total
+Classes of non-convertible debentures Outstanding as at
+the beginning of
+the year
+Increase during
+the year
+Decrease
+during the year
+Outstanding
+as at the end
+of the year
+Total
+0*Number of classes
+(b) Partly convertible debentures
+Classes of partly convertible debentures Number of units Nominal value
+per unit
+Total value
+(Outstanding at the
+end of the year)
+Total
+Classes of partly convertible debentures Outstanding as at
+the beginning of
+the year
+Increase during
+the year
+Decrease
+during the year
+Outstanding
+as at the end
+of the year
+Total
+
+[page 8]
+Page 8 of 20
+0*Number of classes
+(c) Fully convertible debentures
+Classes of fully convertible debentures Number of units Nominal value
+per unit
+Total value
+(Outstanding at the
+end of the year)
+Total
+Classes of fully convertible debentures Outstanding as at
+the beginning of
+the year
+Increase during
+the year
+Decrease
+during the year
+Outstanding
+as at the end
+of the year
+Total
+(d) Summary of Indebtedness
+Particulars Outstanding as at
+the beginning of the
+year
+Increase during
+the year
+Decrease
+during the year
+Outstanding as at
+the end of the year
+Non-convertible debentures 0.00 0.00 0.00 0.00
+Partly convertible debentures 0.00 0.00 0.00 0.00
+Fully convertible debentures 0.00 0.00 0.00 0.00
+Total 0.00 0.00 0.00 0.00
+0 v Securities (other than shares and debentures)
+Type of
+Securities
+Number of
+Securities
+Nominal Value of
+each Unit
+Total Nominal
+Value
+Paid up Value
+of each Unit
+Total Paid up
+Value
+Total
+V Turnover and net worth of the company (as defined in the Companies Act, 2013)
+
+[page 9]
+Page 9 of 20
+2192051616i *Turnover
+ii * Net worth of the Company 16074663910
+VI SHARE HOLDING PATTERN
+A Promoters
+S.
+No
+Category Equity Preference
+Number of shares Percentage Number of shares Percentage
+1 Individual/Hindu
+Undivided Family
+(i) Indian 0 0.00 0 0.00
+(ii) Non-resident
+Indian (NRI) 0 0.00 0 0.00
+ (iii) Foreign national
+(other than NRI) 0 0.00 0 0.00
+2 Government
+(i) Central
+Government 495092157 49.00 0 0.00
+(ii) State Government 515299995 51.00 0 0.00
+(iii) Government
+companies 0 0.00 0 0.00
+3 Insurance companies 0 0.00 0 0.00
+4 Banks 0 0.00 0 0.00
+5 Financial institutions 0 0.00 0 0.00
+6 Foreign institutional
+investors 0 0.00 0 0.00
+7 Mutual funds 0 0.00 0 0.00
+8 Venture capital 0 0.00 0 0.00
+9 Body corporate
+(not mentioned above) 0 0.00 0 0.00
+
+[page 10]
+Page 10 of 20
+10 Others
+Total 1010392152.00 100 0.00 0
+2Total number of shareholders (promoters)
+B  Public/Other than promoters
+S.
+No
+Category Equity Preference
+Number of shares Percentage Number of shares Percentage
+1 Individual/Hindu
+Undivided Family
+(i) Indian 5 0.00 0 0.00
+(ii) Non-resident
+Indian (NRI) 0 0.00 0 0.00
+(iii) Foreign national
+(other than NRI) 0 0.00 0 0.00
+2 Government
+(i) Central
+Government 0 0.00 0 0.00
+(ii) State Government 0 0.00 0 0.00
+(iii) Government
+companies 0 0.00 0 0.00
+3 Insurance companies 0 0.00 0 0.00
+4 Banks 0 0.00 0 0.00
+5 Financial institutions 0 0.00 0 0.00
+6 Foreign institutional
+investors 0 0.00 0 0.00
+7 Mutual funds 0 0.00 0 0.00
+8 Venture capital 0 0.00 0 0.00
+9 Body corporate
+(not mentioned above) 0 0.00 0 0.00
+
+[page 11]
+Page 11 of 20
+10 Others
+0 0.00 0 0.00
+Total 5.00 0 0.00 0
+5Total number of shareholders (other than promoters)
+7.00Total number of shareholders (Promoters + Public/Other than promoters)
+Breakup of total number of shareholders (Promoters + Other than promoters)
+Sl.No Category
+   1   Individual - Female 3
+   2   Individual - Male 2
+   3   Individual - Transgender 0
+   4  Other than individuals 2
+  Total 7.00
+C Details of Foreign institutional investors’ (FIIs) holding shares of the company
+Name of the
+FII
+Address Date of Incorporation Country of
+Incorporation
+Number of
+shares held
+% of shares
+held
+VII NUMBER OF PROMOTERS, MEMBERS, DEBENTURE HOLDERS
+[Details of Promoters, Members (other than promoters), Debenture holders]
+Details At the beginning of the year At the end of the year
+Promoters 2 2
+Members (other than promoters) 5 5
+Debenture holders 0 0
+VIII DETAILS OF DIRECTORS AND KEY MANAGERIAL PERSONNEL
+
+[page 12]
+Page 12 of 20
+A Composition of Board of Directors
+Category Number of directors at the
+beginning of the year
+Number of directors at the
+end of the year
+Percentage of shares held by
+directors as at the end of
+year
+Executive Non-
+executive
+Executive Non-
+executive
+Executive Non-
+executive
+A Promoter 0 0 0 0 0 0
+B Non-Promoter 0 0 0 0 0.00 0.00
+i Non-Independent 0 0 0 0 0 0
+ii Independent 0 0 0 0 0 0
+C Nominee Directors
+representing 2 7 2 7 0.00 0.00
+i. Banks and  FIs 0 0 0 0 0 0
+ii Investing institutions 0 0 0 0 0 0
+iii Government 2 7 2 7 0 0
+iv Small share holders 0 0 0 0 0 0
+v Others 0 0 0 0 0 0
+Total 2 7 2 7 0.00 0.00
+*Number of Directors and Key managerial personnel (who is not director) as on
+  the financial year end date
+9
+B (i) Details of directors and Key managerial personnel as on the closure of financial year
+Name DIN/PAN Designation Number of equity
+shares held
+Date of cessation (after
+closure of financial year :
+If any) (DD/MM/YYYY)
+MANJULA
+NARAYANAPPANAIK 07508345 Managing Director 1
+ASHUTOSH MATHUR 09603028 Nominee Director 0
+DEEPA KOTNIS 09682162 Nominee Director 0
+RAJESH KUMAR SINGH 08601529 Nominee Director 1
+AWADHESH MEHTA 09564884 Nominee Director 1
+
+[page 13]
+Page 13 of 20
+VISHAL RAVI 01819320 Nominee Director 0
+SHALINI RAJNEESH 05174456 Nominee Director 0
+SEETHAPURA
+RAMAIAH
+UMASHANKAR
+02850951 Nominee Director 0
+SANJEEV KUMAR
+GARG 10850062 Nominee Director 0
+7B (ii) *Particulars of change in director(s) and Key managerial personnel during the year
+Name DIN/PAN Designation at the
+beginning / during the
+financial year
+Date of appointment/
+change in designation/
+cessation
+(DD/MM/YYYY)
+Nature of change
+(Appointment/ Change in
+designation/ Cessation)
+SEETHAPURA
+RAMAIAH
+UMASHANKAR
+02850951 Nominee Director 01/06/2024 Appointment
+SANJEEV KUMAR
+GARG 10850062 Nominee Director 26/11/2024 Appointment
+DHANANJAYA SINGH 08955500 Nominee Director 26/11/2024 Cessation
+ARCHANA MANOHAR
+KULKARNI AVDPK5613M Company Secretary 01/07/2024 Appointment
+SUTHRAM
+NARASIMHAN
+SRINIVASA
+AJPPS2202Q Company Secretary 15/06/2024 Cessation
+SHALINI RAJNEESH 05174456 Nominee Director 29/08/2024 Appointment
+RAJNEESH GOEL 02019133 Nominee Director 29/08/2024 Cessation
+IX MEETINGS OF MEMBERS/CLASS OF MEMBERS/ BOARD/COMMITTEES OF THE BOARD OF DIRECTORS
+A MEMBERS/CLASS /REQUISITIONED/NCLT/COURT CONVENED MEETINGS
+*Number of meetings held 1
+Type of meeting Date of meeting
+(DD/MM/YYYY)
+Total Number of
+Members entitled to
+attend meeting
+Attendance
+Number of
+members
+attended
+% of total shareholding
+Annual General
+Meeting 17/12/2024 7 7 100
+
+[page 14]
+Page 14 of 20
+B BOARD MEETINGS
+6*Number of meetings held
+S.No Date of meeting
+(DD/MM/YYYY)
+Total Number of directors
+as on the date of
+meeting
+Attendance
+Number of directors
+attended
+% of attendance
+1 30/08/2024 9 7 77.78
+2 12/11/2024 9 9 100
+3 15/11/2024 9 8 88.89
+4 17/12/2024 10 9 90
+5 03/02/2025 10 9 90
+6 17/03/2025 10 8 80
+8Number of meetings held
+C COMMITTEE MEETINGS
+S.No Type of meeting Date of meeting
+(DD/MM/YYYY)
+Total Number of
+Members as on the
+date of meeting
+Attendance
+Number of members
+attended
+% of attendance
+1 Management
+Committee 28/05/2024 5 5 100
+2 Management
+Committee 29/07/2024 5 5 100
+3 Management
+Committee 13/12/2024 5 5 100
+4 Audit Committee 29/07/2024 4 4 100
+5 Audit Committee 13/12/2024 4 4 100
+6
+Nomination and
+Remuneration
+Committee
+12/07/2024 4 4 100
+7
+Nomination and
+Remuneration
+Committee
+07/10/2024 4 4 100
+
+[page 15]
+Page 15 of 20
+8
+Nomination and
+Remuneration
+Committee
+07/12/2024 4 4 100
+D ATTENDANCE OF DIRECTORS
+S.
+N
+o
+Name
+of the
+Director
+Board Meetings Committee Meetings Whether
+attended AGM
+held on
+Number of
+Meetings
+which
+director
+was
+entitled to
+attend
+Number
+of
+Meetings
+attended
+% of
+attenda
+nce
+Number of
+Meetings
+which
+director
+was entitled
+to attend
+Number
+of
+Meetings
+attended
+% of
+attend
+ance 20/12/2025
+(Y/N/NA)
+1 RAJESH KUMAR SINGH 6 6 100 0 0 0 Yes
+2 AWADHESH MEHTA 6 6 100 3 3 100 Yes
+3 VISHAL RAVI 6 6 100 5 5 100 Yes
+4 SHALINI RAJNEESH 6 6 100 0 0 0 Yes
+5 SEETHAPURA RAMAIAH
+UMASHANKAR 2 2 100 7 7 100 No
+6 SANJEEV KUMAR GARG 3 3 100 0 0 0 Yes
+7 MANJULA
+NARAYANAPPANAIK 6 6 100 6 6 100 Yes
+8 ASHUTOSH MATHUR 6 6 100 8 8 100 Yes
+9 DEEPA KOTNIS 6 6 100 5 5 100 Yes
+X REMUNERATION OF DIRECTORS AND KEY MANAGERIAL PERSONNEL
+  Nil
+0A *Number of Managing Director, Whole-time Directors and/or Manager
+       whose remuneration details to be entered
+S.
+No.
+Name Designation Gross salary Commission Stock Option/
+Sweat equity
+Others Total
+amount
+Total 0.00 0.00 0.00 0.00 0.00
+
+[page 16]
+Page 16 of 20
+1B *Number of  CEO, CFO and Company secretary whose remuneration
+      details to be entered
+S.
+No.
+Name Designation Gross salary Commission Stock Option/
+Sweat equity
+Others Total
+amount
+1 ARCHANA
+MANOHAR
+KULKARNI
+Company
+Secretary 1432000 0 0 0 1432000.00
+Total 1432000.00 0.00 0.00 0.00 1432000.00
+8C *Number of  other directors whose remuneration details to be entered
+S.
+No.
+Name Designation Gross salary Commission Stock Option/
+Sweat equity
+Others Total
+amount
+1 SANJEEV KUMAR
+GARG
+Nominee
+Director 6000 0 0 0 6000.00
+2 ASHUTOSH
+MATHUR
+Nominee
+Director 12000 0 0 0 12000.00
+3 DEEPA KOTNIS Nominee
+Director 12000 0 0 0 12000.00
+4 VISHAL RAVI Nominee
+Director 12000 0 0 0 12000.00
+5 SHALINI RAJNEESH Nominee
+Director 12000 0 0 0 12000.00
+6 SEETHAPURA
+RAMAIAH
+UMASHANKAR
+Nominee
+Director 4000 0 0 0 4000.00
+7 AWADHESH MEHTA Nominee
+Director 6417000 0 0 0 6417000.00
+8 RAJESH KUMAR
+SINGH
+Nominee
+Director 4711000 0 0 0 4711000.00
+Total 11186000.00 0.00 0.00 0.00 11186000.00
+XI MATTERS RELATED TO CERTIFICATION OF COMPLIANCES AND DISCLOSURES
+Yes
+ NoA *Whether the company has made compliances and disclosures in respect of applicable
+       provisions of the Companies Act, 2013 during the year
+B If No, give reasons/observations
+XII PENALTY AND PUNISHMENT – DETAILS THEREOF
+
+[page 17]
+Page 17 of 20
+A *DETAILS OF PENALTIES / PUNISHMENT IMPOSED ON COMPANY/
+      DIRECTORS/OFFICERS
+  Nil
+Name of the
+company/
+directors/
+officers
+Name of the
+court/ concerned
+Authority
+Date of Order
+(DD/MM/YYYY)
+Name of the Act and
+section under which
+penalised / punished
+Details of
+penalty/
+punishment
+Details of appeal
+(if any) including
+present status
+B *DETAILS OF COMPOUNDING OF OFFENCES   Nil
+Name of the
+company/
+directors/
+officers
+Name of the
+court/ concerned
+Authority
+Date of Order
+(DD/MM/YYYY)
+Name of the Act and
+section under which
+offence committed
+Particulars of
+offence
+Amount of
+compounding (in
+rupees)
+XIII Details of Shareholder / Debenture holder
+7Number of shareholder/ debenture holder
+XIV Attachments
+Details of Shareholder or
+Debenture holder _K-RIDE_FY24-
+25.xlsm
+(a) List of share holders, debenture holders
+GNL-1_Approval
+Letter_AB7201640 (1).pdf
+MGT8-K-RIDE_FY24-25.pdf
+(b) Optional Attachment(s), if any
+
+[page 18]
+Page 18 of 20
+XV COMPLIANCE OF SUB-SECTION (2) OF SECTION 92, IN CASE OF LISTED COMPANIES
+In case of a listed company or a company having paid up share capital of Ten Crore rupees or more or turnover of Fifty Crore
+rupees or more, details of company secretary in whole time practice certifying the annual return in Form MGT-8.
+I/We certify that:
+(a) The return states the facts, as they stood on the date of the closure of the financial year aforesaid correctly and adequately.
+(b) Unless otherwise expressly stated to the contrary elsewhere in this return, the Company has complied with applicable
+provisions of the Act during the financial year.
+(c) The company has not, since the date of the closure of the last financial year with reference to which the last return was
+submitted or in the case of a first return since the date of incorporation of the company, issued any invitation to the public to
+subscribe for any securities of the company.
+(d) Where the annual return discloses the fact that the number of members, (except in case of one person company), of the
+company exceeds two hundred, the excess consists wholly of persons who under second proviso to clause (ii) of sub-section (68)
+of section 2 of the Act are not to be included in reckoning the number of two hundred.
+     I/ We have examined the registers, records and books and papers of RAIL INFRASTRUCTURE
+DEVELOPMENT COMPANY
+(KARNATAKA) LIMITED
+ as required to be
+     maintained under the Companies Act, 2013 (the Act) and the rules made thereunder for the financial year ended on
+    (DD/MM/YYYY) 31/03/2025
+In my/ our opinion and to the best of my information and according to the examinations carried out by me/ us and explanations
+furnished to me/ us by the company, its officers and agents, I/ we certify that:
+A The Annual Return states the facts as at the close of the aforesaid financial year correctly and adequately.
+B During the aforesaid financial year the Company has complied with provisions of the Act & Rules made there under in respect of:
+1 its status under the Act;
+2 maintenance of registers/records & making entries therein within the time prescribed therefor;
+3 filing of forms and returns as stated in the annual return, with the Registrar of Companies, Regional Director, Central
+Government, the Tribunal , Court or other authorities within/beyond the prescribed time;
+4 calling/ convening/ holding meetings of Board of Directors or its committees, if any, and the meetings of the members of the
+company on due dates as stated in the annual return in respect of which meetings, proper notices were given and the proceedings
+including the circular resolutions and resolutions passed by postal ballot, if any, have been properly recorded in the Minute
+Book/registers maintained for the purpose and the same have been signed;
+5 closure of Register of Members / Security holders, as the case may be.
+6 advances/loans to its directors and/or persons or firms or companies referred in section 185 of the Act;
+7 contracts/arrangements with related parties as specified in section 188 of the Act;
+8 issue or allotment or transfer or transmission or buy back of securities/ redemption of preference shares or debentures/
+alteration or reduction of share capital/ conversion of shares/ securities and issue of security certificates in all instances;
+9 keeping in abeyance the rights to dividend, rights shares and bonus shares pending registration of transfer of shares in
+compliance with the provisions of the Act
+10 declaration/ payment of dividend; transfer of unpaid/ unclaimed dividend/other amounts as applicable to the Investor
+Education and Protection Fund in accordance with section 125 of the Act;
+11 signing of audited financial statement as per the provisions of section  134 of the Act and report of directors is as per sub -
+sections (3), (4) and (5) thereof;
+12 constitution/ appointment/ re-appointments/ retirement/ filling up casual vacancies/ disclosures of the Directors, Key
+Managerial Personnel and the remuneration paid to them;
+13 appointment/ reappointment/ filling up casual vacancies of auditors as per the provisions of section 139 of the Act;
+14 approvals required to be taken from the Central Government, Tribunal, Regional Director, Registrar, Court or such other
+authorities under the various provisions of the Act;
+15 acceptance/ renewal/ repayment of deposits;
+16 borrowings from its directors, members, public financial institutions, banks and others and creation/ modification/ satisfaction
+of charges in that respect, wherever applicable;
+
+[page 19]
+Page 19 of 20
+17 loans and investments or guarantees given or providing of securities to other bodies corporate or persons falling under the
+provisions of section 186 of the Act ;
+18 alteration of the provisions of the Memorandum and/ or Articles of Association of the Company;
+To be digitally signed by 9281DIN1
+DEEPAK PANDURANG KADAMName
+18/02/2026Date (DD/MM/YYYY)
+PunePlace
+   Fellow  Associate
+Whether associate or fellow:
+9*8*Certificate of practice number
+XVI Declaration under Rule 9(4) of the Companies (Management and Administration) Rules, 2014
+*(a) DIN/PAN/Membership number of Designated Person 09564884
+*(b) Name of the Designated Person AWADHESH MEHTA
+Declaration
+I am authorised by the Board of Directors of the Company vide resolution number* 04 dated*
+(DD/MM/YYYY) 20/12/2025 to sign this form and declare that all the requirements of Companies Act, 2013
+and the rules made thereunder in respect of the subject matter of this form and matters incidental thereto have been complied
+with. I further declare that:
+1 Whatever is stated in this form and in the attachments thereto is true, correct and complete and no information material to the
+subject matter of this form has been suppressed or concealed and is as per the original records maintained by the company.
+2 All the required attachments have been completely and legibly attached to this form.
+09564884DIN2
+*To be digitally signed by
+Director
+ (Director /Liquidator/ Interim Resolution Professional (IRP)/Resolution Professional (RP))
+*Designation
+
+[page 20]
+Page 20 of 20
+0*5*4*8**DIN of the Director; or PAN of the Interim Resolution
+Professional (IRP) or Resolution Professional (RP) or Liquidator
+*To be digitally signed by 28063DIN3
+  Company secretary in practice Company Secretary
+   Fellow  Associate
+*Whether associate or fellow:
+2*0*3Membership number
+Certificate of practice number
+Note: Attention is drawn to provisions of Section 448 and 449 of the Companies Act, 2013 which provide for punishment for false
+statement / certificate and punishment for false evidence respectively.
+For office use only:
+eForm Service request number (SRN) AC2325212
+18/02/2026eForm filing date (DD/MM/YYYY)
+This eForm has been taken on file maintained by the Registrar of Companies through electronic mode and on the basis of
+statement of correctness given by the company

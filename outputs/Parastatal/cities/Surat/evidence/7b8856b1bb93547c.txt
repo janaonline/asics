@@ -1,0 +1,2369 @@
+SOURCE URL: https://www.gujaratmetrorail.com/wp-content/uploads/Reports/SEP-Surat-Metro-Final.pdf
+
+[page 1]
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Stakeholder Engagement Plan for 
+Sr. 
+No. 
+Document Submitted 
+to GMRC L 
+Originated Response Action 
+1 Stakeholders Engagement  Plan 20/07/2020 Dr. S Pradhan   
+2 Stakeholders Engagement  Plan 31/07/2020 Dr. S Pradhan   
+3 Stakeholders Engagement  Plan 26/11/2020 Dr. S Pradhan   
+Stakeholder Engagement Plan for 
+SURAT Metro Rail Project (Phase-I) 
+ 
+ 
+   
+ 
+Gujarat Metro Rail Corporation (GMRC) Limited 
+(SPV of Government of India and Government of Gujarat) 
+
+[page 2]
+Stakeholder Engagement Plan 
+	
+Table	of	Contents	
+1  ABBREVIATIONS ..................................................................................................................... iii 
+1  NON‐TECHNICAL SUMMARY ................................................................................................... 1 
+2  INTRODUCTION ...................................................................................................................... 2 
+2.1  PROJECT DESCRIPTION ............................................................................................................ 2 
+2.2  STAKEHOLDER ENGAGEMENT PLAN ....................................................................................... 5 
+2.3  REGULATIONS CONTEXT ......................................................................................................... 6 
+2.3.1  National Regulation ........................................................................................................ 6 
+2.3.2  World Bank Standards .................................................................................................... 6 
+2.3.3  Preliminary Stakeholder Consultation ............................................................................ 7 
+3  STAKEHOLDER IDENTIFICATION AND ANALYSIS FOR PROPOSED SEP ..................................... 10 
+4  PURPOSE AND TIMING OF PROPOSED STAKEHOLDER ENGAGEMENT PROGRAM ................... 12 
+4.1  STRATEGY TO CONDUCT STAKEHOLDER ENGAGEMENT IN COVID‐19 CONTEXT ................. 18 
+4.2  PROPOSED STRATEGY FOR INFORMATION DISCLOSURE ...................................................... 19 
+4.3  PROPOSED STRATEGY TO INCORPORATE THE VIEWS OF VULNERABLE GROUPS ................ 24 
+5  RESOURCES AND RESPONSIBILITIES FOR IMPLEMENTING PLANNED SEP ACTIVITIES .............. 25 
+5.1  Resources and Responsibilities ............................................................................................. 25 
+5.2  Social Management Unit ....................................................................................................... 25 
+6  BUDGET ................................................................................................................................. 26 
+7  GRIEVANCE REDRESSAL MECHANISM .................................................................................... 27 
+8  MONITORING AND EVALUATION ........................................................................................... 31 
+9  REPORTING ........................................................................................................................... 31 
+10  Appendix‐1 ........................................................................................................................ 33 
+11  Appendix‐2 ........................................................................................................................ 45 
+ 
+Table 1:Salient Features of Proposed Metro Project .............................................................................. 4 
+Table 2: StakeholdersGroup With Interest In SMRP ............................................................................. 10 
+Table 3: Stakeholder Engagement Strategies ....................................................................................... 13 
+Table 4: Surat Metro Rail Project Stakeholder Engagement Methods ................................................. 14 
+Table 5: Surat Metro Rail Project Strategy For Stakeholder Engagement ............................................ 20 
+Table 6: Cost for SEP ............................................................................................................................. 27 
+Table 7: Proposed GRM Time Frame .................................................................................................... 30 
+Table 8: Minutes of Environmental and Social Public Consultations ................................................... 33 
+Table 9: Sample of stakeholder log ....................................................................................................... 45 
+  December  2020  i 
+ 
+
+[page 3]
+Stakeholder Engagement Plan 
+ 
+Figure 1: Surat Metro  Network(Phase1) Map ........................................................................................ 3 
+Figure 2: Organisational Structure of ESMU ......................................................................................... 25 
+Figure 3: Stages of Grievance Redressal ............................................................................................... 29 
+ 
+  
+  December  2020  ii 
+ 
+
+[page 4]
+Stakeholder Engagement Plan 
+1 ABBREVIATIONS	
+ 
+AFD     Agence Française de Development 
+APMC     Agricultural Produce Market Committee     
+BRTS     Bus Rapid Transit System 
+CBO     Community Based Organization 
+CRZ     Coastal Regulation Zone 
+DCF       Deputy Conservator of Forest 
+DGVCL     Dakshin Gujarat Vij Company Limited 
+DMRC     Delhi Metro Rail Corporation 
+DPR     Detailed Project Report 
+DREAM City   Diamond Research and Mercantile City    
+EIA     Environmental Impact Asses mint 
+ESCP     Environmental Social Consultation Plan 
+ESMF     Environmental Social Management Framework  
+ESMP     Environmental Social Management Plan 
+ESS     Environmental and Social Standards 
+FGD     Focus Group Discussion 
+GETCO     Gujarat Energy Transmission Corporation Limited 
+GMRCL     Gujarat Metro Rail Corporation Limited 
+GOG     Government of Gujarat 
+GRC     Grievance Redress Committee 
+GRM     Grievance Redress Mechanism 
+GSRTC     Gujarat State Road Transport Corporation  
+IA     Implementing Agency 
+IECA     Institute of Civil Engineers and Architects 
+IIA     Indian Institute of Architects 
+IRSDC     Indian railway Station Development Corporation 
+ITI     Industrial Training Institute 
+KWF     Karatenomichi World Federation 
+LAO     Land Acquisition Officer 
+MMTH     Multimodal Transportation Hub  
+NGO     Non‐Governmental Organization 
+NHAI     National Highway Authority of India 
+  December  2020  iii 
+ 
+
+[page 5]
+Stakeholder Engagement Plan 
+  December  2020  iv 
+ 
+PAD     Project Appraisal Document 
+PAPs     Project Affected Persons 
+PIU     Project Implementation Unit 
+R & B     Roads and Buildings Department Office 
+RITES     Rail India Technical and Economic Services 
+RTFCTLARR  Right  to  Fair  Compensation  and  Transparency  in  Land  Acquisition, 
+Rehabilitation and Resettlement Act 
+RTO     Regional Transport Authority 
+RWA     Residential Welfare Associations 
+SBA     Surat Builders Association 
+SCAA     Surat Chartered Accounts Associations 
+SCET     Sarvajanik College of Engineering & Technology 
+SDA     Surat Diamond Associations 
+SDA     Surat Doctors Associations 
+SDB     Surat Diamond Bourse 
+SDO     Social Development Officer 
+SDTOA     Surat District Taxi Owners Association 
+SEP     Stakeholder Engagement Plan 
+SGCCI     Southern Gujarat Chamber of Commerce and Industry 
+SIA     Social Impact Assessment 
+SITCO     Surat Integrated Transport Development Corporation Limited 
+SMC     Surat Municipal Corporation 
+SMRP     Surat Metro Rail project 
+SMU     Social Management Unit 
+STTA     Surat Textile Traders Associations 
+SUDA     Surat Urban Development Authority 
+SVNIT     Sardar Vallabhbhai National Institute of Technology 
+URDCL     Urban Ring Road Corporation Limited 
+WHO     World Health Organisation
+
+[page 6]
+Stakeholder Engagement Plan 
+1 NON‐TECHNICAL	SUMMARY	
+ 
+• Gujarat Metro Rail Corporation Limited (GMRCL), a joint venture of Government 
+of Gujarat (GoG) and Government of India (GoI) is in the process of developing 
+Surat Metro Rail Project. The project is envisaged to be implemented in phases. 
+The phase‐1 consists of 40.35 km of metro network having two corridors with 38 
+stations. GoG is seeking financing from AFD and KfW to fund the implementation 
+of the project. 
+• Environmental  and  Social  Impact  Assessment  (ESIA)  has  been  undertaken  in 
+accordance with national and state legislative requirements and the World Bank 
+policy requirements. As a part of ESIA, a Stakeholder Engagement Plan(SEP) has 
+been  prepared  for  this  project  to  assist  GMRCL  in  managing  and  facilitating 
+future engagement of stakeholder through the various stages of the project’s life 
+cycle  right  from  design  to  construction,  operation,  closure  and  rehabilitation. 
+This  SEP  details  of  the  stakeholder  engagement  undertaken  during  the 
+preparation/design phase and serves as a guide for the activity during the project 
+implementation, operation and completion phase. 
+• The objective of this SEP: 
+1. Is to improve and facilitate decision making in a timely manner. 
+2. Create  an  atmosphere  of  understanding  with  project  affected  people  and 
+other stakeholders. 
+3. To  provide  opportunity  to  voice  their  opinions  and  concerns  that  may 
+influence project decisions. 
+• SEP  describes  strategy  and  procedures  for  interactions  with  public  and  private 
+stakeholders  at  local  and  state  level,  with  particular  focus  on  project  affected 
+people.  The  SEP  incorporates  definition  and  an  outline  of  potentially  affected 
+parties and other influential/interested parties that need to be considered in the 
+implementation of SEP. 
+• A stakeholder engagement and disclosure plan detailing methods and content of 
+engagement and disclosure for each type of stakeholders is presented in SEP.  
+• The  SEP  also  outlines  a  grievance  mechanism  to  allow  stakeholders  to  bring 
+concerns  to  the  GMRCL’s  attention.  SEP  is  a  ‘living document  which  shall  be 
+updated periodically through out the project life as appropriate. 
+  
+  December  2020  1 
+ 
+
+[page 7]
+Stakeholder Engagement Plan 
+  December  2020  2 
+ 
+2 INTRODUCTION	
+ 
+Surat is a city located on the western part of India in the state of Gujarat. The city is 
+located  284  Kms  south  of  Gandhi  Nagar,  265Kms  of  Ahmedabad  and  289  Kms  of 
+Mumbai.  The  economy  of  the  entire  city  is  based  mainly  on  two  industries,  the 
+textile industries  of manmade fibres/fabrics and the diamond cutting and polishing 
+industry. It is one of the most dynamic cities of India with one of the fastest growth 
+rate due to immigration from various parts of Gujarat and other states of India. Surat 
+is  one  of  the  oldest  inhabited  cities  in  the  world  and  densely  populated  with  an 
+average  13680  persons/sq.km  accommodating  about  44.67  lakhs  people  as  per 
+Census 2011.Average decadal growth of population of Surat since 2001 to 2011 was 
+about  55.29%.  Surat’s  high  population  growth  rate  coupled  with  high  economic 
+growth  rate  has  resulted  in  an  ever  increasing  demand  for  transport  creating 
+excessive pressure on the existent transport system. With high growth in transport 
+demand over the years, congestion on roads has been increasing due to phenomenal 
+rise in private transport. Absence of an efficient full‐fledged public transport system 
+coupled  with  rapid  growth  in  the  use  of  personalised  vehicle  has  led  to  high 
+consumption of fossil fuel and increase in environment pollution. Surat has also been 
+selected as one of the hundred Indian cities to be developed as a “Smart City”. The 
+existing  network  of  public  transport  systems  including  dedicated  BRTS  needs  to  be 
+strengthened  further  in  order  to  cope‐up  with  rising  demand  of  transport  system. 
+The  inter‐city  traffic  volumes  in  Surat  necessitated  a  full‐fledged  integrated  multi 
+model  mass  rapid  passenger  system.  In  this  view,  Government  of  Gujarat  (GoG) 
+desires  to  build  the  Metro  Rail  System  by  adopting  adequate  environmental 
+standards to provide for the protection of the people and the environment. 
+2.1 PROJECT	DESCRIPTION	
+ 
+The Surat Metro Rail (Phase1) project has two metro rail corridors with a combined 
+length  of  40.35  km.  Total  38  stations  are  proposed  consisting  of  elevated  and 
+underground  stations.  First  corridor  is  proposed  from  Sarthana  to  Dream  city  Line. 
+The length of this corridor will be 21.61 km of which 6.47 km would be underground 
+and the rest 15.14 km will be elevated. Second corridor is from Bhesan to Saroli. The 
+length  of  this  corridor  will  be  18.74  km,  would  be  completely  elevated.  The 
+alignment map of Surat metro rail project (Phase I) is shown in Figure  1and salient 
+features of the proposed corridors are listed in Table 1. 
+
+[page 8]
+Stakeholer Engament Plan 
+ 
+Figure 1: Surat Metro Network (Phase1) Map 
+  December  2020  3 
+ 
+
+[page 9]
+Stakeholder Engagement Plan 
+ 
+Table 1: Salient Features of Proposed Metro Project 
+S. No.  Description  Sarthana  –  Dream  city 
+Corridor 
+Bhesan‐ Saroli Corridor 
+1.   Length of Corridor  21.61 km  18.74 km 
+• Underground   6.47 km  0 
+• Elevated  15.14 km  18.74 km 
+2. 	 Number of Stations  20  18 
+• Underground  6  (Chowk  Bazaar,  Makati 
+Hospital,  Surat  Railway 
+Stations,  Central 
+Warehouse,  Labheshwar 
+Chowk, Kapodra) 
+Nil 
+• Elevated  14  (Dream  City,  Convention 
+Centre,  Bhimrad,  Surat 
+Women ITI, 
+VIP  Road,  Althan  Gaam, 
+Althan  Tenement,  Roopali 
+Canal,  Majura  Gate, 
+Kadarsha  Ni  Nal,  Shri 
+Swaminaryan  Mandir 
+Kalakunj, 
+VarchaChopatiGarden 
+,Nature Park, Sarthana) 
+18  (Bhesan,  Botanical 
+Garden,  UgatVaarigruh, 
+Palanpur Road, 
+L P Savani School, 
+Performing  Art  Centre, 
+Adajan  Gaam,  Aquarium, 
+Badri  Narayan  Temple, 
+Althawa  Chaupati,  Majura 
+Gate,  Udhana  Darwaja, 
+Kamela  Darwaja,  Anjana 
+Farm, Modal Town, Magob, 
+Bahrat  Cancer  Hospital, 
+Saroli) 
+3.   Maintenance Depot  1  1 
+4.   Track Gauge  1435 mm for both the corridors 
+5.   Station Dwell Time   30 Seconds 
+6. 	 Train Composition  3 Car train 
+7. 	 Average Speed  33 Kmph 
+8. 	 Max  design  & 
+Operating speed 
+90 kmph, 80 kmph 
+9. 	 Traction Power Supply  750 V DC 
+10. 	 Rolling Stock   	
+• Coach 
+Dimension 
+3.9 m x2.9 m 
+• Coach Carrying 
+Capacity 
+DMC (247), TC (270) 
+• Train  Carrying 
+Capacity 
+764 Passengers (Seating 136, Standing 628) 
+• Control 
+System  
+Train Based Monitor and Control System 
+11.   Signalling  Continuous Automatic train control with cab signalling and 
+ATO 
+12.   Telecommunication  Integrated  System  with  Fibre  Optic  cable,  SCADA,  Train 
+  December  2020  4 
+ 
+
+[page 10]
+Stakeholder Engagement Plan 
+  December  2020  5 
+ 
+S. No.  Description  Sarthana  –  Dream  city 
+Corridor 
+Bhesan‐ Saroli Corridor 
+Radio, PA system etc. 
+13.   Fare Collection  Automatic  Fare  Collection  System  with  combination  of 
+contactless  smart  card  for  multiple  journey  and 
+computerized contactless smart token for single journey. 
+14.   Construction 
+Methodology 
+Elevated  Viaduct  carried  over  pre‐stressed  concrete  box 
+shaped  Girder/U  Girder/Double  U‐Girder/I‐girder  with 
+pile/open foundation and underground construction using 
+TBM or Cut & cover or NATM techniques. 
+Source: DPR, June 2018 
+2.2 STAKEHOLDER	ENGAGEMENT	PLAN	
+ 
+As  a  part  of  Social  and  Environment  Impact  Assessment  Study,  a  Stakeholder 
+Engagement  Plan  (SEP)  has  been  prepared  for  Surat  metro  rail  project  (SMRP)  to 
+keep stakeholders informed on the project progress. This would ensure appropriate 
+project  information  on  environmental  and  social  risks  and  impacts  is  disclosed  to 
+stakeholders in timely, understandable, easily accessible and in appropriate manner 
+through  structured  format. The  SEP  shall  also  to  create  a  process  that  provides 
+opportunities  for  stakeholders  to  express  their  views  and  concerns,  and  allows 
+GMRCL  to  consider  and  respond  to  them.  Stakeholders  will  be  actively  involved  in 
+decision making and project implementation processes throughout the project. SEP 
+has  been  prepared  in  line  with  World  Bank’s  Environmental  and  Social  Standards 
+(ESS10). 
+The overall objective of this SEP is to define a program for stakeholder engagement, 
+including  public  information  disclosure  and  consultation,  throughout  the  entire 
+project cycle. The SEP outlines the ways in which Surat metro rail project team will 
+communicate with stakeholders and includes a mechanism by which people can raise 
+concerns,  provide  feedback,  or  make  complaints  about  metro  project  and  any 
+activities related to the project. 
+The  involvement  of  the  local  population  is  essential  to  the  success  of  the  metro 
+project  in  order  to  ensure  smooth  collaboration  between  project  staff  and  local 
+communities and i) minimize and mitigate environmental and social risks related to 
+the proposed project activities and (ii) to maximize the positive E&S impacts of the 
+Project. 
+ 
+ 
+The key objectives of the SEP can be summarised as under: 
+
+[page 11]
+Stakeholder Engagement Plan 
+• Provide  guidance  for  stakeholder  engagement  such  that  it  meets  the 
+standards of International best practices; 
+• Identify  key  stakeholders  that  are  affected,  and/or  able  to  influence  the 
+project and its activities; 
+• Identify the most effective methods, timing and structures through which to 
+share project information, and to ensure regular, accessible, transparent and 
+appropriate consultation; 
+• Develops a stakeholders engagement process that provides stakeholders with 
+an opportunity to influence project planning and design; 
+• Establish formal grievance/resolution mechanisms; 
+• Define roles and responsibilities for the implementation of the SEP; 
+• Define reporting and monitoring measures to ensure the effectiveness of the 
+SEP and periodical reviews of the SEP based on findings. 
+ 
+ 
+2.3 REGULATIONS	CONTEXT	
+ 
+2.3.1 National	Regulation	
+ 
+Rehabilitation  and  resettlement  under  this  project  will  comply  with  Right  to  Fair 
+Compensation  and  Transparency  in  Land  Acquisition,  Rehabilitation  and 
+Resettlement  RFCTLARR  Act,  2013.  The  Act  provides  for  land  acquisition  as  well  as 
+rehabilitation  and  resettlement.  It  replaces  the  Land  Acquisition  Act,  1894  and 
+National Rehabilitation and resettlement policy 2007.Right to Fair Compensation and 
+Transparency  in  Land  Acquisition,  Rehabilitation  and  Resettlement  (Gujarat 
+Amendment)  Act,  2016.  The  affected  communities  shall  be  duly  informed  and 
+consulted at each stage, including public hearings. 
+Reduction  of  various  pollutions  like  Air,  Noise,  Water  and  management  of  wastes 
+under  National  Regulations  comes  under  the  purview  of  State  Pollution  Control 
+Board  (SPCB).  Hence,  SPCB  shall  be  consulted  at  various  stages  for  stakeholder 
+consultations.     
+2.3.2 World	Bank	Standards	
+ 
+The  World  Bank’s  Environment  and  Social  Standard  (ESS)  10‐Stakeholder 
+Engagement  and  Information  Disclosure,  recognizes  the  importance  of  open  and 
+transparent  engagement  between  the  project  and  stakeholders  as  an  essential 
+element  of  good  international  practice.  It  indicates  that,  effective  stakeholder 
+engagement  can  improve  the  environmental  and  social  sustainability  of  projects, 
+enhance  project  acceptance,  and  make  a  significant  contribution  to  successful 
+project design and implementation. 
+  December  2020  6 
+ 
+
+[page 12]
+Stakeholder Engagement Plan 
+2.3.3 Preliminary	Stakeholder	Consultation	
+ 
+As  a  part  of  environmental  and  social  impact  assessment,  RITES’s  team  conducted 
+stakeholder’s consultation at local level.  Relevant  stakeholders were consulted and 
+participated  in  the  inception  meeting  of  the  impact  assessment.  The  consultations 
+were conducted in August and November 2019 during the field visit and were based 
+on  informal  unstructured  interviews  and  consultation  with  people  at  project  level 
+the  objective  of  this  consultation  was  to  disseminate  the  project  information  and 
+ascertain  stakeholder’s  views  on  probable  environmental  and  social  impacts  that 
+may  arise  with  the  implementation  of  the  proposed  project.  During  consultation 
+variety of views as well as valuable suggestions of public were received which were 
+very important to develop mitigation measures to address the impacts. 
+Based on suggestions received, a mitigation plan to reduce the impact of the project 
+was  proposed.  The  mitigation  plan  proposed  in  planning  phase  of  the  project  will 
+help to reduce the cost and time to mitigate the impacts. 
+Details on preliminary stakeholder consultations are presented in Appendix‐1. These 
+stakeholder  consultations  and  inputs  have  been  incorporated  in  the  project 
+identification and design. 
+ 
+Source‐Public consultation at Railway station road and Milan Nagar, Surat 
+Major  findings  of  the  preliminary  stakeholder  consultations  on  environmental  and 
+social issues are summarised as under: 
+ 
+Major findings of consultation on environmental issues are: 
+Positive Comments: 
+• Travel time reduces as metro caters the people from all over the city 
+• People believe that metro rail will enhance the aesthetic looks of the city 
+• Metro  will  be  the  good  transport  mode  as  the  city  population  increases 
+rapidly. 
+  December  2020  7 
+ 
+
+[page 13]
+Stakeholder Engagement Plan 
+• People do not have any problem if the metro passes above / adjacent to the 
+two  giant  African  Baobab  trees.  However, one  tree  out  of  these  two  Giant 
+Biobab trees collapsed due to weather disturbance on 02‐05‐2020. 
+• The proposed metro rail project would bean efficient and effective transport 
+facility in the city. It will reduce traffic pollution, save fuel and road accidents.  
+Negative Comment: 
+• People also expressed how the metro will get passengers when the present 
+public transport system like buses is running empty. 
+• Few people have the opinion that commuting by own vehicle/three wheelers 
+is better than travelling by metro. 
+Request/Suggestions: 
+• People near Khodiyar Temple at Adajan Gaam suggested having more parking 
+spaces near the temple. Large people visit the temple in the festival season, 
+especially Navratri. 
+• Adequate  compensation  need  to  be  provided  for  Project  Affected  Families 
+and no agricultural land to be affected due to the proposed metro. 
+• Construction  period  of  the  metro  should  not  be  delayed  as  it  creates 
+problems for the people commuting in the city. 
+ 
+Major findings of consultation on social issues are: 
+Positive Comments: 
+• The  proposed  metro  rail  project  will  lead  to  diverse  ways  of  livelihood 
+opportunities for people. Surat is known for its vibrant textile markets across 
+the country. The metro project may enlarge the growth of the textile market 
+which in turn will benefit to all kinds of people, shop keepers, merchants as 
+well as business class. 
+• The  proposed  metro  rail  project  is  expected  to  add  a  lot  in  terms  of 
+accessibility, safety, mobility and confidence for the development as well as 
+empowerment of women in a much broader perspective. 
+• The metro train facility will be very helpful for the working women. They can 
+save travel time and invest it  in taking care  of their children  and household 
+work. 
+• The  women  face  lot  of  difficulties  while  using  public  transport  facility. 
+However,  metro  train  would  be  a  safe  mode  of  transport  for  them.  The 
+women in the city demanded a separate coach reserved for them in the train. 
+  December  2020  8 
+ 
+
+[page 14]
+Stakeholder Engagement Plan 
+• The  youth  groups  found  to  be  very  enthusiastic  because  they  feel  that  the 
+proposed  project  will  bring  a  lot  of  employment  opportunities  for  them 
+considering their qualification and skills.  
+ 
+Request/Suggestions: 
+• The  affected  households  are  required  to  be  relocated  properly  by  the 
+government  if  land  acquisition  takes  place  for  the  construction  of  the 
+proposed metro rail project. The relocation sites should be decided in such a 
+place  where  the  households  can  have  access  to  existing  basic  facilities  like 
+school,  hospital,  drinking  water,  sanitation,  park,  local  market  along  with 
+other services. The local government authorities should be sensitive and has 
+an integrated plan for relocation of the PAHs. 
+• The  commercial  units  or  shops  needs  to  be  relocated  to  a  readily  available 
+shopping complex near to market which will secure income of the PAHs.  
+• The households will lose their commercial as well as residential units which in 
+turn  will  have  effect  on  income.  However  the  livelihood  opportunity  of  the 
+PAHs  would  be  very  much  dependent  on  available  relocation  option.  The 
+Surat  Municipal  Corporation  (SMC) should  come  up  with  an  integrated  plan 
+for R&R sites ensuring active participation of PAHs and other stakeholders. 
+• Auto rickshaw drivers may lose their income after the introduction of metro 
+train service in the city. Therefore, an integrated transport plan is needed to 
+address this issue.  
+• The  daily  wage  labourers  should  get  work  opportunity  during  the 
+construction of the project. The qualified individuals should get employment 
+opportunities  during  operation  of  the  metro  project.  Further,  it  should  also 
+create  an  opportunity  for  the  poor  people  to  open  a  shop  and  small 
+businesses near to the metro stations. 
+• As a part of R & R options the PAHs do not want money, but they demanded 
+land for loss of land, house for house and shop for shop. The PAHs felt that 
+money is not going to be a sustainable solution for them. 
+• Another  group  of  respondents  claimed  that  they  would  opt  for  shifting 
+allowance,  but  it  shall  be  paid  considering  the  local  market  or  government 
+price and the price should be on a higher side as well as satisfactory to them.  
+• The  metro  rail  project  and  other  components  shall  be  integrated  with  the 
+existing transport facility in the city such as BRTS (Bus Rapid Transit System) 
+auto rickshaws etc. The travel fare of metro rail would be a common concern 
+for the passengers. 
+  December  2020  9 
+ 
+
+[page 15]
+Stakeholder Engagement Plan 
+  December  2020  10 
+ 
+• The uneducated youths may find it difficult to get a job during operation but 
+they may get engaged in labour work construction of the metro project. The 
+local labours and people from surrounding villages shall be hired during the 
+construction of the project. The workers from other states shall not be given 
+work or other employment opportunities. 
+3 STAKEHOLDER	IDENTIFICATION	AND	ANALYSIS	FOR	PROPOSED	
+SEP	
+ 
+Stakeholders include persons or groups directly or indirectly affected by a project, as 
+well  as those who may have interest in a project and/or the  ability to influence its 
+outcome, either positively or negatively. In  order  to   develop  an  effective  SEP,  it  
+is  necessary  to  first  identify  who  the  stakeholders  are,  their groupings and sub‐
+groupings. 
+ 
+Table  2  below  identifies  the  key  stakeholder  groups  that  may  have  interest  in  a 
+project  and/or  the  ability  to  influence  its  outcome,  either  positively  or  negatively.  
+This  list  of  stakeholders  is  likely  to  expand/change  in  composition  as  the  project 
+moves  and  since  the  SEP  is  a  “living  document”  it  will  be  updated  regularly 
+throughout the project life as appropriate. 
+ 
+Table 2: Stakeholders Group with Interest in SMRP 
+Types of Stakeholders  Description 
+Government Institution 
+Govt Offices like‐District Collector, R&B, 
+Irrigation Department, RTO, Traffic Police 
+Surat Municipal Corporation (SMC) 
+Surat Urban Development Authority (SUDA) 
+State pollution Control Board (SPCB) 
+SPVs of SMC/SUDA like‐Surat Smart City, 
+Urban Ring Road(URDCL),DREAM City, SITCO, 
+IRSDC for railway station MMTH, Sitilink (BRT, 
+City Bus)  
+Western Railway, CE Planning 
+GSRTC, Surat 
+SGCCI 
+Gujarat Urban Development Company Ltd. 
+GMRCL 
+DMRC, RITES, SYSTRA 
+Mayor, Dy, Mayor, Std. Committee Chairman, 
+Other elected office bearers 
+Surat Climate Change Trust (IUC) 
+NHAI (local office) 
+
+[page 16]
+Stakeholder Engagement Plan 
+  December  2020  11 
+ 
+Types of Stakeholders  Description 
+ICEA, ICE, IIA, IE (1) 
+Lenders  AFD and KFW 
+Community/Associations 
+Project Affected People (PAP) 
+Inhabitants and trade people in the project 
+affected areas 
+Residential Welfare Associations (RWA) 
+Surat Builders Association (SBA), CREDAI
+Surat Diamond Associations (SDA) 
+Surat Diamond Bourse (SDB) 
+Surat Textile Traders Associations (STTA) 
+APMC, Surat 
+Surat Chartered Accounts Associations (SCAA)
+Surat Doctors Associations (SDA) 
+Surat District Taxi Owners Association 
+(SDTOA) 
+Surat Auto rickshaw Association 
+NGOs/Trust 
+Federation of Surat Textile Traders 
+Association Area: Human Rights 
+Nature Club Surat, Environment Education 
+and Research Centre 
+National Civil and Environment Protection 
+Gramin Krishi Pashudhan Evam Uddyan Vikas 
+Sansthan Area: Women's Development & 
+Empowerment 
+Gujarat State Network of People Living With 
+HIV AIDS Area: HIV/AIDS 
+Gujarat BarodiyaSamaj Vikas Mandal Area: 
+Art & Culture 
+Sai Social Trust Area: Tribal Affair 
+Seva sughandh sarvjanik trust 
+Area:Aged/elderly 
+Trust Area: Education & Literacy 
+Shri Nirman Development Foundation Trust 
+Area: Disaster Management 
+Public & Academic Institutions 
+ 
+Sardar  Vallabhbhai  National  Institute  of 
+Technology(SVNIT),SCET,  Gandhi  Engineering 
+College,  Bhagwan  Mahavir  College,  Tapti 
+College 
+Centre for Social Studies 
+Surat Women ITI 
+
+[page 17]
+Stakeholder Engagement Plan 
+  December  2020  12 
+ 
+Types of Stakeholders  Description 
+South Gujarat University 
+University Campus 
+Societies like Dayalaji Ashram, Torrent Power, 
+Premvati Upahar Gruha, GETCO, DGVCL, Girls 
+High school etc) 
+Print& TV media representatives 
+Gujarat  Samachar,  Bhaskar,  Aaaj  Kaal,  
+Gujarati, Divya Bhaskar, Times of India, Indian 
+Express,  TV9  Gujarati,  News  18  Gujarati, 
+GSTV, Zee 24 Kalak. 
+ 
+Stakeholder analysis, i.e. an in‐depth look at each group’s interest, how they will be 
+affected,  and  to  what  degree  and  what  influence  they  could  have  on  the  project. 
+Within  the  broader  framework  of  the  project  and  activities  to  be  undertaken,  the 
+following categories of stakeholders can be identified: 
+(a)  Stakeholders who will be directly and/or indirectly affected by the project 
+(b) Stakeholders that have interest in project and interventions under the metro 
+project and have the potential to influence the project’s outcomes 
+(c)  Disadvantaged/ vulnerable individuals or groups. 
+ 
+4 PURPOSE	 AND	 TIMING	 OF	 PROPOSED	 STAKEHOLDER	
+ENGAGEMENT	PROGRAM	
+ 
+This SEP is designed to establish an effective platform for productive interaction with 
+the  potentially  affected  parties  and  others  with  interest  in  the  implementation 
+outcome of the SMRP.  Meaningful stakeholder engagement throughout the project 
+cycle will: 
+• Solicit  feedback  to  inform  project  design,  implementation,  monitoring  and 
+evaluation 
+• Clarify project objectives, scope and manage expectations  
+• Assess and mitigate project environmental and social impacts and risks 
+• Enhance project outcomes and benefits 
+• Build constituencies and collaboration 
+• Disseminate project information/ materials 
+• Address project grievances 
+ 
+Adequate  stakeholder    consultations  will   require   effective   timing   and  advanced   
+planning.   To   ensure information is readily accessible to affected stakeholders, and 
+adequate representation and participation of the different groups in the process, the 
+GMRCL will adopt  strategies and different  methods  and  techniques  based  on  an  
+assessment  of    stakeholder  needs.    The strategies that will be adopted to conduct 
+
+[page 18]
+Stakeholder Engagement Plan 
+stakeholder  engagement  process  are  given  in  Table  3.  Methods  for  stakeholder 
+engagement are listed in Table 4. 
+ 
+ 
+Table 3: Stakeholder Engagement Strategies 
+Sr.No  Stages  Project  with  Significant  Risks  and  Diverse 
+Stakeholder Issues 
+1  Engagement  at  the  project 
+concept stage 
+Interviews  with  stakeholder  representative,  key 
+informants and government officials 
+ 
+Stakeholder planning forum 
+2  Engagement  during  ESIA 
+studies 
+Community  liaison  officers  recruited  and 
+accompanying  environmental  and  social 
+specialists on ESIA studies 
+ 
+Interviews  with  stakeholder  representatives  and 
+key informants 
+ 
+Issues scoping workshops 
+ 
+Participatory  techniques  used  to  consult  with 
+focus groups on impact‐specific topics 
+ 
+Participatory  techniques  used  to  consult  with 
+stakeholders most disadvantaged by the project 
+ 
+Stratified sample interviews 
+ 
+Public meetings 
+ 
+Newsletters 
+ 
+Open houses, in field office and project HQ 
+ 
+Radio and TV notifications 
+3  Engagement  during 
+construction and operations 
+Participatory monitoring 
+ 
+Annual/quarterly  targeted  consultation,  e.g.  with 
+specific stakeholder groups 
+ 
+Use  of  internet  and  other  means  to  disseminate 
+monitoring data 
+ 
+Annual/ quarterly stakeholder perception surveys 
+and follow‐up 
+ 
+  December  2020  13 
+ 
+
+[page 19]
+Stakeholder Engagement Plan 
+  December  2020  14 
+ 
+Sr.No  Stages  Project  with  Significant  Risks  and  Diverse 
+Stakeholder Issues 
+Annual/ quarterly stratified sample interviews 
+ 
+Newsletters 
+ 
+Radio and TV 
+ 
+Open houses, in field office and project HQ 
+4  Engagement  on  new 
+stakeholder  issues  and 
+concerns that may arise 
+Grievance mechanisms  
+ 
+Annual/quarterly  household  questionnaires  with 
+project affected people 
+ 
+Annual/quarterly  interviews  with  key  informants 
+and stakeholder representatives 
+ 
+Annual stakeholder events and gatherings 
+Source:  Stakeholder  Engagement:  A  Good  Practice  Handbook  for  Companies  doing 
+Business in Emerging Market, IFC, 2007. 
+ 
+Table 4: Surat Metro Rail Project Stakeholder Engagement Methods 
+S. 
+No 
+Engagement 
+Technique 
+Description and use  Target audience  Adaptations  in  case  of 
+Lockdown 
+1  Websites  Detailed  Project  Report 
+(DPR),  EIA,  SIA,  GAP 
+and  SEP  will  be 
+published  on  official 
+websites of GMRCL and 
+the  AFD  &KFW. 
+Overview  of  project, 
+impacts and mitigation, 
+and  project  updates 
+through  project 
+leaflets,  Large  format 
+posters. 
+All stakeholders  Websites, 
+Project  Leaflets,  large 
+format posters 
+2  Media  
+announcem
+ents 
+Advance 
+announcements  of 
+commencement  of 
+major project activities, 
+project  Grievance 
+Redress  Mechanism, 
+and  other  outreach 
+Project‐
+affected 
+stakeholders 
+and  
+communities 
+Leaflets  with  news 
+paper,  Traditional 
+media  (radio, 
+television,  public 
+address  systems), 
+Online  Community 
+Meeting  with  affected 
+stakeholders  and 
+
+[page 20]
+Stakeholder Engagement Plan 
+  December  2020  15 
+ 
+S. 
+No 
+Engagement 
+Technique 
+Description and use  Target audience  Adaptations  in  case  of 
+Lockdown 
+needs of the project communities. 
+3  Information  
+Centre and  
+Information  
+Boards 
+Advance 
+announcement  of 
+commencement  and 
+progress  for  major 
+project activities 
+Project‐
+affected 
+communities 
+Leaflets  with  news 
+paper,  Traditional 
+media(radio, 
+television,  public 
+address  systems),  FGD 
+through  local 
+facilitators, 
+Online  community 
+meetings 
+4  Community  
+/public 
+meetings 
+These  interactive 
+platforms  will  be  used 
+to  convey  general 
+information  on  the 
+Project,  detailed 
+discussions  on  sub‐
+project  activity  that  is 
+planned by the project, 
+project  environmental 
+and  social  impacts  and 
+risks  and  mitigation 
+measures  and  to 
+provide regular updates 
+on  implementation 
+progress  to  all 
+stakeholders.  Meeting 
+will  also  enable 
+stakeholders to express 
+their  views,  demands, 
+constraints etc. 
+Project‐
+affected 
+communities 
+Community 
+meetings/FGDs 
+through  local 
+facilitators, 
+Online  community 
+meetings, 
+ 
+5  Correspond
+ence  
+by  phone/ 
+email/ 
+written 
+letters 
+Distribute  project 
+information  to 
+government  officials, 
+organizations, agencies, 
+NGOs,  CBOs,  Trusts, 
+companies, 
+community/Association
+s  and  Development 
+Partners  etc  and  invite 
+stakeholders  to  share 
+Government 
+officials,  NGOs,
+CBOs,  Trusts,
+Community/Ass
+ociations, 
+Development 
+Partners etc. 
+Correspondence  by
+phone/email/written 
+letters,  WhatsApp
+groups, 
+
+[page 21]
+Stakeholder Engagement Plan 
+  December  2020  16 
+ 
+S. 
+No 
+Engagement 
+Technique 
+Description and use  Target audience  Adaptations  in  case  of 
+Lockdown 
+their  views, concerns,
+demands etc. 
+6  Printed 
+media  
+advertiseme
+nt 
+This  will  be  used  to 
+disseminate  and 
+disclose  project 
+documents  intended 
+for general readers and 
+audience.  
+(e.g. ESMP, ESCP) 
+General public  Printed media  
+advertisement 
+7  Distribution 
+of  
+printed 
+public  
+materials: 
+project 
+information  
+leaflets,  
+brochures, 
+fact  
+sheets 
+This  will  be  used  to 
+convey  general 
+information  on  the 
+project  and  to  provide 
+regular  updates  on  its 
+progress  to  local, 
+regional  and  national 
+stakeholders. 
+General public  Distribution  of  printed 
+public  materials, 
+project  leaflets, 
+brochures, 
+8  Internet/ 
+Digital  
+Media 
+Use  of  the  official 
+websites  of 
+implementing 
+Ministries and Agencies 
+to  promote  various 
+information  and 
+updates  on  the  overall 
+project,  impact 
+assessment  and  impact 
+management  process, 
+procurement, 
+employment 
+opportunities,  as  well 
+as  on  project’s 
+engagement  activities 
+Project 
+stakeholders 
+and  other 
+interested  
+parties  that 
+have  
+Access  to  the 
+internet 
+resources. 
+Internet/Digital media 
+
+[page 22]
+Stakeholder Engagement Plan 
+  December  2020  17 
+ 
+S. 
+No 
+Engagement 
+Technique 
+Description and use  Target audience  Adaptations  in  case  of 
+Lockdown 
+with  the  public and  to 
+invite  all  stakeholders 
+to  share  their  views, 
+concerns,  demands  etc 
+through  internet 
+resources. 
+9  One‐on‐one  
+interviews 
+This  will  be  used  to 
+solicit  views  and 
+opinions  on  project 
+impacts and solutions. 
+Vulnerable 
+individuals, 
+NGOs,  Trusts 
+Associations, 
+women  groups, 
+PAPs  
+etc 
+Online  Community 
+Meetings,  Conducting 
+community  meetings/ 
+FGDs  through  local 
+facilitators, 
+10  Workshops  This  channel  will  be 
+used  to:  (i)  Present 
+project information to a 
+group  of  stakeholders; 
+(ii) Allow the  
+group  of  stakeholders 
+to  provide  their  views 
+and  opinions;  (iii)  Use 
+participatory  exercises 
+to facilitate  
+Group  discussions, 
+brainstorm  issues, 
+analyse  information, 
+and  develop 
+recommendations  and 
+strategies;  and  (iv) 
+Recording of responses.
+Government, 
+NGOs,  Trusts 
+Associations, 
+women  groups, 
+PAPs, etc. 
+Webinars 
+11  Focus group  
+meetings 
+This  will  be  used  to 
+facilitate  discussion  on 
+specific  issues  such  as 
+gender  based  violence, 
+disability  inclusion,  etc. 
+that  merit  collective 
+examination  with 
+Vulnerable, 
+women 
+groups 
+Online  Community 
+Meetings,  Conducting 
+community 
+meetings/FGDs 
+through  local 
+facilitators, 
+
+[page 23]
+Stakeholder Engagement Plan 
+  December  2020  18 
+ 
+S. 
+No 
+Engagement 
+Technique 
+Description and use  Target audience  Adaptations  in  case  of 
+Lockdown 
+various  groups  of 
+stakeholders  using 
+Focus Group Meetings. 
+12  Surveys /  
+Independen
+t  
+evaluations 
+Surveys  will  be  used  to 
+gather  beneficiary 
+opinions  and  views 
+about  project 
+interventions.  Civil 
+society  could  also  be 
+engaged  to  support 
+citizen  feedback 
+surveys for the project. 
+Project  
+beneficiaries 
+Telephone, Email
+Surveys and interviews 
+through  empowered 
+local facilitators 
+ 
+4.1 STRATEGY	TO	CONDUCT	STAKEHOLDER	ENGAGEMENT	IN	COVID‐19	
+CONTEXT	
+ 
+COVID‐19  has  become  a  global  issue  and  declared  as  pandemic  by  World  Health 
+Organisation  (WHO).  Over  the  last  few  months,  the  whole  world  is  collectively 
+fighting  against  this  pandemic  to  keep  people  safe.  With  the  intent  to  contain  the 
+spread of COVID‐19, GoI announced a nationwide complete lockdown on 25thMarch, 
+2020and this lockdown continued till 31stMay, 2020.The pandemic has affected the 
+country  in  different  ways,  with  many  states  implementing  border  closures,  other 
+movement  and  social  restrictions.  Surat  city  lies  in  the  state  of  Gujarat  was  also 
+followed the same guidelines issued by Government of India. However, even today 
+the situation is not normal. 
+ 
+During  this  lockdown  period  due  to  restrictions  on  movement  and  physical 
+distancing,  it  was  not  possible  to  conduct  face  to  face  interview,  Focus  Group 
+Discussions,  community  meetings  on  the  ground.  In  such  situation,  RITES  with  the 
+help  of  GMRCL  made  an  attempt  to  collect  telephone  numbers  of  project  affected 
+people,  community  leaders/members  to  collect  information.  But  it  was  observed 
+that due to unavailability of mobile phone with vulnerable groups, consultations with 
+them were difficult. 
+Mandatory restrictions and social distancing measures associated with COVID‐19 rule 
+out  some  traditional  consultation  approaches.  Therefore,  there  is  need  to  develop 
+alternate  plans  for  active  engagement  with  stakeholders  in  different  stages  of  the 
+
+[page 24]
+Stakeholder Engagement Plan 
+  December  2020  19 
+ 
+project.  In  such  situation  possible  approaches  for  disclosing  information  and 
+engaging with stakeholders are presented in Table‐4 above. 
+ 
+4.2 PROPOSED	STRATEGY	FOR	INFORMATION	DISCLOSURE	
+Stakeholder engagement on the SMRP will follow the standard project management 
+cycle,  which  are:  (i)  Preparation  and  Design  Phase;  (ii)  Implementation  Phase;(iii)  
+Monitoring   Phase;  and   (iv)   Completion   and   Evaluation  Phase.   The strategy for 
+information  disclosure  is  presented  in  Table  5  below.
+
+[page 25]
+Stakeholder Engagement Plan 
+ 
+Table 5: Surat Metro Rail Project Strategy for Stakeholder Engagement 
+Proje
+ct 
+stage 
+List  of 
+information  to 
+be disclosed 
+Method 
+Proposed 
+Target Stakeholders  Topic of consultation  Responsibil
+ity 
+Tentative 
+Timeline 
+Preparation or design Phase 
+Project 
+Appraisal 
+Document 
+(PAD) 
+Official 
+websites 
+National,  Regional  and district 
+stakeholders:  Government  ministries, 
+agencies  and  departments,  research 
+organisations, NGOs 
+Development partners. 
+Project design, benefits and impact  GMRCL  October 
+2020 
+ESMF, SEP  Official 
+websites  
+Regional and 
+District level  
+Publications 
+National,  Regional  and  district 
+stakeholders 
+Environmental and Social 
+Management, Procurement, 
+Stakeholder engagement 
+GMRCL  October 
+2020 
+  Workshops  Regional, District and community level  Project  concept, selection of
+beneficiary communities, 
+benefits, impacts 
+GMRCL,PI
+U 
+Novemb
+er 2020 
+  Community 
+Consultation 
+and  
+Community Level stakeholders 
+ 
+Project concept, Mode of
+selection of beneficiary 
+communities, benefits, impacts 
+GMRCL,PI
+U 
+Novemb
+er 2020 
+  December  2020  20 
+ 
+
+[page 26]
+Stakeholder Engagement Plan 
+  December  2020  21 
+ 
+Proje
+ct 
+stage 
+List  of 
+information  to 
+be disclosed 
+Method 
+Proposed 
+Target Stakeholders  Topic of consultation  Responsibil
+ity 
+Tentative 
+Timeline 
+Consultation 
+with  
+affected 
+parties 
+  Distribution 
+of  
+printed  
+documents 
+in  
+relevant  
+institution 
+National,  Regional  and  district 
+stakeholders and Community level 
+Project concept, 
+benefits and  
+impacts 
+GMRCL,PI
+U 
+Novemb
+er 2020 
+
+[page 27]
+Stakeholder Engagement Plan 
+  December  2020  22 
+ 
+Proje
+ct 
+stage 
+List  of 
+information  to 
+be disclosed 
+Method 
+Proposed 
+Target Stakeholders  Topic of consultation  Responsibil
+ity 
+Tentative 
+Timeline 
+Implementation 
+Phase  ESMP, Labour 
+Management 
+Procedure,  
+Occupational 
+Health and  
+Safety Plan 
+Emergency 
+preparedness  
+and response 
+Project 
+Monitoring and 
+safeguard  
+Official 
+websites 
+Community  
+Information  
+Centres 
+National,  Regional  and  district 
+stakeholders 
+projects benefits, impacts (Security, 
+GRM, gender based violence issues  
+and mitigation 
+GMRCL,  
+PIU, 
+Safeguard
+s Team 
+Decemb
+er 2020 
+
+[page 28]
+Stakeholder Engagement Plan 
+  December  2020  23 
+ 
+Proje
+ct 
+stage 
+List  of 
+information  to 
+be disclosed 
+Method 
+Proposed 
+Target Stakeholders  Topic of consultation  Responsibil
+ity 
+Tentative 
+Timeline 
+Operational Phase 
+Compliance 
+report Quarterly
+and  Annual
+performance 
+reports 
+Environmental 
+and  Social 
+Audit reports  
+Updates  on 
+project 
+activities 
+Notice 
+boards of  
+PIU, Regional 
+and  District 
+level  
+offices 
+Regional and district stakeholders  Project performance, 
+GRM,  Security,  Gender  based 
+violence education 
+PIU  Regular 
+Completi
+on Phase  Project 
+Completion 
+Report 
+Institutional 
+completion 
+reports 
+All Stakeholders  Project results  PIU  Decemb
+er 2024 
+
+[page 29]
+Stakeholder Engagement Plan 
+4.3 PROPOSED	STRATEGY	TO	INCORPORATE	THE	VIEWS	OF	VULNERABLE	
+GROUPS	
+ 
+The  principle   of   inclusiveness   will  guide   the   stakeholder    engagements,  
+particularly   with  respect   to   vulnerable  individuals  and  groups.  In  cases  where 
+vulnerable  status  may   lead  to  people’s  reluctance  or  physical  incapacity  to 
+participate  in  large‐scale  community  meetings,  the  project  will  hold  separate  small 
+group discussions with them at an easily accessible venue. This way, the project will 
+reach  out  to  groups  who,  under  normal  circumstances,  may  be  insufficiently 
+represented at general community gatherings.  
+ 
+Some strategies to be adopted to reach out to these groups include: 
+• Identify  leaders  of  vulnerable  and  marginalized  groups  to  reach‐out  to  these 
+groups 
+• Engage community leaders, CBOs and NGOs working with vulnerable groups 
+• Organize face‐to‐face focus group discussions with these populations 
+ 
+  	
+  December  2020  24 
+ 
+
+[page 30]
+Stakeholder Engagement Plan 
+  December  2020  25 
+ 
+5 RESOURCES	AND	RESPONSIBILITIES	FOR	IMPLEMENTING	
+PLANNED	SEP	ACTIVITIES	
+ 
+5.1 Resources	and	Responsibilities	
+ 
+The  Project  Implementation  Unit  (PIU)  headed  by  Project  Director  has  overall 
+responsibility  for  stakeholder  consultation  and  involvement.  The  proposed  staffing 
+complement from the ESIA management framework is given in Figure 2. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+5.2 Social	Management	Unit	
+ 
+GMRCL  will  set  up  a  Social  Management  Unit  (SMU)  which  shall  look  after  land 
+acquisition,  resettlement,  rehabilitation  activities  and  stakeholder  consultation  and 
+involvement. A Sr. Social Development Officer (Sr.SDO) with educational background 
+of  Social  Work  or  Sociology  will  be  appointed  in  SMU  as  full  time  by  GMRCL.  A 
+Resettlement and Rehabilitation Officer (RRO) with background of social science may 
+be appointed in this SMU to supervise and monitor overall activities of stakeholder 
+consultations and he/she will report day to day progress to Sr.SDO. 
+ 
+The duties of Sr. Social Development Officer will involve but are not limited to: 
+ 
+• Reporting to Project Director of PIU; 
+Figure 2: Organizational Structure of ESMU 
+Project Director
+Additional General Manager (ESMU)
+Sr. Social 
+Development Officer 
+Environmental Expert 
+(EMU) 
+R & R Officer 
+Technical Assistant 
+
+[page 31]
+Stakeholder Engagement Plan 
+• Management of Social Management Unit; 
+• Management all community/field related tasks in the field office; 
+• Develop community development plan based on mitigation proposed in RAP; 
+• Implement  community  engagement  strategy  and  oversee  all  community 
+liaison related matters; 
+• Manage the grievance mechanism set up for the project affected areas; 
+• Oversee implementation and monitoring of RAP; 
+• Establish a monitoring and evaluation plan and other tools established such 
+as the grievance register, commitment register and consultation register; 
+• Provide reports to Project Director for onward submittal to GMRCL and AFD 
+&KfW. 
+ 
+The duties of R&R Officer will involve but are not limited to: 
+• Reporting to Sr. Social Development Officer; 
+• Supervise and monitor overall activities of SEP; 
+• Perform community engagement; 
+• Provide liaison between community development programme measures and 
+implementing partner‐NGO; 
+• Manage arising community matters; 
+• Perform  monitoring  and  evaluation  to  track  progress  of  implementation  of 
+mitigation  measures  and  assess  if  progress  and  performance  of  mitigation 
+actions being undertaken by the GMRCL to ensure objectives are met. Liaise 
+with  appropriate  GMRCL  personnel  to  ensure  that  grievances  are  tracked, 
+reported and responded accordingly as necessary. 
+ 
+6 BUDGET	
+ 
+Funding for the SEP implementation will be included as part of project cost and this 
+will be financed by Government of Gujarat. The project allocates an annual budget of 
+INR  30.00  Lakh  for  stakeholder  engagement  activities  in  the  initial  phase  of  the 
+project.  This  includes  the  cost  of  printing,  documentation,  advertisement,  venue, 
+transportation,  refreshment  and  other  miscellaneous.   Stakeholder  engagement 
+budget will increase gradually commensurate with project development. 
+ 
+ 
+ 
+ 
+ 
+  December  2020  26 
+ 
+
+[page 32]
+Stakeholder Engagement Plan 
+Table 6: Cost for SEP 
+Sr.No  Cost for SEP  Amount(Rs.) 
+A  Cost for one Consultation at City level 
+1  Venue  150000 
+2  Sound Arrangement  60000 
+3  Refreshment  150000 
+4  Advertisement  400000 
+5  Printing documents, leaflets  100000 
+6  Video photographic  50000 
+7  Stationary  50000 
+8  Transportation  100000 
+   Sub‐Total‐A  1060000 
+B  Cost for two Consultation at City level (2xA)  2120000 
+C  Consultation at Community level 
+9  Local consultation at community level*  600000 
+Sub‐Total‐C  600000 
+D  Total B+C  2720000 
+10  Miscellaneous @ 10% of D  272000 
+   GRAND  TOTAL  2992000 
+   Say  3000000 
+ 
+7 GRIEVANCE	REDRESSAL	MECHANISM	
+ 
+The main objective of a Grievance Redressal Mechanism (GRM) is to assist an entity 
+to resolve complaints and grievances in a timely, effective and efficient manner that 
+satisfies  all  parties  involved.  Specifically,  it  provides  a  transparent  and  credible 
+process for fair, effective and lasting outcomes. It also builds trust and cooperation 
+as  an  integral  component  of  broader  community  consultation  that  facilitates 
+corrective actions. Specifically, the GRM: 
+ 
+• Provides  affected  people  with  avenues  for  making  a  complaint  or  resolving 
+any  dispute  that  may  arise  during  the  course  of  the  implementation  of 
+projects; 
+• Ensures  that  appropriate  and  mutually  acceptable  redress  actions  are 
+identified and implemented to the satisfaction of complainants; and 
+• Avoids the need to resort to judicial proceedings. 
+ 
+Having  multiple   stakeholders,    the  project   could  lead    to  complaints,   
+misunderstandings,  conflicts   and  disputes.   The  project   will   provide    a  grievance   
+mechanism   that  would   provide    all  direct    and  indirect   beneficiaries,  service   
+providers  and    other   stakeholders  the    opportunity  to   raise   their   concerns.  
+Stakeholders  would  be  informed  of  the  grievance  mechanism  through  website  of 
+  December  2020  27 
+ 
+
+[page 33]
+Stakeholder Engagement Plan 
+GMRCL/government, leaflets, brochures, and communitymeetings, traditional media 
+(news paper, radio, television, and public address system). 
+ 
+Grievance  management  has  a  significant  implication  on  reputation  of  the 
+implementing  agency,  government  and  lenders.  Grievances  of  PAPs  will  be  first 
+brought  to  the  attention  of  field  level  staffs  of  Project  Implementation  Unit  (PIU). 
+Grievances  not  redressed  by  the  field  level  staffs  will  be  brought  to  the  Grievance 
+Redress  Committee  (GRC).  The  composition  of  the  proposed  GRC  will  have 
+representatives  from  PAPs,  women  representative,  Project  Director  (PIU),  Sr.SDO, 
+SMU  of  IA,  NGO  representative,  representative  of  local  body,  and  Land  Acquisition 
+Officer (LAO). The main responsibilities of the GRC are to: (i) provide support to PAPs 
+on  problems  arising  from  land/property  acquisition;  (ii)  record  PAPs  grievances, 
+categorize,  and  prioritize  grievances  and  resolve  them;  (iii)  immediately  inform  the 
+PIU  and  SMU  of  serious  cases;  and  (iv)report  to  PAPs  on  developments  regarding 
+their grievances and decisions of the GRC. Other than disputes relating to ownership 
+rights under the court of law, GRC will review grievances involving all resettlement 
+benefits,  compensation,  relocation,  replacement  cost  and  other  assistance.  When 
+any grievance is brought to the field level staff, it should be resolved within 15 days 
+from  the  date  of  complaint.  The  GRC  will  meet  every  month  (if  grievances  are 
+brought  to  the  Committee),  determine  the  merit  of  each  grievance,  and  resolve 
+grievances  within  a  month  of  receiving  the  complaint—failing   which  the  grievance 
+will be referred to appropriate court of law for redressal. Records will be kept of all 
+grievances received including: contact details of complaint, date the complaint was 
+received,  nature  of  grievance,  agreed  corrective  actions  and  the  date  these  were 
+effected,  and  final  outcome.  A  flow  chart  of  grievances  redressal  is  indicated  in 
+Figure 3. 
+ 
+Table 7  below  presents  the  recommended  time frames  for  addressing  grievance  
+or  disputes  related    to  resettlement  and   compensation.  It  is  envisaged  that 
+resettlement/  compensation  disputes  could  be  resolved  at  the  community  or 
+regional levels. 
+  
+  December  2020  28 
+ 
+
+[page 34]
+Stakeholder Engagement Plan 
+ 
+  December  2020  29 
+ 
+ 
+  
+Figure 3: Stages of Grievance Redressal
+ 
+Not 
+Redressed 
+Not Redressed Not 
+Redressed 
+Grievance 
+Redress 
+Committee 
+Judiciary
+Grievance 
+Addressed 
+PIU (Field level 
+staffs) 
+Grievance 
+Addressed 
+Competent 
+Authority 
+Grievance 
+Addressed 
+Assistance 
+Project Affected People 
+Grievance 
+Compensatio
+n
+
+[page 35]
+Stakeholder Engagement Plan 
+  December  2020  30 
+ 
+ 
+ 
+Table 7: Proposed GRM Time Frame 
+Step  Process  Time frame 
+1  Receive and register grievance  within  24 
+hours 
+2  Acknowledge  within  24 
+hours 
+3  Assess grievance  within  24 
+hours 
+4  Assign responsibility  within 2 days
+5  Development of response  within 7 Days
+6  Implementation of  response if  agreement is reached within 7 Days
+7  Close  grievance  within 2 Days
+8  Initiate  grievance  review  process  if  no  agreement  is 
+reached 
+within 7 Days
+9  Implement  review   recommendation   and  close   
+grievance 
+within 15 Days
+10  Grievance  taken  to court by complainant ‐ 
+ 
+Resolved  and  escalated  grievances/cases  would  be  documented  daily  into  the 
+GMRCL  centralised  GRM  system  by  the  assigned  grievance  Officer.  The  Safeguards 
+Specialist  or  a  dedicated  staff  at  the  PIU  would  exercise  oversight  over  the  system 
+and track the resolution of all grievances/cases. Monthly case/ grievance reports will 
+be generated from the system by the Safeguards Specialist or dedicated staff at the 
+PIU  and  report  to  the  Project  Director  to  inform  management  decisions.  Quarterly 
+reports would also be generated and reported to the GMRCL as part of the project’s 
+progress. 
+ 
+Detail address of Grievance Redressal Officer is given below. 
+ 
+1.) Grievance Redressal Officer 
+Gujarat Metro Rail Corporation 
+1st Floor 
+SUDA Bhawan 
+Vesu‐Abhva Road 
+Vesu 
+Surat‐395 007 
+2.) Website :www.gujaratmetrorail.com 
+3.) Phone No : 
+ 
+ 
+
+[page 36]
+Stakeholder Engagement Plan 
+8 MONITORING	AND	EVALUATION	
+ 
+Monitoring stakeholder engagement process is still new to the project. A process of 
+establishing monitoring criteria is an initial phase of development. The results to be 
+analysed  will  provide  background  for  planning  better  initiatives  for  the  operation, 
+closure  and  rehabilitation  project  stage.  The  following  SEP  activities  require 
+monitoring and evaluation from assigned personnel and team in the Project: 
+• Implementation  of  SMRP  stakeholder  engagement  strategy  that  includes 
+activities to be carried out in different phases of the project. 
+ 
+• Implementation  of  Grievance  Mechanism  as  part  of  SEP  which  includes 
+dissemination of Grievance Mechanism, grievance logging and tracking, action 
+taken, effectiveness of grievance management, confidentiality of the grievance 
+raised  and  number  of  grievances  solved.  A  sample  of  stakeholder  log  is 
+attached at Appendix‐2. 
+ 
+Evaluation of SEP implementation will be carried out at least annually. Evaluation is 
+essential  to  provide  feedback  to  improve  Project  SEP  and  enhance  Project‐
+stakeholder’s relationship. 
+ 
+9 REPORTING	
+ 
+Monthly Reports: Sr. Social Development Officer will prepare brief monthly reports 
+on stakeholder engagement activities for the Project Director, PIU, which includes: 
+ 
+• Activities conducted during each month; 
+• Public outreach activities (meetings with stakeholders and newsletters); 
+• Entries to the grievance register; 
+• Entries to the commitment and concerns register; 
+• Number of visits to the information centre; 
+• Progress on other social development activities 
+• Plans for the next month and longer term plans. 
+ 
+Monthly, quarterly and semi‐annual reports will be used to develop annual reports 
+reviewed by senior managers of PIU. These reports will be shared with AFD &KfW. 
+ 
+Annual Reports: Project Director will compile a report summarising SEP results on an 
+annual  basis.  The  report  will  provide  summary  of  all  public  consultation  issues, 
+grievances  and  resolutions.  The  report  will  provide  a  summary  of  relevant  public 
+consultation  findings  from  informal  meetings  held  at  community  level.  These 
+evaluation  reports  should  be  presented  to  the  concerned  senior  officer  of  GMRCL. 
+The evaluation report should be published to a wider audience in a transparent way 
+through  public  domain  documents  and  websites  such  GMRCL’s  website,  annual 
+report, newsletters, articles, local media and other outreach tools. 
+  December  2020  31 
+ 
+
+[page 37]
+Stakeholder Engagement Plan 
+  December  2020  32 
+ 
+ 
+A two‐yearly evaluation should be conducted by an independent consultant/agency 
+using  a  perception  survey,  which  uses  that  same  set  of  questions  over  time  to 
+achieve  continuity.  The  first  survey  to  assess  stakeholder  perceptions  should  be 
+conducted before commencement of major construction work to provide a baseline 
+for community perceptions. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[page 38]
+Stakeholder Engagement Plan 
+10 Appendix‐1	
+Table 8: Minutes of Environmental and Social Public Consultations 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+1  Bhesan  (near 
+proposed  Bhesan 
+Depot site) 
+08/11/2019  10  Air  and Noise pollution  At  present  no  air  and  noise 
+pollution  and  need  to  be 
+sustained  during  construction 
+phase also.  
+Suitable  measures 
+to  avert  and  abate 
+air/noise  pollution 
+that  may  happen 
+during  various 
+stages  of  the 
+project are planned 
+and  will  be 
+implemented. 
+Tree cutting  10  Lakh  trees  given  by  SMC  and 
+we  have  planted  in  our  places. 
+We  love  environment.  No  issues 
+if  some  trees  are  going  to  cut  in 
+proposed site of Bhesan depot. 
+Most of the trees in 
+Bhesan  Depot  site 
+are  an  invasive 
+species.  Overall,  a 
+detailed 
+afforestation  plan 
+has  been  worked 
+out by GMRC. 
+Job  Local  people  expecting  jobs 
+during  construction  and 
+operation phases of metro. 
+In  lieu  of  jobs  for 
+PAPs,  5  Lakh 
+compensation  as 
+per  RFCTLARR  Act 
+2013  will  be 
+provided  to 
+titleholders. 
+  December  2020  33 
+ 
+
+[page 39]
+Stakeholder Engagement Plan 
+  December  2020  34 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+Wherever  possible, 
+skill  development 
+exercises  will  be 
+carried out for non‐
+titleholder PAFs. 
+2  Near  L  P  Savni 
+School,  Khodiyar 
+Chowk,  Adajan 
+Gaam 
+08/11/2019  12  Air and Noise pollution  It’s a  clean  city,  no  air  and  noise 
+pollution  at  all.  Not  anticipated 
+during operation as well. 
+Suitable  measures 
+to  avert  and  abate 
+air/noise  pollution 
+that  may  happen 
+during  various 
+stages  of  the 
+project  are  planned 
+and  will  be 
+implemented. 
+Tree  Two  giant  African  Baobab  trees 
+are  here  at  this  location.  We 
+don’t  think  it  will  be  problematic 
+to these trees if metro corridor is 
+passing  over  them.  These  trees 
+must  be  protected  during 
+construction  and  operation  as 
+well.
+Suitable  design 
+interventions  as 
+well  as  protective 
+measures  will  be 
+taken  by  GMRC  to 
+protect  these 
+heritage trees. 
+Parking  There  should  be  enough  parking 
+near  Khodiyar  Temple.  Lot  of 
+people  coming  to  the  temple  in 
+festival  season  and  they  parked 
+their vehicle beside the road.
+Aim  of  metro  is  to 
+promote  use  of 
+public  transport. 
+Parking  facility  can 
+be  provided  for 
+
+[page 40]
+Stakeholder Engagement Plan 
+  December  2020  35 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+Para‐transit  but  not 
+private vehicles. 
+Business  Business  may  increase  due  to 
+proposed metro station here. 
+It  is  a  positive 
+externality  of  the 
+project. 
+3  Majura Gate  08/11/2019 10  Traffic   People  will  reach  timely  to  their 
+places  due  to  metro.  Road  traffic 
+will  reduce  specially  auto 
+rickshaw. 
+It  is  a  positive 
+externality  of  the 
+project. 
+Trees  Trees  to  be  transplanted,  less 
+trees to be cut. 
+Overall,  a  detailed 
+afforestation  plan 
+has  been  worked 
+out by GMRC. 
+Construction Time  Construction  period  should  not 
+be delayed. It should be complete 
+fast.  
+Efforts will be taken 
+to  ensure 
+construction 
+deadlines are met. 
+Fare  Fare  should  be  the  minimum  so 
+everybody can afford. 
+This  will  be  taken 
+into  consideration 
+so that the system is 
+easily  affordable  for 
+all.  
+4  Model  Town  08/11/2019 8  Aesthetic view  City will look smart due to metro.   It  is  a  positive 
+
+[page 41]
+Stakeholder Engagement Plan 
+  December  2020  36 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+Chawk  externality  of  the 
+project. 
+Traffic  Road  traffic  will  reduce  so 
+reduction  in  accident  and  safety 
+will be increased. 
+It  is  a  positive 
+externality  of  the 
+project. 
+Air pollution  No  air  pollution  is  anticipated 
+because  metro  running  on 
+electricity. 
+Metro  Rail  will 
+contribute  to 
+reduction  of  carbon 
+emissions  in  the 
+overall city. 
+Fare  Metro  fare  should  be  affordable 
+as compare to BRT. 
+This  will  be  taken 
+into  consideration 
+so that the system is 
+easily  affordable  for 
+all. 
+Trees  More  trees  to  be  planted  for 
+trees to be cut. 
+Overall,  a  detailed 
+afforestation  plan 
+has  been  worked 
+out by GMRC. 
+Train frequency  Metro  train  frequency  should  be 
+more during peak time. 
+This  will  be  taken 
+into consideration. 
+5  Kumbhariya Saroli  08/11/2019 6  Business  Business  will  increase  for  those 
+who  will  have  shops  nearby 
+stations. 
+It  is  a  positive 
+externality  of  the 
+project. 
+Travelling  Fast travelling within city  It  is  a  positive 
+externality  of  the 
+project. 
+
+[page 42]
+Stakeholder Engagement Plan 
+  December  2020  37 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+  Trains should be run out of city as 
+well as to connect nearby city. 
+The  Metro  has 
+connectivity  with 
+Surat  Railway 
+Station.  Therefore, 
+people  can  use  the 
+Metro  to  reach  the 
+station  for  inter‐city 
+connectivity.  The 
+Metro  is  for 
+transportation 
+within the city. 
+6  Bhatar  Char  Rasta 
+Chawk 
+08/11/2019 7  Job  Local  labour  should  get  the  job 
+during  construction  and 
+operation phases. 
+Efforts  will  be 
+made. 
+Business  Shops  located  nearby  proposed 
+metro  station  will  have  good 
+business.  
+It  is  a  positive 
+externality  of  the 
+project. 
+Traffic, Air Pollution  Traffic  congestion  and  air 
+pollution  is  contributed  more  by 
+auto‐rickshaw  so  after  metro  it 
+may reduce. 
+Metro  Rail  will 
+contribute  to 
+reduction  of  carbon 
+emissions  in  the 
+overall  city.  Traffic 
+congestion 
+reduction  is  a 
+
+[page 43]
+Stakeholder Engagement Plan 
+  December  2020  38 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+positive  externality 
+of the project. 
+Tree  For  the  infrastructure 
+development  we  have  to  loss 
+some trees. 
+Overall,  a  detailed 
+afforestation  plan 
+has  been  worked 
+out by GMRC. 
+7  Bhimrad Village  09/11/2019 16  Travel time  Travelling  time  will  be  save 
+compare to present situations 
+It  is  a  positive 
+externality  of  the 
+project. 
+Easy travelling  Due to proposed metro station at 
+Bhimarad village we can easily get 
+in and travel through this station  
+It  is  a  positive 
+externality  of  the 
+project. 
+Safety  Due  to  metro  travelling  will  be 
+more safety. 
+It  is  a  positive 
+externality  of  the 
+project. 
+8  Bhimrad Village  09/11/2019 7  Land and Structure  Gandhi  Ground  should  not  be 
+affected  due  to  construction  of 
+metro.  Structures  of  the  village 
+should  not  be  affected.  Metro 
+line  should  be  200m  away  from 
+the  village  cricket  ground.  It 
+should  not  passthrough  village 
+agriculture land. 
+Efforts  will  be 
+made. 
+Job  Preference  to  be  given  to  the 
+villagers  during  construction  and 
+Efforts  will  be 
+made. 
+
+[page 44]
+Stakeholder Engagement Plan 
+  December  2020  39 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+operation. 
+9  Sarthana  Jakat 
+Naka  (near  Honda 
+Service centre) 
+09/11/2019 6  Travelling  time  and 
+Safety 
+Travelling  time  will  be  less  and  it 
+will  be  more  safety  to  travel  in 
+metro. 
+It  is  a  positive 
+externality  of  the 
+project. 
+Aesthetic view  City  will  look  beautiful  after 
+construction of metro. 
+It  is  a  positive 
+externality  of  the 
+project. 
+Trees  More  trees  should  be  planted  in 
+the cost of cutting trees. 
+Overall,  a  detailed 
+afforestation  plan 
+has  been  worked 
+out  by  GMRC.  In 
+place  of  every  tree 
+that  will  be  cut, 
+three  will  be 
+planted by GMRC. 
+Business  Business  will  grow  who  will 
+nearby proposed metro stations 
+It  is  a  positive 
+externality  of  the 
+project. 
+10  Ghanshyam  Nagar, 
+L S Road 
+09/11/2019 5  Convenience  People  having  at  least  two 
+vehicles  at  each  house‐hold  so 
+they  feel  more  convenient  with 
+their  own  vehicle  rather  than 
+travelling  in  metro.  Auto‐
+rickshaws  more  convenient  other 
+than own vehicles. 
+This  convenience 
+comes  at  a  social 
+cost.  Therefore,  the 
+government  has  to 
+balance the demand 
+management  as 
+well as supply.  
+
+[page 45]
+Stakeholder Engagement Plan 
+  December  2020  40 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+Business  We  don’t  think  we  will  get  more 
+benefit due station location 
+Due  to  the  daily 
+ridership  and 
+increased  footfall,  it 
+is  very  likely  that 
+businesses  around 
+the  stations  will 
+benefit  positively  as 
+the  exposure  to 
+them will be high. 
+Tree  Tree  samplings  is  good  provision 
+at the cost of tree cutting 
+Overall,  a  detailed 
+afforestation  plan 
+has  been  worked 
+out by GMRC. 
+Aesthetic view  City  will  look  beautiful  after 
+construction of metro 
+It  is  a  positive 
+externality  of  the 
+project. 
+Passenger  City  buses  on  this  route  are 
+running empty so how will metro 
+get passengers. 
+The Metro has been 
+proposed  after 
+thorough  ridership 
+study.  Once  the 
+public  transport 
+system  becomes 
+popular  and 
+demand  side 
+management  is  also 
+done  through 
+various  policies  that 
+promote  public 
+transport,  the 
+
+[page 46]
+Stakeholder Engagement Plan 
+  December  2020  41 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  Suggestions/Opinions  of 
+participants  GMRC Reply 
+ridership 
+automatically 
+increases. 
+ 
+11  Location‐1 
+ 
+Althan Tenament 
+ 
+Male Group  
+ 
+The  Drivers  and 
+Watchman 
+Supervisors Group 
+ 
+ 
+13.08.2019 
+	
+(10:30 A.M) 
+12  Relocation Option • It  will  become  a  compulsion  to 
+relocate if the government asks 
+for it. 
+If the houses get relocated, it will 
+have an impact on the profession, 
+transport issues, child’s education 
+and  it  will  also  affect  social 
+relations.  This  will  lead  to 
+increase in expenditure. 
+Suitable 
+compensation  as 
+per  eligibility 
+towards  loss  of 
+business,  shifting, 
+child’s  education, 
+subsistence  etc  will 
+be given so that the 
+expenditure 
+incurred  due  to 
+acquisition  process 
+is  offset.  RFCTLARR 
+Act  2013  and  other 
+applicable 
+guidelines  will  be 
+followed to mitigate 
+the  ill‐effects  of 
+compulsory 
+relocation. 
+       Livelihood 
+Opportunity 
+• The  proposed  project  may  lead 
+to  unemployment  to  auto  and 
+taxi drivers. 
+• Loss of jobs will lead to troubles 
+in  finding  a  new  job,  and 
+transport  charges  will  keep  on 
+• These auto drivers 
+may  serve  as  last 
+mile  connectivity 
+options  to  people 
+as Para transit has 
+an  important  role 
+
+[page 47]
+Stakeholder Engagement Plan 
+  December  2020  42 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  ions/Opinions  of Suggest
+ap rticipants   GMRC Reply 
+increasing. 
+• If  the  house  is  relocated,  it  will 
+cause  issues  regarding  the 
+person’s  occupation.  Child’s 
+education  as  well  as  travel 
+costs. 
+• Initially it will be a challenge for 
+people,  it  will  take  a  while  for 
+them to adapt. 
+to  play.  Thursday 
+not  is  adversely 
+affected. 
+• Such  a  scenario 
+may not occur. 
+• If  the  house  is 
+relocated  and  the 
+person’s 
+occupation  is 
+dependent on this 
+residence, 
+suitable 
+compensation  as 
+per  eligibility  will 
+be provided.  
+Noted 
+       Shifting Allowance  • SMC should provide a space for 
+residency  purposes  as  well  as 
+business purposes.  
+• Compensation  shall  be  given  in 
+accordance  to  the  cost  of  the 
+place  concerned  and  not 
+according  to  the  government 
+rates.  
+• The  person  whose  house  is 
+being relocated should be taken 
+special  care.  The  family 
+concerned  should  be  getting 
+enough  money  to  survive  and 
+• It is already a part 
+of R&R 
+• Appropriate 
+compensation  will 
+be provided as per 
+eligibility.  The 
+government  rates 
+will  be  escalated 
+to  the  year  of 
+compensation  to 
+ensure  that 
+competitive  price 
+for  the  land  is 
+
+[page 48]
+Stakeholder Engagement Plan 
+  December  2020  43 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised  nions  of 
+   Reply Suggestions/Opi
+participants GMRC
+carry on their lives.  given. 
+• The  people  being 
+relocated  will  be 
+given  appropriate 
+compensation  as 
+per  eligibility. 
+Subsistence 
+allowance, shifting 
+allowance  etc  as 
+per RFCTLARR Act, 
+2013  are  part  of 
+the  compensation 
+package to eligible 
+people  so  that 
+they are relocated 
+with  minimum 
+financial 
+hardships. 
+       Transportation Facility  • Travelling  in  an  auto  will  help 
+people to save time. 
+• Pass system in metro trains will 
+save  money  of  passengers  who 
+will travel every day. 
+• It  is  a  perception. 
+With  proper  last 
+mile  connectivity, 
+the  total  journey 
+time  will  reduce 
+through  MRTS 
+travel. 
+• It  is  a  positive 
+externality. 
+       Women 
+Empowerment 
+• A  train  coach  should  be 
+reserved for women in order to 
+• Seats are reserved 
+for women. 
+
+[page 49]
+Stakeholder Engagement Plan 
+  December  2020  44 
+ 
+Sr. 
+No.
+Venue  of the 
+Public  
+Consultation 
+Date  Number of 
+Participants Issues raised   Reply Suggestions/Opinions  of 
+participants  GMRC
+avoid  harassment.  Women 
+living  in  long  distances  will  also 
+be  able  to  travel  quickly.  The 
+metro  train  will  be  helpful  for 
+working women as well. 
+• Women  will  have  to  be 
+punctual about the train timings 
+to avoid any waste of time. 
+• Noted 
+       Awareness  about 
+Project 
+• There  is  awareness  due  to 
+newspaper access.   
+• Faster the city, better it is. Lives 
+of people will gain acceleration, 
+similar  to  the  fast  lives  of 
+people in Mumbai. 
+• Noted 
+• This  is  a  positive 
+externality  of  the 
+project.  
+       Benefits of Youth  • The youths can travel from one 
+place to other in very less time, 
+and  that  will  help  them  to 
+dedicate  more  time  in  their 
+jobs. For  diamond workers it  is 
+going  to  be  easy  for 
+transportation. 
+• Shops can be opened early. 
+• Youngsters  who  have  no 
+knowledge  will  have  negligible 
+benefits. 
+• The issue of unemployment can 
+be solved to some extent due to 
+metro rail development. 
+• This  is  a  positive 
+externality  of  the 
+project.  
+• This  is  a  positive 
+externality  of  the 
+project.  
+• Awareness 
+programs  will  be 
+held. 
+• This  is  a  positive 
+externality  of  the 
+project. 
+
+[page 50]
+Stakeholder Engagement Plan 
+  December  2020  45 
+ 
+11 	Appendix‐2	
+Table 9: Sample of stakeholder log 
+S. No  Date/ Place  Company Staff in 
+Attendance 
+Contact Persons/ 
+organization 
+Meeting Summary/  
+Key Issues Raised 
+Follow‐up Actions

@@ -7,12 +7,13 @@ from urllib.parse import urlsplit
 from pydantic import BaseModel, Field
 
 from asics_agent.agent_setup import MemoryScope
+from asics_agent.categories import agent_for
+from asics_agent.cutoff import assessment_fields, rule_from
 from asics_agent.links.accessibility import check_url, is_india_code
 from asics_agent.links.text import rank_chunks
 from asics_agent.llm import call_json
 from asics_agent.models import AccessCheck, Issue, Parastatal, Question, RunContext, Source
 from asics_agent.services import Services
-from asics_agent.verticals import agent_for
 
 OFFICIAL_SUFFIXES = (".gov.in", ".nic.in", ".gov", ".kar.nic.in")
 UNVERIFIED_SCORE_CAP = 0  # "0 = unusable/unverified"
@@ -38,6 +39,10 @@ class SourceAssessment(BaseModel):
     current_status: str = "Unknown"
     authority_score: float = 0
     notes: str = ""
+    # When the cited text or version took effect (or its "amended up to" date), as YYYY-MM-DD when
+    # the day is known; and whether it is law in force, a Bill, or a draft. See cutoff.py.
+    effective_date: str = ""
+    form: str = ""
 
 
 def is_official(url: str, official_hosts: set[str] = frozenset()) -> bool:
@@ -155,6 +160,9 @@ def vet_source(
         assessment = assess_source(services, run, parastatal, candidate, source)
         source.useful_for = assessment.useful_for or source.useful_for
         source.current_status = assessment.current_status
+        source.effective_date, source.cutoff_check = assessment_fields(
+            assessment.effective_date, assessment.form, rule_from(settings)
+        )
         source.authority_score = max(0.0, min(10.0, assessment.authority_score))
         notes.append(assessment.notes)
         if not assessment.useful:

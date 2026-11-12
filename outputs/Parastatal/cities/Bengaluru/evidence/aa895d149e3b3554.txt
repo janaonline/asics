@@ -1,0 +1,789 @@
+SOURCE URL: https://www.bmrc.co.in/pd/FinalMetroParkingPolicy02-04-2026.pdf
+
+[page 1]
+Bangalore Metro Rail Corporation Limited 
+(BMRCL) 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+METRO PARKING POLICY  
+ 
+Government of Karnataka 
+2025 
+
+
+[page 2]
+1. TABLE OF CONTENTS 
+ 
+ 
+1. BACKGROUND.................................................................................................................................. 3 
+2. PARKING POLICY 2.0 FOR BENGALURU CITY ................................................................................... 4 
+3. NEED FOR BMRCL METRO PARKING POLICY .................................................................................. 4 
+OBJECTIVE 1: PARK AND RIDE FACILITY FOR IDENTIFIED METRO STATIONS ....................................... 5 
+OBJECTIVE 2:  STREAMLINING PARKING TO ENSURE THAT THE PARKING SPACE PROVIDED BY           
+BMRCL IS UTILISED BY METRO USERS ONLY ................................................................ 10 
+OBJECTIVE 3: TO ENSURE SAFETY AND SECURITY OF COMMUTERS AND THEIR VEHICLES AT 
+PARKING SPACES ......................................................................................................... 11 
+OBJECTIVE 4: TO RESERVE PARKING FOR SPECIFIC USER GROUPS .................................................... 13 
+OBJECTIVE 5:  PARKING CHARGES AND ENFORCEMENT/MONITORING ............................................ 14 
+OBJECTIVE 6: EFFECTIVE MANAGEMENT OF PARKING SPACE THROUGH USE OF SMART 
+TECHNOLOGY ............................................................................................................... 15 
+ANNEXURE 1  ..................................................................................................................................... 17 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[page 3]
+ pg. 1 
+ 
+Definitions 
+ 
+a. On-Street Parking- available parking spaces for vehicles on a street along with the 
+sidewalk, or anywhere on the street at available/ designated parking spaces for 
+vehicles on a street. 
+b. Off-Street Parking- Off-street parking refers to available parking spaces for vehicles 
+within an enclosed parking lot or garage. Parking lots may be owned by a 
+Municipality, Municipal Corporation/Government organizations or privately owned. 
+c. Parking Zones/areas - a space where any kind of automobile can be parked. 
+d. Parking Lot – A designated place where one can  leave their private 
+vehicles/automobile for a specific period of time. 
+e. Terminal Stations - The first and last stations on a  Metro corridor. 
+f. Interchange Metro stations – Interchange Metro Station  is a Metro station that 
+serves as a connecting point between two or more Metro lines or different modes 
+of public transportation . It allows passengers to transfer from one line to another 
+without exiting the station premises, maki ng their journey smoother and more 
+efficient 
+g. Metro – In this present context, Metro shall mean BMRCL premises/network. 
+h. Mobility Management  - Mobility management can be broadly defined as  creating and 
+managing mobility options, at both the systemic and system-to-customer levels, to improve 
+the reach, efficiency, and affordability of public transportation services. 
+i. CBD - Central Business District (CBD)  is the commercial and business hub of a city , 
+characterized by high -density development, tall buildings and a concentration of offices, 
+retail outlets, financial institutions and services. It is often the most accessible part of the 
+city, served by multiple public transportation modes. 
+j. ITS - Intelligent Transportation System (ITS)  refers to the application of advanced 
+information and communication technologies (ICT) to enhance the efficiency, safety, and 
+sustainability of transportation systems. ITS improves traffic management, provides real -
+time information, and enhances the overa ll mobility experience for commuters and 
+operators. 
+k. First and Last mile connectivity - The first and last stage of an individual trip – from their 
+starting point to the nearest public transport station (first mile) and from the last station to 
+
+[page 4]
+ pg. 2 
+their final d estination (last mile). Effective first and last mile solutions are crucial for 
+ensuring seamless, convenient, and efficient public transportation. 
+l. Micro-Mobility Vehicles- Electric vehicles with a maximum speed of 25 kilometres per hour 
+(kmph) and its equipped motor shall have a thirty-minute power less than 250 watt. These 
+vehicles are approved by any authorized testing agency specified in the rule 126 of the 
+Central Motor Vehicles Rules, 1989 as being compliant with the requirements specified in 
+Notification no. G.S.R. 291(E) (2) dated 24.04.2014 of the Government of India. 
+m. Transit Stations- Bus terminals, Metro stations, Railway stations and large transportation 
+hubs like Traffic Transit Management Centres, Multi-modal hubs that serve as a gateway 
+to access public transport operations. 
+n. Park and Ride- - a designated parking area near public transportation hubs, such as Metro 
+stations, bus terminals, or rail stations, where commuters can park their private vehicles 
+(cars, bikes, or bicycles) and transfer to public transit for the remainder of their journey.  
+o. Urban Gateway - An Urban gateway is a key access point that connects a city to 
+surrounding regions or the wider world through major transportation infrastructure like 
+airports, railways, and highways. It facilitates the flow of people and goods, playing a crucial 
+role in the City’s economic and social connectivity. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[page 5]
+ pg. 3 
+BMRCL METRO PARKING POLICY FOR BENGALURU CITY 
+1. Background 
+Bengaluru is the capital city of Karnataka and  is one of the fastes t growing Cities in the 
+Country. With the exponential increase in population of Bengaluru coupled with a rapid 
+increase in the income level, there has been a consequent upsurge in number of registered 
+vehicles plying in the City.  
+According to the data published by the Transport Department, Government of Karnataka, 
+on an average 2500 number of vehicles are being registered in RTO each day, the number 
+of registered vehicles in the city as on March 2024 has crossed 1 crore (10million) and the 
+compounded annual growth rate of vehicle registration is over 10% per annum. 
+According to a report by TomTom, the Netherlands-based global provider of navigation, 
+traffic and map products, Bengaluru ranks a low 149 (of 231), on the 2019 Mercer’s Quality 
+of Living Index, it is one of the world's most traffic-congested city. Average speed on critical 
+roads drop to less than 10 km per hour during peak traffic hours  and travel time are 48% 
+longer than during the baseline non -congested conditions. This enormous trend of rise in 
+numbers of vehicles is creating pressur e on the parking needs of the City which is in turn 
+affects the demand for parking at Metro stations as well.  
+Bangalore Metro, also known as Namma Metro, is a Mass Rapid Transit System (MRTS) that 
+has transformed the way people commute in Bengaluru. Bengaluru, often referred to as 
+the Silicon Valley of India, is known for its traffic congestion. The Metro Rail system has 
+provided a much needed respite to the city's residents by reducing the number of vehicles 
+on the roads and by reducing the pollution caused by the traffic congestion. 
+The total sanctioned network of BMRCL of Phase -1, Phase -2, Phase -2A, Phase -2B and  
+Phase-3 is about 220.20 Km. Bangalore Metro Rail Network of Phase-1 and part of Phase-2 
+comprising a total length of 96.1 Km with 83 Metro stations is already under operation  with 
+an average daily ridership of about 9.5 lakhs commuters. The remaining portion of Phase -
+2 of 21.26 Km length is under construction. In addition, the Phase-2A Metro corridor from 
+Central Silk Board (CSB) to K R Puram along the Outer Ring Road for a route length of 19.75 
+kms with 13 Elevated Stations and the Phase -2B Metro corridor from K R Puram to 
+Kempegowda International Airport (KIA) for a route length of 38.44 kms with 16 Elevated 
++1 underground stations  are under construction  and Phase 3 Metro corridor of a route 
+length 44.65 kms with 31 stations is under construction. With the increase in the patronage 
+
+[page 6]
+ pg. 4 
+of Metro commuters, the demand in parking at the Metro stations has also increased 
+substantially. BMRCL has attempted to provide parking  space at its Metro stations so that 
+commuters can park their vehicle s and take the M etro towards their destination. At 
+present, BMRCL has a total area of 1.15 lakh sq.m area of parking space at 69 Metro stations 
+(80 locations) with parking facility for bi cycles, 2 -wheelers, 3 -wheelers and 4 -wheeler 
+vehicles. 
+ 
+2. Parking Policy 2.0 for Bengaluru City 
+The Government of Karnataka has approved Parking Policy 2.0 for Bengaluru and the 
+Directorate of Urban Land Transport (DULT) has prepared the Area Parking Plans for all 
+zones in Bengaluru (BBMP Area) in accordance with the said parking policy. The overarching 
+principle of the Parking Policy 2.0 emphasises on reducing  the d emand for parking and 
+facilitating organized on-street parking so that the road space can be efficiently utilised for 
+transit and NMT supportive uses. The policy suggested paid parking to discourage the use 
+of private mode and thereby ensuring modal shift to public transport, development of off-
+street parking facilities through market driven parking supply and management mechanism 
+and enforcing strict regulations to manage the parking demand. 
+Further, the Parking P olicy 2.0 has also recommended  park-and-ride (off -street) near 
+peripheral Mass Transport stations and recommends to encourage pricing at the stations 
+in such a way that park-and-ride users are segregated from general parking users by 
+allowing subsidized long duration fee for park-and ride users. 
+ 
+3. Need for Metro Parking policy 
+A growing trend in parking demand is seen in the entire city, especially near the transit 
+stations. Haphazard on-street parking near the Metro stations not only creates chaos in the 
+adjacent residential layouts but also reduces the capacity of the arterial roads with vehicles 
+parked on either sides.  
+In addition to this, the lack of safe, affordable and reliable first and last mile connectivity 
+options along with  poor pedestrian infrastructure  facilities discourages the Metro 
+commuters in patronising M etro and  as t heir preferred mode of transport, there by 
+decreasing the Public Transport patronage. 
+
+[page 7]
+ pg. 5 
+In view of these concerns and in the absence of a well-organized and well-planned parking 
+regime around the Metro stations, a clear established Metro Parking Policy and framework 
+to manage parking has become necessary. 
+Therefore, the Policy focuses to achieve the following objectives: - 
+1. Creation of Park and Ride facilities for the identified Metro stations. 
+2. Streamlining and enhancing the utilization of parking to ensure that the parking space 
+provided by BMRCL is utilised by Metro users only. 
+3.  To ensure safety and security of commuters and their vehicles at parking spaces. 
+4. To reserve parking for specific user groups such as cyclists and differently abled. 
+5. To determine the framework for Parking charges and Enforcement/Monitoring  
+6. Effective management of parking space through the use of Smart Technology 
+ 
+The parking policy will be reviewed periodically and the requirements will be amended 
+overtime as and when first and last mile access to stations by walk, cycle, shared mobility 
+or feeder buses are improved.  
+OBJECTIVE 1: PARK AND RIDE FACILITY FOR IDENTIFIED METRO STATIONS 
+The unprecedented growth in population and consequently in the number of vehicles is  
+leading to the infamous traffic congestion in Bengaluru. Although Metro provides an efficient 
+public transport alternative compared to priva te modes, private vehicle users  have largely 
+refrained from shifting to Metro as their preferred travel mode. A major reason for the same 
+has been identified as the severe lack of  reliable first and last mile connectivity to and from 
+the Metro stations. Along with feeder bus service and good pedestrian infrastructure, the Park 
+and ride system serves as an important aspect for first mile connectivity for specific station 
+typologies to not only increase the Metro ridership but also to deter people from using private 
+modes for long haul commute.  The following parameters will be used to determine the 
+potential for park and ride service at Metro stations:  
+1. Park and Ride at Peripheral/Terminal Stations/Urban Gateway 
+All Peripheral/Terminal Metro Stations have to be provided with Park and Ride facilities 
+since these stations cater to large catchments from suburb an areas who come to work 
+in the city centre/CBD areas. Instead of driving all the way to their workplaces in the city 
+centre/ CBD areas, commuters can conveniently park their vehicles at these stations and 
+transfer to the Metro train/s. This approach not only alleviates traffic congestion in the 
+
+[page 8]
+ pg. 6 
+urban cor e but also promotes the use of P ublic transportation, leading to a more 
+efficient and sustainable commute. 
+Implementation strategy 
+a. BMRCL will have to compulsorily acquire /purchase about  1 to 2 acres of 
+additional vacant land/s at all terminal Metro stations for building of parking 
+spaces/lots. 
+b. In case BMRCL is unable to acqu ire 1 to 2 acres of vacant land , BMRCL has to 
+explore the possibility of providing multilevel basement parking for creating such 
+parking facilities adjoining the Terminal Metro Stations. 
+c. Approach State Authorities : BMRCL will approach State Government to direct 
+the relevant authorities (e.g., BDA, BBMP) who own lands near Metro stations to 
+transfer ownership of land to BMRCL for the development of park and ride 
+facilities. 
+d. Collaboration with Private entities : If adequate Government land s are not 
+available, BMRCL will explore purchase or leas ing of vacant Private lands. This 
+will require a detailed analysis to ensure that the land is ideally located for park-
+and-ride use. This  acquisition process may include direct negotiations with 
+landowners or bidding, depending on the local regulations/permitted process.  
+e. Central Government assistance : BMRCL may request for financial assistance 
+from Central Government in the form of VGF for land acquisition, in order to 
+reduce the financial burden on BMRCL.  
+f. Explore innovative finan cing models, including Land value capture  and 
+congestion pricing , to help fund the development of park -and-ride facilities. 
+Additionally, revenue from advertising within parking areas can offset 
+operational costs, if viable and feasible. 
+g. Grants and Subsidies: BMRCL will  request for grants or subsidies under 
+programs aimed at reducing traffic congestion and promoting  the use of public 
+transport. For ex: the FAME India Scheme  promotes the adoption of electric 
+vehicles (EVs) and the development of EV charging infrastructure. It also includes 
+support for eco -friendly transport initiatives, which could integrate with par k-
+and-ride facilities. BMRCL may request subsidies to develop EV 
+charging/swapping stations at few Metro stations for  park-and-ride facilities, 
+making them more attractive for users with electric vehicles . Similarly, the 
+National Smart Mobility Mission  supports projects that aim to reduce 
+
+[page 9]
+ pg. 7 
+congestion, promote eco-friendly modes of transport, and integrate multi-modal 
+transport. BMRCL may apply for funding to integrate park-and-ride facilities into 
+a Multimodal transport system. 
+ 
+2. Parking facilities at interchange Metro stations 
+Interchange Metro Stations, which serve as critical nodes within the Metro network 
+where multiple Metro lines intersect, require well -planned and efficiently managed 
+parking facilities. These stations experience high passenger volumes due to their role as 
+transfer hubs for commuters traveling between various lines to reach their final 
+destinations. Providing adequate parking facilities at interchange Metro stations serves 
+multiple purposes like Enhancing Multimodal Integration, Facilitating Seamless 
+Transfers, Reducing Traffic Congestion and Pollution, significantly boost Metro ridership. 
+ 
+Implementation Strategy 
+a. Basement parking : At interchange stations, BMRCL will explore provision of 
+basement parking within the station area. To achieve this, stations will have to 
+be planned and designed during the initial design stage itself to incorporate 
+provisions for basement parking. This may involve additional cost of construction 
+of such Stations, which may have to be suitably provided for in the DPR. 
+b. Over the road parking:  BMRCL has constructed stations and viaducts with minimal 
+road occupancy to prioritize train movement. Where basement parking is unfeasible, 
+over-the-road parking can be explored after assessment of cost/benefit analysis and 
+making sure that potential bott lenecks are not created in traffic flow , using ramps or 
+lifts to optimize space and meet parking demand efficiently. 
+c. Integrating with Multi-level parking in the vicinity of Metro station: BMRCL will 
+integrate with the nearby Multi-level parking (if availab le) and ensure the 
+facilities are safe, well -lit, and equipped with smart parking solutions and plan 
+for seamless connectivity between parking areas and Metro stations, with well-
+designed pedestrian pathways/travelators and signage. The roads in and around 
+Metro stations will be kept free for improving approach to the stations. Suitable 
+directional traffic on such roads will be planned and implemented. 
+a. Approach State Authorities : BMRCL will work with the State Government to 
+direct agencies like BDA and BBMP to allocate Government-owned lands near 
+interchange Metro stations for park-and-ride development. 
+
+[page 10]
+ pg. 8 
+b. Collaboration with Private sector : Where Government lands are not available, 
+BMRCL will engage with private landowners for potential acquisitions or 
+partnerships, possibly through public-private partnerships (PPP). 
+ 
+3.  Park-and-Ride Facilities in Residential Areas with High Population Density and 
+Narrow Roads 
+Metro s tations surrounded by  thickly populated residential catchment in the radius 
+beyond 1 km and up  to 3 kms with no direct Metro connectivity will be equipped with 
+Park and Ride facility at the Metro station to enhance accessibility and encourage use of 
+the Metro system. The 1 km radius to be determined through a walk/cycle-shed instead 
+of a ‘as crow flies’ distance. 
+In addition, the areas with narrow r esidential roads pose significant operational 
+challenges for standard 12 -meter BMTC buses, hindering effective public tr ansport 
+access. In the absence of a regulated last-mile connectivity solution, commuters struggle 
+to reach Metro stations. Therefore, it is essential to implement parking facilities at 
+strategically located Metro stations, particularly those with a large c atchment area, to 
+enhance overall accessibility and connectivity. To supplement these efforts, e-Autos can 
+be encouraged to provide last mile connectivity to commuters residing in these areas. 
+ 
+Implementation Strategy 
+a. Private sector collaboration: For Metro stations facing land constraints for parking, 
+BMRCL will explore Public-Private P artnerships (PPP)  with private developers, 
+shopping malls, office complexes, and other commercial establishments located 
+near the Metro stations  (preferably within 100m) . This could involve negotiating 
+shared-use agreements  where parking spaces at these locations are utilized by 
+Metro commuters during weekdays and allocated to mall and other users during 
+weekends or non -peak hours. This approach optimizes existing parking  
+infrastructure, alleviates land acquisition costs, and enhances the convenience for 
+both Metro users and private sector stakeholders. 
+b. Incentivizing Higher FAR for Commercial Establishments:  BMRCL will request the 
+State Government to provide incentives in the form of higher Floor Area Ratio (FAR) 
+to the private entities in the vicinity of the Metro stations allowing them to develop 
+additional built-up area beyond the usual zoning limits. This additional FAR can serve 
+as an incentive for private entities to collaborate with BMRCL in developing or 
+
+[page 11]
+ pg. 9 
+sharing parking facilities for Metro commuters . The FAR used for parking 
+infrastructure developed as part of the collaboration sh all not be counted towards 
+the total FAR limit. This allows the private entities  to allocate sufficient space for 
+parking facilities without compromising with their developmental potential. 
+ 
+4. Parking at Metro Stations near major multimodal transportation Hubs 
+Metro stations that are located within close vicinity to other major transportation hubs, 
+such as R ailway stations, b us stands, and airports, will explore the potential for multi -
+level parking facilities. Implementing such facilities can significantly enhance the 
+interconnectivity between different modes of transportation, improve commuter 
+convenience, and reduce congestion. 
+ 
+Implementation Strategy 
+Sharing parking space with other Transport authorities : BMRCL will collaborate with 
+relevant authorities (e.g., Railways, BMTC, KSRTC, KIA) to acquire or make use of the 
+underutilized Government-owned land s near Metro stations. If acquisition is not 
+possible, BMRCL can jointly share the parking facilities with other agencies, allowing 
+users of both the Metro and other modes of transport to park their vehicles and 
+seamlessly access multimodal transportation service. 
+ 
+5. Metro Stations with Limited thorough access  
+Metro stations located near large tech parks, defence areas, lakes, airports, or other 
+expensive land parcels often face significant challenges in terms of connectivity and 
+accessibility. These areas typically lack adequate thoroughfare access , including 
+pedestrian-friendly pathways , dedicated cycling tracks , or reliable feeder services  
+such as shuttle buses or auto -rickshaw networks. As a result, commuters residing 
+beyond walkable o r cyclable distances often find it difficult to access Metro stations 
+conveniently. Implementing a well-planned parking facility at such stations is essential 
+to address first- and last-mile connectivity challenges for commuters in these areas.  
+ 
+Implementation Strategy 
+Integrate the parking facilities with the  land owned by the  Stakeholders: Collaborate 
+with stakeholders like tech parks, defence establishments, and airport authorities to 
+
+[page 12]
+ pg. 10 
+identify access issues and develop joint parking spaces at the nearby locations or within 
+their premises.  
+ 
+6. Collaboration with Private entities 
+For Metro stations facing land constraints for parking , BMRCL  will collaborate with 
+private entities such as shopping malls , office buildings, and hotels that are located in 
+the vicinity of the Metro stations and have substantial parking facilities. BMRCL will  
+enter into agreement with these private players to provide shared park ing spaces for 
+Metro commuters. This approach optimizes existing infrastructure and enhances 
+commuter convenience. In fact, the National Urban Transport Policy (NUTP), 2006 at 
+the Government of India level states that ‘ Multi-level parking complexes should be 
+made a mandatory requirement in city centre(s) that have several high rise 
+commercial complexes and these can come up through public-private partnerships’. 
+ 
+Implementation Strategy 
+Private sector collaboration : For Metro stations facing land constraints for parking , 
+BMRCL will explore public-private partnerships (PPP) with private developers, shopping 
+malls, office complexes, and other commercial establishments located near Metro 
+stations. This could involve negotiating shared-use agreements where parking spaces at 
+these locations are utilized by Metro commuters during  weekdays and allocated for 
+malls and other users during weekends or non -peak hours. This approach optimizes 
+existing parking infrastructure, alleviates land acquisition costs, and enhances the 
+convenience for both Metro users and private sector stakeholders. 
+ 
+OBJECTIVE 2:  STREAMLINING PARKING TO ENSURE THAT THE PARKING 
+SPACE PROVIDED BY BMRCL IS UTILISED BY METRO USERS ONLY 
+The Metro parking space  is sometimes utilised by the people who are not the actual Metro 
+users/commuters but might be owning a commercial/retail outlet nearby the Metro station.  
+In such cases, the non-Metro users park their vehicle/s in the Metro parking lot and the Metro 
+commuter is forced to park his/her vehicle on road due to lack of parking space. However, if 
+non-Metro users are pro hibited from parking, their use of private ve hicle would be 
+
+[page 13]
+ pg. 11 
+disincentivised due to difficulty in finding parking space , thereby, automatically incentivising 
+the use of Metro to access these areas. 
+Therefore, it is important to devise provisions/ regulations to ensure that Metro parking space 
+is solely utilised for Park and Ride by the Metro users/commuters only, for which: 
+1. Automated Access Control Systems: Mechanisms will be developed to segregate park-
+and-ride users from general parking users at these locations. This can be also done by 
+integrating the Metro travel  card with the parking charges.  Such integration will also 
+be facilitated through other digital ticketing means like ǪR code, FASTAG etc. 
+2. The charges will  be deducted accordingly  at the time of exit of the vehicle  – normal 
+charges are deducted if Metro services are used between parking in and parking out , 
+and penalty charges if the card is not used for Metro travel excluding the retail shop 
+owners within the Metro premises. The normal and penal charges will be as decided 
+by BMRCL from time to time which will have to be duly notified/displayed prominently.  
+3. This infrastructure will also ensure  
+a. Well managed parking  
+b. Direct relay of data to BMRCL 
+c. No leakages in fare collection 
+4. In addition, on-street public parking to be strictly prohibited within 250 meters of the 
+Mass transit stations in accordance with the approved Bangalore Parking Policy 2.0.  
+ 
+OBJECTIVE 3: TO ENSURE SAFETY AND SECURITY OF COMMUTERS AND 
+THEIR VEHICLES AT PARKING SPACES 
+Parking spaces often tend to be considered unsafe by women due to lack of activity, and eyes 
+especially after dusk/late evening times . Therefore, w hile provisioning for park ing, the 
+following needs to be mandated to ensure security for both  the users and the ir vehicles 
+parked:  
+1. All parking lots need to be under CCTV surveillance 24x7 with adequate lighting  installed 
+at strategic points (Signage- Annexure 1, Figure 4 ). A storage capacity of up to 30 days 
+of recording must be maintained to carry out the required audits.  
+2. The CCTV recordings will be integrated to the existing CCTV coverage of station area and 
+will be accessible to Metro officials only so that any abusive incident by the parking 
+contractors towards the commuters can be monitored. In addition, provision will be 
+
+[page 14]
+ pg. 12 
+made to stream the CCTV footage at the BMRCL central  Control Centre for the purpose 
+of monitoring. 
+3. Fire incident: To handle the fire related incidents at parking lots , the following facilities 
+/equipment will have to be ensured:  
+ Provision of sufficient fire buckets on a metal stand filled with fine and dry sand 
+with water drums near the parking area  
+ Provision of fire extinguishers at locations as per stipulated design standards. 
+4. The emergency point of contact : The parking lots will be managed by the operators of 
+the nominated agency/contractor including the matters related to the damage to or theft 
+etc. of vehicles parked and resolution of any other disputes with the customers etc. 
+However, in case of emergency like fire, flooding etc. affecting the safety & security of 
+Metro property or commuters, the Station Controller along with station security staff will 
+be called for help by Parking lot operator and also for the further coordination with civic 
+authorities etc. as the case may be.  (Annexure 1, Figure 5). 
+5. In addition, the parking lots needs to be well paved and sheltered to the extent possible 
+in order to  avoid any kind of damage to the parked vehicles from wear and 
+tear/sunlight/rainfall etc. 
+6. It is also essential that the parking lot includes clear markings and designated spaces for 
+cycles, two-wheelers, and four -wheelers, with prominently visible entry a nd exit signs. 
+These markings should ensure smooth ingress and egress without conflicting with other 
+vehicles. Ingress and egress to the parking lots should ideally be avoided from major or 
+arterial roads. Wherever possible, access should be provided via roads with lighter traffic, 
+such as cross streets or service roads, to prevent vehicles entering or exiting the parking 
+lots from disrupting the overall traffic flow in the area. 
+7. Lighting and Visibility Enhancements: Parking lots must be well illuminated to avoid any 
+kind of illegal/criminal activities at night. In addition to this, the enhanced visibility makes 
+the commuters especially the female commuters feel safe while dropping off/picking up 
+their vehicle. 
+8. Professionally trained and experienced personnel to be deployed for manning  the 
+parking site  and presence of a security staff 24X7 to ensure safety and security of 
+vehicles.  
+9. Behaviour of the parking contractors to be monitored through CCTV by BMRCL parking  
+in-charge officer and the contractor/s may be replaced immediately if found violating the 
+code of conduct. 
+
+[page 15]
+ pg. 13 
+10. The parking contractors shall not charge excess amount than determined by BMRCL. In 
+case of overcharging suitable penalty will be levied in addition to banning such operators 
+11. The Parking Contractors/Agency shall obtain adequate Third Party Liability Insurance for 
+the stipulated Sum Insured Limit and terms of BMRCL, to cover for any risk of 
+damage/theft of the vehicles parked in the Parking Lot/s. 
+ 
+OBJECTIVE 4: TO RESERVE PARKING FOR SPECIFIC USER GROUPS 
+1. Parking for cycles – A minimum of 10 parking stands for cycle parking will be provided 
+in each Metro station parking lots at free of cost. 
+2. Parking for differently-abled 
+ A minimum of one space for both two -wheeler and three wheeler parking for 
+differently-abled will  be earmarked in each M etro station parking lot with 
+signage. In parking lots where car parking for more than 20 cars/four-wheelers 
+is provided, at least 1 car /four-wheeler parking space shall be reserved for 
+differently-abled. The identified space shall be near the entry gate of the 
+parking lot and / or any other convenient location within the parking lot from 
+where ramp for accessing station entrance / lift is the nearest. 
+ The space will be provided as per Bureau of Indian Standards, National Building 
+Code of India of 2016, IRC: SP:12:2015 and Harmonized Guidelines and Space 
+Standards for barrier free built environment for persons with disability and 
+elderly persons, 2016 of Ministry of Urban Development, Government of India. 
+ The parking spaces will be  indicated by using paint as required in above -
+mentioned guidelines. The signage to be used for different modes of transport 
+are shown in Annexure 1, Figure 1. 
+3. Parking for BMRCL employees and official vehicles for maintenance & operation 
+activities - Separate parking space will be reserved for vehicles of BMRCL 
+employees/BMRCL Official vehicles at every station other than the commuter parking. 
+No charges shall be levied for such vehicles of employees / O&M Vehicles. 
+4. Space for pick-up and drop-off for Micro mobility modes/other modes will be located 
+on cross- streets or along the service roads near the Metro station with legible signage 
+(Annexure 1, Figure 6). 
+
+[page 16]
+ pg. 14 
+5. Pre-fixed Auto Rickshaw booths - Auto rickshaws  plays a crucial role in last mile 
+connectivity and serv e short trips in the city of Bengaluru. BMRCL has carved out 
+dedicated parking space for Pre-Fixed Auto rickshaw booths at few Metro stations and 
+has planned to expand it to all the Metro stations wherein the commuters can hire 
+autos from the transit station to their destination by Pre -fixing their travel cost based 
+on the distance travelled.  
+ 
+OBJECTIVE 5:  PARKING CHARGES AND ENFORCEMENT/MONITORING 
+1. The BMRCL Fare chart will be displayed at the entry of the Parking lot to ensure that 
+the parking C ontractors/Agencies do not charge extra for parking. The signage 
+indicating the dimensions of the fare chart board will be as shown  in Annexure 1, 
+Figure 2. 
+2. Park-and-ride users will be charged subsidized long duration fee  for parking their 
+vehicles at these facilities that nudge commuters to take transit than driving their own 
+vehicles in the City. 
+3. Exploring possibility of increasing parking capacity by adoption of multi -level parking 
+and automated parking systems will be considered. 
+4. Revision of the base parking fee to be done whenever a need is felt based on demand, 
+availability of land etc., 
+5. Abandonment of vehicles beyond the operational hours will be monitored through 
+CCTV cameras. If a vehicle is parked for more than 3 days, the licensee / organisation 
+(whoever is responsible for managing the parking space) must take adequate action to 
+remove the vehicle from the parking lot by issuing notice to the vehicle owner by 
+obtaining details of the ownership of the vehicle. In case of no response, a final notice 
+will be issued stating that the vehicle will be auctioned.  
+6. Parking of vehicles after closure of revenue services: If a commuter of Metro railway 
+desires to use parking facility after revenue closure, (S)he shall share his identity such 
+as address, phone number, vehicle registration details/license or any such document 
+or any other document as specified by the Metro authority—to the parking in-charge, 
+along with the intended duration of parking. If a vehicle remains unclaimed for more 
+than thr ee days, it will be removed and auctioned  as per Motor Vehicle Act . 
+Additionally, vehicles not retrieved before the end of daily revenue operations will 
+incur extra charges. 
+
+[page 17]
+ pg. 15 
+7. The redressal cell of BMRCL will address the complaints related to parking  on regular 
+basis. The complainant should be able to submit his /her grievances through online 
+mode also.   
+8. Any damage to the vehicles  due to the natural calamities  and subsequent invocation 
+of Insurance cover will be managed by the licensee. 
+9. Cleanliness: The licensee shall maintain the premises clean and tidy at all times. He 
+shall arrange to mop the premises periodically. 
+ 
+OBJECTIVE 6: EFFECTIVE MANAGEMENT OF PARKING SPACE THROUGH 
+USE OF SMART TECHNOLOGY 
+Increasing number of vehicles at the Metro station parking lots  along with the 
+mismanagement of available parking spaces lead to the parking related problems.  
+For efficient management and enforcement of parking, it  is crucial to adopt technology for 
+modernizing parking operations and to reduce monetary pi lferage: Few of the technological 
+solutions which may be considered by Metro based on patronage of parking lot and 
+economical considerations are:  
+1. Mobile application: The availability of the parking slots can be displayed in the mobile 
+app as well in a dis play near the Parking lot. A loop detector system needs to be 
+installed in the parking lot to count the number of parking slots and indicate the slots 
+available for parking. The information like availability of parking space at particular 
+Metro station, will be displayed near the Parking lot as well as  integrated with the 
+Namma Metro app wherein the users can search for the available parking slot at their 
+selected Metro station and based on the availability they can choose to take out their 
+vehicle. A robust, technology-driven parking fee collection system will be implemented 
+along with a loop detector system  to eliminate pilferage and ensure accurate da ta 
+recording. The system will capture details such as the number of vehicles parked, 
+empty slots availab le for parking, parking duration, vehicle types, and timestamps, 
+providing comprehensive records for auditing and facilitating  data-driven planning to 
+improve parking services. 
+2. LED display representing the vacant slots :  Every Metro station will be provided with 
+graphical interface to display the real time parking availability map. The map will indicate 
+vacant parking slots (cycles, two wheelers and four wheelers separately) in green colour 
+and occupied parking slots in red colour at a particular  Metro station and also one 
+
+[page 18]
+ pg. 16 
+station before and after it so that the commuter can choose where to park his/her 
+vehicle if his selected station does not have space for parking. 
+3. Boom barrier: To avoid the revenue loss from the parking contractors, the technology 
+of boom barriers may be utilised as per the space available, wherein the device will be 
+installed at the entry/exit of the Parking lot and it reads the processed information 
+regarding the timing and number of the vehicle, time till which the parking is done and 
+delivers a receipts which then can be paid by the commuter either through Namma 
+Metro app (after integrating) or any other payment gateway like 
+GooglePay/PhonePe/Paytm/FASTAG etc.  
+Further, the National Urban Transport Policy (NUTP), 2006 at the Government of India 
+level states that ‘ All parking complexes will be encouraged to go in for  electronic 
+metering so that there is better realization of parking fees to make the investments 
+viable and also a better recovery of the cost of using valuable ur ban space in the 
+parking of personal motor vehicles’. 
+4. Central Server: A central server system is the heart of the smart parking management 
+and guidance system. All the relevant data from the cameras, sensor, parking meter 
+and mobile application will be collected, processed and transmitted from the central 
+server to the display systems and parking meters.  All the parking related information 
+of all the stations can be integrated into central parking portal which will be managed 
+and monitored from one central location by the BMRCL in-charge officer.  
+In addition, BMRCL will integrate its parking data with the citywide parking portal to 
+enable seamless and centralized parking management. This integration will ensure a 
+cohesive approach to parking operations across the City. 
+5. Start-ups/operators will be encouraged to offer competitive and creative technology 
+solutions that would help BMRCL to optimise the use of parking spaces.  Engaging in 
+Public-private partnerships can be a strategic approach for developing and managing 
+parking facilities. Such collaborations will bring in investment, expertise, and 
+innovation, leading to better-managed and maintained parking space. 
+ 
+ 
+ 
+ 
+ 
+
+[page 19]
+ pg. 17 
+ANNEXURE 1 
+Parking Signage 
+An effective s ignage System keeps the commuters informed of  parking regulations. The 
+following set of signage shows the standard to be followed while installing the sign boards 
+that ensures legibility and uniformity: 
+ 
+1. Signage’s for parking for different modes  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 1: Signages for parking for different modes 
+ 
+Car Parking Two wheeler Parking  
+Bicycle Parking 
+Parking 
+Parking for Differently abled 
+
+
+[page 20]
+ pg. 18 
+ 
+2. Signage for Parking fare chart board along with its dimensions 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+3. No parking board:  The signage board indicating that one cannot leave their vehicles 
+unattended, a ny dropping off or picking up of passengers should be completed 
+within 2 minutes and driven on as soon as possible.  In case of parking in this z one, 
+Automatic fines shall be levied with photographic evidence to the vehicle owner. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 3: No Parking Board 
+ 
+ 
+ 
+ 
+ 
+ 
+No Parking: To indicate no vehicles can park during the specified times unless they are 
+dropping off or picking up passengers.  
+Figure 2: Signage indicating Parking fee along with the dimensions 
+ 
+3 feet 
+3 feet 
+9.5 feet 
+5 feet 
+ 
+     Free 
+     Free 
+6.5 feet 
+feet 
+
+[page 21]
+ pg. 19 
+ 
+4. Surveillance signage : This signage indicates that the corridor is under surveillance for 
+monitoring the parking norm violations and security purposes. This board can be installed 
+on the surveillance camera pole itself. 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 4: Surveillance Signage 
+ 
+ 
+ 
+5. Helpline number: Helpline number to be displayed at the Parking lot for any emergency 
+situation. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure 5: Helpline signage 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+[page 22]
+ pg. 20 
+ 
+ 
+6. Pick-up/drop off signage: This sign shall indicate that the location at which this sign is placed is 
+reserved for pick -up and drop -off passengers arriving by Car/Auto/Cab/Two -wheeler. Clock with 
+number in centre icon provides information on the time for which vehicle is allowed to stand in that 
+place for pick-up and drop-off passengers. 
+ 
+ 
+ 
+Figure 6: Signage for Pick-up/Drop-off

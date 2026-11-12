@@ -1,13 +1,13 @@
 """What each run cost, and what the next one will probably cost.
 
 Every run started from the app or the command line saves a cost record in
-outputs/_app/usage/: the step, vertical and cities, how much work it covered and the tokens
+outputs/_app/usage/: the step, category and cities, how much work it covered and the tokens
 and US$ it used (usage.py prices them). The Costs page lists them.
 
 Before a run starts, `estimate` multiplies the work planned by the cost per unit of work of
-the last run of the same step and vertical:
+the last run of the same step and category:
 
-    Step 1  per agency researched (a vertical like UPD has one unit per city)
+    Step 1  per agency researched (the ULG category has one unit per city)
     Step 2  per answer
     Step 3  per row scored
 
@@ -20,6 +20,8 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
+from asics_agent.categories import ULG_UNIT_ID
+from asics_agent.legacy_names import canonical_category, read_key
 from asics_agent.usage import METER, UsageMeter
 
 UNITS = {1: "agency", 2: "answer", 3: "row"}
@@ -68,8 +70,8 @@ def record_run(
     record = {
         "kind": "run",
         "step": step,
-        "vertical": getattr(settings, "vertical", ""),
-        "vertical_title": getattr(settings, "vertical_title", ""),
+        "category": getattr(settings, "category", ""),
+        "category_title": getattr(settings, "category_title", ""),
         "label": label,
         "cities": cities,
         "work": work,
@@ -84,7 +86,7 @@ def record_run(
         },
     }
     path = (
-        usage_dir(settings) / f"{datetime.now():%Y%m%d-%H%M%S}_step{step}_{record['vertical']}.json"
+        usage_dir(settings) / f"{datetime.now():%Y%m%d-%H%M%S}_step{step}_{record['category']}.json"
     )
     path.write_text(json.dumps(record, indent=2, default=str))
     return path
@@ -98,8 +100,8 @@ class CostRecord:
     label: str
     total: float
     step: int | None = None
-    vertical: str = ""
-    vertical_title: str = ""
+    category: str = ""
+    category_title: str = ""
     cities: list[str] = field(default_factory=list)
     work: int = 0
     unit: str = ""
@@ -135,8 +137,8 @@ def history(settings) -> list[CostRecord]:
                 label=label,
                 total=float(data.get("total_usd") or 0),
                 step=step,
-                vertical=data.get("vertical", ""),
-                vertical_title=data.get("vertical_title", ""),
+                category=canonical_category(read_key(data, "category")),
+                category_title=read_key(data, "category_title"),
                 cities=data.get("cities", []),
                 work=int(data.get("work") or 0),
                 unit=data.get("unit", ""),
@@ -161,12 +163,12 @@ class Estimate:
     first_time: bool  # no earlier run to go by: starting figures were used
 
 
-def rate(settings, step: int, vertical: str) -> tuple[float, str, bool]:
+def rate(settings, step: int, category: str) -> tuple[float, str, bool]:
     """(US$ per unit, what it is based on, is it a starting figure)."""
     runs = [r for r in history(settings) if r.step == step and r.work and r.total]
-    same = [r for r in runs if r.vertical == vertical]
+    same = [r for r in runs if r.category == category]
     for r in same or runs:
-        other = "" if r in same else f" for {r.vertical_title or r.vertical}"
+        other = "" if r in same else f" for {r.category_title or r.category}"
         return r.per_unit, f"your last Step {step} run{other}, {r.when:%d %b}", False
     usd = DEFAULT_RATES[step]
     if step == 2 and getattr(settings, "batch_answers", False):
@@ -179,8 +181,8 @@ def plural(n: int, unit: str) -> str:
 
 
 def estimate(settings, step: int, work: int) -> Estimate:
-    usd, basis, first = rate(settings, step, getattr(settings, "vertical", ""))
-    title = getattr(settings, "vertical_title", "") or getattr(settings, "vertical", "")
+    usd, basis, first = rate(settings, step, getattr(settings, "category", ""))
+    title = getattr(settings, "category_title", "") or getattr(settings, "category", "")
     line = (
         f"Step {step} · {title}: {plural(work, UNITS[step])} × ${usd:.3f} = "
         f"${usd * work:,.2f} ({basis})"
@@ -199,12 +201,12 @@ def combine(parts: list[Estimate]) -> Estimate:
 # -- the work a run will do -----------------------------------------------------------------
 def city_units(settings, city) -> list:
     """The units a city's run covers: the included agencies in its Sources workbook, the
-    city government for a one-unit vertical, or a typical number if Step 1 hasn't run."""
+    city government for the one-unit ULG category, or a typical number if Step 1 hasn't run."""
     from asics_agent.models import Parastatal
     from asics_agent.sources_workbook import read_sources_workbook, sources_path, workspace_for
 
-    if getattr(settings, "unit", "parastatal") == "city_government":
-        return [Parastatal(id="ULG", name=city.name, type="other")]
+    if getattr(settings, "unit", "parastatal") == "ulg":
+        return [Parastatal(id=ULG_UNIT_ID, name=city.name, type="other")]
     workspace = workspace_for(settings.outputs_dir, city.name)
     path = sources_path(workspace, city.name)
     if path.exists():

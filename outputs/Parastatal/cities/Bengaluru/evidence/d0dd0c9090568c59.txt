@@ -1,0 +1,392 @@
+SOURCE URL: https://eprocure.gov.in/mmp/sites/default/files/RulesandManuals_contents/RulesandManuals_DOC_NO_5/The_karnataka_transparency_in_public_procurements_Act_1999.pdf
+
+[page 1]
+THE KARNATAKA TRANSPARENCY IN PUBLIC PROCUREMENTS ACT, 1999 
+ARRANGEMENT OF SECTIONS 
+Statement of Object and Reasons 
+Sections : 
+CHAPTER  I 
+ 1. Short title and commencement. 
+ 2. Definitions. 
+ 3. Provisions not to apply to certain Projects. 
+ 4. Exceptions to applicability. 
+CHAPTER  II 
+REGULATION OF PROCUREMENT 
+ 5. Procurement other than by Tender Prohibited. 
+ 6. Procurement Entities to follow Procedure. 
+ 7. Tender Bulletin Officers. 
+ 8. Publication of Tender Bulletin. 
+ 9. Tender Inviting Authority and Tender Accepting Authority. 
+ 10. Tender Scrutiny Committee. 
+ 11. Opening of Tenders. 
+ 12. Duties of  Tender Inviting authority. 
+ 13. Acceptance of Tender. 
+ 14. General rejection of tenders. 
+ 15. Power to give directions. 
+ 16. Appeal. 
+ 17. Power to obtain information. 
+ 18. Power to call for records. 
+CHAPTER  III 
+MISCELLANEOUS 
+ 19. Officers deemed to be Public Servants. 
+ 20. Immunity for action taken in good faith. 
+ 21. Bar of Jurisdiction of Courts. 
+ 22. Act to override other laws. 
+ 23. Penalty. 
+ 24. Power to remove difficulties. 
+ 25. Power to make rules. 
+ 26. Savings. 
+ 27. Repeal and savings. 
+* * * * 
+STATEMENT OF OBJECTS AND REASONS 
+ Act 29 of 2000.-  In the recent past irregularities in the processing of tenders 
+occurred in the various Government Departments, Public Sector Undertakings, Statutory 
+
+[page 2]
+Boards, etc., due to inadequate publicity of tenders, restricted supply of tender 
+documents and  resulting in lack of transparency in evaluation and acceptance of 
+tenders. 
+ In the Budget speech of the year 1997-98, it has also been announced that in order to 
+prevent recurrence of such irregularities, it has been decided to bring about a legislation 
+to provide for transparency in the tender processes and to regulate the procedure in 
+inviting, processing and accepting tenders. 
+ Hence the Bill. 
+ (Obtained from L.C. Bill No. 12 of 1999.) 
+ Amending Act 21 of 2001.- Clause (e) of section 4 of the Karnataka Transparency in 
+Public Procurements Act, 1999 excludes applicability of Chapter II of the Act to the 
+Government Departments in respect of procurement of goods or services of the value  
+not exceeding ruees five lakhs and to the local authorities in case of implementing mini 
+water supply and construction of school rooms of the value not excluding rupees  two 
+lakhs and in any other case where the value does not exceed rupees one lakh. 
+ Keeping in view the escalation in prices, it was felt necessary to have a uniform limit 
+in respect of Government Departments as well as procurement of goods and services in 
+the case of public sector undertakings, etc. 
+ Therefore  it is considered necessary to amend the Act to exclude the applicability of 
+Chapter II of the Act,- 
+ (i) in respect of procurement made by the Government Departments, State 
+Government Undertaking or any Board, Body or Corporation established by or under any 
+law and owned or controlled by the Governm ent, Zilla Panchayats, City Municipal 
+Corporations, City Municipal Councils, Hyderabad Karnataka Area Development Board, 
+Malnad Area Development Board and Bayaluseeme Development Board for 
+construction work of all types of values not exceeding rupees five lakhs and in case of 
+goods and services other than construction work, of the value not exceeding rupees one 
+lakh. 
+ (ii) Where the procurement of goods or service is by Grama Panchayat, Taluk 
+Panchayat, Town Municipal Councils, Tow n Panchayats or Urban Development 
+Authorities for the purpose of implementing mini waters supply scheme or construction 
+of school rooms of the value not exceeding rupees two lakhs and in other cases, of the 
+value not excedding ruees one lakh. 
+ Hence the Bill. 
+ (Obtained from LA Bill No. 20 of 2001 (File No. SAMVYASHAE 33 SHASHANA 2001) 
+Amending Act 4 of 2003:- 
+ Clause (d) of section 4 of the Karnataka Transparency in  Public Procurements Act, 
+1999 (Karnataka Act 29 of 2000) provides for exemption from the applicability of the Act 
+for a period of two years from the date of commencement of the Act, in respect of the 
+Government Departments, Public Sector Undertakings, Boards, Corporations and such 
+other Institutions specified by the Governmen t.  It is considered necessary to extent the 
+period of exemption from the existing period of two years to three years.   
+ Hence the Bill 
+(Obtained from LA Bill No.3 of 2003 (File No. SAMVYASHAE 05 SHASANA 2003)  
+
+[page 3]
+KARNATAKA ACT NO. 29 OF 2000 
+(First Published in the Karnataka Gazette Extraordinary on the thirteenth day of 
+December, 2000) 
+THE KARNATAKA TRANSPARENCY IN PUBLIC PROCUREMENTS ACT, 1999. 
+(Received the assent of the Governor on the tenth day of December, 2000) 
+(As amended by Act 21 of 2001 and 4 of 2003) 
+ An Act to provide for ensuring transparency in public procurement of goods and 
+services by streamlining the procedure in inviting, processing and acceptance of tenders 
+by Procurement Entities, and for matters related thereto. 
+ W HEREAS it is expedient in public interest to render the process of procurement of 
+goods and services by Procurement Entities transparent by streamlining the procedure 
+in inviting, processing and acceptance of tenders.  
+ B E it enacted by the Karnataka State Legislature in the fiftieth year of the Republic of 
+India as follows:-     
+CHAPTER  I 
+ 1. Short title and commencement.-   (1) This Act may be called the Karnataka 
+Transparency in Public Procurements Act, 1999. 
+ (2) It shall be deemed to have come into force with effect from the fourth day of 
+October, 2000. 
+ 2. Definitions.-  In this Act, unless the context otherwise requires,- 
+ (a) ‘Construction Works’ means putting up, demolishing, repairs or renovation of 
+buildings, roads, bridges or other structures  including fabrication of steel structures and 
+all other civil works; 
+ (b) ‘Goods’ means Machinery, Motor Vehicles, Equipment, Furniture, Articles of 
+Stationary, textiles raw materials, drugs, scientific instruments, chemicals, food grains, 
+oil and oil seeds or other commodity required for consumption, use or distribution by a 
+Procurement Entity in discharge of its public duties; 
+(c) ‘Government’ means the State Government; 
+ (d) ‘Procurement Entity’ means any Go vernment Department, a State Government 
+Undertaking, Local Authority or Board, Body or Corporation established by or under any 
+law and owned or controlled by the Government, and any other body or authority owned 
+or controlled by the Government and as may be specified by it.   
+ (e) ‘Public Procurement’ or ‘procurement’ means purchase of goods, obtaining of 
+services or undertaking of construction works by the procurement entities; 
+ (f) ‘Services’ means the action of serving, attending upon, helping or benefiting a 
+Procurement Entity in the course of  discharging its public duties and includes 
+construction works; 
+ (g) ‘Specified goods or Services’ means the goods or services as the case may be 
+specified in a tender and identified in the contract resulting from acceptance of a tender 
+on account of a procurement entity; 
+  (h) ‘Tender’ means the formal offer made for supply of goods or services in response 
+to an invitation for tender published in a Tender Bulletin; 
+
+[page 4]
+ (i) ‘Tender Accepting Authority’ means an officer or a Committee appointed to 
+accept tenders and a  ‘Tender Inviting Authority’ means an officer or a Committee 
+appointed to invite tenders, under section 9; 
+ (j) ‘Tender Bulletin’ means a bulletin published for the State as a whole or for any 
+district or districts within the State containing the details of invitation, processing and 
+acceptance of Tenders; 
+ (k) ‘Tender Bulletin Officer’ means a State Tender Bulletin Officer or a Tender 
+Bulletin Officer referred to in section 7;  
+ (l) ‘Tender Document” means the set of papers detailing the schedule of works, 
+calendar of events, requirement of goods and services, technical specifications, 
+procurement criteria and such other particulars, as may be prescribed for evaluation and 
+comparison of tenders. 
+ 3. Provisions not to apply to certain Projects.-  The provisions of this Act in so far 
+as they are inconsistent with the procedure specified in respect of the Projects funded by 
+International Financial Agencies or Projects covered under International Agreements, 
+shall not apply to procurement of goods or services for such project. 
+ 4. Exceptions to applicability.-  The provisions of Chapter II shall not apply to 
+Procurement of goods and services,- 
+ (a) During the period of natural calamity or emergency declared by the Government ; 
+ (b) Where the goods or services are available from a single source or where a 
+particular supplier or contractor has exclusive rights in respect of the goods or services 
+or construction work and no reasonable alternatives or substitutes exist: 
+ Provided that  for the purpose of this clause there shall be a committee of three 
+experts consisting of one technical representative of the procuring entity one technical 
+representative of the Government organisation dealing with similar procurement and one 
+representative from a reputed Academic or Research Institution or Non-Commercial 
+Institution having expertise in such line to examine and declare that the goods or 
+services are available from a single source; 
+ (c) Where the procuring entity having procured goods, services or technology from a 
+supplier or contractor determines that additional supplies must be procured from the 
+same supplier or  contractor for reasons of standardization and compatibility with the 
+existing goods, service or technology; 
+ (d) Where the goods or services are procured from certain Departments of 
+Government, public sector undertakings, statutory boards and such other institutions 
+specified by the Government and such goods are manufactured or services are provided 
+by them, for a period not exceeding 1[three  years] 1 from the date of commencement of 
+this Act; 
+1.  Subsituted by Act 4 of 2003 w.e.f. 27.3.2003. 
+ 1[(e) Where the procurement is by the Government Departments, State Government 
+Undertakings, or any Board, Body or Corpor ation established by or under any law and 
+owned or controlled by the Government or Zilla Panchayats constituted under the 
+Karnataka Panchayat Raj Act, 1993 or City Municipal Corporations established under 
+the Municipal Corporations Act, 1976 or Ci ty Municipal Councils established under the 
+Karnataka Muncipalies Act, 1964 or the Hyderabad Karnataka Areas Development 
+
+[page 5]
+Board constituted under the Hyderabad Karnataka Area Development Board Act, 1993 
+or Malnad Area Development Board constituted under the Malnad Area Development 
+Board Act, 1991 or the Bayaluseeme Development Board constituted under the 
+Bayaluseeme Development Board Act, 1994,-  
+1.  Clause e and ee substituted by Act 21 of 2001 w.e.f. 25.8.2001. 
+      (i) in case of construction works of all types the value of which does not exceed 
+rupees five lakhs; 
+  (ii) in case of goods or services other than construction works the value of which 
+does not exceed rupees one lakh; 
+  (ee) where the procurement of goods or services is by the Grama Panchayats 
+and Taluk Panchayats constituted under the Karnataka Panchayat Raj Act, 1993, Town 
+Municipal Councils or Town Panchayats constituted under the Karnataka Municipalities 
+Act, 1964 or Urban Development Authorities constituted under the Karnataka Urban 
+Development Authorities Act, 1987,- 
+  (i) for the purpose of implementing mini water supply scheme or construction of 
+school rooms and the value of such procurement does not exceed rupees two lakhs; and 
+  (ii) for other purposes and the value of such procurement does not exceed 
+rupees one lakh.]1 
+ (f)  Where the goods or services are procured under rate contracts from the Director 
+General of Supplies and Disposals or from the Stores Purchase Department of the 
+State; and 
+ (g) in respect of specific procurements as may be notified by the Government from 
+time to time. 
+ (h) in respect of spot purchase of cotton by Spinning Mills, purchase of oil seeds by 
+the Karnataka Agro-Industries Corporation or the Karnataka Co-operative Oil Seeds 
+Grower's Federation, purchase of sugarcane by Sugar Mills, direct purchase of paddy by 
+the Agricultural Produce Market Committees and the Karnataka Food and Civil Supplies 
+Corporation, purchase of cloth by the Karnataka Handloom Development Corporation, 
+purchase of silk by the Karnataka Silk Industries Corporation, purchase of milk by the 
+Karnataka Milk Producers Co-operative Federation, purchase of palm oil by the 
+Karnataka Food and Civil Supplies Corporation and the Karnataka Co-operative Oil 
+Seeds Grower's Federation, purchase of cloth by the Government Departments and 
+public sector undertaking from the Karnataka Handloom Development Corporation and 
+purchase by such other organizations or purchase of any other material as may be 
+notified by the Government from time to time. 
+CHAPTER II 
+REGULATION OF PROCUREMENT 
+ 5. Procurement other than by Tender Prohibited.-  On and from the date of 
+commencement of this Act no Procurement Entity shall procure goods or services 
+except by inviting Tenders for supply. 
+ 6. Procurement Entities to follow Procedure.-  No tender shall be invited, 
+processed or accepted by a Procurement Entity after the commencement of this Act 
+except in accordance with the procedure laid down in this Act or the rules made 
+thereunder. 
+
+[page 6]
+ 7. Tender Bulletin Officers.- (1) The Government may by notification appoint an 
+officer not below the rank of a Deputy Secretary to Government of the concerned 
+department to  be the State Tender Bulletin Officer for the State in respect of that 
+Department  where the procurement of that department covers more than one district.   
+ (2) Deputy Commissioner of the District shall be the District Bulletin Officer. 
+ 8. Publication of Tender Bulletin.-  (1) The State Tender Bulletin Officer, or as the 
+case may be, the District Tender Bulletin Officer shall on receipt of  intimation relating to 
+notice of invitation of tender from tender inviting authority or information relating  to 
+details of acceptance of tender under section 13 or rejection of tender under section 14 
+from the tender Accepting Authority, publish within the prescribed time, the State Tender 
+Bulletin or as the case may be District Tender Bulletin. 
+ (2)  The Tender Bulletin  shall be made available for sale in the office of the Tender 
+Bulletin Officer and in such other places as the Tender Bulletin Officer deems fit to make 
+available. 
+ 9. Tender Inviting Authority and Tender Accepting Authority.-  (1) The 
+Procurement Entity may, by order, appoint, - 
+ (i) one or more of officers or a Committee of Officers to be the Tender  Inviting 
+Authority for any specified area, specified procurement or specified class of goods or 
+services, and  
+ (ii) one or more of officers or a Committee of Officers to be the Tender Accepting 
+Authority for any specified area or Specified Procurement, specified class of goods and 
+services: 
+ Provided that where a multi-member Committee is already appointed for any 
+Procurement  Entity for discharging the function of accepting tenders, such Committee 
+shall  be deemed to be a Tender Accepting Authority appointed under this Act. 
+ 10. Tender Scrutiny Committee.- The Tender Accepting Authority may constitute a 
+Tender Scrutiny Committee consisting of such persons as it deems fit to scrutinise 
+tenders above five crores in the case of the Public Works, Irrigation and Minor Irrigation 
+Departments of the Government and above rupees one crore in other cases. 
+ 11. Opening of Tenders.-  (1) The Procurement entity may authorise either the 
+Tender Inviting Authority or the Tender Accepting Authority or any other Officer to open  
+the Tenders and draw up a list of Tenderers responding to the notice inviting tender, in 
+each case. 
+ (2) The Authority, or as the case may be the officer referred to in sub-section (1) 
+shall open the tender,  draw up a list of tenderers in the prescribed manner and unless it 
+is also the Tender Accepting Authority, forward the tenders along with the list of 
+tenderers, to the Tender Accepting Authority. 
+ 12. Duties of Tender Inviting Authority.-  (1) It shall be the duty of every Tender 
+Inviting Authority,-    
+  (a) to  take out notice inviting tenders at the behest of the Procurement Entity in 
+the prescribed manner;  
+  (b) to communicate the notice inviting tenders by marking a copy thereof to the 
+Tender bulletin Officer concerned immediately after issue of the notice; 
+  (c) to cause publication of notice inviting tenders in the prescribed manner; and  
+
+[page 7]
+  (d) to supply the Schedule of Rates and Tender Documents to every intending 
+tenderer who has applied to get such documents. 
+ (2) The Tender Inviting Authority shall take out notices, communications and 
+publications required to be taken out under this section in such form, in such manner, by 
+such mode and at such time and interval as may be prescribed and different manner and 
+mode of publication may be prescribed for different procurements depending on the 
+value of the procurement. 
+ (3) The Tender Inviting Authority shall collect all the details received in response to 
+the notice inviting tender, within the time stipulated and unless it is itself authorised to 
+open the tender shall compile and forward all the tenders received to the Authority or 
+Officer authorised to open the tenders. 
+ 13. Acceptance of Tender.-  The Tender Accepting Authority shall, after following 
+such procedure as may be prescribed pass order accepting the tender and shall 
+communicate the information relating to acceptance of tender together with a 
+comparative analysis and reasons for accepting of tender to the procurement entity and 
+the Tender Bulletin Officer: 
+ Provided that where the Tender Accepting Authority consists of single officer who is 
+due to retire within the next six months, from the date fixed for the acceptance for tender, 
+he shall not act to accept the tender without obtaining prior approval of the Procurement 
+Entity: 
+ Provided further that subject to such general or special order as may be issued by the 
+Government from time to time, the Tender Accepting Authority may before passing order 
+accepting a tender negotiate with lowest tenderer. 
+ 14. General rejection of tenders.- (1) The Tender Accepting Authority may at any 
+time before passing an order of acceptance under section 13 reject all the tenders on the 
+ground of changes  in the scope of procurement, failure of anticipated financial resource, 
+accidents, calamities or any other ground as may be prescribed which would render the 
+procurement unnecessary or impossible and report the same to the Procurement Entity. 
+ (2) The Procurement Entity shall thereafter communicate the fact of the rejection 
+under this section to all the Tenderers and also cause the same to be published in the 
+Tender Bulletin.  
+ 15. Power to give directions.-  It shall be competent for the Government to give 
+appropriate directions to the Procurement Entity or the Authorities under this Act in order 
+to secure and maintain transparency at any stage of the process of procurement, and it 
+shall be duty of the Procurement Entity or such authority to comply with the directions. 
+ 16. Appeal.-  (1) Any tenderer aggrieved by an order passed by the Tender 
+Accepting Authority other than the Government under section 13 may appeal to the 
+prescribed authority within thirty days from the date of receipt of the order: 
+ Provided that the prescribed authority may, in its discretion allow further time not 
+exceeding thirty days for preferring any such a ppeal, if it is satisfied that the appellant 
+had sufficient cause for not preferring the appeal in time. 
+ (2) The prescribed authority may after giving opportunity  of being heard to both the 
+parties pass such order thereon as it deems fit and such order shall be final. 
+
+[page 8]
+ (3) The prescribed authority shall as far as possible dispose of the appeal within 
+thirty days from the date of filing thereof. 
+ 17. Power to obtain information.-  Notwithstanding anything contained in this  Act 
+or in any other law for the time being in force, the Government may with a view to 
+ensuring transparency call for and obtain, from any Authority under this Act, any 
+information relating to any matter in the process of procurement. 
+ 18. Power to call for records.-   The Government may at any time, with a view to 
+ensuring transparency in the procurement process call upon any authority under this 
+Act,- 
+ (i) to produce records relating to invitation, processing and acceptance of tenders ; 
+ (ii) to furnish the tender document, estimates/statements/accounts or statistics 
+relating to such tenders; and 
+ (iii) to furnish report on any specific point incidental to the procurement.  
+CHAPTER  III 
+MISCELLANEOUS 
+ 19. Officers deemed to be Public Servants.-  Every Officer acting under or in 
+pursuance of the provisions of this Act or under a rule, order or notification made 
+thereunder, shall be deemed to be a public servant within this meaning of section 21 of 
+the Indian Penal Code, 1860 (Central Act XLV of 1860). 
+ 20. Immunity for action taken in good faith.-  No suit or other legal proceeding 
+shall lie against the Government or any officer or authority empowered to exercise 
+powers or perform the functions under the Act in respect of anything which is in good 
+faith done or intended to be done under this Act. 
+ 21. Bar of Jurisdiction of Courts.-   Save as otherwise provided in this Act no order 
+passed or proceedings taken by any officer or authority under this Act shall be called in 
+question in any court, and no injunction shall be granted by any court in respect of any 
+action taken or to be taken by such officer or authority in exercise of powers conferred 
+on him or it, by or under this Act. 
+ 22. Act to override other laws.-  The provisions of this Act shall have effect 
+notwithstanding anything inconsistent therewith contained in any other law for the time 
+being in force or any custom or usage, agreement, decree or order of a Court or a 
+Tribunal or other Authority. 
+ 23. Penalty.-  Whoever contravenes the provisions of this Act or the rules made 
+thereunder shall be punishable with imprisonment for a term which may extend to three 
+years and with fine which may extend to five thousand rupees. 
+ 24. Power to remove difficulties.- If any difficulty arises in giving effect to the 
+provisions of this Act, the Government may, by order published in the Gazette make 
+such provisions not inconsistent with the pr ovisions of the Act as appear to them to be 
+necessary or expedient for removing the difficulty: 
+ Provided that no such order shall be made after this expiry of a period of two years 
+from the date of commencement of the Act. 
+ 25. Power to make rules.-  (1) The Government, may by notification, make such 
+rules as are necessary for carrying out the purposes of this Act. 
+
+[page 9]
+ (2) Every rule made or notification or order issued under this Act shall as soon as 
+possible, after it is made or issued, be placed before each House of the State 
+Legislature while it is in session for a total period of thirty days, which may be comprised 
+in one session or in two or more successive sessions  and if before the expiry of the 
+session in which it is laid or the sessions immediately following both Houses agree in 
+making any modifications in the rule, notification or order or both Houses agree that the 
+rule, notification or order shall not be made, the rule or notification or order shall 
+thereafter have effect only in such modified form or be of no effect, as the case may be, 
+so, however that any such modification or annulment shall be without prejudice to the 
+validity of anything previously done under that rule or notification or order. 
+ 26. Savings.-  All rules, regulations, orders, notifications departmental codes, 
+manuals, bye-laws, official Memoranda, circ ular or any other order made or issued 
+before the commencement of this Act and in force on the date of such commencement 
+providing for or relating to any of the above matters for the furtherance of which this Act 
+is enacted shall continue to be in force and  effective as if they are made under the 
+corresponding provisions of this Act, to the extent they are not inconsistent with the 
+provisions of this Act and unless and until superceded by anything done or any action 
+taken or any rule, notification or order, is made under this Act. 
+ 27. Repeal and savings.-  (1) The Karnataka Transparency in Public Procurements 
+Ordinance, 2000 (Karnataka Ordinance No. 8 of 2000) is hereby repealed. 
+ (2) Notwithstanding such repeal anything done or any action taken under the 
+principal Act as amended by the said Ordinance shall be deemed to have been done or 
+taken under this Act. 
+* * * * 
+ (The above translation of the dâ}ÖËrdâ ÉÖÀâËm¾dâ ÉâªgâZÝâÇêgâÔâ¶[ ~Ö pâ{âµâËdâyê %º¾Ìâ°Àâ°, 1999 (2000pâ 
+dâ}ÖËrdâ %º¾Ìâ°Àâ° ÉâªfêX 29)   was published in the Official Gazette (Extraordinary) dated 16.2.2001 as 
+No. 352 (Note: No. DPAL 29 Shasana 1999 dated 16.2.2001)  under clause (3) of Article 348 of the 
+Constitution of India.) 
+* * *

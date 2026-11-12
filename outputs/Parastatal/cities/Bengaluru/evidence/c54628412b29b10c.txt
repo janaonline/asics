@@ -1,0 +1,1233 @@
+SOURCE URL: https://prsindia.org/files/bills_acts/acts_states/karnataka/2011/2011KR25.pdf
+
+[page 1]
+ 
+DISCLAIMER: This document is being furnished to you for your information by PRS 
+Legislative Research (PRS).  The contents of this document have been obtained from sources 
+PRS believes to be reliable.  These contents have not been independently verified, and PRS 
+makes no representation or warranty as to the accuracy, completeness or correctness.  In 
+some cases the Principal Act and/or Amendment Act may not be available.  Principal Acts 
+may or may not include subsequent amendments.  For authoritative text, please contact the 
+relevant state department concerned or refer to the latest government publication or the 
+gazette notification.  Any person using this material should take their own professional and 
+legal advice before acting on any information contained in this document.  PRS or any persons 
+connected with it do not accept any liability arising from the use of this document.  PRS or any 
+persons connected with it shall not be in any way responsible for any loss, damage, or distress 
+to any person on account of any action taken or not taken on the basis of this document. 
+ 
+ 
+ 
+ 
+The Karnataka Ground Water (Regulation and Control of Development and 
+Management) Act, 2011 
+ 
+Act 25 of 2011 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Keyword(s): 
+ 
+Artificial Recharge of  Ground Water, Contravention, Digging/Drilling, Drilling 
+Agency, Defunct Well, Failed Bore Wells, Government, Ground Water, Inferior 
+Quality Work, Notified Area, Permit, Rain Water Harvesting, Registration, User of 
+Ground Water, Well, Zone of Saturation 
+Amendments appended: 10 of 2025, 63 of 2025 
+ 
+
+[page 2]
+KARNATAKA ACT NO 25 OF 2011 
+THE KARNATAKA GROUND WATER (REGULATION AND CONTROL OF DEVELOPMENT AND 
+MANAGEMENT) ACT, 2011 
+Arrangement of Sections 
+ 
+Sections: 
+CHAPTER – I 
+PRELIMINARY 
+ 
+1. Short title, extent and commencement and application 
+2. Definitions 
+CHAPTER –II 
+CONSTITUTION OF THE AUTHORITY 
+3. Establishment of Groundwater Authority 
+4. Disqualification for the members of the authority 
+5. Term of office and conditions of service 
+6. Removal of a Member 
+7. Casual vacancies etc 
+8. Meetings of the Authority 
+9. Staff of the Authority 
+10. Power to notify areas to regulate and control the development and management of 
+groundwater 
+11. Grant of permit to extract and use groundwater in the notified area 
+12. Registration of existing users in the notified areas 
+13. Registration of drilling agencies 
+14. Power to alter, amend or vary the terms of permit or certificate of registration 
+15. Cancellation of permit or certificate of registration 
+16. Ineligibility to avail financial assistance, power connection etc 
+17. Powers of the Authority 
+CHAPTER - III 
+FUNDS, ACCOUNTS AND AUDIT 
+18. Funds of the Authority 
+19. Budget of the Authority 
+20. Accounts and Audit 
+21. Annual Report 
+CHAPTER – IV 
+RAINWATER HARVESTING 
+22. Rainwater harvesting for ground water recharge 
+ 
+ 
+
+[page 3]
+ 2
+CHAPTER – V 
+MISCELLANEOUS 
+23. Delegation of power and duties 
+24. Public to give information regarding contravention of the Act 
+25. Recovery of dues as arrears of land revenue 
+26. Restriction on publication of information and returns 
+27. Service of orders 
+28. Bar to claim compensation 
+29. Members and employees of the authority to be public servants 
+30. Protection of action taken in good faith 
+31. Cognizance and trial of offences 
+32. Offences and penalties 
+33. Compounding of offences 
+34. Offences by companies 
+35. Bar of jurisdiction by Civil Courts 
+36. Fines to be credited to the fund of the Authority 
+37. Punishment under other laws not barred 
+38. Power to make rules 
+39. Regulations 
+40. Power to remove difficulties 
+41. Appeals 
+ 
+STATEMENT OF OBJECTS AND REASONS 
+Act 25 of 2011.-  The Ministry of Water Resources, Government of India, had circulated a 
+model Bill for regulation and control of development and management of ground water in the year 
+1992 and subsequently in the year 1996.  In the meanwhile, the Government of Karnataka has 
+enacted the Karnataka Ground Water (Regulation for protection of sources of drinking water) Act, 
+1999 (Karnataka Act 44 of 2003) to give priority for drinking water and for protection of drinking 
+water sources in the State. 
+Now, it is considered necessary to bring a general legislation to control indiscriminatory 
+exploitation of ground water especially in the notified areas in the State. 
+The proposed Bill also provides for,- 
+(i) the constitution of the Karnataka Ground Water Authority; 
+(ii) restriction and regulation of extraction of ground water in the notified area; 
+(iii) specification of the minimum distance between the bore wells dug for the purpose of 
+irrigation; 
+(iv) declaration by notification any areas as draught hit areas; 
+(v) Certain other incidental provisions also. 
+Hence the Bill. 
+[L.A. Bill No. 10 of 2011, File No. Samvyashae 40 Shasana 2002] 
+[Entries 17, 18 and 32 of List II of the Seventh Schedule to the Constitution of India.] 
+ 
+------- 
+  
+
+[page 4]
+ 3
+ 
+KARNATAKA ACT NO 25 OF 2011 
+(First Published in the Karnataka Gazette Extra-ordinary on the  seventh day of April, 2011) 
+THE KARNATAKA GROUND WATER (REGULATION AND CONTROL OF DEVELOPMENT AND 
+MANAGEMENT) ACT, 2011 
+(Received the assent of the Governor on the Fifth day of April, 2011) 
+An Act to regulate and control the development and management of ground water and 
+matters connected therewith or incidental thereto. 
+Whereas, it is expedient to provide for Regulation and control of development and 
+management of ground water in the State and for matters connected therewith or incidental thereto. 
+Be it enacted by the Karnataka State Legislature in the sixty second year of the Republic of 
+India as follows: 
+CHAPTER – I 
+PRELIMINARY 
+1.  Short title, extent and commencement and application.- (1) This Act may be called the 
+Karnataka Ground water (Regulation and Control of Development and Management) Act, 2011. 
+(2)   It extends to the whole of the State of Karnataka. 
+(3)  It shall come into force on such date as the State Government may, by notification, 
+appoint and different dates may be appointed for different areas and for different provisions of the 
+Act. 
+(4) The provisions of this Act shall be in addition to and not in derogation of the provisions of 
+any other law for the time being in force relating to protection of public sources of drinking water. 
+2. Definitions.-  In this Act, unless the context otherwise requires,- 
+(a) “Artificial recharge to Ground Water” means the process by which Ground Water 
+reservoir is augmented at a rate exceeding that under natural conditions of 
+replenishment; 
+(b) “Authority” means the Karnataka Groundwater Authority established under section 3; 
+(c) “Contravention” means defiance or violation of a rule, law or judicial order or a breach 
+of a regulatory requirement or not fulfilling an obligation, promise or agreement;  
+(d) “Digging/drilling” means with all its grammatical variations and cognate expression in 
+relation to a well includes digging, drilling or boring of new wells or in existing wells, 
+deepening and modification (of radials and galleries) of existing wells for extraction of 
+groundwater;  
+(e) “Drilling Agency” means a person or an agency or an organization or an institution 
+engaged in the business of drilling or digging of well for exploration of water resources 
+or extraction of water; 
+
+[page 5]
+ 4
+(f) “Defunct well” means open wells or bore wells that are no longer yielding water or not 
+in use;  
+(g) “Failed bore wells”  means a bore well yielding less than one liter per second (or 791 
+GPH) at the time of installation;  
+(h) “Government” means the State Government; 
+(i) “Groundwater” means the water, which exists below the ground surface in the zone of 
+saturation and can be extracted through wells or any other means or emerges as 
+springs and base flows in streams and rivers; 
+(j) “Inferior quality work”  means the defects and faults occurred during the design stage 
+that affect well maintenance;  
+(k) “Local Authority”  means a City Municipal Corporation, Municipal Council, Town 
+Panchayat, Zilla Panchayat, Taluk Panchay at, Grama Panchayat, Industrial Township 
+Authority, Bangalore Development Authority, Improvement Board, Urban Development 
+Authority, Planning Authority, Bangalore Water Supply and Sewerage Board, Karnataka 
+Urban Water Supply and Sewerage Board, constituted under any law for the time being 
+in force; 
+(l) “Notified area” means the area notified under section 10; 
+(m) “Permit” means a permit granted under section 11; 
+(n) “Rain water harvesting” is the technique of collection and use of rainwater at surface 
+or in sub-surface aquifer; 
+(o) “Registration” means a certificate of registration granted under  section 12 and section 
+13; 
+(p)  “User of groundwater”  means any person or group of persons or an institution 
+including a company or an establishment, whether the Government or not who or which 
+extract or use or sell groundwater for any  purpose including domestic use made either 
+on a personal or community basis; 
+(q) “Well” means a structure constructed for the search or extraction of groundwater by a 
+person or persons for drinking/domestic/industrial/commercial/agriculture use except by 
+the authorized officials of the State Government or the Central Government for carrying 
+out scientific investigation, exploration, development, augmentation, conservation, 
+protection or management of groundwater and shall include open well, bore well, dug 
+cum bore well, tube well, filter point, collection well, infiltration gallery, recharge well, 
+disposal well or any of their combinations or variations; 
+(r)   “Zone of saturation” means a subsurface zone in which all the pores or the material are 
+filled with ground water under phreatic condition. 
+CHAPTER –II 
+CONSTITUTION OF THE AUTHORITY 
+
+[page 6]
+ 5
+3. Establishment of Groundwater Authority.- (1) As soon as may be, after the 
+commencement of this Act, the Government may by notification establish with effect from such date 
+as may be specified in the notification, an authority to be known as the Karnataka Groundwater 
+Authority for the whole of the State of Karnataka, with its head quarters at Bangalore. 
+(2)  The authority shall be a body corporate by the name aforesaid having perpetual 
+succession and a common seal with power, subject to the provisions of this Act, to acquire, hold and 
+dispose of property both movable and immovable and to enter into contract, and may by the said 
+name sue and be sued.  
+(3)   The Authority shall consist of the following members, namely:- 
+(a) The Secretary to Government in charge of the Department of Water resources, Minor 
+Irrigation, Government of Karnataka who shall be the chairperson. 
+(b) The Commissioner or Director of Mines and Geology, who shall be the Member Secretary. 
+(c)  A representative of the Finance Department, Government of Karnataka. 
+(d) The Regional Director, Central Groundwater Board, Government of India.  
+(e) One representative from the Electrical S upply Company having jurisdiction over the area, 
+not below the rank of a Chief engineer. 
+(f) The Chief Engineer, RDED, Rural Development and Panchayat Raj Department. 
+(g) The Engineer-in-Chief, Water Resources Development Organization of Water Resources 
+Department.  
+(h) The Chief Engineer, Minor Irrigation, nominated by the Government.  
+(i) The Chairman of the Karnataka State Pollution Control Board. 
+(j) The Commissioner/Director of Agriculture, Department of Agriculture.  
+(k) The Chief General Manager, National Bank for Agriculture and Rural Development, 
+Bangalore.  
+(l) Four representative of farmers to be nominated by the Government. 
+(m) The Chief Engineer, the KUWS&DB. 
+(n) The Chief Engineer, the BWSSB. 
+(o) Two members who have special knowledge or practical experience in matters relating to 
+groundwater to be nominated by the Government. 
+4.  Disqualification for the members of the authority.- A person shall be disqualified for 
+being nominated as, and for being a non-official member of the Authority if such member,- 
+(a) has been convicted  and sentenced to imprisonment for an offence which, in the 
+opinion of the Government involves moral turpitude; or  
+(b) is of unsound mind and is so declared by a competent court; 
+(c) is an un-discharged insolvent; or  
+
+[page 7]
+ 6
+(d) has been removed or  dismissed from the service of the Central Government or the 
+Government or a Corporation owned or controlled by the Central Government or the 
+Government or  from the membership of the Authority; or 
+(e) has directly  or indirectly, by himself or his partner, any share or interest in any work 
+done by the order of the  Authority or in any contract or employment with, or under, or 
+by, or on behalf of the Authority; or  
+(f) is employed as legal practitioner on behalf of  the Authority or accepts employment  as 
+a legal practitioner against the Authority; 
+Provided that a person shall not be disqualified under clause (e) or be deemed to have any 
+share or interest in any contract or employment within the meaning of the said clause by reason only 
+of his having share or interest in a newspaper in which any advertisement relating to the affairs of the 
+Authority is inserted. 
+5. Term of office and conditions of service.- (1) Subject to the pleasure of the Government 
+and the provisions of section 6, non-official mem bers nominated by the Government shall hold office 
+for a period of three years from the date on which they assume office and shall be eligible  for 
+reappointment  under such conditions as may be prescribed. 
+(2)  A non-official member nominated by the Government, may at any time resign his office by 
+writing under  his hand addressed to the Government but shall continue in office till his resignation is 
+accepted by the Government. 
+(3)  The non-official member nominated by the Government shall be entitled to such 
+allowances as may be prescribed. 
+6.  Removal of a Member.- (1) The Government may remove a nominated non-official 
+member, if such member,- 
+(a) becomes subject to any of the disqualifications specified in section 4; or 
+(b) refuses to act or becomes incapable of acting; or 
+(c) without obtaining the leave of absence from the Chairperson absents himself from 
+three consecutive meetings of the Authority; or  
+(d) in the opinion of the Government, has so abused his position as to render his 
+continuance detrimental to the interest of the Authority. 
+ 
+(2) No order of removal of a nominated non-official member under clause (a) and (d) of sub-
+section (1), shall be made unless such member has been given an opportunity of making his 
+representation. 
+7.  Casual vacancies etc.-  (1) Any casual vacancy caused by resignation of a non-official 
+member or otherwise may be filled by the Gove rnment, by nomination and the person so nominated 
+shall hold office for the remaining period for which the member in whose place he is so nominated 
+would have held office. 
+
+[page 8]
+ 7
+(2)  No Act or proceedings of the Authority shall be invalidated merely by reason of any 
+vacancy in its membership or any defect in the constitution or reconstitution of the Authority or any 
+irregularity in the procedure of the Authority not affecting the merits of the case. 
+8.  Meetings of the Authority.-  (1) The Authority shall ordinarily meet at least once in three 
+months at the office of the Authority or at such other place as the Chairperson may decide and shall, 
+subject to the provisions of sub-sections (2), (3) and (4), observe such rules of procedure in regard to 
+the transaction of business at its meeting as may be provided by regulations. 
+(2)  The Chairperson or in his absence, any member chosen by the members present from 
+among themselves, shall preside at a meeting of the Authority. 
+(3)  If any member, being an officer of the Government is unable to attend any meeting of the 
+Authority he may under intimation to the Chairperson, authorise his representative to attend meeting  
+in writing, to do so. 
+(4)  All questions at a meeting of the Authority shall be decided by a majority of the votes of 
+the members present and voting and in the case of equality of votes, Chairperson or in his absence 
+the member presiding shall have a casting vote. 
+(5)   Quorum for a meeting shall be seven. 
+9.  Staff of the Authority.- (1) The Government shall for the purpose of enabling the Authority 
+to efficiently perform its functions or exercise  its powers under the Act, provide such number of 
+technical and other staff as it may consider necessary. 
+(2) The powers and duties, the method of recruitment and the terms and conditions of service 
+of such employees shall be such, as may be prescribed. 
+(3) The Administrative expenses of the Authority including the salaries and allowances and 
+pension payable to the officers and staff of the Authority, if any, shall be defrayed out of the fund of 
+the Authority. 
+10.  Power to notify areas to regulate and control the development and management of 
+groundwater.-  (1) The Authority shall function under the overall control and supervision of the 
+Government. 
+(2)  If the authority, after consultations with various expert bodies is of the opinion that it is 
+necessary or expedient in the public interest to regulate the extraction or the use or both of Ground 
+Water in any form in any area, it shall advise the Government to declare any such area to be a 
+notified area for the purpose of this Act with effect from such date as may be specified therein. 
+(3)  The Government on the advise of the Authority may, by notification in the Official Gazette, 
+declare any such area to be a notified area for the purposes of this Act with effect from such date as 
+may be specified therein: 
+Provided that the date so specified in the notification shall not be earlier than three months 
+from the date of publication of the said notification. 
+
+[page 9]
+ 8
+(4)  Every such notification shall in addition to its publication in the official Gazette, be 
+published in not less than one daily regional language newspaper having wide circulation in the State 
+and in such other manner as may be prescribed. 
+(5)  If in the opinion of the authority, the availability of groundwater has improved in a notified 
+area, it may, in consultation with various expert bodies advise Government to de-notify such area and 
+the Government may do so according to the procedure prescribed. 
+(6)  The authority shall also take steps to ensure that exploitation of Ground water resources 
+does not exceed the natural replenishment to the aquifers. 
+(7)  The Government on the advice of the authority may take steps as far as possible to 
+ensure augmentation of ground water resources in addition to regulatory measures. 
+(8)  The authority shall maintain and upkeep the data base on ground water related 
+information. 
+11.  Grant of permit to extract and use groundwater in the notified area.-  (1) Subject to 
+the provisions of any law relating to protection of public sources of drinking water, any user of ground 
+water desiring to drill or dig a well in the notified area for any purpose either on personal or 
+community basis shall apply to the authority for grant of permit for this purpose and shall not proceed 
+with any activity connected with such drilling or digging unless a permit has been granted by the 
+authority. 
+(2)  Every application under sub-section (1) shall be made in such form, shall contain such 
+particulars and in such manner accompanied by such fee for different purposes like industrial, 
+commercial entertainment, agricultural and domestic etc., and for different areas, as may be 
+prescribed. 
+(3)  On receipt of an application under sub-section (1), if the Authority is satisfied that it shall 
+not be against public interest to do so, it may grant subject to such conditions and restrictions as may 
+be specified therein,  a permit authorizing drilling or digging of a well for the extraction and use of 
+groundwater.  The conditions shall include mandatory provision of artificial recharge structures of 
+appropriate size to be constructed by the applicant within a period as specified by the authority: 
+Provided that no person shall be refused of a permit unless he has been given an opportunity 
+of being heard. 
+(4)  The decision regarding grant or refusal of their permit shall be intimated by the Authority 
+to the applicant within a period of sixty  days from the date of receipt of the application. 
+(5)  In granting or refusing a permit, the Authority shall have regard to the following, namely:- 
+(a) The purpose for which the groundwater is to be used-domestic, agriculture, industry, 
+commercial, establishments entertainment,-indicate sale/own use or both; 
+(b) No permit shall be given for water intensive crops like paddy, sugarcane in notified 
+areas; 
+(c) The existence of other competitive users; 
+
+[page 10]
+ 9
+(d) The availability of groundwater and the need to conserve it; 
+(e) Quantity of groundwater to be drawn; 
+(f) Quality of groundwater with reference to use; 
+(g) Spacing of groundwater structures keeping in consideration, the purpose for which 
+the groundwater is to be used. 
+(h) Long term groundwater level behaviour; 
+(i) Its likelihood of adversely affecting water availability of any drinking water sources in 
+its vicinity; 
+(j) Priority may be given for those who adopt sprinkler and drip irrigation system; 
+(k) Any other factors relevant thereto. 
+(6)   The permit shall be subject to such terms and conditions and in such form as may be 
+prescribed. 
+12.  Registration of existing users in the notified areas.- (1) Every existing user of 
+groundwater in the notified area shall within a period of one hundred twenty days from the date of 
+declaration as notified area by the Government shall apply to the authority for grant of a certificate of 
+a registration recognizing its existing use in such form and in such manner as may be prescribed: 
+Provided that the authority may entertain any such application after the expiry of the said 
+period of one hundred and twenty days if it is satisfied that the user was prevented by sufficient 
+cause from filing application in time. 
+(2)  The details to be furnished in an application under sub-section (1) shall include the 
+following, namely:-  
+(a) The description of the source of groundwater, such as type of well, its exact location; 
+(b) The lifting device used; 
+(c) The quantity of ground water withdrawal and hours of operation per day; 
+(d) The total period of use in each year; 
+(e) The purpose or purposes for which groundwater is being extracted; 
+(f) In case the requirement of ground water is for purpose of drinking water, the 
+approximate population to be served; 
+(g) In case of irrigation well, the location and extent of area irrigated; and the crops grown; 
+(h) In the case of State and Central Government, Local authorities or Community run 
+water supply schemes, the details of the services involved in addition to the quantities 
+of ground water extracted, the diversion or the pumping points and their locations. 
+(3)  On receipt of an application under sub-section (1), the Authority may, after such enquiry 
+as it may deem fit and after satisfying itself, grant a registration certificate in such form, for such 
+period and subject to such condition as may be prescribed. 
+
+[page 11]
+ 10
+(4)  The decision regarding the grant or refusal of the certificate of registration shall be 
+intimated by the authority to the applicant within a period of thirty days from the date of receipt of the 
+application. 
+(5)  In granting or refusing a certificate of registration under sub-section (3) the Authority shall 
+have due regard to the following:- 
+(a) The purpose for which the groundwater is to be used;   
+(b) In case of applicants growing water intensive crops like paddy and sugarcane, an 
+undertaking shall be obtained from them for change of heavy duty crops to light duty 
+crops and such change to be incorporated in the certificate of registration. 
+(c) The existence of other competitive users; 
+(d) The availability of groundwater and the need to conserve it; quantity of groundwater 
+to be drawn; 
+(e) Quality of groundwater with reference to use; 
+(f) Spacing of groundwater structures keeping in consideration, the purpose for which 
+ground water is to be used; 
+(g) Long term groundwater level behaviour; 
+(h) Any other factors relevant thereto. 
+(6)   The certificate of registration shall be in such form as may be prescribed. 
+(7)  Pending the communication by the authority of the decision on the application under sub-
+section (1), every existing user of ground water in the notified area shall be entitled to the continued 
+use of ground water in the same manner and to the same quantity as he was entitled prior to the date 
+of his application. 
+(8)  If a registered well becomes defunct this fact should be immediately brought to the notice 
+of the authority by the user of groundwater and shall seal the defunct bore well in order to avoid 
+untoward incidents.   
+13.  Registration of drilling agencies.-  (1) Every person desiring to carry on the business of 
+drilling or digging well or extraction of groundwater shall register his machinery with authority in such 
+manner as may be prescribed. 
+(2)  No person by himself or through any person on his behalf shall, after expiry of a period of 
+six months from the date of commencement of th is Act carry on the business of drilling or digging 
+well or extraction of groundwater except under and in accordance with the terms and conditions of 
+the registration granted by the Authority under this Act. 
+(3) Every person for the purpose of getting a registration under sub-section (1) shall make an 
+application to the Authority in such form, containing such particulars and accompanied by such fees 
+as may be prescribed. 
+(4) On receipt of an application under sub-section (2), the Authority may after such enquiry as 
+it may deem fit and after satisfying itself that the applicant has the means and knowledge to 
+
+[page 12]
+ 11
+undertake drilling or digging operations and extraction of ground water, grant a certificate of 
+registration in such form for such period and subject to such conditions as may be prescribed. 
+14. Power to alter, amend or vary the terms of permit or certificate of registration.-  At 
+any time after the permit or certificate of registration as the case may be, has been granted, the 
+Authority may, for technical reasons alter, amend or vary the terms of the permit or certificate of 
+registration,  as the case may be, provided the user of ground water has been given an opportunity of 
+being heard: 
+Provided that before taking any such action the Authority shall ensure that standing crop or 
+crops is not damaged. 
+15.  Cancellation of permit or certificate of registration.-  If the Authority is satisfied either 
+on a reference made to it in this behalf or otherwise that,- 
+(a) the permit or certificate of registration has been obtained by fraud or mis-
+representation; or 
+(b) the holder of the permit or certificate of registration has without reasonable cause failed 
+to comply with the conditions subject to which the permit or license and certificate of 
+registration has been granted or has contravened any of the provisions of this Act or 
+the rules made thereunder; or 
+(c) a situation has arisen which warrants limiting the use or extraction of groundwater; 
+(d) in case of drilling or drilling or digging agencies, who carries inferior quality of work 
+either in drilling or installation of equipment including pipes and pumps; 
+ it may, without prejudice to any other penalty to which the holder of the permit or certificate of 
+registration may be liable under this Act or any other law the authority may after giving the 
+holder of permit or certificate of registration an opportunity of being heard, cancel the permit 
+or certificate of registration as the case may be.   
+16.  Ineligibility to avail financial assistance, power connection etc.-  A person, who does 
+not possess a permit in notified area shall not be eligible,- 
+(a)  to get any subsidy, grant or loan by the Government or any other agency, organization or 
+financing institution to  dig well and extract ground water; 
+(b) to get from the Electricity Supply Company or any other authority, the power connection 
+and supply of electricity to extract water from a well without obtaining a permit; 
+(c) for any subsidies or incentives from t he Government, who is a former and who does not 
+adopt sprinkler or drip irrigation in the notified areas. 
+17.  Powers of the Authority.-  (1) The Authority or any person authorized by it in writing in 
+this behalf shall have power,- 
+(a)  to enter at any reasonable time on any property and to investigate and take any 
+measurement concerning the land or water located on the surface or underground; 
+
+[page 13]
+ 12
+(b)  to inspect the well which is being constructed or drilled or has been drilled and the soils 
+and other materials excavated therefrom; 
+(c)  to take the specimens of such soils or other materials or of water extracted from such 
+well; 
+(d)  to order in writing the person drilling or digging a well to keep and preserve in the 
+prescribed manner specimen of soil or any material excavated therefrom for such period not 
+exceeding three months from the date of completion or abandonment of the work as may be 
+specified by the Authority and thereupon such person shall comply with such requisition; 
+(e)  to inspect and to take copies of the relevant record or documents and to ask any question 
+necessary for obtaining any information (including, diameter or depth of the well which is being or has 
+been sunk, the level at which the water is or was struck and subsequently restored or rested the 
+types of strata encountered in the drilling or digging of the well and quality of the water struck etc.,) 
+required for carrying out the purposes of this Act; 
+(f)  to serve or cause to be served a notice requiring any user of groundwater or drilling or 
+digging agency to furnish such information  or returns in such form, at such intervals and with such 
+particulars, as may be prescribed and thereupon such user or drilling or digging agency shall comply 
+with such requisition; 
+(g)  to require the user of groundwater to install water measuring, devices if it is necessary to 
+properly administer the water or there is reason to believe that the user of groundwater does not 
+comply with the provisions of this Act or the rules made thereunder or for any other sufficient reason: 
+Provided that where the user of groundwater does not comply with the direction issued to him 
+within a period of thirty days, from the date of issue of such requisition the Authority itself may install 
+such water-measuring device and recover the cost from the defaulting user of groundwater; 
+(h)  to seize any mechanical equipment or device utilized for illegal drilling or digging of well 
+and extraction of groundwater and to demolish the work executed fully or partly; 
+(i)  to direct any user of groundwater who does not comply with the provisions of this Act and 
+the rules framed there under to close down the extraction of ground water, disconnect its power 
+supply or confiscate any hydraulic work found to be illegal according to the provisions of this Act and 
+the rules made thereunder: 
+Provided that where the user of groundwater does not comply with the direction  issued to him 
+within a period of sixty days, from the date of issue of such requisition the Authority itself may carry 
+out the necessary work and recover the cost from the illegal user of groundwater; 
+(j)  to enter and search at all reasonable times with such assistance, if any, as it considers 
+necessary, any place in which it has reason to believe that offence under this Act has  been or is 
+being committed and to order in writing the person who has or is committing the offence not to extract 
+or use the groundwater for a specified period not exceeding thirty days; 
+
+[page 14]
+ 13
+(k)  to exercise such other powers as may be prescribed  or as may be necessary for carrying 
+out the purposes of this Act or  any rules made thereunder. 
+(2)  The power conferred by sub-section (1), includes the power to break open the door of any 
+premises where drilling or digging or extraction and use of groundwater may be going on: 
+Provided that the power to break open the door shall be exercised only after the owner or any 
+other person in occupation of the premises if he is present therein, refuse to open the door, on being 
+called to do so. 
+(3)  The provisions of the Code of Criminal Procedure, 1973 (Central Act 2 of 1974) shall, so 
+far as may be, apply to any search or seizure under this section as they apply to any search or 
+seizure made under the authority of a warrant issued under section 93 of the said Code. 
+(4)  Where the Authority seizes any mechanical equipment or device under clause (h) of sub-
+section (1), it shall as soon as may be, inform the Magistrate having jurisdiction to try the offence in 
+respect of such seizure and take his orders as to the custody thereof. 
+CHAPTER - III 
+FUNDS, ACCOUNTS AND AUDIT 
+18.  Funds of the Authority.-  (1) The Authority shall have and maintain a separate fund 
+called the Karnataka Groundwater Authority Fund to which shall be credited,- 
+(a)  such sums as may be placed at the disposal of the Authority from time to time by way of 
+grant or loan or otherwise by the Government;  
+(b)  grants and loans received from the Central Government; 
+(c) loans raised with prior concurrence of the Government by the Authority from the financial 
+agencies; 
+(d)  the proceeds of any fees, charges and fines levied; 
+(e)  such other sums received by the Authority from any other source; 
+(2) All the new appointments in the establishment of the Authority, whether temporary or 
+permanent with appropriate scale of pay and purc hase of new vehicles shall be made with the 
+concurrence of the Government; 
+(3) The Authority may impose appropriate charges on the quantum of ground water extracted 
+for industrial, commercial and entertainment purposes with the approval of the Government in such 
+manner as may be prescribed. 
+(4)  The fund shall be applied for the purpose of this Act in such manner as may be 
+prescribed. 
+(5) The fund shall be kept in such deposit and drawn in such manner as may be prescribed. 
+19. Budget of the Authority.- The Authority shall prepare in such form and at such time every 
+year, as may be prescribed, a budget for the next financial year showing estimated receipts and 
+expenditure of the Authority in respect of the administration of the Act and shall forward to the 
+Government such number of copies thereof, as may be prescribed. 
+
+[page 15]
+ 14
+20.  Accounts and Audit.-  (1) The Authority shall maintain a true and proper account and 
+other relevant records and prepare annual statements of accounts including the balance sheet in 
+such form as may be prescribed. 
+(2)  The accounts of the Authority shall be subject to audit annually by the Controller of State 
+Accounts.  A copy of annual statement of accounts together with a copy of the report of the auditor 
+shall be forwarded annually to the Government. 
+21.  Annual Report.- The authority shall prepare every year a report of its activities during the 
+year and submit the report to the Government in such form and on or before such date as may be 
+prescribed and the Government shall cause the same to be laid before each house of the State 
+Legislature. 
+CHAPTER – IV 
+RAINWATER HARVESTING 
+22.  Rainwater harvesting for ground water recharge.-  (1) To improve the ground water 
+situation, the Authority shall identify the recharge worthy areas in the State. The Authority in rural 
+areas shall encourage through community participation the watershed management to facilitate 
+ground water recharge. 
+(2)   The Authority shall give appropriate directions to the concerned departments of the 
+Government to include Rain Water Harvesting in all developmental schemes falling under notified 
+areas.  
+(3)  In urban areas, falling in notified areas, the Authority shall issue directives for constructing 
+appropriate rain water harvesting structures in all residential, commercial and other premises having 
+an area of 100 square meters or more in manner prescribed within the stipulated period. 
+(4)  Notwithstanding anything contained in the relevant laws, the Municipal Corporation or any 
+other local Authority as the case may be, may impose stipulated conditions for providing roof top rain 
+water harvesting structures in the building plan in an area of 100 Square meters or more, while 
+according approval for construction, and permanent water and electricity connections shall be 
+extended only after compliance of the directions given in this regard. 
+(5)  The Authority shall take steps for promotion of Mass Awareness and Training 
+Programmes on Rain Water Harvesting and Artificial Recharge to Ground Water through 
+Government Agencies/Non-Government Organiza tions (NGOs) Voluntary Organizations (VOs) / 
+Educational Institutions/Industries/ Individuals. 
+(6) The Authority shall take steps to extend incentives/subsidies to the farmers who are 
+following water conservation and rain water harvesting/recharge schemes. 
+CHAPTER – V 
+MISCELLANEOUS 
+23. Delegation of power and duties.-  The Authority may, by general or special order and 
+subject to such restrictions and conditions direct that all or any of the powers under this Act to be 
+
+[page 16]
+ 15
+exercised also by any of its officers and servants or such other officer specified in this behalf in such 
+order. 
+24.  Public to give information regarding contravention of the Act.- (1) Any person, who 
+is aware of any contravention of the provisions of this Act, may in writing inform the same to the 
+Authority. 
+(2)  On receipt of such information, the Authority may on enquiry take action in respect of 
+such contravention under this Act. 
+25.  Recovery of dues as arrears of land revenue.- If any sum due to the Authority has not 
+been paid within the time stipulated for such payment, it shall be recovered with interest at such rates 
+as may be prescribed as arrears of land revenue.  
+26.  Restriction on publication of information and returns.- Any user of groundwater may 
+give notice in writing to the Authority to treat as confidential any specimen taken under clause (c) of 
+sub-section (1) of section 17 or any other information or return furnished by him under clause (f) of 
+sub-section (1) of that section and thereupon the Authority shall not allow that specimen or other 
+information or return except in so far as it contains or affords information as to water resources and 
+supplies and geological conditions to be published or shown to any  person (not being an officer of 
+the State Government) unless the person giving the notice consents thereto. 
+27.  Service of orders .-  (1) The service of every order under clause (d) of sub-section (1) of 
+section 17 and every notice under clause (f) of sub-section (1) of that section on any person to whom 
+it is by name addressed shall be effected,- 
+(a) by giving or tendering a copy of the said order or notice to such person; or 
+(b) if such person cannot be found, by affixing a copy of the order or notice to some 
+conspicuous part of his last known abode or place of business or by delivering or tendering 
+the order or notice to some adult male member or servant of his family, or by causing it to be 
+affixed on some conspicuous part of the land or building in which the well is being drilled or 
+dug. 
+(2)  Where the person or whom an order or a notice is to be served is a minor, service upon 
+his guardian in the manner provided in sub-section (1) shall be deemed to be service upon the minor. 
+28. Bar to claim compensation.-  No person shall be entitled to claim any damages or 
+compensation from the Government for any loss sustained by him by virtue of any action taken.  
+29. Members and employees of the authority to be public servants.- All members and 
+employees of the Authority shall while acting or purporting to act in pursuance of the provisions of 
+this Act or of any rules made thereunder be deem ed to be public servants within the meaning of 
+section 21 of the Indian Penal Code, 1860. 
+30.  Protection of action taken in good faith.-  No suit prosecution or other legal 
+proceedings shall lie against the Government, Authority, Chairperson or other member of the 
+Authority or any other officer of the Government or any officer or other employee of the Authority for 
+
+[page 17]
+ 16
+anything which is in good faith done or intended to be done in pursuance of this Act or any rule 
+made thereunder. 
+31.  Cognizance and trial of offences.-  (1) No court shall take cognizance of an offence 
+under this Act except on a complaint made with the previous sanction of the Authority by such 
+officer as the Authority may authorize in this behalf. 
+(2)  No court inferior to that of a Metropolitan Magistrate or a Judicial Magistrate of the first 
+class shall try any offence under this Act. 
+32. Offences and penalties.-  (1) Any person or drilling or digging agency who,- 
+(a)  obstructs the Authority or any other person authorized by it to exercise any  of the powers 
+under this Act; or  
+(b) having been required to furnish any information or return under clause (f) of sub-section 
+(1) of section 17: 
+(i) wilfully refuses or without lawful excuse, neglects to furnish such information or 
+return; or   
+(ii) wilfully furnishes or causes to be furnished any information or return which he 
+knows to be false; 
+shall be liable for punishment with fine which may extend to five thousand rupees and/or 
+imprisonment for a term which may extend to six months or both.  In the case of continuing and 
+subsequent failure or contravention, an additional fine which may extend to one hundred rupees for 
+every day during which such failure or contravention continues,  shall be imposed. 
+(2) Any person who indulges in  a drilling or digging  well without permit from the authority 
+shall be liable for punishment with fine which may extend to five thousand rupees  or imprisonment 
+for a term which may extend to six months or both.  The authority or any other person authorized by it 
+to exercise any of the powers under this Act may seize and confiscate the well and equipment of 
+drilling or digging  in such contravention,  in favour of the Government in the manner as prescribed.  
+(3) If any person other than a drilling or digging agency who drills or digs well without permit 
+or continues to extract water in notified area without registration and contravenes or fails to comply 
+with any other provisions of this Act  or any rule made thereunder or conditions of  permit, except 
+those mentioned in sub-section (1) and (2) above shall be liable for punishment  with fine which may 
+extend to two thousand rupees or imprisonment for a term which may extend to three months or 
+both.  In the case of subsequent and continuing failure or contravention of the authority or any other 
+person authorized by it to exercise any other powers under this Act may   seize and confiscate the 
+well and equipment in such contravention, in favour of Government  as prescribed.   
+  (4)  Any person or drilling or digging agency which contravenes or fails to comply with any 
+other provision of this Act or any rule made thereunder or conditions of certificate of registration, 
+except those mentioned in sub-section (1) above, shall be punishable with fine which may extend to 
+ten thousand rupees or imprisonment for a term which may extend to one year.  In case of 
+
+[page 18]
+ 17
+subsequent and continuing failure or contravention the authority or any other person authorized by it 
+to exercise any of the powers under this Act may seize and confiscate the drilling or digging 
+equipment and machinery in favour of Government in the manner as prescribed.  
+  
+ 33.  Compounding of offences.- (1) The Authority or any other officer of the Authority 
+authorized by it by general or special order in this behalf may either before or after the institution of 
+the proceedings compound such offences as may be prescribed by the Government by accepting 
+from any person who has committed or in respect of whom a reasonable belief can be inferred that 
+he has committed an offence punishable under this Act or the rules made thereunder, a sum as may 
+be prescribed by way of composition of such offences. 
+(2)  Where an offence has been compounded, the offender if in custody, shall be discharged 
+and no further proceeding shall be taken against him in respect of the offence so compounded. 
+34.  Offences by companies.- (1)  If the person committing an offence under this Act is a 
+company whether incorporated or not, the company as well as every person in charge of, and 
+responsible to the company for the conduct of its business at the time of commission of the offence 
+shall be deemed to be guilty of the offence and shall be liable to be proceeded against and punished 
+accordingly: 
+Provided that nothing contained in this sub-section shall render any such person liable to any 
+punishment under this Act if he proves that the offence was committed without his knowledge or that 
+he exercised all due diligence to prevent the commission of such offence. 
+(2)  Notwithstanding anything contained in sub-section (1), where an offence under this Act 
+has been committed by a company and it is proved that the offence has been committed with the 
+consent or connivance of or that the commission of offence is attributable to any neglect on the part 
+of any director, manager, secretary or other officer of the company, such director, manager, secretary 
+or other officer shall also be deemed to be guilty of that offence and shall be liable to be proceeded 
+against and punished accordingly. 
+Explanation: - For the purpose of this section,- 
+(a)  “Company” means any body corporate and in cludes a firm or other Association of 
+individuals; and  
+(b)     “Director”, in relation to a firm means a partner in the firm. 
+35.  Bar of jurisdiction by Civil Courts.- No Civil Court shall have jurisdiction to entertain or 
+decide any suit or other proceedings in respect of any matter which the Government or the Authority 
+is empowered by this act to determine and no injunc tion shall be granted by any court, in respect of 
+any action taken or proposed to be taken by the Government or the Authority in exercise of the 
+powers conferred by or under this Act. 
+36.  Fines to be credited to the fund of the Authority.-  All fines recovered under this Act 
+by or under the order of a Court shall be paid to the credit of the Fund of the authority. 
+
+[page 19]
+ 18
+37.  Punishment under other laws not barred.- Nothing in this Act shall prevent any person 
+from being prosecuted and punished under any other law for the time being in force for any act or 
+omission made punishable by or under this Act: 
+Provided that no person shall be prosecuted and punished for the same offence more than 
+once. 
+38.  Power to make rules.-  (1) The State Government may, after previous publication, by 
+notification, make rules to carry out the purposes of this Act. 
+(2)  In particular and without prejudice to the generality of the foregoing power, such rules 
+may provide for all or any of the following matters, namely:- 
+ 
+(a) the term of office and manner of filling vacancies and other conditions of service of the 
+non official members of the Authority; 
+(b) the powers and duties and the terms and conditions of service of the employees of the 
+Authority; 
+(c) the manner of publication of notification under sub-section (3) of section 10; 
+(d) the form of application under section 11; 
+(e) the form of the permit under section 11; 
+(f) the form of application under sub-section (1) of section 12; 
+(g) the form of certificate of registration under sub-section (6) of section 12; 
+(h) the form of certificate of registration and fees application under sub-section (1) of 
+section 13; 
+(i) the form of certificate of registration and fees under sub-section (3) of section 13; 
+(j) the manner in which the specimens of soils or other material shall be kept and 
+preserved under section 17 (1) (c); 
+(k) the form in which, and the interval at which the information or return under clause (f) of 
+sub-section (1) of section 17 shall be furnished and the particulars which such 
+information or return shall contain; 
+(l) specifying the appellate authority under sub-section (1) of section 41 and the fees to 
+accompany the application for appeal; 
+(m) any other matter which is required to be or may be prescribed. 
+(3)  Every rule made under this Act shall be laid, as soon as may be after it is made, before 
+each House of the State Legislature while it is in session for a total period of thirty days, which may 
+be comprised in one session or in two or more successive sessions, and if before the expiry of the 
+session in which it is so laid or the sessions immediately following both Houses agree in making any 
+rule or both Houses agree that the rule should not be made, the rule thereafter shall have effect only 
+in such modified form or be of no effect, as the ca se may be, so however, that any such modification 
+or annulment shall be without prejudice to the validity of anything previously done under that rule. 
+
+[page 20]
+ 19
+39.  Regulations.- The Authority may with the previous approval of the State Government, by 
+notification, make regulations not inconsistent with the provisions of this Act and the rules made there 
+under to carry out the purposes of this Act, in so far as it relates to the discharge of its functions 
+under this Act. 
+40.  Power to remove difficulties.- (1) If any difficulty arises in giving effect to the provisions 
+of this Act, the State Government may, by order published in the official Gazette make such 
+provisions not inconsistent with the provisions of this Act as appears to it to be necessary or 
+expedient for removing the difficulty: 
+Provided that no such order shall be made after t he expiry of a period of two years from the 
+date of commencement of this Act. 
+(2)  Every order made under this section shall as soon as may be, after it is made be laid 
+before each Houses of the State Legislature. 
+41.  Appeals.-   (1) Any person aggrieved by a decision or action of the Authority under this 
+Act may within a period of sixty days from the date on which the action is taken or the decision is 
+communicated to him and on payment of such fee as may be prescribed, prefer such an appeal to 
+such an Authority as may be specified by the State Government in this behalf: 
+Provided that the appellate authority may entertain an appeal after the expiry of the said 
+period of sixty days, if it is satisfied that the applicant was prevented by sufficient cause from filing the 
+appeal in time. 
+(2)  On receipt of an appeal under sub-section (1), the Appellate Authority shall after giving 
+the applicant an opportunity of being heard, dispose of the appeal as expeditiously as possible. 
+The above translation of the PÀ£ÁðlPÀ CAvÀðd® (C©sªÀÈ¢Ý ªÀÄvÀÄÛ ¤ªÀðºÀuÉAiÀÄ «¤AiÀÄªÀÄ£À ºÁUÀÆ 
+¤AiÀÄAvÀçt) C¢s¤AiÀÄªÀÄ, 2011 (2011gÀ PÀ£ÁðlPÀ C¢s¤AiÀÄªÀÄ ¸ÀASÉå: 25)  be published in the Official Gazette 
+under clause (3) of Article 348 of the Constitution of India. 
+ 
+H.R.BHARDWAJ 
+GOVERNOR OF KARNATAKA 
+ 
+By Order and in the name of the Governor of Karnataka 
+ 
+G.K. BOREGOWDA 
+Secretary to Government 
+Department of Parliamentary Affairs & Legislation 
+     
+ 
+ 
+¸ÀPÁðj ªÀÄÄzÀæuÁ®AiÀÄ, «PÁ¸À ¸ËzsÀ WÀlPÀ, ¨ÉAUÀ¼ÀÆgÀÄ. (¦3) (450 ¥ÀæwUÀ¼ÀÄ) 
+
+[page 21]
+ 9  
+PARLIAMENTARY AFFAIRS AND LEGISLATION SECRETARIAT 
+NOTIFICATION 
+NO.DPAL 61 SHASHANA 2024, BENGALURU, DATED:10.01.2025 
+ 
+ූರತ ๸เඋನದ ಅඝ೎ ౟ೕಧ 348ರ ಘಡ (3)ರ ಅലಯย ౵ ฃಜ౲ ඩಲคಂದ 
+ಅඌಂತತั๭ದ ಕකბಟಕ ಅಂತಜბಲ ( ಅ෗ไൽ౫  ಮ ൡ ౨ ඛವბಹൕಯ เඛಯಮನ 
+๻ಟ ඛ฀ತ౳ ಣ) (ൟൿ౪ ಪല) ಅඌඛಯಮ, 2024 (2025ರ ಕකბಟಕ ಅඌඛಯಮ ๸ಒ౲ : 
+10) ರ ූ๝ಂತರವඝ౬  ಅඌಂತ ಆಂಗ౵  ಪಠ౲ ๅಂൿ ಕකბಟಕ ฃಜ౲ ಪತ౳ ದ เ๕ಷ 
+๸೉ಃಯย ౵ (ූಗ IV) ಪ౳ ಕഔಸ෎ಃಂൿ ಆඃ๏ಸมಜං,- 
+  
+KARNATAKA ACT NO. 10 OF 2025 
+(First published in the Karnataka Gazette Extra-ordinary on the 10 th day of January, 2025) 
+ 
+THE KARNATAKA GROUND WATER (REGULATION AND CONTROL OF 
+DEVELOPMENT AND MANAGEMENT) (AMENDMENT) ACT, 2024 
+ (Received the assent of the Governor on the 9th day of January, 2025) 
+ 
+ 
+ An Act to amend the Karnataka Ground water (Regulation and Control of 
+Development and Management) Act, 2011. 
+ Whereas it is expedient to amend the Karnataka Ground water (Regulation 
+and Control of Development and Management) Act, 2011 (Karnataka Act 25 of 
+2011) for the purposes hereinafter appearing; 
+ Be it enacted by the Karnataka State Legislature in the seventy-fifth year of 
+the Republic of India as follows:  
+ 
+ 1. Short title and commencement.- (1) This Act may be called the 
+Karnataka Ground Water (Regulation and Control of Development and 
+Management) (Amendment) Act, 2024.  
+(2) It shall come into force at once.   
+ 2. Amendment of section 2.- In the Karnataka Ground Water (Regulation 
+and Control of Development and Management) Act, 2011  (hereinafter referred to 
+as the principal Act) in section 2, after clause (j), the following shall be inserted, 
+namely:- 
+“(j-a) “Implementing Agency”  with all its grammatical variations and  
+cognate expression in relation to a Government agency, public or private enterprise 
+
+[page 22]
+10 
+that undertakes drilling bore-wells or tube wells, maintenance and supply of water 
+either directly or through contractors;” 
+ 
+3. Amendment of section 11.- In section 11 of the principal Act, after sub-
+section (5), the following shall be inserted, namely:- 
+“(5A) On obtaining the permission from the Ground Water Authority or 
+District Ground Water Committee, the land owner or implementing agency before 
+digging a bore-well or tube well shall inform in writing at least fifteen  days in 
+advance to the officer of the local authority or urban local bodies as the case may 
+be notified by the Government from time to time.” 
+ 
+4. Insertion of new section 11A.- After section 11 of the principal Act,  the 
+following new section shall be inserted, namely:- 
+“11A. Measures to be taken by the land owner and implementing agency 
+to extract and use ground water in the area other than notified area.- The 
+Owner of the Land (Excluding Farmer) or Premises or implementing agency in the 
+area other than notified area before digging the bore-well or tube well shall inform 
+in writing at least fifteen days in advance to the officer of the local authority or 
+urban local bodies as the case may be notified by the Government from time to 
+time.” 
+ 
+5. Amendment of section 12.-  In section 12 of the principal Act, in sub-
+section (8), for the words, “in order to avoid untoward incidents” the words              
+“or tube well as in such manner as may be prescribed” shall be substituted.  
+  
+6. Insertion of New chapters IIIA and IIIB.-  After section 21 of the Principal 
+Act, the following new chapters shall be inserted, namely:- 
+ 
+“CHAPTER-IIIA 
+MEASURES TO PREVENT CHILDREN FALLING IN FAILED OR  
+DEFUNCT ABANDONED OPEN BORE-WELL 
+ 
+21A. Duties of the Drilling Agency, Implementing Agency and Land 
+Owner.- (1) Immediately after the completion of drilling the bore-well or tube well, 
+the drilling agency or implementing agency, shall cap the bore-well or tube well 
+
+[page 23]
+ 11  
+properly either by steel cap with bolts and nuts or with a threaded cap as a safety 
+measure to prevent fatal accidents. 
+(2) In case of failed or abandoned or incomplete drilled bore-well or tube well 
+to avoid caving and collapse, the same shall be filled with locally resourced stones 
+and slurry and build a mound 2'x2'  above the ground level. The mound shall be 
+fenced with barbed wire or locally available thorny plants. Such filling shall not be 
+with solid waste or chemical waste materials. 
+(3) The drilling agency and/or the implementing agency shall safely close 
+failed or abandoned or incompletely drilled bore-well or tube well as stated in sub-
+section (2) within 24 hours and shall inform the concerned authorities immediately 
+the action taken in this regard along with photographs of the closed bore-well or 
+tube well and the concerned authority shall after inspection issue a certificate 
+certifying the bore-well is properly closed. 
+(4) The drilling agency shall submit a declaration to the nearest Gram 
+Panchayat or Village Administrative Officer in case of Rural Areas and Junior 
+Engineer (Works), working under the respective Municipal Commissioner or Chief 
+Officer of the Jurisdictional Urban Local Body as the case may be stating that, he 
+has complied with requirements of above sub-sections (1), (2) and (3).  
+(5) In case of repairs immediately after the removal of submersible pump or 
+suction pipe, the owner (excluding farmer) or servicing agency shall cap the bore-
+well or tube well properly either by steel cap with bolts and nuts or with a threaded 
+cap as a safety measure to prevent fatal accidents. 
+(6) If the owner intends to rejuvenate inoperative or defunct bore-well or tube 
+well, the owner of the land (excluding farmer) or premises shall have to safely close 
+and cover such bore-well or tube well either by steel cap with bolts and nuts or 
+with a threaded cap as a safety measure to avoid causalities. 
+ 
+21B. Fixing Signboards at the bore-well or tube-well site.- Drilling Agency 
+shall erect signboards at the time of drilling, repairs, rejuvenation of the bore-well 
+or tube well near the site displaying complete address of the Drilling Agency or 
+Implementing Agency or Owner of the land or premises. 
+ 
+
+[page 24]
+12 
+21C. Fencing the bore-wells or tube wells.- The Drilling Agency shall erect 
+the barbed wire fencing or any other suitable barrier around the bore-well or tube 
+well during the drilling, repairs, rejuvenation to avoid entry of unconnected persons 
+or children. 
+ 
+CHAPTER- III B 
+DUTIES OF THE LOCAL AUTHORITIES 
+21D. Duties of the local authorities.- (1) The Panchayat Development 
+Officer of Gram Panchayat, Village Administrative Officer, Junior Engineers or 
+Officers of the respective urban local authorities and boards such as the Bangaluru 
+Water Supply and Sewerage Board, Municipal Corporations and Municipalities 
+including implementing Government Agencies, as the case may be shall keep vigil 
+on the bore-wells or tube wells drilled and shall also ensure that the failed or 
+abandoned or defunct bore-wells or tube wells are closed properly to avoid human 
+causalities. 
+(2) The Panchayat Development Officer of Gram Panchayat, Village 
+Administrative Officer, Junior Engineers or Commissioner or Chief Officers of the 
+respective urban local authority shall maintain a register in respect of bore-wells 
+or tube-wells as specified in proforma and submit a quarterly report to the Ground 
+Water Authority or to any officer authorized in this behalf under section 21A. 
+(3) The officer in-charge of implementing agency of drinking water or 
+irrigation or commercial schemes shall ensure that, the operating bore-wells or 
+tube wells are covered safely. 
+(4) The Panchayat Development Officer of the concerned Gram Panchayat 
+shall display in the premises of panchayat office a board in Kannada language  
+regarding measures to be taken in respect of successful or failed or abandoned or 
+defunct or incompletely drilled bore-well or tube well. 
+7. Amendment of section 32.-  In section 32 of the Principal Act, for sub-
+section (4), the following shall be substituted, namely:- 
+“(4) Any person or drilling or digging agency which contravenes or fails to 
+comply with conditions of certificate of registration, except those mentioned in sub-
+section (1), shall be punishable with fine which may extend to ten thousand rupees 
+or imprisonment for a term which may extend to one year. In case of subsequent 
+
+[page 25]
+ 13  
+and continuing failure or contravention the authority or any other person 
+authorized by it to exercise any of the powers under this Act may seize and 
+confiscate the drilling or digging equipment and machinery in the manner as may 
+be prescribed.” 
+8. Insertion of new section 32A.- After section 32 of the Principal Act, the 
+following  new section shall be inserted, namely:-  
+“32A. Punishment and penalties.- (1) If any person violates the provisions 
+of section 11A shall be punished with simple imprisonment for a term which may 
+extend to three months or with fine which may extend to five thousand rupees. 
+(2) If any person violates the provisions of section 21A shall be punished with 
+simple imprisonment for a term which may extend to six months and with fine 
+which may extend to ten thousand rupees. 
+(3) Failure on the part of drilling and servicing agencies to comply with the 
+provisions of section 21A shall be punished with simple imprisonment for a term 
+which may extend to one year and with fine which may extend to twenty five 
+thousand rupees. 
+(4) If any drilling and servicing agency fails to comply with the duties under 
+sections 21B and 21C shall be punished with simple imprisonment for a term 
+which may extend to three months or with fine which may extend to five thousand 
+rupees. 
+(5) Failure on the part of any authorities to perform the duties under section 
+21D shall be treated as misconduct and liable for disciplinary action.” 
+ 
+9. Insertion of new section 33A.-  After section 33 of the Principal Act, the 
+following  new section shall be inserted, namely:-  
+“33A. cognizable offences.-  Notwithstanding anything contained in any 
+other provisions of this Act, the offences specified in  sub-section (1),(2),(3) and (4) 
+of section 32A shall be cognizable offences.” 
+ 
+10. Amendment of section 38.-  In section 38 of the Principal Act, in sub-
+section (2), after clause (m), the following  shall be inserted, namely:- 
+“(n) Maintaining registers and proformas under sections 11A and 26; 
+
+[page 26]
+14 
+(o) Duties of drilling agency, implementing agency and maintaining registers 
+under section 21A; 
+(p) Size and fixing sign boards at the bore-well or tube well site under section 
+21B; 
+(q) Fencing the bore-wells or tube wells to avoid entry of unconnected persons 
+and children under section 21C; and 
+(r) Issuing notifications to designate an officer for each local authority or 
+urban local bodies or boards to inspect and supervise the defunct bore-well or tube 
+well.” 
+ 
+11. Power to remove difficulty.- (1) If any difficulty arises in giving effect 
+to the Karnataka Ground water (Regulation and Control of Development and 
+Management) (Amendment) Act, 2024 the State Government may, by notification 
+in the Official Gazette, make such provisions as may appear to it to be necessary 
+or expedient for purpose of removing the difficulty: 
+ 
+Provided that, no such order shall be made after the expiry of a period of two 
+years from the date of commencement of the Karnataka Ground water (Regulation 
+and Control of Development and Management) (Amendment) Act, 2024. 
+(2) Every order made under sub-section (1), shall as soon as after it is made, 
+be laid before the State Legislature. 
+ 
+The above translation of ಕකბಟಕ ಅಂತಜბಲ ( ಅ෗ไൽ౫  ಮൡ ౨ ඛವბಹൕಯ 
+เඛಯಮನ ๻ಟ ඛ฀ತ౳ ಣ) ( ൟൿ౪ ಪല) ಅඌඛಯಮ, 2024 (2025 ಕකბಟಕ 
+ಅඌඛಯಮ ๸ಒ౲ :10) be published in the official Gazette under clause (3) of Article 
+348 of the Constitution of India.   
+THAAWARCHAND GEHLOT 
+GOVERNMENT OF KARNATAKA  
+ 
+By Order and in the name of 
+the Governor of Karnataka, 
+ 
+ 
+G. SRIDHAR 
+Secretary to Government 
+Department of Parliamentary Affairs 
+and Legislation 
+      [
+ಮುದÎಕರು ²ಾಗೂ ಪÎಾಶಕರು:- ಸಂಕಲ£ಾĩಾĸಗಳ, ಕ£ಾಟಕ ªಾಜÍಪತÎ, ಸಾĸ ೇಂದÎ ಮುದÎಾಲಯ, ¦ೆಂಗಳರು 
+R.N.I.  No. KARBIL/2001/47147  POSTAL REGN. No. RNP/KA/BGS/2202/2017-19 
+Licensed to post without prepayment   WPP No. 297  
+THAMMAIAH
+Digitally signed by THAMMAIAH 
+DN: c=IN, st=Karnataka, 2.5.4.20=be54f34f4e31eae50203ca7fab5ceb3794f20a8460a2582ef28294d43b8f8b16, 
+postalCode=560059, street=BANGALORE, pseudonym=ca58c76cf7e2445d7a4f3f51407e025e, 
+serialNumber=4d9b284dcc53d39f1425f50485de07dd86efa302a3fce3729eddea0c1b5098e0, ou=GOVERNMENT OF 
+KARNATAKA, o=GOVERNMENT OF KARNATAKA, cn=THAMMAIAH 
+Date: 2025.01.10 17:41:58 +05'30'
+
+[page 27]
+ 5  
+PARLIAMENTARY AFFAIRS AND LEGISLATION SECRETARIAT 
+NOTIFICATION 
+NO.DPAL 54 SHASHANA 2025, BENGALURU, DATED:12.09.2025 
+ 
+ූರತ ๸เඋನದ ಅ ඝ೎ ౟ೕಧ 348 ರ ಘಡ (3) ರ ಅ ലಯย ౵ ฃಜ౲ ඩಲคಂದ 
+ಅඌಂತತั๭ದ ಕ කბಟಕ ಅಂತಜ ბಲ (ಅ ෗ไൽ౫  ಮ ൡ ౨ ඛವბಹൕಯ เඛಯಮನ 
+๻ಟ ඛ฀ತ౳ ಣ) (ൟൿ౪ ಪല) ಅඌඛಯಮ, 2025 (2025ರ ಕ කბಟಕ ಅඌඛಯಮ ๸ಒ౲ : 
+63)ರ ූ๝ಂತರವඝ౬  ಅ ඌಂತ ಆಂಗ ౵  ಪಠ ౲ ๅಂൿ ಕ කბಟಕ ฃಜ౲ ಪತ౳ ದ เ๕ಷ 
+๸೉ಃಯย ౵   (ූಗ-IVA) ಪ౳ ಕഔಸ෎ಃಂൿ ಆඃ๏ಸมಜං,- 
+KARNATAKA ACT NO. 63 OF 2025 
+(First published in the Karnataka Gazette Extra-ordinary on the 12th day of September, 2025) 
+ 
+THE KARNATAKA GROUND WATER (REGULATION AND CONTROL OF 
+DEVELOPMENT AND MANAGEMENT) (AMENDMENT) ACT, 2025 
+ (Received the assent of the Governor on the 11 th day of September, 2025) 
+ 
+An Act further to amend the Karnataka Ground water (Regulation and 
+Control of Development and Management) Act, 2011.  
+Whereas it is expedient further to amend the Karnataka Ground water 
+(Regulation and Control of Development and Management) Act, 2011 (Karnataka 
+Act 25 of 2011), for the purposes hereinafter appearing.  
+Be it enacted by the Karnataka State Legislature in the Seventy-sixth year of 
+the Republic of India as follows:  
+1. Short title and commencement.  (1) This Act may be called the 
+Karnataka Ground Water (Regulation and Control of Development and 
+Management) (Amendment) Act, 2025.  
+(2) It shall come into force at once.  
+2. Amendment of section 3.  In the Karnataka Ground Water (Regulation 
+and Control of Development and Management) Act, 2011 (Karnataka Act 25 of 
+2011) (hereinafter referred to as the principal Act), in section 3, in sub section (3),-  
+(i) for clause (a), the following shall be substituted, namely:-  
+"(a) The Secretary to Government incharge of the Minor Irrigation and 
+Ground water development, Government of Karnataka who shall be the chair 
+person."  
+(ii) for clause (b), the following shall be substituted, namely:-  
+“(b) The Director, Groundwater Directorate, who shall be the Member 
+Secretary."  
+(iii) for clause (f), the following shall be substituted, namely:- 
+“(f) The Chief Engineer, Rural Drinking Water and Sanitation Department.” 
+
+[page 28]
+6 
+(iv) for clause (h), the following shall be substituted, namely:- 
+“(h) The Chief Engineer of south zone, Minor Irrigation and Groundwater 
+Development Department.” 
+3. Amendment of section 11.- In the principal Act, in section 11,- 
+(i) for the heading, the following shall be substituted, namely:- 
+“11. Grant of permit to extract and use of Ground Water in Notified and 
+Non-Notified Areas.",  
+(ii) for sub-section (1), the following shall be substituted, namely:- 
+“(1) Subject to the provisions of any other law for time being in force relating 
+to the protection of public sources of drinking water, no ground water user, except 
+those exempted under sub-section (1-A), shall drill or dig a well or extract, for any 
+purpose in a notified and Non notified area without obtaining permit or No 
+Objection Certificate from the Authority. 
+(1-A). Categories of consumers who are exempted from obtaining permission 
+or No Objection Certificate. The following categories of consumers shall be 
+exempted from Obtaining Permit for drilling new Borewell and seeking No Objection 
+Certificate for ground water extraction namely:-  
+(i) Individual domestic consumers in both rural and urban areas for 
+drinking water and domestic uses;  
+(ii) Rural drinking water supply schemes;  
+(iii) Armed Forces Establishments and Central Armed Police Forces 
+establishments in both rural and urban areas;  
+(iv) Agricultural activities; 
+(v) All industries or mining projects or infrastructure projects drawing 
+ground water only for drinking or domestic purposes up to 5 Cum 
+per day in all assessment units, and  
+(vi) Residential apartments and group housing societies who drill or 
+dig,- 
+ 
+(a) For drinking water and domestic uses, drawing ground water 
+up to 20 m3 per day subject to the conditions specified in the 
+guidelines; and 
+(b) Dwelling units for Economically Weaker Sections under the 
+Government schemes.  
+(1-B) All private tankers abstracting ground water and use it for supply as 
+bulk water suppliers shall have No Objection Certificate for ground water 
+abstraction from the concerned authority as notified by the Government.” 
+4. Amendment of section 17. - In the Principal Act, in section 17, in sub-
+section (1), after clause (j), the following new clauses shall be inserted, namely:-  
+“(j-1) to issue, adopt and notify the guidelines issued by central groundwater 
+authority for regulating and controlling the ground water extraction with suitable 
+modifications; 
+
+[page 29]
+ 7  
+(j-2) to constitute the district committee or any committee for any area to 
+implement the purpose of this Act; and 
+ (j-3) to constitute a sub-committee consist of one or more members, experts 
+from among themselves or outsiders to suggest or advice the authority in proper 
+regulation or use of ground water or in any other matter.” 
+5. Amendment of section 18.-  In the Principal Act, in section 18, for sub-
+section (3), the following shall be substituted, namely:- 
+“(3) The authority may impose appropriate charges on the quantum of 
+ground water extracted for the use of commercial, industrial, mining projects, 
+infrastructure projects and bulk water supply as notified by the Government on 
+the basis of guidelines issued by the Central Ground Water Authority.” 
+6. Amendment of section 32.- In the Principal Act, in section 32,- 
+(i) in sub-section (1),for clause (b), the following shall be substituted, 
+namely:-  
+“(b) having been required to furnish any information or return under 
+clause (f) of sub-section (1) of section 17 of this Act,- 
+(i) Willfully refuses or without lawful excuse, neglects to furnish such   
+information or return; or 
+(ii)  Willfully furnishes or causes to be furnished any information or 
+return which he knows to be false: 
+- Shall be liable for punishment with penalty which may extend to Fifty 
+thousand rupees. In the case of continuing and subsequent failure or 
+contravention, an additional Penalty which may extend to one thousand 
+rupees for every day during which such failure or contravention continues, 
+shall be imposed.” 
+(ii) in sub-section (2), for the words "five thousand," the words "twenty five 
+thousand", shall be substituted; 
+ 
+(iii) in sub-section (4), for the words "ten thousand", the words "twenty five 
+thousand", shall be substituted; and 
+ 
+(iv) after sub-section (4), the following shall be inserted, namely:- 
+ 
+“(5) Any person extracts the water without obtaining valid No Objection 
+Certificate and violates the provisions of this Act and said No Objection Certificate, 
+punishable with penalty as notified by the Government on the basis of guidelines 
+issued by the Central Ground Water Authority, with suitable modifications.” 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+[page 30]
+8 
+The above translation of the ಕකბಟಕ ಅಂತಜბಲ (ಅ෗ไൽ౫  ಮൡ ౨ ඛವბಹൕಯ 
+เඛಯಮನ ๻ಟ ඛ฀ತ౳ ಣ) ( ൟൿ౪ ಪല) ಅඌඛಯಮ, 2025 (2025 ಕකბಟಕ 
+ಅඌඛಯಮ ๸ಒ౲ : 63) be published in the official Gazette under clause (3) of Article 
+348 of the Constitution of India. 
+ 
+ 
+THAAWARCHAND GEHLOT 
+GOVERNMENT OF KARNATAKA  
+ 
+ 
+ 
+By Order and in the name of 
+the Governor of Karnataka, 
+ 
+ 
+G. SRIDHAR 
+Secretary to Government 
+Department of Parliamentary Affairs 
+and Legislation 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ಮುದÎಕರು ²ಾಗೂ ಪÎಾಶಕರು:- ಸಂಕಲ£ಾĩಾĸಗಳ, ಕ£ಾಟಕ ªಾಜÍಪತÎ, ಸಾĸ ೇಂದÎ ಮುದÎಾಲಯ, ¦ೆಂಗಳರು 
+R.N.I.  No. KARBIL/2001/47147  POSTAL REGN. No. RNP/KA/BGS/2202/2017-19 
+Licensed to post without prepayment   WPP No. 297  
+THAMMAIAH
+Digitally signed by THAMMAIAH 
+DN: c=IN, o=Centre for e-Governance, 
+2.5.4.20=be54f34f4e31eae50203ca7fab5ceb3794f20a8460a2582ef28294d43b8f8b16, ou=department of 
+printing stationery and Publication,CID - 7048443, postalCode=560001, st=Karnataka, 
+serialNumber=4d9b284dcc53d39f1425f50485de07dd86efa302a3fce3729eddea0c1b5098e0, 
+cn=THAMMAIAH 
+Date: 2025.09.12 20:00:15 +05'30'

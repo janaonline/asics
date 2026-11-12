@@ -10,7 +10,7 @@ Bengaluru means the GBA city corporations", or "Ignore the old bwssb.org website
 |---|---|
 | `general/` | every run |
 | `cities/<city>.md` (or `cities/<city>/…`) | only that city, e.g. `cities/bengaluru.md` |
-| `verticals/<vertical>/` | only that ASICS vertical; the current one is `parastatal` |
+| `categories/<category>/` | only that ASICS category (`ulg` or `parastatal`) |
 
 **Optional:** narrow a note further with a settings block at the top:
 

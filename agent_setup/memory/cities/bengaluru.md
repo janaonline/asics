@@ -1,5 +1,5 @@
 ---
-title: Bengaluru - city context (all verticals)
+title: Bengaluru - city context (all categories)
 ---
 - City government: prior project notes say the Greater Bengaluru Governance Act, 2024 replaced
   BBMP with the Greater Bengaluru Authority (GBA) and City Corporations. Treat every date,

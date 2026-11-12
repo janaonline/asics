@@ -1,0 +1,60 @@
+{
+  "run": {
+    "run_id": "20261013-151108-e779",
+    "city": "surat",
+    "city_name": "Surat",
+    "state_name": "Gujarat",
+    "ulg": "",
+    "workspace": "/Users/janaagraha/code/Jana/asics/outputs/UPD/cities/Surat",
+    "output_dir": "/Users/janaagraha/code/Jana/asics/outputs/UPD/cities/Surat",
+    "cache_dir": "/Users/janaagraha/code/Jana/asics/outputs/UPD/cities/Surat/evidence"
+  },
+  "agent_setup_fingerprint": "3cd6c96cd8be",
+  "parastatals": [
+    {
+      "id": "ULG",
+      "name": "Surat city government",
+      "type": "city_government",
+      "revenue_raising": false,
+      "capex_mandate": false,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "EVIDENCE: (1) Governing Act: the SMC homepage (opened) says 'Surat Municipal Corporation is a local self government which has come into being under the Bombay Provincial Municipal Act, 1949'. Its menu links 'The BPMC Act' (Downloads/Acts/bpmc_act), but I did not open that page. I found possible copies of the Act text (an India Code PDF, h-2002 version, and a cpahmedabad.gujarat.gov.in PDF) but could not open them because the tool-call limit was reached. So the section that constitutes SMC, the current title and the amendment status are all unverified. | (2) Status: the website looks current: 'Copyright 2026@SMC', and the organogram PDF is dated 07/09/2026. Nothing I opened mentions a renaming, split or merger. | (3) Chief executive: the Commissioner page (opened) has the heading 'The Present Municipal Commissioner', naming Shri Rajkumar Beniwal, IAS (IAS-2004 batch). The Website Owner page and the organogram PDF (opened, 'Sh. Rajkumar Beniwal, I.A.S. MUNICIPAL COMMISSIONER') say the same. This shows the post exists in practice. I did not see the statutory section that creates the post. | (4) Annual budget: the Accounts > Budget page (opened) lists 'Budget Book (General Board)' for each year from 2021-22 to 2026-27, plus Outcome Base Budgets for 2022-23 and 2023-24. I did not open the budget PDFs themselves; true is based on this list of yearly budget books. | PLANNING BODIES (where to look only, no verdicts): (a) SMC's own Town Planning department: the SMC site links 'Departments/TownPlanningHome'. I did not open it. (b) Surat Urban Development Authority (SUDA): Act probably the Gujarat Town Planning and Urban Development Act, 1976 [unverified]. A search result for the India Code PDF tpudact.pdf shows the title 'As modified upto the 30th April, 2010', but I did not open it. A search snippet of the state Urban Development Department's 'Urban Development Authorities' page (udd.gujarat.gov.in/UrbanDevelopment.php) lists a Surat entry with Chairman and Chief Executive Authority. I could not open that page (url_not_allowed), so it is not verified. The SUDA website candidate sudaonline.org is a .org domain with a gmail/yahoo contact address, so it is not proven official. (c) Town Planning & Valuation Department, Government of Gujarat: it appears in the Urban Development Department's 'Institutions' menu (snippet only). Act not established. (d) Metropolitan Planning Committee: I found no evidence either way. | DOMAINS: suratmunicipal.gov.in is a .gov.in government domain. The Website Owner page names the Municipal Commissioner, SMC as owner and the Information Systems Department, SMC as administrator, with email itman[at]suratmunicipal[dot]gov[dot]in. The site has RTI links, including 'Online RTI Portal - Gov. of Gujarat' (onlinerti.gujarat.gov.in), an RTI proactive disclosure PDF and an RTI Act page. Its footer links official social media accounts (facebook.com/MySuratMySMC, x.com/MySuratMySMC, instagram.com/mysuratmysmc). The site also links a GIS portal at gis.suratmunicipal.org, which is an SMC sub-service, not the main website. I could not confirm a link to the site from a state page: the state Urban Development Department page udd.gujarat.gov.in/corporations.php and the GAD page gad.gujarat.gov.in/Personnel/municipal-commissioners.htm both appeared in search results but could not be opened (url_not_allowed). Their snippets only show a 'Click To Open Website' link and an older Surat Commissioner name. | CONFIRM: (i) Open udd.gujarat.gov.in/corporations.php in a browser and check that it links to suratmunicipal.gov.in. (ii) Open SMC's 'The BPMC Act' page or the official Act PDF. Confirm the current short title (Gujarat Provincial Municipal Corporations Act, 1949), the constitution and Municipal Commissioner sections, and the latest amendment date. Note that SMC's homepage wording leaves out the word 'Corporations'. (iii) Confirm SUDA's Act and its notified development area against an official GTPUD Act text or notification, and its official website. (iv) Check whether a Metropolitan Planning Committee has been set up for the Surat region. (v) Check that no recent renaming, boundary merger or restructuring has happened; my research stopped early when the tool-call limit was reached. EVIDENCE: Governing Act - The fetched SMC About Us page (suratmunicipal.gov.in/Home/AboutUs, last updated Sept 2026) says SMC 'has come into being under the Gujarat Provincial Municipal Act, 1949'. The same page says SMC works within the Gujarat Provincial Municipal Corporations Act, 1949 and carries out the duties and optional functions given to it by the 'GPMC Act, 1949'. It also says Surat Municipality was set up on 15 May 1852 and became Surat Municipal Corporation on 1 October 1966. The Surat district portal page (surat.nic.in/municipal-corporation/, fetched) uses the older name, 'Bombay Provincial Municipal Act, 1949'. That page says Section 4 of the BPMC Act gives powers to three statutory authorities: the General Board, the Standing Committee and the Municipal Commissioner. The district page is official but is a description, not the Act's text. Copies of the Act turned up in searches but were NOT fetched: cpahmedabad.gujarat.gov.in/Upload/MUNCIPAL_2_16082023.pdf, the indiacode.nic.in bitstream PDF, nitiforstates.gov.in, and suratmunicipal.gov.in/Content/Documents/Downloads/Acts/BpmcAct/bpmcact1.pdf. For that reason no section is cited as verified. A search snippet of SMC's Sept 2025 Green Bond offer document says SMC was established under Section 5 of the GPMC Act. That is a snippet only and unverified. | EVIDENCE: Chief executive - The About Us page says the administrative wing is 'headed by the Municipal Commissioner'. The SMC Officials page (fetched) lists 'Shri Rajkumar Beniwal, IAS, Municipal Commissioner, Surat Municipal Corporation'. This shows the post exists in practice. The legal provision for the post in the Act's text was not seen. | EVIDENCE: Annual budget - The fetched SMC Budget page lists budget books (General Board) for each year from 2021-22 to 2026-27. It also lists outcome-based budgets for 2022-23 and 2023-24. The PDFs themselves were not opened. | EVIDENCE: Status - SMC's own site is live and describes SMC as the city's urban local government. No official source found mentions a renaming or merger. An SMC page on extending the city limits in 2020 (area 461.359 sq km) and a news item on merging the Sachin and Kansad municipalities plus villages appeared in search snippets only. These were not fetched, and the news item is a blocked source. | PLANNING BODIES: (1) Surat Urban Development Authority (SUDA) - Gujarat Town Planning and Urban Development Act, 1976, Section 22(1), according to SUDA's About Us page (sudaonline.org/about-us/, fetched). That page says SUDA prepares the Development Plan and T.P. (town planning) Schemes and covers 195 villages around SMC as well as SMC itself. Its board includes the SMC Municipal Commissioner, the SMC Standing Committee Chairman, the SMC City Engineer, the state Chief Town Planner and the Secretary of the state UD&UH (Urban Development and Urban Housing) Department. This is location only: I have not verified the Act's text, and sudaonline.org is not a gov.in domain. A Gujarat UDD page (udd.gujarat.gov.in/UrbanDevelopment.php) lists Urban Development Authorities, but it could not be fetched. (2) SMC itself has a Town Planning department and Town Development department in its site menu, with pages on TP schemes. Its legal role, for example as 'appropriate authority', is not verified. (3) State town planning department: it appears only as the Chief Town Planner's seat on the SUDA board. No separate source was gathered. (4) Metropolitan Planning Committee: no evidence found that one has been set up for Surat, and no Gujarat MPC law was gathered. | DOMAINS: suratmunicipal.gov.in is a gov.in domain. Its pages say 'This is an official website of Surat Municipal Corporation' and link to the Gujarat state portal and the Online RTI Portal (Government of Gujarat). It has an RTI section (PIOs/APIOs and Proactive Disclosures) and links to the official social media accounts @MySuratMySMC. The surat.nic.in page ends with 'For More information : Official website of Surat Municipal Corporation', but the link's target URL was not captured in the fetched text. smc.gov.in turned up in a search result titled as SMC's official website, but the fetch failed, so it is unverified and may be an alias. The Gujarat UDD 'List of Municipal Corporations' page (udd.gujarat.gov.in/corporations.php) could not be fetched (url_not_allowed). Its snippet shows a commissioner email on a suratmunicipal.or[g] domain, which is snippet only. | CONFIRM: (a) Open the Act text, e.g. cpahmedabad.gujarat.gov.in/Upload/MUNCIPAL_2_16082023.pdf, and check Section 5 (constitution of corporations), the Commissioner provisions and the budget provisions, and note the amendment date. (b) Check the udd.gujarat.gov.in corporations and UDA lists to confirm which SMC and SUDA website and email domains the state itself links to. (c) Check whether smc.gov.in is an official alias of suratmunicipal.gov.in. (d) Check whether any MPC or metropolitan region authority exists or has been notified for Surat; none was found, but research stopped early because the tool-use limit ran out. (e) The officials page names Rajkumar Beniwal as Commissioner; Wikipedia names a different person, but it is blocked and was not used. Re-check the current officeholder. | ERA: n/a.",
+      "include": true,
+      "team_notes": "",
+      "found_by": "Your team",
+      "governing_act": "Gujarat Provincial Municipal Corporations Act, 1949 (Bom. LIX of 1949; earlier called the Bombay Provincial Municipal Corporations Act, 1949 / BPMC Act); text version=unknown [unverified: I did not read the Act's text in any fetched official copy. The Act's name comes from SMC's official About Us page. The constituting section (Section 5) and the details of the Act's three statutory authorities (Section 4) are not verified.]",
+      "current_status": "Active as Surat Municipal Corporation (SMC). No renaming, split or merger into another body was found in the fetched official pages, which were last updated in 2026.",
+      "why_included": "The city government is what this vertical assesses.",
+      "official_website": "",
+      "website_check": {
+        "url": "https://www.suratmunicipal.gov.in/",
+        "score": 40,
+        "band": "Not confirmed",
+        "reasons": [
+          "Government web address (gov.in / nic.in) (+40)",
+          "No other government website seen linking to it (0)",
+          "Did not open properly in the automatic check: Could not be opened: DecodingError."
+        ],
+        "opens": false
+      },
+      "other_websites": [
+        {
+          "url": "https://www.smc.gov.in/Home/AboutWebsite",
+          "score": 40,
+          "band": "Not confirmed",
+          "reasons": [
+            "Government web address (gov.in / nic.in) (+40)",
+            "No other government website seen linking to it (0)",
+            "Did not open properly in the automatic check: Could not be opened: DecodingError."
+          ],
+          "opens": false
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "sources": 19,
+    "verified": 19
+  }
+}

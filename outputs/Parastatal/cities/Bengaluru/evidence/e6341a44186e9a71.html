@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengaluru Metropolitan Transport Corporation - Student Pass</title>
+
+    <!-- CSS and Fonts -->
+    <link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/rti_datatables/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/css/font-awesome.min.css">
+	   
+    <link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/itbt/bootstrap.css">
+	   <link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/itbt/enfont.css">
+    <link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/itbt/owl_custom.css">
+<link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/itbt/style.css?1791878635=">
+<link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/itbt/responsive.css?1791878635=">
+
+    <link rel="stylesheet" href="https://mybmtc.karnataka.gov.in/assets/front/itbt/navbar.css">
+   
+  <link rel="stylesheet" type="text/css" href="https://mybmtc.karnataka.gov.in/assets/front/owl/owl.carousel.min.css">
+    <link href="assets/font-awesome.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="https://mybmtc.karnataka.gov.in/assets/front/tabswipe/css/swipe.css">
+  <link rel="stylesheet" type="text/css" href="https://mybmtc.karnataka.gov.in/assets/front/tabswipe/css/swipe_bundle.css">
+  <link rel="stylesheet" type="text/css" href="https://mybmtc.karnataka.gov.in/assets/front/tabswipe/css/tabswipe_style.css?1791878635=">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="" type="image/png" sizes="42x42" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- Custom CSS -->
+<style>
+    .owl-policy-res-down .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    display: flex;
+}        :root {
+            --primary2-color: #2f3542;
+            --secondary2-color: #1289a7;
+
+              --primary-color: linear-gradient(90deg, var(--primary2-color) 9%, var(--secondary2-color) 120%);
+        }
+    
+  
+</style>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/rti_datatables/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/js/jquery_min.js"></script>
+    <script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/itbt/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/js/custom.js"></script>
+
+    <!-- Base URL and Language Variables -->
+    <script type="text/javascript">
+        var base_url = "https://mybmtc.karnataka.gov.in/";
+        var lang_name = "en";
+    </script>
+
+</head>
+
+<body class="dark-mode-area">
+
+    <div class="top-header">
+        <div class="topHeaderInner">
+
+            <div class="topHeadingLinks">
+
+                <a href="https://mybmtc.karnataka.gov.in/back/index" target="blank" class="login-btn">
+                    <div class="topHeadingLinkSingle">
+                        <div class="topHeadingLinkIcon">
+                            <img src="https://mybmtc.karnataka.gov.in/assets/front/itbt/images/header-profile.png" class="topHeadingLinkIco" alt="login">
+                        </div>
+                        <div class="topHeadingLinkLable">
+                            <p class="topHeadingLinkLableTxt">login</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://mybmtc.karnataka.gov.in/51/Student%20Pass/kn" class="no-dec login-button">
+                    <div class="topHeadingLinkSingle">
+                  
+                        <div class="topHeadingLinkLable">
+                            <p class="topHeadingLinkLableTxt"> ಕನ್ನಡ </p>
+                        </div>
+                    </div>
+                </a>
+
+                    <a  data-bs-toggle="modal" data-bs-target="#screen_reader_en" ><div class="topHeadingLinkSingle visually-challenged">
+                    <div class="topHeadingLinkIcon">
+                        <img src="https://mybmtc.karnataka.gov.in/assets/front/itbt/images/visually-challenged.png" class="topHeadingLinkIco" alt="visually challenged">
+                    </div>
+                    <div class="topHeadingLinkLable">
+                        <p class="topHeadingLinkLableTxt">visually challenged</p>
+                    </div>
+                </div></a>
+
+            </div>
+
+
+
+
+<style>
+    
+    .gsc-control-cse{padding: 0px !important;}
+</style>
+
+
+
+
+
+
+            <div class="subHeaderActions" style="display:flex;">
+
+
+   
+  <div>
+
+  </div>
+
+
+
+
+<form id="searchForm_en" method="GET" class="">
+  <div class="search-box" id="searchBox">
+    <input type="text" name="search" id="searchInput_en" class="search-txt" placeholder="Search...">
+    <button type="submit" class="search-btn" id="searchBtn">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</form>
+
+
+
+
+
+<script>
+  const searchBox = document.getElementById('searchBox');
+  const searchBtn = document.getElementById('searchBtn');
+  const searchInput = document.getElementById('searchInput_en');
+  const searchForm_en = document.getElementById('searchForm_en');
+
+  searchBtn.addEventListener('click', function (e) {
+    // If not active, activate it and focus
+    if (!searchBox.classList.contains('active')) {
+      e.preventDefault(); // Stop submit
+      searchBox.classList.add('active');
+      searchInput.focus();
+    } else if (searchInput.value.trim() === '') {
+      e.preventDefault(); // Don't submit if empty
+      searchInput.focus();
+    }
+    // Else allow normal form submission
+  });
+
+  // Custom form submission logic
+  searchForm_en.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const value = searchInput.value.trim();
+    if (value !== '') {
+		var url = 'https://mybmtc.karnataka.gov.in/search/' + encodeURIComponent(value)+"/en";
+	//	alert(url);
+     window.location.href = url;
+    }
+  });
+
+  // Close search box on click outside
+  document.addEventListener('click', function (e) {
+    if (!searchBox.contains(e.target)) {
+      searchBox.classList.remove('active');
+    }
+  });
+</script>
+
+
+
+
+
+             
+
+
+                <div class="subHeaderSwitchTheme">
+
+
+
+<input type="checkbox" id="toggle">
+<label for="toggle">
+    <i class="fa-solid fa-sun sun"></i>
+    <i class="fa-solid fa-moon moon"></i>
+</label>
+<div class="background"></div>
+                </div>
+                  <div class="subHeaderFontSize">
+        <div class="subHeaderFontSizeAction rightBorder" id="fontDecrease">
+            <i class="fa fa-minus subHeaderFontSizeActionIco"></i>
+        </div>
+        <div class="subHeaderFontSizeLable">
+            <p class="subHeaderFontSizeLableTxt">a</p>
+        </div>
+        <div class="subHeaderFontSizeAction leftBorder" id="fontIncrease">
+            <i class="fa fa-plus subHeaderFontSizeActionIco"></i>
+        </div>
+        <div class="subHeaderFontSizeAction" id="fontReset">
+            <i class="fa fa-refresh subHeaderFontSizeActionIco"></i>
+        </div>
+    </div>
+            </div>
+
+        </div>
+    </div>
+
+  
+<section class="header">
+    <div class="row dflex1 cmap_container">
+
+        <!-- Left: CM (Chief Minister) – always rendered, hidden via visibility when flag is set -->
+        <div class="col-md-3 col-6 col-lg-3 flex-left leftHeadSec order1"
+             >
+            <img src="https://planning.karnataka.gov.in/frontend/opt1/images/cm_logo/chief_minister_of_karrnataka_en.png?1791878635" 
+                 alt="ಬೆಂಗಳೂರು ಮಹಾನಗರ ಸಾರಿಗೆ ಸಂಸ್ಥೆ" 
+                 class="cm_karnataka_photo">
+        </div>
+
+        <!-- Middle: Department logo, name, subtitle, dept_photo -->
+        <div class="col-md-6 col-12 col-lg-6 flex-mid dflex midHeadSec">
+            <div class="dflex web_logo_set">
+                <img src="https://mybmtc.karnataka.gov.in/uploads/dept_logo1739947955.png" 
+                     class="headerLogoImg plice_sm_logo" 
+                     alt="Bengaluru Metropolitan Transport Corporation">
+                <div class="dept_text_contaoiners">
+                    <p class="web_name">
+                        Bengaluru Metropolitan Transport Corporation                    </p>
+                    <p class="web_subtitle">
+                        Government of Karnataka                    </p>
+                </div>
+                <img src="https://mybmtc.karnataka.gov.in/uploads/dept_photo1740483702.jpg" 
+                     class="dept_photo" style="width: auto;height: 80px;"
+                     alt="">
+            </div>
+        </div>
+
+        <!-- Right: Minister – always rendered, hidden via visibility when flag is set -->
+        <div class="col-md-3 col-6 col-lg-3 flex-right rightHeadSec order3"
+             >
+            <div class="dflex web_logo_set justify-content-end">
+                <img src="https://demo.karnataka.gov.in/server_dashboard_2026/uploads/minister_photos/minister_6a324235a4dad.jpg" 
+                     class="dept_mini_logo " style="width: auto;height: 65px;border-radius: 100%;margin-top: 8px;padding-right: 8px;"
+                     alt="">
+                <div class="dept_text_contaoiners">
+                                        <p class="web_name">Shri. B.S. SURESHA (BYRATHI)</p>
+                    <p class="web_subtitle">Hon'ble Transport Minister</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <nav class="navbar navbar-expand-lg shadow navbar-sec">
+        <div class="container">
+            <button class="navbar-toggler collapsed"  onclick="openNav()">
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="opennav"><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class='navbar-nav mr-auto mb-2 mb-lg-0 menu deskmenu'><li class='nav-item level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/en'><i class='fa fa-home fs-35'></i></a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://mybmtc.karnataka.gov.in/10/complaints/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Complaints</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='http://crm.mybmtc.com'><i class=''></i> New Complaint</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://crm.mybmtc.com/All_module'><i class=''></i> Public Grievance Dashboard</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/7/recruitment/en'><i class=''></i> Recruitment</a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Services.</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Casual Contract/en'><i class=''></i> Casual Contract</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://mfs.mybmtc.com/indexmfs.php'><i class=''></i> Metro Feeder Live Tracking</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf'><i class=''></i> Metro Feeder Service</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%2027_1786534401.pdf'><i class=''></i> Vajra Services Timetable</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Chartered Services/en'><i class=''></i> Chartered Services</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Passenger%20bus%20fares/en'><i class=''></i> Passenger bus fares</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Advertisement and Filmy Contract Fare/en'><i class=''></i> Advertisement and Filmy Contract Fare</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://lms.mybmtc.com/BusBooking/'><i class=''></i> Contract Basis Bus</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://kias.mybmtc.com'><i class=''></i> Airport Services</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/media_to_upload1746860294.pdf'><i class=''></i> Vayuvajra Services Main Bus Stop Wise Fare</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/storage/pdf-files/wonderlaeng(3).pdf'><i class=''></i> Wonderla Services</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%20@17_1789716606.pdf'><i class=''></i> Airport Services timetable</a></li><li class='nav-item dropdown dropend  level_1'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> One day tour package</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-1'><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=1912|Bengaluru%20Rounds&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 4  (KBS-Bng City Rounds)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=5301|Divya%20Darshana%203&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 3  (KBS-Art of Living)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=2923|Divya%20Darshana%202%20Kbs-ghati&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 2  (KBS-Ghati)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5311|Divya%20Darshana%201d%20Wtf-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1D  (WFTTMC- Isha)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5310|Divya%20Darshana%201c%20Mrbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1C  (MRBS- Isha)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5306|Divya%20Darshana%206%20Jain%20Temple-devanahalli&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 6  (KBS-Jain Temple DVN)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5309|Divya Darshana 1b Csb-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1B  (CSB- Isha)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5307|Divya%20Darshana%205%20Begur-c.tirupathi&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 5  (CSB-Chikkatirupati)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=5179%7CDivya%20Darshana%201%20Kbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1  (KBS-Isha )</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5308%7CDivya%20Darshana%201a%20Bsk-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1A  (BSK- Isha)</a></li></ul></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://mybmtc.karnataka.gov.in/13/department-application-login/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Department Application Login</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='http://outlook.office365.com/owa/mybmtc.com'><i class=''></i> e-mail login</a></li><li class='nav-item  level_0'><a class='nav-link' href='http://ems.mybmtc.com/BMTC/login.php'><i class=''></i> Employee Management System</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://eofficesbc.karnataka.gov.in/'><i class=''></i> e-office</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://mybmtc.karnataka.gov.in/3/rti/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> RTI</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://rtionline.karnataka.gov.in/index.php?lan=E'><i class=''></i> Online RTI</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/4/rti-4%281%29a/en'><i class=''></i> RTI 4(1)A</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/5/rti-4%281%29-b/en'><i class=''></i> RTI 4(1) B</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf'><i class=''></i> List of PIO-APIO-AA</a></li></ul></li> 
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="opennav"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+<style>
+#searchForm{display: flex;}
+.opennav .fa-bars{background: #0000004d;
+    padding: 11px 12px;
+    vertical-align: sub;
+    float: right;
+    text-align: right;
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    border-radius: 100px;
+    font-size: 20px;
+    height: 40px;}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #001937;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 3px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  transition: 0.2s !important;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    line-height: 1;
+    padding: 12px 14px 1px 14px;
+    /* margin-left: 50px; */
+    background: #0ad2d87a;
+    /* border-radius: 50px; */
+    text-align: center;
+    /* margin: auto; */
+    display: table;
+    /* width: 20px; */
+    /* height: 22px; */
+    color: aliceblue;
+}
+
+#main {
+  transition: margin-left .2s;
+
+}
+ .opennav{
+    font-size: 30px;
+    cursor: pointer;
+
+    display: flex ;
+   }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+    .sidenav a {
+        font-size: 16px !important;
+        line-height: initial !important;
+    }
+  
+}
+.gsc-search-button{padding:10px;}
+
+table.gsc-search-box td.gsc-input {
+    padding-right: 12px;
+    padding: 0px;
+}
+</style>
+
+
+
+
+
+<div id="vardha" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="accordian" class="scms-acc">
+      <ul class='navbar-nav mr-auto mb-2 mb-lg-0 menu extramenudesk'><li class='nav-item level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/en'><i class='fa fa-home fs-35'></i></a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://mybmtc.karnataka.gov.in/10/complaints/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Complaints</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='http://crm.mybmtc.com'><i class=''></i> New Complaint</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://crm.mybmtc.com/All_module'><i class=''></i> Public Grievance Dashboard</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/7/recruitment/en'><i class=''></i> Recruitment</a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Services.</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Casual Contract/en'><i class=''></i> Casual Contract</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://mfs.mybmtc.com/indexmfs.php'><i class=''></i> Metro Feeder Live Tracking</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf'><i class=''></i> Metro Feeder Service</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%2027_1786534401.pdf'><i class=''></i> Vajra Services Timetable</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Chartered Services/en'><i class=''></i> Chartered Services</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Passenger%20bus%20fares/en'><i class=''></i> Passenger bus fares</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/new-page/Advertisement and Filmy Contract Fare/en'><i class=''></i> Advertisement and Filmy Contract Fare</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://lms.mybmtc.com/BusBooking/'><i class=''></i> Contract Basis Bus</a></li><li class='nav-item  level_1'><a class='nav-link' href='http://kias.mybmtc.com'><i class=''></i> Airport Services</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/media_to_upload1746860294.pdf'><i class=''></i> Vayuvajra Services Main Bus Stop Wise Fare</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/storage/pdf-files/wonderlaeng(3).pdf'><i class=''></i> Wonderla Services</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%20@17_1789716606.pdf'><i class=''></i> Airport Services timetable</a></li><li class='nav-item dropdown dropend  level_1'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> One day tour package</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-1'><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=1912|Bengaluru%20Rounds&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 4  (KBS-Bng City Rounds)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=5301|Divya%20Darshana%203&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 3  (KBS-Art of Living)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=2923|Divya%20Darshana%202%20Kbs-ghati&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 2  (KBS-Ghati)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5311|Divya%20Darshana%201d%20Wtf-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1D  (WFTTMC- Isha)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5310|Divya%20Darshana%201c%20Mrbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1C  (MRBS- Isha)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5306|Divya%20Darshana%206%20Jain%20Temple-devanahalli&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 6  (KBS-Jain Temple DVN)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5309|Divya Darshana 1b Csb-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1B  (CSB- Isha)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5307|Divya%20Darshana%205%20Begur-c.tirupathi&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 5  (CSB-Chikkatirupati)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=5179%7CDivya%20Darshana%201%20Kbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1  (KBS-Isha )</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5308%7CDivya%20Darshana%201a%20Bsk-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0'><i class=''></i> Divya Darshana - 1A  (BSK- Isha)</a></li></ul></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://mybmtc.karnataka.gov.in/13/department-application-login/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Department Application Login</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='http://outlook.office365.com/owa/mybmtc.com'><i class=''></i> e-mail login</a></li><li class='nav-item  level_0'><a class='nav-link' href='http://ems.mybmtc.com/BMTC/login.php'><i class=''></i> Employee Management System</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://eofficesbc.karnataka.gov.in/'><i class=''></i> e-office</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://mybmtc.karnataka.gov.in/3/rti/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> RTI</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://rtionline.karnataka.gov.in/index.php?lan=E'><i class=''></i> Online RTI</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/4/rti-4%281%29a/en'><i class=''></i> RTI 4(1)A</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/5/rti-4%281%29-b/en'><i class=''></i> RTI 4(1) B</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf'><i class=''></i> List of PIO-APIO-AA</a></li></ul></li> 
+    </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeNav()"></div>
+
+<script type="text/javascript">
+$('a[data-bs-toggle="dropdown"]').removeAttr('href');
+function openNav() {
+  document.getElementById("vardha").style.width = "250px";
+
+}
+
+function closeNav() {
+  document.getElementById("vardha").style.width = "0";
+
+}
+ 
+</script>
+
+
+<div class="feedback-btn">
+  <a href="https://mybmtc.karnataka.gov.in/feedback/en">
+    <i class="fa fa-comments" aria-hidden="true"></i>
+    <span>Feedback</span>
+  </a>
+</div>
+
+
+
+    <script>
+    // Function to set theme colors
+    function setTheme(color1, color2) {
+        // Set the CSS variables for --primary-color and --secondary-color
+        document.documentElement.style.setProperty('--primary-color', color1);
+        document.documentElement.style.setProperty('--secondary-color', color2);
+
+        // Save the selected colors in cookies
+        document.cookie = "theme1=" + color1 + "; path=/; max-age=15"; // 30 days expiry
+        document.cookie = "theme2=" + color2 + "; path=/; max-age=15"; 
+    }
+
+    // Function to get the value of a cookie
+    function getCookie(name) {
+        let cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].trim();
+            if (cookie.startsWith(name + '=')) {
+                return cookie.substring(name.length + 1);
+            }
+        }
+        return null;
+    }
+
+    // Apply the theme colors on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const theme1 = getCookie('theme1');
+        const theme2 = getCookie('theme2');
+        if (theme1 && theme2) {
+            document.documentElement.style.setProperty('--primary-color', theme1);
+            document.documentElement.style.setProperty('--secondary-color', theme2);
+        }
+    });
+</script>
+
+
+
+
+
+<style></style><script></script>	
+	 <div class="title-block"  style="background:#f5f5f5;" >
+	 	<a onclick="goBack()" class="back-btn"><i class="fa fa-arrow-left btn btn-back"><span class="hidden-sm hidden-xs">Back	</span></i></a>
+  <div class="title" >	 Student Pass		
+		
+	</div>
+
+   
+  </div> 
+
+
+		<div class="container ipage">
+		<h1 style="text-align: center;"><span style="color: #000080;"><strong><span style="text-decoration: underline;">Student Pass 2026-27</span></strong></span></h1>
+<hr />
+<h3 style="text-align: justify;"><strong>Students can apply for Student Pass for the Academic year 2026-27 in BMTC website, Bangalore One Counters and Seva Sindhu portal.&nbsp;As per the directions of the Government of Karnataka Bangalore Metropolitan Transport Corporation is issuing student passes at a free from the date of its formation for the benefit of students community. The online applications for&nbsp;Degree/ professional/ technical/ medical/ evening college students can apply for student pass through online.&nbsp;After the approval from the BMTC student can schedule his choice of Bangalore-one centre, date &amp; time and visit the counter along with the acknowledgment copy of scheduling and his school/ college id card/ fee receipt/ Head of the institution attested copy Student passes will be issued in Bangalore-one centers from 08.00 hrs to 18.30 hrs in all working days</strong></h3>
+<hr />
+<p><strong>Institution&nbsp;registration&nbsp;</strong></p>
+<p><strong>2026-27 Student Bus Pass application &nbsp;issued through Seva Sindhu Portal, So Institution have to submit the application through seva sindhu portal only:-&nbsp;&nbsp;</strong><a href="https://sevasindhu.karnataka.gov.in/"><strong>https://sevasindhu.karnataka.gov.in</strong></a></p>
+<h4 style="text-align: justify;"><strong>&nbsp;</strong></h4>
+<hr />
+<h3 style="text-align: justify;">&nbsp;</h3>
+<h1 style="text-align: center;"><span style="color: #000080;"><strong><span style="text-decoration: underline;"><img src="data:image/jpeg;base64,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" alt="" width="119" height="108" /></span></strong></span><span style="background-color: #ffffff; color: #ff6600;"><strong>&nbsp; &nbsp;<a href="https://sevasindhuservices.karnataka.gov.in/directApply.do?serviceId=1936"> <span style="text-decoration: underline;">Student Pass Online Application</span></a></strong></span></h1>
+<hr />
+<table style="width: 581px;">
+<tbody>
+<tr>
+<td style="width: 38.6944px;">1</td>
+<td style="width: 549.306px;"><a style="color: #0000ff; text-decoration: underline;" href="https://mybmtc.karnataka.gov.in/uploads/Student%20pass%20application%20form_1780379509.pdf" target="_blank" rel="noopener noreferrer">Student Bus Pass Application Format</a></td>
+</tr>
+<tr>
+<td style="width: 38.6944px;">2</td>
+<td style="width: 549.306px;"><a style="color: #0000ff; text-decoration: underline;" href="https://mybmtc.karnataka.gov.in/uploads/Brief%20Note%20English_1780379962.pdf" target="_blank" rel="noopener noreferrer">Student Pass Brief Note</a></td>
+</tr>
+<tr>
+<td style="width: 38.6944px;">3</td>
+<td style="width: 549.306px;"><a style="color: #0000ff; text-decoration: underline;" href="https://mybmtc.karnataka.gov.in/uploads/English%20B1list_1780379696.pdf" target="_blank" rel="noopener noreferrer">BangaloreOne Counters List</a></td>
+</tr>
+<tr>
+<td style="width: 38.6944px;">4</td>
+<td style="width: 549.306px;"><span style="color: #0000ff;"><a style="color: #0000ff;" href="https://mybmtc.karnataka.gov.in/uploads/Institution%20list_1780379482.pdf" target="_blank" rel="noopener noreferrer">Institution List</a></span></td>
+</tr>
+<tr>
+<td style="width: 38.6944px;">5</td>
+<td style="width: 549.306px;"><a style="color: #0000ff; text-decoration: underline;" href="https://mybmtc.karnataka.gov.in/uploads/University%20List%20pdf_1780379568.pdf" target="_blank" rel="noopener noreferrer">University List</a></td>
+</tr>
+<tr>
+<td style="width: 38.6944px;">6</td>
+<td style="width: 549.306px;"><a style="color: #0000ff; text-decoration: underline;" href="https://mybmtc.karnataka.gov.in/uploads/Course%20List%20pdf_1780379875.pdf" target="_blank" rel="noopener noreferrer">Course List</a></td>
+</tr>
+<tr>
+<td style="width: 38.6944px;">7</td>
+<td style="width: 549.306px;"><a style="color: #0000ff; text-decoration: underline;" href="https://mybmtc.karnataka.gov.in/storage/pdf-files/instruction.pdf">Instruction</a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>	</div>
+<div class="modal fade" id="screen_reader_en" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+           
+              <h4 class="modal-title">Screen Reader Access </h4>
+            </div>
+
+            <div class="modal-body" style="overflow-x: auto;">
+              <p>The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.</p>
+              <p>Following table lists the information about different screen readers:</p>
+
+              <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Sl.No</th>
+                  <th>Screen Reader</th>
+                  <th>Website</th>
+                  <th>Free/ Commercial</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Non Visual Desktop Access (NVDA)</td>
+                  <td><a href="http://www.nvda-project.org/" target="_blank">http://www.nvda-project.org/</a>(External website that opens in a new window)</td>
+                  <td>Free</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>JAWS</td>
+                  <td><a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank">http://www.freedomscientific.com</a>(External website that opens in a new window)</td>
+                  <td>Commercial</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Window-Eyes</td>
+                  <td><a href="http://www.gwmicro.com/" target="_blank">http://www.gwmicro.com</a>(External website that opens in a new window)</td>
+                  <td>Commercial</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>System Access To Go</td>
+                  <td><a href="http://www.satogo.com/" target="_blank">http://www.satogo.com/</a>(External website that opens in a new window)</td>
+                  <td>Free</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>WebAnywhere</td>
+                  <td><a href="http://webinsight.cs.washington.edu/" target="_blank">http://webinsight.cs.washington.edu/</a>(External website that opens in a new window)</td>
+                  <td>Free</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+  <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+      </div>
+           
+          </div>
+          
+        </div>
+      </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+  var path = window.location.pathname.replace(/^\/|\/$/g, '');
+  var segments = path === '' ? [] : path.split('/');
+
+  // Show only on homepage
+  if (segments.length <= 1) {
+      }
+});
+</script>
+
+<style>
+
+.search-box {
+  position: relative;
+  height: 25px;
+  background: #2f3640;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 25px;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.cm_karnataka_photo{height: 120px !important;}
+.acts_table td, .acts_table p, .acts_table a {
+    background: #350dff;
+    color: white !important;
+}
+.search-box.active {
+  width: 240px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.dpal-gserach-btn{color: white;padding: 6px;}
+
+.search-btn {
+  color: #fff;
+  transition: 0.4s;
+  z-index: 1;background: transparent;border:0px;
+
+  margin-left: -10px;margin-top: 6px;
+}
+
+.search-box.active .search-btn {
+  color: #2f3640;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: #2f3640;
+  font-size: 16px;
+  width: 0;
+  transition: 0.4s;
+  /*margin-left: 10px;*/
+  z-index: 0;
+}
+
+.search-box.active .search-txt {
+  width: 100%;
+}
+    /* First Modal Styles */
+    .kswdc_modal-body p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .kswdc_pop_img{width: 100%;}
+    .kswdc_dflex{display: flex;}
+    
+    /* Second Modal Styles */
+    .kswdc_modal-body2 p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .kswdc_pop_img2 {width: 100%;}
+    .kswdc_dflex2 {display: flex;}
+</style>
+
+  <!-- <div class="modal fade" id="eventModalkswdc" tabindex="-1" role="dialog" aria-labelledby="eventModalkswdcLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center kswdc_modal-body">
+          <div class="row kswdc_dflex">
+            <div class="col-12">
+              <img src="https://atimysore.karnataka.gov.in/uploads/banner_popup.jpeg" class="img-fluid kswdc_pop_img" alt="Image 1">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+<script>
+    $(document).ready(function(){
+      var path = window.location.pathname.replace(/^\/|\/$/g, '');
+      var segments = path === '' ? [] : path.split('/');
+
+      if (segments.length <= 1) {
+        // Show first modal if active
+                  $('#eventModalkswdc').modal('show');
+          setTimeout(function() {
+            $('#eventModalkswdc').modal('hide');
+          }, 20000);
+        
+        // Show second modal if active (with delay to avoid conflict)
+              }
+    });
+</script>
+<style type="text/css">
+.mongologo{display:none !important;}
+td,th{color:black !important;}
+  .modal{background: #0e0e0ebf;}
+  .footer{width:100% !important;}
+      .modal-body{color: black;}
+    .foot-bottom{   display: flex;
+    background: #333434;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;}
+    .vhide{visibility: hidden;}
+    .lineDiv2,.lineDiv1{background-color: goldenrod !important;}
+        i.fa.fa-angle-right {
+    padding-right: 8px;
+}
+
+.footerSectionDetails a{color: white !important;}
+
+.footer_container li,.footer_container a{cursor: pointer;color:white;}
+  .modal-title{width: -webkit-fill-available}
+  .cls-btn{padding: 8px 10px 0px 10px;}
+</style>
+
+
+
+
+
+<section class="footer_container">
+    <div class="container footerSection_Div">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footerSectionDetails">
+                <div class="footerSectionTitle"><p>Disclaimer</p></div>
+                <div class="lineDiv"> 
+                    <div class="lineDiv1"></div>
+                    <div class="lineDiv2"></div>
+                </div>
+                <div class="footerSectionP"><p>
+                       Please note that this page also provides links to the websites / web pages of Govt. Ministries/Departments/Organisations. <br>The content of these websites are owned by the respective organisations and they may be contacted for any further information or suggestion
+                    </p>
+                </div>
+            </div>
+          </div>
+          
+           <div class="col-lg-4">
+
+            <div class="footerSectionDetails">
+                <div class="footerSectionTitle"><p> Website Policies and Guidelines </p></div>
+                <div class="lineDiv"> 
+                    <div class="lineDiv1"></div>
+                    <div class="lineDiv2"></div>
+                </div>
+                <div class="footerSectionP1">
+                    <div>
+                         <ul class="list-unstyled">
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf3"><i class="fa fa-angle-right" aria-hidden="true"></i>Copyright Policy</a></li>
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf4"><i class="fa fa-angle-right" aria-hidden="true"></i>Hyperlinking Policy</a></li>
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf5"><i class="fa fa-angle-right" aria-hidden="true"></i>Security Policy</a></li>
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf6"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms & Conditions</a></li>
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf7"><i class="fa fa-angle-right" aria-hidden="true"></i>Privacy Policy</a></li>
+
+      </ul> 
+                    </div>
+                </div>
+            </div>
+
+           </div>
+
+
+           <div class="col-lg-4">
+            <div class="footerSectionDetails">
+                <div class="footerSectionTitle "><p>Accessibility Resources</p></div>
+                <div class="lineDiv "> 
+                    <div class="lineDiv1"></div>
+                    <div class="lineDiv2"></div>
+					
+                </div><br>
+                <div class="footerSectionP">
+                     <ul class="list-unstyled">
+                          <li><a href="https://mybmtc.karnataka.gov.in/sitemap/en"><i class="fa fa-angle-right" aria-hidden="true"></i>Sitemap </a></li>
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf8"><i class="fa fa-angle-right" aria-hidden="true"></i>Help</a></li>
+      <li><a href="javascript:void(0);" role="button" data-bs-toggle="modal" data-bs-target="#myModalf9"><i class="fa fa-angle-right" aria-hidden="true"></i>Screen Reader Access</a></li>
+      <li><a href="https://ceg.karnataka.gov.in/guidelines/kn" ><i class="fa fa-angle-right" aria-hidden="true"></i>Guidelines</a></li>
+          </ul>
+                </div>
+            </div>
+           </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="lastUpdate">
+            <div><p>Last Updated: 30-09-2026</p></div>
+            <div><p>Visitors Counter: </p></div>
+            <div><p>Version: CeG/KRN 4.0</p></div>
+        </div>
+
+
+        <div class="contentOwner">
+            <p>  Content Owned and maintained by: Bengaluru Metropolitan Transport Corporation, Government of Karnataka</p>
+                        <p>Designed , Developed & Hosted by: Centre for e-governance - Webportal karnataka government © 2026, All Rights Reserved.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<div class="footer ">
+
+
+
+<ul class="list-inline foot-bottom">
+      <li>
+       <a href="https://www.meity.gov.in/" target="_blank" rel="noopener" title="Opens in a new window" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img alt="Ministry of Electronics and Information Technology" src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/Meity_logo.png" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://digitalindia.gov.in/" target="_blank" rel="noopener" title="Opens in a new window" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img alt="Digital India" src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/digital-india-logo.png" class="footer_image"></a>
+      </li> 
+      <li>
+       <a href="https://data.gov.in/" target="_blank" rel="noopener" title="Opens in a new window" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img alt="Open Government Data Platform India" src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/data-gov-logo.png" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://www.india.gov.in/" target="_blank" rel="noopener" title="Opens in a new window" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img alt="National Portal of India" src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/india-gov-logo.png" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://www.pmindia.gov.in/en/" target="_blank" rel="noopener" title="Opens in a new window" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img alt="Prime Minister of India" src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/pm-india-logo.png" class="footer_image"></a>
+      </li>
+
+      <li class="footer4_divider"></li>
+      <li></li>
+     <li>
+       <a href="https://guidelines.india.gov.in/"><img alt="Guidelines for Indian Government Websites (GIGW)" src="https://ceg.karnataka.gov.in/frontend/opt1/images/GIGW.jpeg" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://www.w3.org/TR/WCAG22/"><img alt="Web Content Accessibility Guidelines (WCAG)" src="https://ceg.karnataka.gov.in/frontend/opt1/images/WCAG.jpeg" class="footer_image"></a>
+      </li> 
+      <li>
+      <a href="https://www.https.in/government-solutions"><img alt="SSL secured website" src="https://ceg.karnataka.gov.in/frontend/opt1/images/SSLcertificate.png" class="footer_image"></a>
+      </li>
+      <li>
+      <a href="https://www.w3schools.com/html/default.asp"><img alt="W3C HTML standards" src="https://ceg.karnataka.gov.in/frontend/opt1/images/w3c.png" class="footer_image"></a>
+      </li>
+      <li>
+      <a href="https://kannadapraadhikaara.karnataka.gov.in"><img alt="Kannada Development Authority" src="https://ceg.karnataka.gov.in/frontend/opt1/images/kp_kn.jpeg" class="footer_image"></a>
+      </li>
+    </ul>
+</div>
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Copyright Policies -->
+  <div class="modal fade" id="myModalf3" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Copyright Policy</h2>
+		            <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+         
+         <p class="copy_header">Copyright policy (if the published information is available free of any charge)</p>
+
+           <p>1)Information featured on this website can be re-published in any media form free
+               of any charge only with prior permission from us(CeG) or concerned respective authority which is owning the website, through email.</p>
+           <p>2)Information can be republished as it is available and not to be used in a distorted or misleading manner.</p>
+           <p>3)Where the material is being published or suggested to others, the source must be prominently acknowledged </p>
+           <p>4)13. However, the permission to reproduce this material does not extend to any material on this site, which is explicitly identified as being the copyright of a third party</p>
+          
+        <p class="copy_header">Copyright policy (if there is a provision to reuse published information)</p>
+        
+           <p>1)The information published on the website comes under copyright policy and obtaining authorization for their republish is a pre-requisite.</p>  
+
+           <p>2)To get permission one can mail to ………………..@.........</p>
+
+         
+        </div>
+   
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-------------------------------------------------------------------->
+  <!-- Hperlinking Policies -->
+  <div class="modal fade" id="myModalf4" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Hyperlinking Policy</h2>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+         <p class="copy_header">(in case the respective department doesn’t need any permission to hyperlink in their website) </p>
+
+           <p>1)We do not object to you linking directly to the information that is hosted on our site and no prior permission is required for the same.</p>
+
+           <p>2)we do not permit our pages to be loaded into frames on other sites. Our Department’s pages must load into a newly opened browser window of the user.</p>
+
+        <p class="copy_header">(in case of hyperlink permission is necessary for the website)</p>
+        
+           <p>1)to provide any link or its form on this website, it is compulsory to procure permission. </p>  
+
+           <p>2)permission can be obtained from the Centre for e-governance by requesting to this email. pd.webportal@karnataka.gov.in</p>
+ 
+           <p>3)Before leaving this government website note: this contact button will lead to another website, to get more information on such new opened site, one must contact the concerned contacts registered on that website.</p>
+         
+
+        </div>
+     
+      </div>
+      
+    </div>
+  </div>
+   
+
+
+
+  <!-------------------------------------------------------------------->
+  <!-- Security Policies -->
+  <div class="modal fade" id="myModalf5" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Security Policy</h2>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+           <p> 1) For site security purposes and to ensure that this service remains available to all users, this Government      computer system employs commercial software programs to monitor network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage.
+           </p><br>
+
+          <p>2)  Except for authorized law enforcement investigations, no other attempts are made to identify individual users or their usage habits. Raw data logs are used for no other purposes and are scheduled for regular deletion.
+          </p><br>
+
+          <p>3) Unauthorized attempts to upload information or change information on this service are strictly prohibited and may be punishable under the Indian IT Act (2000).</p><br>
+
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+ <!-------------------------------------------------------------------->
+  <!-- Terms & Conditions -->
+  <div class="modal fade" id="myModalf6" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Terms & Conditions</h2>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <p>1)This website is designed, developed, and maintained by the center for e-governance.</p><br>
+
+          <p>2) Though all efforts have been made to ensure the accuracy and currency of the content on this website, the same should not be construed as a statement of law or used for any legal purposes. In case of any ambiguity or doubts, users are advised to verify/check with the Department(s) and/or other source(s) and to obtain appropriate professional advice.</p><br>
+
+          <p>3) ) Under no circumstances will this Department be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use, of data, arising out of or in connection with the use of this website.</p><br>
+
+          <p>4) These terms and conditions shall be governed by and construed in accordance
+          with the Indian Laws. Any dispute arising under these terms and conditions
+          shall be subject to the jurisdiction of the courts of India.</p><br>
+
+
+          <p>5) The information posted on this website could include hypertext links or
+          pointers to information created and maintained by non-Government/private
+          organisations. (Name of Department) is providing these links and pointers solely
+          for your information and convenience. When you select a link to an outside
+          website, you are leaving the website and are subject to
+          the privacy and security policies of the owners/sponsors of the outside website.</p><br>
+
+
+          <p>6) The concerned department does not guarantee the availability of such linked pages at all times.</p><br>
+
+          <p>7)The concerned department, cannot authorize the use of copyrighted materials contained in linked websites. Users are advised to request such authorization from the owner of the linked website.</p><br>
+
+          <p>8)The concerned  department does not guarantee that linked websites comply with Indian Government Web Guidelines</p>
+          <br>
+ 
+          <p>If the user visits the information and collects information or downloads files, the following elements may automatically download,</p>
+          
+          <ul>
+            <li>- your service domain, IP number, how visitors accessed our website.</li>
+            <li>- browsers and operating systems.</li> 
+            <li>- date and time of users’ visits.</li> 
+            <li>- URLs from which visitors accessed information.</li>
+            <li>- if the user has visited the website from other websites, details of that website</li>
+          </ul>
+ 
+
+         <h3 class="h6">Cookies</h3>
+
+          <p>
+            When you visit some websites, they may download small pieces of software on your computer/browsing device known as cookies. Some cookies collect personal information to recognize your computer in the future. We only use non-persistent cookies or “per-session cookies”. 28 Per-session cookies serve technical purposes, like providing seamless navigation through this website. These cookies do not collect personal information on users and they are deleted as soon as you leave our website. The cookies do not permanently record data and they are not stored on your computer’s hard drive. The cookies are stored in memory and are only available during an active browser session. Again, once you close your browser, the cookie disappears.
+          </p>
+
+
+        </div>
+   
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Privacy Policies -->
+  <div class="modal fade" id="myModalf7" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Privacy Policies</h2>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <p class="copy_header">privacy policy : (when the website doesn’t collect any personal information)</p>
+            <p>
+              We collect no personal information, like names or addresses, when you visit our website. If you choose to provide that information to us, it is only used to fulfill your request for information
+            </p>
+
+          <p class="copy_header">user information: </p>
+            <p>
+              we do collect technical user details when a user visits the websites and visitor information such as the type of browser, server, and domain, date and time, details of documents downloaded are recorded, This information is only used to help us make the site more useful for you. With this data, we learn about the number of visitors to our site and the types of technology our visitors use. We never track or record information about individuals and their visits. (except in the case when directed by the court through a warrant) 
+            </p>
+
+          <p class="copy_header">cookies: </p>
+            <p>
+              Web sites provide a piece of software when visitors receive information on a website and they are called Cookies. No such cookies are used on this website. 
+            </p> 
+
+          <p class="copy_header">Email management: </p>
+            <p>
+             emails are stored when a user sends any information only for that instant and is used only to give information to them. these are not to be used for any purposes or to include in the contact list. without intimating the user, it won’t be revealed.
+            </p> 
+            
+          <p class="copy_header">collection of personal details:  </p>
+            <p>
+              if the user asks or provides any personal information, the details of its usage are mentioned. if you are not satisfied or suspicious about the details are given or wish to provide an opinion about the same, its necessary for you to contact assigned webmasters under ‘contact us’ section 
+
+              note: private pieces of information received under ‘Personal details’ will only be used to collect identity or elements for easy identification. 
+ 
+            </p> 
+            
+          <p class="copy_header">cookies: </p>
+            <p>
+              Web sites provide a piece of software when visitors receive information on a website and they are called Cookies. No such cookies are used on this website. 
+            </p>     
+
+            <h3 class="h6" style="font-weight: 600;">if the user provides personal information.</h3>
+             <p>
+               1. We do not collect personal information for any purpose other than to respond to you (for example, to respond to your questions or provide subscriptions you have chosen). If you choose to provide us with personal information like filling out a Contact Us form, with an e-mail address or postal address, and submitting it to us through the website-we use that information to respond to your message and to help you get the information you have requested. We only share the information you give us with another Government agency if your question relates to that agency, or as otherwise required by law. 
+            </p>
+            <p>
+              2. Our website never collects information or creates individual profiles for commercial marketing. While you must provide an email address for a localized response to any incoming questions or comments to us, we recommend that you do NOT include any other personal information.
+            </p>
+
+          
+           <h3 class="h6" style="font-weight: 600;">website security </h3>
+             <p>
+              1)to make the information available to all, to prevent unauthorized user entry, to stop harming or distorting information and keeping the security of the website in mind, also to handle user traffic, commercial software programs are used. 
+             </p>
+
+             <p>
+               2)Except for official law institutions, no attempts are made to personally identify the visitor or user.
+             </p>
+             
+             <p>3)Visitor information is subject to regular deletion</p>
+             <p>4)unauthorized users shall not add or change information available which can have legal consequences and may be subjected to fine under IT act (2000).</p>
+ 
+        </div>
+  
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Help -->
+  <div class="modal fade" id="myModalf8" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Help</h2>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <h3 class="h6" style="text-decoration: underline;" class="copy_header">INFORMATION SEARCH:</h3>
+
+           <p> to help users access information within the website, a “search here” option is been provided. here, the option to type in Kannada is made available. while searching, usage of Unicode font is compulsory. option to search in English is also provided. </p>
+
+          <h3 class="h6" style="text-decoration: underline;" class="copy_header">INTERNET ACCESSIBILITY</h3> 
+
+            <p>if the internet is slow or unavailable, there may be a modification in website design or some subpages may not open. </p>
+
+          </p><br>
+
+          <div class="scroll-table1  table table-striped table-bordered"><div class="guide-text"><i class="fa fa-long-arrow-right"></i></div><div class="scroll-table"><table id="tablehelp" class="border" border="1"> <caption>Help of Various File formats :</caption> <tbody> <tr> <th>Document Type</th> <th>Download</th> </tr> <tr class="even"> <td>PDF content</td> <td> <img src="https://labour.gov.in/sites/default/files/pdf.png" alt="image"><a href="http://get.adobe.com/reader/" target="_BLANK" title="External site that opens in a new window"> Adobe Acrobat Reader</a> (External website that opens in a new window) </td> </tr> <tr class="odd"> <td>Word files</td> <td><img src="https://labour.gov.in/sites/default/files/Word.png" alt="image">  <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=3657CE88-7CFA-457A-9AEC-F4F827F20CAC&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window"> Word Viewer (in any version till 2003)</a> - External website that opens in a new window<br> <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=c8378bf4-996c-4369-b347-73edbd03aaf0&amp;displaylang=EN" target="_BLANK" title="External site that opens in a new window">Microsoft Office Compatibility Pack for Word (for 2007 version)</a> - External website that opens in a new window </td> </tr> <tr class="even"> <td>Excel files</td> <td> <img src="https://labour.gov.in/sites/default/files/Excel.png" alt="image">  <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D3727-43AB-4F24-90B7-A94784AF71A4&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window"> Excel Viewer 2003 (in any version till 2003)</a> - External website that opens in a new window<br> <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window">Microsoft Office Compatibility Pack for Excel (for 2007 version)</a> - External website that opens in a new window </td> </tr> <tr class="odd"> <td>PowerPoint presentations</td> <td><img src="https://labour.gov.in/sites/default/files/powerpoint.png" alt="image">  <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D5727-43AB-4F24-90B7-A94784AF71A4&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window"> PowerPoint Viewer 2003 (in any version till 2003)</a> - External website that opens in a new window<br> <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window">Microsoft Office Compatibility Pack for PowerPoint (for 2007 version)</a> - External website that opens in a new window </td> </tr> <tr class="even"> <td>Flash content</td> <td> <img src="https://labour.gov.in/sites/default/files/Flash.png" alt="image"> <a href="http://get.adobe.com/flashplayer/" target="_BLANK" title="External site that opens in a new window">Adobe Flash Player </a>(External website that opens in a new window) </td> </tr> <tr class="odd"><td>Audio Files</td> <td> <img src="https://labour.gov.in/sites/default/files/red.png" alt="image"> <a href="http://windows.microsoft.com/en-US/windows/downloads/windows-media-player" target="_BLANK" title="External site that opens in a new window">Windows Media Player </a>(External website that opens in a new window) </td> </tr> </tbody> </table></div></div>
+
+
+
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Screen Reader Access -->
+  <div class="modal fade" id="myModalf9" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h2 class="modal-title h4">Screen Reader Access</h2>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="nicetext">        
+            <div class="innerpage">
+             <div id="skipCont" class="wrapper">
+       
+             <div class="row">                 
+              <div class="col-md-12 col-sm-9 col-xs-12">
+                <div class="heading" tabindex="-1"></div>
+                <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+    
+                <div class="content">
+                 <div class="panel-display panel-1col clearfix">
+                 <div class="panel-panel panel-col">
+                   <div>
+                    <div class="panel-pane pane-views pane-page">
+  
+                     <div class="pane-content">
+                       <div class="view view-page view-id-page view-display-id-block view-dom-id-9f59a9bf8ad69ecc93f01660ca78bb00">
+        
+                       <div class="view-content">
+                        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+                         <div class="views-field views-field-body">        
+                          <div class="field-content">
+                            <p>The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.</p>
+                            <p>Following table lists the information about different screen readers:</p>
+
+                            <div class="guide-text">
+                              <i class="fa fa-long-arrow-right"></i>
+                            </div>
+
+                            <div class="scroll-table1">  
+                              <table class="srtable table table-striped table-bordered" summary="Screen Reader">
+                                <tbody>
+                                  <tr>
+                                    <th>Sl. No.</th>
+                                    <th>Screen Reader</th>
+                                    <th>Website</th>
+                                    <th>Free/ Commercial</th>
+                                  </tr>
+
+
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Non Visual Desktop Access (NVDA)</td>
+                                    <td><a href="http://www.nvda-project.org/" target="_blank">http://www.nvda-project.org/</a><br> (External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>2</td>
+                                    <td>JAWS</td>
+                                    <td><a href="http://www.freedomscientific.com/products/software/jaws/" target="_blank">http://www.freedomscientific.com</a> <br>(External website that opens in a new window)</td>
+                                    <td>Commercial</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>3</td>
+                                    <td>Window-Eyes</td>
+                                    <td><a href="http://www.gwmicro.com/Window-Eyes/" target="_blank">http://www.gwmicro.com</a><br> (External website that opens in a new window)</td>
+                                    <td>Commercial</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>4</td>
+                                    <td>System Access To Go</td>
+                                    <td><a href="http://www.satogo.com/" target="_blank">http://www.satogo.com/</a><br>(External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>5</td>
+                                    <td>WebAnywhere</td>
+                                    <td><a href="http://webinsight.cs.washington.edu/" target="_blank">http://webinsight.cs.washington.edu/</a> <br>(External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+								  
+								  
+								  
+								    <tr>
+                                    <td>6</td>
+                                    <td>atoall</td>
+                                    <td><a title="This Will Make You Easy For Growth, Use Accessibility Tool" target="_blank" rel="noopener" href="https://atoall.com/all.asp"> <img height="64" width="64" alt="This Will Make You Easy For Growth, Use Accessibility Tool" src="https://atoall.com/all/512-accessibility-square.svg"></a>
+ <br>(External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>  
+                        </div>  
+                      </div>
+                    </div>
+  
+                </div>  
+               </div>
+  
+              </div>
+              </div>
+              </div>
+             </div>
+             </div>
+             </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        </div>
+    
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/owl/owl.carousel.js"></script>
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/js/acc_search.js"></script>  
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/js/custom.js"></script>   
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/js/aos.js"></script>  
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/map/main.js"></script> 
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/rti_datatables/dataTables.jqueryui.min.js"></script> 
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/rti_datatables/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/tabswipe/js/swipebundle.js"></script>   
+<script type="text/javascript" src="https://mybmtc.karnataka.gov.in/assets/front/js/custom_fancybox.js"></script>  
+
+<script>
+      
+   $('[data-fancybox="gallery"]').fancybox({
+  buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+  ],
+  loop: false,
+  protect: true
+});
+</script> 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('toggle');
+    const darkModeAreas = document.querySelectorAll('.dark-mode-area');
+
+    // Define the dark mode CSS for specific classes and elements
+    const darkModeCSS = `
+        .dark-mode-area.dark-mode h1,
+        .dark-mode-area.dark-mode header,
+        .dark-mode-area.dark-mode body,
+        .dark-mode-area.dark-mode div,
+        .dark-mode-area.dark-mode span,
+        .dark-mode-area.dark-mode h6,
+        .dark-mode-area.dark-mode li,
+        .dark-mode-area.dark-mode p,
+        .dark-mode-area.dark-mode .header,
+        .dark-mode-area.dark-mode .navbar-sec,
+        .dark-mode-area.dark-mode button,
+        .dark-mode-area.dark-mode section,
+        .dark-mode-area.dark-mode extramenudesk,
+        .dark-mode-area.dark-mode dropdown-menu,
+        .dark-mode-area.dark-mode dropdown,
+        .dark-mode-area.dark-mode nav-item,
+        .dark-mode-area.dark-mode nav-link,
+        .dark-mode-area.dark-mode .dropdown-menu.show,
+        .dark-mode-area.dark-mode .dropdown-menu a,
+        .dark-mode-area.dark-mode .closebtn,
+        .dark-mode-area.dark-mode .btn,
+        .dark-mode-area.dark-mode td,
+         .dark-mode-area.dark-mode th,
+         .dark-mode-area.dark-mode table,
+            .dark-mode-area.dark-mode .extramenudesk li a,
+         .dark-mode-area.dark-mode thead,
+        .dark-mode-area.dark-mode .subHeaderFontSize,
+            .dark-mode-area.dark-mode .nav-item.dropdown:hover > .dropdown-menu,
+        body.dark-mode-area.dark-mode {
+            background-color: #121212 !important;
+            color: #ffffff  !important;
+            background-image: none !important;
+        }
+        .dark-mode-area.dark-mode button {
+            border-color: #ffffff  !important;
+            background-color: #333333  !important;
+        }
+        .dark-mode-area.dark-mode .background {
+            background-color: #333333  !important;
+        }
+        .dark-mode-area.dark-mode .carousel-indicators {
+            display: none !important;
+        }
+    `;
+
+    // Create a style element
+    const styleElement = document.createElement('style');
+    styleElement.type = 'text/css';
+    styleElement.appendChild(document.createTextNode(darkModeCSS));
+    document.head.appendChild(styleElement);
+
+    // Load saved mode from localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        darkModeAreas.forEach(area => area.classList.add('dark-mode'));
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function() {
+        if (this.checked) {
+            darkModeAreas.forEach(area => area.classList.add('dark-mode'));
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeAreas.forEach(area => area.classList.remove('dark-mode'));
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+</script>
+
+     <script>
+        const minFontSize = 16;
+        const maxFontSize = 19;
+        const normalFontSize = 18; // Set this to your normal font size
+
+        const decreaseButton = document.getElementById('fontDecrease');
+        const increaseButton = document.getElementById('fontIncrease');
+        const resetButton = document.getElementById('fontReset');
+        const targetElements = document.querySelectorAll('p, h1, h2, a, li');
+
+        let currentFontSize = parseInt(window.getComputedStyle(targetElements[0]).fontSize, 10);
+
+        function updateFontSize(size) {
+            if (size >= minFontSize && size <= maxFontSize) {
+                targetElements.forEach(el => {
+                    el.style.fontSize = `${size}px`;
+                });
+                currentFontSize = size;
+            }
+        }
+
+        decreaseButton.addEventListener('click', () => {
+            updateFontSize(currentFontSize - 1);
+        });
+
+        increaseButton.addEventListener('click', () => {
+            updateFontSize(currentFontSize + 1);
+        });
+
+        resetButton.addEventListener('click', () => {
+            // Reload the page to reset font sizes to default
+            location.reload();
+        });
+
+$(document).ready(function() {
+
+
+    // Optional: If you want to ensure .hamburger doesn't get the active class
+    $('.hamburger').on('click', function(event) {
+       $(this).removeClass('active');
+    });
+});
+
+    </script>
+	
+	
+</body>
+</html>
+

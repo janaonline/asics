@@ -90,12 +90,12 @@ When in doubt, list it as needs_review.
 - One body per function where possible: if two bodies seem to deliver the same function for
   the same area, list as "eligible" the one whose Act gives it the delivery role, and name the
   other in "notes" with the reason (or list it as needs_review if you cannot tell which it is).
-- Metro rail: classify as "transport_corporation" if it operates public passenger transport,
+- Metro rail: classify as "public_bus_transport_operator" if it operates public passenger transport,
   or is mandated to build and operate it (add the PRE-OPERATIONAL flag if not yet open), and add "NEEDS TEAM CONFIRMATION: legal form <company/corporation/other>" to
   "why_included".
 
 Classify each listed agency:
-  "type": "water_supply_board" | "transport_corporation" | "development_authority" | "other"
+  "type": "development_authority" | "water_supply_entity" | "public_bus_transport_operator" | "other"
 and answer, only if the evidence shows it:
   "revenue_raising"  - does it raise its own revenue (tariffs, fees, fares, taxes)?
   "capex_mandate"    - does it build infrastructure / carry out capital works?

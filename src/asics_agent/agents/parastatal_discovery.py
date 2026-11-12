@@ -28,14 +28,15 @@ from asics_agent.agents.common import (
     vet_source,
 )
 from asics_agent.agents.state import MasterState
+from asics_agent.categories import ULG_UNIT_ID, agent_for
 from asics_agent.links.accessibility import check_url
 from asics_agent.links.trust import best_official, host_of, is_official_host, rate_website
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue, Parastatal, Question, RunContext
+from asics_agent.parastatal_types import FALLBACK_TYPE, TYPE_CODES, ULG_TYPE, canonical_type
 from asics_agent.progress import report
 from asics_agent.run_options import current_options
 from asics_agent.services import Services
-from asics_agent.verticals import CITY_UNIT_ID, agent_for
 
 MAX_CANDIDATES = 4
 
@@ -115,28 +116,28 @@ def building_on_earlier(state: MasterState) -> bool:
 
 
 def build_parastatal_discovery(services: Services):
-    def city_government(state: MasterState) -> dict:
-        """Verticals that assess the city government itself (e.g. UPD): one unit, the ULG.
+    def ulg(state: MasterState) -> dict:
+        """The ULG category assesses the city government itself: one unit, the ULG.
         Nothing to discover; it is then profiled like a parastatal (Act, official website)."""
         run = state["run"]
-        known = [p for p in state.get("known_parastatals") or [] if p.id == CITY_UNIT_ID]
+        known = [p for p in state.get("known_parastatals") or [] if p.id == ULG_UNIT_ID]
         unit = (
             known[0]
             if known
             else Parastatal(
-                id=CITY_UNIT_ID,
+                id=ULG_UNIT_ID,
                 name=run.ulg or f"{run.city_name} city government",
-                type="city_government",
+                type=ULG_TYPE,
                 found_by="Your team",
-                why_included="The city government is what this vertical assesses.",
+                why_included="The city government is what this category assesses.",
             )
         )
         return {"parastatals": [unit]}
 
     def discover(state: MasterState) -> dict:
         run = state["run"]
-        if services.settings.unit == "city_government":
-            return city_government(state)
+        if services.settings.unit == "ulg":
+            return ulg(state)
         known = list(state.get("known_parastatals") or [])
         if state.get("skip_research"):
             return {"parastatals": known}
@@ -184,12 +185,9 @@ def build_parastatal_discovery(services: Services):
         parastatals = list(known)
         added = []
         for item in reply.parastatals:
-            kind = (
-                item.type
-                if item.type
-                in {"water_supply_board", "transport_corporation", "development_authority"}
-                else "other"
-            )
+            kind = canonical_type(item.type or "")
+            if kind not in TYPE_CODES:  # unknown or missing: the common questions only
+                kind = FALLBACK_TYPE
             evidence = [u for u in item.evidence_urls if u in urls]
             reason = item.why_included.strip()
             if item.status == "needs_review" and not reason.upper().startswith("NEEDS REVIEW"):

@@ -19,6 +19,7 @@ from openpyxl.styles import Alignment, Font
 from asics_agent.cities import FLAGS, TYPE_LABELS, TYPES, YES
 from asics_agent.links.manual import apply_saved_copies
 from asics_agent.models import ALL_PARASTATALS, Issue, Parastatal, Question, Source, WebsiteCheck
+from asics_agent.parastatal_types import ULG_TYPE_LABEL, canonical_type, known_type
 from asics_agent.workbook import (
     _FILLS,
     _HEADER_FILL,
@@ -29,6 +30,9 @@ from asics_agent.workbook import (
     _saved_copy,
     _write_issue_sheets,
     _write_rows,
+    canonical_header,
+    relabel_unit,
+    unit_sheet,
 )
 
 PARASTATALS_SHEET, CITATIONS_SHEET, COVERAGE_SHEET = "Parastatals", "Citation Sheet", "Coverage"
@@ -67,6 +71,10 @@ CITATION_COLUMNS = [
     ("Notes", []),
     ("Your Notes", []),
     ("Last Checked", []),
+    # When the cited text or version took effect (or its "amended up to" date), and whether that is
+    # on or before the Law/Policy cut-off. Optional on read: older sheets don't have them.
+    ("Effective / As-of Date", []),
+    ("Cut-off Check", []),
 ]
 COVERAGE_COLUMNS = [
     ("Parastatal", []),
@@ -106,7 +114,12 @@ GUIDE = [
         "evidence/manual/<Citation ID>.pdf (or .html or .txt), for example "
         "evidence/manual/BWSSB-07.pdf, in this city's folder. Then set Use for Answers? to Yes "
         "and run Step 1 again (or Step 2). The tool reads your saved copy, and Needs Attention "
-        "says if it can't be used.",
+        "says if it can't be used.\n"
+        'Effective / As-of Date is when the cited text or version took effect, or its "amended up '
+        'to" date; it is not the page\'s "last updated" date. Cut-off Check says whether that is '
+        "on or before the Law/Policy cut-off: ok, later, unknown or Bill-draft. A later or Bill-draft "
+        "source is not used for Law/Policy questions (it can still be used for Implementation "
+        "questions); an unknown one is used with a CONFIRM note. You can correct both columns.",
     ),
     (
         "3. Coverage sheet",
@@ -115,6 +128,33 @@ GUIDE = [
     ),
     ("Your Notes", "Write anything in the Your Notes columns; they are never overwritten."),
     ("When you're done", "Save and close this file, then run Step 2 (Answer questions)."),
+]
+
+GUIDE_ULG = [
+    ("Sources for {city}", ""),
+    ("", ""),
+    (
+        "What this is",
+        "The city's ULG (urban local government) and the sources for {city}. Step 2 (Answer "
+        'questions) uses ONLY the Citation Sheet rows marked "Use for Answers? = Yes", so this '
+        "workbook controls exactly what the answers can rely on.",
+    ),
+    (
+        "1. ULG sheet",
+        "The city's ULG: its Act, its official website and how far that website can be "
+        "trusted, point by point (the Website Check column). Each ULG question is answered once "
+        "per city.",
+    ),
+    (
+        GUIDE[4][0],
+        GUIDE[4][1].replace(
+            'Parastatal (an ID from the Parastatals sheet, or "All parastatals")',
+            "ULG (the ID on the ULG sheet)",
+        ),
+    ),
+    GUIDE[5],
+    GUIDE[6],
+    GUIDE[7],
 ]
 
 
@@ -166,7 +206,7 @@ def _cell_url(cell) -> str:
 
 
 def _rows(ws):
-    header = {_norm(c.value): i for i, c in enumerate(ws[1]) if c.value}
+    header = {_norm(canonical_header(c.value)): i for i, c in enumerate(ws[1]) if c.value}
     for row_no, row in enumerate(ws.iter_rows(min_row=2), start=2):
 
         def get(name, _row=row):
@@ -207,7 +247,8 @@ def read_sources_workbook(path: Path, cache_dir: Path):
         )
 
     wb = load_workbook(path, data_only=True)
-    for sheet in (PARASTATALS_SHEET, CITATIONS_SHEET):
+    units = unit_sheet(wb.sheetnames)
+    for sheet in (units, CITATIONS_SHEET):
         if sheet not in wb.sheetnames:
             team(
                 "error",
@@ -216,15 +257,13 @@ def read_sources_workbook(path: Path, cache_dir: Path):
             return [], [], issues
 
     parastatals: list[Parastatal] = []
-    for row_no, get, url in _rows(wb[PARASTATALS_SHEET]):
+    for row_no, get, url in _rows(wb[units]):
         pid = re.sub(r"\s+", "", get("Parastatal ID")).upper()
-        where = f"Parastatals sheet, row {row_no}"
+        where = f"{units} sheet, row {row_no}"
         if not pid or not get("Parastatal Name"):
             team("error", f"{where}: every parastatal needs an ID and a name.")
             continue
-        kind = next(
-            (code for label, code in TYPES.items() if label.lower() == get("Type").lower()), None
-        )
+        kind = canonical_type(get("Type")) if known_type(get("Type")) else None  # old names read
         if kind is None:
             team("error", f"{where}: the Type of {pid} must be one of: {', '.join(TYPES)}.", pid)
             continue
@@ -271,7 +310,7 @@ def read_sources_workbook(path: Path, cache_dir: Path):
         if owner != ALL_PARASTATALS and owner not in ids:
             team(
                 "warning",
-                f'{where}: "{get("Parastatal")}" isn\'t on the Parastatals sheet. '
+                f'{where}: "{get("Parastatal")}" isn\'t on the {units} sheet. '
                 f'Use an ID from that sheet or "{ALL_PARASTATALS}".',
             )
             continue
@@ -303,6 +342,8 @@ def read_sources_workbook(path: Path, cache_dir: Path):
                 notes=get("Notes"),
                 team_notes=get("Your Notes"),
                 checked_at=get("Last Checked"),
+                effective_date=get("Effective / As-of Date"),
+                cutoff_check=get("Cut-off Check"),
                 content_path=text_path,
                 snapshot_path=copy_path,
             )
@@ -323,6 +364,7 @@ def write_sources_workbook(
     questions: dict[str, Question],
     applicability: dict[str, list[str]],
     issues: list[Issue],
+    unit_label: str = "Parastatal",
 ) -> Path:
     """Write the Sources workbook, backing up any previous version to history/."""
     if path.exists():
@@ -336,7 +378,7 @@ def write_sources_workbook(
     guide.title = "How to Use"
     guide.column_dimensions["A"].width = 26
     guide.column_dimensions["B"].width = 100
-    for a, b in GUIDE:
+    for a, b in GUIDE_ULG if unit_label == "ULG" else GUIDE:
         guide.append([a.format(city=city_name), b.format(city=city_name)])
     guide["A1"].font = Font(bold=True, size=14)
     for r in range(3, guide.max_row + 1):
@@ -397,7 +439,7 @@ def write_sources_workbook(
             )
             ws.cell(row=r, column=mapping["Website Check"]).fill = _FILLS[colour]
     _add_dropdown(ws, mapping["Include?"], ["Yes", "No"])
-    _add_dropdown(ws, mapping["Type"], list(TYPES))
+    _add_dropdown(ws, mapping["Type"], [*TYPES, ULG_TYPE_LABEL])  # the ULG row has its own type
     for label in FLAGS:
         _add_dropdown(ws, mapping[label], ["Yes", "No"])
 
@@ -412,6 +454,8 @@ def write_sources_workbook(
             "Verification Status": 24,
             "Notes": 55,
             "Your Notes": 30,
+            "Effective / As-of Date": 16,
+            "Cut-off Check": 14,
         },
     )
     ordered = sorted(sources, key=lambda s: (s.parastatal_id, s.citation_id))
@@ -439,6 +483,8 @@ def write_sources_workbook(
                     "Notes": s.notes,
                     "Your Notes": s.team_notes,
                     "Last Checked": s.checked_at,
+                    "Effective / As-of Date": s.effective_date,
+                    "Cut-off Check": s.cutoff_check,
                 },
             )
             for s in ordered
@@ -446,6 +492,7 @@ def write_sources_workbook(
         ["Citation ID"],
     )
     _add_dropdown(ws, mapping["Use for Answers?"], ["Yes", "No"])
+    _add_dropdown(ws, mapping["Cut-off Check"], ["ok", "later", "unknown", "Bill-draft"])
 
     ws = _new_sheet(
         wb, COVERAGE_SHEET, COVERAGE_COLUMNS, {"Question": 60, "Citations": 30, "Coverage": 40}
@@ -486,6 +533,7 @@ def write_sources_workbook(
         cell.fill = _HEADER_FILL
 
     _write_issue_sheets(wb, issues)
+    relabel_unit(wb, unit_label)
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
         wb.save(path)

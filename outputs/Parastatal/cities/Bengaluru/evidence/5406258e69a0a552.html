@@ -1,0 +1,3161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>
+        BWSSB | Bangalore Water Supply and Sewerage Board | SAJALA
+    </title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Bangalore Water Supply and Sewerage Board (BWSSB) – SAJALA revenue billing, water bill payment, citizen services and online services.">
+
+    <meta name="keywords"
+          content="BWSSB, SAJALA, Bangalore Water Supply, water bill, water payment, revenue billing, citizen services">
+
+    <meta name="author"
+          content="Bangalore Water Supply and Sewerage Board">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <meta name="theme-color"
+          content="#0E4D92">
+
+    <link href="css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <style>
+
+        .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+        /* =========================================================
+           GLOBAL
+        ========================================================== */
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333333;
+            background: #ffffff;
+            --text-scale: 1;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            color: #0E4D92;
+        }
+
+            a:hover {
+                color: #083763;
+            }
+
+            a:focus,
+            button:focus,
+            input:focus {
+                outline: 3px solid #ffbf47;
+                outline-offset: 2px;
+            }
+
+
+        /* =========================================================
+           SKIP LINK
+        ========================================================== */
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            z-index: 99999;
+            background: #000000;
+            color: #ffffff;
+            padding: 12px 18px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+            .skip-link:focus {
+                left: 10px;
+            }
+
+
+        /* =========================================================
+           TOP GOVERNMENT HEADER
+        ========================================================== */
+
+        .top-bar {
+            background: #f4f8fc;
+            border-bottom: 1px solid #cbd8e4;
+        }
+
+        .top-bar-container {
+            max-width: 1280px;
+            min-height: 92px;
+            margin: 0 auto;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .top-government-brand {
+            display: flex;
+            align-items: center;
+        }
+
+            .top-government-brand a {
+                display: flex;
+                align-items: center;
+                gap: 14px;
+                text-decoration: none;
+            }
+
+        .gov-logo {
+            width: auto;
+            height: 65px;
+            max-width: 360px;
+            object-fit: contain;
+        }
+
+        .gov-title {
+            color: #123b5d;
+            font-size: 21px;
+            font-weight: 700;
+            white-space: nowrap;
+            line-height: 1.3;
+        }
+
+        .bwssb-top-logo {
+            width: auto;
+            height: 70px;
+            max-width: 330px;
+            object-fit: contain;
+        }
+
+
+        /* =========================================================
+           MAIN HEADER
+        ========================================================== */
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #d4dce4;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+        }
+
+        .header-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 18px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 35px;
+        }
+
+
+        /* =========================================================
+           DIGITAL INDIA + NIC
+        ========================================================== */
+
+        .header-branding {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            flex-shrink: 0;
+        }
+
+            .header-branding a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+
+        .digital-logo,
+        .nic-logo {
+            width: auto;
+            height: 70px;
+            max-width: 175px;
+            object-fit: contain;
+        }
+
+        .branding-divider {
+            width: 1px;
+            height: 55px;
+            background: #c7d1db;
+        }
+
+
+        /* =========================================================
+           HEADER TOOLS
+        ========================================================== */
+
+        .header-tools {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 12px;
+        }
+
+
+        /* =========================================================
+           SEARCH
+        ========================================================== */
+
+        .site-search {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            margin: 0;
+        }
+
+            .site-search label {
+                color: #333333;
+                font-size: 15px;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+            .site-search input {
+                width: 320px;
+                height: 42px;
+                padding: 8px 13px;
+                border: 1px solid #777777;
+                border-radius: 5px;
+                background: #ffffff;
+                color: #222222;
+                font-size: 15px;
+            }
+
+            .site-search button {
+                height: 42px;
+                padding: 8px 20px;
+                border: 1px solid #0E4D92;
+                border-radius: 5px;
+                background: #0E4D92;
+                color: #ffffff;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+            }
+
+                .site-search button:hover,
+                .site-search button:focus {
+                    background: #083763;
+                }
+
+
+        /* =========================================================
+           SOCIAL / LANGUAGE / ACCESSIBILITY
+        ========================================================== */
+
+        .header-social-row {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+            .social-links a,
+            .language-btn,
+            .accessibility-tools button {
+                min-height: 36px;
+                padding: 6px 12px;
+                border: 1px solid #0E4D92;
+                border-radius: 5px;
+                background: #ffffff;
+                color: #0E4D92;
+                font-size: 13px;
+                font-weight: 700;
+                text-decoration: none;
+            }
+
+            .social-links a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+                .social-links a:hover,
+                .social-links a:focus,
+                .language-btn:hover,
+                .language-btn:focus,
+                .language-btn.active {
+                    background: #0E4D92;
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding-left: 12px;
+            margin-left: 2px;
+            border-left: 1px solid #c7d1db;
+        }
+
+        .language-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 72px;
+        }
+
+        .accessibility-tools {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 7px;
+            flex-wrap: wrap;
+        }
+
+            .accessibility-tools button {
+                cursor: pointer;
+            }
+
+                .accessibility-tools button:hover,
+                .accessibility-tools button:focus {
+                    background: #0E4D92;
+                    color: #ffffff;
+                }
+
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================== */
+
+        .main-navigation {
+            background: #0E4D92;
+            border-bottom: 3px solid #083763;
+        }
+
+            .main-navigation ul {
+                max-width: 1280px;
+                list-style: none;
+                margin: 0 auto;
+                padding: 0 20px;
+                display: flex;
+                align-items: stretch;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .main-navigation li {
+                margin: 0;
+                padding: 0;
+            }
+
+            .main-navigation a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 48px;
+                padding: 11px 17px;
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 15px;
+                font-weight: 700;
+                border-right: 1px solid rgba(255,255,255,0.25);
+            }
+
+                .main-navigation a:hover,
+                .main-navigation a:focus {
+                    background: #083763;
+                    color: #ffffff;
+                    text-decoration: underline;
+                }
+
+
+        /* =========================================================
+           BREADCRUMB
+        ========================================================== */
+
+        .breadcrumb-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 16px 25px 0;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 0;
+            padding: 9px 13px;
+            background: #f6f8fa;
+            border: 1px solid #d9e0e6;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           SEARCH RESULTS
+        ========================================================== */
+
+        .search-result-container {
+            display: none;
+            max-width: 1280px;
+            margin: 15px auto 0;
+            padding: 0 25px;
+        }
+
+        .search-result-box {
+            padding: 18px 20px;
+            background: #f2f6fa;
+            border: 1px solid #c9d8e6;
+            border-left: 6px solid #0E4D92;
+            border-radius: 5px;
+        }
+
+            .search-result-box h2 {
+                margin: 0 0 8px;
+                color: #0E4D92;
+                font-size: 22px;
+            }
+
+        .search-result-item {
+            padding: 9px 0;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+            .search-result-item:last-child {
+                border-bottom: none;
+            }
+
+        .search-no-result {
+            color: #a00000;
+            font-weight: 700;
+        }
+
+        .search-highlight {
+            background: #fff176;
+            color: #000000;
+            padding: 1px 3px;
+            border-radius: 2px;
+        }
+
+
+        /* =========================================================
+           MAIN CONTENT
+        ========================================================== */
+
+        .page-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 28px 25px 45px;
+        }
+
+        .intro-section {
+            margin-bottom: 38px;
+        }
+
+            .intro-section h1 {
+                margin: 0 0 18px;
+                color: #0E4D92;
+                font-size: calc(32px * var(--text-scale));
+                line-height: 1.3;
+            }
+
+            .intro-section h2 {
+                margin: 28px 0 12px;
+                color: #0E4D92;
+                font-size: calc(25px * var(--text-scale));
+            }
+
+            .intro-section p {
+                margin-bottom: 15px;
+            }
+
+            .intro-section ul {
+                padding-left: 25px;
+            }
+
+            .intro-section li {
+                margin-bottom: 7px;
+            }
+
+
+        /* =========================================================
+           SERVICES
+        ========================================================== */
+
+        .services-section {
+            margin-top: 30px;
+        }
+
+            .services-section h2 {
+                margin: 0 0 20px;
+                color: #0E4D92;
+                font-size: calc(28px * var(--text-scale));
+            }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .service-card {
+            min-height: 225px;
+            display: flex;
+            flex-direction: column;
+            padding: 23px;
+            background: #ffffff;
+            border: 1px solid #d3d9df;
+            border-radius: 7px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+            .service-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 14px rgba(0,0,0,0.12);
+            }
+
+            .service-card h3 {
+                margin: 0 0 12px;
+                color: #0E4D92;
+                font-size: calc(21px * var(--text-scale));
+                line-height: 1.4;
+            }
+
+            .service-card p {
+                flex-grow: 1;
+                margin: 0 0 18px;
+            }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            align-self: flex-start;
+            padding: 9px 15px;
+            background: #0E4D92;
+            color: #ffffff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+            .service-link:hover,
+            .service-link:focus {
+                background: #083763;
+                color: #ffffff;
+                text-decoration: underline;
+            }
+
+
+        /* =========================================================
+           DOWNLOADS
+        ========================================================== */
+
+        .downloads {
+            margin-top: 35px;
+            padding: 22px 25px;
+            background: #f2f6fa;
+            border: 1px solid #c9d8e6;
+            border-left: 6px solid #0E4D92;
+            border-radius: 5px;
+        }
+
+            .downloads a {
+                display: inline-block;
+                padding: 10px 17px;
+                background: #0E4D92;
+                color: #ffffff;
+                border-radius: 4px;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+                .downloads a:hover,
+                .downloads a:focus {
+                    background: #083763;
+                    color: #ffffff;
+                }
+
+            .downloads strong {
+                display: block;
+                margin-top: 12px;
+                color: #333333;
+            }
+
+
+        /* =========================================================
+           SAJALA LOGIN
+        ========================================================== */
+
+        .sajala-login {
+            margin-top: 35px;
+            padding: 28px;
+            text-align: center;
+            background: #f2f6fa;
+            border: 1px solid #c9d8e6;
+            border-left: 6px solid #0E4D92;
+            border-radius: 5px;
+        }
+
+            .sajala-login h2 {
+                margin: 0 0 10px;
+                color: #0E4D92;
+                font-size: calc(25px * var(--text-scale));
+            }
+
+            .sajala-login p {
+                margin: 0 0 18px;
+            }
+
+        .sajala-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 24px;
+            background: #0E4D92;
+            color: #ffffff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+            .sajala-button:hover,
+            .sajala-button:focus {
+                background: #083763;
+                color: #ffffff;
+            }
+
+
+        /* =========================================================
+           LAST UPDATED
+        ========================================================== */
+
+        .last-updated {
+            margin-top: 35px;
+            padding-top: 13px;
+            border-top: 1px solid #dddddd;
+            color: #444444;
+            font-size: 14px;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================== */
+
+        .site-footer {
+            margin-top: 0;
+            background: #0E4D92;
+            color: #ffffff;
+        }
+
+        .footer-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 32px 25px 22px;
+        }
+
+        .footer-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 24px;
+            margin: 0 0 25px;
+            padding: 0 0 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.35);
+        }
+
+            .footer-links a {
+                color: #ffffff;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: underline;
+            }
+
+                .footer-links a:hover,
+                .footer-links a:focus {
+                    color: #ffffff;
+                }
+
+
+        /* =========================================================
+           FOOTER SOCIAL
+        ========================================================== */
+
+        .footer-social {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+            .footer-social h2 {
+                margin: 0 0 12px;
+                font-size: 18px;
+            }
+
+            .footer-social a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 95px;
+                margin: 3px;
+                padding: 7px 13px;
+                border: 1px solid #ffffff;
+                border-radius: 4px;
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+                .footer-social a:hover,
+                .footer-social a:focus {
+                    background: #ffffff;
+                    color: #0E4D92;
+                }
+
+
+        /* =========================================================
+           FOOTER POWERED
+        ========================================================== */
+
+        .footer-powered {
+            display: grid;
+            grid-template-columns: 180px minmax(0, 1fr) 180px;
+            align-items: center;
+            gap: 35px;
+            padding: 25px 0;
+            border-top: 1px solid rgba(255,255,255,0.35);
+            border-bottom: 1px solid rgba(255,255,255,0.35);
+        }
+
+        .footer-nic-logo,
+        .footer-gov-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .footer-nic-logo img {
+                width: auto;
+                max-width: 155px;
+                max-height: 75px;
+                object-fit: contain;
+            }
+
+            .footer-gov-logo img {
+                width: auto;
+                max-width: 155px;
+                max-height: 90px;
+                object-fit: contain;
+            }
+
+        .footer-powered-text {
+            text-align: center;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+            .footer-powered-text strong {
+                display: block;
+                margin-bottom: 7px;
+                font-size: 16px;
+            }
+
+            .footer-powered-text div {
+                margin-bottom: 3px;
+            }
+
+            .footer-powered-text .copyright {
+                margin-top: 9px;
+                font-size: 13px;
+                opacity: 0.95;
+            }
+
+        .footer-bottom {
+            padding-top: 18px;
+            text-align: center;
+            font-size: 13px;
+            opacity: 0.95;
+        }
+
+
+        /* =========================================================
+           COLOR BLIND MODE
+        ========================================================== */
+
+        body.color-blind-mode {
+            background: #ffffff;
+            color: #000000;
+        }
+
+            body.color-blind-mode a {
+                color: #0000EE;
+            }
+
+            body.color-blind-mode .top-bar,
+            body.color-blind-mode .site-header {
+                background: #ffffff;
+                color: #000000;
+            }
+
+            body.color-blind-mode .main-navigation,
+            body.color-blind-mode .site-footer {
+                background: #000000;
+            }
+
+                body.color-blind-mode .main-navigation a,
+                body.color-blind-mode .site-footer a {
+                    color: #ffffff;
+                }
+
+            body.color-blind-mode .service-card {
+                background: #ffffff;
+                color: #000000;
+                border: 2px solid #000000;
+                box-shadow: none;
+            }
+
+                body.color-blind-mode .service-card h3,
+                body.color-blind-mode .services-section h2,
+                body.color-blind-mode .intro-section h1,
+                body.color-blind-mode .intro-section h2,
+                body.color-blind-mode .sajala-login h2 {
+                    color: #000000;
+                }
+
+            body.color-blind-mode .service-link,
+            body.color-blind-mode .sajala-button {
+                background: #000000;
+                color: #ffffff;
+                border: 2px solid #000000;
+            }
+
+            body.color-blind-mode .search-result-box,
+            body.color-blind-mode .downloads,
+            body.color-blind-mode .sajala-login {
+                background: #ffffff;
+                color: #000000;
+                border: 2px solid #000000;
+            }
+
+
+        /* =========================================================
+           FONT SIZE MODES
+        ========================================================== */
+
+        body.font-size-small {
+            font-size: 14px;
+        }
+
+        body.font-size-normal {
+            font-size: 16px;
+        }
+
+        body.font-size-large {
+            font-size: 18px;
+        }
+
+        body.font-size-xlarge {
+            font-size: 20px;
+        }
+
+        body.font-size-xxlarge {
+            font-size: 22px;
+        }
+
+
+        /* =========================================================
+           TABLET
+        ========================================================== */
+
+        @media (max-width: 1100px) {
+
+            .top-bar-container {
+                padding: 12px 20px;
+            }
+
+            .header-container {
+                padding: 18px 20px;
+                gap: 25px;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-powered {
+                grid-template-columns: 150px minmax(0, 1fr) 150px;
+                gap: 20px;
+            }
+        }
+
+
+        /* =========================================================
+           TABLET / SMALL LAPTOP
+        ========================================================== */
+
+        @media (max-width: 992px) {
+
+            .top-bar-container {
+                min-height: auto;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                padding: 12px 20px;
+                gap: 10px;
+            }
+
+            .top-government-brand a {
+                justify-content: center;
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .header-branding {
+                justify-content: center;
+            }
+
+            .header-tools {
+                align-items: center;
+            }
+
+            .site-search {
+                justify-content: center;
+            }
+
+            .header-social-row,
+            .accessibility-tools {
+                justify-content: center;
+            }
+
+            .main-navigation ul {
+                justify-content: center;
+            }
+
+            .footer-powered {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-nic-logo {
+                order: 1;
+            }
+
+            .footer-powered-text {
+                order: 2;
+            }
+
+            .footer-gov-logo {
+                order: 3;
+            }
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================== */
+
+        @media (max-width: 768px) {
+
+            .top-bar-container {
+                padding: 12px 15px;
+            }
+
+            .top-government-brand a {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .gov-logo {
+                height: 52px;
+            }
+
+            .gov-title {
+                font-size: 18px;
+            }
+
+            .bwssb-top-logo {
+                height: 58px;
+            }
+
+            .header-container {
+                padding: 16px 15px;
+            }
+
+            .header-branding {
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+
+            .digital-logo,
+            .nic-logo {
+                height: 55px;
+            }
+
+            .branding-divider {
+                height: 42px;
+            }
+
+            .site-search {
+                width: 100%;
+                display: grid;
+                grid-template-columns: auto minmax(0, 1fr) auto;
+                justify-content: stretch;
+            }
+
+                .site-search input {
+                    width: 100%;
+                }
+
+            .header-social-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .language-switcher {
+                margin-left: 0;
+                padding-left: 0;
+                border-left: none;
+            }
+
+            .accessibility-tools {
+                width: 100%;
+            }
+
+            .main-navigation ul {
+                flex-direction: column;
+                padding: 0;
+            }
+
+            .main-navigation a {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.25);
+            }
+
+            .breadcrumb-container {
+                padding: 12px 15px 0;
+            }
+
+            .search-result-container {
+                padding: 0 15px;
+            }
+
+            .page-container {
+                padding: 22px 15px 35px;
+            }
+
+            .intro-section h1 {
+                font-size: 27px;
+            }
+
+            .intro-section h2 {
+                font-size: 23px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .service-card {
+                min-height: auto;
+            }
+
+            .downloads {
+                padding: 18px;
+            }
+
+                .downloads a {
+                    width: 100%;
+                    text-align: center;
+                }
+
+            .sajala-login {
+                padding: 22px 18px;
+            }
+
+            .sajala-button {
+                width: 100%;
+            }
+
+            .footer-container {
+                padding: 28px 15px 20px;
+            }
+
+            .footer-links {
+                gap: 9px 18px;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL MOBILE
+        ========================================================== */
+
+        @media (max-width: 480px) {
+
+            body {
+                font-size: 15px;
+            }
+
+            .gov-logo {
+                height: 45px;
+            }
+
+            .gov-title {
+                font-size: 16px;
+            }
+
+            .bwssb-top-logo {
+                height: 50px;
+            }
+
+            .header-branding {
+                gap: 10px;
+            }
+
+            .digital-logo,
+            .nic-logo {
+                height: 48px;
+            }
+
+            .branding-divider {
+                display: none;
+            }
+
+            .site-search {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+                .site-search label {
+                    text-align: left;
+                }
+
+                .site-search input,
+                .site-search button {
+                    width: 100%;
+                }
+
+            .social-links {
+                width: 100%;
+                justify-content: center;
+            }
+
+                .social-links a {
+                    flex: 1;
+                }
+
+            .language-switcher {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .accessibility-tools {
+                justify-content: center;
+            }
+
+                .accessibility-tools button {
+                    flex: 1;
+                    min-width: 55px;
+                }
+
+            .intro-section h1 {
+                font-size: 24px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .footer-social a {
+                width: 100%;
+                margin: 3px 0;
+            }
+
+            .footer-powered-text {
+                font-size: 13px;
+            }
+        }
+
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         SKIP LINK
+    ========================================================== -->
+
+    <a class="skip-link"
+       href="#main-content">
+        Skip to main content
+    </a>
+
+
+    <!-- =========================================================
+         GOVERNMENT TOP BAR
+    ========================================================== -->
+
+    <div class="top-bar">
+
+        <div class="top-bar-container">
+
+            <div class="top-government-brand">
+
+                <a href="index.html"
+                   aria-label="Government of Karnataka">
+
+                    <img src="images/Gv-Kn-Logo.png"
+                         alt="Government of Karnataka"
+                         class="gov-logo">
+
+                    <span class="gov-title">
+                        Government of Karnataka
+                    </span>
+
+                </a>
+
+            </div>
+
+
+            <div class="top-government-brand">
+
+                <a href="index.html"
+                   aria-label="Bangalore Water Supply and Sewerage Board">
+
+                    <img src="images/logo.png"
+                         alt="Bangalore Water Supply and Sewerage Board"
+                         class="bwssb-top-logo">
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MAIN HEADER
+    ========================================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <div class="header-branding">
+
+                <a href="index.html"
+                   aria-label="Digital India">
+
+                    <img src="images/Digital.jpg"
+                         alt="Digital India"
+                         class="digital-logo">
+
+                </a>
+
+                <span class="branding-divider"
+                      aria-hidden="true"></span>
+
+                <a href="index.html"
+                   aria-label="National Informatics Centre">
+
+                    <img src="images/NIClogo.png"
+                         alt="National Informatics Centre logo"
+                         class="nic-logo">
+
+                </a>
+
+            </div>
+
+
+            <div class="header-tools">
+
+                <form class="site-search"
+                      id="siteSearchForm"
+                      role="search">
+
+                    <label for="siteSearch">
+                        Search
+                    </label>
+
+                    <input type="search"
+                           id="siteSearch"
+                           name="q"
+                           placeholder="Search website"
+                           aria-label="Search website"
+                           autocomplete="off">
+
+                    <button type="submit">
+                        Search
+                    </button>
+
+                </form>
+
+
+                <div class="header-social-row">
+
+                    <div class="social-links"
+                         aria-label="Social media links">
+
+                        <a href="https://x.com/chairmanbwssb?lang=en"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="external-link">
+                            X <span aria-hidden="true">↗</span>
+                            <span class="visually-hidden">
+                                External website, opens in a new window
+                            </span>
+                        </a>
+
+                        <a href="https://www.instagram.com/official_bwssb/?hl=en"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="external-link">
+                            Instagram <span aria-hidden="true">↗</span>
+                            <span class="visually-hidden">
+                                External website, opens in a new window
+                            </span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="language-switcher"
+                         aria-label="Language selection">
+
+                        <a href="index.html"
+                           class="language-btn"
+                           aria-label="English">
+                            English
+                        </a>
+
+                        <a href="index_ka.html"
+                           class="language-btn active"
+                           aria-label="Kannada">
+                            ಕನ್ನಡ
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="accessibility-tools"
+                     aria-label="Accessibility options">
+
+                    <button type="button"
+                            id="colorBlindButton"
+                            aria-pressed="false">
+                        Color Blind Mode
+                    </button>
+
+                    <button type="button"
+                            id="increaseFontButton"
+                            aria-label="Increase font size">
+                        A+
+                    </button>
+
+                    <button type="button"
+                            id="decreaseFontButton"
+                            aria-label="Decrease font size">
+                        A-
+                    </button>
+
+                    <button type="button"
+                            id="resetFontButton"
+                            aria-label="Reset font size">
+                        A
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
+
+    <nav class="main-navigation"
+         aria-label="Main navigation">
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Ministry/Department
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Offerings
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Documents
+                </a>
+            </li>
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Feedback
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Help
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Contact Us
+                </a>
+            </li>
+
+            <li>
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Terms & Conditions
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.india.gov.in/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    National Portal of India
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- =========================================================
+         BREADCRUMB
+    ========================================================== -->
+
+    <div class="breadcrumb-container">
+
+        <div class="breadcrumb"
+             aria-label="Breadcrumb">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <span aria-hidden="true">
+                &gt;
+            </span>
+
+            <span>
+                BWSSB Billing Services
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         SEARCH RESULTS
+    ========================================================== -->
+
+    <div class="search-result-container"
+         id="searchResultContainer">
+
+        <div class="search-result-box"
+             id="searchResultBox"
+             role="region"
+             aria-live="polite"
+             aria-label="Search results">
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         MAIN CONTENT
+    ========================================================== -->
+
+    <main id="main-content">
+
+        <div class="page-container">
+
+            <section class="intro-section"
+                     aria-labelledby="page-title">
+
+                <h1 id="page-title">
+                    BWSSB Billing Services – Version 2.0
+                </h1>
+
+                <p>
+                    Bangalore Water Supply and Sewerage Board (BWSSB)
+                    has developed web-based consumer-friendly applications
+                    for revenue billing, collection, online payment and
+                    citizen services.
+                </p>
+
+                <h2>
+                    Major Services
+                </h2>
+
+                <p>
+                    <strong>1. SAJALA</strong>
+                    – Centralized Billing and Collection System which forms
+                    an important IT system component of BWSSB. It maintains
+                    consumer billing and revenue collection information.
+                    Billing activity is carried out through hand-held spot
+                    billing devices with GPRS technology.
+                </p>
+
+                <p>
+                    <strong>2. Payment Portal</strong>
+                    – BWSSB provides citizens with online payment options
+                    for water bills.
+                </p>
+
+                <p>
+                    <strong>3. Consumer-oriented Services</strong>
+                    – Citizen services include:
+                </p>
+
+                <ul>
+
+                    <li>
+                        Replacement of faulty meters
+                    </li>
+
+                    <li>
+                        Testing of faulty meters
+                    </li>
+
+                    <li>
+                        Transfer of ownership
+                    </li>
+
+                    <li>
+                        Issuing of Certificate for Non-Availability of Water
+                        from the water supply agency required for NOC for
+                        water abstraction from the ground water authority
+                    </li>
+
+                    <li>
+                        Permission for drilling new borewells within BBMP limits
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- =====================================================
+                 ONLINE SERVICES
+            ====================================================== -->
+
+            <section class="services-section"
+                     aria-labelledby="online-services-title">
+
+                <h2 id="online-services-title">
+                    Online Services
+                </h2>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+
+                        <h3>
+                            SAJALA
+                        </h3>
+
+                        <p>
+                            Revenue Billing and Collection System.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/home.htm">
+                            Access SAJALA
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Payment Portal
+                        </h3>
+
+                        <p>
+                            Online payment portal for SAJALA.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/bwssb_onlinepg/quickpay.aspx">
+                            Access Payment Portal
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Drilling &amp; Borewell
+                        </h3>
+
+                        <p>
+                            Citizen module for drilling and borewell services.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/DBW/">
+                            Access Drilling &amp; Borewell
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Faulty Meter
+                        </h3>
+
+                        <p>
+                            Citizen module for faulty meter reporting.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/bwssbmeter">
+                            Access Faulty Meter Service
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Meter Test
+                        </h3>
+
+                        <p>
+                            Citizen module for meter testing.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/bwssbmeter">
+                            Access Meter Test Service
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            Transfer Ownership
+                        </h3>
+
+                        <p>
+                            SAJALA ownership transfer service for citizens.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/bwssbtoc">
+                            Access Transfer Ownership
+                        </a>
+
+                    </article>
+
+
+                    <article class="service-card">
+
+                        <h3>
+                            NOC for Non-Availability of Water
+                        </h3>
+
+                        <p>
+                            NOC service for non-availability of water
+                            for citizens.
+                        </p>
+
+                        <a class="service-link"
+                           href="https://bwsajala.karnataka.gov.in/bwssbnoc">
+                            Access NOC Service
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================================
+                 DOWNLOADS
+            ====================================================== -->
+
+            <section class="downloads">
+
+                <a href="Downloads/Font.rar"
+                   aria-label="Download Barcode Fonts (RAR, 200 KB)"
+                   target="_blank"
+                   download="Font.rar (RAR, 200 KB).rar"
+                   rel="noopener noreferrer">
+                    📥 Download Barcode Fonts (RAR, 200 KB)
+                </a>
+
+                <strong>
+                    Install Adobe Reader and Barcode Fonts in your System.
+                </strong>
+
+            </section>
+
+
+            <!-- =====================================================
+                 SAJALA LOGIN
+            ====================================================== -->
+
+            <section class="sajala-login"
+                     aria-labelledby="sajala-login-title">
+
+                <h2 id="sajala-login-title">
+                    SAJALA – Revenue Billing &amp; Collection
+                </h2>
+
+                <p>
+                    Access the SAJALA Revenue Billing and Collection System.
+                </p>
+
+                <a class="sajala-button"
+                   href="https://bwsajala.karnataka.gov.in/LoginNew.aspx">
+                    Enter SAJALA
+                </a>
+
+            </section>
+
+
+            <!-- =====================================================
+                 LAST UPDATED
+            ====================================================== -->
+
+            <div class="last-updated">
+
+                <strong>
+                    Last Updated:
+                </strong>
+
+                24 September 2026
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+            <nav class="footer-links"
+                 aria-label="Footer navigation">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    About Us
+                </a>
+
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Ministry/Department
+                </a>
+
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Offerings
+                </a>
+
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Documents
+                </a>
+               
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Feedback
+                 </a>
+                             
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Help
+                 </a>
+              
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Archive
+                </a>
+
+                <a href="https://bwssb.karnataka.gov.in/en">
+                    Terms & Conditions
+                </a>
+
+
+                <a href="hyperlinking-policy.html">
+                    Hyperlinking Policy
+                </a>
+
+            </nav>
+
+
+            <div class="footer-social">
+
+                <h2>
+                    Connect with BWSSB
+                </h2>
+
+                <a href="https://x.com/chairmanbwssb?lang=en"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="external-link">
+                    X <span aria-hidden="true">↗</span>
+                    <span class="visually-hidden">
+                        External website, opens in a new window
+                    </span>
+                </a>
+
+                <a href="https://www.instagram.com/official_bwssb/?hl=en"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="external-link">
+                    Instagram <span aria-hidden="true">↗</span>
+                    <span class="visually-hidden">
+                        External website, opens in a new window
+                    </span>
+                </a>
+
+            </div>
+
+
+            <div class="footer-powered">
+
+                <div class="footer-nic-logo">
+
+                    <img src="images/NIClogo.png"
+                         alt="National Informatics Centre logo">
+
+                </div>
+
+
+                <div class="footer-powered-text">
+
+                    <strong>
+                        Content Owned by Bangalore Water Supply and
+                        Sewerage Board (BWSSB)
+                    </strong>
+
+                    <div>
+                        Developed and hosted by National Informatics Centre,
+                        Karnataka.
+                    </div>
+
+                    <div>
+                        Ministry of Electronics and Information Technology,
+                        Government of India.
+                    </div>
+
+                    <div class="copyright">
+                        © Bangalore Water Supply and Sewerage Board.
+                        All rights reserved.
+                    </div>
+
+                </div>
+
+
+                <div class="footer-gov-logo">
+
+                    <img src="images/Gv-Kn-Logo.png"
+                         alt="Government of Karnataka">
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                Official Website of Bangalore Water Supply and
+                Sewerage Board (BWSSB)
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+         OPTIMIZED JAVASCRIPT
+    ========================================================== -->
+
+    <script>
+
+        "use strict";
+
+
+        /* =========================================================
+           APPLICATION STATE
+        ========================================================== */
+
+        const BWSSB = {
+
+            fontSize: 100,
+
+            validFontSizes: [80, 90, 100, 110, 120, 130],
+
+            elements: {}
+
+        };
+
+
+        /* =========================================================
+           DOM CACHE
+        ========================================================== */
+
+        function cacheElements() {
+
+            const elements = BWSSB.elements;
+
+            elements.body =
+                document.body;
+
+            elements.searchForm =
+                document.getElementById(
+                    "siteSearchForm"
+                );
+
+            elements.searchInput =
+                document.getElementById(
+                    "siteSearch"
+                );
+
+            elements.searchResultContainer =
+                document.getElementById(
+                    "searchResultContainer"
+                );
+
+            elements.searchResultBox =
+                document.getElementById(
+                    "searchResultBox"
+                );
+
+            elements.colorBlindButton =
+                document.getElementById(
+                    "colorBlindButton"
+                );
+
+            elements.increaseFontButton =
+                document.getElementById(
+                    "increaseFontButton"
+                );
+
+            elements.decreaseFontButton =
+                document.getElementById(
+                    "decreaseFontButton"
+                );
+
+            elements.resetFontButton =
+                document.getElementById(
+                    "resetFontButton"
+                );
+
+            elements.searchableElements =
+                document.querySelectorAll(
+                    "#main-content h1, " +
+                    "#main-content h2, " +
+                    "#main-content h3, " +
+                    "#main-content p, " +
+                    "#main-content li"
+                );
+
+        }
+
+
+        /* =========================================================
+           INITIALIZE
+        ========================================================== */
+
+        function initialize() {
+
+            cacheElements();
+
+            initializeFontSize();
+
+            initializeColorBlindMode();
+
+            initializeSearch();
+
+            initializeAccessibility();
+
+        }
+
+
+        /* =========================================================
+           LOCAL STORAGE HELPERS
+        ========================================================== */
+
+        function getStorageValue(key) {
+
+            try {
+
+                return localStorage.getItem(key);
+
+            } catch (error) {
+
+                return null;
+
+            }
+
+        }
+
+
+        function setStorageValue(key, value) {
+
+            try {
+
+                localStorage.setItem(
+                    key,
+                    value
+                );
+
+            } catch (error) {
+
+                /* Storage unavailable.
+                   Page continues normally. */
+
+            }
+
+        }
+
+
+        /* =========================================================
+           FONT SIZE
+        ========================================================== */
+
+        function initializeFontSize() {
+
+            const savedSize =
+                parseInt(
+                    getStorageValue(
+                        "bwssbFontSize"
+                    ),
+                    10
+                );
+
+
+            if (
+                BWSSB.validFontSizes.includes(
+                    savedSize
+                )
+            ) {
+
+                BWSSB.fontSize =
+                    savedSize;
+
+            } else {
+
+                BWSSB.fontSize =
+                    100;
+
+            }
+
+
+            applyFontSize();
+
+        }
+
+
+        function getFontScale(size) {
+
+            switch (size) {
+
+                case 80:
+                    return "0.80";
+
+                case 90:
+                    return "0.90";
+
+                case 110:
+                    return "1.10";
+
+                case 120:
+                    return "1.20";
+
+                case 130:
+                    return "1.30";
+
+                default:
+                    return "1";
+
+            }
+
+        }
+
+
+        function applyFontSize() {
+
+            const body =
+                BWSSB.elements.body;
+
+
+            body.classList.remove(
+                "font-size-small",
+                "font-size-normal",
+                "font-size-large",
+                "font-size-xlarge",
+                "font-size-xxlarge"
+            );
+
+
+            if (BWSSB.fontSize <= 90) {
+
+                body.classList.add(
+                    "font-size-small"
+                );
+
+            }
+
+            else if (
+                BWSSB.fontSize === 100
+            ) {
+
+                body.classList.add(
+                    "font-size-normal"
+                );
+
+            }
+
+            else if (
+                BWSSB.fontSize === 110
+            ) {
+
+                body.classList.add(
+                    "font-size-large"
+                );
+
+            }
+
+            else if (
+                BWSSB.fontSize === 120
+            ) {
+
+                body.classList.add(
+                    "font-size-xlarge"
+                );
+
+            }
+
+            else {
+
+                body.classList.add(
+                    "font-size-xxlarge"
+                );
+
+            }
+
+
+            body.style.setProperty(
+                "--text-scale",
+                getFontScale(
+                    BWSSB.fontSize
+                )
+            );
+
+
+            setStorageValue(
+                "bwssbFontSize",
+                String(
+                    BWSSB.fontSize
+                )
+            );
+
+        }
+
+
+        function increaseFontSize() {
+
+            const currentIndex =
+                BWSSB.validFontSizes.indexOf(
+                    BWSSB.fontSize
+                );
+
+
+            if (
+                currentIndex >= 0 &&
+                currentIndex <
+                BWSSB.validFontSizes.length - 1
+            ) {
+
+                BWSSB.fontSize =
+                    BWSSB.validFontSizes[
+                        currentIndex + 1
+                    ];
+
+                applyFontSize();
+
+            }
+
+        }
+
+
+        function decreaseFontSize() {
+
+            const currentIndex =
+                BWSSB.validFontSizes.indexOf(
+                    BWSSB.fontSize
+                );
+
+
+            if (currentIndex > 0) {
+
+                BWSSB.fontSize =
+                    BWSSB.validFontSizes[
+                        currentIndex - 1
+                    ];
+
+                applyFontSize();
+
+            }
+
+        }
+
+
+        function resetFontSize() {
+
+            BWSSB.fontSize =
+                100;
+
+            applyFontSize();
+
+        }
+
+
+        /* =========================================================
+           COLOR BLIND MODE
+        ========================================================== */
+
+        function initializeColorBlindMode() {
+
+            const enabled =
+                getStorageValue(
+                    "bwssbColorBlindMode"
+                ) === "enabled";
+
+
+            setColorBlindMode(
+                enabled
+            );
+
+        }
+
+
+        function setColorBlindMode(enabled) {
+
+            const body =
+                BWSSB.elements.body;
+
+
+            body.classList.toggle(
+                "color-blind-mode",
+                enabled
+            );
+
+
+            setStorageValue(
+                "bwssbColorBlindMode",
+                enabled
+                    ? "enabled"
+                    : "disabled"
+            );
+
+
+            updateColorBlindButton(
+                enabled
+            );
+
+        }
+
+
+        function updateColorBlindButton(
+            enabled
+        ) {
+
+            const button =
+                BWSSB.elements.colorBlindButton;
+
+
+            button.setAttribute(
+                "aria-pressed",
+                String(enabled)
+            );
+
+
+            button.textContent =
+                enabled
+                    ? "Normal Colour"
+                    : "Color Blind Mode";
+
+        }
+
+
+        function toggleColorBlindMode() {
+
+            const body =
+                BWSSB.elements.body;
+
+
+            const enabled =
+                !body.classList.contains(
+                    "color-blind-mode"
+                );
+
+
+            setColorBlindMode(
+                enabled
+            );
+
+        }
+
+
+        /* =========================================================
+           ACCESSIBILITY EVENTS
+        ========================================================== */
+
+        function initializeAccessibility() {
+
+            BWSSB.elements.increaseFontButton
+                .addEventListener(
+                    "click",
+                    increaseFontSize
+                );
+
+
+            BWSSB.elements.decreaseFontButton
+                .addEventListener(
+                    "click",
+                    decreaseFontSize
+                );
+
+
+            BWSSB.elements.resetFontButton
+                .addEventListener(
+                    "click",
+                    resetFontSize
+                );
+
+
+            BWSSB.elements.colorBlindButton
+                .addEventListener(
+                    "click",
+                    toggleColorBlindMode
+                );
+
+        }
+
+
+        /* =========================================================
+           SEARCH INITIALIZATION
+        ========================================================== */
+
+        function initializeSearch() {
+
+            BWSSB.elements.searchForm
+                .addEventListener(
+                    "submit",
+                    function (event) {
+
+                        event.preventDefault();
+
+                        performSearch();
+
+                    }
+                );
+
+        }
+
+
+        /* =========================================================
+           SEARCH
+        ========================================================== */
+
+        function performSearch() {
+
+            const input =
+                BWSSB.elements.searchInput;
+
+            const resultContainer =
+                BWSSB.elements.searchResultContainer;
+
+            const resultBox =
+                BWSSB.elements.searchResultBox;
+
+
+            const searchText =
+                input.value.trim();
+
+
+            removeHighlights();
+
+
+            if (!searchText) {
+
+                resultBox.textContent = "";
+
+                const heading =
+                    document.createElement(
+                        "h2"
+                    );
+
+                heading.textContent =
+                    "Search";
+
+
+                const paragraph =
+                    document.createElement(
+                        "p"
+                    );
+
+                paragraph.textContent =
+                    "Please enter a word to search.";
+
+
+                resultBox.append(
+                    heading,
+                    paragraph
+                );
+
+
+                resultContainer.style.display =
+                    "block";
+
+
+                input.focus();
+
+                return;
+
+            }
+
+
+            const searchValue =
+                searchText.toLocaleLowerCase();
+
+
+            const matches = [];
+
+
+            BWSSB.elements.searchableElements
+                .forEach(
+                    function (element) {
+
+                        const text =
+                            element.textContent.trim();
+
+
+                        if (
+                            text
+                                .toLocaleLowerCase()
+                                .includes(
+                                    searchValue
+                                )
+                        ) {
+
+                            matches.push(
+                                element
+                            );
+
+                        }
+
+                    }
+                );
+
+
+            if (matches.length === 0) {
+
+                showNoResults(
+                    searchText
+                );
+
+                return;
+
+            }
+
+
+            matches.forEach(
+                function (element) {
+
+                    highlightElement(
+                        element,
+                        searchText
+                    );
+
+                }
+            );
+
+
+            renderSearchResults(
+                matches,
+                searchText
+            );
+
+
+            resultContainer.style.display =
+                "block";
+
+
+            resultContainer.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+
+        /* =========================================================
+           NO SEARCH RESULTS
+        ========================================================== */
+
+        function showNoResults(
+            searchText
+        ) {
+
+            const resultBox =
+                BWSSB.elements.searchResultBox;
+
+
+            resultBox.textContent = "";
+
+
+            const heading =
+                document.createElement(
+                    "h2"
+                );
+
+            heading.textContent =
+                "Search Results";
+
+
+            const paragraph =
+                document.createElement(
+                    "p"
+                );
+
+            paragraph.className =
+                "search-no-result";
+
+
+            paragraph.append(
+                document.createTextNode(
+                    'No results found for "'
+                )
+            );
+
+
+            const strong =
+                document.createElement(
+                    "strong"
+                );
+
+            strong.textContent =
+                searchText;
+
+
+            paragraph.append(
+                strong,
+                document.createTextNode(
+                    '".'
+                )
+            );
+
+
+            resultBox.append(
+                heading,
+                paragraph
+            );
+
+
+            BWSSB.elements.searchResultContainer
+                .style.display =
+                "block";
+
+        }
+
+
+        /* =========================================================
+           RENDER SEARCH RESULTS
+        ========================================================== */
+
+        function renderSearchResults(
+            matches,
+            searchText
+        ) {
+
+            const resultBox =
+                BWSSB.elements.searchResultBox;
+
+
+            resultBox.textContent = "";
+
+
+            const heading =
+                document.createElement(
+                    "h2"
+                );
+
+            heading.textContent =
+                "Search Results";
+
+
+            const summary =
+                document.createElement(
+                    "p"
+                );
+
+
+            summary.append(
+                document.createTextNode(
+                    "Found "
+                )
+            );
+
+
+            const count =
+                document.createElement(
+                    "strong"
+                );
+
+            count.textContent =
+                String(
+                    matches.length
+                );
+
+
+            summary.append(
+                count,
+                document.createTextNode(
+                    ' result(s) for "'
+                )
+            );
+
+
+            const query =
+                document.createElement(
+                    "strong"
+                );
+
+            query.textContent =
+                searchText;
+
+
+            summary.append(
+                query,
+                document.createTextNode(
+                    '".'
+                )
+            );
+
+
+            resultBox.append(
+                heading,
+                summary
+            );
+
+
+            const fragment =
+                document.createDocumentFragment();
+
+
+            matches.forEach(
+                function (
+                    element,
+                    index
+                ) {
+
+                    const result =
+                        document.createElement(
+                            "div"
+                        );
+
+                    result.className =
+                        "search-result-item";
+
+
+                    const resultTitle =
+                        document.createElement(
+                            "strong"
+                        );
+
+                    resultTitle.textContent =
+                        "Result " +
+                        (index + 1);
+
+
+                    const resultText =
+                        document.createElement(
+                            "div"
+                        );
+
+                    resultText.textContent =
+                        getSearchPreview(
+                            element.textContent.trim(),
+                            searchText
+                        );
+
+
+                    result.append(
+                        resultTitle,
+                        resultText
+                    );
+
+
+                    fragment.append(
+                        result
+                    );
+
+                }
+            );
+
+
+            resultBox.append(
+                fragment
+            );
+
+        }
+
+
+        /* =========================================================
+           HIGHLIGHT SEARCH TEXT
+        ========================================================== */
+
+        function highlightElement(
+            element,
+            searchText
+        ) {
+
+            const regex =
+                new RegExp(
+                    escapeRegExp(
+                        searchText
+                    ),
+                    "gi"
+                );
+
+
+            const walker =
+                document.createTreeWalker(
+                    element,
+                    NodeFilter.SHOW_TEXT
+                );
+
+
+            const textNodes = [];
+
+
+            let node;
+
+
+            while (
+                (node = walker.nextNode())
+            ) {
+
+                if (
+                    node.parentElement &&
+                    !node.parentElement.classList
+                        .contains(
+                            "search-highlight"
+                        )
+                ) {
+
+                    textNodes.push(
+                        node
+                    );
+
+                }
+
+            }
+
+
+            textNodes.forEach(
+                function (textNode) {
+
+                    const text =
+                        textNode.nodeValue;
+
+
+                    regex.lastIndex = 0;
+
+
+                    if (
+                        !regex.test(
+                            text
+                        )
+                    ) {
+
+                        regex.lastIndex = 0;
+
+                        return;
+
+                    }
+
+
+                    regex.lastIndex = 0;
+
+
+                    const fragment =
+                        document.createDocumentFragment();
+
+
+                    let lastIndex = 0;
+
+                    let match;
+
+
+                    while (
+                        (match = regex.exec(text))
+                    ) {
+
+                        if (
+                            match.index >
+                            lastIndex
+                        ) {
+
+                            fragment.append(
+                                document.createTextNode(
+                                    text.substring(
+                                        lastIndex,
+                                        match.index
+                                    )
+                                )
+                            );
+
+                        }
+
+
+                        const span =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        span.className =
+                            "search-highlight";
+
+
+                        span.textContent =
+                            match[0];
+
+
+                        fragment.append(
+                            span
+                        );
+
+
+                        lastIndex =
+                            match.index +
+                            match[0].length;
+
+                    }
+
+
+                    if (
+                        lastIndex <
+                        text.length
+                    ) {
+
+                        fragment.append(
+                            document.createTextNode(
+                                text.substring(
+                                    lastIndex
+                                )
+                            )
+                        );
+
+                    }
+
+
+                    textNode.parentNode.replaceChild(
+                        fragment,
+                        textNode
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           REMOVE SEARCH HIGHLIGHTS
+        ========================================================== */
+
+        function removeHighlights() {
+
+            const highlights =
+                document.querySelectorAll(
+                    ".search-highlight"
+                );
+
+
+            if (!highlights.length) {
+
+                return;
+
+            }
+
+
+            highlights.forEach(
+                function (highlight) {
+
+                    const parent =
+                        highlight.parentNode;
+
+
+                    parent.replaceChild(
+                        document.createTextNode(
+                            highlight.textContent
+                        ),
+                        highlight
+                    );
+
+
+                    parent.normalize();
+
+                }
+            );
+
+        }
+
+
+        /* =========================================================
+           SEARCH PREVIEW
+        ========================================================== */
+
+        function getSearchPreview(
+            text,
+            searchText
+        ) {
+
+            const lowerText =
+                text.toLocaleLowerCase();
+
+
+            const lowerSearch =
+                searchText.toLocaleLowerCase();
+
+
+            const position =
+                lowerText.indexOf(
+                    lowerSearch
+                );
+
+
+            if (position === -1) {
+
+                return text.substring(
+                    0,
+                    180
+                );
+
+            }
+
+
+            const start =
+                Math.max(
+                    0,
+                    position - 60
+                );
+
+
+            const end =
+                Math.min(
+                    text.length,
+                    position +
+                    searchText.length +
+                    100
+                );
+
+
+            let preview =
+                text.substring(
+                    start,
+                    end
+                );
+
+
+            if (start > 0) {
+
+                preview =
+                    "... " +
+                    preview;
+
+            }
+
+
+            if (end < text.length) {
+
+                preview +=
+                    " ...";
+
+            }
+
+
+            return preview;
+
+        }
+
+
+        /* =========================================================
+           ESCAPE REGEX
+        ========================================================== */
+
+        function escapeRegExp(
+            text
+        ) {
+
+            return text.replace(
+                /[.*+?^${}()|[\]\\]/g,
+                "\\$&"
+            );
+
+        }
+
+
+        /* =========================================================
+           START APPLICATION
+        ========================================================== */
+
+        if (
+            document.readyState ===
+            "loading"
+        ) {
+
+            document.addEventListener(
+                "DOMContentLoaded",
+                initialize,
+                {
+                    once: true
+                }
+            );
+
+        } else {
+
+            initialize();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+

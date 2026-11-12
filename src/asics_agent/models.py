@@ -3,15 +3,12 @@
 import hashlib
 from typing import Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
-ParastatalType = Literal[
-    "water_supply_board",
-    "transport_corporation",
-    "development_authority",
-    "other",
-    "city_government",  # verticals that assess the city government itself (e.g. UPD)
-]
+from asics_agent.parastatal_types import canonical_type, known_type
+
+# A type code from parastatal_types.py (or ULG_TYPE for the ULG unit); checked on `Parastatal`.
+ParastatalType = str
 
 Accessibility = Literal["Public", "Not human-verified"]
 VerificationStatus = Literal["Verified", "Not verified", "Human Verification Required"]
@@ -47,6 +44,8 @@ class Question(BaseModel):
     methodology: str = ""
     evidence_requirement: str = ""
     rationale: str = ""
+    # Columns the bank has that we don't use (a bank may gain columns later); kept, not dropped
+    extra: dict[str, str] = Field(default_factory=dict)
     parent_id: str | None = None
     children: list[str] = Field(default_factory=list)
 
@@ -79,6 +78,9 @@ class Parastatal(BaseModel):
     has_annual_budget: bool = True
     has_chief_executive: bool = True
     notes: str = ""
+    aliases: list[str] = Field(
+        default_factory=list
+    )  # other spellings (the register's "Other names")
     include: bool = True  # the research team's decision in the Sources workbook
     team_notes: str = ""  # the research team's own notes, never overwritten
     # Filled in by the parastatal discovery agent
@@ -89,6 +91,17 @@ class Parastatal(BaseModel):
     official_website: str = ""
     website_check: WebsiteCheck | None = None
     other_websites: list[WebsiteCheck] = Field(default_factory=list)
+
+    @field_validator("type", mode="before")
+    @classmethod
+    def _type_code(cls, value):
+        """Old names (water_supply_board, "Water supply board"...) are read as the current ones."""
+        if not isinstance(value, str):
+            return value
+        code = canonical_type(value)
+        if not known_type(code):
+            raise ValueError(f"unknown parastatal type {value!r}")
+        return code
 
 
 class CityConfig(BaseModel):
@@ -148,6 +161,11 @@ class Source(BaseModel):
     content_path: str | None = None
     snapshot_path: str | None = None
     checked_at: str = ""
+    # When the cited text or version took effect (or its "amended up to" date): not the page's
+    # "last updated" and not checked_at. And whether that is on or before the Law/Policy cut-off:
+    # ok | later | unknown | Bill-draft (see cutoff.py). Both optional: old Citation Sheets lack them.
+    effective_date: str = ""
+    cutoff_check: str = ""
     # True when the team verified this row from a copy they saved by hand (evidence/manual/)
     team_saved_copy: bool = False
 

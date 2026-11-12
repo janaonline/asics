@@ -19,6 +19,13 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.datavalidation import DataValidation
 
 from asics_agent.models import CityConfig, Issue, Parastatal
+from asics_agent.parastatal_types import (
+    LABEL_CODES,
+    ULG_TYPE,
+    canonical_type,
+    known_type,
+    type_label,
+)
 
 CITIES_SHEET, PARASTATALS_SHEET, GUIDE_SHEET = "Cities", "Parastatals", "How to Fill"
 
@@ -36,14 +43,10 @@ PARASTATAL_COLUMNS = [
     "Include in runs?",
     "Notes",
 ]
-TYPES = {
-    "Water supply board": "water_supply_board",
-    "Transport corporation": "transport_corporation",
-    "Development authority": "development_authority",
-    "Other": "other",
-    "City government": "city_government",
-}
-TYPE_LABELS = {v: k for k, v in TYPES.items()}
+# label -> code of the types the team can choose (the list lives in parastatal_types.py);
+# TYPE_LABELS also labels the ULG unit, whose files carry a Type column too.
+TYPES = dict(LABEL_CODES)
+TYPE_LABELS = {code: type_label(code) for code in (*TYPES.values(), ULG_TYPE)}
 # Yes/No column -> (Parastatal field, value assumed when the cell is left blank)
 FLAGS = {
     "Raises its own revenue?": ("revenue_raising", False),
@@ -77,7 +80,7 @@ GUIDE = [
     ),
     (
         "Type",
-        "Water supply board, Transport corporation, Development authority, or Other. "
+        f"{', '.join(TYPES)}. "
         "The type decides which questions apply. Use Other for any other kind of parastatal (e.g. "
         "metro rail, housing board); only the common questions will apply to it.",
     ),
@@ -198,7 +201,7 @@ def load_register(path: Path) -> tuple[dict[str, CityConfig], list[Issue]]:
             "parastatals": [],
         }
 
-    for row_no, v in _rows(wb[PARASTATALS_SHEET], PARASTATAL_COLUMNS, issues):
+    for row_no, v in _rows(wb[PARASTATALS_SHEET], PARASTATAL_COLUMNS, issues, optional=(ALIASES,)):
         where = f"Parastatals sheet, row {row_no}"
         city = cities.get(slugify(v["City"]))
         if city is None:
@@ -229,9 +232,7 @@ def load_register(path: Path) -> tuple[dict[str, CityConfig], list[Issue]]:
                 )
             )
             continue
-        kind = next(
-            (code for label, code in TYPES.items() if label.lower() == v["Type"].lower()), None
-        )
+        kind = canonical_type(v["Type"]) if known_type(v["Type"]) else None  # old labels still read
         if kind is None:
             issues.append(
                 _issue(
@@ -244,7 +245,14 @@ def load_register(path: Path) -> tuple[dict[str, CityConfig], list[Issue]]:
             for column, (field, default) in FLAGS.items()
         }
         city["parastatals"].append(
-            Parastatal(id=pid, name=v["Parastatal name"], type=kind, notes=v["Notes"], **flags)
+            Parastatal(
+                id=pid,
+                name=v["Parastatal name"],
+                type=kind,
+                notes=v["Notes"],
+                aliases=[a.strip() for a in v[ALIASES].split(",") if a.strip()],
+                **flags,
+            )
         )
 
     configs = {}
@@ -319,8 +327,15 @@ def write_register(path: Path, cities: list[CityConfig], city_notes: dict[str, s
 
     ws = sheet(
         PARASTATALS_SHEET,
-        PARASTATAL_COLUMNS,
-        {"City": 18, "Parastatal ID": 14, "Parastatal name": 45, "Type": 24, "Notes": 50},
+        [*PARASTATAL_COLUMNS, ALIASES],
+        {
+            "City": 18,
+            "Parastatal ID": 14,
+            "Parastatal name": 45,
+            "Type": 24,
+            "Notes": 50,
+            ALIASES: 30,
+        },
     )
     for city in cities:
         for p in city.parastatals:
@@ -333,6 +348,7 @@ def write_register(path: Path, cities: list[CityConfig], city_notes: dict[str, s
                     *["Yes" if getattr(p, field) else "No" for field, _ in FLAGS.values()],
                     "Yes",
                     p.notes,
+                    ", ".join(p.aliases),
                 ]
             )
     dropdown(ws, 1, f"'{CITIES_SHEET}'!$A$2:$A$200", "Choose a city from the Cities sheet")

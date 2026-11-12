@@ -150,7 +150,7 @@ class FakeClaude(BaseChatModel):
                     {
                         "id": "SWB",
                         "name": "Water Board",
-                        "type": "water_supply_board",
+                        "type": "water_supply_entity",
                         "revenue_raising": True,
                         "capex_mandate": True,
                         "why_included": "Supplies water to the city.",
@@ -159,7 +159,7 @@ class FakeClaude(BaseChatModel):
                     {
                         "id": "STC",
                         "name": "Sample Transport Corporation",
-                        "type": "transport_corporation",
+                        "type": "public_bus_transport_operator",
                         "revenue_raising": True,
                         "capex_mandate": False,
                         "why_included": "Runs the city's buses.",
@@ -248,6 +248,8 @@ class FakeClaude(BaseChatModel):
                 "current_status": "Current",
                 "authority_score": 10,
                 "notes": "Official.",
+                "effective_date": "1964-04-01",
+                "form": "in force",
             }
         elif task == "answer_question":
             plan = _citation_with(user, "recorded its responses")
@@ -295,8 +297,11 @@ class FakeClaude(BaseChatModel):
                 inputs[header] = allowed.split(" / ")[0] if allowed else 1
             cited = re.search(r"=== CITATION (\S+): .*?===\n(.*)", user, re.S)
             words = cited.group(2).split()[:12] if cited else []
+            top = re.search(r"^SCORE: .*?from 0 to ([\d.]+)", user, re.M)
             reply = {
                 "inputs": inputs,
+                "score": float(top.group(1)) if top else None,
+                "latest_information": "FY 2025-26",
                 "citation_id": cited.group(1) if cited else "",
                 "quote": " ".join(words),
                 "provision": "Section 16",
@@ -323,7 +328,7 @@ def practice_register(path):
                 Parastatal(
                     id="SWB",
                     name="Water Board",
-                    type="water_supply_board",
+                    type="water_supply_entity",
                     revenue_raising=True,
                     capex_mandate=True,
                 )

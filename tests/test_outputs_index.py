@@ -1,4 +1,4 @@
-"""outputs/START_HERE.xlsx: where each vertical and city is up to, with links."""
+"""outputs/START_HERE.xlsx: where each category and city is up to, with links."""
 
 import dataclasses
 
@@ -8,7 +8,7 @@ from asics_agent.config import get_settings
 from asics_agent.outputs_index import write_index
 
 
-def test_index_lists_every_vertical_and_city_with_links(tmp_path):
+def test_index_lists_every_category_and_city_with_links(tmp_path):
     base = dataclasses.replace(
         get_settings(),
         outputs_dir=tmp_path,
@@ -25,7 +25,7 @@ def test_index_lists_every_vertical_and_city_with_links(tmp_path):
 
     ws = load_workbook(write_index(base))["Start here"]
     rows = {(r[0], r[1]): r for r in ws.iter_rows(min_row=5, values_only=True)}
-    assert rows[("Parastatal", city)][2] == "Sources ready"
-    assert rows[("UPD", city)][2] == "Not started"
-    link = next(c for c in ws[5 + list(rows).index(("Parastatal", city))] if c.column == 5)
+    assert rows[(city, "Parastatal")][2] == "Sources ready"
+    assert rows[(city, "ULG")][2] == "Not started"
+    link = next(c for c in ws[5 + list(rows).index((city, "Parastatal"))] if c.column == 5)
     assert link.hyperlink.target == f"Parastatal/cities/{city}/{sources.name}"

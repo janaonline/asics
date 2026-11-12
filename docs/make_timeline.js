@@ -38,7 +38,7 @@ const ITEMS = [
     owner: "Program", start: "2026-10-14", end: "2026-10-30", status: "Planned", phase: "p1",
     notes: "Needed to measure the AI against." },
   { id: "ASICS-1.6", parent: "ASICS-E1", type: "Story",
-    summary: "Confirm the final question bank and scoring methodology per vertical",
+    summary: "Confirm the final question bank and scoring methodology per category",
     owner: "Program", start: "2026-10-14", end: "2026-10-23", status: "Planned", phase: "p1",
     notes: "Two versions of the Parastatal questions exist today; all steps must use one." },
   { id: "ASICS-1.7", parent: "ASICS-E1", type: "Story",
@@ -46,14 +46,14 @@ const ITEMS = [
     owner: "Tech + Program", start: "2026-10-19", end: "2026-10-30", status: "Planned", phase: "p1",
     depends: "ASICS-1.5" },
 
-  { id: "ASICS-E2", type: "Epic", summary: "Phase 2: 12 cities, Parastatals then UPD and other verticals",
+  { id: "ASICS-E2", type: "Epic", summary: "Phase 2: 12 cities, Parastatals then UPD and other categories",
     owner: "Tech + Program", start: "2026-11-02", end: "2026-11-20", status: "Planned", phase: "p2" },
   { id: "ASICS-2.1", parent: "ASICS-E2", type: "Story",
     summary: "Evidence and answers correct for 12 cities: Parastatals",
     owner: "Tech + Program", start: "2026-11-02", end: "2026-11-13", status: "Planned", phase: "p2",
     depends: "ASICS-1.4, ASICS-1.7" },
   { id: "ASICS-2.2", parent: "ASICS-E2", type: "Story",
-    summary: "UPD and other verticals: Steps 1–3 for 12 cities",
+    summary: "UPD and other categories: Steps 1–3 for 12 cities",
     owner: "Tech + Program", start: "2026-11-09", end: "2026-11-20", status: "Planned", phase: "p2",
     depends: "ASICS-1.6" },
   { id: "ASICS-2.3", parent: "ASICS-E2", type: "Story",
@@ -61,7 +61,7 @@ const ITEMS = [
     owner: "Tech + Program", start: "2026-11-02", end: "2026-11-20", status: "Planned", phase: "p2",
     depends: "ASICS-1.7" },
   { id: "ASICS-2.4", parent: "ASICS-E2", type: "Story",
-    summary: "Cost estimates per city and vertical shared",
+    summary: "Cost estimates per city and category shared",
     owner: "Tech", start: "2026-11-02", end: "2026-11-13", status: "Planned", phase: "p2" },
   { id: "ASICS-2.5", parent: "ASICS-E2", type: "Milestone",
     summary: "Switch from the Tech4Dev API key to Janaagraha's own key",
@@ -204,11 +204,11 @@ const intro = [
   p("Plan and timeline, October – December 2026 · for the ASICS program team and leadership", { size: 19, color: "595959", after: 200 }),
 
   h1("1. ASICS in brief"),
-  p("Janaagraha's **Annual Survey of India's City-Systems (ASICS)** assesses how well Indian cities are set up to deliver a good quality of life: their laws, institutions and processes. It covers verticals such as **Parastatals**, **Urban Planning & Design (UPD)** and **mobility**, and scores each city with the program team's expert methodology."),
-  p("We are building an **AI-assisted research tool** that does the evidence work for each question. It finds the official sources, answers the question with a citation and quote, and drafts the score in the experts' scoring sheet for people to check. This lets ASICS cover more cities and verticals with evidence anyone can trace back to its source."),
+  p("Janaagraha's **Annual Survey of India's City-Systems (ASICS)** assesses how well Indian cities are set up to deliver a good quality of life: their laws, institutions and processes. It covers categories such as **ULG** (urban local government) and **Parastatals**, each with sections such as **Urban Planning & Design (UPD)**, and scores each city with the program team's expert methodology."),
+  p("We are building an **AI-assisted research tool** that does the evidence work for each question. It finds the official sources, answers the question with a citation and quote, and drafts the score in the experts' scoring sheet for people to check. This lets ASICS cover more cities and categories with evidence anyone can trace back to its source."),
 
   h1("2. Where we are"),
-  bullet("**Pilot completed (end of September):** Bengaluru, Parastatal vertical, with inputs from the program team."),
+  bullet("**Pilot completed (end of September):** Bengaluru, Parastatal category, with inputs from the program team."),
   bullet("**Phase 1 (now):** turning the pilot into a structured project in **LangGraph and Python**, so the research runs as a set of **AI agents** working step by step with checks in between."),
   bullet("**API and costs:** runs currently use **Tech4Dev's API key**. We will need **Janaagraha's own key from mid-November**, and will share **cost estimates** before then."),
 
@@ -216,12 +216,12 @@ const intro = [
   p("1–2 cities run end to end in the agentic setup, plus **v1 of the scoring sheet structure** requested by the program team:"),
   bullet("**Step 1 · Find sources:** the agent finds the city's parastatals, checks which websites are official, and builds a **Citation Sheet** of official sources. Every link is opened to confirm a person can read it, and a copy is saved. The team reviews and edits the sheet in Excel."),
   bullet("**Step 2 · Answer:** each question is answered **only from the reviewed Citation Sheet**, naming the source and quoting it word for word; the quote is checked against the saved copy."),
-  bullet("**Step 3 · Score (v1):** answers go into the experts' scoring sheet. **One sheet per vertical** shows each question's AI score, the evidence behind it, and a highlighted column for the expert's own score. Scores add up from question to main question, agency, city and vertical, then the city's overall ASICS score."),
-  bullet("**A simple app for the research team:** choose verticals, cities and steps, follow progress, review in Excel. New verticals are added by configuration (Parastatal and UPD are set up), and the instructions given to the AI can be read and refined by the team."),
+  bullet("**Step 3 · Score (v1):** answers go into the experts' scoring sheet. **One sheet per category** shows each question's AI score, the evidence behind it, and a highlighted column for the expert's own score. Scores add up from question to main question, agency, city and category, then the city's overall ASICS score."),
+  bullet("**A simple app for the research team:** choose categories, cities and steps, follow progress, review in Excel. New categories are added by configuration (ULG and Parastatal are set up), and the instructions given to the AI can be read and refined by the team."),
 
   h1("4. The plan"),
   bullet("**Phase 1 · to 30 October:** accurate **citations and answers** for 1–2 cities (no AI scoring yet). The program team provides **human answers and scores for 1–2 cities** as the baseline, and we set up **evals**."),
-  bullet("**Phase 2 · 2 – 20 November:** evidence and answers correct for **12 cities**, **Parastatals first, then UPD** and other verticals. This needs inputs from the program and tech teams to update and fine-tune the prompts."),
+  bullet("**Phase 2 · 2 – 20 November:** evidence and answers correct for **12 cities**, **Parastatals first, then ULG** and other categories. This needs inputs from the program and tech teams to update and fine-tune the prompts."),
   bullet("**Phase 3 · 23 November – mid/end December:** **more cities**, and **AI scoring** with outputs designed for human review."),
   bullet("**From now:** a **weekly review** with the program and tech teams so we stay aligned."),
 
@@ -230,8 +230,8 @@ const intro = [
 
   h1("6. What we need from the program team"),
   bullet("**Human answers and scores for 1–2 cities by 30 October** (the eval baseline)."),
-  bullet("**The final question bank and scoring methodology for each vertical**, so all three steps use the same version (by 23 October for Parastatals)."),
-  bullet("**Reviewers for the weekly review**, and inputs to fine-tune prompts for each vertical."),
+  bullet("**The final question bank and scoring methodology for each category**, so all three steps use the same version (by 23 October for Parastatals)."),
+  bullet("**Reviewers for the weekly review**, and inputs to fine-tune prompts for each category."),
   bullet("**Janaagraha's API key by mid-November** (with leadership), after the cost estimates."),
 ];
 
