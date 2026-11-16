@@ -1,0 +1,60 @@
+{
+  "kind": "run",
+  "step": 2,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 2 \u00b7 Parastatal \u00b7 Answer questions",
+  "cities": [
+    "Bhubaneswar"
+  ],
+  "work": 128,
+  "unit": "answer",
+  "started": "2026-11-16T10:38:09",
+  "finished": "2026-11-16T11:03:01",
+  "group": "20261116-102442-4238",
+  "total_usd": 5.0675,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 3,
+      "input": 8,
+      "cache_read": 0,
+      "cache_write": 94959,
+      "output": 2763,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.2650435
+    },
+    "claude-sonnet-5-5 (batch)": {
+      "calls": 222,
+      "input": 614,
+      "cache_read": 1753680,
+      "cache_write": 3389677,
+      "output": 77882,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 4.80248825
+    }
+  },
+  "by_agent": {
+    "answer-writer \u00b7 claude-sonnet-5-5 (batch)": {
+      "calls": 222,
+      "input": 614,
+      "cache_read": 1753680,
+      "cache_write": 3389677,
+      "output": 77882,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 4.80248825
+    },
+    "answer-writer \u00b7 claude-sonnet-5-5": {
+      "calls": 3,
+      "input": 8,
+      "cache_read": 0,
+      "cache_write": 94959,
+      "output": 2763,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.2650435
+    }
+  }
+}

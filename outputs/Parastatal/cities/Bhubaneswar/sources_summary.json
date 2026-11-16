@@ -1,0 +1,155 @@
+{
+  "run": {
+    "run_id": "20261116-102442-e7dc",
+    "city": "bhubaneswar",
+    "city_name": "Bhubaneswar",
+    "state_name": "Odisha",
+    "ulg": "",
+    "workspace": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bhubaneswar",
+    "output_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bhubaneswar",
+    "cache_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bhubaneswar/evidence"
+  },
+  "agent_setup_fingerprint": "4f6085f90f32",
+  "law_cutoff": "2026-08-31",
+  "undated_law_policy": "confirm",
+  "parastatals": [
+    {
+      "id": "BDA",
+      "name": "Bhubaneswar Development Authority",
+      "type": "development_authority",
+      "revenue_raising": true,
+      "capex_mandate": true,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "Confirm this row with the research team. INSTRUMENTS: Act=partly located. The India Code PDF 'The Odisha Development Authorities Act, 1982' was fetched and returned an OCR text body with title and contents. I ran out of tool calls before reading any section, so no provision is verified and its version date is unknown; Rules=not located (a search surfaced an 'Odisha Development Authorities (Common Application Form) Rules, 2016' only on scribd, which is a blocked source and only a lead; the official copy was not found); Regs=not located; Notifications=not located (no constitution notification or GO for BDA, and nothing on any restructuring of the city government, was found); CrossLaws=not located (no Odisha service guarantee, RTI rules or procurement transparency instrument was checked) | EXEC: not established. The Act's Vice-Chairman/Chairman provisions were not read, so I can't say who exercises the executive powers, whether the post is whole-time, or whether the same person chairs the board. Left as null. The Act and Rules need to be read (the sections on constitution of the Authority, the Chairman and Vice-Chairman, and the Planning Member) | DOMAINS: Candidate is www.bda.gov.in. A fetch of the home page returned a page titled 'BDA :: Bhubaneswar Development Authority' with the author meta 'Bhubaneswar Development Authority', but I only saw the first part of it. The domain is a .gov.in domain. No fetched A-domain page linking to it was seen: odisha.gov.in/en/social-wall/bhubaneswar-development-authority was returned by search but web_fetch refused it (url_not_allowed). The only place the domain string was seen in search results was a Wikipedia snippet, which is a blocked source and used only as a lead. The page content links to cms.bhubaneswarone.in, which is not proved official | CONFIRM: (1) A human should open the odisha.gov.in BDA page and the Odisha Housing & Urban Development Department site to confirm they link to www.bda.gov.in. (2) The India Code PDF is a scanned document with no stated effective or amended-up-to date. Confirm the consolidated version in force on 31 Aug 2026 from the Odisha law department or gazette. (3) The BDA budget was not located. A search surfaced an RTI manual on rtiodisha.gov.in (office_id:172) but web_fetch refused it, so nothing was confirmed. Check the BDA RTI 4(1)(b) pages, the Finance and Reports menus on bda.gov.in, and the state budget documents. (4) The city notes give no ULG name and no eras. The ULG field in the task input is blank. Confirm the Bhubaneswar Municipal Corporation name and any governance changes. (5) Scope: BDA is a statutory development authority, so it should be eligible, but the team scope-decisions file does not cover it directly. The research was cut short by a tool-use limit, so every field marked null or 'not located' should be treated as unresearched, not as absent.",
+      "aliases": [],
+      "include": true,
+      "team_notes": "",
+      "found_by": "Your team",
+      "governing_act": "The Odisha Development Authorities Act, 1982 (Orissa Act); form=statutory development authority [unverified: form and constitution section not read]; constituted under [unverified: section not read, probably Ch. II, s.3 or s.4]; text version=India Code scanned PDF, publication date and 'amended up to' date not established [unverified]",
+      "current_status": "Active (unconfirmed). A search result titled 'Bhubaneswar Development Authority' appeared on odisha.gov.in, but the page could not be fetched. bda.gov.in is live, but I did not read it for status. No rename, merger or replacement found, and I did not search for one.",
+      "why_included": "NEEDS REVIEW (E1/E5): Category 1. The team listed it. A search result for a Housing & Urban Development Department gazette notification shows BDA acting under the Odisha Development Authorities Act, 1982. It declared and prepared Town Planning Scheme 08/2024, and the State Government sanctioned the draft scheme. I only saw this as a search snippet. I did not fetch the page, so E1-E6 are not fully tested. Revenue and capex answers are not established. The gazette text refers to sale of plots at stated rates, but I did not confirm this.",
+      "official_website": "https://www.bda.gov.in/",
+      "website_check": {
+        "url": "https://www.bda.gov.in/",
+        "score": 45,
+        "band": "Probably official",
+        "reasons": [
+          "Government web address (gov.in / nic.in) (+40)",
+          "No other government website seen linking to it (0)",
+          "Did not open properly in the automatic check: Could not be opened: DecodingError.",
+          "Its name or short name is in the web address or page title (+5)",
+          "Government web address with its own name, but the automatic check couldn't open it: please open it in your browser to confirm"
+        ],
+        "opens": false
+      },
+      "other_websites": []
+    },
+    {
+      "id": "WATCO",
+      "name": "Water Corporation of Odisha",
+      "type": "water_supply_entity",
+      "revenue_raising": true,
+      "capex_mandate": true,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "Confirm this row with the research team. INSTRUMENTS: Act=not located (WATCO is a company under the Companies Act, 2013; the Act's text was not fetched and no section was verified); Rules=not located (Companies rules not checked; no Odisha water-utility rules located); Regs=Memorandum/Articles of Association not located; Notifications=no incorporation, constitution or restructuring GO located, and no Bhubaneswar city-government restructuring seen; CrossLaws=not located (Odisha service guarantee, RTI and procurement schedules not checked) | EXEC: ambiguous. The rtiodisha.gov.in search-result text says the Board is headed by the Principal Secretary, H&UD, and day-to-day management is headed by a Chief Executive Officer. The same page's officer list shows 'Managing Director (I/C)' with the email ceowatcoodisha@gmail.com. So the CEO and MD titles appear to refer to the same post, but this is unconfirmed. Whole-time status was not stated. It looks distinct from the board chair (the Principal Secretary). No section, rule or Articles clause was located. The page itself was not fetched, because web_fetch returned url_not_allowed for the exact URL https://rtiodisha.gov.in/Pages/printAllManual/office_id:23186/lang: | DOMAINS: Best candidate is watcoodisha.in (shown as www.watcoodisha.in). Proof: the fetched gov.in page urban.odisha.gov.in (Drink-From-Tap-Mission.pdf) prints www.watcoodisha.in and mail@watcoodisha.in as WATCO's website and email, and the rtiodisha.gov.in search-result text gives the same website. This is a printed mention, not a hyperlink. The fetched watcoodisha.in page returned only a title shell ('WATCO ODISHA') with no readable body, so the site needs a human check. watcoodisha.nucigent.co.in and watcoodisha.co.in/login appear to be third-party or vendor-hosted portals and were not shown to be official. No gov.in or nic.in site for WATCO was found | CONFIRM: (1) Annual budget: no budget document was found, so has_annual_budget is null, not false. Check the WATCO RTI 4(1)(b) disclosures and the H&UD Department's budget documents. (2) Incorporation date, form and Board composition come only from search-result text on rtiodisha.gov.in; a human should open that page. (3) Team scope decision needed: WATCO is a state-owned company operating across urban Odisha, not a ULG-owned SPV. It is a state-wide body whose role in Bhubaneswar needs a scope decision, so treat it as NEEDS REVIEW. (4) The ULG field in the task input was blank; the Bhubaneswar Municipal Corporation was not verified from an official source. (5) Era is n/a. (6) The Departments/13 page and the HUD PDF carry no effective date. This is a profile task, not a Law/Policy question, but the PDF is undated beyond the 2023-03 upload path.",
+      "aliases": [],
+      "include": true,
+      "team_notes": "",
+      "found_by": "Your team",
+      "governing_act": "Companies Act, 2013 (Central Act); form=company (wholly-owned, not-for-profit, limited by guarantee), incorporated 24 Nov 2015 [unverified: this comes from the rtiodisha.gov.in search-result text, whose page web_fetch refused]; constituted under the company's Memorandum and Articles of Association [not located]; no state parent Act located; text version=not seen. The fetched urban.odisha.gov.in PDF says only that WATCO 'has been established under the Companies act 2013', with no section cited.",
+      "current_status": "Active. The fetched Housing & Urban Development Department PDF (Drink from Tap Mission, undated, uploaded 2023-03) describes WATCO as operating. The rtiodisha.gov.in Departments/13 page, fetched this session, lists WATCO divisions including Bhubaneswar Divisions I and II. No renaming or merger was seen.",
+      "why_included": "NEEDS REVIEW (E1/E5/E6): Category 2. The team listed it. No gov.in or nic.in source for WATCO was fetched or returned in this run. My search tool quota ran out before I could check its constitution, its jurisdiction in Bhubaneswar, or whether it delivers water supply there instead of the ULG or another body. Its status is unverified.",
+      "official_website": "",
+      "website_check": {
+        "url": "https://watcoodisha.in/",
+        "score": 25,
+        "band": "Not confirmed",
+        "reasons": [
+          "Linked from 1 other government website(s): urban.odisha.gov.in (+20)",
+          "Did not open properly in the automatic check: Could not be opened automatically: the website's security certificate could not be checked automatically. Blocked to automated tools; a person must open the link in a browser.",
+          "Its name or short name is in the web address or page title (+5)"
+        ],
+        "opens": false
+      },
+      "other_websites": [
+        {
+          "url": "https://watcoodisha.nucigent.co.in/",
+          "score": 5,
+          "band": "Not confirmed",
+          "reasons": [
+            "No other government website seen linking to it (0)",
+            "Did not open properly in the automatic check: Could not be opened automatically: the connection failed (ConnectError). Blocked to automated tools; a person must open the link in a browser.",
+            "Its name or short name is in the web address or page title (+5)"
+          ],
+          "opens": false
+        },
+        {
+          "url": "https://watcoodisha.co.in/login",
+          "score": 5,
+          "band": "Not confirmed",
+          "reasons": [
+            "No other government website seen linking to it (0)",
+            "Did not open properly in the automatic check: Could not be opened: DecodingError.",
+            "Its name or short name is in the web address or page title (+5)"
+          ],
+          "opens": false
+        }
+      ]
+    },
+    {
+      "id": "CRUT",
+      "name": "Comprehensive Region Urban Transport (formerly Capital Region Urban Transport)",
+      "type": "public_bus_transport_operator",
+      "revenue_raising": true,
+      "capex_mandate": true,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "Confirm this row with the research team. INSTRUMENTS: Act=not located (no parent Act; appears to be a company, so the Companies Act 2013 would apply [unverified]); Rules=not located; Regs=not located (Memorandum and Articles of Association not seen); Notifications=not located (no H&UD GO or incorporation or renaming notice fetched); CrossLaws=not located (state service guarantee, RTI rules and procurement laws not checked for CRUT) | EXEC: not identified. The site has 'Board of Directors' and 'Organization Structure' pages that I did not fetch. Post title, whole-time or part-time status, and whether the same person chairs the board are all unknown. has_chief_executive left null. | DOMAINS: capitalregiontransport.in is the likely official domain. The proof is that the Odisha State Transport Authority page (odishatransport.gov.in/content/Mo-Bus/7, a gov.in page fetched this session) links to it under 'Visit MO Bus Website'. The gov.in page describes CRUT as an H&UD SPV and does not name the domain as CRUT's. The site shows a RTI menu and a Bhubaneswar address. | CONFIRM: (1) Legal form and incorporation: obtain the MCA registration or Articles of Association, and the H&UD GO creating the SPV. (2) Name change from Capital to Comprehensive Region Urban Transport: no official source seen. (3) Executive head (MD/CEO) and board composition: check the board-of-directors page. (4) Annual budget: not checked; look at the RTI/4(1)(b) pages, annual reports or the state budget. (5) Website integrity: the capitalregiontransport.in about page loads gallery images from bdggameworld.info, an unrelated domain, and its metadata shows 2026/10 uploads. This may mean the site was compromised or poorly maintained, so a human should check it. A web.archive.org link also appears on it. (6) Scope: this is a state SPV serving the wider capital region, not a ULG-owned company. Per team notes, treat it as NEEDS REVIEW. (7) Only one gov.in page was fetched, and I did not find an Odisha H&UD department page listing CRUT. (8) The web search limit was reached, so searching was limited.",
+      "aliases": [],
+      "include": true,
+      "team_notes": "",
+      "found_by": "Your team",
+      "governing_act": "Not located in any fetched official text. The odishatransport.gov.in page calls CRUT a special purpose vehicle (SPV) formed under the H&UD Department, Govt. of Odisha. Its own site's company profile says it was formerly Bhubaneswar Puri Transport Services Limited (BPTSL), established in 2018. A search snippet from a LinkedIn page (a blocked source, used as a lead only) says it is registered under the Companies Act. form=company (SPV) [unverified]; constituted under: not located (Companies Act 2013 registration/incorporation certificate not seen) [unverified]; text version=n/a",
+      "current_status": "Active. It operates Ama Bus, and the Mo Bus service is also run by CRUT; the state transport page is a pointer to it. The name appears as Capital Region Urban Transport on its own website and as Comprehensive Region Urban Transport on its X account (search snippet). The renaming is not confirmed by any official source I fetched.",
+      "why_included": "NEEDS REVIEW (E1/E2/E5): Category 3. The team listed it. The only evidence found was a blocked company-profile aggregator page, which is a lead only. It says CRUT runs bus services. I found no official source for its constitution, its ownership (state or ULG, which matters for E2), the rename, or its legal form. NEEDS TEAM CONFIRMATION: legal form (company/society/other).",
+      "official_website": "",
+      "website_check": {
+        "url": "https://www.capitalregiontransport.in/",
+        "score": 20,
+        "band": "Not confirmed",
+        "reasons": [
+          "Linked from 1 other government website(s): odishatransport.gov.in (+20)",
+          "Did not open properly in the automatic check: Could not be opened: DecodingError."
+        ],
+        "opens": false
+      },
+      "other_websites": []
+    },
+    {
+      "id": "OWSSB",
+      "name": "Odisha Water Supply and Sewerage Board",
+      "type": "water_supply_entity",
+      "revenue_raising": false,
+      "capex_mandate": false,
+      "has_annual_budget": true,
+      "has_chief_executive": true,
+      "notes": "Evidence: https://www.rtiodisha.gov.in/Pages/printAllManual/office_id:175/lang:",
+      "aliases": [],
+      "include": false,
+      "team_notes": "",
+      "found_by": "Agent",
+      "governing_act": "",
+      "current_status": "",
+      "why_included": "NEEDS REVIEW (E1/E5/E6): Category 2. This is an additional candidate. A search result for an rtiodisha.gov.in RTI manual lists a head office of the Odisha Water Supply & Sewerage Board at Satyanagar, Bhubaneswar. I did not fetch the page, so I do not know whether the Board still exists or works in the city. I also do not know whether it is state-wide or has a role in Bhubaneswar, or whether its work overlaps with WATCO or the ULG.",
+      "official_website": "",
+      "website_check": null,
+      "other_websites": []
+    }
+  ],
+  "counts": {
+    "sources": 32,
+    "verified": 10
+  }
+}

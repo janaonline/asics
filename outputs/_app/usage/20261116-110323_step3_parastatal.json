@@ -1,0 +1,40 @@
+{
+  "kind": "run",
+  "step": 3,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 3 \u00b7 AI scoring \u00b7 PARASTATAL \u00b7 Bhubaneswar",
+  "cities": [
+    "Bhubaneswar"
+  ],
+  "work": 116,
+  "unit": "row",
+  "started": "2026-11-16T11:03:02",
+  "finished": "2026-11-16T11:03:23",
+  "group": "20261116-102442-4238",
+  "total_usd": 0.3466,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 11,
+      "input": 40,
+      "cache_read": 68673,
+      "cache_write": 112244,
+      "output": 5217,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.3465946
+    }
+  },
+  "by_agent": {
+    "question-scorer \u00b7 claude-sonnet-5-5": {
+      "calls": 11,
+      "input": 40,
+      "cache_read": 68673,
+      "cache_write": 112244,
+      "output": 5217,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.3465946
+    }
+  }
+}

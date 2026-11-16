@@ -25,11 +25,12 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
  [https://finance.karnataka.gov.in/6/departments/kn] ಇಲಾಖೆಗಳು [http://www.gst.kar.nic.in/] ವಾಣಿಜ್ಯ ತೆರಿಗೆ ಇಲಾಖೆ
  [https://khajane.karnataka.gov.in] ಖಜಾನೆ ನಿರ್ದೇಶನಾಲಯ
  [https://stateexcise.karnataka.gov.in/] ರಾಜ್ಯ ಅಬಕಾರಿ ಇಲಾಖೆ
+ [https://hrms2.karnataka.gov.in/v1/login] ಮಾನವ ಸಂಪನ್ಮೂಲ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ (HRMS 2.0)
  [https://ksaad.karnataka.gov.in/english] ಕರ್ನಾಟಕ ರಾಜ್ಯ ಲೆಕ್ಕಪರಿಶೋಧನೆ ಮತ್ತು ಲೆಕ್ಕಪತ್ರ ಇಲಾಖೆ
  [https://fpibengaluru.karnataka.gov.in/] ವಿತ್ತೀಯ ಕಾರ್ಯ ನೀತಿ ಸಂಸ್ಥೆ
 
- [https://finance.karnataka.gov.in/2/right-to-information/kn] ಮಾಹಿತಿ ಹಕ್ಕು [https://rti.gov.in/] ಮಾಹಿತಿ ಹಕ್ಕು ಜಾಲತಾಣ ಭಾರತ ಸರ್ಕಾರ
- [http://www.kic.gov.in/welcome.do] ಕರ್ನಾಟಕ ಮಾಹಿತಿ ಆಯೋಗ
+ [https://finance.karnataka.gov.in/2/right-to-information/kn] ಮಾಹಿತಿ ಹಕ್ಕು [http://www.kic.gov.in/welcome.do] ಕರ್ನಾಟಕ ಮಾಹಿತಿ ಆಯೋಗ
+ [https://rti.gov.in/] ಮಾಹಿತಿ ಹಕ್ಕು ಜಾಲತಾಣ ಭಾರತ ಸರ್ಕಾರ
  [https://finance.karnataka.gov.in/18/rti-4%281%29-b/kn] ಮಾಹಿತಿಹಕ್ಕು​ 4(1)B
  [https://finance.karnataka.gov.in/19/rti-4%281%29-a/kn] ಮಾಹಿತಿಹಕ್ಕು​ 4(1)A
 
@@ -44,11 +45,12 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
  [https://finance.karnataka.gov.in/6/departments/kn] ಇಲಾಖೆಗಳು [http://www.gst.kar.nic.in/] ವಾಣಿಜ್ಯ ತೆರಿಗೆ ಇಲಾಖೆ
  [https://khajane.karnataka.gov.in] ಖಜಾನೆ ನಿರ್ದೇಶನಾಲಯ
  [https://stateexcise.karnataka.gov.in/] ರಾಜ್ಯ ಅಬಕಾರಿ ಇಲಾಖೆ
+ [https://hrms2.karnataka.gov.in/v1/login] ಮಾನವ ಸಂಪನ್ಮೂಲ ನಿರ್ವಹಣಾ ವ್ಯವಸ್ಥೆ (HRMS 2.0)
  [https://ksaad.karnataka.gov.in/english] ಕರ್ನಾಟಕ ರಾಜ್ಯ ಲೆಕ್ಕಪರಿಶೋಧನೆ ಮತ್ತು ಲೆಕ್ಕಪತ್ರ ಇಲಾಖೆ
  [https://fpibengaluru.karnataka.gov.in/] ವಿತ್ತೀಯ ಕಾರ್ಯ ನೀತಿ ಸಂಸ್ಥೆ
 
- [https://finance.karnataka.gov.in/2/right-to-information/kn] ಮಾಹಿತಿ ಹಕ್ಕು [https://rti.gov.in/] ಮಾಹಿತಿ ಹಕ್ಕು ಜಾಲತಾಣ ಭಾರತ ಸರ್ಕಾರ
- [http://www.kic.gov.in/welcome.do] ಕರ್ನಾಟಕ ಮಾಹಿತಿ ಆಯೋಗ
+ [https://finance.karnataka.gov.in/2/right-to-information/kn] ಮಾಹಿತಿ ಹಕ್ಕು [http://www.kic.gov.in/welcome.do] ಕರ್ನಾಟಕ ಮಾಹಿತಿ ಆಯೋಗ
+ [https://rti.gov.in/] ಮಾಹಿತಿ ಹಕ್ಕು ಜಾಲತಾಣ ಭಾರತ ಸರ್ಕಾರ
  [https://finance.karnataka.gov.in/18/rti-4%281%29-b/kn] ಮಾಹಿತಿಹಕ್ಕು​ 4(1)B
  [https://finance.karnataka.gov.in/19/rti-4%281%29-a/kn] ಮಾಹಿತಿಹಕ್ಕು​ 4(1)A
 
@@ -76,75 +78,91 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
 
  ಸುದ್ದಿ ಮತ್ತು ಘಟನೆಗಳು 
 
- [https://finance.karnataka.gov.in/uploads/FD5TFP2026-Dtd-28-09-2026%20%28Third%20Quarter%20Delegation-Kan%29_1790675268.pdf] 
+ [https://finance.karnataka.gov.in/uploads/FD13SRP%202026-Dtd-12-11-2026%20UGC%20DA%20Kan_1794477266.pdf] 
 
  1 
+ New 
+ 4 days ago 
+
+ 2016ರ ಪರಿಷ್ಕೃತ ವೇತನ ಯುಜಿಸಿ/ಐಸಿಎಆರ್/ಎಐಸಿಟಿಇ/ವೇತನ ಶ್ರೇಣಿಗಳಲ್ಲಿನ ಬೋಧಕ ಮತ್ತು ತತ್ಸಮಾನ ವೃಂದದ ಸಿಬ್ಬಂದಿಗಳಿಗೆ ತುಟಿಭತ್ಯೆಯ ದರಗಳನ್ನು ಪರಿಷ್ಕರಿಸುವ ಬಗ್ಗೆ (01-07-2026: 60% ರಿಂದ 63%)
+
+ [https://finance.karnataka.gov.in/uploads/FD27BPE2026-Dtd-07-11-2026-Appxb-Circular%20Kan_1794378755.pdf] 
+
+ 2 
+ New 
+ 5 days ago 
+
+ 2027-28ನೇ ಸಾಲಿನ ಅಪೆಂಡಿಕ್ಸ್-ಬಿ ವೇತನ ಅಂದಾಜು
+
+ [https://finance.karnataka.gov.in/uploads/FD10SRP2026-Dtd-05-11-2026-%28DA-Kannada%29_1793878421.pdf] 
+
+ 3 
 
  2 weeks ago 
+
+ ತುಟ್ಟಿ ಭತ್ಯೆಯ ದರಗಳ ಪರಿಷ್ಕರಣೆ ಕುರಿತು-01-07-2026-(15.75% ರಿಂದ 18%)
+
+ [https://finance.karnataka.gov.in/uploads/FD25BPE2026-Dtd-04-11-2026-MTFP%20Kan_1793793648.pdf] 
+
+ 4 
+
+ 2 weeks ago 
+
+ 2027-28ನೇ ಸಾಲಿನ ಆಯವ್ಯಯ ಅಂದಾಜು-ಮಾಧ್ಯಮಾವಧಿ ವಿತ್ತೀಯ ಯೋಜನೆ-2027-31
+
+ [https://finance.karnataka.gov.in/uploads/FD22BPE2026-Dtd-04-11-2026-Rev%20Rec-Kan_1793783864.pdf] 
+
+ 5 
+
+ 2 weeks ago 
+
+ 2027-28ನೇ ಸಾಲಿನ ಆಯವ್ಯಯ ರಾಜಸ್ವ-ಜಮೆ ತಯಾರಿಕೆಯ ಬಗ್ಗೆ.
+
+ [https://finance.karnataka.gov.in/uploads/Kan%20Circular_1792666405.pdf] 
+
+ 6 
+
+ 4 weeks ago 
+
+ 2027-28 ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು
+
+ [https://finance.karnataka.gov.in/uploads/FD5TFP2026-Dtd-28-09-2026%20%28Third%20Quarter%20Delegation-Kan%29_1790675268.pdf] 
+
+ 7 
+
+ 2 months ago 
 
  2026-27ನೇ ಸಾಲಿನಲ್ಲಿ ಅಕ್ಟೋಬರ್-2026 ರಿಂದ ಡಿಸೆಂಬರ್-2026 ವರೆಗಿನ ಮೂರನೇ ತ್ರೈಮಾಸಿಕ ಕಂತಿನ ಹಣ ಬಿಡುಗಡೆಗೆ ಆರ್ಥಿಕ ಅಧಿಕಾರ ಪ್ರತ್ಯಾಯೋಜನೆಯ ಬಗ್ಗೆ
 
  [https://finance.karnataka.gov.in/uploads/FD1-31ZPA2026-Dtd-15-09-2026%20Govt%20Order-15thSep26-revised_1789547210.pdf] 
 
- 2 
+ 8 
 
- 4 weeks ago 
+ 2 months ago 
 
  ಅಕ್ಟೋಬರ್ 2026 ರಿಂದ ಡಿಸೆಂಬರ್ 2026 ರವರೆಗೆ ಮೂರು ತಿಂಗಳ ಅವಧಿಗೆ, ಮೂರನೇ ಕಂತಿನ ಅನುದಾನವಾಗಿ, ವಾಸ್ತವಿಕ ವೆಚ್ಚದ ಆಧಾರದ ಮೇಲೆ ಹಾಗೂ “Just-in-Time” ಅನುದಾನ ಬಿಡುಗಡೆ ವಿಧಾನಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಜಿಲ್ಲಾ ಪಂಚಾಯಿತಿಗಳಿಗೆ ವಿವಿಧ ಯೋಜನೆಗಳಡಿ ಅನುದಾನ ಮಂಜೂರು ಮಾಡುವುದು.
 
  [https://finance.karnataka.gov.in/uploads/FD34-264ZPA2026-Dtd-15-09-2026TP%20Govt%20Order-15thSep26-revised_1789546261.pdf] 
 
- 3 
+ 9 
 
- 4 weeks ago 
+ 2 months ago 
 
  ಅಕ್ಟೋಬರ್ 2026 ರಿಂದ ಡಿಸೆಂಬರ್ 2026 ರವರೆಗೆ ಮೂರು ತಿಂಗಳ ಅವಧಿಗೆ, ಮೂರನೇ ಕಂತಿನ ಅನುದಾನವಾಗಿ, ವಾಸ್ತವಿಕ ವೆಚ್ಚದ ಆಧಾರದ ಮೇಲೆ ಹಾಗೂ “Just-in-Time” ಅನುದಾನ ಬಿಡುಗಡೆ ವಿಧಾನಕ್ಕೆ ಅನುಗುಣವಾಗಿ ತಾಲ್ಲೂಕು ಪಂಚಾಯಿತಿಗಳಿಗೆ ವಿವಿಧ ಯೋಜನೆಗಳಡಿ ಅನುದಾನ ಮಂಜೂರು ಮಾಡುವುದು.
 
  [https://finance.karnataka.gov.in/uploads/FD04BSG2026-Dtd-02-09-2026_1788330001.pdf] 
 
- 4 
+ 10 
 
- One month ago 
+ 2 months ago 
 
  2026-27ನೇ ಸಾಲಿನ ಪೂರಕ ಅಂದಾಜುಗಳು (ಮೊದಲನೇ ಕಂತು) ವೆಚ್ಚ ಮಾಡಲು ಅನುಮತಿ ಪತ್ರ ನೀಡುವ ಕುರಿತು.
 
- [https://finance.karnataka.gov.in/uploads/FD249FR2026-Dtd-10-07-2026_1783946596.pdf] 
-
- 5 
-
- 3 months ago 
-
- ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಬ್ಯಾಂಕ್‌ ಕಾತೆಗಳ ದಾಖಾಲೆಗಳಲ್ಲಿ ಕಡ್ಡಾಯವಾಗಿ ಅಧಿಕೃತ ಸರ್ಕಾರಿ ಡೊಮೇನ್‌ ಇ-ಮೇಲ್‌ ಐಡಿಗಳನ್ನು ಬಳಸುವುದು ಮತ್ತು ಸಂಪರ್ಕ ವಿವರಗಳನ್ನು ಭದ್ರಪಡಿಸುವ ಕುರಿತು.
-
- [https://finance.karnataka.gov.in/uploads/FD04TFP2026-Dtd-29-06-2026%20%282nd%20Quarter%20Delegation-Kan%29_1782729119.pdf] 
-
- 6 
-
- 3 months ago 
-
- 2026-27ನೇ ಸಾಲಿನಲ್ಲಿ ಜುಲೈ-2026 ರಿಂದ ಸೆಪ್ಟಂಬರ್-2026 ವರೆಗಿನ ಎರಡನೇ ತ್ರೈಮಾಸಿಕ ಕಂತಿನ ಹಣ ಬಿಡುಗಡೆಗೆ ಆರ್ಥಿಕ ಅಧಿಕಾರ ಪ್ರತ್ಯಾಯೋಜನೆಯ ಬಗ್ಗೆ.
-
- [https://finance.karnataka.gov.in/uploads/FD3SRS2026-Dtd-03-06-2026_1780575863.pdf] 
-
- 7 
-
- 4 months ago 
-
- ವಾರ್ಷಿಕ ವೇತನ ಬಡ್ತಿಯ ಪ್ರಪ್ತವಾಗುವ ದಿನಾಂಕದ ಹಿಂದಿನ ದಿನದಂದು ಸೇವೆಯಿಂದ ನಿವೃತ್ತಿ ಹೊಂದುವ ರಾಜ್ಯ ಸರ್ಕಾರಿ ನೌಕರರಿಗೆ ಒಂದು ಕಾಲ್ಪನಿಕ (Notional) ವಾರ್ಷಿಕ ವೇತನ ಬಡ್ತಿಯನ್ನು ಮಂಜೂರು ಮಾಡುವ ಬಗ್ಗೆ.
-
- [https://finance.karnataka.gov.in/uploads/Press%20Note%20Kannada_1776869053.pdf] 
-
- 8 
-
- 6 months ago 
-
- ರಾಜ್ಯ ಅಬಕಾರಿ ಸುಧಾರಣೆಗಳು 2026-ಕರಡು ವರದಿ-ಪತ್ರಿಕಾ ಟಿಪ್ಪಣಿ
-
  [https://finance.karnataka.gov.in/uploads/FD8BPE2026-Dtd-01-04-2026-KAN_1775045099.pdf] 
 
- 9 
+ 11 
 
- 6 months ago 
+ 8 months ago 
 
  2026-27ನೇ ಸಾಲಿನ ಪೂರ್ಣ ವರ್ಷಕ್ಕಾಗಿ ವೆಚ್ಚ ಮಾಡಲು ಅನುಮತಿ
 
@@ -153,67 +171,81 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
  ಇತ್ತೀಚಿನ ಸುದ್ದಿಗಳು
 
  1: 
+ New 
+ [https://finance.karnataka.gov.in/uploads/FD13SRP%202026-Dtd-12-11-2026%20UGC%20DA%20Kan_1794477266.pdf] 
+ 2016ರ ಪರಿಷ್ಕೃತ ವೇತನ ಯುಜಿಸಿ/ಐಸಿಎಆರ್/ಎಐಸಿಟಿಇ/ವೇತನ ಶ್ರೇಣಿಗಳಲ್ಲಿನ ಬೋಧಕ ಮತ್ತು ತತ್ಸಮಾನ ವೃಂದದ ಸಿಬ್ಬಂದಿಗಳಿಗೆ ತುಟಿಭತ್ಯೆಯ ದರಗಳನ್ನು ಪರಿಷ್ಕರಿಸುವ ಬಗ್ಗೆ (01-07-2026: 60% ರಿಂದ 63%) 
+
+ 4 days ago 
+
+ 2: 
+ New 
+ [https://finance.karnataka.gov.in/uploads/FD27BPE2026-Dtd-07-11-2026-Appxb-Circular%20Kan_1794378755.pdf] 
+ 2027-28ನೇ ಸಾಲಿನ ಅಪೆಂಡಿಕ್ಸ್-ಬಿ ವೇತನ ಅಂದಾಜು 
+
+ 5 days ago 
+
+ 3: 
+
+ [https://finance.karnataka.gov.in/uploads/FD10SRP2026-Dtd-05-11-2026-%28DA-Kannada%29_1793878421.pdf] 
+ ತುಟ್ಟಿ ಭತ್ಯೆಯ ದರಗಳ ಪರಿಷ್ಕರಣೆ ಕುರಿತು-01-07-2026-(15.75% ರಿಂದ 18%) 
+
+ 2 weeks ago 
+
+ 4: 
+
+ [https://finance.karnataka.gov.in/uploads/FD25BPE2026-Dtd-04-11-2026-MTFP%20Kan_1793793648.pdf] 
+ 2027-28ನೇ ಸಾಲಿನ ಆಯವ್ಯಯ ಅಂದಾಜು-ಮಾಧ್ಯಮಾವಧಿ ವಿತ್ತೀಯ ಯೋಜನೆ-2027-31 
+
+ 2 weeks ago 
+
+ 5: 
+
+ [https://finance.karnataka.gov.in/uploads/FD22BPE2026-Dtd-04-11-2026-Rev%20Rec-Kan_1793783864.pdf] 
+ 2027-28ನೇ ಸಾಲಿನ ಆಯವ್ಯಯ ರಾಜಸ್ವ-ಜಮೆ ತಯಾರಿಕೆಯ ಬಗ್ಗೆ. 
+
+ 2 weeks ago 
+
+ 6: 
+
+ [https://finance.karnataka.gov.in/uploads/Kan%20Circular_1792666405.pdf] 
+ 2027-28 ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು 
+
+ 4 weeks ago 
+
+ 7: 
 
  [https://finance.karnataka.gov.in/uploads/FD5TFP2026-Dtd-28-09-2026%20%28Third%20Quarter%20Delegation-Kan%29_1790675268.pdf] 
  2026-27ನೇ ಸಾಲಿನಲ್ಲಿ ಅಕ್ಟೋಬರ್-2026 ರಿಂದ ಡಿಸೆಂಬರ್-2026 ವರೆಗಿನ ಮೂರನೇ ತ್ರೈಮಾಸಿಕ ಕಂತಿನ ಹಣ ಬಿಡುಗಡೆಗೆ ಆರ್ಥಿಕ ಅಧಿಕಾರ ಪ್ರತ್ಯಾಯೋಜನೆಯ ಬಗ್ಗೆ 
 
- 2 weeks ago 
+ 2 months ago 
 
- 2: 
+ 8: 
 
  [https://finance.karnataka.gov.in/uploads/FD1-31ZPA2026-Dtd-15-09-2026%20Govt%20Order-15thSep26-revised_1789547210.pdf] 
  ಅಕ್ಟೋಬರ್ 2026 ರಿಂದ ಡಿಸೆಂಬರ್ 2026 ರವರೆಗೆ ಮೂರು ತಿಂಗಳ ಅವಧಿಗೆ, ಮೂರನೇ ಕಂತಿನ ಅನುದಾನವಾಗಿ, ವಾಸ್ತವಿಕ ವೆಚ್ಚದ ಆಧಾರದ ಮೇಲೆ ಹಾಗೂ “Just-in-Time” ಅನುದಾನ ಬಿಡುಗಡೆ ವಿಧಾನಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಜಿಲ್ಲಾ ಪಂಚಾಯಿತಿಗಳಿಗೆ ವಿವಿಧ ಯೋಜನೆಗಳಡಿ ಅನುದಾನ ಮಂಜೂರು ಮಾಡುವುದು. 
 
- 4 weeks ago 
+ 2 months ago 
 
- 3: 
+ 9: 
 
  [https://finance.karnataka.gov.in/uploads/FD34-264ZPA2026-Dtd-15-09-2026TP%20Govt%20Order-15thSep26-revised_1789546261.pdf] 
  ಅಕ್ಟೋಬರ್ 2026 ರಿಂದ ಡಿಸೆಂಬರ್ 2026 ರವರೆಗೆ ಮೂರು ತಿಂಗಳ ಅವಧಿಗೆ, ಮೂರನೇ ಕಂತಿನ ಅನುದಾನವಾಗಿ, ವಾಸ್ತವಿಕ ವೆಚ್ಚದ ಆಧಾರದ ಮೇಲೆ ಹಾಗೂ “Just-in-Time” ಅನುದಾನ ಬಿಡುಗಡೆ ವಿಧಾನಕ್ಕೆ ಅನುಗುಣವಾಗಿ ತಾಲ್ಲೂಕು ಪಂಚಾಯಿತಿಗಳಿಗೆ ವಿವಿಧ ಯೋಜನೆಗಳಡಿ ಅನುದಾನ ಮಂಜೂರು ಮಾಡುವುದು. 
 
- 4 weeks ago 
+ 2 months ago 
 
- 4: 
+ 10: 
 
  [https://finance.karnataka.gov.in/uploads/FD04BSG2026-Dtd-02-09-2026_1788330001.pdf] 
  2026-27ನೇ ಸಾಲಿನ ಪೂರಕ ಅಂದಾಜುಗಳು (ಮೊದಲನೇ ಕಂತು) ವೆಚ್ಚ ಮಾಡಲು ಅನುಮತಿ ಪತ್ರ ನೀಡುವ ಕುರಿತು. 
 
- One month ago 
+ 2 months ago 
 
- 5: 
-
- [https://finance.karnataka.gov.in/uploads/FD249FR2026-Dtd-10-07-2026_1783946596.pdf] 
- ಎಲ್ಲಾ ಸರ್ಕಾರಿ ಬ್ಯಾಂಕ್‌ ಕಾತೆಗಳ ದಾಖಾಲೆಗಳಲ್ಲಿ ಕಡ್ಡಾಯವಾಗಿ ಅಧಿಕೃತ ಸರ್ಕಾರಿ ಡೊಮೇನ್‌ ಇ-ಮೇಲ್‌ ಐಡಿಗಳನ್ನು ಬಳಸುವುದು ಮತ್ತು ಸಂಪರ್ಕ ವಿವರಗಳನ್ನು ಭದ್ರಪಡಿಸುವ ಕುರಿತು. 
-
- 3 months ago 
-
- 6: 
-
- [https://finance.karnataka.gov.in/uploads/FD04TFP2026-Dtd-29-06-2026%20%282nd%20Quarter%20Delegation-Kan%29_1782729119.pdf] 
- 2026-27ನೇ ಸಾಲಿನಲ್ಲಿ ಜುಲೈ-2026 ರಿಂದ ಸೆಪ್ಟಂಬರ್-2026 ವರೆಗಿನ ಎರಡನೇ ತ್ರೈಮಾಸಿಕ ಕಂತಿನ ಹಣ ಬಿಡುಗಡೆಗೆ ಆರ್ಥಿಕ ಅಧಿಕಾರ ಪ್ರತ್ಯಾಯೋಜನೆಯ ಬಗ್ಗೆ. 
-
- 3 months ago 
-
- 7: 
-
- [https://finance.karnataka.gov.in/uploads/FD3SRS2026-Dtd-03-06-2026_1780575863.pdf] 
- ವಾರ್ಷಿಕ ವೇತನ ಬಡ್ತಿಯ ಪ್ರಪ್ತವಾಗುವ ದಿನಾಂಕದ ಹಿಂದಿನ ದಿನದಂದು ಸೇವೆಯಿಂದ ನಿವೃತ್ತಿ ಹೊಂದುವ ರಾಜ್ಯ ಸರ್ಕಾರಿ ನೌಕರರಿಗೆ ಒಂದು ಕಾಲ್ಪನಿಕ (Notional) ವಾರ್ಷಿಕ ವೇತನ ಬಡ್ತಿಯನ್ನು ಮಂಜೂರು ಮಾಡುವ ಬಗ್ಗೆ. 
-
- 4 months ago 
-
- 8: 
-
- [https://finance.karnataka.gov.in/uploads/Press%20Note%20Kannada_1776869053.pdf] 
- ರಾಜ್ಯ ಅಬಕಾರಿ ಸುಧಾರಣೆಗಳು 2026-ಕರಡು ವರದಿ-ಪತ್ರಿಕಾ ಟಿಪ್ಪಣಿ 
-
- 6 months ago 
-
- 9: 
+ 11: 
 
  [https://finance.karnataka.gov.in/uploads/FD8BPE2026-Dtd-01-04-2026-KAN_1775045099.pdf] 
  2026-27ನೇ ಸಾಲಿನ ಪೂರ್ಣ ವರ್ಷಕ್ಕಾಗಿ ವೆಚ್ಚ ಮಾಡಲು ಅನುಮತಿ 
 
- 6 months ago 
+ 8 months ago 
 
  Close
 
@@ -276,9 +308,11 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
 ## ಅಯವ್ಯಯ ದಾಖಲೆಗಳು 
 
  [https://finance.karnataka.gov.in/kn] 
+ [https://finance.karnataka.gov.in/200/2027-28/kn] 2027-28 [https://finance.karnataka.gov.in/200/budget-related-orders/kn] ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು
+
  [https://finance.karnataka.gov.in/192/2026-2027/kn] 2026-2027 [https://finance.karnataka.gov.in/188/budget-related-orders/kn] ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು
- [https://finance.karnataka.gov.in/199/supplementary-estimate-2026-27/kn] ಪೂರಕ ಅಂದಾಜುಗಳು 2026-27
  [https://finance.karnataka.gov.in/192/budget-volumes-2026-27/kn] ಆಯವ್ಯಯ ಸಂಪುಟಗಳು-2026-27
+ [https://finance.karnataka.gov.in/199/supplementary-estimate-2026-27/kn] ಪೂರಕ ಅಂದಾಜುಗಳು 2026-27
 
  [https://finance.karnataka.gov.in/139/2025-26/kn] 2025-26 [https://finance.karnataka.gov.in/140/budget-related-orders/kn] ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು
  [https://finance.karnataka.gov.in/184/budget-volumes-2025-26/kn] 2025-26ನೇ ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
@@ -307,8 +341,8 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
 
  [https://finance.karnataka.gov.in/113/2020-21/kn] 2020-21 [https://finance.karnataka.gov.in/114/budget-related-orders/kn] ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು
  [https://finance.karnataka.gov.in/115/special-instructions/kn] ವಿಶೇಷ ಸೂಚನೆಗಳು
- [https://finance.karnataka.gov.in/119/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
  [https://finance.karnataka.gov.in/116/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
+ [https://finance.karnataka.gov.in/119/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
 
  [https://finance.karnataka.gov.in/43/2019-20/kn] 2019-20 [https://finance.karnataka.gov.in/112/budget-related-orders/kn] ಆಯವ್ಯಯ ಸಂಬಂಧಿತ ಆದೇಶಗಳು
  [https://finance.karnataka.gov.in/45/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
@@ -326,16 +360,16 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
  [https://finance.karnataka.gov.in/56/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
 
  [https://finance.karnataka.gov.in/57/2016-17/kn] 2016-17 [https://finance.karnataka.gov.in/60/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
- [https://finance.karnataka.gov.in/64/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
  [https://finance.karnataka.gov.in/61/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
+ [https://finance.karnataka.gov.in/64/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
 
  [https://finance.karnataka.gov.in/58/2015-16/kn] 2015-16 [https://finance.karnataka.gov.in/63/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
  [https://finance.karnataka.gov.in/59/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
  [https://finance.karnataka.gov.in/62/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
 
  [https://finance.karnataka.gov.in/65/2014-15/kn] 2014-15 [https://finance.karnataka.gov.in/73/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
- [https://finance.karnataka.gov.in/74/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
  [https://finance.karnataka.gov.in/66/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
+ [https://finance.karnataka.gov.in/74/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
 
  [https://finance.karnataka.gov.in/67/2013-14-july/kn] 2013-14 ಜುಲೈ [https://finance.karnataka.gov.in/78/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
  [https://finance.karnataka.gov.in/77/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
@@ -347,9 +381,9 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
  [https://finance.karnataka.gov.in/82/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
  [https://finance.karnataka.gov.in/72/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
 
- [https://finance.karnataka.gov.in/75/2011-12/kn] 2011-12 [https://finance.karnataka.gov.in/84/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
+ [https://finance.karnataka.gov.in/75/2011-12/kn] 2011-12 [https://finance.karnataka.gov.in/83/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
+ [https://finance.karnataka.gov.in/84/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
  [https://finance.karnataka.gov.in/76/budget-volumes/kn] ಆಯವ್ಯಯದ ಸಂಪುಟಗಳು
- [https://finance.karnataka.gov.in/83/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
 
  [https://finance.karnataka.gov.in/79/2010-11/kn] 2010-11 [https://finance.karnataka.gov.in/85/budget-related-orders/kn] ಆಯವ್ಯಯಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಆದೇಶಗಳು
  [https://finance.karnataka.gov.in/86/supplementary-estimate/kn] ಪೂರಕ ಅಂದಾಜುಗಳು
@@ -743,7 +777,7 @@ SOURCE URL: https://finance.karnataka.gov.in/info-2/2024-25/Budget+Volumes+2024-
 
  [https://ceg.karnataka.gov.in/guidelines/kn] ಮಾರ್ಗಸೂಚಿಗಳು
 
- ಇತ್ತೀಚಿನ ನವೀಕರಣ: 13-10-2026
+ ಇತ್ತೀಚಿನ ನವೀಕರಣ: 12-11-2026
 
  ಸಂದರ್ಶಕರು: 
 

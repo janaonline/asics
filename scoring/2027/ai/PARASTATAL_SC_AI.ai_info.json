@@ -1,0 +1,32 @@
+{
+  "scorer": "AI",
+  "section": "SC",
+  "template": "Parastatal_SC_Template.xlsx",
+  "template_sha256": "484ac9af879c566629f756bd0575ecc027d30bc0c6a5d31e4ea61d037e6ab431",
+  "agent": "question-scorer",
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "agent_setup_fingerprint": "4f6085f90f32",
+  "bank_version": {
+    "version": "Bengaluru_Parastatal_Pilot_NC19102026_1@2026-11-04#9d2acfb3",
+    "content_hash": "9d2acfb3514efdb7e8c14bf1e3e61d8edbaf1195bf99dd71146e2cb94d7a604b",
+    "source_file": "Bengaluru_Parastatal_Pilot_NC19102026_1.xlsx",
+    "source_sha256": "c1a28565b687d0e3b125aee5f1099f57647bb93987c3162865cdecdda8327508",
+    "built_at": "2026-11-04",
+    "questions": 69
+  },
+  "calculated": true,
+  "law_cutoff": "2026-08-31",
+  "undated_law_policy": "confirm",
+  "last_run_id": "20261116-110304",
+  "cities": {
+    "Bengaluru": {
+      "run_id": "20261116-101134",
+      "at": "2026-11-16T10:12:35"
+    },
+    "Bhubaneswar": {
+      "run_id": "20261116-110304",
+      "at": "2026-11-16T11:03:22"
+    }
+  }
+}

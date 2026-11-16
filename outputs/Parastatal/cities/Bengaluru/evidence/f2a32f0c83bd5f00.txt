@@ -30,9 +30,9 @@ SOURCE URL: https://bwssb.karnataka.gov.in/info-4/Technical/Maintenance/en
 
  [https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/maintenance] ನೇಮಕಾತಿ ಅಧಿಸೂಚನೆ 2025
  [https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/maintenance] ಮಂಡಳಿಯ ಸ್ಥಾಪನೆ ಮತ್ತು ಅಧಿಕಾರಿಗಳು
- [https://bwssb.karnataka.gov.in/255/rti/maintenance] ಮಾಹಿತಿ ಹಕ್ಕು [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(a)
- [https://bwssb.karnataka.gov.in/255/rti-4%281%29%28b%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(b)
- [https://rtionline.gov.in/] ಆರ್‌ಟಿಐ ಆನ್‌ಲೈನ್
+ [https://bwssb.karnataka.gov.in/260/rti/maintenance] ಮಾಹಿತಿ ಹಕ್ಕು [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(a)
+ [https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(b)
+ [https://rtionline.karnataka.gov.in/index.php?lan=E] ಆರ್‌ಟಿಐ ಆನ್‌ಲೈನ್
 
  ಏಕರೂಪ ದರಪಟ್ಟಿ [https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/maintenance] ಏಕರೂಪ ದರಪಟ್ಟಿ 2021-22
  [https://bwssb.karnataka.gov.in/23/common-srs-2023---24/maintenance] ಸಾಮಾನ್ಯ SRಗಳು 2023 - 24
@@ -70,9 +70,9 @@ SOURCE URL: https://bwssb.karnataka.gov.in/info-4/Technical/Maintenance/en
 
  [https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/maintenance] ನೇಮಕಾತಿ ಅಧಿಸೂಚನೆ 2025
  [https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/maintenance] ಮಂಡಳಿಯ ಸ್ಥಾಪನೆ ಮತ್ತು ಅಧಿಕಾರಿಗಳು
- [https://bwssb.karnataka.gov.in/255/rti/maintenance] ಮಾಹಿತಿ ಹಕ್ಕು [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(a)
- [https://bwssb.karnataka.gov.in/255/rti-4%281%29%28b%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(b)
- [https://rtionline.gov.in/] ಆರ್‌ಟಿಐ ಆನ್‌ಲೈನ್
+ [https://bwssb.karnataka.gov.in/260/rti/maintenance] ಮಾಹಿತಿ ಹಕ್ಕು [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(a)
+ [https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/maintenance] ಆರ್‌ಟಿಐ 4(1)(b)
+ [https://rtionline.karnataka.gov.in/index.php?lan=E] ಆರ್‌ಟಿಐ ಆನ್‌ಲೈನ್
 
  ಏಕರೂಪ ದರಪಟ್ಟಿ [https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/maintenance] ಏಕರೂಪ ದರಪಟ್ಟಿ 2021-22
  [https://bwssb.karnataka.gov.in/23/common-srs-2023---24/maintenance] ಸಾಮಾನ್ಯ SRಗಳು 2023 - 24
@@ -140,8 +140,6 @@ SOURCE URL: https://bwssb.karnataka.gov.in/info-4/Technical/Maintenance/en
  ಉಚಿತ
 
  Close
-
- ×
 
  ಹಕ್ಕುತ್ಯಾಗ
 
