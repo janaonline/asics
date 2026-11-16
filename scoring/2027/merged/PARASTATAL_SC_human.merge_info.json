@@ -1,0 +1,658 @@
+{
+  "source": "human",
+  "section": "SC",
+  "category": "parastatal",
+  "merged_at": "2026-11-16T06:26:44+00:00",
+  "template_name": "Parastatal_SC_Template.xlsx",
+  "template_sha256": "484ac9af879c566629f756bd0575ecc027d30bc0c6a5d31e4ea61d037e6ab431",
+  "bank_version": "Bengaluru_Parastatal_Pilot_NC19102026_1@2026-11-04#9d2acfb3",
+  "calculated": true,
+  "submissions": [
+    {
+      "submission_id": "20261116T062340Z_neha_bd6ed652",
+      "scorer": "Neha",
+      "file_sha256": "bd6ed652a09309b785fc3021b9573a38ff730c5924b33d87731e09f05f66461b"
+    }
+  ],
+  "rows_merged": 78,
+  "conflicts": [],
+  "incomplete": [
+    "SC 11, Bengaluru / BDA: the score is calculated from inputs and these are missing: Chief executives in last five years (count). The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 11, Bengaluru / BMTC: the score is calculated from inputs and these are missing: Chief executives in last five years (count). The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 11, Bengaluru / BWSSB: the score is calculated from inputs and these are missing: Chief executives in last five years (count). The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 11, Bhubaneswar / BDA: the score is calculated from inputs and these are missing: Chief executives in last five years (count). The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 11, Bhubaneswar / CRUT: the score is calculated from inputs and these are missing: Chief executives in last five years (count). The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 11, Bhubaneswar / WATCO: the score is calculated from inputs and these are missing: Chief executives in last five years (count). The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 12b, Bhubaneswar / BDA: the score is calculated from inputs and these are missing: Women staff, Total staff permanent and contractual, Benchmark highest proportion of women staff %. The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 12b, Bhubaneswar / CRUT: the score is calculated from inputs and these are missing: Women staff, Total staff permanent and contractual, Benchmark highest proportion of women staff %. The inputs were left out of the merged workbook so it does not show a score of 0.",
+    "SC 12b, Bhubaneswar / WATCO: the score is calculated from inputs and these are missing: Women staff, Total staff permanent and contractual, Benchmark highest proportion of women staff %. The inputs were left out of the merged workbook so it does not show a score of 0."
+  ],
+  "unregistered": [],
+  "skipped": [],
+  "rows": {
+    "SC 10|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 10|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 10|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 10|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 10|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 10|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 11|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 11|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 11|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 11|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 11|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 11|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 12a|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 12a|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 12a|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 12b|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 12b|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 12b|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4a|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4a|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4a|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4a|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4a|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4a|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4b|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4b|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4b|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4b|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4b|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 4b|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5a|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5a|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5a|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5a|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5a|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5a|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5b|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5b|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5b|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5b|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5b|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 5b|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6a|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6a|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6a|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6a|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6a|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6a|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6b|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6b|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6b|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6b|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6b|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 6b|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7a|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7a|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7a|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7a|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7a|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7a|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7b|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7b|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7b|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7b|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7b|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 7b|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8a|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8a|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8a|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8a|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8a|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8a|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8b|bengaluru|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8b|bengaluru|bmtc": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8b|bengaluru|bwssb": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8b|bhubaneswar|bda": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8b|bhubaneswar|crut": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    },
+    "SC 8b|bhubaneswar|watco": {
+      "scorers": [
+        "Neha"
+      ],
+      "submissions": [
+        "20261116T062340Z_neha_bd6ed652"
+      ]
+    }
+  }
+}

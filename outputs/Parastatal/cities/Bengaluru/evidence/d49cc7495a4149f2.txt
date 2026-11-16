@@ -30,9 +30,9 @@ SOURCE URL: https://bwssb.karnataka.gov.in/new-page/Provisional%20Seniority%20Li
 
  [https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/en] Recruitment Notification 2025
  [https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/en] Formation & Functions of the Board
- [https://bwssb.karnataka.gov.in/255/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
- [https://bwssb.karnataka.gov.in/255/rti-4%281%29%28b%29/en] RTI 4(1)(b)
- [https://rtionline.gov.in/] RTI Online
+ [https://bwssb.karnataka.gov.in/260/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
+ [https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/en] RTI 4(1)(b)
+ [https://rtionline.karnataka.gov.in/index.php?lan=E] RTI Online
 
  Common SR [https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/en] Common SR 2021-2022
  [https://bwssb.karnataka.gov.in/23/common-srs-2023---24/en] Common SRs 2023 - 24
@@ -70,9 +70,9 @@ SOURCE URL: https://bwssb.karnataka.gov.in/new-page/Provisional%20Seniority%20Li
 
  [https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/en] Recruitment Notification 2025
  [https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/en] Formation & Functions of the Board
- [https://bwssb.karnataka.gov.in/255/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
- [https://bwssb.karnataka.gov.in/255/rti-4%281%29%28b%29/en] RTI 4(1)(b)
- [https://rtionline.gov.in/] RTI Online
+ [https://bwssb.karnataka.gov.in/260/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
+ [https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/en] RTI 4(1)(b)
+ [https://rtionline.karnataka.gov.in/index.php?lan=E] RTI Online
 
  Common SR [https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/en] Common SR 2021-2022
  [https://bwssb.karnataka.gov.in/23/common-srs-2023---24/en] Common SRs 2023 - 24
@@ -298,8 +298,6 @@ Water Inspector
  Free
 
  Close
-
- ×
 
  Disclaimer
 

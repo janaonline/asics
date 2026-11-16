@@ -38,11 +38,15 @@ Note: Supported browser versions are Internet explorer 9+, Mozilla 55+ and Chrom
 
  A Bill has been passed by the Karnataka State Legislature to provide guarantee of services to citizens in the State of Karnataka within the stipulated time limit and for matters connected therewith and incidental thereto. This Act is called the Karnataka Guarantee of Services to Citizens Act, 2011.
 
-## ACT
+ The Karnataka Sakala Services Act, 2011 and Rules, 2012.
 
-## Rule
+ The Karnataka Sakala Services (Amendment) Act, 2014.
 
-## Amendment of Section 13 of Sakala Act
+ Amendment of Section 13 of Sakala Act 2026.
+
+ Amendment Rules 2026.
+
+ Notification for revising penalty under Sakala Act
 
 ## CHECK SERVICE REQUEST STATUS
 
@@ -109,14 +113,14 @@ Note: Supported browser versions are Internet explorer 9+, Mozilla 55+ and Chrom
 
  5
 
- 5
+ 9
+
+ 1
+
+ 6
+
+ 9
 
  7
-
- 3
-
- 8
-
- 4
 
  Top

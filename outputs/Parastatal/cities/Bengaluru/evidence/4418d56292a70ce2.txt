@@ -30,9 +30,9 @@ SOURCE URL: https://bwssb.karnataka.gov.in/new-page/Right%20to%20information%20A
 
  [https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/en] Recruitment Notification 2025
  [https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/en] Formation & Functions of the Board
- [https://bwssb.karnataka.gov.in/255/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
- [https://bwssb.karnataka.gov.in/255/rti-4%281%29%28b%29/en] RTI 4(1)(b)
- [https://rtionline.gov.in/] RTI Online
+ [https://bwssb.karnataka.gov.in/260/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
+ [https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/en] RTI 4(1)(b)
+ [https://rtionline.karnataka.gov.in/index.php?lan=E] RTI Online
 
  Common SR [https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/en] Common SR 2021-2022
  [https://bwssb.karnataka.gov.in/23/common-srs-2023---24/en] Common SRs 2023 - 24
@@ -70,9 +70,9 @@ SOURCE URL: https://bwssb.karnataka.gov.in/new-page/Right%20to%20information%20A
 
  [https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/en] Recruitment Notification 2025
  [https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/en] Formation & Functions of the Board
- [https://bwssb.karnataka.gov.in/255/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
- [https://bwssb.karnataka.gov.in/255/rti-4%281%29%28b%29/en] RTI 4(1)(b)
- [https://rtionline.gov.in/] RTI Online
+ [https://bwssb.karnataka.gov.in/260/rti/en] RTI [https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en] RTI 4(1)(a)
+ [https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/en] RTI 4(1)(b)
+ [https://rtionline.karnataka.gov.in/index.php?lan=E] RTI Online
 
  Common SR [https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/en] Common SR 2021-2022
  [https://bwssb.karnataka.gov.in/23/common-srs-2023---24/en] Common SRs 2023 - 24
@@ -128,26 +128,31 @@ Financial Advisor Cum Chief Accounts Officer
  [https://bwssb.karnataka.gov.in/237/assistant-controllerr/en] view
 
 3
+Engineer-in-Chief (EIC)
+ [https://bwssb.karnataka.gov.in/255/engineer-in-chief-%28eic%29/en] view
+
+4
 Maintenance (M)
  [https://bwssb.karnataka.gov.in/228/zones/en] view
 
-4
-Innovative Projects, Research and Development (IP & RD)
- [https://bwssb.karnataka.gov.in/247/innovative-projects,-research-and-development-%28ip-&-rd%29/en] view
-
 5
+Innovative Projects, Research and Development 
+(IP & RD)
+ [https://bwssb.karnataka.gov.in/248/innovative-projects,-research-and-development-%28ip-&-rd%29/en] view
+
+6
 Kaveri
  [https://bwssb.karnataka.gov.in/235/ce-%28kaveri%29-/en] view
 
-6
+7
 Kaveri Head Works
  [https://bwssb.karnataka.gov.in/236/cauvery-headworks/en] view
 
-7
+8
 Used Water Projects 
  [https://bwssb.karnataka.gov.in/240/used-water-projects-/en] view
 
-8
+9
 Design, QA & IT
  [https://bwssb.karnataka.gov.in/243/quality-assurance/en] view
 
@@ -210,6 +215,10 @@ Chief Engineer-(Kaveri O&M)
 13
 CAO - S
  [https://bwssb.karnataka.gov.in/uploads/CAO-S%2025_1790243650.pdf] view
+
+14
+Penison
+ [https://bwssb.karnataka.gov.in/uploads/2024-25_1793448645.pdf] View
 
 ##  
 
@@ -276,6 +285,10 @@ Financial Advisor and Chief Accountant
 12
 Office of Public Relations Officer
  [https://bwssb.karnataka.gov.in/storage/pdf-files/4(1)(a)2023-24Index-PROSec.pdf] view
+
+13
+Pension
+ [https://bwssb.karnataka.gov.in/uploads/2023-24_1794374649.pdf] View
 
 ##  
 
@@ -932,8 +945,6 @@ Chief Engineer-(Kaveri O&M)
  Free
 
  Close
-
- ×
 
  Disclaimer
 

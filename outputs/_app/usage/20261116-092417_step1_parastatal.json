@@ -1,0 +1,70 @@
+{
+  "kind": "run",
+  "step": 1,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 1 \u00b7 Parastatal \u00b7 Find sources",
+  "cities": [
+    "Bengaluru"
+  ],
+  "work": 3,
+  "unit": "agency",
+  "started": "2026-11-16T09:10:11",
+  "finished": "2026-11-16T09:24:17",
+  "group": "20261116-091010-5cd1",
+  "total_usd": 3.9055,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 70,
+      "input": 450,
+      "cache_read": 1775639,
+      "cache_write": 717642,
+      "output": 77539,
+      "searches": 98,
+      "fetches": 36,
+      "usd": 3.9055228
+    }
+  },
+  "by_agent": {
+    "parastatal-discovery \u00b7 claude-sonnet-5-5": {
+      "calls": 1,
+      "input": 14,
+      "cache_read": 74184,
+      "cache_write": 15614,
+      "output": 2563,
+      "searches": 8,
+      "fetches": 0,
+      "usd": 0.1595298
+    },
+    "website-profiler \u00b7 claude-sonnet-5-5": {
+      "calls": 7,
+      "input": 140,
+      "cache_read": 1004202,
+      "cache_write": 115513,
+      "output": 23885,
+      "searches": 48,
+      "fetches": 35,
+      "usd": 1.2087529
+    },
+    "source-assessor \u00b7 claude-sonnet-5-5": {
+      "calls": 55,
+      "input": 220,
+      "cache_read": 194881,
+      "cache_write": 530858,
+      "output": 41611,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 1.7826712
+    },
+    "citation-builder \u00b7 claude-sonnet-5-5": {
+      "calls": 7,
+      "input": 76,
+      "cache_read": 502372,
+      "cache_write": 55657,
+      "output": 9480,
+      "searches": 42,
+      "fetches": 1,
+      "usd": 0.7545689
+    }
+  }
+}

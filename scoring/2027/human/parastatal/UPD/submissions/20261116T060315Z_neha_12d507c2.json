@@ -1,0 +1,23 @@
+{
+  "submission_id": "20261116T060315Z_neha_12d507c2",
+  "section": "UPD",
+  "scorer": "Neha",
+  "uploaded_by": "Sudhakar",
+  "uploaded_at": "2026-11-16T06:03:15+00:00",
+  "file_name": "20261116T060315Z_neha_12d507c2.xlsx",
+  "original_name": "Parastatal_UPD_Template.xlsx",
+  "file_sha256": "12d507c2dbf94c5966311b5f888b925c110d4b4a9421a782486a80e13c652c06",
+  "template_name": "Parastatal_UPD_Template.xlsx",
+  "template_sha256": "91c835ed7c3ddc9262a922e2a68fc60b20d3413a8f9d6d47f38dd817d2a5a1ba",
+  "bank_version": "Bengaluru_Parastatal_Pilot_NC19102026_1@2026-11-04#9d2acfb3",
+  "rows_read": 32,
+  "rows_with_score": 32,
+  "rows_with_values": 32,
+  "issue_count": 0,
+  "category": "parastatal",
+  "source": "human",
+  "replaces": [],
+  "issues": [],
+  "decisions": [],
+  "decision_history": []
+}

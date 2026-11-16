@@ -1,0 +1,27 @@
+{
+  "section": "DPG",
+  "submissions": [
+    {
+      "submission_id": "20261116T062449Z_neha_ffbe98fd",
+      "section": "DPG",
+      "scorer": "Neha",
+      "uploaded_by": "Sudhakar",
+      "uploaded_at": "2026-11-16T06:24:49+00:00",
+      "file_name": "20261116T062449Z_neha_ffbe98fd.xlsx",
+      "original_name": "Parastatal_DPG_Template.xlsx",
+      "file_sha256": "ffbe98fd5227c7f9c21621a709c12b277980bfd58b2f1a34578267c4f392b546",
+      "template_name": "Parastatal_DPG_Template.xlsx",
+      "template_sha256": "c41d292fb628e98953d26216a097edd820873d724b4df66ac8cbfdbeacdcfa12",
+      "bank_version": "Bengaluru_Parastatal_Pilot_NC19102026_1@2026-11-04#9d2acfb3",
+      "rows_read": 116,
+      "rows_with_score": 110,
+      "rows_with_values": 110,
+      "issue_count": 0,
+      "category": "parastatal",
+      "source": "human",
+      "replaces": [],
+      "decisions": [],
+      "decision_history": []
+    }
+  ]
+}
