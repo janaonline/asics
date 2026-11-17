@@ -9,7 +9,7 @@ from pydantic import BaseModel, Field
 from asics_agent.agent_setup import MemoryScope
 from asics_agent.categories import agent_for
 from asics_agent.cutoff import assessment_fields, rule_from
-from asics_agent.links.accessibility import check_url, is_india_code
+from asics_agent.links.accessibility import check_url, is_india_code, site_of
 from asics_agent.links.text import rank_chunks
 from asics_agent.llm import call_json
 from asics_agent.models import AccessCheck, Issue, Parastatal, Question, RunContext, Source
@@ -128,7 +128,11 @@ def vet_source(
         return None, issues
 
     settings = services.settings
-    check = check_url(url, services.http, Path(run.cache_dir), settings.user_agent)
+    # The agency's confirmed official website lets a gov.in alias that redirects to it be accepted.
+    confirmed = {site_of(parastatal.official_website)} - {""}
+    check = check_url(
+        url, services.http, Path(run.cache_dir), settings.user_agent, official_hosts=confirmed
+    )
     notes = [" ".join(check.reasons)]
     if team_copy:
         automated = f"Automated check: {' '.join(check.reasons)}"

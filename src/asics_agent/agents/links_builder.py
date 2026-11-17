@@ -23,6 +23,7 @@ from asics_agent.agents.common import (
 )
 from asics_agent.agents.state import ParastatalTask, ParastatalTaskOutput
 from asics_agent.categories import agent_for
+from asics_agent.links.accessibility import site_of
 from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue
@@ -39,6 +40,40 @@ def own_domain(website: str | None) -> set[str]:
     if not host or host.endswith((".gov.in", ".nic.in")):
         return set()
     return {host}
+
+
+CANDIDATE_MIN_SCORE = 20  # at least "linked from a government page" (see links/trust.py)
+
+
+def candidate_website(parastatal) -> str:
+    """The best candidate website to search when none could be confirmed as official (for
+    example the profile step could not open it because of a certificate error). "" when the
+    agency has a confirmed website, no candidate, or the candidate looks like a known
+    non-official site (those score 0). Its sources are marked CONFIRM."""
+    check = getattr(parastatal, "website_check", None)
+    if getattr(parastatal, "official_website", "") or check is None:
+        return ""
+    return check.url if check.url and check.score >= CANDIDATE_MIN_SCORE else ""
+
+
+def use_after_retest(old, source) -> tuple[bool, str]:
+    """(Use for Answers?, a note) for an earlier row after it was re-tested.
+
+    The team's decision is kept, with one exception: a row that was "No" only because its link
+    could not be opened (it was not verified, and the team did not add it) is switched to "Yes"
+    when it now opens and passes the check. Without this a link recovered by a fix would stay
+    unused. A row the team unticked while it was verified, or one the team added, stays as it was."""
+    if (
+        not old.use_for_answers
+        and old.verification_status != "Verified"
+        and old.found_by != "Your team"
+        and source.verification_status == "Verified"
+    ):
+        return True, (
+            "Now verified, so Use for Answers is set to Yes (it was No only because the link "
+            "could not be opened before). "
+        )
+    return old.use_for_answers, ""
 
 
 def _verified_questions(task: ParastatalTask) -> set[str]:
@@ -77,10 +112,11 @@ def build_links_agent(services: Services):
         for old, (_, source, vet_issues) in zip(earlier, results, strict=True):
             issues += vet_issues
             if source:
+                use, why = use_after_retest(old, source)
                 source = source.model_copy(
                     update={
                         "citation_id": old.citation_id,
-                        "use_for_answers": old.use_for_answers,
+                        "use_for_answers": use,
                         "team_notes": old.team_notes,
                         "found_by": old.found_by,
                         "provenance": old.provenance,
@@ -89,13 +125,14 @@ def build_links_agent(services: Services):
                 previous = f"Previous status: {old.verification_status or 'blank'}"
                 if old.authority_score:
                     previous += f", score {old.authority_score:g}"
-                source.notes = f"Re-tested this run. {previous}. {source.notes}"
+                source.notes = f"Re-tested this run. {previous}. {why}{source.notes}"
                 sources.append(source)
         return {"sources": sources, "issues": issues}
 
     def research(task: ParastatalTask, questions, already: set[str], note: str) -> dict:
         p, run = task["parastatal"], task["run"]
         known = set(task.get("known_urls", []))
+        candidate_site = candidate_website(p)
         report(
             p.id,
             f"Searching the web for sources for {len(questions)} question(s) "
@@ -108,6 +145,12 @@ def build_links_agent(services: Services):
                 f"{services.settings.unit_label}: {p.name} ({p.id}), type {p.type}\n"
                 f"City: {run.city_name}, {run.state_name}. City government (ULG): {run.ulg}\n"
                 f"Official website: {p.official_website or 'not confirmed'}\n"
+                + (
+                    "Candidate website (NOT confirmed as official; you may search and open it, "
+                    f"and every source from it is marked CONFIRM): {candidate_site}\n"
+                    if candidate_site
+                    else ""
+                )
                 + (
                     "Shared state laws already in the Citation Sheet for every parastatal "
                     "(do not search for these again):\n" + "\n".join(task["shared_laws"]) + "\n"
@@ -129,7 +172,7 @@ def build_links_agent(services: Services):
                 known_urls=known,
                 tool_context=(tools := ToolContext(services=services, run=run, progress_key=p.id)),
                 web_max_uses=services.settings.find_sources_max_uses,
-                web_domains=own_domain(p.official_website),
+                web_domains=own_domain(p.official_website) | own_domain(candidate_site),
             )
         except CallFailed as exc:
             report(p.id, f"Stopped this search: {exc}")
@@ -177,6 +220,11 @@ def build_links_agent(services: Services):
         ):
             issues += vet_issues
             if source:
+                if candidate_site and site_of(source.url) == site_of(candidate_site):
+                    source.notes = (
+                        f"CONFIRM: {site_of(candidate_site)} is only a candidate website for {p.id} "
+                        f"(not confirmed as official). {source.notes}"
+                    ).strip()
                 sources.append(source)
         return {"sources": sources, "tool_urls": sorted(urls), "issues": issues}
 

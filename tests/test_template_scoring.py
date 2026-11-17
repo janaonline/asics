@@ -9,7 +9,7 @@ from openpyxl import load_workbook
 
 from asics_agent.categories import category_settings
 from asics_agent.config import get_settings
-from asics_agent.models import Parastatal, Source
+from asics_agent.models import ALL_PARASTATALS, Parastatal, Source
 from asics_agent.scoring import consolidated as cons
 from asics_agent.scoring import template_fill as fill
 from asics_agent.scoring import template_scoring as ts
@@ -606,3 +606,55 @@ def test_the_prompt_lists_the_template_inputs_and_the_score_line(tmp_path):
     )
     assert 'SCORE: give "score" as a number from 0 to 5' in typed
     assert "ALLOWED SCORES: 5 / 2.5 / 0." in typed
+
+
+def _evidence_with_a_shared_law():
+    own = Source(
+        citation_id="TWB-01", parastatal_id="TWB", title="Own Act", url="https://x.gov.in/a"
+    )
+    shared = Source(
+        citation_id="ALL-01",
+        parastatal_id=ALL_PARASTATALS,
+        title="City Act",
+        url="https://x.gov.in/c",
+    )
+    other = Source(
+        citation_id="OTH-01", parastatal_id="OTH", title="Other", url="https://x.gov.in/o"
+    )
+    answer = StepTwoAnswer(
+        status="Answered — Verified Source",
+        answer="Yes",
+        citation_id="ALL-01",
+        evidence="the city shall coordinate",
+        notes="",
+        source_needed="",
+    )
+    return CityEvidence(
+        parastatals={
+            "TWB": Parastatal(id="TWB", name="Test Water Board", type="water_supply_entity")
+        },
+        citations=[own, shared, other],
+        answers={("TWB", "UPD1a"): answer},
+    )
+
+
+def test_step_3_can_use_a_shared_law_step_2_cited():
+    from asics_agent.scoring.ai import check_step2
+
+    answer, sources, reason = check_step2("UPD 1a", "TWB", "", _evidence_with_a_shared_law(), {})
+    assert reason is None
+    assert answer.citation_id == "ALL-01"
+    # the agency's own row and the shared law, but never another agency's row
+    assert [s.citation_id for s in sources] == ["TWB-01", "ALL-01"]
+
+
+def test_the_message_for_a_citation_that_is_really_gone_says_why():
+    from asics_agent.scoring.ai import check_step2
+
+    evidence = _evidence_with_a_shared_law()
+    evidence.citations = [s for s in evidence.citations if s.citation_id != "ALL-01"]
+    _, sources, reason = check_step2("UPD 1a", "TWB", "", evidence, {})
+    assert sources == []
+    assert reason.startswith("Step 2 cited ALL-01")  # keeps the start the reason lookup uses
+    assert "not a verified row marked for use for TWB" in reason
+    assert "unticked" in reason and "failed its re-check" in reason

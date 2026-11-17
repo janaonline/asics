@@ -209,11 +209,14 @@ def test_the_new_columns_round_trip_and_an_old_sheet_still_loads(services, run_s
     assert not [i for i in issues if i.severity == "error"]
 
 
-@pytest.mark.skipif(
-    not (REAL / "Bengaluru" / "ASICS_Bengaluru_Sources.xlsx").exists(), reason="no real sheet"
-)
+# The live Sources workbook is rewritten by every Step 1 run (it now has the date columns), so this
+# test uses the saved copy of the last OLD-format sheet (17 columns, 240 rows) from history/.
+OLD_SHEET = REAL / "Bengaluru" / "history" / "ASICS_Bengaluru_Sources_20261116-092417.xlsx"
+
+
+@pytest.mark.skipif(not OLD_SHEET.exists(), reason="the saved old sheet is not here")
 def test_the_real_old_sheet_loads_and_the_converter_never_touches_it(tmp_path):
-    original = REAL / "Bengaluru" / "ASICS_Bengaluru_Sources.xlsx"
+    original = OLD_SHEET
     before = hashlib.sha256(original.read_bytes()).hexdigest()
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")

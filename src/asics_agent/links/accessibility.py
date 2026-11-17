@@ -9,6 +9,7 @@ that only render with JavaScript fail it and are routed to human verification.
 """
 
 import hashlib
+import re
 import threading
 from datetime import UTC, datetime
 from pathlib import Path
@@ -22,6 +23,7 @@ from asics_agent.models import AccessCheck
 
 MIN_WORDS = 150
 INDIA_CODE_HOST = "indiacode.nic.in"
+GOVERNMENT_SUFFIXES = (".gov.in", ".nic.in")
 INDIA_CODE_MIN_WORDS = 800  # Handle pages with only metadata are much shorter than an Act.
 BLOCK_MARKERS = (
     "access denied",
@@ -42,6 +44,12 @@ BROWSER_USER_AGENT = (
 )
 
 PAGE_DEADLINE_SECONDS = 60  # a whole page or PDF must arrive within this
+INDIA_CODE_SECONDS = 120  # India Code's scanned Acts are large and slow: more time, per read too
+_BODY_ENCODING_HEADERS = {"content-encoding", "content-length", "transfer-encoding"}
+# A PDF with at least this many pages, over half of them empty, is a scan, not a text document.
+SCAN_MIN_PAGES = 10
+SCAN_EMPTY_SHARE = 0.5
+SCAN_EMPTY_WORDS = 10  # a page with fewer words than this counts as empty
 ROBOTS_DEADLINE_SECONDS = 10
 MAX_BYTES = 30 * 1024 * 1024  # larger documents are not downloaded in full
 
@@ -54,18 +62,32 @@ class FetchTooSlow(httpx.TimeoutException):
     pass
 
 
-def fetch(client: httpx.Client, url: str, deadline: float, follow_redirects: bool = True):
+def fetch(
+    client: httpx.Client,
+    url: str,
+    deadline: float,
+    follow_redirects: bool = True,
+    *,
+    timeout: float | None = None,
+    headers: dict | None = None,
+):
     """GET with a hard limit on total time and size.
 
     httpx's own timeout applies per network read, so a server that trickles data slowly
     can otherwise hold a request open indefinitely (this once froze a whole run).
+
+    `timeout` replaces the client's per-read timeout for this request (India Code is slow);
+    `headers` are added to the client's own for this request only.
     """
     import time
 
     start = time.monotonic()
     chunks, size = [], 0
-    with client.stream("GET", url, follow_redirects=follow_redirects) as response:
-        for chunk in response.iter_bytes():
+    options = {} if timeout is None else {"timeout": timeout}
+    with client.stream(
+        "GET", url, follow_redirects=follow_redirects, headers=headers, **options
+    ) as response:
+        for chunk in response.iter_bytes():  # already decompressed
             chunks.append(chunk)
             size += len(chunk)
             if time.monotonic() - start > deadline:
@@ -74,9 +96,17 @@ def fetch(client: httpx.Client, url: str, deadline: float, follow_redirects: boo
                 )
             if size > MAX_BYTES:
                 break
+        # The body is already decompressed, so the headers that describe the compressed
+        # body must not travel with it: httpx would decompress it a second time and fail
+        # with "incorrect header check" (DecodingError) on every gzip/deflate reply.
+        kept = [
+            (k, v)
+            for k, v in response.headers.multi_items()
+            if k.lower() not in _BODY_ENCODING_HEADERS
+        ]
         return httpx.Response(
             status_code=response.status_code,
-            headers=response.headers,
+            headers=kept,
             content=b"".join(chunks),
             request=response.request,
         )
@@ -109,8 +139,23 @@ def _site(url: str) -> str:
     return host.removeprefix("www.")
 
 
+def site_of(url: str) -> str:
+    """The website of a URL: its host name without "www." and the port ("" for no URL)."""
+    return _site(url or "")
+
+
 def is_india_code(url: str) -> bool:
     return urlsplit(url).netloc.lower().endswith(INDIA_CODE_HOST)
+
+
+def scanned_pdf(text: str) -> tuple[int, int] | None:
+    """(empty pages, pages) for a PDF whose text is mostly missing (a scan), else None. Needs the
+    "[page N]" markers `pdf_to_text` writes; a web page has none."""
+    pages = re.split(r"(?m)^\[page \d+\]$", text)[1:]
+    if len(pages) < SCAN_MIN_PAGES:
+        return None
+    empty = sum(len(p.split()) < SCAN_EMPTY_WORDS for p in pages)
+    return (empty, len(pages)) if empty / len(pages) >= SCAN_EMPTY_SHARE else None
 
 
 def content_problem(url: str, text: str) -> tuple[str | None, str]:
@@ -131,7 +176,16 @@ def content_problem(url: str, text: str) -> tuple[str | None, str]:
     return None, ""
 
 
-def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) -> AccessCheck:
+def check_url(
+    url: str,
+    client: httpx.Client,
+    cache_dir: Path,
+    user_agent: str,
+    official_hosts: frozenset[str] | set[str] = frozenset(),
+) -> AccessCheck:
+    """`official_hosts`: websites already confirmed as this agency's own (host names without
+    "www."). A gov.in / nic.in address that redirects to one of them is accepted, with a CONFIRM
+    note; a redirect to any other site is still left to a person."""
     check = AccessCheck(url=url, checked_at=datetime.now(UTC).isoformat(timespec="seconds"))
     reasons = check.reasons
 
@@ -140,29 +194,46 @@ def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) 
         reasons.append("robots.txt disallows automated fetching; a person must open the link.")
         return check
 
+    india = is_india_code(url)
+    deadline = INDIA_CODE_SECONDS if india else PAGE_DEADLINE_SECONDS
+    read_timeout = INDIA_CODE_SECONDS if india else None
+    headers = None
     response = None
     for attempt in (1, 2):  # many government servers drop the first connection
         try:
-            response = fetch(client, url, PAGE_DEADLINE_SECONDS)
+            response = fetch(client, url, deadline, timeout=read_timeout, headers=headers)
             break
         except FetchTooSlow as exc:
             reasons.append(f"Could not be opened: the website {exc}.")
             check.verification_status = "Human Verification Required"
             return check
-        except (httpx.ConnectError, httpx.ConnectTimeout, httpx.RemoteProtocolError) as exc:
+        except (
+            httpx.ConnectError,
+            httpx.ConnectTimeout,
+            httpx.RemoteProtocolError,
+            httpx.ReadTimeout,
+        ) as exc:
             if attempt == 2:
                 detail = str(exc).lower()
-                why = (
-                    "the website's security certificate could not be checked automatically"
-                    if "certificate" in detail or "ssl" in detail
-                    else f"the connection failed ({type(exc).__name__})"
-                )
+                if "certificate" in detail or "ssl" in detail:
+                    why = "the website's security certificate could not be checked automatically"
+                elif isinstance(exc, httpx.ReadTimeout):
+                    why = "the website was too slow to answer (ReadTimeout)"
+                else:
+                    why = f"the connection failed ({type(exc).__name__})"
                 reasons.append(
                     f"Could not be opened automatically: {why}. Blocked to automated tools; "
                     "a person must open the link in a browser."
                 )
                 check.verification_status = "Human Verification Required"
                 return check
+        except httpx.DecodingError as exc:
+            # A server that sends a damaged compressed reply: ask once for it uncompressed.
+            if attempt == 1:
+                headers = {"Accept-Encoding": "identity"}
+                continue
+            reasons.append(f"Could not be opened: {type(exc).__name__}.")
+            return check
         except httpx.HTTPError as exc:
             reasons.append(f"Could not be opened: {type(exc).__name__}.")
             return check
@@ -181,9 +252,15 @@ def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) 
         reasons.append(f"HTTP {response.status_code} when opening the exact URL.")
         return check
     if _site(check.final_url) != _site(url):
-        reasons.append(f"Redirects to a different site ({check.final_url}).")
-        check.verification_status = "Human Verification Required"
-        return check
+        if _site(check.final_url) in official_hosts and _site(url).endswith(GOVERNMENT_SUFFIXES):
+            reasons.append(
+                f"CONFIRM: this government address redirects to {check.final_url}, which is this "
+                "agency's own confirmed official website. Check the redirect is intended."
+            )
+        else:
+            reasons.append(f"Redirects to a different site ({check.final_url}).")
+            check.verification_status = "Human Verification Required"
+            return check
     if any(t in check.content_type for t in METADATA_TYPES):
         reasons.append(f"Returns an API/metadata response ({check.content_type}), not a page.")
         return check
@@ -203,6 +280,15 @@ def check_url(url: str, client: httpx.Client, cache_dir: Path, user_agent: str) 
         return check
 
     check.words = len(text.split())
+    if (scan := scanned_pdf(text)) is not None:
+        empty, pages = scan
+        reasons.append(
+            f"{empty} of this PDF's {pages} pages have no readable text, so it is probably a scan. "
+            "A person can open it and save a readable copy (see How to Use); it is not used "
+            "for answers until then."
+        )
+        check.verification_status = "Human Verification Required"
+        return check
     problem, detail = content_problem(url, text)
     if problem == "blocked":
         reasons.append(f"Page appears blocked or gated ({detail!r}).")

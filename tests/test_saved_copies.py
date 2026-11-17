@@ -60,7 +60,7 @@ def refused(monkeypatch):
     """The link checker is refused by PLAN's website, as by a blocking government site."""
     real = common.check_url
 
-    def check(url, client, cache_dir, user_agent):
+    def check(url, client, cache_dir, user_agent, official_hosts=frozenset()):
         if url == PLAN:
             return AccessCheck(
                 url=url,
@@ -68,7 +68,7 @@ def refused(monkeypatch):
                 reasons=["HTTP 403: the website refused the automated check."],
                 checked_at="2026-10-12T10:00:00",
             )
-        return real(url, client, cache_dir, user_agent)
+        return real(url, client, cache_dir, user_agent, official_hosts)
 
     monkeypatch.setattr(common, "check_url", check)
 

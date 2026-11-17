@@ -171,15 +171,19 @@ def _compare(view) -> None:
     cols = st.columns(min(len(shown), 6) or 1)
     for col, (status, n) in zip(cols, shown[:6], strict=False):
         col.metric(status[:1].upper() + status[1:], n)
-    both = [r for r in rows if r.status == "both"]
-    if len(both) >= compare.MIN_ROWS:
-        agree = sum(r.agrees == "Yes" for r in both)
-        st.caption(f"The AI and people agree exactly on {agree} of {len(both)} compared rows.")
-    else:
-        st.caption(
-            f"Only {len(both)} row(s) are scored by both; a percentage shows from "
-            f"{compare.MIN_ROWS}."
-        )
+    left, right = st.columns(2)
+    left.metric(
+        "Coverage: AI scored of human scored",
+        compare.coverage_text(rows),
+        help="Of the rows a person scored, how many the AI scored too. It says nothing about "
+        "whether the scores are the same.",
+    )
+    right.metric(
+        "Agreement when both scored",
+        compare.agreement_text(rows),
+        help="Of the rows scored by both, how many have exactly the same score. A percentage "
+        f"shows from {compare.MIN_ROWS} compared rows.",
+    )
     a, b, c, d = st.columns(4)
     sections = sorted({r.section for r in rows})
     section = a.selectbox("Section", ["All", *sections], key="cmp-section")

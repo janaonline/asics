@@ -35,6 +35,7 @@ from asics_agent.categories import ULG_UNIT_ID, agent_for
 from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
+from asics_agent.models import ALL_PARASTATALS
 from asics_agent.scoring.human import (
     _code_matches,
     _input_problem,
@@ -238,7 +239,8 @@ REASONS = {
     "no_answer": "Step 2 has no answer for this question and agency",
     "mismatch": "Step 2 answered a different question under this code: the scoring workbook "
     "and the question bank don't match",
-    "citation_changed": "Step 2's citation is no longer in the reviewed Citation Sheet",
+    "citation_changed": "Step 2's citation is not a verified row marked for use in the current "
+    "Citation Sheet (removed, unticked, failed its re-check, or another agency's)",
     "check_failed": "The AI's citation or quote failed the check",
     "undecided": "The citation didn't settle every input",
     "cutoff": "The cited source is not usable for a Law/Policy question (dated after the "
@@ -349,13 +351,14 @@ def check_step2(
         needed = f" Source needed: {answer.source_needed}" if answer.source_needed else ""
         status = answer.status or "no status"
         return answer, [], f"Step 2 found no evidence ({status}).{needed}"
-    sources = [c for c in evidence.citations if c.parastatal_id in (agency, "ALL")]
+    sources = [c for c in evidence.citations if c.parastatal_id in (agency, ALL_PARASTATALS)]
     if not any(s.citation_id == answer.citation_id for s in sources):
         return (
             answer,
             [],
-            f"Step 2 cited {answer.citation_id}, which is no longer "
-            "a reviewed, verified Citation Sheet row. Run Step 2 again.",
+            f"Step 2 cited {answer.citation_id}, but {answer.citation_id} is not a verified row "
+            f"marked for use for {agency} in the current Sources workbook (it was removed, "
+            "unticked, failed its re-check, or belongs to another agency). Run Step 2 again.",
         )
     return answer, sources, None
 

@@ -8,6 +8,8 @@
   * names_to_add: what the research lead would add by hand: cities and parastatals people scored
     that are not in the register, and names not yet written as an "Other name".
 
+  * set_city_government: fill in a city's empty "City government (ULG)" cell, the same careful way.
+
 Nothing else in the register is ever changed from the portal.
 """
 
@@ -109,6 +111,58 @@ def add_other_name(settings, kind: str, city_name: str, alias: str, code: str = 
     partial.replace(path)
     after, issues = load_register(path)
     if len(issues) > errors_before or set(after) != set(before):
+        shutil.copyfile(copy, path)  # it does not load as before: put the copy back
+        return "The register could not be updated safely, so it was left as it was."
+    return None
+
+
+def set_city_government(settings, city_name: str, name: str) -> str | None:
+    """Write `name` as the register's "City government (ULG)" for `city_name`, when that cell is
+    empty. The register is copied to data/cities/history/ first, only that cell changes, and the
+    result is checked by loading the register again; if it does not load as before, the copy is
+    put back. A name that is already filled in is never overwritten. Returns why it could not be
+    done, or None when it was done."""
+    path = settings.city_register
+    if not path.exists():
+        return f"The city register is not at {path}."
+    name = _text(name)
+    if not name:
+        return "There is no name to write."
+    before, _ = load_register(path)
+    errors_before = len(load_register(path)[1])
+    wb = load_workbook(path)
+    if CITIES_SHEET not in wb.sheetnames:
+        return "The register does not have a Cities sheet."
+    cities = wb[CITIES_SHEET]
+    city_col, ulg_col = _column(cities, "City"), _column(cities, "City government (ULG)")
+    if city_col is None or ulg_col is None:
+        return 'The Cities sheet has no "City" and "City government (ULG)" columns.'
+    row = next(
+        (
+            r
+            for r in range(2, cities.max_row + 1)
+            if norm_name(cities.cell(r, city_col).value) == norm_name(city_name)
+        ),
+        None,
+    )
+    if row is None:
+        return f"{city_name} is not on the register's Cities sheet."
+    current = _text(cities.cell(row, ulg_col).value)
+    if current:
+        return f'{city_name} already has the city government name "{current}"; it was not changed.'
+    copy = backup(path)
+    cities.cell(row, ulg_col).value = name
+    partial = path.with_name(f".{path.name}.writing")
+    wb.save(partial)
+    partial.replace(path)
+    after, issues = load_register(path)
+    written = next((c for c in after.values() if norm_name(c.name) == norm_name(city_name)), None)
+    if (
+        len(issues) > errors_before
+        or set(after) != set(before)
+        or written is None
+        or written.ulg != name
+    ):
         shutil.copyfile(copy, path)  # it does not load as before: put the copy back
         return "The register could not be updated safely, so it was left as it was."
     return None

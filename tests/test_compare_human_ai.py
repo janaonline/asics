@@ -278,3 +278,68 @@ def test_urls_bands_and_inputs():
         cmp._inputs_overlap({"Own revenue": 5, "x": 1}, {"own revenue": 5}) == "1 same, 0 different"
     )
     assert cmp._inputs_overlap({"a": 1}, {"b": 1}) == "no inputs with the same name"
+
+
+def _rows(*statuses_and_agreement):
+    return [
+        cmp.CompareRow(
+            city="Testville",
+            unit="BWSSB",
+            unit_type="water_supply_entity",
+            code=f"UPD {i}",
+            section="UPD",
+            status=status,
+            agrees=agrees,
+        )
+        for i, (status, agrees) in enumerate(statuses_and_agreement, start=1)
+    ]
+
+
+def test_coverage_and_agreement_are_two_separate_numbers():
+    # 4 rows a person scored; the AI scored 2 of them, and one of those 2 agrees. Plus a row only
+    # the AI scored and one neither scored: neither counts towards coverage.
+    rows = _rows(
+        ("both", "Yes"),
+        ("both", "No"),
+        ("only human", ""),
+        ("only human", ""),
+        ("only AI", ""),
+        ("neither", ""),
+    )
+    assert cmp.coverage(rows) == (4, 2)
+    assert cmp.coverage_text(rows) == "2 of 4 (50%)"
+    assert cmp.agreement_text(rows, min_rows=20) == (
+        "1 of 2 agree (a percentage shows from 20 compared rows)"
+    )
+    assert cmp.agreement_text(rows, min_rows=2) == "1 of 2 (50%)"
+    assert cmp.coverage_text([]) == "no human-scored rows"
+    assert cmp.agreement_text(_rows(("only human", ""))) == "no row is scored by both"
+
+
+def test_the_summary_shows_coverage_and_agreement_on_separate_lines(tmp_path, bank):
+    a = next(c for c, q in bank.items() if q.tag == "SQ" and q.max_score)
+    comp = build(
+        tmp_path,
+        bank,
+        human_rows=[human(a, "BWSSB", 5.0)],
+        s2_rows=[],
+        s3_rows=[[a.replace(" ", ""), f"{CITY} – BWSSB", "", 5, "", ""]],
+    )
+    path = cmp.write_comparison(comp, tmp_path / "c.xlsx", min_rows=1)
+    rows = {
+        row[0].value: row[1].value
+        for row in load_workbook(path)["Summary"].iter_rows()
+        if row[0].value
+    }
+    assert rows["Coverage (AI scored of human scored)"] == "1 of 1 (100%)"
+    assert rows["Agreement when both scored"] == "1 of 1 (100%)"
+    sections = [
+        r
+        for r in load_workbook(path)["Summary"].iter_rows(values_only=True)
+        if r[0] == "By section"
+    ]
+    assert sections[0][1:4] == (
+        "Human scored",
+        "Coverage (AI scored of them)",
+        "Compared (both scored)",
+    )

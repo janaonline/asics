@@ -515,8 +515,35 @@ def _split_code(code: str):
     return (m.group(1), int(m.group(2)), m.group(3)) if m else (code, 0, "")
 
 
+def coverage(rows: list[CompareRow]) -> tuple[int, int]:
+    """(rows a person scored, how many of those the AI scored too). This is how much of the
+    work the AI reaches; it says nothing about whether it scored the same."""
+    human = [r for r in rows if r.status in ("both", "only human")]
+    return len(human), sum(r.status == "both" for r in human)
+
+
+def coverage_text(rows: list[CompareRow]) -> str:
+    human, both = coverage(rows)
+    return f"{both} of {human} ({100 * both / human:.0f}%)" if human else "no human-scored rows"
+
+
+def agreement_text(rows: list[CompareRow], min_rows: int = MIN_ROWS) -> str:
+    """How often the AI and people gave the same score, where BOTH scored. Kept apart from
+    coverage: a high agreement on a few rows says little, and low coverage says nothing about
+    agreement."""
+    both = [r for r in rows if r.status == "both"]
+    agree = sum(r.agrees == "Yes" for r in both)
+    if not both:
+        return "no row is scored by both"
+    if len(both) < min_rows:
+        return f"{agree} of {len(both)} agree (a percentage shows from {min_rows} compared rows)"
+    return f"{agree} of {len(both)} ({100 * agree / len(both):.0f}%)"
+
+
 def summarise(rows: list[CompareRow], key, min_rows: int) -> list[list]:
-    """[group, compared, agree, % agree, only human, only AI]: the % shows only from min_rows."""
+    """[group, human scored, coverage, compared, agree, % agree, only human, only AI]: coverage
+    (AI scored of human scored) and agreement (when both scored) are separate columns; the
+    agreement % shows only from min_rows."""
     groups: dict[str, list[CompareRow]] = {}
     for r in rows:
         groups.setdefault(key(r) or "(blank)", []).append(r)
@@ -532,6 +559,8 @@ def summarise(rows: list[CompareRow], key, min_rows: int) -> list[list]:
         out.append(
             [
                 name,
+                coverage(groups[name])[0],
+                coverage_text(groups[name]),
                 len(both),
                 agree,
                 pct,
@@ -609,7 +638,31 @@ def write_comparison(
     ws.append(["Rows by status", "Rows"])
     for s, n in by_status.items():
         ws.append([s, n])
-    header = ["", "Compared (both scored)", "Agree", "% agree", "Only human", "Only AI"]
+    ws.append(
+        [
+            "Coverage (AI scored of human scored)",
+            coverage_text(comp.rows),
+            "Of the rows a person scored, how many the AI scored too. It says nothing about "
+            "whether the scores are the same.",
+        ]
+    )
+    ws.append(
+        [
+            "Agreement when both scored",
+            agreement_text(comp.rows, min_rows),
+            "Of the rows scored by both, how many have the same score.",
+        ]
+    )
+    header = [
+        "",
+        "Human scored",
+        "Coverage (AI scored of them)",
+        "Compared (both scored)",
+        "Agree",
+        "% agree",
+        "Only human",
+        "Only AI",
+    ]
     for title, key in (
         ("By section", lambda r: r.section),
         ("By AI class", lambda r: r.ai_class or "(no AI class)"),
