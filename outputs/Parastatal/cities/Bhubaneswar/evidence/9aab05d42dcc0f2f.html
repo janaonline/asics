@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	       	<title>
+    		Govt. of Odisha:: Central Monitoring Mechanism for Right to Information [RTI CMM V-3.0]:
+    		Pages    	</title>
+        <meta name="description" content="Bhubaneswar Development Authority">
+        <meta name="news_keywords" content="Bhubaneswar Development Authority, Chanchal Rana, Vice-Chairman, Akash Sobha Building, Pandit Jawaharlal Neheru Marg,, 751001, 06742392280, bdabbsr1983@gmail.com, Pratik Pattanaik, male, 8527183114, Shri Manas Ranjan Padhi, Secretary -cum- Member Estate, male, 06742392280">
+	<link href="/favicon.ico" type="image/x-icon" rel="icon"/><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon"/>
+	<link rel="stylesheet" type="text/css" href="/css/rtiStyleSheet.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/jquery-ui.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/cake.generic.css"/>
+
+	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/md5.js"></script>
+	<script type="text/javascript" src="/js/ace-extra.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-ui.js"></script>
+	<script type="text/javascript" src="/js/jquery.ui.datepicker.js"></script>
+	<script type="text/javascript" src="/js/jquery.print.js"></script>
+
+	<script type="text/javascript" src="/js/typeahead.bundle.js"></script>
+	<script type="text/javascript" src="/js/handlebars.js"></script>
+	<script type="text/javascript" src="/js/jquery.counter.js"></script>
+	<script type="text/javascript" src="/js/highcharts.js"></script>
+	<script type="text/javascript" src="/js/exporting.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/css/banner.css"/>
+<link rel="stylesheet" type="text/css" href="/css/autocomplete.css"/><script type="text/javascript">
+//<![CDATA[
+
+	$(document).ready(function(){
+		showDisclouser(13,172,19,2);
+       // new_captcha();
+	});
+	function languageFunc(){
+		showDisclouser(13,172,19,$('#hidden_section_id').val());
+	}
+    function new_captcha(){
+        var c_currentTime = new Date();
+        var c_miliseconds = c_currentTime.getTime();
+		var baseUrl = 'https://rtiodisha.gov.in/';
+       // document.getElementById('captcha').src = baseUrl+'app/webroot/files/captcha/image.php?x='+ c_miliseconds;
+    }    
+	function validateForm(){
+		var errCnt = 0;
+        $('.feedValidate').each(function(){
+            if($(this).val() == ''){
+                $(this).addClass('input_err_red');
+                errCnt++;
+            }else{
+                $(this).removeClass('input_err_red');
+            }
+		});
+		if(errCnt == 0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function showDisclouser(deptId,officeId,distId,secId){
+		$('#lodding_image').show();
+		$('#hidden_section_id').val(secId);
+        $('#sec_id').val(secId);
+		var url = '/Pages/getDisclouser';
+        url = url+
+		'/department_id:'+deptId+
+        '/office_id:'+officeId+
+		'/district_id:'+distId+
+        '/section_id:'+secId+
+        '/language:'+$('#language').val();
+		$.post(url,{},function(mydata){
+			//alert(mydata)
+			//console.log(mydata);
+			$('#disclosureDiv').html(mydata);
+			$('#lodding_image').hide();
+			if(secId == 2){
+				manualUpdateDate(officeId,distId,secId);
+			}else{
+				$('#manualUpdateDateDiv').html('');		
+			}			
+		});
+	}
+	function manualUpdateDate(officeId,distId,secId){
+		var url = '/Pages/manualUpdateDate';
+		url = url+
+        '/office_id:'+officeId+
+		'/district_id:'+distId+
+        '/section_id:'+secId;		
+		$.post(url, {}, function(res){
+			$('#manualUpdateDateDiv').html(res);
+		});
+	}	
+	
+//]]>
+</script>    	<script>
+        function myFunction() { 
+            var browser=get_browser();
+// console.log(navigator.appName);
+if(navigator.userAgent.indexOf("Edge") != -1){
+	console.log('Edge');
+ document.getElementById("notifyMsg").style.display='none';
+}else{
+
+            if((navigator.userAgent.indexOf("Opera") || navigator.userAgent.indexOf('OPR')) != -1 ) {
+                console.log("Opera");  
+                console.log(browser.version);
+            }else if(navigator.userAgent.indexOf("Chrome") != -1 ){
+                console.log("Chrome");
+                if(browser.version<57){
+                    document.getElementById("notifyMsg").innerHTML = "This version of Chrome is no longer supported. Please upgrade to a version more than 57!";
+                    setTimeout(function(){ 
+                        document.getElementById("notifyMsg").style.display='none';
+                     }, 120000);
+                    console.log("Chrome version should grater than 57");
+                }else{
+                    document.getElementById("notifyMsg").innerHTML = "";
+                    document.getElementById("notifyMsg").style.display='none';
+                }
+            }else if(navigator.userAgent.indexOf("Safari") != -1){
+                //console.log("Safari");
+                //console.log(browser.version);
+            }else if(navigator.userAgent.indexOf("Firefox") != -1 ) {
+                //console.log("Firefox");
+                if(browser.version<53){
+                    document.getElementById("notifyMsg").innerHTML = "This version of firefox is no longer supported. Please upgrade to a version more than 53!";
+alert("This version of firefox is no longer supported. Please upgrade to a version more than 53!");
+document.open("https://www.mozilla.org/en-US/firefox/");                  
+document.location="http://rtiodisha.in/english";
+  setTimeout(function(){ 
+                        document.getElementById("notifyMsg").style.display='none';
+                     }, 120000);
+                    console.log("This version of firefox is no longer supported. Please upgrade to version more than 53");
+                }else{
+                    document.getElementById("notifyMsg").innerHTML = "";
+                    document.getElementById("notifyMsg").style.display='none';
+                }
+            }else if((navigator.userAgent.indexOf("MSIE") != -1 ) || (!!document.documentMode == true )) {
+                //console.log("IE");
+                if(browser.version<9){
+                    document.getElementById("notifyMsg").innerHTML = "This version of IE is no longer supported. Please upgrade to a version more than 9!";
+                    setTimeout(function(){ 
+                        document.getElementById("notifyMsg").style.display='none';
+                     }, 120000);
+                    console.log("IE version should grater than 9");
+                }else{
+                    document.getElementById("notifyMsg").innerHTML = "";
+                    document.getElementById("notifyMsg").style.display='none';
+                }
+            }else{
+                console.log("unknown");
+                console.log(browser.version);
+            }
+}
+  }
+        function get_browser() {
+            var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []; 
+            if(/trident/i.test(M[1])){
+                tem=/\brv[ :]+(\d+)/g.exec(ua) || []; 
+                return {name:'IE',version:(tem[1]||'')};
+                }   
+            if(M[1]==='Chrome'){
+                tem=ua.match(/\bOPR|Edge\/(\d+)/)
+                if(tem!=null)   {return {name:'Opera', version:tem[1]};}
+                }   
+            M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+            if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+            return {
+              name: M[0],
+              version: M[1]
+            };
+        }
+    	$(function() {
+            var lang='';
+            if(lang=="odia"){
+               $('#notifyMsg').show();
+                myFunction();
+            }
+    		$( ".datepicker" ).datepicker({
+    			dateFormat: 'dd-mm-yy',
+    			changeMonth: true,
+    			changeYear: true
+    		});
+            $(document).on('keypress','.numeric',function (event){
+                var regex = new RegExp("^[0-9.]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if(event.which == 8 || event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40){
+                    return true;
+                }
+                if(event.which == 46 && $(this).val().indexOf('.') != -1) {
+                    event.preventDefault();
+                    return false;
+                }
+                if (!regex.test(key)) {
+                   event.preventDefault();
+                   return false;
+                }
+            });
+            $(document).on('keypress','.mobile',function (event){
+                var regex = new RegExp("^[0-9]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if(event.which == 8 || event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40){
+                    return true;
+                }
+                if (!regex.test(key)) {
+                   event.preventDefault();
+                   return false;
+                }
+            });
+            $(document).on('keypress','.alphaNumeric',function (event){
+                var regex = new RegExp("^[0-9A-Za-z]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if(event.which == 8 || event.keyCode == 9 || event.keyCode == 46 || event.keyCode == 37 || event.keyCode == 38 || event.keyCode == 39 || event.keyCode == 40){
+                    return true;
+                }
+                if (!regex.test(key)) {
+                   event.preventDefault();
+                   return false;
+                }
+            });        
+    	});
+        </script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-106853763-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-106853763-1');
+</script>
+
+        
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('#incfont').click(function () {
+                    curSize = parseInt($('.innerPanel').css('font-size')) + 2;
+                    if (curSize <= 18)
+                        $('.innerPanel').css('font-size', curSize);
+                });
+
+                $('.hasDatepicker').attr('readonly','readonly');
+                $('#decfont').click(function () {
+                    curSize = parseInt($('.innerPanel').css('font-size')) - 2;
+                    if (curSize >= 13)
+                        $('.innerPanel').css('font-size', curSize);
+                });
+                $('#resetfont').click(function () {
+                    curSize = parseInt($('.innerPanel').css('font-size')) - 0;
+                    if (curSize = 13)
+                        $('.innerPanel').css('font-size', curSize);
+                });
+                getDeptListForMenu();
+            });
+            function getDeptListForMenu(){
+                var url = "/Users/getDeptListForMenu";
+                $.post(url, {}, function(res){
+                    //alert(res);
+                    $('#menudeptdiv').html(res);
+                    getDistListForMenu();
+                });             
+            }        
+            function getDistListForMenu(){
+                var url = "/Users/getDistListForMenu";
+                $.post(url, {}, function(res){
+                    $('#menudistdiv').html(res);
+                    getCommListForMenu();
+                });        
+            }
+            function getCommListForMenu(){
+                var url = "/Users/getCommListForMenu";
+                $.post(url, {}, function(res){
+                    $('#menucommdiv').html(res);
+                    
+                });             
+            }
+        </script>
+
+    </head>
+    <body>
+        <style type="text/css">
+           #notifyMsg
+           {
+            display:none;
+           }
+        </style>
+        <div style="position: fixed; top: 0px; right: 0px; width: 100%; text-align: center; padding: 7px 0px; background: rgb(255, 241, 168) none repeat scroll 0% 0%; z-index: 99;" id="notifyMsg"></div>
+            <div class="topHeader">
+	<div class="container">
+		<ul class="list-inline">
+					<li><a href="#skip">Skip to Main Content</a></li>
+								<li>Accessibility Options {<a href="#" id="decfont">A-</a>|<a href="#" id="resetfont">A</a>|<a href="#" id="incfont">A+</a>}</li>
+		<li>
+			<a href="/odia" title="ଓଡ଼ିଆ(ନିର୍ମାଣାଧୀନ)">ଓଡ଼ିଆ</a>			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="logoPanel">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-8 col-sm-7 col-md-7">
+                <!--<img src="images/logo.png" alt="" class="img-responsive" />-->
+                <a href="https://rtiodisha.gov.in/">
+                <img src="/img/logo.png" alt="Government of Odisha" class="img-responsive"/>                </a>
+            </div>
+			<div class="col-xs-4 col-sm-5 col-md-5" align="right">
+                <!--<img src="images/odishaLogo.png" alt="" class="img-responsive" />-->
+                <img src="/img/odishaLogo02.png" alt="Government of Odisha" class="img-responsive"/>            </div>
+		</div>
+	</div>
+</div><div class="menuPanel">
+	<div class="container">
+		<nav role="navigation" class="navbar">
+	        <div class="navbar-header">
+	          <button aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"><i class="fa fa-bars"></i> MENU</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	        </div>
+	        <div class="navbar-collapse collapse" id="navbar">
+	          <ul class="nav navbar-nav">
+	            <li><a href="https://rtiodisha.gov.in/"><i class="fa fa-home"></i></a></li>
+	            <li class="dropdown">
+	            	<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+					Departments								</a>
+	            	<div role="menu" class="dropdown-menu departmentSubPanel" id="menudeptdiv">
+
+		             </div>
+	            </li>
+	            <li class="dropdown">
+	            	<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+					Districts								</a>
+	            	<div role="menu" class="dropdown-menu districtsSubPanel" id="menudistdiv">
+
+		            </div> 
+	            </li>
+	            <li class="dropdown">
+	            	<a aria-expanded="false" role="button" data-toggle="dropdown" class="dropdown-toggle" href="#">
+					Commission								</a>
+	            	<div role="menu" class="dropdown-menu departmentSubPanel" id="menucommdiv">
+
+		            </div> 
+	            </li>
+	            <li>
+					<a href="/Pages/office">PIO/FAA</a></li>
+	            <li>
+	            		    <a href="/Pages/Act">RTI Act</a>        	
+	            </li>
+	            <li>
+	            	<a href="/Pages/Campaign">RTI Campaign</a>
+	            </li>
+	            <li>
+	            	<a href="/Pages/Download">Downloads</a>
+	            </li>
+				<li>
+	            	<a href="/Pages/Advertisement">Advertisement</a>
+	            </li>
+	            <li>
+	            <a href="/Pages/ContactUs">Contact Us</a>									
+								</li>
+	            </li>
+	          </ul>
+	        </div>
+	    </nav>
+	</div>
+</div>
+<a name="skip"></a>
+        <div id="lodding_image" style="margin:auto;position:fixed;width:100%;top:50%;z-index:200;left: 50%;display: none;">
+            <img src="/img/loader.gif" height="" width="" alt=""/>        </div> 	
+    	<div id="container" style="min-height:400px;" class="innerPanel">
+    		    		<div class="container mainContainerPad">
+<section class="heading-bordered">
+	<div class="pull-left">
+		<h1>
+			Bhubaneswar Development Authority		</h1>
+	</div>
+	<div class="pull-right">
+		<a href="/login">Public Authority Login</a>	</div>
+	<div class="clearfix"></div>
+<div class="clearfix"></div>
+</section>
+	<div class="fs12">
+			
+	</div>
+<div class="row">
+	<div class="col-sm-3">
+		<ol type="1" start="0">                  
+			<li type="square"><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,1)">Introduction</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,2)">About the Organization</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,3)">Powers and Duties</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,9)">Decision Making Process</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,15)">Norms for Discharge of Functions</a>
+			</li>                  
+	     </ol>
+	</div>
+	<div class="col-sm-3">
+		<ol type="1" start="5">
+
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,4)">Rules & Regulations</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,6)">Category of Documents</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,5)">Formulation of Policy</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,8)">Boards/Councils/Committees</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,10)">Directory of Employees</a></li>                           
+	     </ol> 
+	</div>
+	<div class="col-sm-3">
+		<ol type="1" start="10">
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,11)">Remuneration & Compensation</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,12)">Budget Provision</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,13)">Schemes & Programmes</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,14)">Concessions & Permits</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,16)">Information in Electronic Form</a></li>             
+	     </ol> 
+	</div>
+	<div class="col-sm-3">
+		<ol type="1" start="15">
+
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,17)">Facilities for Citizens</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,7)">PIOs Details</a></li>
+			<li><a href="javascript:void(0);" onclick="javascript:showDisclouser(13,172,19,18)">Other Information</a></li>
+				     </ol> 
+	</div>
+</div>
+	
+	<div class="clearfix"></div>
+	<div id="disclosureDiv"></div>
+	<div class="clearfix"></div>
+<div class="row">
+	<div class="col-sm-12">
+		<div id="manualUpdateDateDiv"></div>
+	</div>
+</div>	
+<div>
+	<div class="container mainContainerPad">
+    <section class="heading-bordered">
+        <h1>Share your comments:</h1>
+        <p>
+         We welcome your valuable comments on this manual of proactive disclosure to improve further.
+        Please share your views regarding the contents of this manual to get better.                
+        </p>
+    </section>
+    <form action="/pa/T1RILzEzLzE3Mi8xOQ" method="post" id="FeedbackPublicDisclosureForm" enctype="multipart/form-data" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div><input type="hidden" name="data[Feedback][office_id]" value="172" id="FeedbackOfficeId"/><input type="hidden" name="data[Feedback][sec_id]" id="sec_id"/><input type="hidden" name="data[Feedback][ans_status]" value="N" id="FeedbackAnsStatus"/><input type="hidden" name="data[Feedback][is_home]" value="N" id="FeedbackIsHome"/><input type="hidden" name="data[Feedback][is_delete]" value="N" id="FeedbackIsDelete"/>	<div style="text-align:center;color:#387F05;font-weight:bold"></div>
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Name</label>
+				<div class="col-sm-9">
+					<input name="data[Feedback][full_name]" autocomplete="off" class="form-control feedValidate" id="full_name" maxlength="40" type="text" required="required"/>	            </div>
+	            <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+				<label class="col-sm-3 control-label">Email ID</label>
+				<div class="col-sm-9">
+	                <input name="data[Feedback][email]" autocomplete="off" class="form-control feedValidate" id="email" maxlength="50" type="email" required="required"/>	            </div>
+	            <div class="clearfix"></div>
+            </div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Phone</label>
+				<div class="col-sm-9">
+	                <input name="data[Feedback][phone]" autocomplete="off" class="form-control mobile feedValidate" id="phone" maxlength="10" type="tel" required="required"/>	            </div>
+	            <div class="clearfix"></div>
+            </div>
+		</div>
+		<div class="col-sm-6">
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Comment</label>
+				<div class="col-sm-9">
+					<textarea name="data[Feedback][comments]" class="form-control feedValidate" cols="30" rows="3" id="comments" required="required"></textarea>	            </div>
+	            <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+				<label class="col-sm-3 control-label">
+                    <img src="/img/../files/captcha/image.php" alt="" class="img-responsive" id="captcha" border="0"/>                </label>
+				<div class="col-sm-9">
+	                <input name="data[Feedback][captcha]" class="form-control feedValidate" autocomplete="off" type="text" id="FeedbackCaptcha"/> 
+	            </div>
+	            <div class="clearfix"></div>
+            </div>            
+		</div>
+	</div>
+	<div align="center">
+		<button type="submit" class="btn btn-warning" formnovalidate = "true" onclick="javascript:return validateForm();">Submit</button>
+		<button class="btn btn-info">Reset</button>					
+	</div>
+	</form>  
+</div>	
+</div>	
+	
+
+    	</div>
+    	    	<div class="topFooter">
+	<div class="container">
+		<ul class="list-inline fotImgs">
+			<li><a href="http://www.india.gov.in"><img src="/img/indGovImg.jpg" alt="" class="img-responsive"/></a></li>
+			<li><a href="http://www.odisha.gov.in"><img src="/img/odishaGovImg.jpg" alt="" class="img-responsive"/></a></li>
+			<li><a href="http://www.cic.gov.in"><img src="/img/CICGovImg.jpg" alt="" class="img-responsive"/></a></li>
+			<li><a href="http://www.orissasoochanacommission.nic.in"><img src="/img/OICNicImg.jpg" alt="" class="img-responsive"/></a></li>
+			<li><a href="http://oic.nic.in/(S(2caw22550g2n2a45zzk1pn2y))/order.html"><img src="/img/JICImg.jpg" alt="" class="img-responsive"/></a></li>
+		</ul>
+		<div class="clearfix"></div>
+		<p class="margin20top">
+		RTI CMM is a Central Monitoring Mechanism by Govt. of Odisha to ensure the implementation of Right to Information Act, 2005 at all public authorities of Govt. of Odisha. This is developed with an objective to provide single point access of all RTI related information catering to Section-4, Section-25 of RTI Act, 2005 in an uniform manner. This project is monitored by Department of Information & Public Relations, Govt. of Odisha [Nodal Department of Govt. of Odisha for RTI Implementation] in collaboration with Luminous Infoways. Content on this website is published by respective public authorities and managed by Information & Public Relations Department, Govt. of Odisha. For any query regarding this website please contact Web Information Leader, RTI Implementation, Odisha. e-mail: rti-ori[at]nic[dot]in.
+		
+		</p>
+	</div>
+</div>
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 fotLinks">
+				<ul>
+					<li><a href="https://rtiodisha.gov.in/Suggestion">
+Suggestion					</a></li>
+					<li>|</li>
+					<li><a href="https://rtiodisha.gov.in/AboutUs">
+						About the Portal					</a></li>
+					<li>|</li>
+					<li><a href="https://rtiodisha.gov.in/SiteMap">
+						Sitemap					
+					</a></li>
+					<li>|</li>
+					<li><a target="_blank" href="https://rtiodisha.gov.in/files/Help.rti.pdf">
+						Help					</a></li>
+					<li>|</li>
+					<li><a target="_blank" href="https://rtiodisha.gov.in/files/RTI_User Manual_PublicUser_2ndJune.pdf">
+						User Manual					</a></li>
+					<li>|</li>
+					<li><a href="https://rtiodisha.gov.in/TermOfUse">
+					Term of Use					</a></li>
+					<li>|</li>
+					<li><a href="https://rtiodisha.gov.in/Disclaimer">
+				    Disclaimer
+					</a></li>
+					<!--
+					<li>|</li>
+					<li><a href="citizenLogin">Citizen Login</a></li>
+					-->
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="col-md-4 copyright">
+			Copyrights © Government of Odisha				
+			</div>
+		</div>
+	</div>
+</div>
+    </body>
+</html>

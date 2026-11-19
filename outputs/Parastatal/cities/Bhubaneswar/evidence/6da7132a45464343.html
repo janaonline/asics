@@ -1,0 +1,960 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta content="width=device-width, initial-scale=1.0" name="viewport" /><title>
+	Welcome - Odisha Public Transport & Integrated Commuter System 
+</title><meta name="descriptison" /><meta name="keywords" /><link href="css/all.min.css" rel="stylesheet" /><link href="css/boxicons.css" rel="stylesheet" /><link href="css/icosta.css" rel="stylesheet" /><link href="css/owl.carousel.min.css" rel="stylesheet" /><link href="css/custom.css" rel="stylesheet" /><link rel="alternate stylesheet" media="screen" title="contrast-theme" href="css/contrast-theme.css" /><link href="css/sm-clean.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link href="timepicker/bootstrap-timepicker.css" rel="stylesheet" type="text/css" /><link href="css/sm-clean.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="http://js.arcgis.com/3.14/dijit/themes/claro/claro.css" /><link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css" /></head>
+<body class="inner-page" data-spy="scrollspy" data-target=".main-container" data-offset="50">
+    <form method="post" action="./BGGY_OSRTC_CRUT_Buses.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="ToolkitScriptManager2_HiddenField" id="ToolkitScriptManager2_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE1MzM4NDIzMDlkZBdrWcwnnITCqixqQPKGFlw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=SAGk2rWmCbBmznPu0RgAxR3dMxhSpfUmcBwcODya_b835c6iPqu05At1ZwHR9kxaZaqVE73ivpaQr__8v5ztPg2&amp;t=638521089336897319" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=VH27M_BLkKG1IBTjoOd_T3NzFhI_B9Bz_KMs2m35nAGV4DK7rZKfnuMBc3sSWwO4WtUReqtA3aZvwj1AXlYUQJ7lNmXEB7NYQZfk46gor6s1&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=myRQz2SqurmSn86uFSN68GduugcD9KuqlIjCW9a7cB2sO31vmaLJvkTQkGweZww7A9GQMlBHNh6hE4z_uypnXpByrAomGYzfmFm2fXvhy3waAMFlbWaErRPa6Xlp5E8C0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BC56B171" />
+</div>
+        <header id="header" class="fixed-top d-flex flex-column justify-content-center">
+            
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<div class="top-bar">
+    <div class="container-fluid">
+        <div class="row">
+            <ul class="col-md-6 d-flex align-items-center topbar-ul">
+                <li class="d-none d-md-block">
+                    <a href="#"><i class="fas fa-volume-up">&nbsp;</i>Screen Reader</a>
+                </li>
+                <li class="d-none d-md-block">
+                    <div class="theme">
+                        <a href="javascript:void(0);" onclick="chooseStyle('none', 60);" class="light-theme" tabindex="4" title="Light Theme"></a>
+                        <a href="javascript:void(0);" onclick="chooseStyle('contrast-theme', 60);" class="dark-theme" tabindex="5" title="Dark Theme"></a>
+
+                    </div>
+                </li>
+                <li class="d-none d-md-block">
+                    <div class="font-size">
+                        <a href="javascript:void(0);" title="Click here to increase font size" onclick="increaseFontSize();">A+</a>
+                        <a href="javascript:void(0);" title="Click here to Normal font size" onclick="reSetFontSize();">A</a>
+                        <a href="javascript:void(0);" title="Click here to decrease font size" onclick="decreaseFontSize();">A-</a>
+                    </div>
+                </li>
+                <li class="d-none d-md-block top-social pr-1">
+                    <a href="https://www.facebook.com/OdishaSTA"><i class="fab fa-facebook"></i></a>
+                </li>           
+               <li class="d-none d-md-block top-social pl-1">
+                    <a href="https://www.youtube.com/channel/UCRekjUTyZWGtuTDeMPo8-Ag"><i class="fab fa-youtube"></i></a>
+                </li>
+                 <li class="d-none d-md-block top-social pl-1">
+                    <a href="https://twitter.com/STAOdisha"><i class="fab fa-x-twitter"></i></a>
+                </li>
+               <li class="d-none d-md-block top-social pl-1" style="color: white;">
+    ଓଡ଼ିଶା ସରକାର
+    </li>
+                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+
+            </ul>
+
+            <ul class="col-md-6 d-flex justify-content-end align-items-center topbar-ul">
+                
+                  
+                 <li class="px-0">
+                    <div class="dropdown dropdown-login">
+                        <a href="javascript:void(0);" class="dropdown-toggle btn btn-warning btn-sm rounded-0" id="dropdownmobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download our APP</a>
+                        <div class="dropdown-menu dropdown-menu-right shadow-sm" aria-labelledby="dropdownLang">
+                            <ul>
+                                
+                                <li><a href="https://play.google.com/store/apps/details?id=gov.orsac.sta.opticsdriver">Bus Operator APP</a></li>
+                                <li><a href="https://play.google.com/store/apps/details?id=gov.orsac.sta.opticsauthority">Authority APP</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                &nbsp;  &nbsp;  &nbsp;
+                <li class="px-0">
+                    <div class="dropdown dropdown-login">
+                        <a href="javascript:void(0);" class="dropdown-toggle btn btn-success btn-sm rounded-0" id="dropdownLang" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Login</a>
+                        <div class="dropdown-menu dropdown-menu-right shadow-sm" aria-labelledby="dropdownLang">
+                            <ul>
+                                
+                                <li><a href="userlogin.aspx">Bus Operator</a></li>
+                                <li><a href="AdminLogin.aspx">Authority</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                  &nbsp;  &nbsp;  &nbsp;
+                 <li class="px-0">
+                    <div class="">
+                        <a href="UserCreation.aspx" class=" btn btn-warning btn-sm rounded-0" style="color: black">Registration</a>
+                    </div>
+                </li>
+                  
+
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="header-section pt-1 ">
+    <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-9 d-flex align-items-center">
+                    <h1 class="logo mb-0 d-flex align-items-center">
+                        <img src="img/odisha-govt-logo.png" alt="Main Logo" class="default-logo" style="width: 60px; height: auto;">
+                        <img src="img/odisha-govt-logo-white.png" alt="Main Logo" class="contrast-logo" style="width: 60px; height: auto;">
+                        <a href="Default.aspx" class="ml-2">
+                            Odisha Public Transport & Integrated Commuter System (OPTICS)
+                            <small class="d-block">State Transport Authority, Odisha</small>
+                        </a>
+                    </h1>
+                </div>
+    
+               
+                <div class="col-md-3 text-right">
+                    <a href="https://subhadra.odisha.gov.in/">
+                        <img src="../../Images/Subhadra.jpeg" alt="Subhadra Logo" class="default-logo" style="width: 60px; height: auto;">
+                    </a>
+                </div>
+    </div>
+
+</div>
+    <nav class="navbar navbar-expand-lg custom-bar mt-1">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="fa fa-bars text-white"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+	    <ul class="navbar-nav">
+		     <li class="nav-item dropdown">
+			    <a class="nav-link " href="RationalizeRoute.aspx">Rationalized Route</a>
+		        <ul class="dropdown-menu">
+                    
+			      
+		        </ul>
+		    </li>
+		    <li class="nav-item dropdown">
+			    <a class="nav-link " href="NotifyRoute.aspx">Notified Route</a>
+		        <ul class="dropdown-menu">
+                    
+			      
+		        </ul>
+		    </li>
+
+		    <li class="nav-item"><a class="nav-link" href="InterStateRoute.aspx"> Interstate Route </a></li>
+		   
+		
+            <li class="nav-item dropdown">
+			    <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  Information  </a>
+		        <ul class="dropdown-menu">
+			      <li><a class="dropdown-item" href="circular.aspx">Published New TP Applications</a></li>
+                    <li><a class="dropdown-item" href="PublishedExpirePP.aspx">Published Notify PP Applications</a></li>          
+                    <li><a class="dropdown-item" href="PublishedVacantPP.aspx">Published Vacant PP Applications</a></li>
+                    <li><a class="dropdown-item" href="PublishedInterStateApplication.aspx">Published Inter State Applications</a></li>
+                     <li><a class="dropdown-item" href="PublishedNOSCApplication.aspx">Publihsed Service Change Applications</a></li>
+                        <li><a class="dropdown-item" href="PublishedTimeModificationApplication.aspx">Publihsed Time Change Applications</a></li>
+                    <li><a class="dropdown-item" href="PublishedTMSlotchangeAppl.aspx">Published Slot Change Applications</a></li>
+                     <li><a class="dropdown-item" href="PublishExpiringPermits.aspx">Published Permits to be Expired</a></li>
+			      <li><a class="dropdown-item" href="AccidentProneArea.aspx">Accident Prone Areas</a></li> 
+		        </ul>
+		    </li>
+            <li class="nav-item"><a class="nav-link" href="Proceeding.aspx"> Proceedings </a></li>
+            <li class="nav-item"><a class="nav-link" href="PolicyDecision.aspx"> Policy Decisions </a></li>
+
+            <li class="nav-item dropdown">
+			    <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">  User Manual  </a>
+		        <ul class="dropdown-menu">
+			      <li><a class="dropdown-item" href="https://opms.odishatransport.gov.in/ServiceRouteMap/UserManual.pdf"> For Public</a></li>
+                    <li><a class="dropdown-item" href="https://opms.odishatransport.gov.in/NOTICE/Interstateapplyprocess.pdf"> Interstate Permit</a></li>
+			      <li><a class="dropdown-item" href="https://opms.odishatransport.gov.in/ServiceRouteMap/UserManualBusOwnerAdmin.pdf"> For Bus Owner& Admin </a></li>
+		        </ul>
+		    </li>
+
+            
+            <li class="nav-item"><a class="nav-link" href="ApplyCertifiedCopy.aspx"> Certified Permit </a></li>
+            <li class="nav-item"><a class="nav-link" href="NewTPList.aspx"> Fresh TP </a></li>
+             <li class="nav-item dropdown">
+			    <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Forms/Gadget/Permit Condition</a>
+		        <ul class="dropdown-menu">
+			      <li><a class="dropdown-item" href="../../documents/annexure-A.pdf"> For Annexure-A </a></li>
+                    <li><a class="dropdown-item" href="../../documents/annexure-B.pdf"> For Annexure-B</a></li>
+                    <li><a class="dropdown-item" href="../../documents/annexure-C.pdf"> For Annexure-C</a></li>
+                    <li><a class="dropdown-item" href="../../documents/annexure-D.pdf"> For Annexure-D</a></li>
+			      <li><a class="dropdown-item" href="../../documents/new_tp_manual_form.pdf"> For New TP Form </a></li>
+                     <li><a class="dropdown-item" href="../../documents/PP_form_manual.pdf"> For PP Form</a></li>
+                    <li><a class="dropdown-item" href="../../documents/Permit_Condition.pdf"> Permit Condition</a></li>
+                   <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Gazette</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="../../documents/Odisha_Chhatisgarh_Agreement.pdf">Odisha & Chhatisgarh Agreement(No.333)</a></li>
+                            <li><a class="dropdown-item" href="../../documents/Odisha_JKD_agreement-2007.pdf">Odisha & JKD agreement-2007(No.374)</a></li>
+                            <li><a class="dropdown-item" href="../../documents/Odisha_West_Bengal_Agreement.pdf">Odisha & Chhatisgarh Agreement(No.2105)</a></li>
+                            <li><a class="dropdown-item" href="../../documents/Odisha_and_Bihar.pdf">Odisha and Bihar(No.4359)</a></li>
+                        </ul>
+                    </li>
+		        </ul>
+		    </li>
+             <li class="nav-item"><a class="nav-link" href="FAQs.aspx"> FAQs </a></li>
+	    </ul>
+      </div>
+       
+    </nav>
+
+    <div style="display: flex; align-items: center; background-color: #fef3c7; border: 1px solid #facc15; padding: 5px 10px; border-radius: 6px; margin-bottom: 8px;">
+  <span style="background-color: #dc2626; color: white; font-weight: bold; padding: 4px 10px; border-radius: 4px; margin-right: 10px;">
+    Notice
+  </span>
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+     <span style="font-size: 30px;">🚌...</span>
+  You can now apply for Third Party Transfer of Permit Application in OPTICS
+       <span style="background-color: #16a34a; color: white; font-weight: bold; font-size: 12px; padding: 2px 6px; border-radius: 4px; margin-left: 8px; animation: blink 1.5s infinite;">
+      NEW
+    </span>
+  </marquee>
+</div>
+
+<!-- Update Message -->
+<div style="text-align: center;">
+  <a style="color: green; font-weight: bold; animation: blink 5s infinite;">
+    🔔 Update !!! Bus owners are requested to update mobile number in "VAHAN" to get SMS about Expire Permit Information...
+  </a>
+</div>
+    
+<style>
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* --- Submenu (Gadget) styles --- */
+.dropdown-submenu {
+    position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+    display: none;
+}
+.dropdown-submenu.show > .dropdown-menu {
+    display: block;
+}
+/* On small screens, Bootstrap 4's navbar collapse stacks dropdowns,
+   so slide the submenu below instead of to the right to avoid overflow */
+@media (max-width: 991.98px) {
+    .dropdown-submenu > .dropdown-menu {
+        left: 0;
+        top: auto;
+        position: static;
+    }
+}
+</style>
+
+<script>
+    // Use event delegation on document instead of getElementById,
+    // so this works even if the header markup is rendered more than once
+    // (avoiding duplicate-ID issues) and regardless of script load timing.
+    document.addEventListener('click', function (e) {
+        var toggle = e.target.closest('.dropdown-submenu > .dropdown-toggle');
+
+        if (toggle) {
+            e.preventDefault();   // stop href="#" from jumping the page
+            e.stopPropagation();  // stop Bootstrap 4 from closing the parent dropdown
+
+            var parentLi = toggle.closest('.dropdown-submenu');
+            var wasOpen = parentLi.classList.contains('show');
+
+            // Close any other open submenus first
+            document.querySelectorAll('.dropdown-submenu.show').forEach(function (openLi) {
+                if (openLi !== parentLi) {
+                    openLi.classList.remove('show');
+                }
+            });
+
+            parentLi.classList.toggle('show', !wasOpen);
+            return;
+        }
+
+        // If the click was on an actual PDF link inside a submenu, let it navigate
+        // normally, just don't let it bubble in a way that fights Bootstrap's own logic.
+        var submenuLink = e.target.closest('.dropdown-submenu .dropdown-menu .dropdown-item');
+        if (submenuLink) {
+            e.stopPropagation();
+            return; // allow default navigation to the PDF
+        }
+
+        // Click outside any submenu: close all open submenus
+        if (!e.target.closest('.dropdown-submenu')) {
+            document.querySelectorAll('.dropdown-submenu.show').forEach(function (openLi) {
+                openLi.classList.remove('show');
+            });
+        }
+    });
+</script>
+</div>
+
+            
+<!-- ======= Mobile nav toggle button ======= -->
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars"></i></button>
+<script type="text/javascript">
+    function theFunction(MyPdf) {
+        window.location = '../sta/ServiceRoute.aspx?username=' + MyPdf;
+    }
+</script>
+<style>
+    .nav-menu {
+        margin-top: 153px;
+    }
+
+
+</style>
+
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="fa fa-bars"></i></button>
+<!-- ======= Nav Section ======= -->
+<nav class="nav-menu">
+    <div class="panel-group accordion-menu " id="accordion">
+        <div class="text-center text-white custom-bar-sign">
+            <i class="bx bx-user"></i>
+            <h5>Citizen Service</h5>
+        </div>
+       
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <a href="BusAtmyLocation.aspx" aria-label="Bus at Location" class="bus-at-location-link">
+                <div class="location-bus-wrapper">
+                    <i class="bx bx-map location-icon"></i> <!-- Location pin icon -->
+                    <i class="bx bxs-bus bus-icon"></i> <!-- Bus icon inside location -->
+                </div>
+                <span>Bus at Location</span>
+            </a>
+        </div>
+    </div>
+</div>
+        <div class="panel panel-default">
+    <div class="panel-heading">
+        <div class="panel-title">
+            <a href="BusBetweenLocation.aspx" aria-label="Bus Between Locations" class="bus-between-location-link">
+                <div class="bus-between-location-wrapper">
+                     <i class="bx bxs-bus bus-icon"></i> <!-- Bus icon -->
+                </div>
+                <span>Bus Between Locations</span>
+            </a>
+        </div>
+    </div>
+</div>
+       
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="BusInformation.aspx"><i class="bx bxs-bus"></i><span>Know Your Bus</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="Feedback.aspx"><i class="bx bxs-medal"></i><span>Rate Your Bus</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="RouteDistance.aspx"><i class="bx bxs-credit-card-front"></i><span> Check Bus Fare</span></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="ComplainAgainstVehicle.aspx"><i class="bx bxs-note"></i><span>Complaint Against Bus</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="ServiceRoute.aspx"><i class="bx bxs-traffic-barrier"></i><span>District Wise Route</span></a>
+                </div>
+            </div>
+        </div>
+       
+        
+        
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="BGGY_OSRTC_CRUT_Buses.aspx"><i class="bx bxs-bus"></i><span>BGGY / OSRTC / CRUT Buses</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="Auto_Rickshaw_Taxi_Electric_Vehicle.aspx"><i class="bx bx-bus"></i><span>Auto Rickshaw / Taxi</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="Electric_vehicle.aspx"><i class="bx bx-bus"></i><span>Electric Vehicle</span></a>
+                </div>
+            </div>
+        </div>
+        
+         <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="panel-title">
+                    <a href="ContactUs.aspx"><i class="bx bx-bus"></i><span>Helpline</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- .nav-menu -->
+<script>
+    function scrollLeft() {
+        document.querySelector(".nav-menu").scrollBy({ left: -200, behavior: "smooth" });
+    }
+
+    function scrollRight() {
+        document.querySelector(".nav-menu").scrollBy({ left: 200, behavior: "smooth" });
+    }
+</script>
+
+        </header>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ToolkitScriptManager2', 'form1', [], [], [], 90, '');
+//]]>
+</script>
+
+        <section class="container-section">
+            <div class="container-fluid">
+                <div class="main-container">
+                    <div class="justify-content-around">
+                        <h3 class="heading-title" id="title">Biju Gaon Gadi Yojana</h3>
+                        <hr />
+                        <div class="fixedScroll">
+                            <a href="#section1" class="clickScroll btn btn-sm btn-primary mr-2">OSRTC</a>
+                            <a href="#section2" class="clickScroll btn btn-sm btn-primary">CRUT</a>
+                        </div>
+                        <div class="box box-solid box-primary">
+
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p>A flagship programme namely "Rural Transport Connectivity Scheme (renamed as Biju Goan Gadi Yojana)" was launched by the State Government in the year 2013-14 with the objective to ensure public transport connectivity to un-serviced under serviced, scheduled and backward areas including LWE areas. The scheme was included under priority area agenda of Government during November 2015 aiming at providing stage carriage connectivity to all the unconnected Gram Panchayats of the State. Accordingly in principle, every Gram Panchayat is now considered as a unit wherein assured services are being extended.</p>
+                                        <p>The scheme has been implemented in 3 phases across the State covering all 30 districts. The Department has outlined criteria for smooth implementation of the scheme across all geographies of the State, broadly.</p>
+                                        <ul>
+                                            <li>Permitting small passenger (7-32 seater) vehicles under the scheme.</li>
+                                            <li>Conditional exemption of Road tax, Permit Fees & interest subsidy on vehicle loan.</li>
+                                            <li>Formation of Block / Sub-Division / District level committees for timely implementation and effective monitoring of the scheme.</li>
+                                        </ul>
+                                        <p>A fleet of 556 BGGY vehicles are in operation under the scheme as on 31" March, 2019. Out of 6802 GPs in the State, 6750 GPs are connected through BGGY vehicles and also with stage carriages.</p>
+                                        <h5>Table-1: Biju Gaon Gadi Yojana | District-wise achievement on plying of vehicles</h5>
+                                        <hr />
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sl. No.</th>
+                                                        <th>District</th>
+                                                        <th>RTO</th>
+                                                        <th>Total no. of GPS</th>
+                                                        <th>No. of Vehicles Plying</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td rowspan="2">1</td>
+                                                        <td rowspan="2">Angul</td>
+                                                        <td>Angul</td>
+                                                        <td>150</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                        <td>Talcher</td>
+                                                        <td>75</td>
+                                                        <td>1</td>
+                                                    <tr>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Balasore</td>
+                                                        <td>Balasore</td>
+                                                        <td>360</td>
+                                                        <td>8</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Baragarh</td>
+                                                        <td>Baragarh</td>
+                                                        <td>254</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Bhadrak</td>
+                                                        <td>Bhadrak</td>
+                                                        <td>218</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Bolangir</td>
+                                                        <td>Bolangir</td>
+                                                        <td>318</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Boudh</td>
+                                                        <td>Boudh</td>
+                                                        <td>69</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Cuttack</td>
+                                                        <td>Cuttack</td>
+                                                        <td>373</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Deogarh</td>
+                                                        <td>Deogarh</td>
+                                                        <td>70</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Dhenkanal</td>
+                                                        <td>Dhenkanal</td>
+                                                        <td>212</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Gajapati</td>
+                                                        <td>Gajapati</td>
+                                                        <td>149</td>
+                                                        <td>46</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">11</td>
+                                                        <td rowspan="2">Ganjam</td>
+                                                        <td>Ganjam</td>
+                                                        <td>324</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bhanjanagar</td>
+                                                        <td>179</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Jagatsinghpur</td>
+                                                        <td>Jagatsinghpur</td>
+                                                        <td>198</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">13</td>
+                                                        <td rowspan="2">Jajpur</td>
+                                                        <td>Jajpur</td>
+                                                        <td>147</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chandikhole</td>
+                                                        <td>164</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Jharsuguda</td>
+                                                        <td>Jharsuguda</td>
+                                                        <td>78</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>Kalahandi</td>
+                                                        <td>Kalahandi</td>
+                                                        <td>310</td>
+                                                        <td>24</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>Kandhamal</td>
+                                                        <td>Kandhamal</td>
+                                                        <td>171</td>
+                                                        <td>58</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>17</td>
+                                                        <td>Kendrapada</td>
+                                                        <td>Kendrapada</td>
+                                                        <td>249</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>18</td>
+                                                        <td>Keonjhar</td>
+                                                        <td>Keonjhar</td>
+                                                        <td>297</td>
+                                                        <td>15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">19</td>
+                                                        <td rowspan="2">Khurda</td>
+                                                        <td>RTO-I</td>
+                                                        <td>190</td>
+                                                        <td>10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>RTO-II</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>20</td>
+                                                        <td>Koraput</td>
+                                                        <td>Koraput</td>
+                                                        <td>240</td>
+                                                        <td>151</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>21</td>
+                                                        <td>Malkangiri</td>
+                                                        <td>Malkangiri</td>
+                                                        <td>111</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>22</td>
+                                                        <td>Mayurbhanj</td>
+                                                        <td>Mayurbhanj</td>
+                                                        <td>404</td>
+                                                        <td>58</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>23</td>
+                                                        <td>Nawarangpur</td>
+                                                        <td>Nawarangpur</td>
+                                                        <td>189</td>
+                                                        <td>22</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>24</td>
+                                                        <td>Nayagarh</td>
+                                                        <td>Nayagarh</td>
+                                                        <td>196</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>25</td>
+                                                        <td>Nuapada</td>
+                                                        <td>Nuapada</td>
+                                                        <td>131</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>26</td>
+                                                        <td>Puri</td>
+                                                        <td>Puri</td>
+                                                        <td>268</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>27</td>
+                                                        <td>Rayagada</td>
+                                                        <td>Rayagada</td>
+                                                        <td>182</td>
+                                                        <td>76</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>28</td>
+                                                        <td>Sambalpur</td>
+                                                        <td>Sambalpur</td>
+                                                        <td>138</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>29</td>
+                                                        <td>Sonepur</td>
+                                                        <td>Sonepur</td>
+                                                        <td>109</td>
+                                                        <td>2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td rowspan="2">30</td>
+                                                        <td rowspan="2">Sundargarh</td>
+                                                        <td>Sundargarh</td>
+                                                        <td>149</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rourkela</td>
+                                                        <td>130</td>
+                                                        <td>1</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Total</td>
+                                                        <td>33</td>
+                                                        <td>6802</td>
+                                                        <td>556</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <p>Balance 52 GPs remain to be covered out of which 44 GPs are inaccessible for providing connectivity under the scheme. The all-weather connectivity to these GPs is taken up with Works and Rural Development Department.</p>
+                                        <h5>Collection of Motor Vehicle Revenue (Tax & Fees)</h5>
+                                        <p>Under the provisions of Odisha Motor Vehicles Taxation Act, 1975 and Odisha Motor Vehicles Taxation Rules, 1976, Motor Vehicles Tax shall be levied on each motor vehicle used or kept for use within the state of Odisha at the rate specified in schedules. Collection of MV. Revenue (Tax and Fees) for last three years is given below.</p>
+                                        <h5>Table-2: Revenue earned (Tax and Fees) for last three years | Rs. in Crore</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Year.</th>
+                                                        <th>Target</th>
+                                                        <th>Collection</th>
+                                                        <th>% of collection</th>
+                                                        <th>Growth Rate</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>2016-17</td>
+                                                        <td>1300.00</td>
+                                                        <td>1227.31</td>
+                                                        <td>94.40</td>
+                                                        <td>17.64</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2017-18</td>
+                                                        <td>1350.00</td>
+                                                        <td>1544.60</td>
+                                                        <td>114.41</td>
+                                                        <td>25.85</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2018-19</td>
+                                                        <td>1800.00</td>
+                                                        <td>1765.57</td>
+                                                        <td>98.09</td>
+                                                        <td>14.32</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 scrollScreen" id="section1">
+                                        <h3 class="heading-title mt-3">Odisha State Rode Transport Corporation(OSRTC)</h3>
+                                        <hr />
+                                        <h5>About the Corporation</h5>
+                                        <p> The Odisha State Road Transport Corporation was formed on 1st May, 1974 under R.T.C Act, 1950 with the participation of State Government and Central Government and started functioning with effect from 15h May, 1974 on taking over the assets and liabilities of the erstwhile State Transport Service. OSRTC acquired the erstwhile ORT Co. Ltd., with effect from 16 August, 1990 vide Government Notification No.1135-1, dated 14th August, 1990. </p>
+                                        <p>OSRTC is providing concessional transport facilities to the Students Cultural Assoc Freedom Fighters Accredited Journalists & Physically Challenged persons etc.</p>
+                                        <h5>Operation of A/C Deluxe "Rajdhani Express" and VOLVO Buses</h5>
+                                        <p>The Hon'ble Chief Minister of Odisha Sri Naveen Patnaik has flagged off operation of Air conditioned (Rajdhani) Deluxe bus service on 18.01.2019 in a function held in the premises of the Paribahan Bhawan, Bhubaneswar. 23 A/C Deluxe buses are plying in 11 routes which are connected to District Headquarters to the State Capital. The have free wi-fi, CCTV, Mobile charging including GPS tracking and packaged drinking passengers will water bottles on board. The tickets for Rajdhani Express can be booked on-line and through Mobile app on smart phones. Besides 04 no. of VOLVO buses have been launched for plying from Bhubaneswar to Kolkata and Jeypore-Rajmundry.</p>
+                                        <h5>The follewing routes are operational under newly launched Rajdhani Express</h5>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Sl. No.</th>
+                                                        <th>Name of the Routes</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Bhubaneswar to Gorumahisani</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Cuttack to Mukhiguda</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Rourkela to Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Bhanjanagar to Cuttack via Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Bhawanipatna to Cuttack via Bolangir</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Bolangir to Cuttack via Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Deogarh to Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Angul to Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Phulbani to Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Burla-Bhubaneswar</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Puri to Bhanjanagar via Nayagarh</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Jharsuguda to Gaya via Rourkela</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Berhampur to Baliguda</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Jeypore to Kundra</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>Bhawanipatna to Gopinathpur via Rampur</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>16</td>
+                                                        <td>MV.79 to Kosagumuda</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 scrollScreen" id="section2">
+                                        <h3 class="heading-title mt-3">Capital Region Urban Transport(CRUT)</h3>
+                                        <hr />
+                                        <p>In 2010, Bhubaneswar Puri Transport Services was created with a mandate to manage and operate the bus services on intra city as well as inter-city routes in Bhubaneswar and between Bhubaneshwar, Puri, Cuttack and Khurda. </p>
+                                        <p>Over the years BPTS evolved into Capital Region Urban Transport, more commonly known as CRUT on May 4, 2018, with the vision to reorganize the public transit services in the city. It is the primary agency providing public transit services within the capital city of Bhubaneswar and in its neighboring cities of Cuttack and Puri.</p>
+                                        <p>With a vision to provide excellence in public transit service and strive for continuous improvement of the Capital Region’s transportation system, CRUT is committed to redefining “The Way We Move”, by providing mobility options to the residents that will support a more sustainable future for all. CRUT has expanded the definition of public transit to integrate multimodal alternatives for residents and visitors with its new team of experts representing the domains of transportation planning, technology, operations, and communications.</p>
+                                        <p>CRUT has recently rolled out its new buses under title `MO BUS’ meaning ‘my bus' on November 6th, 2018 along with MO CYCLE state’s first Public Bicycle Sharing (PBS) program on November 26th, 2018. In addition, CRUT also plans to introduce e-rickshaws (MO E-RIDE) by early 2019.</p>
+                                        <h5>Objectives, Key Functions & Responsibilities   </h5>
+                                        <ul>
+                                            <li>Provide safe, reliable, accessible, user-friendly and sustainable public transport to the city and further setting up a mechanism to deliver public transport that keeps up the pace with demand.</li>
+                                            <li>Formulate policy and planning for operationalization of city bus services and other modes of public transport through appropriate delivery models.</li>
+                                            <li>Ensure compliances with requirements of the Ministry/Department of the Government of India or any other state and local government rules and regulations.</li>
+                                            <li>Select most favorable carrier and mode of transport based on services requirements in terms of cost, efficiency and distance.</li>
+                                            <li>Adapt and encourage use of various technologies such as GPS, Passenger Information System (PIS), live tracking integration with Bhubaneswar One, warehouse management system, audit and payment module etc. in the management of city transport to ensure optimization of resource usage.</li>
+                                            <li>Ensure timely mobilization of resources to attain financial self-sustenance.</li>
+                                            <li>Monitor and review quality related matters for public transport and to control the issues arising thereof.</li>
+                                            <li>Enter into contracts, partnerships and service delivery arrangements with any firm (Indian as well as international), as may be required for the implementation and modernization of public transport system.</li>
+                                            <li>Purchase, construct, sell, develop, take in exchange or in lease, hire or otherwise acquire any assets/estate to develop infrastructure required for efficient operation of public transport.</li>
+                                            <li>Form technical committees and tender committees for supporting and disposing different technical aspects and procurement aspects for transport management system.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+ <!-- ======= Footer ======= -->
+    <footer id="footer" class="fixed-bottom">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>OPTICS</span></strong>. All Rights Reserved
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+    <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/styleswitch.js"></script>
+    <script src="js/jquery.vticker-min.js"></script>
+    <script src="js/main.js"></script>
+
+<script>
+    var tableOffset = $(".table").offset().top;
+    var $header = $(".table > thead").clone();
+    var $fixedHeader = $("#header-fixed").append($header);
+
+    $(window).bind("scroll", function() {
+        var offset = $(this).scrollTop();
+    
+        if (offset >= tableOffset && $fixedHeader.is(":hidden")) {
+            $fixedHeader.show();
+        }
+        else if (offset < tableOffset) {
+            $fixedHeader.hide();
+        }
+    });
+</script>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ToolkitScriptManager2_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();//]]>
+</script>
+</form>
+    <script>
+        $( document ).ready(function() {
+            $( ".clickScroll" ).click(function() {
+                $( ".scrollScreen" ).addClass( "activeScroll" );
+            });
+        });
+    </script>
+</body>
+</html>
