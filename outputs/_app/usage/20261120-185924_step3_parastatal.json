@@ -1,0 +1,40 @@
+{
+  "kind": "run",
+  "step": 3,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 3 \u00b7 AI scoring \u00b7 PARASTATAL \u00b7 Bengaluru",
+  "cities": [
+    "Bengaluru"
+  ],
+  "work": 116,
+  "unit": "row",
+  "started": "2026-11-20T18:57:31",
+  "finished": "2026-11-20T18:59:24",
+  "group": null,
+  "total_usd": 2.6606,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 89,
+      "input": 306,
+      "cache_read": 987677,
+      "cache_write": 796832,
+      "output": 47042,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 2.6606473999999998
+    }
+  },
+  "by_agent": {
+    "question-scorer \u00b7 claude-sonnet-5-5": {
+      "calls": 89,
+      "input": 306,
+      "cache_read": 987677,
+      "cache_write": 796832,
+      "output": 47042,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 2.6606473999999998
+    }
+  }
+}

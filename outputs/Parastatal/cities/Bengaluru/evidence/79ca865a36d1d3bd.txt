@@ -1417,7 +1417,7 @@ Jnuary-2020 
 
  Close
 
- Last Updated On: 16-11-2026
+ Last Updated On: 18-11-2026
 
 ## Follow us
 
@@ -1480,9 +1480,9 @@ Cookie Settings
 
  [https://www.meity.gov.in] MeitY
 
- Last Updated On: 16-11-2026
+ Last Updated On: 18-11-2026
 
- Visitors Counter: 4,097,036
+ Visitors Counter: 4,111,147
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2

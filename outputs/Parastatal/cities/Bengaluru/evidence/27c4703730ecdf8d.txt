@@ -653,7 +653,7 @@ SOURCE URL: https://mybmtc.karnataka.gov.in/
 
  Close
 
- ಇತ್ತೀಚಿನ ನವೀಕರಣ: (Last Updated On) 16-11-2026
+ ಇತ್ತೀಚಿನ ನವೀಕರಣ: (Last Updated On) 18-11-2026
 
 ## ನಮ್ಮನ್ನು ಅನುಸರಿಸಿ
 
@@ -716,9 +716,9 @@ SOURCE URL: https://mybmtc.karnataka.gov.in/
 
  [https://www.meity.gov.in] ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಮತ್ತು ಮಾಹಿತಿ ತಂತ್ರಜ್ಞಾನ ಸಚಿವಾಲಯ (MeitY)
 
- ಇತ್ತೀಚಿನ ನವೀಕರಣ: 16-11-2026
+ ಇತ್ತೀಚಿನ ನವೀಕರಣ: 18-11-2026
 
- ಸಂದರ್ಶಕರು: 4,097,036
+ ಸಂದರ್ಶಕರು: 4,111,147
  [https://mybmtc.karnataka.gov.in/visitor-statistics/kn] ಅಂಕಿಅಂಶ - ಸಂದರ್ಶಕರ ಅಂಕಿಅಂಶಗಳು
 
  ಆವೃತ್ತಿ: CeG/KRN 4.2 MGO-DB

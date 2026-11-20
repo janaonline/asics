@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bengaluru Water Supply and Sewerage Board - Service-station</title>
+
+    <!-- CSS and Fonts -->
+    <link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/rti_datatables/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/css/font-awesome.min.css">
+	   
+    <link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/itbt/bootstrap.css">
+	   <link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/itbt/enfont.css">
+    <link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/itbt/owl_custom.css">
+<link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/itbt/style.css?1795178459=">
+<link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/itbt/responsive.css?1795178459=">
+
+    <link rel="stylesheet" href="https://bwssb.karnataka.gov.in/assets/front/itbt/navbar.css">
+   
+  <link rel="stylesheet" type="text/css" href="https://bwssb.karnataka.gov.in/assets/front/owl/owl.carousel.min.css">
+    <link href="assets/font-awesome.min.css" rel="stylesheet" />
+      <link rel="stylesheet" type="text/css" href="https://bwssb.karnataka.gov.in/assets/front/tabswipe/css/swipe.css">
+  <link rel="stylesheet" type="text/css" href="https://bwssb.karnataka.gov.in/assets/front/tabswipe/css/swipe_bundle.css">
+  <link rel="stylesheet" type="text/css" href="https://bwssb.karnataka.gov.in/assets/front/tabswipe/css/tabswipe_style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" href="" type="image/png" sizes="42x42" />
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- Custom CSS -->
+<style>
+    .owl-policy-res-down .owl-stage {
+    position: relative;
+    -ms-touch-action: pan-Y;
+    display: flex;
+}        :root {
+            --primary2-color: #3b3b98;
+            --secondary2-color: #2c3a47;
+
+              --primary-color: linear-gradient(90deg, var(--primary2-color) 9%, var(--secondary2-color) 120%);
+        }
+    
+  
+</style>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/rti_datatables/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/js/jquery_min.js"></script>
+    <script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/itbt/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/js/custom.js"></script>
+
+    <!-- Base URL and Language Variables -->
+    <script type="text/javascript">
+        var base_url = "https://bwssb.karnataka.gov.in/";
+        var lang_name = "en";
+    </script>
+
+</head>
+
+<body class="dark-mode-area">
+
+    <div class="top-header">
+        <div class="topHeaderInner">
+
+            <div class="topHeadingLinks">
+
+                <a href="https://bwssb.karnataka.gov.in/back/index" target="blank" class="login-btn">
+                    <div class="topHeadingLinkSingle">
+                        <div class="topHeadingLinkIcon">
+                            <img src="https://bwssb.karnataka.gov.in/assets/front/itbt/images/header-profile.png" class="topHeadingLinkIco" alt="login">
+                        </div>
+                        <div class="topHeadingLinkLable">
+                            <p class="topHeadingLinkLableTxt">login</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://bwssb.karnataka.gov.in/7/service-station/kn" class="no-dec login-button">
+                    <div class="topHeadingLinkSingle">
+                  
+                        <div class="topHeadingLinkLable">
+                            <p class="topHeadingLinkLableTxt"> ಕನ್ನಡ </p>
+                        </div>
+                    </div>
+                </a>
+
+                    <a  data-bs-toggle="modal" data-bs-target="#screen_reader_en" ><div class="topHeadingLinkSingle visually-challenged">
+                    <div class="topHeadingLinkIcon">
+                        <img src="https://bwssb.karnataka.gov.in/assets/front/itbt/images/visually-challenged.png" class="topHeadingLinkIco" alt="visually challenged">
+                    </div>
+                    <div class="topHeadingLinkLable">
+                        <p class="topHeadingLinkLableTxt">visually challenged</p>
+                    </div>
+                </div></a>
+
+            </div>
+
+
+            <div class="subHeaderActions">
+                <div class="subHeaderSwitchTheme">
+             
+<input type="checkbox" id="toggle">
+<label for="toggle">
+    <i class="fa-solid fa-sun sun"></i>
+    <i class="fa-solid fa-moon moon"></i>
+</label>
+<div class="background"></div>
+                </div>
+                  <div class="subHeaderFontSize">
+        <div class="subHeaderFontSizeAction rightBorder" id="fontDecrease">
+            <i class="fa fa-minus subHeaderFontSizeActionIco"></i>
+        </div>
+        <div class="subHeaderFontSizeLable">
+            <p class="subHeaderFontSizeLableTxt">a</p>
+        </div>
+        <div class="subHeaderFontSizeAction leftBorder" id="fontIncrease">
+            <i class="fa fa-plus subHeaderFontSizeActionIco"></i>
+        </div>
+        <div class="subHeaderFontSizeAction" id="fontReset">
+            <i class="fa fa-refresh subHeaderFontSizeActionIco"></i>
+        </div>
+    </div>
+            </div>
+
+        </div>
+    </div>
+
+  
+    <section class="header">
+       <div class="row dflex1 cmap_container ">
+		
+		  <div class="col-md-3 col-6 col-lg-3 flex-left leftHeadSe order1">
+ <img src="https://planning.karnataka.gov.in/frontend/opt1/images/cm_logo/chief_minister_of_karrnataka_en.png?1795178459" alt="ಬೆಂಗಳೂರು ನೀರು ಸರಬರಾಜು ಮತ್ತು ಒಳಚರಂಡಿ ಮಂಡಳಿ" class="cm_karnataka_photo">
+  </div>
+  
+<div class="col-md-6 col-12 col-lg-6 flex-mid dflex midHeadSec">
+  <div class="dflex web_logo_set ">
+      <img src="https://bwssb.karnataka.gov.in/uploads/5kar_main_logo%20%281%29_1757157330.png" class="headerLogoImg" alt="Bengaluru Water Supply and Sewerage Board">
+      <div class="dept_text_contaoiners">
+        <p class="web_name">Bengaluru Water Supply and Sewerage Board</p>
+        <p class="web_subtitle">ಕರ್ನಾಟಕ ಸರ್ಕಾರ</p>
+			  
+      </div>
+          <!-- <img src="<?php// echo base_url("uploads/".$dept_setting->dept_photo); ?>" class="dept_center_logo"> -->
+    </div>
+	  
+</div>
+
+
+                          
+
+
+<div class="col-md-3 col-6 col-lg-3 flex-right rightHeadSec order3">
+
+       <img src="https://bwssb.karnataka.gov.in/uploads/white_image_582x128_1781606078.png" class="headerLogoImg hli" >
+      
+  </div>
+
+         
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg shadow navbar-sec">
+        <div class="container">
+            <button class="navbar-toggler collapsed"  onclick="openNav()">
+                     <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="opennav"><i class="fa fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class='navbar-nav mr-auto mb-2 mb-lg-0 menu deskmenu'><li class='nav-item level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/en'><i class='fa fa-home fs-35'></i></a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/4/contact-us/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Contact Us</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/5/contact-info/en'><i class=''></i> Contact Info</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/6/senior-management/en'><i class=''></i> Senior Management</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/7/service-station/en'><i class=''></i> Service Station</a></li><li class='nav-item  level_0'><a class='nav-link' href='http://49.50.101.199/bwssblocmap/'><i class=''></i> BWSSB Office location</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/10/other-offices/en'><i class=''></i> Other Offices</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/gallery/Photo Gallery/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Gallery</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://bwssb.karnataka.gov.in/gallery/Global Water Leader Awards 2018/en'><i class=''></i> Global Water Leader Awards 2018</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/new-page/Short%20Films/en'><i class=''></i> Short Films</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/20/brand-bengaluru/en'><i class=''></i> Brand Bengaluru</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/22/special-summary-revision-of-electoral-roll-2024/en'><i class=''></i> Special Summary Revision of Electoral Roll 2024</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/en'><i class=''></i> Recruitment Notification 2025</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/en'><i class=''></i> Formation & Functions of the Board</a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/260/rti/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> RTI</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en'><i class=''></i> RTI 4(1)(a)</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/en'><i class=''></i> RTI 4(1)(b)</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://rtionline.karnataka.gov.in/index.php?lan=E'><i class=''></i> RTI Online</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Common SR</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/en'><i class=''></i> Common SR 2021-2022</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/23/common-srs-2023---24/en'><i class=''></i> Common SRs 2023 - 24</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/new-page/Common%20SR%202024-25/en'><i class=''></i> Common SR 2024-25</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/212/recruitment/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Recruitment</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item dropdown dropend  level_1'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Recruitment Notification 2025.</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-1'><li class='nav-item  level_2'><a class='nav-link' href='https://bwssb.karnataka.gov.in/243/classification-of-posts/en'><i class=''></i> Classification of Posts</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://bwssb.karnataka.gov.in/215/recruitment-notification-2025-%28kalyana-karnataka-cadre%29/en'><i class=''></i> Recruitment Notification 2025 (Kalyana Karnataka Cadre)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://cetonline.karnataka.gov.in/keawebentry456/vdptrecnhk2025/20251115183454kannada.pdf'><i class=''></i> Recruitment Notification 2025 (Residual Parent Cadre)</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/storage/pdf-files/Latest News/Publication.pdf'><i class=''></i> Recruitment Publication  -  30-09-2021</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/storage/pdf-files/documents/Publication regarding payment of fee for Marks Card Verification (2).pdf'><i class=''></i> Publication regarding Payment of Fees for Markscard Verification</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/16/backlog-recruitment-notification---2019/en'><i class=''></i> Backlog Recruitment Notification - 2019</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/17/recruitment-notification---2018/en'><i class=''></i> Recruitment Notification - 2018</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/19/circular/en'><i class=''></i> Circular</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwsajala.karnataka.gov.in/eodb/Home.aspx'><i class=''></i> Linking of PID</a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/24/applications-for-public/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Applications for Public</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='https://jalamithra.bwssb.gov.in/default.aspx'><i class=''></i> JALAMITHRA</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.oasisweb.in/NonDrinkingWaterApplication/Registration.aspx'><i class=''></i> PARISARA JALASNEHI</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwsajala.karnataka.gov.in/DBW/Login.aspx'><i class=''></i> ANTHARJALA</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://greenstar.bwssb.gov.in/'><i class=''></i> GREEN STAR CHALLENGE</a></li></ul></li> 
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="opennav"><i class="fa fa-bars"></i></span>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+<style>
+
+.opennav .fa-bars{background: #0000004d;
+    padding: 11px 12px;
+    vertical-align: sub;
+    float: right;
+    text-align: right;
+    position: absolute;
+    right: 8px;
+    top: 11px;
+    border-radius: 100px;
+    font-size: 20px;
+    height: 40px;}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #001937;
+  overflow-x: hidden;
+  transition: 0.2s;
+  padding-top: 50px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 3px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  display: block;
+  transition: 0.2s !important;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    line-height: 1;
+    padding: 12px 14px 1px 14px;
+    /* margin-left: 50px; */
+    background: #0ad2d87a;
+    /* border-radius: 50px; */
+    text-align: center;
+    /* margin: auto; */
+    display: table;
+    /* width: 20px; */
+    /* height: 22px; */
+    color: aliceblue;
+}
+
+#main {
+  transition: margin-left .2s;
+
+}
+ .opennav{
+    font-size: 30px;
+    cursor: pointer;
+
+    display: flex ;
+   }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+  display: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+    .sidenav a {
+        font-size: 16px !important;
+        line-height: initial !important;
+    }
+  
+}
+</style>
+
+
+<div id="vardha" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div id="accordian" class="scms-acc">
+      <ul class='navbar-nav mr-auto mb-2 mb-lg-0 menu extramenudesk'><li class='nav-item level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/en'><i class='fa fa-home fs-35'></i></a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/4/contact-us/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Contact Us</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/5/contact-info/en'><i class=''></i> Contact Info</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/6/senior-management/en'><i class=''></i> Senior Management</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/7/service-station/en'><i class=''></i> Service Station</a></li><li class='nav-item  level_0'><a class='nav-link' href='http://49.50.101.199/bwssblocmap/'><i class=''></i> BWSSB Office location</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/10/other-offices/en'><i class=''></i> Other Offices</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/gallery/Photo Gallery/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Gallery</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://bwssb.karnataka.gov.in/gallery/Global Water Leader Awards 2018/en'><i class=''></i> Global Water Leader Awards 2018</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/new-page/Short%20Films/en'><i class=''></i> Short Films</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/20/brand-bengaluru/en'><i class=''></i> Brand Bengaluru</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/22/special-summary-revision-of-electoral-roll-2024/en'><i class=''></i> Special Summary Revision of Electoral Roll 2024</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/211/recruitment-notification-2025/en'><i class=''></i> Recruitment Notification 2025</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/30/formation-&-functions-of-the-board/en'><i class=''></i> Formation & Functions of the Board</a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/260/rti/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> RTI</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_1'><a class='nav-link' href='https://bwssb.karnataka.gov.in/160/rti-4%281%29%28a%29/en'><i class=''></i> RTI 4(1)(a)</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://bwssb.karnataka.gov.in/226/rti-4%281%29%28b%29/en'><i class=''></i> RTI 4(1)(b)</a></li><li class='nav-item  level_1'><a class='nav-link' href='https://rtionline.karnataka.gov.in/index.php?lan=E'><i class=''></i> RTI Online</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Common SR</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/15/common-sr-2021-2022/en'><i class=''></i> Common SR 2021-2022</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/23/common-srs-2023---24/en'><i class=''></i> Common SRs 2023 - 24</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/new-page/Common%20SR%202024-25/en'><i class=''></i> Common SR 2024-25</a></li></ul></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/212/recruitment/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Recruitment</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item dropdown dropend  level_1'><a class='nav-link dropdown-toggle' href='#.' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Recruitment Notification 2025.</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-1'><li class='nav-item  level_2'><a class='nav-link' href='https://bwssb.karnataka.gov.in/243/classification-of-posts/en'><i class=''></i> Classification of Posts</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://bwssb.karnataka.gov.in/215/recruitment-notification-2025-%28kalyana-karnataka-cadre%29/en'><i class=''></i> Recruitment Notification 2025 (Kalyana Karnataka Cadre)</a></li><li class='nav-item  level_2'><a class='nav-link' href='https://cetonline.karnataka.gov.in/keawebentry456/vdptrecnhk2025/20251115183454kannada.pdf'><i class=''></i> Recruitment Notification 2025 (Residual Parent Cadre)</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/storage/pdf-files/Latest News/Publication.pdf'><i class=''></i> Recruitment Publication  -  30-09-2021</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/storage/pdf-files/documents/Publication regarding payment of fee for Marks Card Verification (2).pdf'><i class=''></i> Publication regarding Payment of Fees for Markscard Verification</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/16/backlog-recruitment-notification---2019/en'><i class=''></i> Backlog Recruitment Notification - 2019</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/17/recruitment-notification---2018/en'><i class=''></i> Recruitment Notification - 2018</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.karnataka.gov.in/19/circular/en'><i class=''></i> Circular</a></li></ul></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwsajala.karnataka.gov.in/eodb/Home.aspx'><i class=''></i> Linking of PID</a></li><li class='nav-item dropdown  level_0'><a class='nav-link dropdown-toggle' href='https://bwssb.karnataka.gov.in/24/applications-for-public/en' role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside'><i class=''></i> Applications for Public</a><ul class='dropdown-menu shadow sub-mnu sub-mnu-0'><li class='nav-item  level_0'><a class='nav-link' href='https://jalamithra.bwssb.gov.in/default.aspx'><i class=''></i> JALAMITHRA</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwssb.oasisweb.in/NonDrinkingWaterApplication/Registration.aspx'><i class=''></i> PARISARA JALASNEHI</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://bwsajala.karnataka.gov.in/DBW/Login.aspx'><i class=''></i> ANTHARJALA</a></li><li class='nav-item  level_0'><a class='nav-link' href='https://greenstar.bwssb.gov.in/'><i class=''></i> GREEN STAR CHALLENGE</a></li></ul></li> 
+    </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="closeNav()"></div>
+
+<script type="text/javascript">
+$('a[data-bs-toggle="dropdown"]').removeAttr('href');
+function openNav() {
+  document.getElementById("vardha").style.width = "250px";
+
+}
+
+function closeNav() {
+  document.getElementById("vardha").style.width = "0";
+
+}
+ 
+</script>
+
+
+<div class="feedback-btn">
+  <a href="https://bwssb.karnataka.gov.in/feedback/en">
+    <i class="fa fa-comments" aria-hidden="true"></i>
+    <span>Feedback</span>
+  </a>
+</div>
+
+
+
+    <script>
+    // Function to set theme colors
+    function setTheme(color1, color2) {
+        // Set the CSS variables for --primary-color and --secondary-color
+        document.documentElement.style.setProperty('--primary-color', color1);
+        document.documentElement.style.setProperty('--secondary-color', color2);
+
+        // Save the selected colors in cookies
+        document.cookie = "theme1=" + color1 + "; path=/; max-age=15"; // 30 days expiry
+        document.cookie = "theme2=" + color2 + "; path=/; max-age=15"; 
+    }
+
+    // Function to get the value of a cookie
+    function getCookie(name) {
+        let cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].trim();
+            if (cookie.startsWith(name + '=')) {
+                return cookie.substring(name.length + 1);
+            }
+        }
+        return null;
+    }
+
+    // Apply the theme colors on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        const theme1 = getCookie('theme1');
+        const theme2 = getCookie('theme2');
+        if (theme1 && theme2) {
+            document.documentElement.style.setProperty('--primary-color', theme1);
+            document.documentElement.style.setProperty('--secondary-color', theme2);
+        }
+    });
+</script>
+
+
+<style></style><script></script>	
+	 <div class="title-block"  style="background:#f5f5f5;" >
+	 	<a onclick="goBack()" class="back-btn"><i class="fa fa-arrow-left btn btn-back"><span class="hidden-sm hidden-xs">Back	</span></i></a>
+  <div class="title" >	 Service Station		
+		
+	</div>
+
+   
+  </div> 
+
+
+		<div class="container ipage">
+		<table style="width: 988px; height: 19984px; float: left;">
+<tbody>
+<tr>
+<td style="width: 320.038px; text-align: center;">
+<p style="text-align: left;"><strong>Division &amp; EE Details</strong></p>
+</td>
+<td style="width: 334.25px; text-align: center;">
+<p><strong>Sub Division &amp; AEE Details</strong></p>
+</td>
+<td style="width: 314.913px; text-align: center;">
+<p><strong>Service Stations &amp; AE Details</strong></p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="6">
+<p><strong>CENTRAL 1<br /> </strong>Nagendra B<br /> Executive Engineer<br /> Address: Millers Road, High Grounds, Bengaluru - 560052<br /> Office Number: 22945187<br /> Mobile: 9845444078<br /> Mail:</p>
+</td>
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>C 11</strong><br /> Name: Mahesh Kumar K.S<br /> Assistant Executive Engineer<br /> Address: #17, Park Road, Tulasi Thota, Chikkalalbagh, Bangalore-53.<br /> Office Number: 22945188<br /> Mobile Number: 9900944041<br /> Mail:&nbsp;aeec1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>JAYAMAHAL</strong><br /> Name:Mahesh Kumar K.S<br /> Address: 2nd Cross, Nandhi Durga Extn Jayamahal, Bengaluru:560046<br /> Office Number: 22945137<br /> Mobile No.:9900944041</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>HIGH GROUNDS</strong><br /> Name: Mahesh Kumar K.S<br /> Address: Millers road, Near Basava Bhavan, Bengaluru &ndash;560052.<br /> Office Number: 22945191<br /> Mobile No.:9900944041</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>COLES PARK</strong><br /> Name: D S Rangaiah<br /> Address: St. Johns Church road, Inside Coles Park, Bengaluru-560005<br /> Office Number: 22945192<br /> Mobile No.:8197988300</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>C 12</strong><br /> Shaik Mohammed<br /> Assistant Executive Engineer<br /> Address: 2nd Cross, Kempegowda Tower, 10th Main, Sadashivanagara, Bangalore - 560080<br /> Office Number:<br /> Mobile Number: 9591987961<br /> Mail: -:</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>MAGADI ROAD 1</strong><br /> Name: Vishwanath M R<br /> Address: Magadi Road Keshava Nagar, Binnipete, Bengaluru, Karnataka 560023<br /> Office Number:22945181<br /> Mobile No.:9686938417</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>KUMARA PARK</strong><br /> Name: DastagiriBasha<br /> Address: Reservoir street, Kumarapark west, Behind Sheshadripuram College, Bengaluru &ndash; 560020<br /> Office Number: 22945138<br /> Mobile No.:9108354491</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>BHASHYAM PARK</strong><br /> Name:Siddharaju<br /> Address: 9th Main, Opp to Subramanya Temple, Bhashyam Nagar, Srirampura, Banagalore - 560021<br /> Office Number: 22945189<br /> Mobile No.:9611445594</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="7">
+<p><strong>CENTRAL 2</strong><br /> Nagaraj K<br /> Executive Engineer<br /> Address:10th Main, 1st A Cross, Indiranagar 2nd Stage, Bangalore - 560038<br /> Office Number:<br /> Mobile: 9845444024<br /> Mail: eese@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>C 21</strong><br /> Sunil Kumar<br /> Assistant Executive Engineer<br /> Address: Opp to Lido Mall, Swami Viveknanada Road, Ulsoor, Bangalore - 560008<br /> Office Number:<br /> Mobile Number: 9686572469<br /> Mail: aeec21@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Haraluru</strong><br /> Name:Mamatha M H<br /> Address: Haraluru&amp;Doddakkanahall<br /> Office Number:<br /> Mobile No.:8494985193</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Domlur / Konnena Agrahara<br /> </strong>Name:Mamatha M H<br /> Address: Domlur<br /> Office Number:<br /> Mobile No.:8494985193</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="5">
+<p><strong>C 22</strong><br /> Dhanvanth<br /> Assistant Executive Engineer<br /> Address: 10th Main, 7th Cross, Behind Indiranagar Club, HAL 2nd Stage, Bengaluru - 560038<br /> Office Number: 22945163<br /> Mobile Number: 7760963674<br /> Mail:&nbsp; aeese2@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>INDIRANAGAR</strong><br /> Name:Shashi Kumar<br /> Address: 10th main, 1st cross, Indiranagar 2nd stage, Near SSB school, Bengaluru-560038<br /> Office Number: 22945164<br /> Mobile No.:6361028870</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>HAL 2nd Stage</strong><br /> Name:Shashi Kumar<br /> Address: 10th main, Hal 3rd Stage, JBN, Bengaluru-560038<br /> Office Number: 22945165<br /> Mobile No.:6361028870</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Bayappanahalli<br /> </strong>Name:D S Rangaiah<br /> Address: 10th main, Hal 3rd Stage, JBN, Bengaluru-560038<br /> Office Number: 22945165<br /> Mobile No.: 8197988300</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>C V Raman Nagar<br /> </strong>Name: Sahana M<br /> Address: Kaggadasapura Main Road, Bhuvaneshwara Nagar near Narayana PU College Bengaluru 560038<br /> Office Number: NA<br /> Mobile No.:9845444035</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Jeevan Bheema Nagar</strong><br /> Name:&nbsp;Shashi Kumar<br /> Address: 10th main, Hal 3rd Stage, JBN, Bengaluru-560038<br /> Office Number: 22945165<br /> Mobile No.:6361028870</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="6">
+<p><strong>CENTRAL 3</strong><br /> Hussain Basha A N<br /> Executive Engineer<br /> Address: Kapilabhavana, 1st Floor, 11th Main, 35th Cross , Jayanagar 4th T Block, Bangalore - 560041<br /> Office Number:<br /> Mobile:&nbsp; 9845444085&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Mail: eec3@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>C 31</strong><br /> Channapaji S C<br /> Assistant Executive Engineer<br /> Address: Tuslasi Thota, Chikkalalbagh, Bangalore - 560053<br /> Office Number:22945193<br /> Mobile Number: 9845444081<br /> Mail: aeec1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>LLR<br /> </strong>Name:Seema<br /> Address:Opp to Taj West End Hotel, Race Course road, GandhiNagar, Bangalore 560 002<br /> Office Number:22945188<br /> Mobile No.:6362695183</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>BANNAPPA PARK / Sudhamanagar</strong><br /> Name:Suhas S<br /> Address:Opp to KBH K.G., K.G.Road, Bangalore - 560009<br /> Office Number:22945188<br /> Mobile No.:9481469168</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>CHIKKALALBAGH<br /> </strong>Name: Seema H S<br /> Address:Tulasi Thota, ChikkaLalbagh, Bangalore - 560053<br /> Office Number:22945188<br /> Mobile No.:6362695183</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>C 32</strong><br /> Hussain Basha M N<br /> Assistant Executive Engineer<br /> Address: Dwarkanath Road, V.V.Puram, Opp. National College, Bangalore-04<br /> Office Number:22945193<br /> Mobile Number: 9845444085<br /> Mail: aeesw1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>K.G.Nagar</strong><br /> Name: Lakshminarayan Gowda<br /> Address KG Nagar<br /> Office Number:22945195<br /> Mobile No.:9845444087</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Chamarajapete 1 &amp; 2</strong><br /> Name:Praveen .G<br /> Address:Chamarajapete<br /> Office Number:22945156<br /> Mobile No.:9845444048</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>JJR Nagar 1 &amp; 2<br /> </strong>Name:Lakshmi Narayana Gowda<br /> Address:JJ Nagar<br /> Office Number:22945156<br /> Mobile No.:9845444087</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="6">
+<p><strong>CENTRAL 4</strong><br /> Madhu shree PS<br /> Executive Engineer<br /> Address: 720, Ground Floor, Shimsha Bhavan, 46th Cross, Marenhalli Road, Jayanagar 8th Block, Bangalore - 560078<br /> Office Number:<br /> Mobile:&nbsp; 9591987952<br /> Mail: eestpkc@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>C 41</strong><br /> Prakash Satenahalli<br /> Assistant Executive Engineer<br /> Address: 1st Floor, Kapila Bhavan, 11th main, 35th cross, Aurobindo Marg, Jayanagar 4th T Block , Bangalore - 560041<br /> Office Number:22945193<br /> Mobile Number: 9008380605<br /> Mail: aeec41@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>VV Puram</strong><br /> Name: Lakshminarayan Gowda<br /> Address: VV Puram<br /> Office Number:22945195<br /> Mobile No.:9845444087</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>HOMBEGOWDA NAGAR</strong><br /> Name:&nbsp;Umesh Kumar G P<br /> Address: 10th cross Hombegowda Nagar play ground Wilson garden Bengaluru &ndash;<br /> Office Number: 22945380<br /> Mobile No.:7483616663</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>BYRASANDRA</strong><br /> Name:&nbsp;Umesh Kumar G P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Address: Mountain road, 1st Block, Jayanagar, Near Mantri Apartment, Bengaluru &ndash; 560011.<br /> Office Number: 22945149<br /> Mobile No: 7483616663</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>C 42</strong><br /> Nayeemulla shariff<br /> Assistant Executive Engineer<br /> Address: Swami Vivekananda Road, Halasuru, Bangalore - 560003<br /> Office Number: 22945159<br /> Mobile Number: 9845444052<br /> Mail: aeese1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>CLR<br /> </strong>Name: D S Rangaiah<br /> Address: cambell road, hosur road, Behind Fathima Bakery, Bengaluru:-560025.<br /> Office Number: 22945161<br /> Mobile No.:8197988300</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Austin Town</strong><br /> Name: Murali C P<br /> Address: cambell road, hosur road, Behind Fathima Bakery, Bengaluru:-560025.<br /> Office Number: 22945161<br /> Mobile No.:9845451382</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Johnson Market</strong><br /> Name:Murali C P<br /> Address: Leonard Street, Hosur road, Behind Johnson Market,Richmond Town, Bengaluru:-560025<br /> Office Number: 22945160<br /> Mobile No.:9845451382</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="6">
+<p><strong>East 1</strong><br /> Venkataramanappa<br /> Executive Engineer<br /> Address: 1st cross, 10th Main, 2nd Stage, Indiranagar Ground floor Bangalore.<br /> Office Number: 22945158<br /> Mob:-9972049588<br /> Mail: - eee@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 11</strong><br /> Mohammed Mudassir<br /> Assistant Executive Engineer<br /> Address:<br /> Office Number:<br /> Mobile Number:9538333466<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Byrathi</strong><br /> Name:Latheef<br /> Address:<br /> Office Number:<br /> Mobile No.:8867388732</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Horamavu Agrara</strong><br /> Name:Sangeetha<br /> Address:<br /> Office Number:<br /> Mobile No.:8970762895</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 12</strong><br /> Mohammed Mudassir<br /> Assistant Executive Engineer<br /> Address:<br /> Office Number:<br /> Mobile Number:9538333466<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Chellakere<br /> </strong>Name:Meghachandra<br /> Address:<br /> Office Number:<br /> Mobile No.:7338413984</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Kalkere</strong><br /> Name:Anand<br /> Address: Kalkere<br /> Office Number:<br /> Mobile No.:7090216187</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 13</strong><br /> Venkataramanappa<br /> Assistant Executive Engineer<br /> Address: 9B-31, ITI colony, Dooravaninagar, Bangalore-560016<br /> Office Number: 25663688<br /> Mobile Number:9972049588<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Ramamurthy Nagar<br /> </strong>Name:Anand<br /> Address:Ramamurthinagar<br /> Office Number:<br /> Mobile No.:7090216187</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>K R puram<br /> </strong>Name:Santhosh<br /> Address: K R puram<br /> Office Number:<br /> Mobile No.: 8139905333</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="4">
+<p><strong>East 2</strong><br /> Satish Chandra KR<br /> Executive Engineer<br /> Address: A.Narayanapura, Near Hanuman Junction, K.R.Pura, Bangalore -560016<br /> Office Number:<br /> Mob: 9880026342<br /> Mail:</p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 21</strong><br /> KanakarajuV<br /> Assistant Executive Engineer<br /> Address: 2nd Cross, Devasandra Extension, K.R.Pura , Bangalore - 560036<br /> Office Number:<br /> Mobile Number:9845444118<br /> Mail: aeee21@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Basavanapura<br /> </strong>Name:SowmyaSree<br /> Address:<br /> Office Number:<br /> Mobile No.:7760723958</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Devasandra<br /> </strong>Name:Ravi Kiran<br /> Address: Devasandra<br /> Office Number:<br /> Mobile No.:9945856623</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 22</strong><br /> Nanjundaiah K<br /> Assistant Executive Engineer<br /> Address: A.Narayanapura, Near Hanuman Junction, K.R.Pura, Bangalore -560016<br /> Office Number: 28510008<br /> Mobile Number:&nbsp;8197382595<br /> Mail: aeee4@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>A Narayanapura</strong><br /> Name:Meghachandra<br /> Address: A Narayanapura<br /> Office Number:<br /> Mobile No.:7338413984</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>VignanaNagara<br /> </strong>Name:Ravi Kiran<br /> Address: VignanaNagara<br /> Office Number:<br /> Mobile No.:9945856623</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="4">
+<p><strong>East 3</strong><br /> Ashoak Gowda TP<br /> Executive Engineer<br /> Address:<br /> Office Number:<br /> Mob: 9611146985<br /> Mail:&nbsp;</p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 31</strong><br /> Darshan<br /> Assistant Executive Engineer<br /> Address:<br /> Office Number:<br /> Mobile Number:&nbsp;9845411488<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Hoodi</strong><br /> Name:Ravi Kumar<br /> Address: Near Graphic Index, RXDX Hospital backside, Bangalore - 560066<br /> Office Number: 22945234<br /> Mobile No.:7349543768</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>AECS Layout</strong><br /> Name:Sahana Begum<br /> Address: BEML Layout, Near ITPL, Kundanahalli Main Road Bangalore &ndash; 560066<br /> Office Number: 22945234<br /> Mobile No.: 8618792435</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 32</strong><br /> Naveen Kumar<br /> Assistant Executive Engineer<br /> Address:<br /> Office Number:<br /> Mobile Number:&nbsp;9535544974<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Channasandra</strong><br /> Name: Manjunatha<br /> Address: Channasandra<br /> Office Number:<br /> Mobile No.:9590802503</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Varthur<br /> </strong>Name: Praveen<br /> Address: Varthur<br /> Office Number:<br /> Mobile No.:8123735994</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="4">
+<p><strong>East 4</strong><br /> Hanumanthagantti<br /> Executive Engineer<br /> Address:5th Cross, Bellandur, Bangalore - 560103<br /> Office Number:<br /> Mob: 9632861112<br /> Mail: eee4@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 41</strong><br /> Jagdish R<br /> Assistant Executive Engineer<br /> Address: Kadubeesanahalli STP, Beside Marathahalli Police Station, Bangalore - 560037<br /> Office Number:<br /> Mobile Number:&nbsp;9902249333<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Doddanekundi</strong><br /> Name: Poornima<br /> Address: Doddanekundi<br /> Office Number:<br /> Mobile No.: 8095298996</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Marathahalli<br /> </strong>Name: Poornima<br /> Address: Marathahalli<br /> Office Number:<br /> Mobile No.:8095298996</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>E 42</strong><br /> Hanumanthagantti<br /> Assistant Executive Engineer<br /> Address: Vemana PlayGround ,Janatha Colony, Doddakannahalli, Bengaluru - 560035<br /> Office Number:<br /> Mobile Number:&nbsp;9632861112<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Gunjur<br /> </strong>Name: Krishnegowda<br /> Address: Gunjur<br /> Office Number:<br /> Mobile No.:9900774490</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Doddakanahalli</strong><br /> Name: Poornima<br /> Address: Doddakanahalli<br /> Office Number:<br /> Mobile No.:8095298996</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="7">
+<p><strong>North 1</strong><br /> Jayaprakash<br /> Executive Engineer<br /> Address:<br /> Office Number:<br /> Mob:-7022227230&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /> Mail: -</p>
+</td>
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>N 11</strong><br /> RajashekarMeti<br /> Assistant Executive Engineer<br /> Address: 8th MainRoad, 16thCross, D block, OppBsnl Office, Sahakaranagar.<br /> Office Number: 28562829<br /> Mobile Number: 9845444123<br /> Mail: aeen1_jakkur@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Sahakaranagar</strong><br /> Name: Usha C R<br /> Address:Sahakaranagar<br /> Office Number:<br /> Mobile No.:7483086634</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Vidyaranyapura<br /> </strong>Name:Shilpa<br /> Address: Vidyaranyapura<br /> Office Number:<br /> Mobile No.: 8310871800</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Kempapura</strong><br /> Name:Pradeep<br /> Address:Kempapura<br /> Office Number:<br /> Mobile No.:7019003410</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>N 12</strong><br /> Kalpana S<br /> Assistant Executive Engineer<br /> Address: BWSSB 3rd Cross, P &amp; T Colony, R T Nagar, Bengaluru &ndash; 560032.<br /> Office Number: 22945139<br /> Mobile Number: 9845444060<br /> Mail: -aeene3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>R T NAGAR<br /> </strong>Name:Shekar<br /> Address: No.3, 2nd Main, 3rd Cross, P &amp; T Colony, R.T.Nagar, Bengaluru-560 032<br /> Office Number: 22945142<br /> Mobile No.: 6364276854</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Manoraynapalya</strong><br /> Name:Kumar<br /> Address: No.3, 2nd Main, 3rd Cross, P &amp; T Colony, R.T.Nagar, Bengaluru-560 032<br /> Office Number: 22945142<br /> Mobile No.:9482798909</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>ANANDANAGAR<br /> </strong>Name: Kumar<br /> Address: 1st Cross, AGS Colony, Next to Atria Collage, Ananda Nagar, Bengaluru -560 032.<br /> Office Number: 22945266<br /> Mobile No.:9482798909</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>SANJAYNAGAR<br /> </strong>Name:Shekar<br /> Address: Sanjay Nagara Main Road Opposite to Radhakrishna Temple Sanjay Nagara Bengaluru -560094<br /> Office Number:<br /> Mobile No.:6364276854</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="8">
+<p><strong>North 2</strong><br /> Channabasavaiah<br /> Executive Engineer<br /> Address:<br /> Office Number:<br /> Mob: 9845444150&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /> Mail:</p>
+</td>
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>N 21</strong><br /> Vinay Kumar<br /> Assistant Executive Engineer<br /> Address: Nethaji Road, Frazer Town, Bangalore - 560005<br /> Office Number: 22945167<br /> Mobile Number:&nbsp;9845444053<br /> Mail: aeec3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>PILLANNA GARDEN 1</strong><br /> Name: Rahul<br /> Address: 2nd Stage, Pillanna Garden, BSA Road, Muslim Colony, Bangalore &ndash; 560045<br /> Office Number: 22945167<br /> Mobile No.:9916524936</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>PILLANNA GARDEN 2<br /> </strong>Name:Mallappa Mali<br /> Address: PILLANNA GARDEN 2 (KG halli)<br /> Office Number: 22945167<br /> Mobile No.:9591209312</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>MACHALIBETTA</strong><br /> Name: Mallappa Mali<br /> Address: Opposite to Pre Owned Car Dealers, Banaswadi Main Road, MaruthiSeva Nagar, Bangalore - 560033<br /> Office Number: 22945167<br /> Mobile No.:9591209312</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>FRAZER TOWN</strong><br /> Name:Rahul<br /> Address: Nethaji Road, Frazer Town, Near Netaji AatadaMydana, Bengaluru - 560005<br /> Office Number: 22945167<br /> Mobile No.:9916524936</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>N 22</strong><br /> Firoz Pasha<br /> Assistant Executive Engineer<br /> Address: 9th &lsquo;D&rsquo; Main, Service road, 1st Block, HRBR Layout, Kalyan nagar, Bangalore-43<br /> Office Number: 22945170<br /> Mobile Number:&nbsp;8217467686<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Nagawara</strong><br /> Name:Daval sab<br /> Address: Nagawara<br /> Office Number: 22945170<br /> Mobile No.:9686566954</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>HBR<br /> </strong>Name:Daval sab Karnachi<br /> Address: HBR<br /> Office Number: 22945170<br /> Mobile No.:9686566954</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>N 23</strong><br /> Lokesh J<br /> Assistant Executive Engineer<br /> Address:1st Main, Kasthurinagar, Bangalore-43<br /> Office Number: 22945200<br /> Mobile Number: 9845444058<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>HRBR<br /> </strong>Name:Daval sab Karnachi<br /> Address: HRBR<br /> Office Number: 22945170<br /> Mobile No.:9686566954</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Banaswadi<br /> </strong>Name:Manjunatha<br /> Address: Banaswadi<br /> Office Number: 22945200<br /> Mobile No.:9590802503</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="4">
+<p><strong>North 3</strong><br /> Mirza Anwar<br /> Executive Engineer<br /> Address:&nbsp;Pinakini Bhavan, Doddaballapura Road, Major Unnikrishnan Road, Yelahanka Road<br /> Office Number:<br /> Mob: 9741969945&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /> Mail: eenorth2@bwssb.gov.in<br /> <br /> <br /> <br /> </p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>N 31</strong><br /> Thejas H B<br /> Assistant Executive Engineer<br /> Address:Pinakini Bhavan, Doddaballapura Road, Major Unnikrishnan Road, Yelahanka Road<br /> Office Number: 29562829<br /> Mobile Number: 9740984166<br /> Mail: aeen3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Yelahanka New Town</strong><br /> Name: ManjunathHallur / Mohammed Imran<br /> Address: Yelahanka New Town<br /> Office Number:22945140<br /> Mobile No.:8971192116 / 8088800910</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Singapura</strong><br /> Name:Dhanalaxmi / ManjunathaHallur<br /> Address:Singapura<br /> Office Number:<br /> Mobile No: 9743070424 /&nbsp;8971192116</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>N 32</strong><br /> Manjunath Hosamani<br /> Assistant Executive Engineer<br /> Address: 1st floor, Pinakini Bhavan, Doddaballapura Road, Major Unnikrishnan Road, Yelahanka Road.<br /> Office Number: 29562828<br /> Mobile Number: 9590595245<br /> Mail: aeenv2@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>KOGILU</strong><br /> Name:Mohammed Imran /&nbsp;Nandana&nbsp; C N<br /> Address:KOGILU<br /> Office Number:<br /> Mobile No.:8088800910 / 7975232080</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Rachenahalli</strong><br /> Name: Nandana C N<br /> Address: Rachenahalli<br /> Office Number:<br /> Mobile No.:7975232080</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="4">
+<p><strong>North 4</strong><br /> Harsha A<br /> Executive Engineer<br /> Address: Suvarna Bhavana,BWSSB Building, 18th Cross Rd, near Ammanni College, Malleshwaram, Bengaluru, Karnataka 560055<br /> Office Number:<br /> Mob: 9632710405&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /> Mail:&nbsp;<br /> <br /> <br /> <br /> <br /> <br /> <br /> <br /> </p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>N 41</strong><br /> Nagaraj K B<br /> Assistant Executive Engineer<br /> Address: MEI Layout, 7th Main Road, Bengaluru - 560073<br /> Office Number: 28371048<br /> Mobile Number: 9686448013<br /> Mail: - aeen1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>MEI LAYOUT<br /> </strong>Name:Karthik Manju<br /> Address: Bagalagunte, Bengaluru-560073<br /> Office Number: NA<br /> Mobile No.: 7760963670</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>DASARAHALLI<br /> </strong>Name:Suma<br /> Address: DASARAHALLI<br /> Office Number:<br /> Mobile No.: 7899158374</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>N 42</strong><br /> Aishwarya B A<br /> Assistant Executive Engineer<br /> Address: 1st floor, 7th Main, MEI Layout, Hesaragatta road, Bangalore-73.<br /> Office Number:<br /> Mobile Number:&nbsp;9845967847<br /> Mail: aeenv1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>BHAHUBALINAGAR<br /> </strong>Name:Bhagya Lakshmi<br /> Address: OppJalahalli Village Bus stop, Bengaluru-560013<br /> Office Number: 23452696<br /> Mobile No.: 7019331323</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>ABBIGERE<br /> </strong>Name:Bhagya Lakshmi<br /> Address: ABBIGERE<br /> Office Number: 23452696<br /> Mobile No.: 7019331323</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="8">
+<p><strong>South 1</strong><br />Sumanth N&nbsp;<br /> Executive Engineer<br /> Address: BWSSB, 4th Block, Jayanagar, Bangalore &ndash; 560011&nbsp; &nbsp; &nbsp; &nbsp; Office Number: 22945143&nbsp;<br /> Mob:9845444089<br /> Mail: ees2@bwssb.gov.in</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</td>
+<td style="width: 334.25px;" rowspan="5">
+<p><strong>S 11</strong><br /> Sudharshan N P<br /> Assistant Executive Engineer<br /> Address: BWSSB, Jambu Savari Dinne, Puttenahalli Main Road, Bangalore - 560076<br /> Office Number:<br /> Mobile Number:&nbsp;9900983569<br /> Mail: aees2@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Vijaya Bank layout</strong><br /> Name:Praveen<br /> Address: 3rd Cross, 4th Main, Vijaya Bank Layout, Bangalore &ndash; 560076&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Office Number:<br /> Mobile No.:8618822041</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>PUTTENAHALLI (AREKERE MICO Layout</strong> )<br /> Name:Akshay C<br /> Address: Kothur Dinne GLR Premises, Kothnur Dinne Main Road, J.P.Nagar 8th Phase, Bangalore &ndash; 560076&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Office Number:<br /> Mobile No.:8310382363</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>JP Nagar 3</strong><br /> Name:Ningarajamma<br /> Address:JP Nagar 3, Near WaterTank, Kothnur, 8th Phase, J.P.Nagar, Bangalore -560076<br /> Office Number:<br /> Mobile No.:9353713035</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>KOTHNUR DINNE</strong><br /> Name:Akshay C<br /> Address: Kothur Dinne GLR Premises, Kothnur Dinne Main Road, J.P.Nagar 8th Phase, Bangalore &ndash; 560076<br /> Office Number:<br /> Mobile No.:9845444038</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>JAMBU SAVAARI DINNE</strong><br /> Name:Akshay<br /> Address: Kothur Dinne GLR Premises, Kothnur Dinne Main Road, J.P.Nagar 8th Phase, Bangalore &ndash; 560076&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Office Number:<br /> Mobile No.:9845444038</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>S 12</strong><br /> Nagaraj S R<br /> Assistant Executive Engineer<br /> Address: BWSSB, 21st Main, 11th Block, Anjanapura, Bangalore - 560083&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OfficeNumber:<br /> Mobile Number:&nbsp;9886152469<br /> Mail: aeesv1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>ANJANAPURA (NARAYAN NAGAR)<br /> </strong>Name: Mahadevaiah<br /> Address:Anjanapura , 100ft BDA Road, Near Krishna Temple , Bangalore - 560108<br /> Office Number:<br /> Mobile No.:9972846794</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>THALAGHATTAPURA (NEW)<br /> </strong>Name:Praveen<br /> Address:Thalaghattapura, Swami Vivekananda Double Road, Narayanagar 3rd Block, Bangalore - 560109 Office Number:<br /> Mobile No.: 8618822041</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>GOTTIGERE</strong><br /> Name:Nagaraj S R<br /> Address: South Avenue Layout, Gottigere GLR Premises, Bangalore -560083<br /> Office Number:<br /> Mobile No: 9916100559</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="7">
+<p><strong>South 2</strong><br /> Divyashree V G<br /> Executive Engineer<br /> Address: Near Muttaraya Swamy Temple , Begru Lake Road , Begru , Bangalore - 560068<br /> Office Number: 22945196<br /> Mobile : - 9844440169<br /> Mail:eesw2@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>S 21</strong><br /> Ramesh S B<br /> Assistant Executive Engineer<br /> Address:Kodichikkanahalli GLR Premises, Bangalore &ndash; 560068&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; OfficeNumber: 40977432<br /> Mobile Number: 9845444037<br /> Mail:&nbsp;<br /> .</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>BOMMANAHALLI</strong><br /> Name: Shivanand<br /> Address:Kodichikkanahalli GLR Premises, Bangalore &ndash; 560068<br /> Office Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mobile No.: 8050923938</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>HONGASANDRA (KODICHIKKANAHALLI)<br /> </strong>Name: Shivanand<br /> Address:Kodichikkanahalli GLR Premises, Bangalore &ndash; 560068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Office Number:<br /> Mobile No.: 8050923938</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Begur</strong><br /> Name: Shivanand<br /> Address:Near Muttaraya Swamy Temple , Begru Lake Road , Begru , Bangalore - 560068<br /> Office Number:<br /> Mobile No: 8050923938</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>S 22</strong><br /> Vinay&nbsp;<br /> Assistant Executive Engineer<br /> Address: Near Ganesha Temple, AECS Layout, A Block, Kudlu, Bangalore &ndash; 560068&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Office Number:<br /> Mobile Number: 9845444090<br /> Mail: -aeesv2@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>HSR (HSR1)</strong><br /> Name:Vikas D S<br /> Address: HSR Layout &nbsp;GLR Premises, 17th Cross, 22nd A Main ,Sector-2, HSR Layout, Bangalore -560102<br /> Office Number:<br /> Mobile No.:9845444039</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>MANGAMMANAPALYA (HSR2)</strong><br /> Name:Vikas D S<br /> Address: HSR Layout &nbsp;GLR Premises, 17th Cross, 22nd A Main ,Sector-2, HSR Layout, Bangalore -560102<br /> Office Number:<br /> Mobile No.:9845444039</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>KUDLU</strong><br /> Name:Vikas D S<br /> Address: Near Amurutha College Road , Centreal Jail Main Road , Kudlu GLR, Bangalore - 560068<br /> Office Number:<br /> Mobile No.:9845444039</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>HARALURU</strong><br /> Name:Vikas<br /> Address: Near Amurutha College Road , Centreal Jail Main Road , Kudlu GLR, Bangalore - 560068<br /> Office Number:<br /> Mobile No.:9845444039</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="11">
+<p><strong>South 3</strong><br /> Basavaraj N<br /> Executive Engineer<br /> Address: 2nd Floor, Kapila Bhavan, 11th Main, 36th Cross Road, Jayanagara 4th T Block,Bangalore - 560041<br /> Office Number:&nbsp; 080-22945389<br /> Mobile Number: 9113042980<br /> Mail: eese2@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>S 31</strong><br /> Santosh Prasad M<br /> Assistant Executive Engineer<br /> Address: &nbsp;17th Main, 2nd Cross, 3rd Block, Koramangala, Bangalore &ndash; 560034&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Office Number: 22945243<br /> Mobile Number:&nbsp;9972001265<br /> Mail: - aeese3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>KORMANGALA 1</strong><br /> Name:Gajanana<br /> Address: 17th Main, 3rd Block, Koramangala, Near BDA Complex, Bengaluru - 560034<br /> Office Number: 22945153<br /> Mobile No.:9845444056</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>KORMANGALA 2</strong><br /> Name: Gajanana<br /> Address: 3rd Cross, Bellandur Main Road, Bengaluru-560034<br /> Office Number:<br /> Mobile No.: 9845444056</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>KML 3 (BELLANDUR)</strong><br /> Name: Gajanana<br /> Address: 3rd Cross, Bellandur Main Road, Bengaluru-560034<br /> Office Number:<br /> Mobile No.: 9845444056</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>S 32</strong><br /> Sayabanna<br /> Assistant Executive Engineer<br /> Address: 9th&nbsp; Main, 2nd Cross, BTM 2nd Stage, Bangalore - 560076<br /> Office Number:<br /> Mobile Number: 9845444042<br /> Mail: aees3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>BTM 1</strong><br /> Name: Rangaraju<br /> Address: 9th Main, BTM 2nd Stage, Near Water Tank, Bengaluru - 560076<br /> Office Number: 22945151<br /> Mobile No.:9972257390</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>BTM 2</strong><br /> Name: Rangaraju<br /> Address: 9th Main, BTM 2nd Stage, Near Water Tank, Bengaluru - 560076<br /> Office Number: 22945151<br /> Mobile No.:9972257390</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>BTM 3</strong><br /> Name: Rangaraju<br /> Address: 9th Main, BTM 2nd Stage, Near Water Tank, Bengaluru - 560076<br /> Office Number: 22945151<br /> Mobile No.:9972257390</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="5">
+<p><strong>S 33</strong><br /> Prathap Reddy C<br /> Assistant Executive Engineer<br /> Address: 1st Floor, Kapila Bhavan, 11th Main, 36th Cross Road, Jayanagar 4th T Block, Bangalore &ndash; 560041&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Office Number: 22945148<br /> Mobile Number:&nbsp;8792293344<br /> Mail: aeesw4@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>JP Nagar Phase 1</strong><br /> Name: Chandrashekar K<br /> Address: 445, 11th B Cross Jeewan Sathi Colony , JP Nagara 1st Phase&nbsp;&nbsp; Office Number: 22945152<br /> Mobile No.:8317449494</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>JP Nagar Phase 2</strong><br /> Name: Lakshmi G<br /> Address: 8th Main, 3rd Cross, J P Nagar 3rd Phase, Bangalore -560078<br /> Office Number:<br /> Mobile No.:6361835615</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Jayanagar</strong><br /> Name: Shreeja S<br /> Address: Jayanagar Shopping Complex,192, 27th Cross, Jayanagar 1st Block, Jayanagar 3rd Block, Jayanagar , Bangalore - 560011<br /> Office Number:<br /> Mobile No.:8951785741</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Jayanagar 4thT Block</strong><br /> Name:&nbsp;Shreeja S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Address: 964, 22nd Main Road, 4th T Block East, Pattabhirama Nagar, Jayanagar, Bangalore -560041&nbsp;&nbsp;&nbsp; Office Number:22945150<br /> Mobile No.: 8951785741</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>LAKKASANDRA (HOMBEGOWDA NAGAR)</strong><br /> Name:&nbsp;Umesh<br /> Address: Mountain Road In Jayanagar 1st Block, Near Mantri Apartment, Bangalore &ndash; 560011 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Office Number: 22945380<br /> Mobile No.:7483616663</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="9">
+<p><strong>South 4</strong><br /> Raghavendra C R<br /> Executive Engineer<br /> Address:<br /> Office Number:&nbsp;<br /> Mobile Number:&nbsp;9740984164</p>
+</td>
+<td style="width: 334.25px;" rowspan="6">
+<p><strong>S 41</strong><br /> Srinivas<br /> Assistant Executive Engineer<br /> Address: 1St Floor, 1st Main, Banashankari 3rd Stage, Banagiri Nagar, near to water tank, Bangalore-85<br /> Office Number: 22945198<br /> Mobile Number: 9845444036<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Banashankari</strong><br /> Name:Meghashree<br /> Address:Banashankari<br /> Office Number:22945146<br /> Mobile No.:9844440179</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>PADAMANABHANAGAR</strong><br /> Name:Meghashree<br /> Address:PADAMANABHANAGAR<br /> Office Number:22945146<br /> Mobile No.:9844440179</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Kumaraswamy layout Stage</strong><br /> Name:Preethi<br /> Address:Kumaraswamy layout<br /> Office Number:<br /> Mobile No.:9845444034</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Yelchenahalli</strong><br /> Name:Khamruddhin&nbsp;<br /> Address: Yelchenahalli<br /> Office Number:22945146<br /> Mobile No.:9986736626</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>POORNAPRAGNA LAYOUT</strong><br /> Name:Dinesh<br /> Address: Poorna Pragna Layout<br /> Office Number:22945145<br /> Mobile No.:9845444110</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>JHBCS LAYOUT NEW</strong><br /> Name:Dinesh<br /> Address: JHBCS LAYOUT<br /> Office Number:<br /> Mobile No.:9845444110</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>S 42</strong><br /> Raghavendra R<br /> Assistant Executive Engineer<br /> Address: 4th Block, BSK 6th Stage, Pavanapura opp. Ragavendra Swamy Temple, Lingadeeranahalli, Bangalore-62<br /> Office Number: 28611826&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Mobile Number:&nbsp;9591988970<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>VV NAGAR NEW</strong><br /> Name:Nandish<br /> Address: VV NAGAR<br /> Office Number:<br /> Mobile No. : 9844179922</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Lingadeeranahalli</strong><br /> Name:Nandish<br /> Address: Lingadeeranahalli<br /> Office Number:<br /> Mobile No. : 9844179922</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>BSK 6TH Stage (</strong><strong>Hemmigepura</strong><strong>)</strong><br /> Name:Nandish<br /> Address: Hemmigepura<br /> Office Number:<br /> Mobile No. : 9844179922</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="11">
+<p><strong>West 1</strong><br /> Harinath R<br /> Executive Engineer<br /> Address: Behind Modhi Hospital, West of Chord road, 2nd stage, Bangalore-10<br /> Office Number: 23491123<br /> Mobile Number: 9845444043<br /> Mail: eenw@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>W 11</strong><br /> Harish H P<br /> Assistant Executive Engineer<br /> Address: #115, 1st Floor, , Suvarna Bhavan, Margosa Road, 18th Corss, Malleshwaram, Bangalore<br /> Office Number: 22945131<br /> Mobile Number:9538897735<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>NEW BEL ROAD</strong><br /> Name:DastagirBasha<br /> Address: Near MS Ramaiah Hospital Jaladarshini Layout, Bengaluru - 560054<br /> Office Number: 22945245<br /> Mobile No.:9108354491</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>K G tower</strong><br /> Name:Jayashree<br /> Address: 2nd Cross,10th Main Road, Near Ramanashree Park, Sadashivanagar, Bengaluru - 560072<br /> Office Number: 22945136<br /> Mobile No.:6360288305</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>MALLESHWARAM</strong><br /> Name:Shwetha<br /> Address: 15th Cross, Malleshwaram, Sampige Road, Opp Kadu Malleshwara Temple, Bengaluru-560003<br /> Office Number: 22945134<br /> Mobile No.:8904993389</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>SRIRAMPURA</strong><br /> Name: Jayashree<br /> Address: Railway pallel Road, Near Malleshwaram Railway station, Bengaluru-560021<br /> Office Number: 22945133<br /> Mobile No.:6360288305</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>W 12</strong><br /> Ram Kumar<br /> Assistant Executive Engineer<br /> Address:<br /> Office Number:<br /> Mobile Number: 9980214906<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Rajajinagar</strong><br /> Name: Pavan kumar<br /> Address: Rajajinagar<br /> Office Number: 22945177<br /> Mobile No.: 9740984172</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Kethamaranahalli<br /> </strong>Name:Pushpa<br /> Address: Kethamaranahalli<br /> Office Number: 22945178<br /> Mobile No.: 9611838985</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Mahalakshmi Layout</strong><br /> Name:Pushpa<br /> Address: Mahalakshmi Layout<br /> Office Number: 22945177<br /> Mobile No.:9611838985</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Nandini Layout</strong><br /> Name: Pavan kumar<br /> Address: Nandini Layout<br /> Office Number:<br /> Mobile No.:9740984172</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>W 13</strong><br /> Somanath<br /> Assistant Executive Engineer<br /> Address: 5th Block, Nagarabhavai, outer ring road, Bangalore-72<br /> Office Number: 22945184<br /> Mobile Number: 9845444073<br /> Mail: - aeenw2@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>West of Chord 1 &amp; 2<br /> </strong>Name:Rajendrakumar<br /> Address:West of Chord<br /> Office Number:23235755<br /> Mobile No.:9845444076</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>KAMALANAGAR / KAMAKSHI PALYA</strong><br /> Name:Rajendrakumar<br /> Address: Kamakshiplya<br /> Office Number:23235755<br /> Mobile No.:9845444076</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Agrahara Dasarahalli</strong><br /> Name:Rajendrakumar<br /> Address: Agrahara Dasarahalli<br /> Office Number: 22945185<br /> Mobile No.:9845444076</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="6">
+<p><strong>West 2</strong><br /> Miraganje Manjunath<br /> Executive Engineer<br /> Address:Suvarna Bhawan 1st floor,18thcross Malleshwaram , Bengaluru - 560055<br /> Office Number:23311337<br /> Mobile: 9743371110<br /> Mail: - eenw@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>W 21</strong><br /> GouseInamdhar<br /> Assistant Executive Engineer<br /> Address: Peenya 2nd Stage, BMTC Bus Stop, Bangalore-58<br /> Office Number: 28372030<br /> Mobile Number:&nbsp;9632349063<br /> Mail: -</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>PEENYA DASARAHALLI</strong><br /> Name:DushyanthN<br /> Address: TVS Cross, 1st Stage, Peenya, Oppfourss factory, Bengaluru-560058.<br /> Office Number: 22945213<br /> Mobile No.: 8904778179 / 9980914310</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>PEENYA</strong><br /> Name:DushyanthN<br /> Address: 14th Cross, Behind Post Office, 4th Phase, Peenya Industrial Area, Bangalore &ndash; 560058&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Office Number: 22945213<br /> Mobile No.: 8904778179 / 9980914310</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>W 22</strong><br /> Vishwanath K<br /> Assistant Executive Engineer<br /> Address: Pipeline Road, Sunkadakatte, Bangalore - 560091<br /> Office Number: 29558007<br /> Mobile Number: 8618366506<br /> Mail:&nbsp; aeenw6@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Hegganahalli</strong><br /> Name: Nadeesh Kumar S<br /> Address: Pipeline Road, MRS Layout, Sunkadakatte, Bangalore-560091<br /> Office Number: 29558007<br /> Mobile No.: 9632435522</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Herohalli</strong><br /> Name:Sudha H<br /> Address: Herohalli Main Road, Union Bank Back Side, Syndicate Layout, Herohalli, Bangalore -560091<br /> Office Number: 29558007<br /> Mobile No.:9535182299</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="2">
+<p><strong>W 23</strong><br /> Hari Kumarb L<br /> Assistant Executive Engineer<br /> Address: Brundavana Nagara, Karihobanahalli, Bangalore - 560091<br /> Office Number: 27769208<br /> Mobile Number: 9008822833<br /> Mail: aeew23@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Andrahalli</strong><br /> Name: Ganesh N<br /> Address: &nbsp;1st Cross Road Infront Subramanya Temple, Lingadheeranahalli, Bangalore - 560091<br /> Office Number:<br /> Mobile No.: 9845444068</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Doddabidarakallu</strong><br /> Name: Ganesh N<br /> Address: Brundavan Nagar, 2nd Cross, Karihobnalli, Bangalore - 560091<br /> Office Number:<br /> Mobile No.: 9845444068</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="11">
+<p><strong>West 3</strong><br /> R.Srinivas<br /> Executive Engineer<br /> Address: Arkavathi Bhavan, 5th Main, 9th Cross, RPC Layout, Vijayanagara 2nd Stage, Bengalore - 560104<br /> Office Number:<br /> Mob:- 9845444012&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br /> Mail: eew@bwssb.gov.in</p>
+</td>
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>W 31</strong><br /> Sowmya Rani M<br /> Assistant Executive Engineer<br /> Address:8th Main, MC Layout, Vijayanagar water tank, Vijayanagar, Bangalore-40<br /> Office Number: 28611826<br /> Mobile Number: 9980421461<br /> Mail: aeew4@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Vjayanagar OHT</strong><br /> Name: Ramegowda B<br /> Address:Vjayanagar OHT<br /> Office Number:22945246<br /> Mobile No.:9739925888</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Chandra Layout -1</strong><br /> Name: Ramegowda<br /> Address: Chandra Layout<br /> Office Number: 22945246<br /> Mobile No.:9739925888</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Chandra Layout-2</strong><br /> Name: Sathish T<br /> Address: Chandra Layout<br /> Office Number:22945174<br /> Mobile No.:7892580073</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Mudalapalya</strong><br /> Name: Sathish T<br /> Address: Mudalapalya<br /> Office Number:22945174<br /> Mobile No.:7892580073</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="3">
+<p><strong>W 32</strong><br /> Shivaram S G<br /> Assistant Executive Engineer<br /> Address: Ground Floor, Arkavati Bhavan, 9th cross, 5th Main, RPC Layout, Vijayanagar 2nd Stage.Bangalore-40<br /> Office Number: 23500013<br /> Mobile Number: 9845444069<br /> Mail: aeew1@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>MAGADI ROAD 2</strong><br /> Name: Vishwanath M R<br /> Address: Magadi Road<br /> Office Number:22945181<br /> Mobile No.:9686938417</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Hosahalli</strong><br /> Name:Swathi<br /> Address: Hosahalli<br /> Office Number: 22945186<br /> Mobile No.:7026298455</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Mysore Road</strong><br /> Name: Vishwanath M R<br /> Address: New Guddadahalli, Mysore road, near Girias show room, Bangalore - 560066<br /> Office Number: 22945182<br /> Mobile No.:9686938417</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>W 33</strong><br /> Sachin Patil<br /> Assistant Executive Engineer<br /> Address: #3, M.N.K. Park, Basavanagudi, Bangalore-560004<br /> Office Number:22945155<br /> Mobile Number: 9845444041<br /> Mail: aeesw3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>BTR</strong><br /> Name:Karthik M<br /> Address:BTR<br /> Office Number:<br /> Mobile No.:9845444032</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p>Mountjoy<br /> Name:Sudarshan D N<br /> Address: Mount Joy<br /> Office Number:<br /> Mobile No.:9845444105</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Nagendra Block</strong><br /> Name:Sudarshan D N<br /> Address: Nagendra Block<br /> Office Number:<br /> Mobile No.:9845444105</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Girinagar</strong><br /> Name:Karthik M<br /> Address:Girinagar<br /> Office Number:<br /> Mobile No.:9845444032</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 320.038px;" rowspan="14">
+<p><strong>West 4</strong><br /> T Chandrashekar Prasad<br /> Executive Engineer<br /> Address: No 4, 1st Block Sir MV Layout, Bangalore -560065 Office Number:22945171<br /> Mobile No- 9845443138<br /> Mail: -</p>
+</td>
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>W 41</strong><br /> H C Deepak<br /> Assistant Executive Engineer<br /> Address: 2nd A Main, 1st Phase, BEML 5th Stage, Raja Rajeshwari Nagar, Bangalore - 560098Office Number: 28611826<br /> Mobile Number: 9902338686<br /> Mail: aeew3@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Nagadevanahalli</strong><br /> Name: Nagarathna<br /> Address :Nagadevanahalli<br /> Office Number:<br /> Mobile No. 8050833940</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>R.R. Nagar</strong><br /> Name: Kavya<br /> Address: R.R. Nagar<br /> Office Number:22945383<br /> Mobile No.:8861938538</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Ideal Home</strong><br /> Name: Hanumantharaju<br /> Address: Ideal Home<br /> Office Number:22945246<br /> Mobile No.:6660134057</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Kengeri</strong><br /> Name: Shiva Kumar<br /> Address: Kengeri<br /> Office Number:22945175<br /> Mobile No.:7349014812</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="4">
+<p><strong>W 42</strong><br /> Keerthana K<br /> Assistant Executive Engineer<br /> Address: 5th block, 2nd Stage Nagarabhavi ring road.Bangalore - 560072<br /> Office Number: 23212181<br /> Mobile Number:&nbsp;7259031533<br /> Mail: aeew2@bwssb@gmail.com</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>NAGARBHAVI</strong><br /> Name:Harsha V&nbsp;<br /> Address: #5, Outer ring road, Nagarabhavi, Bengaluru &ndash; 560072<br /> Office Number: 23183260<br /> Mobile No.:9986555502</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Annapoorneswarinagar</strong><br /> Name:Vishwanath<br /> Address: 5th Block, 2nd stage, Bengaluru<br /> Office Number:<br /> Mobile No.:9900629915</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Sir.M.V.Layout-1&nbsp;</strong><br /> Name:&nbsp;Deepa J&nbsp;<br /> Address: #4,1st cross, SMV Layout, Near 7.5 ML GLR Bengaluru - 560076<br /> Office Number: 23183260<br /> Mobile No.:9945953666</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Sir.M.V.Layout-2</strong><br /> Name:&nbsp;Harsha V<br /> Address: #4,1st cross, SMV Layout, Near 7.5 ML GLR Bengaluru - 560076<br /> Office Number: 23183260<br /> Mobile No.:9986555502</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 334.25px;" rowspan="6">
+<p><strong>W 43</strong><br /> Nandini K R<br /> Assistant Executive Engineer<br /> Address: Banagirinagara Banashankari 3rd nearBangalore - 560085<br /> Office Number:<br /> Mobile Number: 9845444113<br /> Mail: - aeesw2@bwssb.gov.in</p>
+</td>
+<td style="width: 314.913px;">
+<p><strong>Hosakerehalli</strong><br /> Name:Sridhar.S<br /> Address:3rd Main Road, Kalidasnagara, Hosakerehalli, Banashankari 3rd Stage, Bengalore - 560085<br /> Office Number:22945147<br /> Mobile No.:9845444031</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Chikkallasandra</strong><br /> Name:Sridhar.S<br /> Address: 5th Main Road Anjaneyanagar, Ittamadu, Banashankari, Bangalore - 560085<br /> Office Number:22945147<br /> Mobile No.:9845444031</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Kathriguppe</strong><br /> Name:Kumuda<br /> Address : 3rd Main&nbsp; Road , 2nd Block,Kathriguppe, Banashankari 3rd stage , Bengalore - 560085<br /> Office Number:22945147<br /> Mobile No.:&nbsp;9035903638</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Srinivasanagar</strong><br /> Name:Kumuda (JE)<br /> Address: 3rd Main&nbsp; Road , 2nd Block,Kathriguppe, Banashankari 3rd stage , Bengalore - 560085<br /> Office Number:22945147<br /> Mobile No.:&nbsp;9035903638</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Devagiri</strong><br /> Name:Lingaraju M<br /> Address: 10th Main Road, 22nd Cross, Banashankari 2nd Stage, Bengalore - 560085<br /> Office Number:22945147<br /> Mobile No.:9901546377</p>
+</td>
+</tr>
+<tr style="text-align: left;">
+<td style="width: 314.913px;">
+<p><strong>Ganesh Mandira</strong><br /> Name:Lingaraju M<br /> Address: 10th Main Road, 22nd Cross, Banashankari 2nd Stage, Bengalore - 560085<br /> Office Number:22945147<br /> Mobile No.:9901546377</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: left;">&nbsp;</p>	</div>
+<div class="modal fade" id="screen_reader_en" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+           
+              <h4 class="modal-title">Screen Reader Access </h4>
+            </div>
+
+            <div class="modal-body" style="overflow-x: auto;">
+              <p>The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.</p>
+              <p>Following table lists the information about different screen readers:</p>
+
+              <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Sl.No</th>
+                  <th>Screen Reader</th>
+                  <th>Website</th>
+                  <th>Free/ Commercial</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Non Visual Desktop Access (NVDA)</td>
+                  <td><a href="http://www.nvda-project.org/" target="_blank">http://www.nvda-project.org/</a>(External website that opens in a new window)</td>
+                  <td>Free</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>JAWS</td>
+                  <td><a href="https://www.freedomscientific.com/products/software/jaws/" target="_blank">http://www.freedomscientific.com</a>(External website that opens in a new window)</td>
+                  <td>Commercial</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Window-Eyes</td>
+                  <td><a href="http://www.gwmicro.com/" target="_blank">http://www.gwmicro.com</a>(External website that opens in a new window)</td>
+                  <td>Commercial</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>System Access To Go</td>
+                  <td><a href="http://www.satogo.com/" target="_blank">http://www.satogo.com/</a>(External website that opens in a new window)</td>
+                  <td>Free</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>WebAnywhere</td>
+                  <td><a href="http://webinsight.cs.washington.edu/" target="_blank">http://webinsight.cs.washington.edu/</a>(External website that opens in a new window)</td>
+                  <td>Free</td>
+                </tr>
+              </tbody>
+              </table>
+            </div>
+  <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    
+      </div>
+           
+          </div>
+          
+        </div>
+      </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+  var path = window.location.pathname.replace(/^\/|\/$/g, '');
+  var segments = path === '' ? [] : path.split('/');
+
+  // Show only on homepage
+  if (segments.length <= 1) {
+      }
+});
+</script>
+
+<style>
+
+.search-box {
+  position: relative;
+  height: 25px;
+  background: #2f3640;
+  border-radius: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  width: 25px;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.cm_karnataka_photo{height: 120px !important;}
+.acts_table td, .acts_table p, .acts_table a {
+    background: #350dff;
+    color: white !important;
+}
+.search-box.active {
+  width: 240px;
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.dpal-gserach-btn{color: white;padding: 6px;}
+
+.search-btn {
+  color: #fff;
+  transition: 0.4s;
+  z-index: 1;background: transparent;border:0px;
+
+  margin-left: -10px;margin-top: 6px;
+}
+
+.search-box.active .search-btn {
+  color: #2f3640;
+}
+
+.search-txt {
+  border: none;
+  background: none;
+  outline: none;
+  padding: 0;
+  color: #2f3640;
+  font-size: 16px;
+  width: 0;
+  transition: 0.4s;
+  /*margin-left: 10px;*/
+  z-index: 0;
+}
+
+.search-box.active .search-txt {
+  width: 100%;
+}
+    /* First Modal Styles */
+    .kswdc_modal-body p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .kswdc_pop_img{width: 100%;}
+    .kswdc_dflex{display: flex;}
+    
+    /* Second Modal Styles */
+    .kswdc_modal-body2 p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .kswdc_pop_img2 {width: 100%;}
+    .kswdc_dflex2 {display: flex;}
+</style>
+
+  <!-- <div class="modal fade" id="eventModalkswdc" tabindex="-1" role="dialog" aria-labelledby="eventModalkswdcLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center kswdc_modal-body">
+          <div class="row kswdc_dflex">
+            <div class="col-12">
+              <img src="https://atimysore.karnataka.gov.in/uploads/banner_popup.jpeg" class="img-fluid kswdc_pop_img" alt="Image 1">
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+<script>
+    $(document).ready(function(){
+      var path = window.location.pathname.replace(/^\/|\/$/g, '');
+      var segments = path === '' ? [] : path.split('/');
+
+      if (segments.length <= 1) {
+        // Show first modal if active
+                  $('#eventModalkswdc').modal('show');
+          setTimeout(function() {
+            $('#eventModalkswdc').modal('hide');
+          }, 20000);
+        
+        // Show second modal if active (with delay to avoid conflict)
+              }
+    });
+</script>
+<style type="text/css">
+.mongologo{display:none !important;}
+td,th{color:black !important;}
+  .modal{background: #0e0e0ebf;}
+  .footer{width:100% !important;}
+      .modal-body{color: black;}
+    .foot-bottom{   display: flex;
+    background: #333434;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;}
+    .vhide{visibility: hidden;}
+    .lineDiv2,.lineDiv1{background-color: goldenrod !important;}
+        i.fa.fa-angle-right {
+    padding-right: 8px;
+}
+
+.footerSectionDetails a{color: white !important;}
+
+.footer_container li,.footer_container a{cursor: pointer;color:white;}
+  .modal-title{width: -webkit-fill-available}
+  .cls-btn{padding: 8px 10px 0px 10px;}
+</style>
+
+
+
+
+
+<section class="footer_container">
+    <div class="container footerSection_Div">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="footerSectionDetails">
+                <div class="footerSectionTitle"><p>Disclaimer</p></div>
+                <div class="lineDiv"> 
+                    <div class="lineDiv1"></div>
+                    <div class="lineDiv2"></div>
+                </div>
+                <div class="footerSectionP"><p>
+                       Please note that this page also provides links to the websites / web pages of Govt. Ministries/Departments/Organisations. <br>The content of these websites are owned by the respective organisations and they may be contacted for any further information or suggestion
+                    </p>
+                </div>
+            </div>
+          </div>
+          
+           <div class="col-lg-4">
+
+            <div class="footerSectionDetails">
+                <div class="footerSectionTitle"><p> Website Policies and Guidelines </p></div>
+                <div class="lineDiv"> 
+                    <div class="lineDiv1"></div>
+                    <div class="lineDiv2"></div>
+                </div>
+                <div class="footerSectionP1">
+                    <div>
+                         <ul class="list-unstyled">
+      <li data-bs-toggle="modal" data-bs-target="#myModalf3"><i class="fa fa-angle-right" aria-hidden="true"></i>Copyright Policy</li>
+      <li data-bs-toggle="modal" data-bs-target="#myModalf4"><i class="fa fa-angle-right" aria-hidden="true"></i>Hyperlinking Policy</li>
+      <li data-bs-toggle="modal" data-bs-target="#myModalf5"><i class="fa fa-angle-right" aria-hidden="true"></i>Security Policy</li>
+      <li data-bs-toggle="modal" data-bs-target="#myModalf6"><i class="fa fa-angle-right" aria-hidden="true"></i>Terms & Conditions</li>
+      <li data-bs-toggle="modal" data-bs-target="#myModalf7"><i class="fa fa-angle-right" aria-hidden="true"></i>Privacy Policy</li>
+
+      </ul> 
+                    </div>
+                </div>
+            </div>
+
+           </div>
+
+
+           <div class="col-lg-4">
+            <div class="footerSectionDetails">
+                <div class="footerSectionTitle "><p>Accessibility Resources</p></div>
+                <div class="lineDiv "> 
+                    <div class="lineDiv1"></div>
+                    <div class="lineDiv2"></div>
+					
+                </div><br>
+                <div class="footerSectionP"><p>
+                     <ul class="list-unstyled">
+                          <li><a href="https://bwssb.karnataka.gov.in/sitemap/kn"><i class="fa fa-angle-right" aria-hidden="true"></i>Sitemap </a></li>
+      <li data-bs-toggle="modal" data-bs-target="#myModalf8"><i class="fa fa-angle-right" aria-hidden="true"></i>Help</li>
+      <li data-bs-toggle="modal" data-bs-target="#myModalf9"><i class="fa fa-angle-right" aria-hidden="true"></i>Screen Reader Access</li>
+      <li><a href="https://ceg.karnataka.gov.in/guidelines/kn" ><i class="fa fa-angle-right" aria-hidden="true"></i>Guidelines</a></li>
+    </ul>
+                    </p>
+                </div>
+            </div>
+           </div>
+
+
+
+        </div>
+
+
+
+
+        <div class="lastUpdate">
+            <div><p>Last Updated: </p></div>
+            <div><p>Visitors Counter: </p></div>
+            <div><p>Version: CeG/KRN 4.0</p></div>
+        </div>
+
+
+        <div class="contentOwner">
+            <p>  Content Owned and maintained by: Bengaluru Water Supply and Sewerage Board, ಕರ್ನಾಟಕ ಸರ್ಕಾರ</p>
+            <p>Designed , Developed & Hosted by: Centre for e-governance - Webportal karnataka government © 2026, All Rights Reserved.</p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<div class="footer ">
+
+
+
+<ul class="list-inline foot-bottom">
+      <li>
+       <a href="https://www.meity.gov.in/" target="_blank" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/Meity_logo.png" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://digitalindia.gov.in/" target="_blank" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/digital-india-logo.png" class="footer_image"></a>
+      </li> 
+      <li>
+       <a href="https://data.gov.in/" target="_blank" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/data-gov-logo.png" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://www.india.gov.in/" target="_blank" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/india-gov-logo.png" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://www.pmindia.gov.in/en/" target="_blank" class="md-opjjpmhoiojifppkkcdabiobhakljdgm_doc"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/cm_logo/pm-india-logo.png" class="footer_image"></a>
+      </li>
+
+      <li class="footer4_divider"></li>
+      <li></li>
+     <li>
+       <a href="https://guidelines.india.gov.in/"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/GIGW.jpeg" class="footer_image"></a>
+      </li>
+      <li>
+       <a href="https://www.w3.org/TR/WCAG22/"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/WCAG.jpeg" class="footer_image"></a>
+      </li> 
+      <li>
+      <a href="https://www.https.in/government-solutions"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/SSLcertificate.png" class="footer_image"></a>
+      </li>
+      <li>
+      <a href="https://www.w3schools.com/html/default.asp"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/w3c.png" class="footer_image"></a>
+      </li>
+      <li>
+      <a href="https://kannadapraadhikaara.karnataka.gov.in"><img src="https://ceg.karnataka.gov.in/frontend/opt1/images/kp_kn.jpeg" class="footer_image"></a>
+      </li>
+    </ul>
+</div>
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Copyright Policies -->
+  <div class="modal fade" id="myModalf3" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Copyright Policy</h4>
+		            <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+         
+         <p class="copy_header">Copyright policy (if the published information is available free of any charge)</p>
+
+           <p>1)Information featured on this website can be re-published in any media form free
+               of any charge only with prior permission from us(CeG) or concerned respective authority which is owning the website, through email.</p>
+           <p>2)Information can be republished as it is available and not to be used in a distorted or misleading manner.</p>
+           <p>3)Where the material is being published or suggested to others, the source must be prominently acknowledged </p>
+           <p>4)13. However, the permission to reproduce this material does not extend to any material on this site, which is explicitly identified as being the copyright of a third party</p>
+          
+        <p class="copy_header">Copyright policy (if there is a provision to reuse published information)</p>
+        
+           <p>1)The information published on the website comes under copyright policy and obtaining authorization for their republish is a pre-requisite.</p>  
+
+           <p>2)To get permission one can mail to ………………..@.........</p>
+
+         
+        </div>
+   
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-------------------------------------------------------------------->
+  <!-- Hperlinking Policies -->
+  <div class="modal fade" id="myModalf4" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Hyperlinking Policy</h4>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+         <p class="copy_header">(in case the respective department doesn’t need any permission to hyperlink in their website) </p>
+
+           <p>1)We do not object to you linking directly to the information that is hosted on our site and no prior permission is required for the same.</p>
+
+           <p>2)we do not permit our pages to be loaded into frames on other sites. Our Department’s pages must load into a newly opened browser window of the user.</p>
+
+        <p class="copy_header">(in case of hyperlink permission is necessary for the website)</p>
+        
+           <p>1)to provide any link or its form on this website, it is compulsory to procure permission. </p>  
+
+           <p>2)permission can be obtained from the Centre for e-governance by requesting to this email. pd.webportal@karnataka.gov.in</p>
+ 
+           <p>3)Before leaving this government website note: this contact button will lead to another website, to get more information on such new opened site, one must contact the concerned contacts registered on that website.</p>
+         
+
+        </div>
+     
+      </div>
+      
+    </div>
+  </div>
+   
+
+
+
+  <!-------------------------------------------------------------------->
+  <!-- Security Policies -->
+  <div class="modal fade" id="myModalf5" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Security Policy</h4>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+           <p> 1) For site security purposes and to ensure that this service remains available to all users, this Government      computer system employs commercial software programs to monitor network traffic to identify unauthorized attempts to upload or change information, or otherwise cause damage.
+           </p><br>
+
+          <p>2)  Except for authorized law enforcement investigations, no other attempts are made to identify individual users or their usage habits. Raw data logs are used for no other purposes and are scheduled for regular deletion.
+          </p><br>
+
+          <p>3) Unauthorized attempts to upload information or change information on this service are strictly prohibited and may be punishable under the Indian IT Act (2000).</p><br>
+
+        </div>
+       
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+ <!-------------------------------------------------------------------->
+  <!-- Terms & Conditions -->
+  <div class="modal fade" id="myModalf6" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Terms & Conditions</h4>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <p>1)This website is designed, developed, and maintained by the center for e-governance.</p><br>
+
+          <p>2) Though all efforts have been made to ensure the accuracy and currency of the content on this website, the same should not be construed as a statement of law or used for any legal purposes. In case of any ambiguity or doubts, users are advised to verify/check with the Department(s) and/or other source(s) and to obtain appropriate professional advice.</p><br>
+
+          <p>3) ) Under no circumstances will this Department be liable for any expense, loss or damage including, without limitation, indirect or consequential loss or damage, or any expense, loss or damage whatsoever arising from use, or loss of use, of data, arising out of or in connection with the use of this website.</p><br>
+
+          <p>4) These terms and conditions shall be governed by and construed in accordance
+          with the Indian Laws. Any dispute arising under these terms and conditions
+          shall be subject to the jurisdiction of the courts of India.</p><br>
+
+
+          <p>5) The information posted on this website could include hypertext links or
+          pointers to information created and maintained by non-Government/private
+          organisations. (Name of Department) is providing these links and pointers solely
+          for your information and convenience. When you select a link to an outside
+          website, you are leaving the website and are subject to
+          the privacy and security policies of the owners/sponsors of the outside website.</p><br>
+
+
+          <p>6) The concerned department does not guarantee the availability of such linked pages at all times.</p><br>
+
+          <p>7)The concerned department, cannot authorize the use of copyrighted materials contained in linked websites. Users are advised to request such authorization from the owner of the linked website.</p><br>
+
+          <p>8)The concerned  department does not guarantee that linked websites comply with Indian Government Web Guidelines</p>
+          <br>
+ 
+          <p>If the user visits the information and collects information or downloads files, the following elements may automatically download,</p>
+          
+          <ul>
+            <li>- your service domain, IP number, how visitors accessed our website.</li>
+            <li>- browsers and operating systems.</li> 
+            <li>- date and time of users’ visits.</li> 
+            <li>- URLs from which visitors accessed information.</li>
+            <li>- if the user has visited the website from other websites, details of that website</li>
+          </ul>
+ 
+
+         <h6>Cookies</h6>
+
+          <p>
+            When you visit some websites, they may download small pieces of software on your computer/browsing device known as cookies. Some cookies collect personal information to recognize your computer in the future. We only use non-persistent cookies or “per-session cookies”. 28 Per-session cookies serve technical purposes, like providing seamless navigation through this website. These cookies do not collect personal information on users and they are deleted as soon as you leave our website. The cookies do not permanently record data and they are not stored on your computer’s hard drive. The cookies are stored in memory and are only available during an active browser session. Again, once you close your browser, the cookie disappears.
+          </p>
+
+
+        </div>
+   
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Privacy Policies -->
+  <div class="modal fade" id="myModalf7" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Privacy Policies</h4>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <p class="copy_header">privacy policy : (when the website doesn’t collect any personal information)</p>
+            <p>
+              We collect no personal information, like names or addresses, when you visit our website. If you choose to provide that information to us, it is only used to fulfill your request for information
+            </p>
+
+          <p class="copy_header">user information: </p>
+            <p>
+              we do collect technical user details when a user visits the websites and visitor information such as the type of browser, server, and domain, date and time, details of documents downloaded are recorded, This information is only used to help us make the site more useful for you. With this data, we learn about the number of visitors to our site and the types of technology our visitors use. We never track or record information about individuals and their visits. (except in the case when directed by the court through a warrant) 
+            </p>
+
+          <p class="copy_header">cookies: </p>
+            <p>
+              Web sites provide a piece of software when visitors receive information on a website and they are called Cookies. No such cookies are used on this website. 
+            </p> 
+
+          <p class="copy_header">Email management: </p>
+            <p>
+             emails are stored when a user sends any information only for that instant and is used only to give information to them. these are not to be used for any purposes or to include in the contact list. without intimating the user, it won’t be revealed.
+            </p> 
+            
+          <p class="copy_header">collection of personal details:  </p>
+            <p>
+              if the user asks or provides any personal information, the details of its usage are mentioned. if you are not satisfied or suspicious about the details are given or wish to provide an opinion about the same, its necessary for you to contact assigned webmasters under ‘contact us’ section 
+
+              note: private pieces of information received under ‘Personal details’ will only be used to collect identity or elements for easy identification. 
+ 
+            </p> 
+            
+          <p class="copy_header">cookies: </p>
+            <p>
+              Web sites provide a piece of software when visitors receive information on a website and they are called Cookies. No such cookies are used on this website. 
+            </p>     
+
+            <h6 style="font-weight: 600;">if the user provides personal information.</h6>
+             <p>
+               1. We do not collect personal information for any purpose other than to respond to you (for example, to respond to your questions or provide subscriptions you have chosen). If you choose to provide us with personal information like filling out a Contact Us form, with an e-mail address or postal address, and submitting it to us through the website-we use that information to respond to your message and to help you get the information you have requested. We only share the information you give us with another Government agency if your question relates to that agency, or as otherwise required by law. 
+            </p>
+            <p>
+              2. Our website never collects information or creates individual profiles for commercial marketing. While you must provide an email address for a localized response to any incoming questions or comments to us, we recommend that you do NOT include any other personal information.
+            </p>
+
+          
+           <h6 style="font-weight: 600;">website security </h6>
+             <p>
+              1)to make the information available to all, to prevent unauthorized user entry, to stop harming or distorting information and keeping the security of the website in mind, also to handle user traffic, commercial software programs are used. 
+             </p>
+
+             <p>
+               2)Except for official law institutions, no attempts are made to personally identify the visitor or user.
+             </p>
+             
+             <p>3)Visitor information is subject to regular deletion</p>
+             <p>4)unauthorized users shall not add or change information available which can have legal consequences and may be subjected to fine under IT act (2000).</p>
+ 
+        </div>
+  
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Help -->
+  <div class="modal fade" id="myModalf8" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Help</h4>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <h6 style="text-decoration: underline;" class="copy_header">INFORMATION SEARCH:</h6>
+
+           <p> to help users access information within the website, a “search here” option is been provided. here, the option to type in Kannada is made available. while searching, usage of Unicode font is compulsory. option to search in English is also provided. </p>
+
+          <h6 style="text-decoration: underline;" class="copy_header">INTERNET ACCESSIBILITY</h6> 
+
+            <p>if the internet is slow or unavailable, there may be a modification in website design or some subpages may not open. </p>
+
+          </p><br>
+
+          <div class="scroll-table1  table table-striped table-bordered"><div class="guide-text"><i class="fa fa-long-arrow-right"></i></div><div class="scroll-table"><table id="tablehelp" class="border" border="1"> <caption>Help of Various File formats :</caption> <tbody> <tr> <th>Document Type</th> <th>Download</th> </tr> <tr class="even"> <td>PDF content</td> <td> <img src="https://labour.gov.in/sites/default/files/pdf.png" alt="image"><a href="http://get.adobe.com/reader/" target="_BLANK" title="External site that opens in a new window"> Adobe Acrobat Reader</a> (External website that opens in a new window) </td> </tr> <tr class="odd"> <td>Word files</td> <td><img src="https://labour.gov.in/sites/default/files/Word.png" alt="image">  <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=3657CE88-7CFA-457A-9AEC-F4F827F20CAC&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window"> Word Viewer (in any version till 2003)</a> - External website that opens in a new window<br> <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=c8378bf4-996c-4369-b347-73edbd03aaf0&amp;displaylang=EN" target="_BLANK" title="External site that opens in a new window">Microsoft Office Compatibility Pack for Word (for 2007 version)</a> - External website that opens in a new window </td> </tr> <tr class="even"> <td>Excel files</td> <td> <img src="https://labour.gov.in/sites/default/files/Excel.png" alt="image">  <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D3727-43AB-4F24-90B7-A94784AF71A4&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window"> Excel Viewer 2003 (in any version till 2003)</a> - External website that opens in a new window<br> <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window">Microsoft Office Compatibility Pack for Excel (for 2007 version)</a> - External website that opens in a new window </td> </tr> <tr class="odd"> <td>PowerPoint presentations</td> <td><img src="https://labour.gov.in/sites/default/files/powerpoint.png" alt="image">  <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D5727-43AB-4F24-90B7-A94784AF71A4&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window"> PowerPoint Viewer 2003 (in any version till 2003)</a> - External website that opens in a new window<br> <a href="http://www.microsoft.com/downloads/en/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&amp;displaylang=en" target="_BLANK" title="External site that opens in a new window">Microsoft Office Compatibility Pack for PowerPoint (for 2007 version)</a> - External website that opens in a new window </td> </tr> <tr class="even"> <td>Flash content</td> <td> <img src="https://labour.gov.in/sites/default/files/Flash.png" alt="image"> <a href="http://get.adobe.com/flashplayer/" target="_BLANK" title="External site that opens in a new window">Adobe Flash Player </a>(External website that opens in a new window) </td> </tr> <tr class="odd"><td>Audio Files</td> <td> <img src="https://labour.gov.in/sites/default/files/red.png" alt="image"> <a href="http://windows.microsoft.com/en-US/windows/downloads/windows-media-player" target="_BLANK" title="External site that opens in a new window">Windows Media Player </a>(External website that opens in a new window) </td> </tr> </tbody> </table></div></div>
+
+
+
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+
+
+
+
+
+
+
+<!-------------------------------------------------------------------->
+  <!-- Screen Reader Access -->
+  <div class="modal fade" id="myModalf9" role="dialog" data-bs-backdrop="static">
+    <div class="modal-dialog modal-lg">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Screen Reader Access</h4>
+		    <button type="button" class="btn btn-danger pull-right" data-bs-dismiss="modal">Close</button>
+        </div>
+        <div class="modal-body">
+          
+          <div class="nicetext">        
+            <div class="innerpage">
+             <div id="skipCont" class="wrapper">
+       
+             <div class="row">                 
+              <div class="col-md-12 col-sm-9 col-xs-12">
+                <h1 class="heading" tabindex="0"></h1>
+                <div class="region region-content">
+                <div id="block-system-main" class="block block-system">
+
+    
+                <div class="content">
+                 <div class="panel-display panel-1col clearfix">
+                 <div class="panel-panel panel-col">
+                   <div>
+                    <div class="panel-pane pane-views pane-page">
+  
+                     <div class="pane-content">
+                       <div class="view view-page view-id-page view-display-id-block view-dom-id-9f59a9bf8ad69ecc93f01660ca78bb00">
+        
+                       <div class="view-content">
+                        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+      
+                         <div class="views-field views-field-body">        
+                          <div class="field-content">
+                            <p>The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.</p>
+                            <p>Following table lists the information about different screen readers:</p>
+
+                            <div class="guide-text">
+                              <i class="fa fa-long-arrow-right"></i>
+                            </div>
+
+                            <div class="scroll-table1">  
+                              <table class="srtable table table-striped table-bordered" summary="Screen Reader">
+                                <tbody>
+                                  <tr>
+                                    <th>Sl. No.</th>
+                                    <th>Screen Reader</th>
+                                    <th>Website</th>
+                                    <th>Free/ Commercial</th>
+                                  </tr>
+
+
+                                  <tr>
+                                    <td>1</td>
+                                    <td>Non Visual Desktop Access (NVDA)</td>
+                                    <td><a href="http://www.nvda-project.org/" target="_blank">http://www.nvda-project.org/</a><br> (External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>2</td>
+                                    <td>JAWS</td>
+                                    <td><a href="http://www.freedomscientific.com/products/software/jaws/" target="_blank">http://www.freedomscientific.com</a> <br>(External website that opens in a new window)</td>
+                                    <td>Commercial</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>3</td>
+                                    <td>Window-Eyes</td>
+                                    <td><a href="http://www.gwmicro.com/Window-Eyes/" target="_blank">http://www.gwmicro.com</a><br> (External website that opens in a new window)</td>
+                                    <td>Commercial</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>4</td>
+                                    <td>System Access To Go</td>
+                                    <td><a href="http://www.satogo.com/" target="_blank">http://www.satogo.com/</a><br>(External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>5</td>
+                                    <td>WebAnywhere</td>
+                                    <td><a href="http://webinsight.cs.washington.edu/" target="_blank">http://webinsight.cs.washington.edu/</a> <br>(External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+								  
+								  
+								  
+								    <tr>
+                                    <td>6</td>
+                                    <td>atoall</td>
+                                    <td><a title="This Will Make You Easy For Growth, Use Accessibility Tool" target="_blank" rel="noopener" href="https://atoall.com/all.asp"> <img height="64" width="64" alt="This Will Make You Easy For Growth, Use Accessibility Tool" src="https://atoall.com/all/512-accessibility-square.svg"></a>
+ <br>(External website that opens in a new window)</td>
+                                    <td>Free</td>
+                                  </tr>
+
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>  
+                        </div>  
+                      </div>
+                    </div>
+  
+                </div>  
+               </div>
+  
+              </div>
+              </div>
+              </div>
+             </div>
+             </div>
+             </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+
+        </div>
+    
+      </div>
+      
+    </div>
+  </div>
+
+<!-- === search_patch: header search widget appended below === -->
+<script>
+(function () {
+    if (window.__sdbSearchWidgetLoaded) { return; }
+    window.__sdbSearchWidgetLoaded = true;
+
+    var SDB_LANG = "en";
+    var SDB_BASE = "https://bwssb.karnataka.gov.in";
+    if (!SDB_BASE) { SDB_BASE = window.location.origin; }
+
+    var SDB_LABELS = {
+        placeholder: "Search this website...",
+        button:      "Search",
+        viewAll:     "View all results for",
+        noResults:   "No results found",
+        searching:   "Searching...",
+        pages:       "Pages",
+        menu:        "Quick Links"
+    };
+
+    function qs(sel, root) { return (root || document).querySelector(sel); }
+
+    function findAnchorTarget() {
+        var selectors = [
+            'a[data-bs-target="#screen_reader_en"]',
+            'a[data-bs-target="#screen_reader_kn"]',
+            '.topHeadingLinkSingle.visually-challenged',
+            '.visually-challenged'
+        ];
+        for (var i = 0; i < selectors.length; i++) {
+            var el = qs(selectors[i]);
+            if (el) {
+                return (el.closest ? (el.closest('a') || el) : el);
+            }
+        }
+        return null;
+    }
+
+    function injectStyles() {
+        if (document.getElementById('sdb-search-styles')) { return; }
+        var css =
+            ".sdb-trigger{cursor:pointer;display:inline-flex;align-items:center;gap:6px;}" +
+            ".sdb-trigger svg{width:22px;height:22px;vertical-align:middle;fill:currentColor;}" +
+            ".sdb-trigger .topHeadingLinkLableTxt{margin:0;}" +
+            ".sdb-overlay{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:99998;display:none;}" +
+            ".sdb-panel{position:fixed;top:70px;left:50%;transform:translateX(-50%);width:min(640px,92vw);background:#fff;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.25);z-index:99999;display:none;overflow:hidden;font-family:Arial,Helvetica,sans-serif;}" +
+            ".sdb-panel.sdb-open, .sdb-overlay.sdb-open{display:block;}" +
+            ".sdb-input-row{display:flex;align-items:center;padding:14px 16px;border-bottom:1px solid #e8e8e8;}" +
+            ".sdb-input-row svg{width:20px;height:20px;fill:#888;margin-right:10px;flex:none;}" +
+            ".sdb-input{flex:1;border:none;outline:none;font-size:17px;color:#222;background:transparent;}" +
+            ".sdb-close{cursor:pointer;color:#888;font-size:22px;line-height:1;padding:4px 6px;flex:none;}" +
+            ".sdb-results{max-height:60vh;overflow-y:auto;}" +
+            ".sdb-item{display:block;padding:12px 16px;text-decoration:none;border-bottom:1px solid #f2f2f2;}" +
+            ".sdb-item:hover{background:#f6f9ff;}" +
+            ".sdb-item-type{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.03em;color:#1a73e8;text-transform:uppercase;margin-bottom:3px;}" +
+            ".sdb-item-title{color:#1a0dab;font-size:15px;margin:0 0 2px;font-weight:600;}" +
+            ".sdb-item-url{color:#006621;font-size:12px;margin:0 0 4px;word-break:break-all;}" +
+            ".sdb-item-snippet{color:#4d5156;font-size:13px;line-height:1.4;margin:0;}" +
+            ".sdb-item-snippet mark{background:#fff3a3;color:inherit;padding:0 1px;}" +
+            ".sdb-empty, .sdb-hint{padding:24px 16px;color:#666;font-size:14px;text-align:center;}" +
+            ".sdb-viewall{display:block;text-align:center;padding:12px;font-size:14px;color:#1a73e8;text-decoration:none;font-weight:600;background:#fafafa;}" +
+            ".sdb-viewall:hover{background:#f0f4ff;}" +
+            "@media (max-width:480px){.sdb-panel{top:0;left:0;transform:none;width:100%;height:100%;border-radius:0;}.sdb-results{max-height:calc(100vh - 60px);}}";
+        var style = document.createElement('style');
+        style.id = 'sdb-search-styles';
+        style.appendChild(document.createTextNode(css));
+        document.head.appendChild(style);
+    }
+
+    function svgSearch() {
+        return '<svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 5L20.49 19l-5-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>';
+    }
+
+    function buildTrigger() {
+        var a = document.createElement('a');
+        a.href = 'javascript:void(0)';
+        a.setAttribute('role', 'button');
+        a.setAttribute('aria-label', SDB_LABELS.button);
+        a.innerHTML =
+            '<div class="topHeadingLinkSingle sdb-trigger">' +
+                '<div class="topHeadingLinkIcon">' + svgSearch() + '</div>' +
+                '<div class="topHeadingLinkLable"><p class="topHeadingLinkLableTxt">' + SDB_LABELS.button + '</p></div>' +
+            '</div>';
+        return a;
+    }
+
+    function buildPanel() {
+        var overlay = document.createElement('div');
+        overlay.className = 'sdb-overlay';
+
+        var panel = document.createElement('div');
+        panel.className = 'sdb-panel';
+        panel.innerHTML =
+            '<div class="sdb-input-row">' + svgSearch() +
+            '<input type="text" class="sdb-input" placeholder="' + SDB_LABELS.placeholder + '" autocomplete="off">' +
+            '<span class="sdb-close">&times;</span>' +
+            '</div>' +
+            '<div class="sdb-results"><div class="sdb-hint">' + SDB_LABELS.placeholder + '</div></div>';
+
+        document.body.appendChild(overlay);
+        document.body.appendChild(panel);
+        return { overlay: overlay, panel: panel };
+    }
+
+    function debounce(fn, wait) {
+        var t;
+        return function () {
+            var ctx = this, args = arguments;
+            clearTimeout(t);
+            t = setTimeout(function () { fn.apply(ctx, args); }, wait);
+        };
+    }
+
+    function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+    }
+
+    var initialized = false;
+    function init() {
+        if (initialized) { return; }
+        initialized = true;
+
+        injectStyles();
+
+        var target  = findAnchorTarget();
+        var trigger = buildTrigger();
+
+        if (target && target.parentNode) {
+            target.parentNode.insertBefore(trigger, target.nextSibling);
+        } else {
+            trigger.style.cssText = 'position:fixed;right:18px;bottom:18px;z-index:99997;background:#1a73e8;color:#fff;border-radius:50%;width:52px;height:52px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.25);';
+            document.body.appendChild(trigger);
+        }
+
+        var ui       = buildPanel();
+        var overlay  = ui.overlay, panel = ui.panel;
+        var input    = panel.querySelector('.sdb-input');
+        var resultsEl = panel.querySelector('.sdb-results');
+        var closeBtn = panel.querySelector('.sdb-close');
+
+        function open() {
+            overlay.classList.add('sdb-open');
+            panel.classList.add('sdb-open');
+            setTimeout(function () { input.focus(); }, 30);
+        }
+        function close() {
+            overlay.classList.remove('sdb-open');
+            panel.classList.remove('sdb-open');
+        }
+
+        trigger.addEventListener('click', function (e) { e.preventDefault(); open(); });
+        closeBtn.addEventListener('click', close);
+        overlay.addEventListener('click', close);
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { close(); } });
+
+        function fullResultsUrl(term) {
+            return SDB_BASE + '/website_db_search.php?q=' + encodeURIComponent(term) + '&lang=' + SDB_LANG;
+        }
+
+        function renderResults(data, term, full) {
+            if (!data || !data.items || !data.items.length) {
+                resultsEl.innerHTML = '<div class="sdb-empty">' + SDB_LABELS.noResults + '</div>';
+                return;
+            }
+            var html = '';
+            data.items.forEach(function (item) {
+                html += '<a class="sdb-item" href="' + item.url + '">' +
+                    '<span class="sdb-item-type">' + (item.type === 'menu' ? SDB_LABELS.menu : SDB_LABELS.pages) + '</span>' +
+                    '<p class="sdb-item-title">' + escapeHtml(item.title) + '</p>' +
+                    '<p class="sdb-item-url">' + escapeHtml(item.url) + '</p>' +
+                    (item.snippet ? '<p class="sdb-item-snippet">' + item.snippet + '</p>' : '') +
+                    '</a>';
+            });
+            if (!full) {
+                html += '<a class="sdb-viewall" href="' + fullResultsUrl(term) + '">' +
+                    SDB_LABELS.viewAll + ' &ldquo;' + escapeHtml(term) + '&rdquo; (' + data.count + ')</a>';
+            }
+            resultsEl.innerHTML = html;
+        }
+
+        var doSearch = debounce(function () {
+            var term = input.value.trim();
+            if (term.length < 2) {
+                resultsEl.innerHTML = '<div class="sdb-hint">' + SDB_LABELS.placeholder + '</div>';
+                return;
+            }
+            resultsEl.innerHTML = '<div class="sdb-hint">' + SDB_LABELS.searching + '</div>';
+            var url = SDB_BASE + '/website_db_search.php?ajax=1&q=' + encodeURIComponent(term) + '&lang=' + SDB_LANG;
+            fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+                .then(function (r) { return r.json(); })
+                .then(function (data) { renderResults(data, term); })
+                .catch(function () { resultsEl.innerHTML = '<div class="sdb-empty">' + SDB_LABELS.noResults + '</div>'; });
+        }, 300);
+
+        function performFullSearch(term) {
+            resultsEl.innerHTML = '<div class="sdb-hint">' + SDB_LABELS.searching + '</div>';
+            var url = SDB_BASE + '/website_db_search.php?ajax=1&all=1&q=' + encodeURIComponent(term) + '&lang=' + SDB_LANG;
+            fetch(url, { headers: { 'X-Requested-With': 'XMLHttpRequest' } })
+                .then(function (r) { return r.json(); })
+                .then(function (data) { renderResults(data, term, true); })
+                .catch(function () { resultsEl.innerHTML = '<div class="sdb-empty">' + SDB_LABELS.noResults + '</div>'; });
+        }
+
+        input.addEventListener('input', doSearch);
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                var term = input.value.trim();
+                if (term.length) { performFullSearch(term); }
+            }
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', init);
+    if (document.readyState === 'interactive' || document.readyState === 'complete') {
+        init();
+    }
+})();
+</script>
+
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/owl/owl.carousel.js"></script>
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/js/acc_search.js"></script>  
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/js/custom.js"></script>   
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/js/aos.js"></script>  
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/map/main.js"></script> 
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/rti_datatables/dataTables.jqueryui.min.js"></script> 
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/rti_datatables/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/tabswipe/js/swipebundle.js"></script>   
+<script type="text/javascript" src="https://bwssb.karnataka.gov.in/assets/front/js/custom_fancybox.js"></script>  
+
+<script>
+      
+   $('[data-fancybox="gallery"]').fancybox({
+  buttons: [
+    "slideShow",
+    "thumbs",
+    "zoom",
+    "fullScreen",
+    "share",
+    "close"
+  ],
+  loop: false,
+  protect: true
+});
+</script> 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.getElementById('toggle');
+    const darkModeAreas = document.querySelectorAll('.dark-mode-area');
+
+    // Define the dark mode CSS for specific classes and elements
+    const darkModeCSS = `
+        .dark-mode-area.dark-mode h1,
+        .dark-mode-area.dark-mode header,
+        .dark-mode-area.dark-mode body,
+        .dark-mode-area.dark-mode div,
+        .dark-mode-area.dark-mode span,
+        .dark-mode-area.dark-mode h6,
+        .dark-mode-area.dark-mode li,
+        .dark-mode-area.dark-mode p,
+        .dark-mode-area.dark-mode .header,
+        .dark-mode-area.dark-mode .navbar-sec,
+        .dark-mode-area.dark-mode button,
+        .dark-mode-area.dark-mode section,
+        .dark-mode-area.dark-mode extramenudesk,
+        .dark-mode-area.dark-mode dropdown-menu,
+        .dark-mode-area.dark-mode dropdown,
+        .dark-mode-area.dark-mode nav-item,
+        .dark-mode-area.dark-mode nav-link,
+        .dark-mode-area.dark-mode .dropdown-menu.show,
+        .dark-mode-area.dark-mode .dropdown-menu a,
+        .dark-mode-area.dark-mode .closebtn,
+        .dark-mode-area.dark-mode .btn,
+        .dark-mode-area.dark-mode td,
+         .dark-mode-area.dark-mode th,
+         .dark-mode-area.dark-mode table,
+            .dark-mode-area.dark-mode .extramenudesk li a,
+         .dark-mode-area.dark-mode thead,
+        .dark-mode-area.dark-mode .subHeaderFontSize,
+            .dark-mode-area.dark-mode .nav-item.dropdown:hover > .dropdown-menu,
+        body.dark-mode-area.dark-mode {
+            background-color: #121212 !important;
+            color: #ffffff  !important;
+            background-image: none !important;
+        }
+        .dark-mode-area.dark-mode button {
+            border-color: #ffffff  !important;
+            background-color: #333333  !important;
+        }
+        .dark-mode-area.dark-mode .background {
+            background-color: #333333  !important;
+        }
+        .dark-mode-area.dark-mode .carousel-indicators {
+            display: none !important;
+        }
+    `;
+
+    // Create a style element
+    const styleElement = document.createElement('style');
+    styleElement.type = 'text/css';
+    styleElement.appendChild(document.createTextNode(darkModeCSS));
+    document.head.appendChild(styleElement);
+
+    // Load saved mode from localStorage
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        darkModeAreas.forEach(area => area.classList.add('dark-mode'));
+        toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function() {
+        if (this.checked) {
+            darkModeAreas.forEach(area => area.classList.add('dark-mode'));
+            localStorage.setItem('darkMode', 'enabled');
+        } else {
+            darkModeAreas.forEach(area => area.classList.remove('dark-mode'));
+            localStorage.setItem('darkMode', 'disabled');
+        }
+    });
+});
+</script>
+
+     <script>
+        const minFontSize = 16;
+        const maxFontSize = 19;
+        const normalFontSize = 18; // Set this to your normal font size
+
+        const decreaseButton = document.getElementById('fontDecrease');
+        const increaseButton = document.getElementById('fontIncrease');
+        const resetButton = document.getElementById('fontReset');
+        const targetElements = document.querySelectorAll('p, h1, h2, a, li');
+
+        let currentFontSize = parseInt(window.getComputedStyle(targetElements[0]).fontSize, 10);
+
+        function updateFontSize(size) {
+            if (size >= minFontSize && size <= maxFontSize) {
+                targetElements.forEach(el => {
+                    el.style.fontSize = `${size}px`;
+                });
+                currentFontSize = size;
+            }
+        }
+
+        decreaseButton.addEventListener('click', () => {
+            updateFontSize(currentFontSize - 1);
+        });
+
+        increaseButton.addEventListener('click', () => {
+            updateFontSize(currentFontSize + 1);
+        });
+
+        resetButton.addEventListener('click', () => {
+            // Reload the page to reset font sizes to default
+            location.reload();
+        });
+
+$(document).ready(function() {
+
+
+    // Optional: If you want to ensure .hamburger doesn't get the active class
+    $('.hamburger').on('click', function(event) {
+       $(this).removeClass('active');
+    });
+});
+
+    </script>
+	
+	
+</body>
+</html>
+

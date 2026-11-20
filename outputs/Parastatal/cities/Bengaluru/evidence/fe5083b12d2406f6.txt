@@ -1,0 +1,160 @@
+SOURCE URL: https://bwssb.karnataka.gov.in/storage/pdf-files/Call%20Center%20Work%20Flow.pdf
+
+[page 1]
+                                  Call Center Work Flow 
+BWSSB’s "Complaint Management System" is a web based application developed for handling 
+the various types of complaints related to water and sewerage system  . This system automates 
+the complete complaint handling workflow/process. It provides secured and centralized 
+platform for receiving customer complaints and storing all subsequent workflow pertaining to 
+problem resolution. 
+Consumer Module   
+Bwssb Web Portal 
+1. The web form captures the complaints online. 
+2. Consumers can raise their complaints by providing their mobile number & R R Number 
+3. An Acknowledgement is sent to consumer with complaint ID and Engineers Contact 
+Details. 
+The following URL can be used to Lodge Complaints through BWSSB Web portal. 
+www.bwssb.gov.in 
+Lodge New  Complaint  - When user navigates to the phone icon a they can then View 
+and Click on “Lodge New Complaint” which opens a New Web form for raising complaint 
+ 
+
+
+[page 2]
+ 
+Step 1 – Fill your mobile number. 
+Step 2 – Provide your name and  Address. 
+Step 3 – Select your area 
+Step 4 – Select Type of complaint. 
+Step 5 – describe your comments then enter the security captha and click on lodge Complaint. 
+View of Register Complaint at home screen. Refer to flowing picture for simple steps to register 
+a complaint. 
+ 
+ 
+
+
+[page 3]
+ 
+ 
+After submitting a complaint the following confirmation & Complaint Reference Number will 
+displayed. 
+ 
+ 
+ 
+ 
+ 
+
+
+[page 4]
+ 
+ Web Portal Work Flow 
+ 
+ 
+ 
+ 
+
+
+[page 5]
+ 
+Complaints through Mobile Apps 
+BWSSB’s My  Complaint mobile app was launched to the general public to log in their 
+complaints in a easy manner using hand held devices. 
+BWSSB’s mobile My Complaint app helps users/consumers to register a complaint, track the 
+complaint—anytime, anywhere. 
+ Lodge Complaints; Raise your complaint online based on category 
+ Track Complaint; Track your complaints and know the status 
+ Kiosks Locations; Find out a Kiosk nearby for Bill Payments 
+ Water Timings; Information on Water timings in your location at your fingertips 
+ Contacts; Contact list of BWSSB 
+Mobile App Home Screen: 
+ 
+ 
+
+
+[page 6]
+Lodge a Complaint 
+ 
+Track a Complaint 
+ 
+
+
+[page 7]
+Call Center Executive Module 
+Complaints through Phone calls 
+BWSSB’s customer call center short code ‘1916’ is used by consumers to lodge complaints . 
+Alternatively landline numbers (080-22238888,  080 -22233333 ;080 -22231005 )  are published 
+on the website  as well as in communication media’s like hoardings, publications 
+,advertisements, water tankers ,jetting machines,  etc  to make short code more publicized and 
+easy to remember  for consumers to get in touch with the call center to lodge their complaints 
+and grievieances. 
+The call center executives are equipped with a software solution through which the data is 
+captured and logged as a complaint. The consumer gets an acknowledgement for the complaint 
+through SMS and a complaint ID is assigned. 
+The complaint is then assigned to the respective engineers in the area which is again configured 
+as a master system where in area wise engineer mapping is available. The engineer is instructed 
+to attend the call through SMS. 
+The engineer attends the respective assigned calls to him and provides the feedback to the 
+consumer and the call center. 
+Upon receiving the feedback regarding resolution from the engine er’s side, The call center 
+executive contacts the consumer to ensure that the call is resolved and upon confirmation the 
+call gets closed. 
+The feedback is collected for every call that is raised by the consumer.  
+Complaints through Emails 
+The website contains the contact details for consumers to log their grievances and complaints. 
+The mails can be sent to bwssbcallcenter@gmail.com or bwssbcms@gmail.com 
+Complaints through Whats App 
+Whats app number is 8762228888 
+The water and sanitary complaints received are forwarded to engineers through our 
+communication network and issues related to policy matters are forwarded to higher 
+authorities. The feedback is immediately received  from the engineers as soon as complaint is 
+resolved. The response is quicker than phone calls. 
+
+[page 8]
+Call Center Executive Work Flow 
+ 
+ 
+ 
+ 
+
+
+[page 9]
+SMS Format for consumers 
+ 
+Complaint number will be sent to consumer mobile number 
+automatically via SMS as soon as they register complaints.  
+The confirmation of the following details will be displayed for your 
+reference: 
+ * Complaint Reference Number. 
+ * Type of Complaint 
+ * Service Station  name and AE’s contact number who is responsible to 
+resolve this  Complaint. 
+ 
+ 
+ 
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Thank You  
+Your complaint has been registered.  
+ 
+Complaint Number: 37522  
+Complaint Category: Water  
+Complaint forwarded to AE, HOSAKEREHALLI Service Station, 
+9845444031  
+ 
+Your complaint will be resolved soon. 
+
+[page 10]
+ 
+Complaint Status  
+Track Your Complaint 
+ 
+ 
+Tracked Complaint reference number with details

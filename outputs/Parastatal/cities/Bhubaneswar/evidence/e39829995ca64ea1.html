@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="shorcut icon" href="#">
+</head>
+</html>
+
+<div></div>
+
+<div align="right" style="margin-right:220px;">
+    
+<button onclick=" myFunction() " style='background-color: black; height:20px; width:20px; '></button>
+<button onclick="myFunction2()" style='background-color: white; height:20px; width:20px'>   </button>
+
+</div>
+
+<app-root id="FontSizeFun"> </app-root><div _ngcontent-iae-c103="" class="city_top_social" align="right" style="margin-right:220px;"><a _ngcontent-iae-c103="" onclick="increaseFontSizeBy1px()"> A+ </a>&nbsp;&nbsp;&nbsp;<a _ngcontent-iae-c103="" onclick="defaultFontSize()"> A </a>&nbsp;&nbsp;&nbsp;<a _ngcontent-iae-c103="" onclick="decreaseFontSizeBy1px()"> A- </a>
+</div><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>RTI Online :: Home | Submit RTI Request | Submit RTI First Appeal | View RTI Status | RTI FAQ</title><meta name="description" content="Online RTI Information Systems, Government of India RTI Request &#38; Appeal Management Information System (RTI-MIS) (Based on Right to Information Act 2005) RTI Online Request ,RTI Online First Appeal, Online View Status." /><meta name="keywords" content="rti, rti online, rtimis, rti information system, rti request, rti first appeal, rti appeal, rti status, rti view status, rti login, rti registration, file rti applications, file rti request, file rti first appeal, file rti online, right to information act, rti act, rti india, rti application, rti form, rti application form, rti act 2005, right to information, rti activist"/><meta name="author" content="http://www.rtionline.gov.in" /><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="SHORTCUT ICON" href="https://rtionline.gov.in/images/rti-header.png" />
+<link rel="stylesheet" type="text/css" href="https://rtionline.gov.in/style/style.css" />
+<!--jquery Validation-->
+<link rel="stylesheet" type="text/css" href="https://rtionline.gov.in/style/jquery.validate.css" />
+<link rel="stylesheet" type="text/css" href="https://rtionline.gov.in/style/jquery.datepick.css"/>
+
+<script src="https://rtionline.gov.in/jquery/jquery.min.js" type="text/javascript"></script>
+
+<script src="https://rtionline.gov.in/jquery/jquery.datepick.js" type="text/javascript"></script>
+
+<script src="https://rtionline.gov.in/javascripts/comman.js" type="text/javascript"></script>
+<script src="https://rtionline.gov.in/javascripts/jquery.validate.js" type="text/javascript"></script>
+<script src="https://rtionline.gov.in/javascripts/md5.js" type="text/javascript"></script>
+<script src="https://rtionline.gov.in/javascripts/sha.js" type="text/javascript"></script>
+<script src="https://rtionline.gov.in/javascripts/tool-tip.js" type="text/javascript"></script>
+
+<!--End jquery Validation--><script type="text/javascript">
+	function disableBackButton()
+	{
+		window.history.forward(1);
+	}
+	setTimeout("disableBackButton()", 0);
+</script>
+
+<!--javascript is off-->
+<noscript>
+<meta http-equiv="refresh" content="0; URL=https://rtionline.gov.in/error.php"/>
+</noscript>
+<!--end javascript is off-->
+
+<script type="text/javascript">
+
+		function myFunction() 
+{
+ 
+
+  $('div.theme').css('color','white');
+  $('div.theme').css('background-color','black');
+
+document. getElementById('test'). style. backgroundColor = 'black' ;
+  document. getElementById('Help-Desk'). style. backgroundColor = 'black' ;
+  document. getElementById('ptextbottom'). style. color = 'yellow' ;
+  document. getElementById('Help-Desk'). style.boxShadow  = 'None' ;
+  document. getElementById('page-message'). style. backgroundColor = 'black' ;
+  document. getElementById('ptext'). style. color = 'yellow' ;
+  document. getElementById('page-message'). style.boxShadow  = 'None' ;
+ document. getElementById('content'). style. backgroundColor = 'black' ;
+document. getElementById('divBox'). style. color = 'white' ;
+document. getElementById('divIns'). style. color = 'white' ;
+document. getElementById('sidebar'). style. backgroundColor = 'black' ;
+document. getElementById('divtoplogin'). style. backgroundColor = 'black' ;
+ document. getElementById('ptest'). style. backgroundColor = 'black' ;
+ document. getElementById('lblEmail'). style.color = 'white' ;
+}
+
+  function myFunctionHindi() 
+{
+
+  $('div.theme').css('color','white');
+  $('div.theme').css('background-color','black');
+
+document. getElementById('divtesthindi'). style. backgroundColor = 'black' ;
+document. getElementById('page-message-hindi'). style. backgroundColor = 'black' ;
+document. getElementById('page-message-hindi'). style.boxShadow  = 'None' ;
+document. getElementById('ptextHindi'). style. color = 'yellow' ; 
+document. getElementById('Help-Desk'). style. backgroundColor = 'black' ;
+document. getElementById('Help-Desk'). style.boxShadow  = 'None' ;
+document. getElementById('ptextbottom_hindi'). style. color = 'yellow' ;
+document. getElementById('spanId'). style. color = 'yellow' ;
+document. getElementById('ptest'). style. color = 'white' ;
+document. getElementById('divinsHindi'). style. color = 'white' ;
+document. getElementById('content'). style. backgroundColor = 'black' ;
+document. getElementById('sidebar'). style. backgroundColor = 'black' ;
+document. getElementById('divtoploginHindi'). style. backgroundColor = 'black' ;
+}
+
+function myFunction2() {
+  location.reload();
+}
+
+
+	</script>
+
+
+<script language="javascript" type="text/javascript">
+
+function frmlangSub(lang)
+{
+	var actionurl = document.getElementById("hndactionurl").value;
+
+	if(lang=='hi') {
+	document.getElementById("frmLang").action=actionurl+"?Lang=hi";
+	document.getElementById("frmLang").submit();
+	} else if(lang=='en'){
+	document.getElementById("frmLang").action=actionurl+"?Lang=en";
+	document.getElementById("frmLang").submit();	
+	}
+}
+
+</script>
+  
+
+  <script>
+    function increaseFontSizeBy1px() {
+
+      txt = document.getElementById('FontSizeFun');
+      style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+      currentSize = parseFloat(style);
+      txt.style.fontSize = (currentSize + 1) + 'px';
+      $('body').css('font-size', (currentSize + 1) + 'px')
+      $('a').css('font-size', (currentSize + 1) + 'px')
+      $('Div').css('font-size', (currentSize + 1) + 'px')
+      $('p').css('font-size', (currentSize + 1) + 'px')
+      $('h1').css('font-size', (currentSize + 1) + 'px')
+      $('h2').css('font-size', (currentSize + 1) + 'px')
+      $('h3').css('font-size', (currentSize + 1) + 'px')
+      $('h4').css('font-size', (currentSize + 1) + 'px')
+      $('h5').css('font-size', (currentSize + 1) + 'px')
+      $('h6').css('font-size', (currentSize + 1) + 'px')
+      $('span').css('font-size', (currentSize + 1) + 'px')
+      $('table').css('font-size', (currentSize + 1) + 'px')
+      $('tbody').css('font-size', (currentSize + 1) + 'px')
+      $('tr').css('font-size', (currentSize + 1) + 'px')
+      $('td').css('font-size', (currentSize + 1) + 'px')
+      $('label').css('font-size', (currentSize + 1) + 'px')
+    
+   
+    }
+
+    function decreaseFontSizeBy1px() {
+      txt = document.getElementById('FontSizeFun');
+      style = window.getComputedStyle(txt, null).getPropertyValue('font-size');
+      currentSize = parseFloat(style);
+      txt.style.fontSize = (currentSize - 1) + 'px';
+       $('body').css('font-size', (currentSize - 1) + 'px')
+      $('a').css('font-size', (currentSize - 1) + 'px')
+      $('Div').css('font-size', (currentSize - 1) + 'px')
+      $('p').css('font-size', (currentSize - 1) + 'px')
+      $('h1').css('font-size', (currentSize - 1) + 'px')
+      $('h2').css('font-size', (currentSize - 1) + 'px')
+      $('h3').css('font-size', (currentSize - 1) + 'px')
+      $('h4').css('font-size', (currentSize - 1) + 'px')
+      $('h5').css('font-size', (currentSize - 1) + 'px')
+      $('h6').css('font-size', (currentSize - 1) + 'px')
+      $('span').css('font-size', (currentSize - 1) + 'px')
+      $('table').css('font-size', (currentSize + 1) + 'px')
+      $('tbody').css('font-size', (currentSize + 1) + 'px')
+      $('tr').css('font-size', (currentSize + 1) + 'px')
+      $('td').css('font-size', (currentSize + 1) + 'px')
+      $('label').css('font-size', (currentSize + 1) + 'px')
+    }
+
+    function defaultFontSize() {
+      location.reload();
+    }
+  </script>
+
+</head>
+
+<!--<body onload="disableBackButton();" onunload="disableBackButton();">-->
+<body onload="disableBackButton();">
+<div id="wrapper">
+	<div id="header">
+	 <div id="emblem">
+	<img src="https://rtionline.gov.in/images/logo/indian-emblam-white.png" alt="national-emblem" />
+	 </div>
+	
+<div id="language" style="margin-right:400px;">
+	<form name="frmLang" id="frmLang" method="post" action=""><span>Select Language:</span><select name="lan" id="lan"  onchange="frmlangSub(this.value);"><option value="en" selected="selected">English</option><option value="hi">Hindi</option></select><input type="hidden" name="hndbaseurl" id="hndbaseurl" value="https://rtionline.gov.in/"><input type="hidden" name="hndactionurl" id="hndactionurl" value="https://rtionline.gov.in/layout/getLanguage.php"></form></div>		 
+	 
+	<!--<div id="LanguageDiv">
+	
+	</div>--><div id="language" class="changetheme">
+		<a style="font-weight:bold; color:white;" href="https://rtionline.gov.in/request/allpa.php?pageid=1679091c5a880faf6fb5e6087eb1b2dc">Public Authorities Available</a>
+		</div><div id="logo">
+		<h1>RTI Online</h1>
+		</div>
+		<div id="slogan" class="changetheme">Version 2.0</br>
+		An Initiative of Department of Personnel & Training, Government of India
+		</div></div>
+<div id="menu" style="font-size:14px;padding:0 15px;width:950px;">
+		<ul><li><a href="https://rtionline.gov.in/index.php">Home</a></li><li><a href="https://rtionline.gov.in/guidelines.php?request&&pageid=1679091c5a880faf6fb5e6087eb1b2dc">Submit Request</a></li><li><a href="https://rtionline.gov.in/guidelines.php?appeal&&pageid=1679091c5a880faf6fb5e6087eb1b2dc">Submit First Appeal</a></li><li><a href="https://rtionline.gov.in/request/status.php">View Status</a></li><li><a href="https://rtionline.gov.in/request/status_history.php">View History</a></li><li><a href="https://rtionline.gov.in/login.php">Login</a></li><li><a href="https://rtionline.gov.in/viewPDF.php?file=um_citizen.pdf" target="_blank">User Manual</a></li><li><a href="https://rtionline.gov.in/Contactus.php" >Contact Us</a></li><li><a href="https://rtionline.gov.in/faq.php?pageid=1679091c5a880faf6fb5e6087eb1b2dc" >FAQ</a></li><li><a href="https://rtionline.gov.in/request/status_pendingPayment.php?pageid=1679091c5a880faf6fb5e6087eb1b2dc" >Payment Reconciliation<img src="https://rtionline.gov.in/images/new_blink.gif" alt="new"/></a></li></ul><br class="clearfix" />
+	</div>
+<!--Disabling right click-->
+		
+				<!--End Disabling right click-->
+	
+				</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+ 
+function stopRKey(evt)
+{ 
+        var evt = (evt) ? evt : ((event) ? event : null); 
+        var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+        if ((evt.keyCode == 13) && (node.type=="text"))
+        {
+                return false;
+        }
+        else if ((evt.keyCode == 13) && (node.type=="password"))
+        {
+                return false;
+        }
+}
+document.onkeypress = stopRKey;
+//]]>
+</script>
+
+<script type="text/javascript">
+function getPassword(pass)
+{ 
+	if(pass.length > 0)
+	{
+	var user        = document.getElementById("UserName").value;
+	var salt        = document.getElementById("hndSalt").value;
+	var md5Pass     = hex_md5(pass);
+	var addUser     = md5Pass+user;
+	var md5Userpass = hex_md5(addUser);
+	var addSalt     = md5Userpass+salt;
+	document.getElementById("hndPassword").value=SHA256(hex_md5(addSalt));
+	document.getElementById("password").value = "cfcd208495d565ef66e7dff9f98764da";
+	}		
+}
+</script><div>
+<div id="test">
+<div id="page-form-title">
+
+<marquee style="color:#FF0000">
+
+The Central Information Commission (CIC) has integrated its Second Appeal Filing Portal with the Department of Personnel and Training (DoPT) RTI Online Portal. Now, while submitting a Second Appeal, appellants can input the First Appeal Registration Number, Email ID and Date of Filing the First Appeal, thereafter, the system will automatically retrieve related details of the RTI Application and First Appeal from the RTI Online Portal. This will ensure a smooth and more streamlined Second Appeal filing process.
+
+</marquee>
+
+
+
+</div>
+<div id="msg" >
+<div id="page-message" style="Margin-top:50px">
+<p id="ptext">
+Please do not file RTI applications through this portal for the public authorities under the State Governments, including Government of NCT Delhi. If filed, the application would be returned, without refund of amount.</p>
+</div></div>
+<!--
+<div id="page-form-title">
+	<marquee scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+<font color="red">	System will not be available on 30-8-2019 (Friday) from 11:00 AM to 3:00 PM due to maintenance activity. Inconvenience caused is highly regretted.<br><br>
+	</marquee> 
+</div>
+-->
+<div id="page-home">
+<div id="text1" >
+		<div id="content">
+			
+			<div id="divBox"  class="box-text">
+            <p id="ptext">This is a portal to file RTI applications/first appeals online along with payment gateway. Payment can be made through internet banking, debit/credit cards of Master/Visa, RuPay cards and UPI. Through this portal, RTI applications/first appeals can be filed by Indian Citizens for all Ministries/Departments and other Public Authorities of Central Government. RTI applications/first appeals should not be filed for other Public authorities under State Govt. through this portal.
+<br><b id="divIns" class="box-text-ins">Please read instructions carefully while submitting request/appeal.</b>
+</p>
+		  </div>
+		  </div></div>
+
+<div id="sidebar">
+
+        <div id="wowslider-container1">
+            <div class="ws_images"><ul>
+                    <!--<li><a href="https://bharatinnovates.in/" target="_blank"><img src="../images/202605301981481056.png" alt="image1" title="" id="wows1_1" style="width: 450px;height: 300px;"/></a></li>-->
+                    <li><a href="../images/rti_lifecycle.jpg/" target="_blank"><img src="../images/rti_lifecycle.jpg" alt="image1" title="" id="wows1_1" style="width: 450px;height: 300px;"/></a></li>
+                </ul></div>
+            <div class="ws_bullets"><div></div></div>
+
+        </div>  
+
+    </div>
+
+		<div id="sidebar" style="height: 350px;display:none">
+        <div id="divtoplogin" class="toplogin">
+		<!--p>Login for Registered Users</p-->
+		<p><a href="https://rtionline.gov.in/guidelines.php?request">Click here</a> for Submit Request</p>
+        </div>
+        
+        <!--<img src="https://rtionline.gov.in/images/logo/bannerh (2).jpg" alt="rti logo" style="width:410px;height:240px;"/>-->
+
+		<!--div style="text-align:center ;color:#CC3300;">(Note: User Registration is not mandatory)</div-->
+        
+		<!--<div class="rti-logo"><img src="https://rtionline.gov.in/images/logo/rti-logo.gif" alt="rti logo"/></div>-->
+		
+		<!--<div class="box-login">
+		<form name="frmLogin" action="ui.index.php" method="post" autocomplete="off">
+		<table class="login-window" cellspacing="2" cellpadding="0">
+		<tr><th>Username: </th><td>
+		<input type="text" name="UserName"  maxlength="50"  id="UserName" class="alphaNumeric"/>
+		</td></tr>
+		<tr><th>Password: </th><td> 
+		<input type="password" name="password" id="password" maxlength="50" value="" onblur="getPassword(this.value);" autocomplete="off"/>
+		<input type="hidden" name="hndPassword"  id="hndPassword" value="" />
+		<input type="hidden" name="hndSalt"  id="hndSalt" value="df5f1884c51c31e765a45a" />
+				
+		</td></tr>
+		<tr><td>&nbsp;</td><td><button type="submit" name="Login">Sign In</button></td></tr>
+		</table>
+		</form>
+		</div>-->
+		<!--<br/>
+		<br/>
+		<br/>-->
+		<!--span><a href="forgotPassword.php">Forgot Password</a></span-->
+         <!--<div style="text-align:center ;color:#CC3300;"><a href="request/status_history.php">Click here..>View History</a> to view your past Request/Appeal details.</div>-->
+		
+		<!--span><ins>Not Registered Yet ?&nbsp;&nbsp;&nbsp;<a href="registration.php">Sign Up here</a></ins></span-->
+		
+        </div>
+	<br class="clearfix" />
+</div>
+<div id="pDiv">
+<div id="Help-Desk"><p id="ptextbottom">
+Help Desk : For any query or feedback related to this portal, Please contact at 011-24010690/691 <img src="https://rtionline.gov.in/images/new_blink.gif" alt="new"/>, during office hours<br>(9:00 AM to 5:30 PM, Monday to Friday except Public Holidays) or send an email to helprtionline-dopt[at]nic[dot]in. 
+Due to high call volume, call waiting may occur.</p>
+</div> 
+<!-- div id="LastUpdate">Last updated on 25-09-2018 :: 17:19:49</div -->
+</div></div> </div>
+<div id="page-bottom" style="width:auto">
+	<p><a href="https://rtionline.gov.in">Home </a>| <a href="http://india.gov.in/" target="_blank"> National Portal of India </a>| <a href="http://dsscic.nic.in/online-appeal-application/onlineappealapplication/" target="_blank" onClick="alert('The Central Information Commission (CIC) has integrated its Second Appeal Filing Portal with the Department of Personnel and Training (DoPT) RTI Online Portal. Now, while submitting a Second Appeal, appellants can input the First Appeal Registration Number, Email ID and Date of Filing the First Appeal, thereafter, the system will automatically retrieve related details of the RTI Application and First Appeal from the RTI Online Portal. This will ensure a smooth and more streamlined Second Appeal filing process.')" >Complaint & Second Appeal to CIC </a>| <a href="https://rtionline.gov.in/faq.php?pageid=1679091c5a880faf6fb5e6087eb1b2dc"> FAQ </a> | <a href="https://rtionline.gov.in/Policies.php">Policy</a> </p>
+	
+	<p class="Copyright">Copyright &copy; 2026. All rights reserved | 
+Website designed, developed, and hosted by National Informatics Centre, New Delhi | Content owned and managed by <b> DOP&T</b></p>
+	</div> <!--end page-bottom--></div>
+<br class="clearfix" />
+
+</body>
+</html>
+
+<!-- <div id="dialog" title="">
+    <img src="images/popup/Bharat_innovates_banner.jpeg" style="width: 650px;"/>
+    
+</div>
+
+<link rel="stylesheet" href="jquery-ui.css">
+
+<script src="jquery/jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#dialog").dialog({
+            width: 700,
+            height: 300,
+            position: {
+                my: "center",
+                at: "center",
+                of: window
+            }
+        });
+    });
+</script>
+ -->
+<!-- 
+ <div id="dialog" title="" style=" margin-top:10px; font-weight: bold; color: red;" align="center">
+    
+<h1 style="font-weight: bold;">
+	IMPORTANT UPDATE
+</h1>
+    <div style=" margin-top:90px; font-size:x-large; font-weight: bold; color: red;">
+    <p>
+	To enhance citizen privacy and data security, and to strengthen the portal's cybersecurity framework, email verification via OTP will be implemented for all RTI requests starting Monday, June 16, 2025. Please take note of this important update.</p>
+
+</div>
+
+
+<!-- <button type="close" name="close">Ok</button> -->
+</div>
+
+ 
+
+
+
+<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+<link rel="stylesheet" href="jquery-ui.css">
+<!-- <link rel="stylesheet" href="/resources/demos/style.css">
+<script src="jquery/jquery.min.js"></script> -->
+<!--<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<!-- <script src="jquery-ui.js"></script> -->
+<script>
+    $(function () {
+        $("#dialog").dialog({
+           
+            position: {
+                my: "center",
+                at: "center",
+                of: window
+            }
+        });
+    });
+</script> 
+
+<!-- <div id="dialog" title="Memento" >
+    <img src="images/popup/Memento.jpg" style="width: 650px;"/>
+
+</div>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#dialog").dialog({
+            width: 700,
+            height: 300,
+            position: {
+                my: "center",
+                at: "center",
+                of: window
+            }
+        });
+    });
+</script> -->
+
+
+
+
+

@@ -1,0 +1,882 @@
+SOURCE URL: https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf
+
+[page 1]
+K R Puram metro station Centrsl silk board
+1 VMF1C KR Puram Metro 
+Station Central Silk Board KR Puram Metro Station Marathahalli Bridge, Agara 22 146
+0640, 0655, 0710, 0720, 0725, 0740, 
+0750, 0755, 0800, 0810, 0820, 0830, 
+0840, 0850, 0900, 0910, 0920, 0925, 
+0930, 0935, 0945, 0955, 1000, 1005, 
+1015, 1020, 1025, 1030, 1035, 1045, 
+1050, 1055, 1100, 1110, 1120, 1125, 
+1150, 1205, 1215, 1235, 1300, 1315, 
+1330, 1345, 1400, 1430, 1530, 1540, 
+1550, 1620, 1635, 1725, 1730, 1745, 
+1750, 1805, 1820, 1840, 1850, 1900, 
+1910, 1920, 1935, 1945, 1950, 2010, 
+2015, 2020, 2030, 2045, 2100, 2115, 
+2120, 2130, 2145, 2200
+0540, 0610, 0620, 0630, 0640, 0650, 
+0700, 0710, 0720, 0730, 0740, 0745, 
+0750, 0800, 0810, 0820, 0825, 0830, 
+0840, 0855, 0905, 0910, 0915, 0920, 
+0925, 0935, 0940, 0950, 0955, 1005, 
+1010, 1015, 1020, 1040, 1105, 1125, 
+1150, 1210, 1225, 1240, 1255, 1335, 
+1425, 1435, 1445, 1500, 1515, 1545, 
+1615, 1620, 1635, 1645, 1650, 1715, 
+1730, 1735, 1735, 1745, 1830, 1835, 
+1855, 1905, 1920, 1945, 2000, 2010, 
+2015, 2030, 2045, 2100
+K R Puram metro station Sarjapura
+2 VMF1D KR Pura Metro 
+Station Sarjapura KR Puram Metro Station Marathahalli Bridge, Agara 3 10 0905, 0935, 1600 0640, 0750, 0805, 0820, 1715, 1735, 
+1835
+S.V Metro Station Rameshnagara
+3 MF-1F S.V Metro Station Rameshnagara S.V Metro Station
+S.V Metro Station, BEML Gate, 
+Malleshpalya, Basavanagar, 
+Rameshanagara
+3 53
+0650, 0725, 0745, 0820, 0905, 0925, 
+1000, 1055, 1115, 1140, 1225, 1245, 
+1400, 1420, 1445, 1530, 1550, 1620, 
+1700, 1720, 1755, 1835, 1855, 1935, 
+2030, 2050, 2140
+0615, 0640, 0700, 0730, 0815, 0835, 
+0910, 0955, 1015, 1055, 1140, 1200, 
+1310, 1330, 1445, 1505, 1535, 1615, 
+1635, 1705, 1745, 1805, 1845, 1940, 
+2000, 2050
+4 MF1G ITPL Metro Station ITPL Metro Station ITPL Metro Station Hope Farm, Channasandra, 
+Nagondanahalli, Whitefield, Hope farm 2 33
+5 MF1GA ITPL Metro Station ITPL Metro Station ITPL Metro Station Hope Farm, Whitefield, Nagondanahalli, 
+Channasandra, Hope Farm 2 33
+Kadugodi metro station Kannamangala
+6 MF1K Kadugodi Metro StationKannamangala Kadugodi Metro Station Seegehalli, Kannamangala Gate 3 60
+0805, 0820, 0835, 0855, 0910, 0925, 0945, 
+1025, 1040, 1100, 1115, 1130, 1145, 1305, 
+1320, 1355, 1410, 1505, 1520, 1535, 1555, 
+1610, 1625, 1700, 1715, 1750, 1805, 1825, 
+1915, 2030, 2145
+0600, 0830, 0845, 0900, 0920, 0935, 
+0950, 1035, 1050, 1105, 1120, 1205, 
+1240, 1255, 1330, 1345, 1420, 1435, 
+1530, 1545, 1600, 1620, 1635, 1650, 
+1725, 1740, 1850, 2005, 2055
+Kadugodi metro station Khaji sonnenahalli
+MF1KA Kadugodi Metro StationKhaji sonnenahalli Kadugodi Metro Station Seegehalli, Kannamangala Gate 8 0625, 0715, 1645, 1735 0650, 0740, 1710, 1800
+KR Puram Metro Station Sarjapura
+7 MF1S KR Puram Metro 
+Station Sarjapura KR Puram Metro Station
+Dommasandra, Kodathi gate, 
+Doddakanahalli, A.E.T Junction, 
+Devarabeesanahalli, Marathahalli
+4 26
+0530, 0650. 0800, 0840, 0925, 1010, 1120, 
+1135, 1315, 1445, 1525, 1605, 1650, 1745, 
+1910, 2040
+0530, 0650, 0755, 0840, 0930, 1010, 
+1120, 1340, 1425, 1510, 1600, 1640, 
+1740, 1910, 2040
+8 MF-2
+Baiyappanahalli 
+Metro station    (back 
+gate)
+TC Palya Baiyappanahalli Metro 
+station    (back gate)
+B.channasandra, SBI bank, 
+Kasturinagara 2nd stage, Benniganahalli 
+bridge, Sadanandanagara
+1 18 0720, 0840, 1025, 1150, 1310, 1445,
+1600, 1745, 1915, 2055
+0800, 0920, 1110, 1230, 1525, 1700, 
+1830, 2000
+Kadugodi Metro Station Marathahalli
+9 MF3 Kadugodi Metro 
+Station Marathahalli
+Hopefarm, ITPL, Satyasai 
+hospital, Nallurhalli, 
+Kundalahalli, Graphite India
+ITPL, Kundalahalli Gate 7 88
+0530, 0600, 0705, 0720, 0735, 0820, 0910, 
+0925, 0940, 1020, 1035, 1055, 1105, 1155, 
+1220, 1235, 1305, 1420, 1440, 1500, 1530, 
+1540, 1545, 1615, 1645, 1655, 1710, 1740, 
+1815, 820, 1850, 1920, 2030, 2100
+0615, 0645, 0720, 0805, 0820, 0835, 
+0850, 0905, 0925, 0935, 1040, 1055, 
+1110, 1120, 1135, 1155, 1205, 1320, 
+1335, 1405, 1440, 1445, 1515, 1540, 
+1550, 1605, 1635, 1645, 1715, 1745, 
+1815, 1920, 1925, 1955, 2150, 2220
+Kadugodi Metro Station Marathahalli
+METRO FEEDER ROUTES DETAILS AND TIMINGS
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+ITL Metro station
+0530, 0605, 0640, 0715, 0755, 0820, 0845, 0915, 0940, 1010, 1055, 1130, 1140, 1220, 
+1310, 1400, 1500, 1530, 1610, 1630, 1705, 1725, 1800, 1900, 1955, 2050, 2210
+0545, 0620, 0655, 0730, 0815, 0845, 0910, 0940, 1005, 1035, 1120, 1155, 1210, 1245, 
+1335, 1500, 1525, 1555, 1640, 1700, 1730, 1800, 1830, 1930, 2025, 2120, 2240
+
+[page 2]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+10 MF4 Kadugodi Metro 
+Station Marathahalli Hopefarm Varthuru Kodi, Siddapura 4 18
+0545, 0615, 0720, 0750, 0920, 0950, 1045, 
+1115, 1235, 1305, 1450, 1500, 1520, 1530, 
+1640, 1650, 1710, 1720, 1910, 1940, 2055,  
+2120
+0630, 0700, 0820, 0850, 0920, 0950, 
+1045, 1115, 1140, 1210, 1330, 1400, 
+1545, 1555, 1615, 1625, 1740, 1810, 
+1815, 1845, 2005, 2035, 2205
+11 MF3A Kadugodi Metro 
+Station
+Kadugodi Metro 
+Station
+Hopefarm, ITPL, Satyasai 
+hospital, Nallurhalli, 
+Kundalahalli, Graphite India
+Hope farm, ITPL, Whitefiled TTMC, 
+Graphite India, Kundalahalli gate, 
+Varthur kodi, whitefield post office
+2 54
+12 MF4A Kadugodi Metro 
+Station
+Kadugodi Metro 
+Station
+Hopefarm, Graphite India, 
+Kundalahalli, Nallurhalli, 
+Satyasai hospital, ITPL
+Hope farm, whitefield post office, 
+Varthur kodi, Kundalahalli gate, 
+Graphite India, Whitefiled TTMC. ITPL
+2 17
+Kadugodi Metro Station Belikere
+13 MF4B Kadugodi Metro 
+Station Belikere Kadugodi Metro Station Varthur, Muttasandra 2 19 0805, 0900, 1000, 1115, 1210, 1330, 
+1425, 1545, 1645 
+0800, 0900, 1000, 1115, 1210, 1330, 
+1425, 1550, 1645, 1740 
+Central silk board SMVT
+14 MF5 Central silk board
+Sir. 
+M.Vishweshwaraih 
+Railway Station.
+S.V Metro Station
+SV Road Metro Station. Indiranagara 
+Metro Station, Inner Ring Road, 
+Koramangala Water Tank, 
+25 233
+0400, 0505, 0550, 0600, 0610, 0620, 
+0630, 0640, 0650, 0655, 0700, 0710, 
+0720, 0730, 0740, 0750, 0800, 0810, 
+0815, 0820, 0830, 0835, 0840, 0840, 
+0845, 0850, 0855, 0855, 0900, 0905, 
+0910, 0915, 0925, 0930, 0940, 0945, 
+0950, 1000, 1010, 1020, 1025, 1030, 
+1040, 1040, 1055, 1100, 1110, 1120, 
+1125, 1130, 1145, 1145, 1210, 1220, 
+1245, 1250, 1255, 1300, 1310, 1325, 
+1335, 1345, 1350, 1400, 1410, 1420, 
+1455, 1510, 1520, 1525, 1525, 1525, 
+1530, 1535, 1545, 1545, 1550, 1555, 
+1600, 1605, 1610, 1615, 1620, 1625, 
+1635, 1645, 1650, 1655, 1655, 1705, 
+1720, 1725, 1735, 1740, 1750, 1755, 
+1800, 1815, 1820, 1830, 1845, 1855, 
+1900, 1905, 1915, 1930, 1950, 2000, 
+2010, 2020, 2035, 2130, 2145, 2150, 
+2210, 2230
+0430, 0435, 0545, 0550, 0600, 0610, 
+0620, 0640, 0650, 0700, 0710, 0725, 
+0730, 0735, 0740, 0745, 0750, 0750, 
+0800, 0810, 0835, 0845, 0855, 0905, 
+0915, 0920, 0925, 0935, 0940, 0950, 
+0955, 1000, 1000, 1010, 1015, 1020, 
+1020, 1030, 1045, 1055, 1100, 1110, 
+1120, 1130, 1140, 1150, 1155, 1200, 
+1205, 1210, 1215, 1220, 1225, 1230, 
+1250, 1255, 1310, 1325, 1340, 1345, 
+1350, 1400, 1405, 1420, 1430, 1450, 
+1455, 1520, 1525, 1530, 1535, 1545, 
+1555, 1605, 1615, 1620, 1620, 1630, 
+1630, 1635, 1640, 1645, 1650, 1655, 
+1700, 1710, 1715, 1720, 1725, 1730, 
+1740, 1750, 1755, 1800, 1800, 1810, 
+1825, 1835, 1840, 1845, 1855, 1900, 
+1905, 1920, 1925, 1935, 1950, 2015, 
+2030, 2035, 2040, 2045, 2105, 2130, 
+2155, 2225, 2300
+Central silk board SV Metro station
+15 VMF6 Central silk board SV Metro station S.V Metro Station Indiranagara metro, Dommalur brdige, 
+Koramangala water tank 5 56
+0530, 0600, 0630, 0700, 0800, 0830, 
+0900, 0930, 1025, 1055, 1125, 1410, 
+1450, 1555, 1615, 1630, 1645, 1715, 
+1735, 1805, 1835, 1905, 1935, 2005, 
+2045, 2115, 2145
+0615, 0645, 0715, 0745, 0815, 0845, 
+0940, 1010, 1040, 1100, 1130, 1200, 
+1510, 1550, 1640, 1700, 1715, 1730, 
+1750, 1820, 1850, 1925, 1950, 2020, 
+2050, 2125, 2200, 2230
+Kadugodi Bus station
+0545, 0645, 0800, 0830, 0925, 1020, 1145, 1310, 1505, 1530, 1625, 1815, 1940, 2130
+Kadugodi Bus station
+0600, 0700, 0815, 0845, 0940, 1035, 1130, 1200, 1325, 1520, 1545, 1640, 1830, 1955, 
+2145
+
+[page 3]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+Baiyappanahalli Metro Station Kanakagiri
+16 MF7 Baiyappanahalli 
+Metro Station Kanakagiri Baiyappanahalli Metro 
+Station
+B.Channasandra Bridge, Horamavu, 
+Kalkere 1 18
+0835, 1010, 1120, 1220, 1330, 1440, 1615, 
+1725
+0800, 0910, 1045, 1255, 1405, 1540, 
+1650
+17 MF8 Cubbon Park Metro Cubbon Park Metro Cubbon Park Metro Vasanthanagara, Raj Bhavan 2 38
+Mantri mall metro station Shivajinagara
+18 MF8A Mantri mall metro 
+station Shivajinagara Mantri Malla metro station Guttahalli, Mount carmel college 1 6 0715, 0845, 1215, 1330 1440, 1625 0805, 0845, 1115, 1255, 1405, 1545
+Hoodi Metro KR Puram
+19 MF9 Hoodi Metro KR Puram Hoodi Metro Ayyappa Nagara, Devasandra 2 28 0845, 0925, 1040, 1120, 1150, 1230, 1300, 
+1340, 1435, 1515, 1545, 1625, 1715, 1755
+0800, 0840, 0930, 1010, 1115, 1155, 
+1225, 1305, 1335, 1415, 1510, 1550, 
+1630, 1710.
+Tinfactory kadugodi metro station
+20 MF10 Tinfactory kadugodi metro 
+station
+K R Puram, Bhattarahalli, 
+Seegehalli circle, 
+Kudurusonnenahalli, Belturu
+Kadugodi Metro station 1 16 0630, 0710, 0930, 1115, 1335, 1550, 1840, 
+1925
+0830, 1015, 1235, 1430, 1720, 1830, 
+1955, 2020
+kadugodi metro station Kittaganur grama panchayat
+21 MF10A kadugodi metro 
+station
+Kittaganur grama 
+panchayat
+Medahalli, 
+Kudurusonnenahalli, Belturu Kadugodi Metro station 2 19 0720, 0730, 0840, 0915, 1100, 1450, 1615, 
+1645, 1805
+0650, 0800, 0835, 0920, 0955, 1140, 
+1535, 1700, 1725, 1910
+Tinfactory kadugodi metro station
+22 MF11 Tinfactory kadugodi metro 
+station
+K R Puram, Bhattarahalli, 
+Kattamnallur gate, Belturu Kadugodi metro station 4 49
+0615, 0645, 0745, 0820, 0850, 1020, 
+1025, 1055, 1125, 1135, 1135, 1235, 
+1235, 1320, 1340, 1340, 1345, 1350, 
+1515, 1530, 1600, 1615, 1830, 1900
+0605, 0715, 0745, 0850, 0950, 1020, 
+1025, 1030, 1130, 1130, 1215, 1225, 
+1240, 1245, 1345, 1405, 1425, 1455, 
+1510, 1515, 1645, 1700, 1730, 2000, 
+2030
+Vijayanagara Banashankari TTMC
+23 MF12 Vijayanagara Banashankari TTMC
+Vijayanagara Metro Station, 
+Attiguppe Metro Station, 
+Deepanjalinagara  Metro 
+Station, Mysore Road Metro 
+Station, Banashankari Metro 
+Station
+Attiguppe Metro, Mysore Road Metro, 
+Kathriguppe 13 144
+0520, 0520, 0605, 0615, 0620, 0620, 
+0635, 0640, 0655, 0710, 0725, 0740, 
+0750, 0800, 0805, 0820, 0830, 0840, 
+0845, 0905, 0925, 0935, 0945, 0950, 
+0955, 1010, 1035, 1055, 1105, 1120, 
+1140, 1150, 1200, 1205, 1210, 1215, 
+1225, 1230, 1240, 1250, 1325, 1340, 
+1355, 1405, 1415, 1420, 1430, 1435, 
+1445, 1500, 1515, 1520, 1530, 1555, 
+1605, 1625, 1635, 1640, 1650, 1700, 
+1725, 1730, 1750, 1755, 1815, 1825, 
+1845, 1905, 1940, 1950, 2005, 2020, 
+2040, 2100
+0510, 0535, 0605, 0635, 0650, 0700, 
+0705, 0710, 0720, 0730, 0745, 0810, 
+0825, 0840, 0850, 0855, 0900, 0915, 
+0930, 0940, 1000, 1020, 1035, 1050, 
+1105, 1110, 1115, 1130, 1135, 1145, 
+1155, 1210, 1240, 1300, 1305, 1315, 
+1325, 1335, 1345, 1355, 1420, 1430, 
+1445, 1455, 1505, 1515, 1525, 1535, 
+1545, 1555, 1605, 1615, 1640, 1650, 
+1700, 1720, 1725, 1735, 1750, 1815, 
+1845, 1855, 1915, 1930, 1945, 2000, 
+2035, 2045, 2055, 2115
+Rajarajeshwari Metro Station Thalaghattapura metro station
+24 MF14A Rajarajeshwari Metro 
+Station
+Thalaghattapura 
+metro station
+Rajarajeshwari Metro 
+Station, Thalaghattapura 
+metro
+RR temple, Halagevaderahalli, 
+Chikkegowdanapalya 8 136
+0620, 0630, 0645, 0700, 0720, 0730, 
+0745, 0805, 0820, 0820, 0840, 0845, 
+0850, 0855, 0915, 0935, 0940, 0950, 
+1010, 1025, 1030, 1035, 1100, 1110, 
+1125, 1130, 1140, 1145, 1155, 1215, 
+1245, 1250, 1300, 1330, 1355, 1410, 
+1425, 1445, 1505, 1510, 1515, 1530, 
+1545, 1600, 1605, 1620, 1635, 1640, 
+1650, 1705, 1715, 1730, 1735, 1745, 
+1800, 1810, 1820, 1835, 1845, 1905, 
+1915, 1935, 1945, 2010, 2020, 2035, 
+2040 
+0635, 0645, 0700, 0710, 0725, 0740, 
+0800, 0810, 0830, 0850, 0900, 0905, 
+0925, 0930, 0945, 0955, 1015, 1025, 
+1040, 1050, 1100, 1105, 1115, 1120, 
+1140, 1150, 1205, 1210, 1220, 1225, 
+1235, 1255, 1330, 1415, 1420, 1430, 
+1440, 1450, 1515, 1520, 1530, 1545, 
+1555, 1610, 1625, 1635, 1645, 1655, 
+1705, 1715, 1720, 1735, 1750, 1800, 
+1815, 1820, 1830, 1840, 1850, 1900, 
+1920, 1935, 1950, 2000, 2015, 2025, 
+2050, 2100, 2120 
+Cubbon Park Metro
+0730, 0745, 0800, 0815, 0835, 0850, 0910, 0925, 1130, 1145, 1205, 1220, 1445, 1500, 
+1520, 1535, 1555, 1610, 1630, 1645, 1730, 1745, 1810
+
+[page 4]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+JP Nagara Metro Jambusavaridinne
+25 MF-15 JP Nagara Metro Jambusavaridinne JP Nagara Metro RV Dentral, Brigade Millennium 4 76
+0635, 0725, 0745, 0810, 0830, 0855, 
+0915, 0940, 1015, 1045, 1105, 1130, 
+1155, 1215, 1235, 1255, 1315, 1335, 
+1415, 1435, 1455, 1515, 1535, 1555, 
+1620, 1645, 1705, 1735, 1750, 1815, 
+1835, 1910, 1945, 2005, 2025, 2045, 
+2105
+0600, 0635, 0705, 0725, 0745, 0810, 
+0830, 0855, 0915, 0940, 1015, 1105, 
+1130, 1155, 1215, 1235, 1255, 1315, 
+1335, 1415, 1435, 1455, 1515, 1535, 
+1555, 1620, 1645, 1705, 1730, 1750, 
+1815, 1835, 1915, 1945, 2000, 2025
+26 MF-16A Shanthinagar TTMC Shanthinagar TTMC K R market, Lalbagh 
+Lalbagh main gate, north road, 
+Hosakerehalli cross, PES college, MRBS, 
+Sirsi circle, KR market
+4 40
+Jayanagara Metro Station Vaddarapalya JP Nagara 8th Phase
+27 MF17 Jayanagara Metro 
+Station
+Vaddarapalya JP 
+Nagara 8th Phase Jayanagara Metro Station RV Road Metro, Jayanagara 5th Block, 
+JP Nagara, Jambusavari Dinne 2 33
+0615, 0745, 0815, 0915, 0945, 1110, 1145, 
+1350, 1520, 1625, 1820, 1950, 2200, 2310, 
+2415
+0700, 0830, 0900, 1025, 1100, 1155, 
+1230, 1435, 1630, 1735, 1905, 2040.
+Banashankari Koliform gate
+28 MF18 Banashankari Koliform gate Jayanagara, Bilekalalli, Gottigere 4 46
+0540, 0610, 0640, 0705, 0735, 0805, 0840, 
+0915, 1000, 1050, 1135, 1215, 1345, 1450, 
+1520, 1550, 1620, 1730, 1800, 1840, 1920, 
+2040, 2110
+0635, 0705, 0735, 0805, 0840, 0920, 
+1000, 1050, 1140, 1215, 1250, 1320, 
+1500, 1600, 1630, 1715, 1745, 1900, 
+1930, 2030, 2100, 2155, 2225
+R V Metro station Vijayanagara
+29 MF19 R V Metro station Vijayanagara R V metro, Banashankari 2 32
+0600, 0650, 0735, 0825, 0920, 1010, 1130, 
+1220, 1435, 1525, 1620, 1710, 1810, 1900, 
+2020, 2110 
+0605, 0645, 0735, 0825, 0915, 1040, 
+1130, 1220, 1310, 1525, 1615, 1715, 
+1805, 1930, 2020, 2105
+Konanakunte Cross Brigade Meadow
+30 MF20 Konanakunte Cross Brigade Meadow
+Doddakallasandra Metro 
+Station, Vajarahalli Metro 
+Station, Thalaghattapura 
+Metro Station, Silk Institute 
+Metro Station
+Doddakallasandra Metro Station, 
+Vajarahalli Metro Station, 
+Thalaghattapura Metro Station, Silk 
+Institute Metro Station
+1 16 830, 1025, 1230, 1400, 1530, 1750, 1945 730, 925, 1145, 1315, 1445, 1650, 
+1845, 2040
+Banashankari BTM layout (Kuvempunagara)
+31 MF21 Banashankari
+BTM layout
+(Kuvempunagara)
+Banashankari metro station JP Nagara 6th phase, R V Dental college, 
+Delmia, JP Nagara 3rd phase, 
+Mahadeshwara layout.
+2 15 0700, 0815, 1215, 1455, 1605, 1615, 1750, 
+1910
+0740, 0850, 1300, 1530, 1710, 1710, 
+1830
+Banashankari Begur
+32 MF21BB Banashankari
+Begur
+1 16 06000, 0735, 0920, 1130, 1435, 1620, 1810, 
+2020
+0645, 0825, 1040, 1220, 1525, 1715, 
+1930, 2105
+Electronic city wipro gate Kodathi wipro
+33 MF22 Electronic city wipro 
+gate Kodathi wipro
+Electronic city, Konappanaha
+agrahara, Hosaroad
+Konappana agrahara, Hosa road, 
+Kasavanahalli, Kaikondrahalli 2 16
+0820, 0850, 1045, 1130, 1300, 1355, 1525, 
+1555
+0710, 0740, 0935, 1030, 1200, 1230, 
+1425, 1455
+Anekal Bommasandra
+34 MF22D Anekal Bommasandra 1 8 0855, 1055, 1250, 1445 1005, 1205, 1400, 1550
+Hulimav gate( Jn of 80 ft road) Central silk board
+35 MF22HC Hulimav gate( Jn of 
+80 ft road) Central silk board
+BTM 4th Stage RTO Office, Vijaya Bank 
+Layout, Kodichikkanahalli, 
+Bommanahalli
+4 80
+0555, 0615, 0635, 0655, 0720, 0740, 0800, 
+0820, 0840, 0900, 0920, 0940, 1015, 1045, 
+1115, 1135, 1155, 1215, 1235, 1300, 1325, 
+1345, 1405, 1430, 1455, 1520, 1540, 1600, 
+1625, 1645, 1705, 1725, 1755, 1815, 1835, 
+1905, 1940, 2015, 2035, 2055
+0640, 0700, 0720, 0740, 0800, 0820, 
+0840, 0900, 0930, 1000, 1030, 1055, 
+1115, 1135, 1155, 1215, 1235, 1255, 
+1315, 1340, 1410, 1435, 1455, 1515, 
+1540, 1600, 1620, 1640, 1710, 1730, 
+1750, 1810, 1845, 1920, 1950, 2010, 
+2035, 2100, 2120, 2135
+36 MF23 Jalahalli Metro 
+Station
+Jalahalli Metro 
+Station
+Jalahalli Metro Station, 
+Dasarahalli metro station
+Ayyappa Temple, K.G.Halli, Abbigere, 
+Chikkabanavara, Bagalagunte, 
+Dasarahalli Metro
+1 14
+37 MF23A Jalahalli Metro 
+Station
+Jalahalli Metro 
+Station
+Dasarahalli metro station, 
+Jalahalli metro station
+Dasarahalli Metro, Bagalagunte, 
+Chikkabanavara, Abbigere, KG Halli, 
+Ayyappa Temple
+1 12
+0830, 0930, 1055, 1150, 1245, 1340, 1500, 1555, 1650, 1745
+Jalahalli Metro Station
+0550, 0635, 0740, 0835, 0930, 1025,  1120, 1505, 1600, 1700, 1820, 1915, 2010, 2130
+Jalahalli Metro Station
+Shanthinagar TTMC
+0525, 0555, 0615, 0630, 0645, 0700, 0720, 0745, 0805, 0825, 0845, 0910, 0935, 0955, 
+1015, 1050, 1120, 1145, 1205, 1230, 1330, 1400, 1435, 1500, 1525, 1545, 1610, 1655, 
+1720, 1740, 1805, 1825, 1850, 1910, 1935, 1955, 2020, 2040, 2105, 2125
+
+[page 5]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+Jalahalli Metro Station BEL Circle
+38 MF23B Jalahalli Metro 
+Station BEL Circle Jalahalli Metro Station Chikkabanawara, Abbigere Cross, 
+Gangamma Circle 8 76
+0555, 0635, 0645, 0700, 0725, 0740, 0820, 
+0835, 0850, 0910, 0915, 0930, 0940, 1010, 
+1050, 1105, 1120, 1130, 1135, 1145, 1230, 
+1320, 1445, 1510, 1525, 1645, 1700, 1725, 
+1740, 1825, 1845, 1900, 1925, 1940, 2020, 
+2035, 2130, 2245
+0555, 0630, 0645, 0725, 0740, 0755, 
+0820, 0835, 0915, 0930, 0945, 1020, 
+1030, 1040, 1050, 1130, 1145, 1200, 
+1225, 1230, 1240, 1415, 1525, 1605, 
+1625, 1645, 1740, 1755, 1820, 1845, 
+1925, 1940, 1955, 2020, 2035, 2115, 
+2130, 2245
+39 MF23C Jalahalli Metro 
+Station
+Jalahalli Metro 
+Station 3 24
+40 MF23D Jalahalli Metro 
+Station
+Jalahalli Metro 
+Station 3 24
+Jalahalli Metro Station MS Palya
+41 MF23E Jalahalli Metro 
+Station MS Palya Jalahalli Metro Station Chikkabanavara, Ganigarahalli, Guni 
+Agrahara 3 48
+0715, 0735, 0755, 0920, 0940, 1000, 1125, 
+1145, 1205, 1255, 1315, 1335, 1425, 1445, 
+1505, 1555, 1615, 1635, 1850, 1910, 1930, 
+2030, 2050, 2110
+0630, 0650, 0710, 0800, 0820, 0840, 
+1010, 1030, 1050, 1210, 1230, 1250, 
+1340, 1400, 1420, 1510, 1530, 1550, 
+1730, 1750, 1810, 1940, 2000, 2020
+42 MF24 Jalahalli Metro 
+Station Laggere Jalahalli Metro Station Rajagopalanagara Police Station, TVS 
+Cross 3 21
+8th Mile Thippenahalli
+43 MF25 8th Mile Thippenahalli Nagasandra metro station Nagasandra 3 102
+0640, 0700, 0720, 0740, 0800, 0820, 
+0840, 0900, 0920, 0940, 1000, 1025, 
+1045, 1045, 1105, 1125, 1125, 1145, 
+1205, 1205, 1225, 1245, 1305, 1325, 
+1345, 1405, 1425, 1445, 1505, 1525, 
+1540, 1610, 1620, 1630, 1650, 1700, 
+1710, 1730, 1740, 1750, 1830, 1910, 
+1935, 1950, 2015, 2030, 2055, 2200, 
+2240, 2320
+0620, 0700, 0720, 0740, 0800, 0820, 
+0840, 0900, 0920, 0940, 0940, 1025, 
+1025, 1045, 1105, 1105, 1125, 1145, 
+1145, 1205, 1225, 1225, 1245, 1305, 
+1325, 1345, 1405, 1425, 1445, 1505, 
+1525, 1600, 1610, 1630, 1640, 1650, 
+1710, 1720, 1730, 1750, 1810, 1850, 
+1915, 1930, 1955, 2010, 2035, 2050, 
+2140, 2220, 2300
+8th Mile Suvarna Nagara
+44 MF25A 8th Mile Suvarna Nagara Nagasandra, Rockline Studio 1 16 0650, 0730, 0810, 0850, 1720, 1800, 1840, 
+1920
+0710, 0750, 0830, 0910, 1740, 1820, 
+1900, 1940
+Jalahalli Metro Station
+0545, 0635, 0640, 0725, 0730, 0805, 0815, 0820, 0905, 0910, 0955, 1020, 1110, 1200, 
+1250, 1325, 1340, 1420, 1445, 1510, 1535, 1650, 1705, 1740, 1755, 1835, 1925, 2000, 
+2025, 2050
+Jalahalli Metro Station
+Jalahalli Metro Station
+0615, 0645, 0715, 0750, 0825, 0855, 0930, 1010, 1050, 1130, 1205, 1245, 1330, 1405, 
+1435, 1510, 1545, 1625, 1710, 1750, 1820, 1850, 1925, 2000
+0630, 0700, 0730, 0805, 0840, 0910, 0950, 1030, 1110, 1145, 1225, 1305, 1345, 1420, 
+1450, 1525, 1605, 1650, 1730, 1805, 1835, 1905, 1940, 2015 
+
+[page 6]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+Jalahalli Metro Station Chowdeshwarinagara
+45 MF26 Jalahalli Metro 
+Station
+Jalahalli Metro 
+Station Chowdeshwarinagara Rajagopalanagara Police Station, 4 86
+0610, 0640, 0700, 0730, 0750, 0825, 
+0850, 0900, 0925, 0955, 1000, 1015, 
+1050, 1100, 1105, 1125, 1140, 1150, 
+1155, 1215, 1240, 1335, 1410, 1500, 
+1520, 1530, 1555, 1605, 1620, 1640, 
+1645, 1710, 1730, 1810, 1830, 1930, 
+2015, 2030, 2100, 2130, 2215, 2220
+0620, 0635, 0705, 0730, 0820, 0825, 
+0855, 0920, 0930, 0955, 1030, 1040, 
+1100, 1115, 1125, 1130, 1150, 1205, 
+1215, 1220, 1240, 1305, 1310, 1435, 
+1455, 1525, 1555, 1610, 1620, 1635, 
+1645, 1715, 1715, 1740, 1800, 1840, 
+1900, 2000, 2055, 2105, 2125, 2155, 
+2240
+Jalahalli Metro Staion Makali
+46 MF27 Jalahalli Metro 
+Staion Makali Jalahalli Metro Station, 
+Dasarahalli metro station Bagalagunte, Acharya College, Aluru 4 42
+0805, 0825, 0845, 0945, 1005, 1025, 
+1150, 1210, 1230, 1330, 1410, 1510, 
+1530, 1550, 1650, 1710, 1730, 1910, 
+1930, 1950
+0715, 0735, 0755, 0855, 0915, 0935, 
+1100, 1120, 1140, 1240, 1300, 1320, 
+1420, 1440, 1500, 1600, 1620, 1640, 
+1820, 1840, 1900
+Vidyaranyapura Laggere
+47 MF28 Vidyaranyapura Laggere Jalahalli metro station, 
+Peenya metro station
+Ramachandrapura, BEL Circle, HMT 
+Auditorium, Jalahalli Cross 2 48
+0645, 0740, 0910, 1005, 1110, 1205, 
+1425, 1600, 1650, 1800, 1850, 2010
+0640, 0800, 0840, 1010, 1105, 1210, 
+1500, 1550, 1700, 1750, 1910, 1945
+Jalahalli Metro Station Madanayakanahalli
+48 MF29 Jalahalli Metro StationMadanayakanahalli Jalahalli Metro Station, 
+Dasarahalli metro station Siddedahalli, Kuduregere Colony 3 48
+0615, 0645, 0715, 0750, 0820, 0850, 0920, 
+0950, 1020, 1145, 1215, 1245, 1340, 1410, 
+1440, 1620, 1650, 1710, 1750, 1820, 1850, 
+1920, 1950, 2020
+0705, 0735, 0805, 0835, 0905, 0935, 
+1005, 1035, 1105, 1230, 1300, 1330, 
+1425, 1455, 1525, 1705, 1735, 1805, 
+1835, 1905, 1935, 2005, 2035, 2105
+49 MF30 Jalahalli Metro StationJalahalli Metro StationJalahalli Metro Station
+Kanteerva Studio, Sumanahalli, 
+Sukadakatte, Herohalli Cross, 
+Andrahalli
+2 20
+50 MF31 Jalahalli Metro StationJalahalli Metro StationJalahalli Metro Station
+Nelagedranahalli, Thigarapalya, 
+Andrahalli, Herohalli cross, 
+Sunkadakatte, Kottigepalya, Nandini 
+layout ring road, Rajagopalanagar police 
+station.
+2 24
+Chikkabanavara Laggere
+51 MF32 Chikkabanavara Laggere Jalahalli Metro Station
+Kereguddadahalli, Medarahalli railway 
+gate, Shettyhalli, Jalahalli cross, 
+Rajagopalanagara cross.
+1 12 0700, 0850, 1105, 1405, 1625, 1825 0755, 0945, 1200, 1500, 1725, 1925
+Jalahalli Metro Station
+0530, 0600, 0645, 0715, 0810, 0840, 0935, 1005, 1125, 1155, 1450, 1520, 
+1615, 1645, 1805, 1835, 1930, 200, 2055, 2125
+Jalahalli Metro Station
+0630, 0600, 0645, 0715, 0810, 0840, 0935, 1005, 1125, 1155, 1450, 1520, 
+1615, 1645, 1805, 1835, 1930, 2000, 2055, 2125
+
+[page 7]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+Kengeri TTMC Thalaghattpura
+52 MF34 Kengeri TTMC Thalaghattpura Kengari Bus Terminal Metro 
+Station, Vajarahalli metro
+Vajarahalli Metro, Chikkegowdanapalya, 
+Kodipalya 5 82
+0555, 0655, 0710, 0730, 0750, 0810, 0830, 
+0845, 0900, 0915, 0935, 1000, 1025, 1050, 
+1115, 1135, 1155, 1215, 1255, 1335, 1420, 
+1455, 1515, 1545, 1600, 1615, 1630, 1645, 
+1705, 1725, 1750, 1810, 1835, 1850, 1910, 
+1935, 2000, 2020, 2040
+0630, 0650, 0710, 0730, 0750, 0805, 
+0820, 0835, 0855, 0915, 0930, 0945, 
+1000, 1035, 1110, 1130, 1145, 1200, 
+1215, 1300, 1335, 1355, 1430, 1505, 
+1520, 1535, 1600, 1625, 1650, 1710, 
+1725, 1740, 1800, 1825, 1855, 1915, 
+1935, 1955, 2015, 2040, 2100, 2125
+Silk Institute Metro Station Kumbalagodu
+53 MF36 Silk Institute Metro 
+Station Kumbalagodu Silk Institute Metro Station Tataguni, Agara, Devagere 1 18 0710, 0830, 0950, 1135, 1450, 1635, 1755, 
+1940, 2100
+0630, 0750, 0910, 1055, 1530, 1715, 
+1835, 2020
+54 MF38 RR Nagara metro 
+station
+RR Nagara metro 
+station RR Nagara metro station Jawaregowda nagara, D'souza nagara, 
+Nayandahalli 1 12
+Jnanabharathi Metro Station Ramasandra
+55 MF39 Jnanabharathi Metro 
+Station Ramasandra Jnanabharathi Metro Station BUC Admin Office, Sonnenahalli, 
+Chikkabasthi 3 50
+0730, 0830, 0930, 1005, 1100, 1140, 1205, 
+1245, 1300, 1400, 1505, 1535, 1645, 1715, 
+1825, 1935, 2015, 2045
+0700, 0710, 0800, 0900, 1000, 1105, 
+1135, 1215, 1230, 1330, 1430, 1445, 
+1610, 1615, 1720, 1750, 1900,  2010
+Jnanabharathi Metro Station Ullalu Satellite Town
+56 MF40 Jnanabharathi Metro 
+Station Ullalu Satellite Town Jnanabharathi Metro Station Bengaluru University, Vidyanikethana 
+Public School 4 116
+0700, 0715, 0715, 0735, 0755, 0805, 
+0810, 0825, 0845, 0855, 0900, 0910, 
+0935, 0945, 0950, 1000, 1025, 1100, 
+1105, 1120, 1140, 1150, 1155, 1210, 
+1240, 1300, 1310, 1340, 1400, 1415, 
+1430, 1450, 1505, 1520, 1540, 1610, 
+1610, 1620, 1630, 1700, 1710, 1720, 
+1725, 1800, 1810, 1815, 1820, 1855, 
+1905, 1910, 1930, 1955, 2010, 2020, 
+2035, 2045, 2105, 2225
+0630, 0650, 0650, 0710, 0730, 0740, 
+0745, 0800, 0820, 0830, 0835, 0845, 
+0910, 0920, 0925, 0935, 1000, 1030, 
+1035, 1040, 1115, 1125, 1130, 1145, 
+1215, 1235, 1245, 1305, 1330,1335, 
+1405,1425, 1440, 1455, 1515, 1530, 
+1545, 1545, 1605, 1635, 1645, 1655, 
+1700, 1725, 1735, 1745, 1750, 1830, 
+1840, 1845, 1900, 1925, 1935, 1955, 
+2000, 2035, 2155
+Jnanabharathi Metro Station Bharathnagara 2nd stage
+57 MF40B Jnanabharathi Metro 
+Station
+Bharathnagara 2nd 
+stage
+Vidyanikethana Public School, 
+Muddaianapalya Junction, Bharath 
+nagar 01st stage, Byadarahalli
+1 20
+0625, 0740, 0850, 1030, 1405, 1505, 
+1620, 1810, 1935, 2055
+0550, 0700, 0815, 0930, 1110, 1430, 
+1540, 1715, 1850, 2015
+Kengeri TTMC Tavarekere
+58 MF42 Kengeri TTMC Tavarekere Kengari Bus Terminal Metro 
+Station
+Kengeri Bus Terminal Metro, 
+Kommaghatta, Sulikere, Yalachaguppe 5 64
+0616, 0705, 0755, 0821, 0845, 0901, 
+0935, 0950, 1000, 1045, 1050, 1140, 
+1155, 1205, 1230, 1325, 1335, 1350, 
+1445, 1510, 1525, 1535, 1630, 1705, 
+1710, 1715, 1805, 1830, 1855, 1945, 
+2100
+0615, 0705, 0755, 0845, 0855, 0910, 
+0935, 0950, 1050, 1105, 1115, 1120, 
+1145, 1230, 1245, 1250, 1355, 1420, 
+1435, 1540, 1600, 1615, 1620, 1710, 
+1730, 1805, 1820, 1855, 1920, 1945, 
+2005, 2040, 2125
+59 MF43 Konankunte cross Konankunte cross Konankunte cross Vasanthapura, Uttarahalli, Karishma 
+hills, Raghuvanahalli cross. 1 10
+60 MF43A Konankunte cross Konankunte cross Konankunte cross Raghuvanahalli cross, Karishma hills, 
+Uttarahalli, Vasanthapura 1 10
+Banashankari TTMC Vijayanagara TTMC
+61 MF45 Banashankari TTMC Vijayanagara TTMC
+Vijayanagara Metro Station, 
+Mysore Road Metro Station  
+Banashankari Metro Station
+Kathariguppe, Nayandanahalli Metro, 
+Nagarabhavi Circle, Mudalapalaya, 
+Vijayanagara Metro
+2 22
+0615, 0745, 0900, 1050, 1110, 1225, 
+1340, 1445, 1535, 1635, 1745 
+0925, 1005, 1120, 1150, 1220, 1435, 
+1540, 1640, 1730, 1850, 2040
+62 MF46 Kengeri TTMC Kengeri TTMC Kengeri Doddabele, Provident sunworth 
+apartment, Anchepalya 2 20
+RR Nagara metro station
+0725, 0755, 0830, 0905, 0940, 1030, 1605, 1700, 1735, 1810, 1845, 1920
+Konankunte cross
+Konankunte cross
+0805, 0900, 0955, 1125, 1220, 1315, 1410, 1540, 1635, 1740
+0735, 0830, 0925, 1055, 1150, 1245, 1340, 1510, 1605, 1710
+Kengeri TTMC
+0810, 0840, 0905, 0935, 1030, 1100, 1125, 1155, 1220, 1250, 1315, 1345, 1440, 1510, 
+1535, 1605, 1630, 1700, 1725, 1755
+
+[page 8]
+SL 
+NO.
+ROUTE 
+NO. FROM TO Starting/Passing Metro 
+Stations Routings NO. OF TRIPS From ToNO. OF SCHS
+63 MF47 Mysore Road bus 
+station
+Mysore Road bus 
+station Attiguppe, Vijayanagara
+Attiguppe, Vijayanagar, 
+Srinivasanagara/ Pattegarapalya,  
+Malagala, Summanahalli  Jn,  
+Kottigepalya, Papareddypalya, Kengunte 
+Circle, Nagarabhavi Circle, Mysore Road 
+Metro Station
+3 12
+64 MF47A Mysore Road bus 
+station
+Mysore Road bus 
+station Mysore Road Metro Station, Nagarabhavi Circle,   Kengunte Circle, Papareddypalya, Kottigepalya, Summanahalli Jn,  Malagala, Srinivasanagara/ Pattegarapalya,  Vijayanagar, Attiguppe, 
+Mysore Road Metro Station, 
+Nagarabhavi Circle,   Kengunte Circle, 
+Papareddypalya, Kottigepalya, 
+Summanahalli Jn,  Malagala, 
+Srinivasanagara/ Pattegarapalya,  
+Vijayanagar, Attiguppe, 
+3 33
+Rajajinagara Navarang circle Nandini Layout
+65 MF-48 Rajajinagara 
+Navarang circle Nandini Layout Mahalxmi layout Entrance 2 80
+0640, 0700, 0720, 0740, 0800, 0820, 0840, 
+0900, 0920, 0940, 1000, 1020, 1105, 1125, 
+1145, 1205, 1225, 1245, 1305, 1325, 1425, 
+1445, 1505, 1525, 1545, 1605, 1650, 1710, 
+1730, 1750, 1810, 1830, 1850, 1910, 1930, 
+1950, 2010, 2030, 2050, 2110
+0620, 0640, 0700, 0720, 0740, 0800, 
+0820, 0840, 0900, 0920, 0940, 1000, 
+1045, 1105, 1125, 1145, 1205, 1225, 
+1245, 1305, 1405, 1425, 1445, 1505, 
+1525, 1545, 1630, 1650, 1710, 1730, 
+1750, 1810, 1830, 1850, 1910, 1930, 
+1950, 2010, 2030, 2050
+Chikkabidarakallu metro station Acharya insitute
+66 MF49 Chikkabidarakallu 
+metro station Acharya insitute Chikkabidarakallu mtero Thotada guddadahalli 1 26
+0730, 0815, 0905, 1020, 1105, 1145, 
+1225, 1330, 1410, 1450, 1530, 1610, 
+1710
+0750, 0840, 0930, 1045, 1125, 1205, 
+1245, 1350, 1430, 1510, 1550, 1635, 
+1735
+Madavara metro station Kadabagere cross
+67 MF51 Madavara metro 
+station Kadabagere cross Madavara metro station Laxmipura, Bayyandahalli 2 26
+0730, 0815, 0905, 1020, 1105, 1145, 
+1225, 1330, 1410, 1450, 1530, 1610, 
+1710
+0750, 0820, 0910, 0940, 1055, 1125, 
+1215, 1245, 1400, 1430, 1520,1550, 
+1650, 1750
+Total 229 2922
+0550, 0620, 0650, 0725, 0755, 0820, 0840, 0900, 0925, 0945, 1020, 1055, 1125, 1200, 
+1230, 1305, 1345, 1410, 1430, 1450, 1510, 1535, 1605, 1625, 1650, 1715, 1740, 1810, 
+1845, 1915, 1950, 2025, 2130
+Mysore road bus station
+0745, 0805, 0850, 0910, 1020, 1105, 1230, 1640, 1800, 1835, 1905, 1940
+Mysore road bus station

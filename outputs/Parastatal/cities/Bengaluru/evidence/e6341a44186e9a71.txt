@@ -192,6 +192,23 @@ Institution registration 
 7
  [https://mybmtc.karnataka.gov.in/storage/pdf-files/instruction.pdf] Instruction (PDF, 46.59 KB)
 
+## Link for the student bus pass fee refund application
+
+## 
+                                                                                        [https://sevaone.karnataka.gov.in/buspassservices/] https://sevaone.karnataka.gov.in/buspassservices/ [https://sevaone.karnataka.gov.in/buspassservices/] 
+
+Vide Government Order No. TD 65 TCB 2026, dated 11.06.2026, the Government of Karnataka has accorded approval for the issuance 
+
+## of free bus passes to all students studying in schools and colleges across the State. 
+
+## These passes are valid for travel on buses operated by the State’s four transport corporations: the Karnataka State Road Transport Corporation, 
+the Bangalore Metropolitan Transport Corporation, the North Western Karnataka Road Transport Corporation, and the Kalyana Karnataka Road Transport Corporation.
+
+## Students who obtained student bus passes for the period from 30.05.2026 to 12.06.2026 are eligible for a refund of the bus pass fee. 
+In this regard, students are required to submit an application for the refund online.
+
+## Accordingly, the Corporation has initiated measures to distribute these free bus passes to students, effective from 13.06.2026.
+
 ## Screen Reader Access
 
  The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.
@@ -230,7 +247,7 @@ Institution registration 
 
  Close
 
- Last Updated On: 16-11-2026
+ Last Updated On: 18-11-2026
 
 ## Follow us
 
@@ -293,9 +310,9 @@ Cookie Settings
 
  [https://www.meity.gov.in] MeitY
 
- Last Updated On: 16-11-2026
+ Last Updated On: 18-11-2026
 
- Visitors Counter: 4,097,036
+ Visitors Counter: 4,111,149
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2

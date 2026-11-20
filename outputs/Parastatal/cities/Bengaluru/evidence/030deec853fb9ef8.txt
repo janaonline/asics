@@ -115,12 +115,12 @@ Note: Supported browser versions are Internet explorer 9+, Mozilla 55+ and Chrom
 
  9
 
- 1
+ 7
+
+ 8
 
  6
 
- 9
-
- 7
+ 2
 
  Top
