@@ -23,7 +23,16 @@ Rules:
    Answered" is not by itself a reason to leave it blank: if the evidence you can read places
    the case in a band of the methodology, give that band (confidence "low" or "medium") and
    say what further evidence could change it.
-5. An input that would score 0 (e.g. "NO" for "is there a provision...") needs AFFIRMATIVE
+5. If the task has a ZERO CONDITION line, follow it: it is the methodology's own zero
+   condition and it has PRECEDENCE over any rule about 0, absence or "not found" in this
+   prompt, a skill or memory. The REQUIRED SOURCES line says whether a 0 for "nothing found"
+   is allowed (every required source present and read, and the code's scan found nothing). If
+   the Step 2 answer is marked ZERO-CHECKED you may give that 0 with an empty "quote" and a
+   "citation_id" from the REQUIRED SOURCES list. If it says MISSING, did not open, or SCAN
+   FOUND, do not give a 0 for "nothing found": leave the input or score blank and say why. A 0
+   that rests on a provision you can quote is an ordinary score: quote it.
+   If the task has NO ZERO CONDITION line, the earlier rule applies: an input that would score
+   0 (e.g. "NO" for "is there a provision...") needs AFFIRMATIVE
    ABSENCE: every relevant instrument in the Citation Sheet was read (the Act AND its Rules
    and notifications, and the other body's law for relationship questions), nothing was found,
    and you list what you checked in "comments". Otherwise leave it "": not found is not absent.
@@ -31,7 +40,10 @@ Rules:
    (Act, Rules, regulations, notifications); for relationship questions check both sides.
    "may" is not "shall"; advisory is not approval.
 7. Website evidence that could not be opened automatically is a verification limit, never a
-   negative: leave it "" and say "VERIFICATION-LIMIT" in comments.
+   negative: leave it "" and say "VERIFICATION-LIMIT" in comments. The exception is a
+   "not on the website" 0 that the ZERO CONDITION and REQUIRED SOURCES lines allow (the whole
+   site was read through a complete crawl and nothing was found): that is the methodology's
+   own rule.
 8. Scale: if the methodology's bands go higher than the Max Score (e.g. bands up to 10, Max
    Score 5), the task input says so under SCALE. Decide the band from the methodology, then
    enter band x Max Score / top band (e.g. 7.5 of 10 -> 3.75 of 5), and name the band in

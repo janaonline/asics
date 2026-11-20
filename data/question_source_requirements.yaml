@@ -1,0 +1,1025 @@
+# Which sources a question needs before a score of 0 is allowed (Parastatal category).
+#
+# One row per scored question (52). Built from the question bank's "Check ..." sentence and its
+# Evidence / Source Requirement; each row is derived twice and the final row is the UNION of the two
+# (stricter). review_status "draft": nothing here has been reviewed by a person. When unsure, a row
+# requires MORE: an over-strict row only keeps today's blank, a loose row could allow a false zero.
+#
+# requires: a list of groups. Every group needs at least one usable row whose "useful_for" carries
+#   one of the group's tags (the finder's tags: [ACT], [RULES], [TCP], [ULG-LAW], [BUDGET], [AR], ...).
+#   LEGAL_BASE = the parent Act ([ACT]) of a statutory agency, or the constitution document
+#   ([CONSTITUTION]: MoA/AoA, incorporation order, board resolution) of an agency with no parent Act
+#   (a general "Companies Act" or "Societies Registration Act" is not a parent Act).
+#   WEBPAGE = the pages of the agency's own site reached from the home page menu, counted only when the
+#   site crawl is COMPLETE (every menu link captured; the home row's Notes say "SITE-CRAWL: complete").
+#   Without it the gate answers "Missing: complete site crawl" (see docs/REQUIRED_SOURCES_DECISIONS.md).
+# scan: the full-text scan. A passage that matches every pattern in the list blocks an
+#   absence-based zero (patterns are regular expressions, case-insensitive).
+# zero_kind: absence | condition | mixed | none (none: the methodology states no zero condition).
+legal_base_overrides: {}  # e.g. {WATCO: constitution}; the classifier reads Governing Act text otherwise
+questions:
+  - code: UPD 1a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    - [TCP]
+    check: Check the relevant Parastatal Act/Rules and the State Town and Country Planning Act to determine whether
+      the parastatal is required to coordinate with the ULG(s) while preparing its sectoral plans.
+    evidence: Relevant Parastatal Act; applicable Town and Country Planning (T&CP) Act.
+    zero_sentences: [0 — No formal role for the ULG in preparation of the parastatal’s plan can be established.]
+    scan: [plan|planning|scheme|development plan|master plan, consult|concurrence|coordinat|municipal|urban local|ULG|local
+        authorit|local bod|city corporation]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'RULES', 'TCP'], Evidence gives ['LEGAL_BASE', 'TCP']; the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES, TCP]
+    pass2_evidence: [LEGAL_BASE, TCP]
+  - code: UPD 1b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    - [WEB]
+    check: Check the latest available plan-making cycle for evidence of ULG participation in the parastatal’s plan-making
+      process, irrespective of whether such participation is legally mandated.
+    evidence: Evidence may include plan documents, consultation records, meeting minutes, ULG resolutions/comments,
+      responses to ULG inputs, or information published on the parastatal website.
+    zero_sentences: [Score 0 where there is no such evidence.]
+    scan: [plan, ULG|municipal|urban local|local authorit|local bod|councillor|mayor|consult]
+    review_status: draft
+    needs_decision: true
+    why: 'Check sentence gives [''PLANS''], Evidence gives [''MINUTES'', ''PLANS'', ''WEB'']; the union is used; ''evidence
+      may include'' list: not all items required'
+    note: ''
+    pass1_check: [PLANS]
+    pass2_evidence: [MINUTES, PLANS, WEB]
+  - code: UPD 2a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [TCP]
+    check: Check the relevant Parastatal Act and Town and Country Planning Act.
+    evidence: Relevant Parastatal Act; applicable Town and Country Planning (T&CP) Act.
+    zero_sentences: [Score 0 if no such provision exists.]
+    scan: [plan|planning|master plan|development plan, consult|concurrence|coordinat|municipal|urban local|ULG|local
+        authorit|local bod|city corporation]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, TCP]
+    pass2_evidence: [LEGAL_BASE, TCP]
+  - code: UPD 2b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    check: Check the Board’s current water supply/sewerage master plan, or equivalent sectoral planning document,
+      together with the applicable Master Plan.
+    evidence: Water supply entity's current water supply/sewerage master plan or equivalent sectoral planning document;
+      applicable Master Plan/Development Plan/Metropolitan or Regional Plan; land-use conversion/regularisation records
+      for major treatment plants or trunk infrastructure, where available.
+    zero_sentences: [Score 0 if there is no identifiable evidence that the Master Plan or its spatial/population framework
+        informs water planning.]
+    scan: ['master plan|development plan|land[- ]use|regional plan|metropolitan plan|spatial|zoning', water|sewer|supply|treatment|plan]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [PLANS]
+    pass2_evidence: [PLANS]
+  - code: UPD 2c
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [TCP]
+    check: Check the relevant Parastatal Act and Town and Country Planning Act.
+    evidence: Relevant Parastatal Act; applicable Town and Country Planning (T&CP) Act.
+    zero_sentences: [Score 0 if no such provision exists.]
+    scan: [plan|planning|master plan|development plan, consult|concurrence|coordinat|municipal|urban local|ULG|local
+        authorit|local bod|city corporation]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, TCP]
+    pass2_evidence: [LEGAL_BASE, TCP]
+  - code: UPD 2d
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    check: Check the transport corporation's current transport/mobility master plan, network expansion plan, or equivalent
+      sectoral planning document, together with the applicable city/municipal Master Plan.
+    evidence: Transport corporation's current mobility/network plan; applicable Master Plan/Development Plan/Metropolitan
+      or Regional Plan; land-use conversion/regularisation records for major transport infrastructure, where available.
+    zero_sentences: [Score 0 if there is no identifiable evidence that the Master Plan or its spatial/population framework
+        informs transport planning.]
+    scan: ['master plan|development plan|land[- ]use|regional plan|metropolitan plan|spatial|zoning', transport|bus|route|network|mobility|plan]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [PLANS]
+    pass2_evidence: [PLANS]
+  - code: UPD 3a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the Water Supply Board/utility Act, rules, tariff regulations and other binding legal instruments.
+      Assess whether the legal framework requires the Board to address the needs of economically vulnerable groups
+      and women in decisions relating to access, affordability and service delivery.
+    evidence: Water supply entity/utility Act, water and sanitation legislation, tariff regulations, service rules,
+      State policies and other applicable binding instruments
+    zero_sentences: ['Score 0: No specific legal provision addressing affordability or access for economically vulnerable
+        groups is found.', 'Score 0: No specific legal provision addressing women’s access or service-delivery needs
+        is found.']
+    scan: [afford|poor|vulnerable|economically weaker|BPL|concession|subsid|lifeline|women|gender|slum|tariff|disadvantaged,
+      shall|may|must|require|mandator|provid|obligat|direct|entitl|ensure|power|empower|function|rate|charge|free]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE, RULES]
+  - code: UPD 3b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    - [TARIFF]
+    check: Check the Board’s current water supply/sanitation plan, applicable policy documents, active schemes, tariff/connection-concession
+      orders and service or design standards. Assess whether the needs of economically vulnerable groups and women
+      are recognised and translated into specific policies, schemes, targets, projects or service-delivery measures.
+    evidence: Water supply entity's current water supply/sanitation plan; scheme/coverage documents; tariff or connection-concession
+      orders; design/service standards.
+    zero_sentences: [Score 0 — No identifiable consideration of affordability or service access for economically vulnerable
+        groups is found., 'Score 0: No identifiable consideration of women’s access or service-delivery needs is found.',
+      Score 0 if there is no identifiable equity/accessibility consideration.]
+    scan: [afford|poor|vulnerable|economically weaker|BPL|concession|subsid|lifeline|women|gender|slum|tariff|disadvantaged,
+      scheme|plan|connection|order|standard|policy|provid]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [PLANS, TARIFF]
+    pass2_evidence: [PLANS, TARIFF]
+  - code: UPD 4a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the transport authority/corporation Act, other Acts (Companies Act/Road Transport Corporation Act/Motor
+      Vehicles Act), rules, fare policies and other binding policy instruments.
+    evidence: Transport authority/corporation Act, applicable transport legislation, rules, service regulations, fare
+      policies and other binding policy instruments
+    zero_sentences: ['Score 0: No specific legal provision addresses the mobility needs of economically vulnerable
+        groups.', 'Score 0: No specific legal provision addressing women’s safety or mobility needs is found.']
+    scan: [afford|concession|fare|pass\b|women|student|senior|disab|vulnerable|poor, shall|may|must|require|mandator|provid|obligat|direct|entitl|ensure|power|empower|function|free|rate]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE, RULES]
+  - code: UPD 4b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    - [AR]
+    - [TARIFF]
+    check: Check the Corporation’s current transport/mobility plan, service-delivery framework, applicable policy
+      documents and active schemes. Assess whether the mobility needs of identified vulnerable groups are recognised
+      and translated into specific policies, schemes, targets, projects or service-delivery measures.
+    evidence: Transport Corporation's current transport/mobility plan; fare policy/concession orders; service design
+      standards or specifications; annual report.
+    zero_sentences: ['Score 0: No identifiable consideration of affordability or service access for economically vulnerable
+        groups is found.', 'Score 0: No identifiable consideration of women’s mobility or safety needs is found.']
+    scan: [afford|concession|fare|pass\b|women|student|senior|disab|vulnerable|poor, plan|scheme|policy|order|provid|standard]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['PLANS'], Evidence gives ['AR', 'PLANS', 'TARIFF']; the union is used
+    note: ''
+    pass1_check: [PLANS]
+    pass2_evidence: [AR, PLANS, TARIFF]
+  - code: UPD 5a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the Water Supply Board/utility Act, rules, service regulations, and other binding legal instruments.
+      Assess whether the legal framework requires the Board to integrate environmental sustainability into planning
+      and delivery of water and sanitation services.
+    evidence: Water supply entity/utility Act, water and sanitation legislation, service rules, State water policies,
+      groundwater/source-protection provisions and other binding instruments
+    zero_sentences: ['Score 0: No specific legal requirement is found.']
+    scan: [source|groundwater|conserv|reuse|recycl|wastewater|catchment|protect|harvest|pollut, shall|may|must|require|mandator|provid|obligat|direct|entitl|ensure|power|empower|function]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE, RULES]
+  - code: UPD 5b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    - [AR]
+    check: Check the Board’s current water supply/sanitation plan, applicable policy documents, active programmes/schemes
+      and operational frameworks. Assess whether environmental sustainability considerations are translated into specific
+      policies, programmes, targets, projects or operational measures.
+    evidence: Water supply entity's current water supply/sanitation plan; source-protection or conservation programme
+      documents; wastewater treatment/reuse scheme documents; annual report.
+    zero_sentences: ['Score 0: No identifiable environmental sustainability consideration is found.']
+    scan: [source|groundwater|conserv|reuse|recycl|wastewater|catchment|protect|harvest|treatment, plan|scheme|programme|project|policy]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['PLANS'], Evidence gives ['AR', 'PLANS']; the union is used
+    note: ''
+    pass1_check: [PLANS]
+    pass2_evidence: [AR, PLANS]
+  - code: UPD 6a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the transport authority/corporation Act (Road Transport Corporation Act/Motor Vehicles Act/Companies
+      Act), rules, and other binding legal instruments. Assess whether the legal framework requires the Corporation
+      to integrate environmental sustainability into its planning, investment and service-delivery decisions.
+    evidence: Transport authority/corporation Act, applicable transport legislation, rules, mobility/transport policies
+      and other binding instruments
+    zero_sentences: ['Score 0: No specific legal requirement requiring the Corporation to consider environmental sustainability
+        in its planning, investment or service-delivery functions is found.']
+    scan: [environment|emission|electric|sustainab|clean|green|pollution|climate|CNG|fuel, shall|may|must|require|mandator|provid|obligat|direct|entitl|ensure|power|empower|function]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE, RULES]
+  - code: UPD 6b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    - [AR]
+    check: Check the Corporation’s current fleet plan, route/network plan, mobility or service-delivery plan, environmental/sustainability
+      policy, active programmes/schemes and annual reports. Assess whether environmental sustainability considerations
+      are translated into specific policies, programmes, targets, projects or operational measures, irrespective of
+      whether such measures are legally mandated.
+    evidence: Transport Corporation's fleet plan; route/network plan; environmental/sustainability policy; annual
+      report.
+    zero_sentences: ['Score 0: No identifiable environmental sustainability measure is found.']
+    scan: [environment|emission|electric|sustainab|clean|green|pollution|climate|CNG|fuel|fleet, plan|scheme|programme|policy|bus|route]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [AR, PLANS]
+    pass2_evidence: [AR, PLANS]
+  - code: DPG 1a
+    level: Law/policy
+    zero_kind: condition
+    requires:
+    - [LEGAL_BASE]
+    - [ULG-LAW]
+    check: Step 1 — Check devolution status under the Municipal Act.
+    evidence: Relevant Parastatal Act; State Municipal Act — record the specific provisions establishing devolution
+      status and (where applicable) the functional carve-out.
+    zero_sentences: [Score 0 if both Acts assign the same function with no distinction between them., 'Score 0 if
+        the assigned aspects overlap, or if the parastatal''s aspect is not clearly specified in its Act.']
+    scan: []
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, ULG-LAW]
+    pass2_evidence: [LEGAL_BASE, ULG-LAW]
+  - code: DPG 1b
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [ULG-LAW]
+    check: Check the relevant Parastatal Act and Municipal Act as the primary sources to determine the parastatal’s
+      territorial/geographic jurisdiction.
+    evidence: Enabling Act, 12th Schedule mapping exercise
+    zero_sentences: [Score 0 — The parastatal’s jurisdiction cannot be clearly established from the applicable legislation
+        or subsequent legally valid notifications/orders.]
+    scan: [jurisdiction|territor|local area|limits of|notified area|extent of|boundar, municipal|urban local|ULG|local
+        authorit|local bod|city corporation|corporator|councillor|mayor|panchayat]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'ULG-LAW'], Evidence gives ['LEGAL_BASE']; the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, ULG-LAW]
+    pass2_evidence: [LEGAL_BASE]
+  - code: DPG 2a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [ULG-LAW]
+    - [BOARD-LIST]
+    - [WEB]
+    check: Check the relevant Parastatal Act and Municipal Act as primary sources to determine the composition of
+      the parastatal’s governing board and whether the legislation provides for ULG representatives. Where the composition,
+      status or voting rights of members are not clear from the applicable legislation, check the parastatal’s official
+      website or current board-member list.
+    evidence: Composition clause of enabling Act; current board member list; Also check as per the parastatal website.
+    zero_sentences: ['Score 0: No ULG representation on the governing board is provided for or found.']
+    scan: [member|board|composition|constitut|representative|nominat, municipal|urban local|ULG|local authorit|local
+        bod|city corporation|corporator|councillor|mayor|panchayat]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'ULG-LAW', 'WEB'], Evidence gives ['BOARD-LIST', 'LEGAL_BASE', 'WEB'];
+      the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, ULG-LAW, WEB]
+    pass2_evidence: [BOARD-LIST, LEGAL_BASE, WEB]
+  - code: DPG 2b
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [ULG-LAW]
+    check: Check the relevant Parastatal Act and Municipal Act for provisions requiring the parastatal to submit or
+      table its plans, budgets and reports before the ULG/council.
+    evidence: Plan/Budget preparation/Annual report preparation clause of the enabling Act of the relevant parastatal
+    zero_sentences: [Score 0 for each component where no such requirement exists.]
+    scan: [submit|table|lay|laid|place before|report|budget|plan|annual, municipal council|city council|ULG|urban
+        local|municipal corporation|local authorit|local bod|councillor|mayor]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'ULG-LAW'], Evidence gives ['LEGAL_BASE']; the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, ULG-LAW]
+    pass2_evidence: [LEGAL_BASE]
+  - code: DPG 3
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    check: Check the official website of the relevant parastatal.
+    evidence: Live URL, screenshot/web-archive capture, date of check of the website of the relevant parastatal
+    zero_sentences: [Score 0 if no official website is found.]
+    scan: ['web-?site|portal|url|online', official|www|http|\.in]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: A zero ('no official website is found') cannot be proved from the Citation Sheet; the gate never allows
+      it.
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 4
+    level: Law/Policy
+    zero_kind: none
+    requires: []
+    check: 'Is the parastatal mandated to publish key financial, operational, and civic data/information in accessible,
+      open-data formats? [Note: The scoring of this question has not been undertaken in the manual exercise as he
+      universe of legislation and subordinate legislation governing the parastatals are not fully clear. Awaiting
+      support from the state teams before manually scoring this question.]'
+    evidence: ''
+    zero_sentences: []
+    scan: []
+    review_status: draft
+    needs_decision: false
+    why: 'empty Evidence cell: derived from the Check sentence only'
+    note: ''
+    pass1_check: [LEGAL_BASE]
+    pass2_evidence: []
+  - code: DPG 5a
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Annual budget Part A: Availability and currency — 0.625 Score 0.625: Budget for the current FY or either
+      of the immediately preceding two FYs is publicly available on the website. Score 0: Budget cannot be found/accessed
+      on the website., or the latest available budget is older than the permitted period. Part B: Open-data format
+      — 0.625 Score 0.625: Budget information is available in an open, struc'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.625: Budget for the current FY or either of the immediately preceding two FYs is publicly
+        available on the website.', 'Score 0: Budget cannot be found/accessed on the website., or the latest available
+        budget is older than the permitted period.', 'Score 0.625: Budget information is available in an open, structured
+        and reusable data format, such as:', 'Score 0 — Budget information is available only in a non-open or non-reusable
+        format, including:']
+    scan: [budget]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 5b
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Quarterly financial statements Part A: Availability and currency —0.625 Score 0.625 —Quarterly financial
+      statements are publicly available on the website, and the latest available statements are not older than two
+      years. Score 0 — Quarterly financial statements cannot be found/accessed on the website, or the latest available
+      statements are older than the permitted period. Part B: Open-data format '
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.625 —Quarterly financial statements are publicly available on the website, and the latest
+        available statements are not older than two years.', 'Score 0 — Quarterly financial statements cannot be found/accessed
+        on the website, or the latest available statements are older than the permitted period.', 'Score 0.625 — Quarterly
+        financial statements are available in an open, structured and reusable data format, such as:', 'Score 0 —
+        Quarterly financial information is available only in a non-open or non-reusable format, including:']
+    scan: [quarterly|financial statement|results]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 5c
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Annual report Part A: Availability and currency —0.625 Score 0.625: The annual report is on the website,
+      and the latest available report is not older than two years. Score 0: The annual report cannot be found/accessed
+      on the website, or the latest available report is older than the permitted period. Part B: Open-data format
+      — 0.625 Score 0.625: Key information contained in the annual report is als'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.625: The annual report is on the website, and the latest available report is not older
+        than two years.', 'Score 0: The annual report cannot be found/accessed on the website, or the latest available
+        report is older than the permitted period.', 'Score 0.625: Key information contained in the annual report
+        is also available in an open, structured and reusable format, such as:', 'Score 0: The annual report is available
+        only as a document or other non-structured format, including:']
+    scan: [annual report]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 5d
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Data on civic works/ projects Part A: Availability and currency — 0.625 Score 0.625: Data on civic works/projects
+      and/or information on ongoing projects is on the website, and the latest available information is not older
+      than two years. Score 0: Data on civic works/projects and/or information on ongoing projects cannot be found/accessed
+      on the website, or the latest available information is older'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.625: Data on civic works/projects and/or information on ongoing projects is on the website,
+        and the latest available information is not older than two years.', 'Score 0: Data on civic works/projects
+        and/or information on ongoing projects cannot be found/accessed on the website, or the latest available information
+        is older than two years.', 'Score 0.625 — Information on civic works/projects and/or ongoing projects is available
+        in an open, structured and reusable format, such as:', 'Score 0 — Information is available only in a non-structured
+        or non-reusable format, such as:']
+    scan: [works|project|tender|civic|contract]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 5e
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Meeting minutes of governing board Part A: Check availability and currency — 0.625 Score 0.625: At least
+      one set of minutes from the current FY or immediately preceding FY is on the website. Score 0: Meeting Minutes
+      cannot be found/accessed on the website or is older than the permitted period. Record the FY/year/date of the
+      latest information found in a separate evidence field even where the score'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.625: At least one set of minutes from the current FY or immediately preceding FY is
+        on the website.', 'Score 0: Meeting Minutes cannot be found/accessed on the website or is older than the permitted
+        period.', Record the FY/year/date of the latest information found in a separate evidence field even where
+        the score is 0., 'Score 0.625: Meeting Minutes available in a searchable/text-readable and downloadable document
+        (Searchable PDF, HTML, DOC/DOCX)', 'Score 0: Meeting Minutes is available but does not meet that standard
+        (Scanned/image-only minutes; image gallery)']
+    scan: [minutes|board meeting|proceedings|meeting]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 5f
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Rules, regulations and documents pertaining to the parastatal Part A: Availability and currency — 0.625
+      Score 0.625: At least the parastatal''s parent act, allied rules, and government orders or notifications are
+      available on the website. Score 0:Score 0: If the parastatal''s parent act/enabling legislation is not found
+      on the website. Part B: Open-data format — 0.625 Score 0.625 — The parastatal''s '
+    evidence: ''
+    zero_sentences: ['Score 0.625: At least the parastatal''s parent act, allied rules, and government orders or notifications
+        are available on the website.', 'Score 0:Score 0: If the parastatal''s parent act/enabling legislation is
+        not found on the website.', 'Score 0.625 — The parastatal''s parent act, allied rules, and government orders
+        or notifications are available in a searchable/text-readable and downloadable document (Searchable PDF, HTML,
+        DOC/DOCX)', 'Score 0: Parastatal''s parent act, allied rules, and government orders or notifications are available
+        but do not meet that standard given above .']
+    scan: ['\bact\b|rules|notification|government order|\bG\.?O\b|regulation|legislation']
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only; website question: home page plus one more website
+      page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: []
+  - code: DPG 5g
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Decision-making process Part A: Check availability — 0.625 Score 0.208 if each of the following are publicly
+      available on the website: (1) The parastatal’s organisational structure/organogram; and (2) Details of key officers,
+      including name/designation and at least one official contact detail (phone number and/or email address). (3)
+      Current PIO/APIO details are available Score 0 if none are on the'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.208 if each of the following are publicly available on the website:', Score 0 if none
+        are on the website., 'Score 0.208 each if the organisational strucure/organogram, details of key officers
+        and current PIO/APIO details are available in a searchable and readable format, such as:', 'Score 0 if each
+        are only available non-searchable/non-readable format, such as an image-only organogram, scanned list or image-based
+        directory/PIO details.']
+    scan: [decision|policy|resolution|procedure|process|standard operating|guideline]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 5h
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Service-level benchmarks and performance reports Part A: Availability and currency — 0.625 Score 0.625:
+      Service-level benchmark/performance information is on the website, and the latest available information is not
+      older than two years. Score 0 — Performance information cannot be found/accessed on the website, or the latest
+      available information is older than the permitted period. Part B: Open-dat'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0.625: Service-level benchmark/performance information is on the website, and the latest
+        available information is not older than two years.', 'Score 0 — Performance information cannot be found/accessed
+        on the website, or the latest available information is older than the permitted period.', 'Score 0.625 — Performance
+        information is available in an open, structured and reusable format, such as:', 'Score 0: Performance information
+        is available only in a non-open or non-reusable format, including:']
+    scan: ['service level|benchmark|performance|SLB|citizen''?s? charter|KPI']
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 6
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: 'Has the parastatal published a citizen charter? Part A: Check availability and currency — 5.0 Score 10:
+      If there is a currently applicable Charter is available on the website. Do not treat it as outdated solely because
+      it predates the preceding FY if it remains in force. There may be no annual publication requirement; Score 0:
+      Charter cannot be found/accessed on the website.'
+    evidence: Website screenshots/archived URLs with date of access, for each document type
+    zero_sentences: ['Score 0: Charter cannot be found/accessed on the website.']
+    scan: ['charter|citizen''?s? charter|service guarantee']
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 7a
+    level: Implementation
+    zero_kind: none
+    requires: []
+    check: 'Check the parastatal’s official website and other officially notified grievance channels. Score based
+      on the following components:'
+    evidence: "Relevant parastatal's official website \n\n\nDetailed evidence information provided in the methodology\
+      \ column (I 33)"
+    zero_sentences: []
+    scan: []
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: DPG 7b
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the parastatal’s official website and check whether there are dedicated portal through which citizens
+      can apply for access to the different services the parastatla provides.
+    evidence: ''
+    zero_sentences: ['Score 0, if such portals are inaccessible, defunct or unavailable on the website.']
+    scan: ['portal|apply|bill|pay|connection|pass\b|online|e-?service|approval']
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only; website question: home page plus one more website
+      page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: []
+  - code: DPG 7c
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the parastatal’s official website and identify whether it has information on the union, state or
+      parastatal specific schemes it implements.
+    evidence: ''
+    zero_sentences: ['Score 0, if information in inaccessible or unavailable on the website.']
+    scan: [scheme|yojana|mission|programme|AMRUT|PMAY|Swachh|scheme]
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only; website question: home page plus one more website
+      page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: []
+  - code: DPG 8a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    - [TCP]
+    - [ULG-LAW]
+    check: Check the parastatal Act and rules first. Also review the applicable T&CP/planning Act, Municipal Act to
+      identify whether a citizen-participation requirement applies to the parastatal directly or to all authorities
+      preparing the relevant category of plan.
+    evidence: Parastatal Act and rules; applicable T&CP Act; State Municipal Act.
+    zero_sentences: ['Score 0 if no applicable requirement is found. Record the legal provision, plan type, form of
+        participation prescribed, and whether the provision uses mandatory or discretionary language.']
+    scan: [consult|participat|objection|suggestion|hearing|public notice|stakeholder|citizen, plan|draft|publish|notice|scheme]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES, TCP, ULG-LAW]
+    pass2_evidence: [LEGAL_BASE, RULES, TCP, ULG-LAW]
+  - code: DPG 8b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [PLANS, SECTORPLAN]
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the parastatal’s official website and the latest applicable plan/planning exercise. Check the plan
+      document, consultation reports, public notices, minutes/proceedings of consultations or public hearings, and
+      other relevant records available on the website.
+    evidence: Plan document; consultation reports; public notices; minutes/proceedings of consultations or hearings
+      on the parastatal's official website; media reports.
+    zero_sentences: ['Score 0, if there is no evidence for public consultations in the plan preperation process taking
+        place.']
+    scan: [consult|participat|objection|suggestion|hearing|public notice|stakeholder|citizen, plan|draft|publish|notice|scheme]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter); ''evidence may include'' list:
+      not all items required'
+    note: ''
+    pass1_check: [PLANS, WEB]
+    pass2_evidence: [PLANS, WEB]
+  - code: SC 1
+    level: Implementation (Numeric)
+    zero_kind: absence
+    requires:
+    - [BUDGET]
+    check: 'Check the ULG''s budget documents, record for each year: own revenue (tax and non-tax revenue, excluding
+      all government grants and transfers), other revenue, capital receipts, revenue expenditure and capital expenditure.
+      Enter all amounts in crore and population in lakh.'
+    evidence: Annual budget of the last three financial years of the relevant parastatal.
+    zero_sentences: ['If budget data for at least 2 years is not available, score 0.']
+    scan: [own revenue|revenue|expenditure|receipts|budget estimate|actuals]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [BUDGET]
+    pass2_evidence: [BUDGET]
+  - code: SC 2
+    level: Implementation (Numeric)
+    zero_kind: absence
+    requires:
+    - [BUDGET]
+    - [ACCOUNTS]
+    check: Check the budget (and/or financial statements, as applicable) of the parastatal for the last three years.
+    evidence: Latest annual budget and capital-expenditure accounts of the relevant parastatal; population figure
+      with source.
+    zero_sentences: ['If budget data for at least 2 years is not available, score 0.']
+    scan: [capital|capex|expenditure|population]
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [ACCOUNTS, BUDGET]
+    pass2_evidence: [ACCOUNTS, BUDGET]
+  - code: SC 3
+    level: Implementation (Numeric)
+    zero_kind: mixed
+    requires:
+    - [BUDGET]
+    - [ACCOUNTS]
+    check: For each year, record the budgeted income (the original Budget Estimate, BE) and the actual income of the
+      parastatal, in crore.
+    evidence: Budget documents and audited accounts for the same financial year, compared side by side
+    zero_sentences: [Score 10 if the average variance is 15% or below; score 0 if it is above 15%., 'If budget data
+        for at least 2 years is not available, score 0.']
+    scan: [income|budget estimate|\bBE\b|actual|revenue]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['BUDGET'], Evidence gives ['ACCOUNTS', 'BUDGET']; the union is used
+    note: ''
+    pass1_check: [BUDGET]
+    pass2_evidence: [ACCOUNTS, BUDGET]
+  - code: SC 4a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the relevant Parastatal Act and rules to determine whether preparation of annual financial statements
+      or annual accounts are legally mandated.
+    evidence: Enabling act of the relevant parastatal
+    zero_sentences: [Score 0 if no provision for preparation of a annual financial statements or annual accounts is
+        found.]
+    scan: ['annual (financial )?statement|annual accounts|accounts|balance sheet|financial statement', shall|prepare|maintain|submit|publish]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'RULES'], Evidence gives ['LEGAL_BASE']; the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE]
+  - code: SC 4b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the relevant parastatal’s website to determine whether annual financial statements or annual accounts
+      have been prepared and is publicly available, irrespective of whether it is legally mandated.
+    evidence: Website of the relevant parastatal
+    zero_sentences: [Score 0 if no annual financial statements or annual accounts are publicly available online.]
+    scan: ['annual (financial )?statement|annual accounts|accounts|balance sheet|financial statement']
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: SC 5a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the relevant Parastatal Act and rules to determine whether the parastatal is legally mandated to
+      conduct and prepare internal audits.
+    evidence: Enabling act of the relevant parastatal
+    zero_sentences: [Score 0 if no provision for preparation of internal audit reports is found.]
+    scan: [internal audit|audit, shall|appoint|conduct|prepare|maintain|submit]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'RULES'], Evidence gives ['LEGAL_BASE']; the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE]
+  - code: SC 5b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the parastatal website for audit documents, if the parastatal has a position of internal auditor,
+      or if there are tenders or notices put out to appoint an internal auditor.
+    evidence: Website of the relevant parastatal
+    zero_sentences: ['Score 0: Neither is found.']
+    scan: [internal audit|internal auditor|audit]
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: SC 6a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the relevant Parastatal Act and rules to determine whether preparation of annual budget are legally
+      mandated to be prepared within a specific time period
+    evidence: ''
+    zero_sentences: [Score 0 if no provision for preparation of a annual budget within a specified time period is
+        found.]
+    scan: [annual budget|budget estimate|estimates|budget, shall|before|within|by the|date|month|march|february|january|submit|prepare]
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only'
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: []
+  - code: SC 6b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the relevant parastatal’s website to determine whether latest annual budget has been prepared and
+      is publicly available.
+    evidence: ''
+    zero_sentences: [Score 0 if there are no mandated timelines or if the annual budget is not publically available]
+    scan: [budget]
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only; website question: home page plus one more website
+      page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: []
+  - code: SC 7a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the relevant Parastatal Act and rules to determine whether preparation of annual financial statements
+      or annual accounts are legally mandated to be prepared within a specific time period
+    evidence: ''
+    zero_sentences: [Score 0 if no provision for preparation of a annual financial statements or annual accounts within
+        a specified time period is found.]
+    scan: [annual accounts|accounts|financial statement|balance sheet, shall|before|within|by the|date|month|march|submit|prepare]
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only'
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: []
+  - code: SC 7b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the relevant parastatal’s website to determine whether annual financial statements/annual accounts
+      have been prepared and is publicly available.
+    evidence: ''
+    zero_sentences: [Score 0 if there are no mandated timelines or if the annual financial statements/annual accounts
+        are not publically available.]
+    scan: [annual accounts|financial statement|accounts|balance sheet]
+    review_status: draft
+    needs_decision: true
+    why: 'empty Evidence cell: derived from the Check sentence only; website question: home page plus one more website
+      page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: []
+  - code: SC 8a
+    level: Law/Policy
+    zero_kind: absence
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the relevant Parastatal Act and rules to determine whether preparation of a medium-term (3–5 year)
+      and/or long-term (>5 year) fiscal plan is legally mandated.
+    evidence: Enabling act of the relevant parastatal
+    zero_sentences: [Score 0 if no provision for preparation of a medium-term or long-term fiscal plan is found.]
+    scan: ['medium[- ]term|long[- ]term|fiscal plan|perspective plan|five[- ]year|three[- ]year|financial plan|business
+        plan', shall|prepare|plan]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['LEGAL_BASE', 'RULES'], Evidence gives ['LEGAL_BASE']; the union is used
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE]
+  - code: SC 8b
+    level: Implementation
+    zero_kind: absence
+    requires:
+    - [WEB]
+    - [WEBPAGE]
+    check: Check the relevant parastatal’s website to determine whether a medium-term (3–5-year) and/or long-term
+      (> 5-year) fiscal plan has been prepared and is publicly available, irrespective of whether such a plan is legally
+      mandated.
+    evidence: Website of the relevant parastatal
+    zero_sentences: [Score 0 if no medium-term or long-term fiscal plan is publicly available online.]
+    scan: ['medium[- ]term|long[- ]term|fiscal plan|perspective plan|five[- ]year|three[- ]year|financial plan|business
+        plan']
+    review_status: draft
+    needs_decision: false
+    why: 'website question: home page plus one more website page required (stricter)'
+    note: ''
+    pass1_check: [WEB]
+    pass2_evidence: [WEB]
+  - code: SC 9
+    level: Implementation
+    zero_kind: mixed
+    requires:
+    - [ACCOUNTS]
+    - [WEB]
+    check: Check the parastatal website for the latest available audited annual financial statements to determine
+      whether it follows a double-entry accounting system in practice.
+    evidence: Parastatal website; latest available audited annual financial statements
+    zero_sentences: ['Score 0: if only a Receipts and Payments Statement or other cash-based statement is available;
+        the applicable accounting framework refers to or requires double-entry accounting, but the published financial
+        statements do not demonstrate its use in practice; or']
+    scan: ['double[- ]entry|accrual|cash basis|single[- ]entry|balance sheet|accounting']
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [ACCOUNTS, WEB]
+    pass2_evidence: [ACCOUNTS, WEB]
+  - code: SC 10
+    level: Law/Policy
+    zero_kind: condition
+    requires:
+    - [LEGAL_BASE]
+    - [RULES]
+    check: Check the relevant Parastatal Act and rules to determine whether the law mandates a minimum tenure of at
+      least two years for the chief executive/executive authority.
+    evidence: Relevant Parastatal Act; rules governing appointment, tenure and removal of the executive authority/chief
+      executive.
+    zero_sentences: [Score 0 if the law does not mandate a minimum tenure of at least two years.]
+    scan: ['tenure|term of office|hold office|minimum term|fixed term|term of (not )?(less|more)', 'chief executive|managing
+        director|executive authority|general manager|CEO|commissioner|vice[- ]chairman']
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [LEGAL_BASE, RULES]
+    pass2_evidence: [LEGAL_BASE, RULES]
+  - code: SC 11
+    level: Implementation (Numeric)
+    zero_kind: condition
+    requires:
+    - [CE-APPT]
+    - [WEB]
+    check: Check appointments and transfers of the chief executive/executive authority over the last five years. Use
+      the parastatal’s official website as the primary source. If these do not provide a complete appointment history,
+      supplement the assessment with reliable secondary sources, such as the SUPREMO portal for the executive record
+      sheet of IAS officers (where relevant), RTI requests with the parastat
+    evidence: Newspaper reports, Gazette notifications of appointment/transfer and website of relevant parastatal
+    zero_sentences: [Score 0 if more than 3 chief executives have served during the five-year period.]
+    scan: []
+    review_status: draft
+    needs_decision: false
+    why: ''
+    note: ''
+    pass1_check: [CE-APPT, WEB]
+    pass2_evidence: [CE-APPT, WEB]
+  - code: SC 12a
+    level: Implementation (Numeric)
+    zero_kind: absence
+    requires:
+    - [BUDGET]
+    - [AR]
+    - [WEB]
+    check: Collect data on the parastatal's working staff strength (permanent and contractual staff) from the ULG
+      website, budget documents/establishment schedules, or RTI/formal data request where necessary.
+    evidence: Staffing records on the website/ RTI  and/or formal data request with the parastatal/ annual report
+    zero_sentences: ['If staffing data is not available, score 0.']
+    scan: [staff|employees|sanctioned|working strength|posts|establishment|cadre, number|total|permanent|contract|strength|posts]
+    review_status: draft
+    needs_decision: true
+    why: Check sentence gives ['BUDGET', 'STAFF', 'WEB'], Evidence gives ['AR', 'STAFF', 'WEB']; the union is used
+    note: ''
+    pass1_check: [BUDGET, STAFF, WEB]
+    pass2_evidence: [AR, STAFF, WEB]
+  - code: SC 12b
+    level: Implementation (Numeric)
+    zero_kind: none
+    requires: []
+    check: Collect sex-disaggregated data on the parastatal's permanent and contractual staff for the latest assessment
+      year.
+    evidence: Staffing records on the website/ RTI  and/or formal data request with the parastatal/ annual report
+    zero_sentences: []
+    scan: []
+    review_status: draft
+    needs_decision: false
+    why: Check sentence gives ['STAFF'], Evidence gives ['AR', 'STAFF', 'WEB']; the union is used
+    note: ''
+    pass1_check: [STAFF]
+    pass2_evidence: [AR, STAFF, WEB]

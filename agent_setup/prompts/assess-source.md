@@ -33,11 +33,18 @@ website page, report or other non-legal source):
         before assent and commencement), "draft" (a draft rule or notification, not yet
         notified), or "unknown". Never "in force" for a Bill or a draft.
 
+If the message lists "What the questions it was found for require", also say whether this
+source is one of the documents those questions require ("meets_requirement": "yes" when it is
+the document named, in the right version; "partly" when it covers only part of it or an older or
+later version; "no" when it is a different document). This does not change "useful".
+Leave "meets_requirement" "" when the message lists no requirement.
+
 JSON keys:
   "useful": boolean (does the text actually support "What This Source Is Useful For"?),
   "useful_for": string (corrected, specific: "[TAG] <content + section/page + period>"),
   "current_status": string (format above),
   "authority_score": number 0-10,
   "notes": string (concise: what the page contains, the text version, any limitation),
+  "meets_requirement": "yes" | "partly" | "no" | "" (only when the message lists a requirement),
   "effective_date": string ("" when not a legal text or no date is shown),
   "form": string ("in force" | "bill" | "draft" | "unknown" | "")

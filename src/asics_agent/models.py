@@ -15,11 +15,15 @@ VerificationStatus = Literal["Verified", "Not verified", "Human Verification Req
 Provenance = Literal["phase1_citation_sheet", "web_search", "fetched_page", "research_team"]
 FoundBy = Literal["Agent", "Your team"]
 
+# What the AI is told next to a source a person has checked (Citation Sheet "Human-Verified?")
+HUMAN_VERIFIED_MARK = "HUMAN-VERIFIED: a person confirmed this source for this agency"
+
 ANSWER_CLASSES = ("A1", "A2", "R", "P", "M", "Needs review")  # where an answer lives
 CONFIDENCES = ("High", "Medium", "Low")  # how good the evidence is
 
 AnswerStatus = Literal[
     "Answered — Verified Source",
+    "Answered — Human-Verified Source",
     "Partially Answered",
     "Insufficient Evidence",
     "Human Verification Required",
@@ -168,6 +172,10 @@ class Source(BaseModel):
     cutoff_check: str = ""
     # True when the team verified this row from a copy they saved by hand (evidence/manual/)
     team_saved_copy: bool = False
+    # A person has already checked this source (the "Human-Verified?" column, the last of the
+    # Citation Sheet). Step 1 still opens and saves it and Steps 2 and 3 still quote it: the flag
+    # is never proof that a provision exists or is absent. Step 1 never changes or clears it.
+    human_verified: bool = False
 
     @property
     def key(self) -> str:

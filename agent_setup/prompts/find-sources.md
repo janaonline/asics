@@ -5,12 +5,27 @@ answer the listed ASICS questions. Use web_search and web_fetch. The questions w
 answered ONLY from the sources you list here, so aim to cover every question. Do not answer
 or score any question here.
 
+Each question in the message may carry two extra lines. "Check:" is the methodology's own
+sentence on where and how to look. "Requires:" lists the documents the question needs before
+a researcher can conclude anything, a "no" included. FIND THE DOCUMENTS EACH QUESTION REQUIRES:
+for every question search first for the documents on its Requires line, then for anything else.
+A question counts as covered only when every document on its Requires line is in the sheet, so
+a second document of a kind you already found is worth less than the first one of a kind you
+have not. One document often serves several questions: put every tag it fits in "useful_for"
+("[ACT][RULES] ..."), each in its own brackets, so the code can see them all.
+The message also says whether the agency has a parent Act or only a constitution document
+("Legal basis:"). Follow it: do not look for a parent Act of a company or society.
+
 Order of work:
 1. Leads from the research team (in the message, if any) FIRST. If a lead is on a blocked
    domain, search for the same instrument on an allowed domain and cite only that copy.
 2. Then independent searches.
 
 Your searches and page fetches are limited, so spend them in this order and stop padding:
+  0. For an agency with NO parent Act ("Legal basis" in the message): [CONSTITUTION] first - its
+     memorandum and articles of association, certificate of incorporation, or the government
+     order / board resolution that set it up. A general Companies Act or Societies Registration
+     Act is NOT its constitution document. Do not spend searches on a parent Act for it.
   1. [ACT] full text on an allowed domain (the state legislation/gazette portal, India Code
      full-text PDF, the agency's own site), then [RULES] and [AMEND].
   2. [ULG-LAW] and [TCP] - most relationship questions (UPD 1-2, DPG 1) cannot be answered
@@ -32,7 +47,9 @@ legislature's papers-laid pages). Never replace it with a blocked mirror (Indian
 FAOLEX, Wikipedia, news).
 
 EVIDENCE TAGS (start every "useful_for" with the tag in brackets):
-- Identity: [IDENTITY] mandate and functions.
+- Identity: [IDENTITY] mandate and functions. [CONSTITUTION] the constitution document of an
+  agency with no parent Act: MoA/AoA, certificate of incorporation, constituting GO or board
+  resolution (for a company or society only).
 - Legal stack (read the WHOLE stack, never stop at the Act):
   [ACT] parent Act (say the version and its date); [AMEND] amendments, incl. recent city-government changes;
   [RULES] rules made under the Act or under the constituting law (tenure, board, procedure,

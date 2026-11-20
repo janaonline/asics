@@ -36,6 +36,14 @@ from asics_agent.workbook import (
 )
 
 PARASTATALS_SHEET, CITATIONS_SHEET, COVERAGE_SHEET = "Parastatals", "Citation Sheet", "Coverage"
+HUMAN_VERIFIED = "Human-Verified?"  # the last column of the Citation Sheet
+HUMAN_VERIFIED_GUIDE = (
+    "\nHuman-Verified? (the last column): set it to Yes for a source a person has already "
+    "checked. The app still opens it, and the AI still has to quote it word for word: the mark "
+    "never replaces the quote. The AI looks at such a source first, and an answer that rests on "
+    'it shows the status "Answered — Human-Verified Source". The app never clears this mark, and '
+    "if the app cannot open the link it asks you (Needs Attention) to save a copy by hand."
+)
 
 PARASTATAL_COLUMNS = [
     ("Parastatal ID", []),
@@ -75,6 +83,9 @@ CITATION_COLUMNS = [
     # on or before the Law/Policy cut-off. Optional on read: older sheets don't have them.
     ("Effective / As-of Date", []),
     ("Cut-off Check", []),
+    # A person has already checked this source ("Yes", else blank). Always the last column. Optional
+    # on read: older sheets don't have it.
+    (HUMAN_VERIFIED, []),
 ]
 COVERAGE_COLUMNS = [
     ("Parastatal", []),
@@ -119,7 +130,8 @@ GUIDE = [
         'to" date; it is not the page\'s "last updated" date. Cut-off Check says whether that is '
         "on or before the Law/Policy cut-off: ok, later, unknown or Bill-draft. A later or Bill-draft "
         "source is not used for Law/Policy questions (it can still be used for Implementation "
-        "questions); an unknown one is used with a CONFIRM note. You can correct both columns.",
+        "questions); an unknown one is used with a CONFIRM note. You can correct both columns."
+        + HUMAN_VERIFIED_GUIDE,
     ),
     (
         "3. Coverage sheet",
@@ -147,7 +159,9 @@ GUIDE_ULG = [
     ),
     (
         GUIDE[4][0],
-        GUIDE[4][1].replace(
+        GUIDE[4][1]
+        .replace(HUMAN_VERIFIED_GUIDE, "")  # the mark is used for Parastatal only today
+        .replace(
             'Parastatal (an ID from the Parastatals sheet, or "All parastatals")',
             "ULG (the ID on the ULG sheet)",
         ),
@@ -305,7 +319,15 @@ def read_sources_workbook(path: Path, cache_dir: Path):
         owner = get("Parastatal")
         owner = ALL_PARASTATALS if owner.lower() == ALL_PARASTATALS.lower() else owner.upper()
         if not link:
-            team("warning", f"{where}: has no web link starting with http, so it was skipped.")
+            flagged = (
+                f' It is marked "{HUMAN_VERIFIED}" Yes, but a mark cannot stand without a link.'
+                if _yes(get(HUMAN_VERIFIED))
+                else ""
+            )
+            team(
+                "warning",
+                f"{where}: has no web link starting with http, so it was skipped.{flagged}",
+            )
             continue
         if owner != ALL_PARASTATALS and owner not in ids:
             team(
@@ -344,6 +366,7 @@ def read_sources_workbook(path: Path, cache_dir: Path):
                 checked_at=get("Last Checked"),
                 effective_date=get("Effective / As-of Date"),
                 cutoff_check=get("Cut-off Check"),
+                human_verified=_yes(get(HUMAN_VERIFIED)),
                 content_path=text_path,
                 snapshot_path=copy_path,
             )
@@ -456,6 +479,7 @@ def write_sources_workbook(
             "Your Notes": 30,
             "Effective / As-of Date": 16,
             "Cut-off Check": 14,
+            HUMAN_VERIFIED: 16,
         },
     )
     ordered = sorted(sources, key=lambda s: (s.parastatal_id, s.citation_id))
@@ -485,6 +509,7 @@ def write_sources_workbook(
                     "Last Checked": s.checked_at,
                     "Effective / As-of Date": s.effective_date,
                     "Cut-off Check": s.cutoff_check,
+                    HUMAN_VERIFIED: "Yes" if s.human_verified else "",
                 },
             )
             for s in ordered
@@ -493,6 +518,7 @@ def write_sources_workbook(
     )
     _add_dropdown(ws, mapping["Use for Answers?"], ["Yes", "No"])
     _add_dropdown(ws, mapping["Cut-off Check"], ["ok", "later", "unknown", "Bill-draft"])
+    _add_dropdown(ws, mapping[HUMAN_VERIFIED], ["Yes", "No"])
 
     ws = _new_sheet(
         wb, COVERAGE_SHEET, COVERAGE_COLUMNS, {"Question": 60, "Citations": 30, "Coverage": 40}

@@ -21,7 +21,7 @@ Before every task, each agent is also handed the **shared rules**: how to treat 
 | Step | Job | Who or what runs it | Where people check |
 |---|---|---|---|
 | 1. Find sources | Find the parastatals of a city, learn about each one, and collect the official documents (the **Citation Sheet**). | AI agents: find parastatals, profile each one, find sources, and judge each source (the ULG has its own profile and source-finder). **Code** then opens every link and tests whether a person could read it. | The team ticks which parastatals to research. The team then reviews the Citation Sheet in the Sources workbook: it can switch a source off ("Use for Answers? = No"), add its own, and fix links. |
-| 2. Answer | Answer each question for each parastatal (ULG: once per city), using only the Citation Sheet. | One AI agent per question and parastatal. **Code** checks that the quote is word for word in the source. | The team reads the answers workbook. Rows marked "Human Verification Required", "Partially Answered" or "Insufficient Evidence" need a person. |
+| 2. Answer | Answer each question for each parastatal (ULG: once per city), using only the Citation Sheet. | One AI agent per question and parastatal. **Code** checks that the quote is word for word in the source. | The team reads the answers workbook (status "Answered — Human-Verified Source" when the main citation is a row a person verified). Rows marked "Human Verification Required", "Partially Answered" or "Insufficient Evidence" need a person. |
 | 3. Score | Fill in the team's own scoring templates (UPD, SC, DPG) for one question at a time. | One AI agent. **The template's own formulas** turn its inputs into points. Code refuses anything that breaks the rules. | People fill their own copy of the same templates. The app compares the two, for the "golden" cities. |
 
 The AI never decides alone. Code does the checks that must be reliable (links, quotes, cut-off date, allowed scores). The prompts ask for the rest. The **coverage table** in section 3 shows which is which, rule by rule.
@@ -252,6 +252,7 @@ Facts only. Nothing here has been fixed.
 | **Parastatal** | An agency created by government that is separate from the city government: a water board, a bus company, a development authority. |
 | **ULG** | Urban Local Government: the city's own government (for example, a municipal corporation). Answered once per city. |
 | **Citation Sheet** | The list of official sources found for a parastatal (or a city). Answers may use only the rows marked "Use for Answers? = Yes". |
+| **Human-Verified?** | The last Citation Sheet column. "Yes" means a person already checked the source. The app still opens it and the AI still has to quote it; the AI looks at it first and an answer that rests on it is "Answered — Human-Verified Source". It is never proof that a provision exists or is absent. (Parastatal prompts only: `answer-question.md` and `shared-rules.md`.) |
 | **Citation ID** | A short code for one row, such as `BWSSB-07`. |
 | **Verified** | The exact link was opened and a person could read the real page. A record page with only a title and number is not verified. |
 | **Authority Score** | 0 to 10: how strong a source is. A government address alone is not a 10. It is not the ASICS score. |

@@ -6,6 +6,7 @@ from pathlib import Path
 from pydantic import BaseModel, Field
 
 from asics_agent.links.text import rank_chunks, tokens
+from asics_agent.models import HUMAN_VERIFIED_MARK
 from asics_agent.tools.base import ClientTool, ToolContext, register
 
 READ_BUDGET = 12000
@@ -15,6 +16,16 @@ _PAGE = re.compile(r"\[page (\d+)\]")
 def _text(source) -> str:
     if source.content_path and Path(source.content_path).exists():
         return Path(source.content_path).read_text(encoding="utf-8")
+    return ""
+
+
+def _mark(ctx: ToolContext, source) -> str:
+    """ " [HUMAN-VERIFIED: ...]" for a source a person checked, when the category uses the mark."""
+    settings = getattr(ctx.services, "settings", None)
+    if getattr(source, "human_verified", False) and getattr(
+        settings, "human_verified_sources", False
+    ):
+        return f" [{HUMAN_VERIFIED_MARK}]"
     return ""
 
 
@@ -41,7 +52,9 @@ def read(ctx: ToolContext, citation_id: str, query: str = "") -> str:
     else:
         trimmed, text = len(text) > READ_BUDGET, text[:READ_BUDGET]
     note = "\n[Only the most relevant parts are shown.]" if trimmed else ""
-    return f"=== CITATION {source.citation_id}: {source.title} ===\n{text}{note}"
+    return (
+        f"=== CITATION {source.citation_id}: {source.title} ==={_mark(ctx, source)}\n{text}{note}"
+    )
 
 
 class SearchArgs(BaseModel):
@@ -70,7 +83,9 @@ def search(ctx: ToolContext, query: str, top: int = 6) -> str:
     for _score, source, page, chunk in hits[:top]:
         where = f", page {page}" if page else ""
         snippet = re.sub(r"\s+", " ", chunk)[:300]
-        lines.append(f"[{source.citation_id}{where}] {source.title}: …{snippet}…")
+        lines.append(
+            f"[{source.citation_id}{where}] {source.title}{_mark(ctx, source)}: …{snippet}…"
+        )
     return "\n".join(lines)
 
 

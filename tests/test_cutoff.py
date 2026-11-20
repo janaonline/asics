@@ -186,7 +186,8 @@ def test_the_new_columns_round_trip_and_an_old_sheet_still_loads(services, run_s
     )
     ws = load_workbook(path)["Citation Sheet"]
     header = [c.value for c in ws[1]]
-    assert header[-2:] == ["Effective / As-of Date", "Cut-off Check"]
+    # the two cut-off columns, then Human-Verified? (always the last column)
+    assert header[-3:] == ["Effective / As-of Date", "Cut-off Check", "Human-Verified?"]
     rows = [
         dict(zip(header, [c.value for c in r], strict=False))
         for r in ws.iter_rows(min_row=2)
@@ -201,7 +202,9 @@ def test_the_new_columns_round_trip_and_an_old_sheet_still_loads(services, run_s
     # remove the two columns: a sheet from before this work loads, with the fields empty
     wb = load_workbook(path)
     ws = wb["Citation Sheet"]
-    ws.delete_cols(len(header) - 1, 2)
+    ws.delete_cols(
+        len(header) - 2, 2
+    )  # the Effective and Cut-off columns (Human-Verified? stays last)
     old = tmp_path / path.name
     wb.save(old)
     _, citations, issues = read_sources_workbook(old, tmp_path / "evidence")

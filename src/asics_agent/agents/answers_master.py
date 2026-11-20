@@ -138,6 +138,11 @@ def build_answers_graph(
                             "parastatal": p,
                             "question": q,
                             "citation_sources": own,
+                            "citation_all": [
+                                s
+                                for s in state.get("existing_citations", [])
+                                if s.parastatal_id in (p.id, ALL_PARASTATALS)
+                            ],
                         },
                     )
                 )

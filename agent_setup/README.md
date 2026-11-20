@@ -56,7 +56,7 @@ effort: medium                            # low | medium | high | xhigh | max
 ```
 
 Step 2 agents can't be given `web_search` or `web_fetch`: the setup check refuses it, because
-answers must come only from the Citation Sheet.
+answers must come only from the Citation Sheet. A source marked **Human-Verified?** = Yes in the Citation Sheet (Parastatal, setting `human_verified_sources: on` in `categories/parastatal.md`) is shown to the AI as the first place to look; it must still be quoted word for word, and the zero rule and the cut-off still apply.
 
 ## Folders
 

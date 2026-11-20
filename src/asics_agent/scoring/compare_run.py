@@ -12,6 +12,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 
 from asics_agent import bank_version as bv
+from asics_agent import cutoff
 from asics_agent.bank_status import build_context
 from asics_agent.categories import load_bank
 from asics_agent.cities import load_register
@@ -140,6 +141,28 @@ def city_units(settings, city) -> tuple[dict[str, cmp.Unit], list[str]]:
     return units, notes
 
 
+def city_sheet(settings, city, answers: Path | None):
+    """({unit id: Parastatal}, every Citation Sheet row) of a city's Sources workbook, with each
+    row's verification status as Step 2 re-tested it: what the "AI zeros" sheet checks the AI's
+    zeros against. Empty when the workbook is missing or unreadable."""
+    from asics_agent.scoring.phase2 import _step2_statuses
+
+    workspace = workspace_for(settings.outputs_dir, city.name)
+    path = sources_path(workspace, city.name)
+    if not path.exists():
+        return {}, []
+    try:
+        parastatals, citations, _ = read_sources_workbook(path, workspace / "evidence")
+    except Exception:
+        return {}, []
+    if answers is not None and answers.exists():
+        statuses = _step2_statuses(answers)
+        for c in citations:
+            if c.citation_id in statuses:
+                c.verification_status = statuses[c.citation_id]
+    return {p.id: p for p in parastatals}, citations
+
+
 def build_inputs(
     settings,
     city,
@@ -193,6 +216,11 @@ def build_inputs(
         step3 = cmp.read_step3(path, ai_runs or path.parent / "runs", settings.scoring_code)
         ais = [path] if path.exists() else []
     notes += version_notes(settings, answers, ais, human_paths or [], current)
+    sheet_units, sheet_rows = (
+        city_sheet(settings, city, answers)
+        if (settings.required_sources or settings.human_verified_sources) and not ulg
+        else ({}, [])
+    )
     return cmp.CityInputs(
         city=city.name,
         aliases=city.aliases,
@@ -208,6 +236,9 @@ def build_inputs(
         ulg=ulg,
         bank_version=current.version if current else "",
         notes=notes,
+        parastatals=sheet_units,
+        citations=sheet_rows,
+        rule=cutoff.rule_from(settings),
     )
 
 

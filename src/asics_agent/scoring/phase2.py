@@ -46,6 +46,7 @@ class StepTwoAnswer:
 class CityEvidence:
     parastatals: dict[str, Parastatal] = field(default_factory=dict)  # id -> parastatal
     citations: list[Source] = field(default_factory=list)  # usable Citation Sheet rows
+    all_citations: list[Source] = field(default_factory=list)  # every row, usable or not
     answers: dict[tuple[str, str], StepTwoAnswer] = field(default_factory=dict)  # (id, code)
 
 
@@ -136,6 +137,7 @@ def load_evidence(status: Phase2, ids: dict[str, str] | None = None) -> CityEvid
     evidence = CityEvidence(
         parastatals={p.id: p for p in parastatals if p.include},
         citations=[c for c in citations if usable(c)],
+        all_citations=list(citations),
     )
     by_name = {p.name.casefold(): p.id for p in parastatals}
     by_name.update({p.id.casefold(): p.id for p in parastatals})

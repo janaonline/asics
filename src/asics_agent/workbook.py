@@ -80,6 +80,8 @@ CITATION_COLUMNS = [
     ("Notes", ["notes", "remarks", "comments"]),
     ("Found By", ["found by"]),
     ("Last Checked", ["last checked", "checked at", "date checked"]),
+    # A person has already checked this source ("Yes", else blank): always the last column
+    ("Human-Verified?", ["human verified"]),
 ]
 
 SCORING_COLUMNS = [
@@ -267,6 +269,7 @@ def read_citation_sheet(
                 authority_score=float(score) if re.fullmatch(r"\d+(\.\d+)?", score) else 0,
                 provenance="phase1_citation_sheet",
                 notes=get(row, "Notes"),
+                human_verified=get(row, "Human-Verified?").lower() in ("yes", "y", "true", "1"),
             )
         )
     return sources, issues
@@ -302,6 +305,7 @@ def _source_values(s: Source, names: dict[str, str], workbook_dir: Path) -> dict
         "Notes": s.notes,
         "Found By": s.found_by,
         "Last Checked": s.checked_at,
+        "Human-Verified?": "Yes" if s.human_verified else "",
     }
 
 
@@ -313,6 +317,7 @@ _FILLS = {
 }
 STATUS_COLOURS = {
     "Answered — Verified Source": "green",
+    "Answered — Human-Verified Source": "green",
     "Computed from Sub-indicators": "green",
     "Verified": "green",
     "Partially Answered": "amber",
@@ -699,7 +704,7 @@ def write_batch_summary(folder: Path, label: str, runs: dict, step: str = "answe
                     if s
                     not in {"Not Applicable", "Not Yet Assessed", "Computed from Sub-indicators"}
                 ),
-                counts["Answered — Verified Source"],
+                counts["Answered — Verified Source"] + counts["Answered — Human-Verified Source"],
                 counts["Human Verification Required"] + counts["Partially Answered"],
                 counts["Insufficient Evidence"],
             ]

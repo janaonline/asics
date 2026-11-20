@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
 
-from asics_agent import cutoff, methodology
+from asics_agent import cutoff, methodology, source_requirements
 from asics_agent.agent_setup import fingerprint as setup_fingerprint
 from asics_agent.applicability import applies_to
 from asics_agent.bank_version import settings_version
@@ -27,7 +27,7 @@ from asics_agent.cutoff import cutoff_text
 from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
-from asics_agent.models import Parastatal
+from asics_agent.models import HUMAN_VERIFIED_MARK, Parastatal
 from asics_agent.parastatal_types import ULG_TYPE, type_label
 from asics_agent.run_options import current_options
 from asics_agent.scoring.ai import (
@@ -38,7 +38,9 @@ from asics_agent.scoring.ai import (
     _mark_scored,
     check_reply_evidence,
     check_step2,
+    is_zero,
     scored_cities,
+    zero_gate,
 )
 from asics_agent.scoring.human import SEPARATOR, _code_matches
 from asics_agent.scoring.phase2 import (
@@ -143,7 +145,13 @@ def _hint(col) -> str:
 
 
 def build_prompt(
-    task: TemplateTask, spec: SheetSpec, answer: StepTwoAnswer, sources, unit_word: str
+    task: TemplateTask,
+    spec: SheetSpec,
+    answer: StepTwoAnswer,
+    sources,
+    unit_word: str,
+    zero: str = "",
+    human: bool = False,
 ) -> str:
     lines = [f"City: {task.city}", f"State: {task.state}", f"{unit_word}: {task.unit}", ""]
     lines += [f"QUESTION {task.code}"]
@@ -167,6 +175,8 @@ def build_prompt(
             "row, decided from the methodology's bands).",
             *_score_scale(spec),
         ]
+    if zero:
+        lines += ["", zero.rstrip()]
     lines += [
         "",
         "STEP 2 ANSWER",
@@ -177,7 +187,11 @@ def build_prompt(
         f"Notes: {answer.notes}",
         "",
         "CITATION SHEET SOURCES FOR THIS UNIT: "
-        + ", ".join(f"{s.citation_id} ({s.title})" for s in sources),
+        + ", ".join(
+            f"{s.citation_id} ({s.title})"
+            + (" [HUMAN-VERIFIED]" if human and s.human_verified else "")
+            for s in sources
+        ),
     ]
     cited = next((s for s in sources if s.citation_id == answer.citation_id), None)
     if cited and cited.content_path:
@@ -186,7 +200,8 @@ def build_prompt(
             [spec.question, spec.details.get("Detailed Methodology", ""), answer.evidence]
         )
         excerpt, _ = rank_chunks(text, query, SOURCE_CHARS)
-        lines += ["", f"=== CITATION {cited.citation_id}: {cited.title} ===", excerpt]
+        mark = f" [{HUMAN_VERIFIED_MARK}]" if human and cited.human_verified else ""
+        lines += ["", f"=== CITATION {cited.citation_id}: {cited.title} ==={mark}", excerpt]
     return "\n".join(lines)
 
 
@@ -247,6 +262,10 @@ def score_template_one(
     answer, sources, reason = check_step2(task.code, task.unit, spec.question, evidence, log)
     if reason:
         return _left(task, spec, reason, log)
+    req, decision, marked = zero_gate(services.settings, task.code, task.unit, answer, evidence)
+    if marked and decision is not None and not decision.allowed:
+        return _left(task, spec, f"Zero not allowed: {decision.note}", log)
+    checked_zero = bool(marked and decision is not None and decision.allowed)
     # A Law/Policy question may only rest on sources that took effect by the cut-off.
     rule = cutoff.rule_from(services.settings)
     law = rule is not None and task.law_policy
@@ -282,7 +301,15 @@ def score_template_one(
         reply, _, _ = call_json(
             services,
             agent_for(services.settings, "score"),
-            build_prompt(task, spec, answer, sources, unit_word),
+            build_prompt(
+                task,
+                spec,
+                answer,
+                sources,
+                unit_word,
+                source_requirements.zero_block(req, decision, step=3),
+                services.settings.human_verified_sources,
+            ),
             ScoreReply,
             tool_context=ctx,
         )
@@ -293,12 +320,26 @@ def score_template_one(
         values = {col: f"AI: not scored ({why}). Run Step 3 again."} if col else {}
         return TemplateCell(task, values, log, "failed", "failed", why)
     log.update(reply.model_dump(), tools_used=ctx.log)
-    source, full, reason = check_reply_evidence(reply, sources, task.unit)
+    source, full, reason = check_reply_evidence(
+        reply, sources, task.unit, zero_checked=checked_zero
+    )
     if reason:
         return _left(task, spec, reason, log)
+    if (
+        decision is not None
+        and not checked_zero
+        and decision.state in ("missing", "unreadable")
+        and spec.score_column
+        and not spec.score_is_formula
+        and is_zero(reply.score)
+    ):
+        # a typed 0 needs the required sources, whoever proposed it
+        return _left(task, spec, f"Zero not allowed: {decision.note}", log)
 
     values: dict[int, object] = {}
     notes: list[str] = []
+    if checked_zero:
+        notes.append(f"Zero allowed by the required-source check. {decision.note}")
     if law and source.citation_id in screen.unknown:  # undated source: use it, but say so
         notes.append(cutoff.confirm_note(source.citation_id, rule))
         if reply.confidence == "high":
@@ -318,6 +359,30 @@ def score_template_one(
             notes.append(f'"{col.header}" left blank: the AI gave "{value}", which {why}.')
             continue
         values[col.column] = ok
+    gate_reason = ""
+    if (
+        decision is not None
+        and not checked_zero
+        and spec.score_is_formula
+        and req is not None
+        and req.zero_kind in ("absence", "mixed")
+        and decision.state in ("missing", "unreadable", "blocked_by_scan")
+    ):
+        # A calculated score is 0 when every Yes/No input is No (or empty). On an absence-based
+        # question that needs the required sources and a clear scan, whoever filled the inputs: a
+        # "No" that would give 0 is left blank for a person. Inputs that score above 0 are not touched.
+        yes_no = [
+            c for c in spec.inputs if {o.casefold() for o in (c.options or ())} == {"yes", "no"}
+        ]
+        said_yes = any(str(values.get(c.column, "")).strip().casefold() == "yes" for c in yes_no)
+        if yes_no and not said_yes:
+            for c in yes_no:
+                values.pop(c.column, None)
+            gate_reason = decision.note
+            notes.append(
+                'Every Yes/No input is "No" or empty, which the template calculates as 0. That '
+                f"needs the required sources: {decision.note}"
+            )
     complete, kind, detail, based_on = True, "undecided", "", ""
     if spec.score_is_formula and spec.min_years and spec.year_groups:
         # The template scores from at least N valid years (its own formula: Years with valid
@@ -345,6 +410,9 @@ def score_template_one(
                 "calculated 0: not finding the figures is not proof they do not exist)."
             )
             notes.append(detail)
+            if decision is not None and not decision.allowed and decision.state != "no_rule":
+                detail = f"{detail} Zero not allowed: {decision.note}"
+                notes.append(f"Zero not allowed: {decision.note}")
     elif spec.score_is_formula:
         # The template calculates the points; a row with an input missing that the points need
         # could show a calculated 0, which would read as "scored zero": write none of the inputs.
@@ -358,6 +426,8 @@ def score_template_one(
             )
     elif spec.score_column:
         complete, kind, detail = _typed_score(reply, spec, values, notes)
+    if gate_reason:
+        complete, kind, detail = False, "zero_gate", f"Zero not allowed: {gate_reason}"
     if not complete:
         values = {}  # nothing partial reaches the template
     page, heading = locate_quote(full, reply.quote)
@@ -373,8 +443,10 @@ def score_template_one(
         col = spec.column_for(fld)
         if col and text and complete:
             values[col] = text
+    human = services.settings.human_verified_sources and source.human_verified
     comments = [
-        (f"Methodology: {band}. " if band else "")
+        ("Source human-verified. " if human else "")
+        + (f"Methodology: {band}. " if band else "")
         + f"AI ({reply.confidence} confidence), from Step 2 answer ({answer.status}) and "
         f"{source.citation_id}: {reply.comments}".strip()
         + (f" {based_on}" if based_on else ""),
@@ -389,6 +461,7 @@ def score_template_one(
             part
             for part in (
                 "Scored by AI",
+                "Source human-verified" if human else "",
                 f"Citation {source.citation_id}: {source.title}",
                 f"Step 2 class {answer.answer_class}" if answer.answer_class else "",
                 f"Step 2 confidence {answer.confidence}" if answer.confidence else "",

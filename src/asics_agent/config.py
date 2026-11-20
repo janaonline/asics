@@ -58,6 +58,12 @@ class Settings:
     # no cut-off), and what to do with a source whose date is unknown: "confirm" or "block".
     law_cutoff: date | None = None
     undated_law_policy: str = "confirm"
+    # A score of 0 needs the sources the question requires (agent_setup/categories/<name>.md,
+    # `required_sources: on`; see source_requirements.py). Off for a category that does not say so.
+    required_sources: bool = False
+    human_verified_sources: bool = False  # see categories.py (agent_setup/categories/<name>.md)
+    crawl_max_pages: int = 0  # Step 1: menu links of an agency's home page to open (0 = no crawl)
+    crawl_incomplete_on_dead_link: str = "strict"  # or "lenient" (see links/crawl.py)
     outputs_root: Path | None = None  # the outputs folder before the category's subfolder
     # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
     find_sources_max_uses: int | None = None

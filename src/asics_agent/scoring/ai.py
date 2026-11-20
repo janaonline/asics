@@ -30,12 +30,13 @@ from typing import Literal
 from openpyxl import load_workbook
 from pydantic import BaseModel, Field
 
+from asics_agent import cutoff, source_requirements
 from asics_agent.bank_version import settings_version, write_sidecar
 from asics_agent.categories import ULG_UNIT_ID, agent_for
 from asics_agent.keep_awake import keep_awake
 from asics_agent.links.text import locate_quote, rank_chunks
 from asics_agent.llm import CallFailed, call_json
-from asics_agent.models import ALL_PARASTATALS
+from asics_agent.models import ALL_PARASTATALS, HUMAN_VERIFIED_MARK
 from asics_agent.scoring.human import (
     _code_matches,
     _input_problem,
@@ -196,7 +197,13 @@ def _full_text(source) -> str:
 
 
 def _prompt(
-    task: Task, sheet: QuestionSheet, details: dict[str, str], answer: StepTwoAnswer, sources
+    task: Task,
+    sheet: QuestionSheet,
+    details: dict[str, str],
+    answer: StepTwoAnswer,
+    sources,
+    zero: str = "",
+    human: bool = False,
 ) -> str:
     lines = [f"City: {task.city}", f"State: {task.state}", f"Agency: {task.agency}", ""]
     lines += [f"QUESTION {task.code}"]
@@ -209,6 +216,8 @@ def _prompt(
             f"is {maximum:g}. Decide the band from the methodology, then enter "
             f"band x {maximum:g}/{top:g} (e.g. {top:g} -> {maximum:g}).",
         ]
+    if zero:
+        lines += ["", zero.rstrip()]
     lines += ["", "INPUT COLUMNS (fill each one):"]
     for spec in sheet.inputs:
         allowed = f" Allowed values: {' / '.join(spec.options)}." if spec.options else ""
@@ -223,13 +232,18 @@ def _prompt(
         f"Notes: {answer.notes}",
         "",
         "CITATION SHEET SOURCES FOR THIS AGENCY: "
-        + ", ".join(f"{s.citation_id} ({s.title})" for s in sources),
+        + ", ".join(
+            f"{s.citation_id} ({s.title})"
+            + (" [HUMAN-VERIFIED]" if human and s.human_verified else "")
+            for s in sources
+        ),
     ]
     cited = next((s for s in sources if s.citation_id == answer.citation_id), None)
     if cited:
         query = " ".join([*details.values(), answer.evidence])
         text, _ = rank_chunks(_full_text(cited), query, SOURCE_CHARS)
-        lines += ["", f"=== CITATION {cited.citation_id}: {cited.title} ===", text]
+        mark = f" [{HUMAN_VERIFIED_MARK}]" if human and cited.human_verified else ""
+        lines += ["", f"=== CITATION {cited.citation_id}: {cited.title} ==={mark}", text]
     return "\n".join(lines)
 
 
@@ -249,6 +263,8 @@ REASONS = {
     "years": "Fewer years of figures were found than the template needs (at least 2)",
     "template_problem": "The template has a problem (a header the AI cannot read): fix it",
     "failed": "The AI call failed: run Step 3 again",
+    "zero_gate": "A score of 0 needs every source the question requires, and they are not all "
+    "present and clear (see the note): a person decides",
 }
 _KIND_BY_START = [
     ("Step 2 has no answer", "no_answer"),
@@ -256,6 +272,7 @@ _KIND_BY_START = [
     ("Step 2 found no evidence", "no_evidence"),
     ("Step 2 cited", "citation_changed"),
     ("Cut-off", "cutoff"),
+    ("Zero not allowed", "zero_gate"),
     ("The AI", "check_failed"),
 ]
 
@@ -363,9 +380,36 @@ def check_step2(
     return answer, sources, None
 
 
-def check_reply_evidence(reply, sources: list, agency: str):
+def zero_gate(settings, code: str, agency: str, answer, evidence: CityEvidence):
+    """(requirement, decision, checked) for the zero gate in Step 3, or (requirement, None, False)
+    when it does not apply (setting off, no zero rule, agency not found). The decision is made again
+    from the agency's Citation Sheet and the full text of its required documents: `checked` is True
+    when Step 2 marked the answer ZERO-CHECKED."""
+    if not settings.required_sources:
+        return None, None, False
+    req = source_requirements.required_for(code)
+    parastatal = evidence.parastatals.get(agency)
+    if req is None or not req.has_zero_rule or parastatal is None:
+        return req, None, False
+    rows = [c for c in evidence.all_citations if c.parastatal_id in (agency, ALL_PARASTATALS)]
+    decision = source_requirements.decide_zero(
+        req, parastatal, rows or evidence.citations, rule=cutoff.rule_from(settings)
+    )
+    return req, decision, source_requirements.ZERO_CHECKED in (answer.notes or "")
+
+
+def is_zero(value) -> bool:
+    try:
+        return float(value) == 0
+    except (TypeError, ValueError):
+        return False
+
+
+def check_reply_evidence(reply, sources: list, agency: str, *, zero_checked: bool = False):
     """(source, its full text, None), or (None, "", why the AI's answer is discarded): the
-    citation must be a reviewed row for the agency and the quote must be word for word in it."""
+    citation must be a reviewed row for the agency and the quote must be word for word in it.
+    For a row Step 2 marked ZERO-CHECKED (nothing found in every required source) the quote may be
+    empty: the citation must still be a usable row of the agency."""
     source = next((s for s in sources if s.citation_id == reply.citation_id.strip()), None)
     full = _full_text(source) if source else ""
     if source is None:
@@ -376,6 +420,8 @@ def check_reply_evidence(reply, sources: list, agency: str):
             f"reviewed Citation Sheet row for {agency}. Its answer was "
             f"discarded. AI comments: {reply.comments}",
         )
+    if zero_checked and not reply.quote:
+        return source, full, None
     if not reply.quote or _normalise(reply.quote) not in _normalise(full):
         return (
             None,
@@ -401,12 +447,24 @@ def score_one(
     )
     if reason:
         return _for_person(task, sheet, reason, log)
+    req, decision, marked = zero_gate(services.settings, task.code, task.agency, answer, evidence)
+    if marked and decision is not None and not decision.allowed:
+        return _for_person(task, sheet, f"Zero not allowed: {decision.note}", log)
+    checked_zero = bool(marked and decision is not None and decision.allowed)
     ctx = ToolContext(services=services, citations=sources)
     try:
         reply, _, _ = call_json(
             services,
             agent_for(services.settings, "score"),
-            _prompt(task, sheet, details, answer, sources),
+            _prompt(
+                task,
+                sheet,
+                details,
+                answer,
+                sources,
+                source_requirements.zero_block(req, decision, step=3),
+                services.settings.human_verified_sources,
+            ),
             ScoreReply,
             tool_context=ctx,
         )
@@ -420,11 +478,15 @@ def score_one(
     log.update(reply.model_dump(), tools_used=ctx.log)
 
     # The evidence must be a real Citation Sheet row, quoted word for word.
-    source, full, reason = check_reply_evidence(reply, sources, task.agency)
+    source, full, reason = check_reply_evidence(
+        reply, sources, task.agency, zero_checked=checked_zero
+    )
     if reason:
         return _for_person(task, sheet, reason, log)
 
     values, notes = {}, []
+    if checked_zero:
+        notes.append(f"Zero allowed by the required-source check. {decision.note}")
     for spec in sheet.inputs:
         value = reply.inputs.get(spec.header, "")
         if value in (None, ""):
@@ -455,7 +517,12 @@ def score_one(
             values[column] = found[header]
     if sheet.comments_column:
         text = [
-            f"AI ({reply.confidence} confidence), from Step 2 answer ({answer.status}) and "
+            (
+                "Source human-verified. "
+                if services.settings.human_verified_sources and source.human_verified
+                else ""
+            )
+            + f"AI ({reply.confidence} confidence), from Step 2 answer ({answer.status}) and "
             f"{source.citation_id}: {reply.comments}".strip(),
             f'Quote: "{reply.quote}"',
             *notes,

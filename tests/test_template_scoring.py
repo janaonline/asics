@@ -1,5 +1,6 @@
 """Step 3 in the team's templates: the AI fills a copy of each, the template calculates."""
 
+import dataclasses
 import shutil
 import warnings
 from types import SimpleNamespace
@@ -259,12 +260,32 @@ def test_a_changed_template_rebuilds_the_file_and_carries_the_work_over(tmp_path
 SOURCE_TEXT = "Section 16. The Board shall prepare its plans in coordination with the ULG."
 
 
-def _scorer(tmp_path, monkeypatch, section, code, reply, answer_question=None):
+def _scorer(
+    tmp_path,
+    monkeypatch,
+    section,
+    code,
+    reply,
+    answer_question=None,
+    *,
+    required=False,
+    sources=None,
+    notes="",
+    prompts=None,
+    status="Answered — Verified Source",
+    human=True,
+):
     ai = fill.AITemplate(tmp_path / f"{section}.xlsx", _templates()[section])
     spec = ai.specs[code]
     page = tmp_path / "source.txt"
     page.write_text(SOURCE_TEXT)
-    unit = Parastatal(id="TWB", name="Test Water Board", type="water_supply_entity")
+    unit = Parastatal(
+        id="TWB",
+        name="Test Water Board",
+        type="water_supply_entity",
+        governing_act="The Test Water Act, 1970 (State Act 3 of 1970)",
+        official_website="https://www.twb.example.in/",
+    )
     source = Source(
         citation_id="TWB-01",
         parastatal_id="TWB",
@@ -273,23 +294,35 @@ def _scorer(tmp_path, monkeypatch, section, code, reply, answer_question=None):
         content_path=str(page),
     )
     answer = StepTwoAnswer(
-        status="Answered — Verified Source",
+        status=status,
         answer="Yes",
         citation_id="TWB-01",
         evidence="shall prepare",
-        notes="",
+        notes=notes,
         source_needed="",
         question=answer_question if answer_question is not None else spec.question,
         answer_class="A1",
         confidence="High",
     )
+    rows = sources if sources is not None else [source]
     evidence = CityEvidence(
         parastatals={"TWB": unit},
-        citations=[source],
+        citations=[r for r in rows if r.verification_status == "Verified"] or rows,
+        all_citations=rows,
         answers={("TWB", code.replace(" ", "")): answer},
     )
-    monkeypatch.setattr(ts, "call_json", lambda *a, **k: (reply, None, None))
-    settings = category_settings(get_settings(), "parastatal")
+
+    def fake_call(*a, **k):
+        if prompts is not None:
+            prompts.append(a[2])
+        return reply, None, None
+
+    monkeypatch.setattr(ts, "call_json", fake_call)
+    settings = dataclasses.replace(
+        category_settings(get_settings(), "parastatal"),
+        required_sources=required,
+        human_verified_sources=human,
+    )
     task = ts.TemplateTask(section, code, "Testville", "State", "TWB", "Testville – TWB", unit)
     cell = ts.score_template_one(SimpleNamespace(settings=settings), task, spec, evidence, "run1")
     return cell, spec
@@ -658,3 +691,294 @@ def test_the_message_for_a_citation_that_is_really_gone_says_why():
     assert reason.startswith("Step 2 cited ALL-01")  # keeps the start the reason lookup uses
     assert "not a verified row marked for use for TWB" in reason
     assert "unticked" in reason and "failed its re-check" in reason
+
+
+# -- Step 3 and the zero gate ----------------------------------------------------------------------
+def _tagged(
+    tmp_path, n, tag, text="Section 1. Short title.\n\nSection 2. Definitions.", human=False, **kw
+):
+    page = tmp_path / f"zero{n}.txt"
+    page.write_text(text)
+    return Source(
+        citation_id=f"TWB-{n:02d}",
+        parastatal_id="TWB",
+        title=f"Doc {n}",
+        url=f"https://x.gov.in/{n}",
+        useful_for=f"[{tag}] something",
+        verification_status=kw.get("verification_status", "Verified"),
+        use_for_answers=True,
+        content_path=str(page),
+        human_verified=human,
+    )
+
+
+def _all_required(tmp_path, act_text="Section 1. Short title.\n\nSection 2. Definitions."):
+    return [
+        _tagged(tmp_path, 1, "ACT", act_text),
+        _tagged(tmp_path, 2, "RULES"),
+        _tagged(tmp_path, 3, "TCP"),
+    ]
+
+
+def test_a_zero_checked_row_is_scored_without_a_quote_and_says_what_was_checked(
+    tmp_path, monkeypatch
+):
+    prompts = []
+    cell, spec = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=0, quote="", citation_id="TWB-01"),
+        required=True,
+        sources=_all_required(tmp_path),
+        notes="ZERO-CHECKED: Checked: TWB-01. Scanned in full: no match.",
+        prompts=prompts,
+    )
+    assert cell.outcome == "scored"
+    assert cell.values[spec.score_column] == 0
+    assert (
+        "Zero allowed by the required-source check. Checked: TWB-01"
+        in (cell.values[spec.column_for("comments")])
+    )
+    assert "ZERO CONDITION (from the methodology)" in prompts[0]
+    assert "REQUIRED SOURCES: every one is in the Citation Sheet and was read" in prompts[0]
+
+
+def test_a_zero_checked_row_is_refused_when_a_required_source_is_gone(tmp_path, monkeypatch):
+    sources = _all_required(tmp_path)[:2]  # the T&CP Act is no longer in the sheet
+    cell, _ = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=0, quote=""),
+        required=True,
+        sources=sources,
+        notes="ZERO-CHECKED: Checked: TWB-01, TWB-02, TWB-03.",
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+    assert "Zero not allowed: Missing: Town and Country Planning Act" in cell.detail
+
+
+def test_a_zero_checked_row_is_refused_when_the_scan_now_finds_text(tmp_path, monkeypatch):
+    text = "Section 16. The Board shall prepare its plan in consultation with the municipal corporation."
+    cell, _ = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=0, quote=""),
+        required=True,
+        sources=_all_required(tmp_path, text),
+        notes="ZERO-CHECKED: Checked: TWB-01.",
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+    assert "Blocked: relevant text found in TWB-01" in cell.detail
+
+
+def test_a_zero_checked_row_must_cite_a_usable_row_of_the_agency(tmp_path, monkeypatch):
+    cell, _ = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=0, quote="", citation_id="TWB-99"),
+        required=True,
+        sources=_all_required(tmp_path),
+        notes="ZERO-CHECKED: Checked: TWB-01.",
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "check_failed"
+    assert "isn't a reviewed Citation Sheet row" in cell.detail
+
+
+def test_an_unmarked_typed_zero_needs_the_required_sources_too(tmp_path, monkeypatch):
+    cell, _ = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=0),  # a quote-backed 0, but the required Acts are not all in the sheet
+        required=True,
+        sources=[_tagged(tmp_path, 1, "ACT", SOURCE_TEXT)],
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+
+
+def test_a_positive_typed_score_is_not_held_back_by_missing_sources(tmp_path, monkeypatch):
+    cell, spec = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=2.5),
+        required=True,
+        sources=[_tagged(tmp_path, 1, "ACT", SOURCE_TEXT)],
+    )
+    assert cell.outcome == "scored" and cell.values[spec.score_column] == 2.5
+
+
+def test_a_zero_checked_note_means_nothing_when_the_setting_is_off(tmp_path, monkeypatch):
+    prompts = []
+    cell, _ = _scorer(
+        tmp_path,
+        monkeypatch,
+        "UPD",
+        "UPD 1a",
+        _reply(score=0, quote=""),
+        required=False,
+        notes="ZERO-CHECKED: Checked: TWB-01.",
+        prompts=prompts,
+    )
+    assert cell.outcome == "needs_person"  # an empty quote is discarded, as before
+    assert "ZERO CONDITION" not in prompts[0]
+
+
+# -- calculated zeros and part-based questions (Step 3) ----------------------------------------------
+DPG_2B_INPUTS = (
+    "Plans required to be submitted or tabled before ULG/council",
+    "Budgets required to be submitted or tabled before ULG/council",
+    "Annual or performance reports required to be submitted or tabled before ULG/council",
+)
+
+
+def _inputs(*answers):
+    return dict(zip(DPG_2B_INPUTS, answers, strict=True))
+
+
+def _dpg_2b(
+    tmp_path, monkeypatch, inputs, sources, *, required=True, prompts=None, quote="Short title"
+):
+    return _scorer(
+        tmp_path,
+        monkeypatch,
+        "DPG",
+        "DPG 2b",
+        _reply(inputs=inputs, quote=quote, citation_id="TWB-01"),
+        required=required,
+        sources=sources,
+        prompts=prompts,
+    )
+
+
+def _dpg_2b_sources(tmp_path, act_text="Section 1. Short title.\n\nSection 2. Definitions."):
+    return [_tagged(tmp_path, 1, "ACT", act_text), _tagged(tmp_path, 2, "ULG-LAW")]
+
+
+def test_a_calculated_zero_is_written_when_every_required_source_is_present_and_clear(
+    tmp_path, monkeypatch
+):
+    cell, spec = _dpg_2b(
+        tmp_path, monkeypatch, _inputs("No", "No", "No"), _dpg_2b_sources(tmp_path)
+    )
+    assert cell.outcome == "scored"
+    written = [cell.values[c.column] for c in spec.inputs]
+    assert written == ["No", "No", "No"]  # the template calculates the 0
+
+
+def test_a_calculated_zero_leaves_the_inputs_blank_when_a_required_source_is_missing(
+    tmp_path, monkeypatch
+):
+    sources = _dpg_2b_sources(tmp_path)[:1]  # the State Municipal Act is not in the sheet
+    cell, spec = _dpg_2b(tmp_path, monkeypatch, _inputs("No", "No", "No"), sources)
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+    assert "Zero not allowed: Missing: State Municipal Act [ULG-LAW]" in cell.detail
+    assert not any(c.column in cell.values for c in spec.inputs)  # nothing partial is written
+
+
+def test_a_calculated_zero_is_left_for_a_person_when_the_scan_finds_text(tmp_path, monkeypatch):
+    text = "Section 9. The Board shall submit its annual report to the municipal council."
+    cell, spec = _dpg_2b(
+        tmp_path,
+        monkeypatch,
+        _inputs("No", "No", "No"),
+        _dpg_2b_sources(tmp_path, text),
+        quote="annual report to the municipal council",
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+    assert "Blocked: relevant text found in TWB-01" in cell.detail
+    assert not any(c.column in cell.values for c in spec.inputs)
+
+
+def test_empty_yes_no_inputs_count_like_no(tmp_path, monkeypatch):
+    sources = _dpg_2b_sources(tmp_path)[:1]
+    cell, _ = _dpg_2b(tmp_path, monkeypatch, _inputs("", "No", ""), sources)
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+
+
+def test_inputs_that_score_above_zero_are_never_blocked(tmp_path, monkeypatch):
+    sources = _dpg_2b_sources(tmp_path)[:1]  # a required source is missing
+    cell, spec = _dpg_2b(tmp_path, monkeypatch, _inputs("Yes", "No", "No"), sources)
+    assert cell.outcome == "scored"
+    assert [cell.values[c.column] for c in spec.inputs] == ["Yes", "No", "No"]
+
+
+def test_the_calculated_zero_gate_is_off_with_the_setting_off(tmp_path, monkeypatch):
+    sources = _dpg_2b_sources(tmp_path)[:1]
+    cell, _ = _dpg_2b(tmp_path, monkeypatch, _inputs("No", "No", "No"), sources, required=False)
+    assert cell.outcome == "scored"
+
+
+def test_a_failed_years_row_says_which_source_is_missing(tmp_path, monkeypatch):
+    # SC 1 (calculated from figures by year): fewer than 2 years is already left for a person; the
+    # reason now also names the missing required source
+    cell, _ = _scorer(
+        tmp_path,
+        monkeypatch,
+        "SC",
+        "SC 1",
+        _reply(inputs={}, quote="Short title", citation_id="TWB-01"),
+        required=True,
+        sources=[_tagged(tmp_path, 1, "AR")],  # no annual budget in the sheet
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "years"
+    assert "Zero not allowed: Missing: annual budget [BUDGET]" in cell.detail
+
+
+# part-based, typed questions: DPG 5a (website, parts A and B) and UPD 3a (law, two groups)
+def _site(tmp_path, n, url, *, home=False, text="The page lists news and contacts only."):
+    page = tmp_path / f"site{n}.txt"
+    page.write_text(text)
+    return Source(
+        citation_id=f"TWB-{n:02d}",
+        parastatal_id="TWB",
+        title="Website" if home else f"Page {n}",
+        url=url,
+        source_type="Official website" if home else "Official Parastatal Website",
+        useful_for="" if home else "[WEB] menu page",
+        notes="SITE-CRAWL: complete, 1 of 1 menu links captured." if home else "",
+        verification_status="Verified",
+        use_for_answers=True,
+        content_path=str(page),
+    )
+
+
+def test_dpg_5a_zero_needs_the_website_and_a_complete_crawl(tmp_path, monkeypatch):
+    reply = _reply(score=0, quote="The page lists news", citation_id="TWB-01")
+    home = _site(tmp_path, 1, "https://www.twb.example.in/", home=True)
+    page = _site(tmp_path, 2, "https://www.twb.example.in/about")
+    cell, spec = _scorer(
+        tmp_path, monkeypatch, "DPG", "DPG 5a", reply, required=True, sources=[home, page]
+    )
+    assert cell.outcome == "scored" and cell.values[spec.score_column] == 0
+    # one required thing is missing (the crawl never ran): the score cell stays blank
+    home.notes = ""
+    cell, spec = _scorer(
+        tmp_path, monkeypatch, "DPG", "DPG 5a", reply, required=True, sources=[home, page]
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+    assert "Missing: complete site crawl" in cell.detail
+    assert spec.score_column not in cell.values
+
+
+def test_upd_3a_zero_needs_the_act_and_its_rules(tmp_path, monkeypatch):
+    reply = _reply(score=0, quote="Short title", citation_id="TWB-01")
+    both = [_tagged(tmp_path, 1, "ACT"), _tagged(tmp_path, 2, "RULES")]
+    cell, spec = _scorer(tmp_path, monkeypatch, "UPD", "UPD 3a", reply, required=True, sources=both)
+    assert cell.outcome == "scored" and cell.values[spec.score_column] == 0
+    cell, spec = _scorer(
+        tmp_path, monkeypatch, "UPD", "UPD 3a", reply, required=True, sources=both[:1]
+    )
+    assert cell.outcome == "needs_person" and cell.kind == "zero_gate"
+    assert "Missing: Rules made under the Act [RULES]" in cell.detail
+    assert spec.score_column not in cell.values
