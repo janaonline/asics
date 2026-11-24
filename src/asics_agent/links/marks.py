@@ -9,7 +9,15 @@ PLAIN = "plain HTTP"
 BROWSER = "browser-rendered"
 CERT = "certificate not verified"
 SCAN = "read by Claude (scan)"
+PAGE_IMAGES = "read by Claude (page images)"  # a damaged or image-only PDF, rendered page by page
+REPAIRED = "repaired"  # a PDF the app rewrote so its own text could be read
 PARTIAL_SCAN = "partial scan"
+CHECK_TRANSCRIPTION = (
+    "check transcription"  # a scan read where pages or section numbers look dropped
+)
+SCAN_PENDING = (
+    "scan reading in progress"  # a batch was sent and had not finished when the step ended
+)
 SAVED_BY_TEAM = "saved by team"
 STALE = "stale archive"
 _ARCHIVED = "ARCHIVED"
@@ -37,7 +45,18 @@ def is_stale(copy_type: str) -> bool:
     return has(copy_type, STALE)
 
 
+def is_claude_read(copy_type: str) -> bool:
+    """Text Claude transcribed from page images (a scan or rendered pages), not extracted from the file."""
+    return has(copy_type, "read by Claude")
+
+
 def cannot_support_zero(copy_type: str) -> bool:
     """A copy that may support a positive finding but must not be the basis for a zero, and does not
-    satisfy a required-source or complete-crawl check: an archived copy (and a partial scan)."""
-    return is_archived(copy_type) or has(copy_type, PARTIAL_SCAN)
+    satisfy a required-source or complete-crawl check: an archived copy, a partial scan, a scan whose
+    transcription may have dropped text, or a scan still being read."""
+    return (
+        is_archived(copy_type)
+        or has(copy_type, PARTIAL_SCAN)
+        or has(copy_type, CHECK_TRANSCRIPTION)
+        or has(copy_type, SCAN_PENDING)
+    )

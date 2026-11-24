@@ -81,6 +81,9 @@ class Category:
     archive_max_age_days: int = 365
     failure_cache_hours: float = 24.0
     fetch_time_cap_minutes: float = 20.0
+    fetch_cache_max_age_days: int = 30
+    scan_reading_budget_usd: float = 3.0
+    scan_batch_wait_minutes: float = 20.0
     shared_rules: str = "shared-rules"
     agents: dict = field(default_factory=dict)  # role -> agent name
     description: str = ""
@@ -148,6 +151,9 @@ def _parse(path: Path) -> Category:
         archive_max_age_days=int(_number(meta.get("archive_max_age_days"), 365)),
         failure_cache_hours=_number(meta.get("failure_cache_hours"), 24.0),
         fetch_time_cap_minutes=_number(meta.get("fetch_time_cap_minutes"), 20.0),
+        fetch_cache_max_age_days=int(_number(meta.get("fetch_cache_max_age_days"), 30)),
+        scan_reading_budget_usd=_number(meta.get("scan_reading_budget_usd"), 3.0),
+        scan_batch_wait_minutes=_number(meta.get("scan_batch_wait_minutes"), 20.0),
         shared_rules=str(meta.get("shared_rules") or "shared-rules"),
         agents=agents,
         description=text[match.end() :].strip() if match else text.strip(),
@@ -260,6 +266,9 @@ def category_settings(settings, name: str):
         archive_max_age_days=v.archive_max_age_days,
         failure_cache_hours=v.failure_cache_hours,
         fetch_time_cap_minutes=v.fetch_time_cap_minutes,
+        fetch_cache_max_age_days=v.fetch_cache_max_age_days,
+        scan_reading_budget_usd=v.scan_reading_budget_usd,
+        scan_batch_wait_minutes=v.scan_batch_wait_minutes,
     )
 
 

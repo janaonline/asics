@@ -29,7 +29,26 @@ EXPERIMENT = {  # city -> (parastatals, how many)
     "Bengaluru": (("BWSSB", "BMTC"), 14),
     "Bhubaneswar": (("BDA", "CRUT"), 6),
 }
-URL = re.compile(r"https?://[^\s;,<>\"')]+")
+# A link runs to the next space, ";", "," or quote. It may contain brackets ("12 of 1976 (E).pdf"): a ")"
+# belongs to the link only when a "(" inside the link is still open, so "(see https://x.org/a)" loses its
+# bracket. Full stops and similar marks at the end are punctuation, not part of the link.
+URL = re.compile(r"https?://[^\s;,<>\"']+")
+
+
+def extract_urls(text: str) -> list[str]:
+    """The distinct links in a cell of the human scoring sheet, in order."""
+    found = []
+    for match in URL.findall(text or ""):
+        url = match
+        while url:
+            if url[-1] in ".,;":
+                url = url[:-1]
+            elif url[-1] == ")" and url.count(")") > url.count("("):
+                url = url[:-1]
+            else:
+                break
+        found.append(url)
+    return list(dict.fromkeys(found))
 
 
 def _rank(*parts) -> str:
@@ -65,7 +84,7 @@ def build() -> list[dict]:
                     "max_score": q.max_score,
                     "human_score": r.human_score,
                     "human_zero": r.human_score == 0,
-                    "human_sources": list(dict.fromkeys(URL.findall(r.human_source or ""))),
+                    "human_sources": extract_urls(r.human_source),
                 }
             )
     # stratified, alternating split
@@ -79,7 +98,9 @@ def build() -> list[dict]:
     # the 20 spike questions, from dev only: a balanced mix of zeros and points, spread over sections
     for city, (units, n) in EXPERIMENT.items():
         pool = [
-            r for r in rows if r["city"] == city and r["parastatal"] in units and r["split"] == "dev"
+            r
+            for r in rows
+            if r["city"] == city and r["parastatal"] in units and r["split"] == "dev"
         ]
         picked = []
         for zero in (True, False):
@@ -118,16 +139,29 @@ def main(argv=None) -> int:
         "# than a new city.\n"
     )
     args.out.write_text(
-        header + yaml.safe_dump({"seed": SEED, "rows": rows}, sort_keys=False, allow_unicode=True, width=110)
+        header
+        + yaml.safe_dump(
+            {"seed": SEED, "rows": rows}, sort_keys=False, allow_unicode=True, width=110
+        )
     )
     c = collections.Counter
     print(f"{len(rows)} rows written to {args.out}")
     print("split:", dict(c(r["split"] for r in rows)))
     for split in ("dev", "test"):
         sub = [r for r in rows if r["split"] == split]
-        print(f"  {split}: sections {dict(c(r['section'] for r in sub))} | zeros {sum(r['human_zero'] for r in sub)} of {len(sub)} | cities {dict(c(r['city'] for r in sub))}")
+        print(
+            f"  {split}: sections {dict(c(r['section'] for r in sub))} | zeros {sum(r['human_zero'] for r in sub)} of {len(sub)} | cities {dict(c(r['city'] for r in sub))}"
+        )
     spike = [r for r in rows if r["spike"]]
-    print("spike questions:", len(spike), dict(c((r["city"], r["parastatal"]) for r in spike)), "| zeros", sum(r["human_zero"] for r in spike), "| sections", dict(c(r["section"] for r in spike)))
+    print(
+        "spike questions:",
+        len(spike),
+        dict(c((r["city"], r["parastatal"]) for r in spike)),
+        "| zeros",
+        sum(r["human_zero"] for r in spike),
+        "| sections",
+        dict(c(r["section"] for r in spike)),
+    )
     return 0
 
 

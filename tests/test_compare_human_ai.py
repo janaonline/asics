@@ -422,6 +422,7 @@ def test_the_ai_zeros_sheet_lists_every_zero_with_its_route_documents_and_scan(t
         verification_status="Verified",
         use_for_answers=True,
         content_path=str(page),
+        copy_type="browser-rendered",
     )
     a, b = "UPD 1a", "UPD 2a"
     comp = build(
@@ -457,16 +458,19 @@ def test_the_ai_zeros_sheet_lists_every_zero_with_its_route_documents_and_scan(t
     assert "parent Act [ACT]: present (BWSSB-01)" in rows[("BWSSB", a)].zero_documents
     assert "Rules made under the Act [RULES]: MISSING" in rows[("BWSSB", a)].zero_documents
     assert "not run" in rows[("BWSSB", a)].zero_scan
+    assert rows[("BWSSB", a)].zero_copy_types == "BWSSB-01: browser-rendered"
 
     path = cmp.write_comparison(comp, tmp_path / "z.xlsx", min_rows=1)
     wb = load_workbook(path)
     sheet = list(wb["AI zeros"].iter_rows(values_only=True))
     header = list(sheet[0])
     assert header[:2] == ["City", "Parastatal"] and "Route" in header and "Scan result" in header
+    assert "Copy types that supported the zero" in header
     assert len(sheet) == 3  # header + the two zeros
     first = dict(zip(header, sheet[1], strict=True))
     assert first["Question"] == a  # the false zero comes first
     assert first["Agree?"] == "No: false zero"
+    assert first["Copy types that supported the zero"] == "BWSSB-01: browser-rendered"
     assert first["False zero? (AI 0, human above 0)"] == "Yes"
     second = dict(zip(header, sheet[2], strict=True))
     assert second["Agree?"] == "Yes" and second["Route"] == "Step 3 typed"

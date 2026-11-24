@@ -148,6 +148,9 @@ class AccessCheck(BaseModel):
     failure: str = ""  # why the plain check failed (see accessibility.FAILURES), "" if it opened
     stages: list[str] = Field(default_factory=list)  # what each stage of the fetch chain did
     not_retried: bool = False  # the chain did not run again: failure cache or the run's time cap
+    # The PDF as downloaded, kept in memory only when it could not be read (a scan or a damaged file),
+    # so scan_reading.py can repair it or have Claude read it. Never saved with the check.
+    pdf_bytes: bytes | None = Field(default=None, exclude=True, repr=False)
 
 
 ALL_PARASTATALS = "All parastatals"

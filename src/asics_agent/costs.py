@@ -22,7 +22,7 @@ from pathlib import Path
 
 from asics_agent.categories import ULG_UNIT_ID
 from asics_agent.legacy_names import canonical_category, read_key
-from asics_agent.usage import METER, UsageMeter
+from asics_agent.usage import CACHE_WRITE, METER, PRICES, UsageMeter
 
 UNITS = {1: "agency", 2: "answer", 3: "row"}
 # US$ per unit when there is no earlier run: Step 1 ~$2.60 per agency (estimate after the
@@ -30,6 +30,39 @@ UNITS = {1: "agency", 2: "answer", 3: "row"}
 # Step 3 $0.029 per row (measured).
 DEFAULT_RATES = {1: 2.60, 2: 0.076, 3: 0.029}
 DEFAULT_AGENCIES = 7  # a city's parastatals before Step 1 has found them (Bengaluru had 7)
+
+# Tokens from characters. The spikes measured real token counts of about characters / 2.5 for these
+# pages (Indian-government English with tables and numbers), not the usual / 4.
+CHARS_PER_TOKEN = 2.5
+TOOL_LOOP_TURNS = (
+    3  # [assumption] model calls in one answer's tool loop; the first real run replaces it
+)
+# [assumptions, calibrated so Claude Sonnet 5.5 comes to about the measured $0.076 per answer live]
+EVIDENCE_FILL = 0.5  # the evidence a typical answer reads, as a share of `max_evidence_chars`
+PROMPT_TOKENS = 6000  # instructions, question and tool descriptions sent with every call
+ANSWER_OUTPUT_TOKENS = 2000  # the answer and its thinking
+
+
+def tokens_for(chars: float) -> float:
+    """Tokens in `chars` characters of page text (2.5 characters a token)."""
+    return chars / CHARS_PER_TOKEN
+
+
+def step2_default(settings, turns: int = TOOL_LOOP_TURNS) -> float:
+    """US$ per answer, live, when there is no earlier Step 2 run: the first call of the tool loop writes the
+    evidence to the prompt cache (1.25x input), the later ones read it (a tenth), plus the answer."""
+    price = next(
+        (p for m, p in PRICES.items() if str(getattr(settings, "model", "")).startswith(m)), None
+    )
+    if price is None:
+        return DEFAULT_RATES[2]
+    inp, out, read = price
+    context = PROMPT_TOKENS + tokens_for(
+        EVIDENCE_FILL * getattr(settings, "max_evidence_chars", 60000)
+    )
+    first = context * inp * CACHE_WRITE
+    later = context * read * max(turns - 1, 0)
+    return (first + later + ANSWER_OUTPUT_TOKENS * out) / 1_000_000
 
 
 def usage_dir(settings) -> Path:
@@ -161,6 +194,8 @@ class Estimate:
     usd: float
     lines: list[str]  # one plain line per part: what it is based on
     first_time: bool  # no earlier run to go by: starting figures were used
+    # Possible extra costs that are not in `usd` (scan reading: only if scanned PDFs are found)
+    extra_lines: list[str] = field(default_factory=list)
 
 
 def rate(settings, step: int, category: str) -> tuple[float, str, bool]:
@@ -170,7 +205,7 @@ def rate(settings, step: int, category: str) -> tuple[float, str, bool]:
     for r in same or runs:
         other = "" if r in same else f" for {r.category_title or r.category}"
         return r.per_unit, f"your last Step {step} run{other}, {r.when:%d %b}", False
-    usd = DEFAULT_RATES[step]
+    usd = step2_default(settings) if step == 2 else DEFAULT_RATES[step]
     if step == 2 and getattr(settings, "batch_answers", False):
         usd /= 2
     return usd, "starting estimate: no run to go by yet", True
@@ -187,14 +222,30 @@ def estimate(settings, step: int, work: int) -> Estimate:
         f"Step {step} · {title}: {plural(work, UNITS[step])} × ${usd:.3f} = "
         f"${usd * work:,.2f} ({basis})"
     )
-    return Estimate(usd * work, [line], first)
+    return Estimate(usd * work, [line], first, scan_allowance(settings, step, title))
+
+
+def scan_allowance(settings, step: int, title: str = "") -> list[str]:
+    """The line about what reading scanned PDFs could add to a Step 1 run (an upper bound: the budget)."""
+    budget = float(getattr(settings, "scan_reading_budget_usd", 0) or 0)
+    if step != 1 or budget <= 0 or not getattr(settings, "staged_fetch", False):
+        return []
+    return [
+        f"Step 1 · {title}: plus up to ${budget:,.2f} more if scanned PDFs are found and Claude reads "
+        "them (the scan_reading_budget_usd setting; a document that does not fit is skipped). Not "
+        "included in the total above."
+    ]
 
 
 def combine(parts: list[Estimate]) -> Estimate:
+    extras: list[str] = []
+    for p in parts:
+        extras += [line for line in p.extra_lines if line not in extras]
     return Estimate(
         sum(p.usd for p in parts),
         [line for p in parts for line in p.lines],
         any(p.first_time for p in parts),
+        extras,
     )
 
 

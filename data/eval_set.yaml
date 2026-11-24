@@ -15,7 +15,7 @@ rows:
   human_score: 5.0
   human_zero: false
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E).pdf
   split: test
   spike: false
 - city: Bengaluru
@@ -39,7 +39,7 @@ rows:
   human_score: 0.0
   human_zero: true
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E).pdf
   split: dev
   spike: false
 - city: Bengaluru
@@ -51,7 +51,7 @@ rows:
   human_score: 10.0
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/#googtrans(en|en
+  - https://bdakarnataka.in/#googtrans(en|en)
   split: dev
   spike: false
 - city: Bengaluru
@@ -63,7 +63,7 @@ rows:
   human_score: 0.5
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/departments?sectionKey=finance&sectionName=Finance&subSectionId=s_2fb566f4-1034-4d6d-a12b-dda7d62e6f2f#googtrans(en|kn
+  - https://bdakarnataka.in/departments?sectionKey=finance&sectionName=Finance&subSectionId=s_2fb566f4-1034-4d6d-a12b-dda7d62e6f2f#googtrans(en|kn)
   - https://www.bdakarnataka.in/api/media/finance/pdf_press_release/BDA_BUDGET_2025-26_1767001456881_d7914af0.pdf
   split: dev
   spike: false
@@ -99,7 +99,7 @@ rows:
   human_score: 0.625
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/about-us#googtrans(en|en
+  - https://bdakarnataka.in/about-us#googtrans(en|en)
   split: dev
   spike: false
 - city: Bengaluru
@@ -122,7 +122,7 @@ rows:
   human_score: 1.25
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/about-us#googtrans(en|en
+  - https://bdakarnataka.in/about-us#googtrans(en|en)
   split: dev
   spike: false
 - city: Bengaluru
@@ -134,9 +134,9 @@ rows:
   human_score: 0.832
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/#googtrans(en|en
+  - https://bdakarnataka.in/#googtrans(en|en)
   - https://bdakarnataka.in/rti/
-  - https://bdakarnataka.in/contact#googtrans(en|en
+  - https://bdakarnataka.in/contact#googtrans(en|en)
   split: test
   spike: false
 - city: Bengaluru
@@ -184,7 +184,7 @@ rows:
   human_score: 3.33
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/online-services#googtrans(en|en
+  - https://bdakarnataka.in/online-services#googtrans(en|en)
   split: dev
   spike: false
 - city: Bengaluru
@@ -275,7 +275,7 @@ rows:
   human_score: 5.0
   human_zero: false
   human_sources:
-  - https://bdakarnataka.in/departments?sectionKey=finance&sectionName=Finance&subSectionId=s_2fb566f4-1034-4d6d-a12b-dda7d62e6f2f#googtrans(en|kn
+  - https://bdakarnataka.in/departments?sectionKey=finance&sectionName=Finance&subSectionId=s_2fb566f4-1034-4d6d-a12b-dda7d62e6f2f#googtrans(en|kn)
   - https://www.bdakarnataka.in/api/media/finance/pdf_press_release/BDA_BUDGET_2025-26_1767001456881_d7914af0.pdf
   split: test
   spike: false
@@ -311,7 +311,7 @@ rows:
   human_score: 0.0
   human_zero: true
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E).pdf/
   split: test
   spike: false
 - city: Bengaluru
@@ -535,7 +535,7 @@ rows:
   human_score: 2.5
   human_zero: false
   human_sources:
-  - https://mybmtc.karnataka.gov.in/storage/pdf-files/Commuter%20Advisory%20and%20Facilitation%20Committee%20(CAFC
+  - https://mybmtc.karnataka.gov.in/storage/pdf-files/Commuter%20Advisory%20and%20Facilitation%20Committee%20(CAFC).pdf
   split: dev
   spike: false
 - city: Bengaluru
@@ -1144,7 +1144,7 @@ rows:
   human_score: 0.0
   human_zero: true
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E).pdf
   split: test
   spike: false
 - city: Bengaluru
@@ -1169,7 +1169,7 @@ rows:
   human_score: 0.0
   human_zero: true
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E).pdf
   split: dev
   spike: false
 - city: Bengaluru
@@ -1196,7 +1196,7 @@ rows:
   human_score: 0.0
   human_zero: true
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E).pdf
   - https://bwssb.karnataka.gov.in/storage/pdf-files/WaterTariff-2025.pdf
   split: test
   spike: false
@@ -1224,7 +1224,7 @@ rows:
   human_score: 5.0
   human_zero: false
   human_sources:
-  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E).pdf
   split: test
   spike: false
 - city: Bengaluru

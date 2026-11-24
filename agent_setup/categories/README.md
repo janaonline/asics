@@ -42,4 +42,15 @@ archived copy can support a positive finding but never a zero, a required source
 crawl; one older than **`archive_max_age_days`** (default 365) is not used. **`failure_cache_hours`**
 (default 24): a link that failed every stage is not tried again for that long. **`fetch_time_cap_minutes`**
 (default 20): after it, links in that run get the plain check only and Needs Attention lists them as
-"not retried this run". `off` gives exactly the earlier plain check.
+"not retried this run". `off` gives exactly the earlier plain check. **`fetch_cache_max_age_days`** (default 30):
+a page opened in one city or step is reused from `outputs/_cache` for that long. **`scan_reading_budget_usd`**
+(default 3.00; 5.00 for Parastatal): the most one run spends on Claude reading scanned PDFs, legal texts
+and required sources first; a document that does not fit is skipped whole. **`scan_batch_wait_minutes`**
+(default 20): how long Step 1 waits for a scan-reading batch before it finishes and collects it later.
+Scan-reading copies carry their own marks: *read by Claude (scan)* (a PDF with no text layer),
+*read by Claude (page images)* (a damaged file whose pages were rendered to pictures), *repaired* (a
+damaged PDF the app rewrote and then read as text), *partial scan* (some pages did not come back; only
+those are read again next time), *check transcription* (section numbers skip or repeat, so text may have
+been dropped) and *scan reading in progress* (a batch Step 1 did not wait for). A partial scan, a
+copy to check and one in progress, like an archived copy, cannot support a zero, a required source or a
+complete crawl. PDFs up to 100 MB are downloaded in full.

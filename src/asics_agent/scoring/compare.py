@@ -307,6 +307,9 @@ class CompareRow:
     zero_route: str = ""  # Step 2 ZERO-CHECKED | Step 3 typed | Step 3 calculated | Step 2 proposal
     zero_gate: str = ""  # allowed | blocked by the scan | required source missing | ...
     zero_documents: str = ""  # each required document and whether it was present
+    zero_copy_types: str = (
+        ""  # how each of those documents was obtained (plain HTTP, archived, ...)
+    )
     zero_scan: str = ""  # the scan's result
     notes: list[str] = field(default_factory=list)
 
@@ -411,6 +414,7 @@ def _audit_zero(row: "CompareRow", s2, s3, info: "CityInputs") -> None:
         audit["documents"],
         audit["scan"],
     )
+    row.zero_copy_types = audit.get("copies", "")
 
 
 def compare_city(info: CityInputs, templates: list[TemplateRead]) -> Comparison:
@@ -734,6 +738,7 @@ ZERO_COLUMNS = [
     "Route",
     "Gate result (today)",
     "Required documents (present or not)",
+    "Copy types that supported the zero",
     "Scan result",
     "AI score from",
     "Human score",
@@ -917,6 +922,7 @@ def write_comparison(
                 r.zero_route,
                 r.zero_gate,
                 r.zero_documents,
+                r.zero_copy_types,
                 r.zero_scan,
                 r.ai_score_from,
                 r.human_score,
@@ -926,7 +932,9 @@ def write_comparison(
                 r.hv_available,
             ]
         )
-    for i, width in enumerate((14, 12, 10, 50, 26, 26, 70, 70, 16, 12, 16, 12, 16, 16), start=1):
+    for i, width in enumerate(
+        (14, 12, 10, 50, 26, 26, 70, 40, 70, 16, 12, 16, 12, 16, 16), start=1
+    ):
         zero_sheet.column_dimensions[get_column_letter(i)].width = width
     zero_sheet.freeze_panes = "D2"
     for row in zero_sheet.iter_rows(min_row=2):

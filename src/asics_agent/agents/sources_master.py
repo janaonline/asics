@@ -36,6 +36,7 @@ from asics_agent.agents.final_qa import qa_sources
 from asics_agent.agents.initial_checks import build_initial_checks
 from asics_agent.agents.links_builder import build_links_agent
 from asics_agent.agents.parastatal_discovery import build_parastatal_discovery
+from asics_agent.agents.scan_step import collect_scans
 from asics_agent.agents.state import MasterState
 from asics_agent.categories import agent_for
 from asics_agent.cutoff import cutoff_text
@@ -278,6 +279,13 @@ def build_sources_graph(
             )
 
         sources = dedupe_sources(state.get("sources", []) + kept + shared)
+        if not state.get("skip_research"):
+            # Scanned PDFs queued by the link check are read now, with every document of the run in
+            # view (legal texts and required sources first), within the scan budget.
+            parastatals = {p.id: p for p in state.get("parastatals", [])}
+            parastatals[ALL_PARASTATALS] = everyone
+            sources, scan_issues = collect_scans(services, run, sources, parastatals.get)
+            issues += scan_issues
         tool_urls = set(state.get("tool_urls", []))
         selected_ids = {q.id for q in selected_questions(state)}
         if not state.get("skip_research"):  # a checks-only run shows every bank problem

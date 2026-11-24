@@ -51,7 +51,12 @@ SCAN_MIN_PAGES = 10
 SCAN_EMPTY_SHARE = 0.5
 SCAN_EMPTY_WORDS = 10  # a page with fewer words than this counts as empty
 ROBOTS_DEADLINE_SECONDS = 10
-MAX_BYTES = 30 * 1024 * 1024  # larger documents are not downloaded in full
+MAX_BYTES = 30 * 1024 * 1024  # a larger web page is not downloaded in full
+# A PDF may be bigger (annual reports and scans of Acts run to 40-60 MB) and then needs more time. One
+# that is larger still is not read from a half-file: the check says it is over the limit.
+MAX_PDF_BYTES = 100 * 1024 * 1024
+PDF_DEADLINE_SECONDS = 180
+TRUNCATED = "asics_truncated"  # response.extensions key: the body was cut at the size limit
 
 # Why a check failed (AccessCheck.failure); the staged fetch (fetch_chain.py) decides from this which
 # stage to try next. "" = the page opened.
@@ -64,6 +69,7 @@ FAILURES = (
     "redirect",  # to a different site: a person decides
     "unsupported",  # a content type that is not a page or document
     "unreadable",  # the file could not be read
+    "too_large",  # bigger than the download limit (the file would be cut off)
     "scan",  # a PDF with no text layer
     "gated",  # a login, error or captcha page
     "metadata",  # an India Code record without the Act's text
@@ -105,6 +111,10 @@ def fetch(
     with client.stream(
         "GET", url, follow_redirects=follow_redirects, headers=headers, **options
     ) as response:
+        is_pdf = "pdf" in response.headers.get("content-type", "").lower()
+        limit = MAX_PDF_BYTES if is_pdf else MAX_BYTES
+        deadline = max(deadline, PDF_DEADLINE_SECONDS) if is_pdf else deadline
+        truncated = False
         for chunk in response.iter_bytes():  # already decompressed
             chunks.append(chunk)
             size += len(chunk)
@@ -112,7 +122,8 @@ def fetch(
                 raise FetchTooSlow(
                     f"took longer than {deadline:.0f} seconds", request=response.request
                 )
-            if size > MAX_BYTES:
+            if size > limit:
+                truncated = True
                 break
         # The body is already decompressed, so the headers that describe the compressed
         # body must not travel with it: httpx would decompress it a second time and fail
@@ -127,6 +138,7 @@ def fetch(
             headers=kept,
             content=b"".join(chunks),
             request=response.request,
+            extensions={TRUNCATED: limit} if truncated else None,
         )
 
 
@@ -307,8 +319,18 @@ def evaluate_response(
         check.failure = "unsupported"
         return check
 
+    if limit := response.extensions.get(TRUNCATED):
+        reasons.append(
+            f"Larger than the download limit ({limit // (1024 * 1024)} MB), so it was not read from a "
+            "half-downloaded file. A person can open it and save a smaller copy (see How to Use)."
+        )
+        check.verification_status = "Human Verification Required"
+        check.failure = "too_large"
+        return check
+
+    is_pdf = "pdf" in check.content_type or response.content[:5] == b"%PDF-"
     try:
-        if "pdf" in check.content_type or response.content[:5] == b"%PDF-":
+        if is_pdf:
             text = pdf_to_text(response.content)
         elif "html" in check.content_type or "text" in check.content_type:
             text = html_to_text(response.text)
@@ -321,6 +343,8 @@ def evaluate_response(
         reasons.append(f"Content could not be read ({type(exc).__name__}).")
         check.verification_status = "Human Verification Required"
         check.failure = "unreadable"
+        if is_pdf:
+            check.pdf_bytes = response.content  # the fetch chain may repair it or read its pages
         return check
 
     return accept_text(
@@ -341,13 +365,14 @@ def accept_text(
     *,
     body: bytes,
     snapshot_ext: str,
+    check_scan: bool = True,
 ) -> AccessCheck:
     """Apply the content checks to readable `text` obtained for `url` and, if it passes, save the text
     and the copy (`body`, as downloaded or as rendered) under the URL's evidence name. Used for a plain
     reply, a retried reply, a browser render and an archived copy alike."""
     reasons = check.reasons
     check.words = len(text.split())
-    if (scan := scanned_pdf(text)) is not None:
+    if check_scan and (scan := scanned_pdf(text)) is not None:
         empty, pages = scan
         reasons.append(
             f"{empty} of this PDF's {pages} pages have no readable text, so it is probably a scan. "
@@ -356,6 +381,10 @@ def accept_text(
         )
         check.verification_status = "Human Verification Required"
         check.failure = "scan"
+        if snapshot_ext == ".pdf":
+            check.pdf_bytes = (
+                body  # the fetch chain may have Claude read the pages (scan_reading.py)
+            )
         return check
     problem, detail = content_problem(url, text)
     if problem == "blocked":

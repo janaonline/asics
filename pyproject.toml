@@ -18,6 +18,8 @@ dependencies = [
     "truststore>=0.10.4",
     "fonttools>=4.66.1",
     "playwright>=1.49",
+    "pypdfium2>=5.15.2",
+    "pillow>=12.3.0",
 ]
 
 [dependency-groups]

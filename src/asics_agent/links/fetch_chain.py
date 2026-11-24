@@ -37,7 +37,7 @@ from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 import httpx
 
-from asics_agent.links import marks
+from asics_agent.links import marks, scan_reading
 from asics_agent.links.accessibility import (
     GOVERNMENT_SUFFIXES,
     FetchTooSlow,
@@ -49,6 +49,7 @@ from asics_agent.links.accessibility import (
     fetch,
 )
 from asics_agent.links.browser import Renderer, default_renderer
+from asics_agent.links.shared_cache import SharedCache
 from asics_agent.links.text import html_to_text, pdf_to_text
 from asics_agent.links.wayback import Wayback, age_days
 from asics_agent.models import AccessCheck
@@ -106,8 +107,12 @@ CLOCK = RunClock()
 
 
 def begin_run() -> None:
-    """Start the time cap for a run (Step 1, Step 2's re-check, a re-check of a workbook)."""
+    """Start the time cap for a run (Step 1, Step 2's re-check, a re-check of a workbook), and forget the
+    scan-reading queue and budget of the run before."""
+    from asics_agent.links import scan_reading
+
     CLOCK.begin()
+    scan_reading.reset_run()
 
 
 _slots: dict[str, threading.BoundedSemaphore] = {}
@@ -327,18 +332,37 @@ def check_url_staged(
     cap = float(getattr(settings, "fetch_time_cap_minutes", 20))
     hours = float(getattr(settings, "failure_cache_hours", 24))
     max_age = int(getattr(settings, "archive_max_age_days", 365))
-    failures = FailureCache(tools.cache_root or _cache_root(settings), hours)
+    root = tools.cache_root or _cache_root(settings)
+    failures = FailureCache(root, hours)
+    shared = SharedCache(root, int(getattr(settings, "fetch_cache_max_age_days", 30)))
 
+    if (done := scan_reading.take_result(url, cache_dir)) is not None:
+        return done  # read by Claude earlier in this run (scan_step.py)
+    if (hit := shared.lookup(url, cache_dir)) is not None:
+        return hit
     if (entry := failures.get(url)) is not None:
         return _from_failure_cache(url, entry, hours)
 
+    if (kept := shared.original_fresh(url)) is not None:
+        # A PDF that could not be read as text (a scan): the bytes are cached, so it is not downloaded again.
+        check = AccessCheck(url=url, checked_at=_now())
+        check.failure, check.pdf_bytes = "scan", kept
+        check.verification_status = "Human Verification Required"
+        check.stages = ["PDF reused from the shared cache (a scan; no new download)"]
+        if (out := scan_reading.stage_five(check, url, cache_dir, settings, shared)) is not None:
+            return out
     with host_slot(url):
         check = check_url(url, client, cache_dir, user_agent, official_hosts)
     if check.verification_status == "Verified":
         check.copy_type = marks.PLAIN
         check.stages = [f"plain HTTP: opened, {check.words} words"]
         check.reasons.append(f"Copy type: {marks.PLAIN}.")
+        shared.store(url, check)
         return check
+    if check.failure in ("scan", "unreadable") and check.pdf_bytes:
+        check.stages = [f"plain HTTP ({_outcome(check)})"]
+        if (out := scan_reading.stage_five(check, url, cache_dir, settings, shared)) is not None:
+            return out
 
     kind = check.failure
     stages = [f"plain HTTP ({_outcome(check)})"]
@@ -371,6 +395,7 @@ def check_url_staged(
         )
         if won is not None:
             won.stages = [*stages, note]
+            shared.store(url, won)
             return won
         stages.append(note)
     else:
@@ -383,6 +408,7 @@ def check_url_staged(
         )
         if won is not None:
             won.stages = [*stages, note]
+            shared.store(url, won)
             return won
         stages.append(note)
     elif wanted["browser"]:
@@ -396,6 +422,7 @@ def check_url_staged(
         won, note, stale = _stage_archive(url, cache_dir, max_age, tools)
         if won is not None:
             won.stages = [*stages, note]
+            shared.store(url, won)
             return won
         stages.append(note)
     else:
@@ -416,6 +443,7 @@ def _why_not(kind: str) -> str:
         "robots": "robots.txt does not allow automated access",
         "redirect": "it redirects to a different site; a person decides",
         "scan": "a scanned PDF; see the scan-reading setting",
+        "too_large": "bigger than the download limit",
         "gated": "a login, error or captcha page",
         "unreadable": "the file could not be read",
         "unsupported": "not a page or document",

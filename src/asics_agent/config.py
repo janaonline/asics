@@ -76,6 +76,15 @@ class Settings:
     failure_cache_hours: float = 24.0
     # The chain's time cap in one run, in minutes (0 = none); past it links get the plain check only.
     fetch_time_cap_minutes: float = 20.0
+    # Live (non-archived) copies in the shared cache are reused for this many days (links/shared_cache.py);
+    # a scan-read copy never expires. 0 = no reuse.
+    fetch_cache_max_age_days: int = 30
+    # Scan reading (links/scan_reading.py): the most one run spends on Claude reading scanned PDFs (US$).
+    # 0 = off. A document that does not fit is skipped whole and listed in Needs Attention.
+    scan_reading_budget_usd: float = 3.0
+    # How long Step 1 waits for a scan-reading batch (minutes) before it finishes and collects the
+    # result on the next Step 1 or re-check.
+    scan_batch_wait_minutes: float = 20.0
 
 
 @lru_cache

@@ -242,3 +242,40 @@ def test_a_condition_only_zero_needs_the_sources_but_no_scan(agency, make_source
         make_source("ULG-LAW"),
     ]
     assert sr.decide_zero(req, agency, sources).allowed
+
+
+def test_the_zero_audit_names_the_copy_type_of_each_document_a_zero_rests_on():
+    """The "AI zeros" sheet's copy-type column: plain, archived (flagged) and Claude-read copies."""
+    import dataclasses
+
+    from asics_agent.models import Parastatal, Source
+
+    agency = Parastatal(
+        id="AAA",
+        name="Sample Board",
+        type="water_supply_entity",
+        governing_act="Sample Water Act, 1970 (State Act 3 of 1970)",
+    )
+
+    def src(cid, tag, copy_type):
+        return Source(
+            citation_id=cid,
+            parastatal_id="AAA",
+            title=cid,
+            url=f"https://x.gov.in/{cid}",
+            useful_for=f"[{tag}] x",
+            verification_status="Verified",
+            use_for_answers=True,
+            content_path=__file__,
+            copy_type=copy_type,
+        )
+
+    req = dataclasses.replace(sr.required_for("UPD 1a"), groups=(("ACT",), ("RULES",)))
+    audit = sr.audit_zero(
+        req,
+        agency,
+        [src("AAA-01", "ACT", "read by Claude (scan)"), src("AAA-02", "RULES", "ARCHIVED 2026-05-01")],
+    )
+    assert audit["copies"] == (
+        "AAA-01: read by Claude (scan); AAA-02: ARCHIVED 2026-05-01 (cannot support a zero)"
+    )

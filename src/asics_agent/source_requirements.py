@@ -638,10 +638,20 @@ def audit_zero(
     """What the gate says about a zero today, in words: {"gate", "documents", "scan"}. It reads the
     Citation Sheet as it is now, not as it was when the zero was written."""
     if req is None:
-        return {"gate": "no row in the requirements table", "documents": "", "scan": ""}
+        return {
+            "gate": "no row in the requirements table",
+            "documents": "",
+            "scan": "",
+            "copies": "",
+        }
     decision = decide_zero(req, parastatal, sources, rule=rule)
     if decision.state == "no_rule":
-        return {"gate": GATE_WORDS["no_rule"], "documents": "", "scan": "not applicable"}
+        return {
+            "gate": GATE_WORDS["no_rule"],
+            "documents": "",
+            "scan": "not applicable",
+            "copies": "",
+        }
     documents = "; ".join(
         f"{DOCUMENT_NAMES.get(label, label)}: "
         + (
@@ -670,4 +680,22 @@ def audit_zero(
         "gate": GATE_WORDS.get(decision.state, decision.state),
         "documents": documents,
         "scan": scan,
+        "copies": copy_types_of(decision, sources),
     }
+
+
+def copy_types_of(decision: "ZeroDecision", sources: list[Source]) -> str:
+    """How each document the zero rests on was obtained: "AAA-01: plain HTTP; AAA-02: ARCHIVED 2026-05-01
+    (cannot support a zero)". The Compare workbook's "AI zeros" sheet shows it, so a reviewer sees at a
+    glance which zeros rest on a browser render, an archived copy or a Claude-read scan."""
+    by_id = {s.citation_id: s for s in sources}
+    seen, parts = set(), []
+    for _label, _status, ids in decision.gate.detail:
+        for cid in ids:
+            if cid in seen:
+                continue
+            seen.add(cid)
+            copy = (by_id[cid].copy_type if cid in by_id else "") or "not recorded"
+            note = " (cannot support a zero)" if marks.cannot_support_zero(copy) else ""
+            parts.append(f"{cid}: {copy}{note}")
+    return "; ".join(parts)

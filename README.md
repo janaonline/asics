@@ -511,6 +511,11 @@ and `scoring/2027/ai/archive/`.
    ```bash
    uv run playwright install chromium
    ```
+
+   Nothing else is installed by hand: `uv sync` also brings the PDF tools (`pypdf`, `pypdfium2`). The
+   app keeps one shared copy of every page and every scanned document it reads in `outputs/_cache/`
+   (ignored by git; safe to delete, it is rebuilt), so a second city or step does not download or pay
+   for the same thing twice.
 3. Run the tests (offline, free):
 
    ```bash

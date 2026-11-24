@@ -294,3 +294,43 @@ def test_lenient_still_counts_a_dead_link_that_names_a_topic(services, site_with
     practice.PAGES.pop(f"{site_with_menu}budget")  # "Budget" is a topic word
     note = _home_note(_crawl_with(services, crawl_incomplete_on_dead_link="lenient"))
     assert "SITE-CRAWL: incomplete" in note and "/budget" in note
+
+
+def test_a_crawl_is_never_complete_when_the_home_page_was_only_an_archived_copy(
+    services, site_with_menu, monkeypatch
+):
+    """The home page opens only as a Wayback copy: its menu is not trusted, so the crawl does not run,
+    no menu page is opened, the home row has no "complete" note and the website gate stays closed."""
+    from asics_agent.agents import common
+    from asics_agent.agents.sources_master import build_sources_graph
+    from asics_agent.links import marks
+
+    real = common.check_url_staged
+
+    def archived_home(url, *args, **kwargs):
+        check = real(url, *args, **kwargs)
+        if url == site_with_menu and check.verification_status == "Verified":
+            check.copy_type = marks.archived("2026-05-01")
+            check.archived_on = "2026-05-01"
+        return check
+
+    monkeypatch.setattr(common, "check_url_staged", archived_home)
+    result = build_sources_graph(services).invoke(
+        {"city": "sample_city_a", "only_questions": ["UPD 1"], "auto_approve": True}
+    )
+    swb = next(p for p in result["parastatals"] if p.id == "SWB")
+    state, text = sr.crawl_status(swb, result["final_sources"])
+    assert state != "complete" and "complete" not in text
+    assert "SITE-CRAWL: complete" not in _home_note(result)
+    urls = {s.url for s in result["final_sources"] if s.parastatal_id == "SWB"}
+    assert not {f"{site_with_menu}{n}" for n in ("about", "gallery", "budget", "rti")} & urls
+    assert any(
+        "an archived copy does not count for a crawl" in i.message for i in result["final_issues"]
+    )
+    # the gate: a website question that needs the crawl is "missing the complete site crawl"
+    gate = sr.check(
+        dataclasses.replace(sr.required_for("DPG 1a"), groups=(("WEBPAGE",),)),
+        swb,
+        result["final_sources"],
+    )
+    assert gate.state == "missing" and "SITECRAWL" in gate.missing

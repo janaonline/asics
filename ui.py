@@ -79,6 +79,8 @@ def confirm_cost(estimate, start, what: str = "This run") -> None:
     st.markdown(f"{what} will use about **\\${estimate.usd:,.2f}** of Claude credit.")
     for line in estimate.lines:
         st.caption(line.replace("$", "\\$"))  # a bare $ would start a formula
+    for line in getattr(estimate, "extra_lines", []):
+        st.caption(":material/add: " + line.replace("$", "\\$"))
     if estimate.first_time:
         st.info(
             "This is a starting estimate: there is no earlier run like this to go by. What "

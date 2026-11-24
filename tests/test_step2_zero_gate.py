@@ -217,3 +217,58 @@ def test_with_the_setting_off_nothing_changes(ask, make_source):
     answer, message = ask("UPD 1a", ZERO, FULL(make_source), required=False)
     assert "ZERO-CHECKED" not in answer.notes
     assert "ZERO CONDITION" not in message and "REQUIRED SOURCES" not in message
+
+
+# -- a copy that cannot support a zero -----------------------------------------------------------------
+def _with_copy(source, copy_type):
+    return source.model_copy(update={"copy_type": copy_type})
+
+
+@pytest.mark.parametrize(
+    "copy_type",
+    [
+        "ARCHIVED 2026-05-01",
+        "stale archive; ARCHIVED 2024-01-01",
+        "read by Claude (scan); partial scan",
+        "read by Claude (scan); check transcription",
+    ],
+)
+def test_step2_never_writes_a_zero_that_rests_only_on_an_archived_copy_or_a_partial_scan(
+    ask, make_source, copy_type
+):
+    """The Act, the Rules and the T&CP Act are all in the sheet and the model proposes 0 with
+    ZERO-CHECKED, but the Act is only an archived copy / a partial scan: the zero is not written."""
+    sources = [_with_copy(make_source("ACT"), copy_type), make_source("RULES"), make_source("TCP")]
+    answer, message = ask("UPD 1a", ZERO, sources)
+    assert answer.proposed_score is None
+    assert answer.status == "Human Verification Required"
+    assert "ZERO-CHECKED" not in answer.notes
+    assert "REQUIRED SOURCES" in message  # the model is told the gate's state, not asked to decide
+
+
+def test_step2_zero_without_a_quote_and_with_a_live_copy_still_works(ask, make_source):
+    """The guard is about the copy, not the question: the same sources as live copies give the zero."""
+    sources = [_with_copy(make_source(t), "plain HTTP") for t in ("ACT", "RULES", "TCP")]
+    answer, _ = ask("UPD 1a", ZERO, sources)
+    assert answer.proposed_score == 0 and "ZERO-CHECKED" in answer.notes
+
+
+def test_an_ordinary_zero_with_a_quote_from_an_archived_copy_is_not_written_either(
+    ask, make_source
+):
+    text = "Section 16. The Board shall prepare its plan."
+    reply = {
+        "sufficiency": "sufficient",
+        "answer": "No role.",
+        "proposed_score": 0,
+        "citation_id": "AAA-01",
+        "evidence_excerpt": "The Board shall prepare its plan",
+        "notes": "CLASS: A1; CONFIDENCE: Medium; BAND: 0",
+    }
+    sources = [
+        _with_copy(make_source("ACT", text), "ARCHIVED 2026-05-01"),
+        make_source("RULES"),
+        make_source("TCP"),
+    ]
+    answer, _ = ask("UPD 1a", reply, sources)
+    assert answer.proposed_score is None

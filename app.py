@@ -1500,6 +1500,16 @@ def costs_page():
                     "Based on": basis,
                 }
             )
+        if (budget := float(getattr(vs, "scan_reading_budget_usd", 0) or 0)) > 0 and vs.staged_fetch:
+            rows.append(
+                {
+                    "Category": v.title,
+                    "Step": "Step 1, scan reading",
+                    "Cost per": "run (at most)",
+                    "US$": budget,
+                    "Based on": "the scan_reading_budget_usd setting; spent only if scanned PDFs are found",
+                }
+            )
     st.dataframe(
         pd.DataFrame(rows),
         hide_index=True,

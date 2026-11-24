@@ -114,6 +114,7 @@ def fetch_issues(parastatal, sources, settings=None) -> list[Issue]:
     archived copies, stale archives, copies read without a verified certificate, links not retried this
     run, and a browser that is not installed. Each line lists the Citation IDs."""
     archived, stale, cert, skipped = [], [], [], []
+    partial, check_tx, claude_read, repaired, pending = [], [], [], [], []
     no_browser = False
     seen = set()
     for s in sources:
@@ -128,6 +129,20 @@ def fetch_issues(parastatal, sources, settings=None) -> list[Issue]:
             archived.append(f"{label} ({s.copy_type})")
         if marks.has(s.copy_type, marks.CERT):
             cert.append(label)
+        if marks.has(s.copy_type, marks.PARTIAL_SCAN):
+            missing = re.search(r"Pages not read: ([\d, ]+)\.", notes)
+            partial.append(
+                f"{label}" + (f" (pages not read: {missing.group(1)})" if missing else "")
+            )
+        if marks.has(s.copy_type, marks.CHECK_TRANSCRIPTION):
+            found = re.search(r"Transcription check: ([^\n]*?)\.(?= Copy type|$)", notes)
+            check_tx.append(f"{label}" + (f" ({found.group(1)})" if found else ""))
+        if marks.is_claude_read(s.copy_type):
+            claude_read.append(label)
+        if marks.has(s.copy_type, marks.REPAIRED):
+            repaired.append(label)
+        if marks.has(s.copy_type, marks.SCAN_PENDING):
+            pending.append(label)
         if NOT_RETRIED_NOTE in notes:
             skipped.append(label)
         no_browser = no_browser or "browser not installed" in notes
@@ -158,6 +173,53 @@ def fetch_issues(parastatal, sources, settings=None) -> list[Issue]:
             line(
                 f"{len(stale)} link(s) have only a stale archived copy (older than {limit} days), "
                 f"which is not used: {', '.join(stale)}. A person must open the live page."
+            )
+        )
+    if partial:
+        out.append(
+            line(
+                f"{len(partial)} scanned document(s) were only PARTLY read by Claude (some pages did not "
+                f"come back): {'; '.join(partial)}. A partial scan can support a positive finding but "
+                "never a zero, a required source or a complete crawl. Run Step 1 again to read the "
+                "missing pages (only those are read again), or save a readable copy by hand."
+            )
+        )
+    if check_tx:
+        out.append(
+            line(
+                f"{len(check_tx)} scanned document(s) may have dropped text in the transcription "
+                f'(marked "check transcription"): {"; ".join(check_tx)}. Compare them with the PDF '
+                "before relying on them; they cannot support a zero."
+            )
+        )
+    if claude_read:
+        out.append(
+            Issue(
+                phase="links",
+                severity="info",
+                ref=parastatal.id,
+                audience="team",
+                message=f"{name}: {len(claude_read)} source(s) are text that Claude transcribed from "
+                f'scanned pages ("read by Claude"), not text taken from the file: '
+                f"{', '.join(claude_read)}. Spot-check a quoted passage against the PDF.",
+            )
+        )
+    if repaired:
+        out.append(
+            Issue(
+                phase="links",
+                severity="info",
+                ref=parastatal.id,
+                audience="team",
+                message=f"{name}: {len(repaired)} PDF(s) were damaged and rewritten by the app so their "
+                f'text could be read ("repaired"): {", ".join(repaired)}.',
+            )
+        )
+    if pending:
+        out.append(
+            line(
+                f"scan reading is in progress for {len(pending)} document(s): {', '.join(pending)}. "
+                "Run Step 1 or a re-check later to collect the result."
             )
         )
     if cert:
