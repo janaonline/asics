@@ -122,8 +122,10 @@ def _again(services, llm=None):
 def test_the_column_is_last_with_its_exact_header_and_a_yes_no_dropdown(step1):
     wb = load_workbook(step1)
     ws = wb[CITATIONS_SHEET]
-    assert ws.cell(1, ws.max_column).value == "Human-Verified?" == HUMAN_VERIFIED
-    letter = ws.cell(1, ws.max_column).column_letter
+    # Human-Verified? is the last column the team fills in; the app's own Copy Type column follows it
+    assert ws.cell(1, ws.max_column).value == "Copy Type"
+    assert ws.cell(1, ws.max_column - 1).value == "Human-Verified?" == HUMAN_VERIFIED
+    letter = ws.cell(1, ws.max_column - 1).column_letter
     lists = [
         v for v in ws.data_validations.dataValidation if letter in str(v.sqref) and v.type == "list"
     ]

@@ -62,6 +62,9 @@ def build_initial_checks(services: Services, step: str = "sources"):
     settings = services.settings
 
     def load_inputs(state: MasterState) -> dict:
+        from asics_agent.links.fetch_chain import begin_run
+
+        begin_run()  # the staged fetch's time cap for this run starts now (Steps 1 and 2)
         issues: list[Issue] = []
         configs, register_issues = load_register(settings.city_register)
         city = configs.get(state["city"])

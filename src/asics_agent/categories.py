@@ -76,6 +76,11 @@ class Category:
     # "strict": any menu link that did not open makes the crawl incomplete. "lenient": a dead link
     # whose text and address name no topic word is ignored (links/crawl.py).
     crawl_incomplete_on_dead_link: str = "strict"
+    # The staged fetch (links/fetch_chain.py) and its limits; see config.Settings.
+    staged_fetch: bool = True
+    archive_max_age_days: int = 365
+    failure_cache_hours: float = 24.0
+    fetch_time_cap_minutes: float = 20.0
     shared_rules: str = "shared-rules"
     agents: dict = field(default_factory=dict)  # role -> agent name
     description: str = ""
@@ -100,6 +105,14 @@ def _count(value) -> int:
         return max(int(value), 0)
     except (TypeError, ValueError):
         return 0
+
+
+def _number(value, default: float) -> float:
+    """A number setting (hours, minutes, days), `default` when missing or not a number; never negative."""
+    try:
+        return max(float(value), 0.0)
+    except (TypeError, ValueError):
+        return default
 
 
 def _parse(path: Path) -> Category:
@@ -131,6 +144,10 @@ def _parse(path: Path) -> Category:
         crawl_incomplete_on_dead_link=str(meta.get("crawl_incomplete_on_dead_link") or "strict")
         .strip()
         .lower(),
+        staged_fetch=_switch(meta.get("staged_fetch", "on")),
+        archive_max_age_days=int(_number(meta.get("archive_max_age_days"), 365)),
+        failure_cache_hours=_number(meta.get("failure_cache_hours"), 24.0),
+        fetch_time_cap_minutes=_number(meta.get("fetch_time_cap_minutes"), 20.0),
         shared_rules=str(meta.get("shared_rules") or "shared-rules"),
         agents=agents,
         description=text[match.end() :].strip() if match else text.strip(),
@@ -239,6 +256,10 @@ def category_settings(settings, name: str):
         crawl_incomplete_on_dead_link=v.crawl_incomplete_on_dead_link
         if v.crawl_incomplete_on_dead_link in ("strict", "lenient")
         else "strict",
+        staged_fetch=v.staged_fetch,
+        archive_max_age_days=v.archive_max_age_days,
+        failure_cache_hours=v.failure_cache_hours,
+        fetch_time_cap_minutes=v.fetch_time_cap_minutes,
     )
 
 

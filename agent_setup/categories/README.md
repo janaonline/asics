@@ -31,3 +31,15 @@ agency's confirmed home page, one level deep. **`crawl_incomplete_on_dead_link`*
 default, or `lenient`): strict makes any menu link that did not open an incomplete crawl; lenient
 ignores a dead link whose text and address name no topic word. To switch, edit the word in the
 category file, save, and restart the app.
+
+**`staged_fetch`** (`on` or `off`, default `on`): a link the plain check cannot open is tried again
+(its http/https and www forms), then in a headless Chromium browser (pages drawn by JavaScript;
+a certificate that cannot be verified is bypassed only for the agency's own site and `.gov.in` /
+`.nic.in`), then in the Wayback Machine (for a 404, a 5xx or a site that cannot be reached). The
+Citation Sheet's last column, **Copy Type**, says how each copy was obtained (plain HTTP,
+browser-rendered, certificate not verified, ARCHIVED <date>, stale archive, saved by team). An
+archived copy can support a positive finding but never a zero, a required source or a complete
+crawl; one older than **`archive_max_age_days`** (default 365) is not used. **`failure_cache_hours`**
+(default 24): a link that failed every stage is not tried again for that long. **`fetch_time_cap_minutes`**
+(default 20): after it, links in that run get the plain check only and Needs Attention lists them as
+"not retried this run". `off` gives exactly the earlier plain check.

@@ -140,6 +140,14 @@ class AccessCheck(BaseModel):
     content_path: str | None = None  # extracted text, used by the agents
     snapshot_path: str | None = None  # the page/PDF exactly as downloaded, for reviewers
     checked_at: str = ""
+    # How the copy was obtained (links/fetch_chain.py): "plain HTTP", "browser-rendered",
+    # "certificate not verified", "ARCHIVED yyyy-mm-dd" ... joined with "; ". "" = not opened.
+    copy_type: str = ""
+    archived_on: str = ""  # ISO date of the Wayback snapshot, for an archived copy
+    stale_archive: bool = False  # the snapshot is older than archive_max_age_days
+    failure: str = ""  # why the plain check failed (see accessibility.FAILURES), "" if it opened
+    stages: list[str] = Field(default_factory=list)  # what each stage of the fetch chain did
+    not_retried: bool = False  # the chain did not run again: failure cache or the run's time cap
 
 
 ALL_PARASTATALS = "All parastatals"
@@ -165,6 +173,9 @@ class Source(BaseModel):
     content_path: str | None = None
     snapshot_path: str | None = None
     checked_at: str = ""
+    # How the saved copy was obtained (the Citation Sheet's last column, "Copy Type"); see AccessCheck.
+    copy_type: str = ""
+    archived_on: str = ""
     # When the cited text or version took effect (or its "amended up to" date): not the page's
     # "last updated" and not checked_at. And whether that is on or before the Law/Policy cut-off:
     # ok | later | unknown | Bill-draft (see cutoff.py). Both optional: old Citation Sheets lack them.

@@ -1370,7 +1370,9 @@ def recheck_page():
                 if practice
                 else make_http_client(settings.user_agent, settings.http_timeout)
             )
-            out, summary = recheck_workbook(path, client, settings.user_agent)
+            out, summary = recheck_workbook(
+                path, client, settings.user_agent, None if practice else settings
+            )
         problems = summary.get("links with problems", 0) + summary.get(
             "quotes no longer on the page", 0
         )

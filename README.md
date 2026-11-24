@@ -503,6 +503,14 @@ and `scoring/2027/ai/archive/`.
    ```
 
    Then set `ANTHROPIC_API_KEY` in `.env`.
+
+   Step 1 opens links drawn by JavaScript in a headless Chromium browser. Download it once on
+   each computer (about 100 MB; without it the app still runs and Needs Attention says the
+   browser stage was skipped):
+
+   ```bash
+   uv run playwright install chromium
+   ```
 3. Run the tests (offline, free):
 
    ```bash

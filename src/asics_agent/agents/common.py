@@ -10,8 +10,10 @@ from pydantic import BaseModel, Field
 from asics_agent import source_requirements
 from asics_agent.agent_setup import MemoryScope
 from asics_agent.categories import agent_for
-from asics_agent.cutoff import assessment_fields, rule_from
-from asics_agent.links.accessibility import check_url, is_india_code, site_of
+from asics_agent.cutoff import assessment_fields, check_from, rule_from
+from asics_agent.links import marks
+from asics_agent.links.accessibility import is_india_code, site_of
+from asics_agent.links.fetch_chain import check_url_staged
 from asics_agent.links.text import rank_chunks
 from asics_agent.llm import call_json
 from asics_agent.models import AccessCheck, Issue, Parastatal, Question, RunContext, Source
@@ -130,6 +132,7 @@ def vet_source(
     allowed_urls: set[str] | None,
     official_hosts: set[str] = frozenset(),
     team_copy: AccessCheck | None = None,
+    own_hosts: frozenset[str] = frozenset(),
 ) -> tuple[Source | None, list[Issue]]:
     """Apply the URL rule, the human-accessibility test and the authority rules to one URL.
 
@@ -159,8 +162,14 @@ def vet_source(
     settings = services.settings
     # The agency's confirmed official website lets a gov.in alias that redirects to it be accepted.
     confirmed = {site_of(parastatal.official_website)} - {""}
-    check = check_url(
-        url, services.http, Path(run.cache_dir), settings.user_agent, official_hosts=confirmed
+    check = check_url_staged(
+        url,
+        services.http,
+        Path(run.cache_dir),
+        settings.user_agent,
+        official_hosts=confirmed,
+        settings=settings,
+        own_hosts=own_hosts,
     )
     notes = [" ".join(check.reasons)]
     if team_copy:
@@ -170,6 +179,7 @@ def vet_source(
             team_copy = None
         else:
             check = team_copy
+            check.copy_type = marks.SAVED_BY_TEAM
             notes = [*team_copy.reasons, automated]
     source = Source(
         parastatal_id=parastatal.id,
@@ -186,6 +196,8 @@ def vet_source(
         content_path=check.content_path,
         snapshot_path=check.snapshot_path,
         checked_at=check.checked_at,
+        copy_type=check.copy_type,
+        archived_on=check.archived_on,
         team_saved_copy=team_copy is not None,
         human_verified=candidate.human_verified,
     )
@@ -197,6 +209,13 @@ def vet_source(
         source.effective_date, source.cutoff_check = assessment_fields(
             assessment.effective_date, assessment.form, rule_from(settings)
         )
+        if check.archived_on and not source.effective_date and rule_from(settings) is not None:
+            # An archived copy shows the text as of the day it was archived: when the assessor found no
+            # date in the text, that day is the as-of date for the Law/Policy cut-off check.
+            source.effective_date = check.archived_on
+            source.cutoff_check = check_from(
+                check.archived_on, assessment.form, rule_from(settings)
+            )
         source.authority_score = max(0.0, min(10.0, assessment.authority_score))
         notes.append(assessment.notes)
         if assessment.meets_requirement.strip().lower() in ("yes", "partly", "no"):
@@ -333,6 +352,23 @@ def dedupe_sources(sources: list[Source]) -> list[Source]:
     return result
 
 
+def own_domains(parastatal: Parastatal, sources: list[Source]) -> frozenset[str]:
+    """The agency's own websites, for the one thing that needs them (the staged fetch may read a page
+    whose security certificate cannot be verified only on an own or government host): its confirmed
+    official website, plus the host of every row of its Citation Sheet that is typed as the agency's
+    website and is verified or marked Human-Verified?."""
+    hosts = {site_of(parastatal.official_website)}
+    for s in sources:
+        kind = (s.source_type or "").strip().lower()
+        if (
+            s.parastatal_id == parastatal.id
+            and kind in ("official parastatal website", "official website")
+            and (s.human_verified or s.verification_status == "Verified")
+        ):
+            hosts.add(site_of(s.url))
+    return frozenset(hosts - {""})
+
+
 def vet_many(
     services: Services,
     run: RunContext,
@@ -343,6 +379,7 @@ def vet_many(
     allowed_urls: set[str] | None,
     label: str = "Checking links",
     team_copies: dict[str, AccessCheck] | None = None,
+    own_hosts: frozenset[str] = frozenset(),
 ) -> list[tuple[CandidateSource, Source | None, list[Issue]]]:
     """`vet_source` for several links at once, a few in parallel, reporting progress.
 
@@ -370,6 +407,7 @@ def vet_many(
                 provenance=provenance,
                 allowed_urls=allowed_urls,
                 team_copy=(team_copies or {}).get(c.url),
+                own_hosts=own_hosts,
             ): i
             for i, c in enumerate(candidates)
         }

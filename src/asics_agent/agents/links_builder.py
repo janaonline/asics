@@ -21,14 +21,16 @@ from asics_agent.agents.common import (
     CandidateList,
     CandidateSource,
     memory_note,
+    own_domains,
     question_digest,
     tool_note,
     vet_many,
 )
 from asics_agent.agents.state import ParastatalTask, ParastatalTaskOutput
 from asics_agent.categories import agent_for
-from asics_agent.links import crawl
+from asics_agent.links import crawl, marks
 from asics_agent.links.accessibility import site_of
+from asics_agent.links.fetch_chain import NOT_RETRIED_NOTE
 from asics_agent.links.manual import team_check
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue
@@ -105,6 +107,84 @@ def covered_questions(task: ParastatalTask, settings) -> set[str]:
     return covered | {
         q.id for q in questions if not source_requirements.has_rule(q) and q.id in old
     }
+
+
+def fetch_issues(parastatal, sources, settings=None) -> list[Issue]:
+    """Needs Attention lines for how the staged fetch obtained the agency's copies (links/fetch_chain.py):
+    archived copies, stale archives, copies read without a verified certificate, links not retried this
+    run, and a browser that is not installed. Each line lists the Citation IDs."""
+    archived, stale, cert, skipped = [], [], [], []
+    no_browser = False
+    seen = set()
+    for s in sources:
+        if s.url in seen:
+            continue
+        seen.add(s.url)
+        label = s.citation_id or s.title
+        notes = s.notes or ""
+        if marks.is_stale(s.copy_type):
+            stale.append(f"{label} ({s.copy_type})")
+        elif marks.is_archived(s.copy_type):
+            archived.append(f"{label} ({s.copy_type})")
+        if marks.has(s.copy_type, marks.CERT):
+            cert.append(label)
+        if NOT_RETRIED_NOTE in notes:
+            skipped.append(label)
+        no_browser = no_browser or "browser not installed" in notes
+    limit = getattr(settings, "archive_max_age_days", 365)
+    name = parastatal.name
+
+    def line(message: str) -> Issue:
+        return Issue(
+            phase="links",
+            severity="warning",
+            ref=parastatal.id,
+            audience="team",
+            message=f"{name}: {message}",
+        )
+
+    out = []
+    if archived:
+        out.append(
+            line(
+                f"{len(archived)} source(s) are ARCHIVED copies from the Wayback Machine, because the "
+                f"live page did not open: {', '.join(archived)}. They are used for answers but can "
+                "support a positive finding only: never a zero, a required source or a complete "
+                "crawl. Open the live page; if it opens now, run Step 1 again to replace the copy."
+            )
+        )
+    if stale:
+        out.append(
+            line(
+                f"{len(stale)} link(s) have only a stale archived copy (older than {limit} days), "
+                f"which is not used: {', '.join(stale)}. A person must open the live page."
+            )
+        )
+    if cert:
+        out.append(
+            line(
+                f"{len(cert)} source(s) were read without verifying the website's security "
+                f"certificate (allowed for the agency's own site and .gov.in / .nic.in only): "
+                f"{', '.join(cert)}. Check that the page is the right one."
+            )
+        )
+    if skipped:
+        out.append(
+            line(
+                f"{len(skipped)} link(s) were not retried this run (a recent failure is remembered, "
+                f"or the fetch chain's time cap was reached): {', '.join(skipped)}. Run Step 1 again "
+                "later, or open them in a browser."
+            )
+        )
+    if no_browser:
+        out.append(
+            line(
+                "the browser stage could not run because Chromium is not installed on this "
+                "computer, so JavaScript pages were not opened. Run `uv run playwright install "
+                "chromium` once, then run Step 1 again."
+            )
+        )
+    return out
 
 
 def human_verified_issues(parastatal, sources) -> list[Issue]:
@@ -199,6 +279,7 @@ def build_links_agent(services: Services):
             label="Re-checking earlier links",
             # A saved copy by the team is kept if the automatic check still fails.
             team_copies={o.url: copy for o in earlier if (copy := team_check(o))},
+            own_hosts=own_domains(p, earlier),
         )
         for old, (_, source, vet_issues) in zip(earlier, results, strict=True):
             issues += vet_issues
@@ -311,7 +392,13 @@ def build_links_agent(services: Services):
                 to_check.append(candidate)
         report(p.id, f"Found {len(to_check)} new possible source(s); opening and checking each")
         for _, source, vet_issues in vet_many(
-            services, run, p, to_check, provenance="web_search", allowed_urls=urls | known
+            services,
+            run,
+            p,
+            to_check,
+            provenance="web_search",
+            allowed_urls=urls | known,
+            own_hosts=own_domains(p, [*task.get("known_sources", []), *task.get("sources", [])]),
         ):
             issues += vet_issues
             if source:
@@ -397,6 +484,9 @@ def build_links_agent(services: Services):
                 s
                 for s in rows
                 if s.verification_status == "Verified"
+                and not marks.cannot_support_zero(
+                    s.copy_type
+                )  # an archived home page cannot show a menu is complete
                 and site_of(s.url) == own
                 and s.snapshot_path
                 and s.snapshot_path.endswith(".html")
@@ -410,15 +500,19 @@ def build_links_agent(services: Services):
         )
         if home is None:
             return info(
-                "Site crawl: the home page of the official website did not open, so its menu "
-                "could not be read."
+                "Site crawl: the home page of the official website did not open (an archived copy "
+                "does not count for a crawl), so its menu could not be read."
             )
         html = Path(home.snapshot_path).read_bytes().decode("utf-8", errors="replace")
         plan = crawl.plan_crawl(html, home.url, cap)
         # A human-verified row never counts as a captured menu link: the crawl opens that page
         # itself (the two rows for one address are merged afterwards, keeping the flag)
         crawled = [s for s in rows if not s.human_verified]
-        verified = {s.url for s in crawled if s.verification_status == "Verified"}
+        verified = {
+            s.url
+            for s in crawled
+            if s.verification_status == "Verified" and not marks.cannot_support_zero(s.copy_type)
+        }
         known = {s.url for s in crawled}
         to_open = [link for link in plan.selected if link.url not in known]
         report(
@@ -445,6 +539,7 @@ def build_links_agent(services: Services):
             provenance="fetched_page",
             allowed_urls={c.url for c in candidates},
             label="Opening the site's menu links",
+            own_hosts=own_domains(p, rows),
         ):
             issues += vet_issues
             if source:
@@ -452,7 +547,9 @@ def build_links_agent(services: Services):
                     source.useful_for = f"[{crawl.CRAWL_PAGE_TAG}] {source.useful_for}".strip()
                 new_sources.append(source)
         now_verified = verified | {
-            s.url for s in new_sources if s.verification_status == "Verified"
+            s.url
+            for s in new_sources
+            if s.verification_status == "Verified" and not marks.cannot_support_zero(s.copy_type)
         }
         dead = [link for link in plan.selected if link.url not in now_verified]
         # lenient: a dead link that names no topic word is set aside; strict (the default) counts all
@@ -477,7 +574,7 @@ def build_links_agent(services: Services):
         settings = services.settings
         p = task["parastatal"]
         sources = task.get("sources", []) + task.get("known_sources", [])
-        human = human_verified_issues(p, sources)
+        human = human_verified_issues(p, sources) + fetch_issues(p, sources, settings)
         if not settings.required_sources:
             return {"issues": human} if human else {}
         questions = task.get("task_questions", [])

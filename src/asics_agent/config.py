@@ -67,6 +67,15 @@ class Settings:
     outputs_root: Path | None = None  # the outputs folder before the category's subfolder
     # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
     find_sources_max_uses: int | None = None
+    # The staged fetch (links/fetch_chain.py): plain HTTP, then retries and address variants, then a
+    # Chromium render, then the Wayback Machine. Off = the plain check only (the earlier behaviour).
+    staged_fetch: bool = True
+    # An archived copy older than this is "stale archive" and is not used (days).
+    archive_max_age_days: int = 365
+    # A URL that failed the whole chain is not retried for this many hours (0 = always retry).
+    failure_cache_hours: float = 24.0
+    # The chain's time cap in one run, in minutes (0 = none); past it links get the plain check only.
+    fetch_time_cap_minutes: float = 20.0
 
 
 @lru_cache
@@ -96,10 +105,11 @@ def _base_settings() -> Settings:
         http_timeout=float(os.getenv("ASICS_HTTP_TIMEOUT", "30")),
         llm_call_timeout=float(os.getenv("ASICS_LLM_CALL_TIMEOUT", "900")),
         api_read_timeout=float(os.getenv("ASICS_API_READ_TIMEOUT", "300")),
+        # A browser-like agent that also names this tool, so a site's owner can tell who is reading.
         user_agent=os.getenv(
             "ASICS_USER_AGENT",
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/129.0 Safari/537.36",
+            "(KHTML, like Gecko) Chrome/129.0 Safari/537.36 ASICS-link-check/1.0",
         ),
         find_sources_max_uses=int(os.getenv("ASICS_FIND_SOURCES_MAX_USES") or 0) or None,
         max_evidence_chars=int(os.getenv("ASICS_MAX_EVIDENCE_CHARS", "60000")),

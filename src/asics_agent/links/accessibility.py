@@ -53,6 +53,24 @@ SCAN_EMPTY_WORDS = 10  # a page with fewer words than this counts as empty
 ROBOTS_DEADLINE_SECONDS = 10
 MAX_BYTES = 30 * 1024 * 1024  # larger documents are not downloaded in full
 
+# Why a check failed (AccessCheck.failure); the staged fetch (fetch_chain.py) decides from this which
+# stage to try next. "" = the page opened.
+FAILURES = (
+    "robots",  # robots.txt disallows: never retried
+    "network",  # no connection, timeout, too slow, 5xx-less transport error
+    "certificate",  # the website's security certificate could not be checked
+    "blocked_status",  # 401/403/405/406/429/451/503: refused the automated check
+    "http_error",  # any other non-200 (404, 410, 500 ...): see status_code
+    "redirect",  # to a different site: a person decides
+    "unsupported",  # a content type that is not a page or document
+    "unreadable",  # the file could not be read
+    "scan",  # a PDF with no text layer
+    "gated",  # a login, error or captcha page
+    "metadata",  # an India Code record without the Act's text
+    "too_short",  # too few words (often a JavaScript page)
+    "other",
+)
+
 _robots_cache: dict[str, RobotFileParser | None] = {}
 _origin_locks: dict[str, threading.Lock] = {}
 _locks_guard = threading.Lock()
@@ -191,6 +209,7 @@ def check_url(
 
     if not _robots_allows(client, url, user_agent):
         check.verification_status = "Human Verification Required"
+        check.failure = "robots"
         reasons.append("robots.txt disallows automated fetching; a person must open the link.")
         return check
 
@@ -206,6 +225,7 @@ def check_url(
         except FetchTooSlow as exc:
             reasons.append(f"Could not be opened: the website {exc}.")
             check.verification_status = "Human Verification Required"
+            check.failure = "network"
             return check
         except (
             httpx.ConnectError,
@@ -215,7 +235,10 @@ def check_url(
         ) as exc:
             if attempt == 2:
                 detail = str(exc).lower()
-                if "certificate" in detail or "ssl" in detail:
+                check.failure = (
+                    "certificate" if "certificate" in detail or "ssl" in detail else "network"
+                )
+                if check.failure == "certificate":
                     why = "the website's security certificate could not be checked automatically"
                 elif isinstance(exc, httpx.ReadTimeout):
                     why = "the website was too slow to answer (ReadTimeout)"
@@ -233,11 +256,26 @@ def check_url(
                 headers = {"Accept-Encoding": "identity"}
                 continue
             reasons.append(f"Could not be opened: {type(exc).__name__}.")
+            check.failure = "other"
             return check
         except httpx.HTTPError as exc:
             reasons.append(f"Could not be opened: {type(exc).__name__}.")
+            check.failure = "network"
             return check
 
+    return evaluate_response(check, url, response, cache_dir, official_hosts)
+
+
+def evaluate_response(
+    check: AccessCheck,
+    url: str,
+    response: httpx.Response,
+    cache_dir: Path,
+    official_hosts: frozenset[str] | set[str] = frozenset(),
+) -> AccessCheck:
+    """Judge an HTTP reply to a request for `url` (status, redirect, content type, readable text) and
+    save the copy. Shared by the plain check and by the retry stage of the fetch chain."""
+    reasons = check.reasons
     check.status_code = response.status_code
     check.final_url = str(response.url)
     check.content_type = response.headers.get("content-type", "").split(";")[0].strip().lower()
@@ -247,9 +285,11 @@ def check_url(
             "automated tools; a person must open the link in a browser."
         )
         check.verification_status = "Human Verification Required"
+        check.failure = "blocked_status"
         return check
     if response.status_code != 200:
         reasons.append(f"HTTP {response.status_code} when opening the exact URL.")
+        check.failure = "http_error"
         return check
     if _site(check.final_url) != _site(url):
         if _site(check.final_url) in official_hosts and _site(url).endswith(GOVERNMENT_SUFFIXES):
@@ -260,9 +300,11 @@ def check_url(
         else:
             reasons.append(f"Redirects to a different site ({check.final_url}).")
             check.verification_status = "Human Verification Required"
+            check.failure = "redirect"
             return check
     if any(t in check.content_type for t in METADATA_TYPES):
         reasons.append(f"Returns an API/metadata response ({check.content_type}), not a page.")
+        check.failure = "unsupported"
         return check
 
     try:
@@ -273,12 +315,37 @@ def check_url(
         else:
             reasons.append(f"Unsupported content type {check.content_type!r}.")
             check.verification_status = "Human Verification Required"
+            check.failure = "unsupported"
             return check
     except Exception as exc:  # malformed PDFs/HTML should not stop the run
         reasons.append(f"Content could not be read ({type(exc).__name__}).")
         check.verification_status = "Human Verification Required"
+        check.failure = "unreadable"
         return check
 
+    return accept_text(
+        check,
+        url,
+        text,
+        cache_dir,
+        body=response.content,
+        snapshot_ext=".pdf" if "pdf" in check.content_type else ".html",
+    )
+
+
+def accept_text(
+    check: AccessCheck,
+    url: str,
+    text: str,
+    cache_dir: Path,
+    *,
+    body: bytes,
+    snapshot_ext: str,
+) -> AccessCheck:
+    """Apply the content checks to readable `text` obtained for `url` and, if it passes, save the text
+    and the copy (`body`, as downloaded or as rendered) under the URL's evidence name. Used for a plain
+    reply, a retried reply, a browser render and an archived copy alike."""
+    reasons = check.reasons
     check.words = len(text.split())
     if (scan := scanned_pdf(text)) is not None:
         empty, pages = scan
@@ -288,15 +355,18 @@ def check_url(
             "for answers until then."
         )
         check.verification_status = "Human Verification Required"
+        check.failure = "scan"
         return check
     problem, detail = content_problem(url, text)
     if problem == "blocked":
         reasons.append(f"Page appears blocked or gated ({detail!r}).")
+        check.failure = "gated"
         return check
     if problem == "metadata":
         reasons.append(
             "India Code page shows only metadata, not the text of the Act; not human-verified."
         )
+        check.failure = "metadata"
         return check
     if problem == "too_short":
         reasons.append(
@@ -304,6 +374,7 @@ def check_url(
             "a scanned PDF, or an empty page)."
         )
         check.verification_status = "Human Verification Required"
+        check.failure = "too_short"
         return check
 
     cache_dir.mkdir(parents=True, exist_ok=True)
@@ -313,11 +384,12 @@ def check_url(
     check.content_path = str(path)
     # Keep the page exactly as downloaded, so a reviewer can see what was checked even
     # if the website changes later.
-    snapshot = cache_dir / f"{stem}{'.pdf' if 'pdf' in check.content_type else '.html'}"
-    snapshot.write_bytes(response.content)
+    snapshot = cache_dir / f"{stem}{snapshot_ext}"
+    snapshot.write_bytes(body)
     check.snapshot_path = str(snapshot)
     check.accessibility = "Public"
     check.verification_status = "Verified"
+    check.failure = ""
     reasons.append(f"Opened the exact URL: HTTP 200, {check.words} words of readable content.")
     return check
 

@@ -26,6 +26,7 @@ import yaml
 
 from asics_agent import cutoff
 from asics_agent.config import PROJECT_ROOT
+from asics_agent.links import marks
 from asics_agent.links.accessibility import site_of
 from asics_agent.models import Parastatal, Source
 
@@ -277,7 +278,12 @@ def check(
                 hit = bool(tags & wanted)
             if not hit:
                 continue
-            if id(s) in in_force:
+            if marks.cannot_support_zero(s.copy_type) and _usable(s):
+                # An archived copy (or a partial scan) may support a positive finding but never a zero:
+                # it does not satisfy a required source or the complete-crawl rule, so a person must
+                # open the live page (or read the whole document).
+                failed.append(s)
+            elif id(s) in in_force:
                 found.append(s)
             elif _usable(s):
                 late = True  # in the sheet but dated after the cut-off
@@ -415,7 +421,8 @@ def decide_zero(
             "unreadable",
             gate,
             None,
-            "Required source did not open: "
+            "Required source did not open (or only an archived copy or partial scan of it is "
+            "available, which cannot support a zero): "
             + ", ".join(gate.unreadable)
             + ". Human verification required.",
         )

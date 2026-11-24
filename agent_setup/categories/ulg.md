@@ -20,6 +20,20 @@ question_columns:
 # This category's folder inside outputs/: outputs/ULG/cities/<City>/
 outputs: ULG
 scoring_workbook: scoring/2027/templates/ASICS_2027_UPD_Scoring_Workbook_v2.xlsx
+# The staged fetch for a link the plain check cannot open: retries and the http/https/www forms, then a
+# headless Chromium render (JavaScript pages, certificate errors on official hosts), then the Wayback
+# Machine for a 404, a 5xx or a site that cannot be reached. Every copy is marked in the Citation Sheet's
+# Copy Type column. off = the plain check only.
+staged_fetch: on
+# An archived copy older than this many days is marked "stale archive" and is not used (Human
+# Verification Required). An archived copy of any age may support a positive finding but never a zero, a
+# required source or a complete crawl.
+archive_max_age_days: 365
+# A link that failed every stage is not tried again for this many hours (0 = always try again).
+failure_cache_hours: 24
+# Time cap, in minutes, for the retry, browser and archive stages in one run; links after it get the
+# plain check only and Needs Attention lists them as "not retried this run" (0 = no cap).
+fetch_time_cap_minutes: 20
 shared_rules: shared-rules-city
 steps:
   1:
