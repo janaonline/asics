@@ -1,0 +1,2427 @@
+# Every answerable question (the 52 that are not roll-ups) that a person scored, in
+# Bengaluru and Bhubaneswar. split: dev (for tuning and experiments) or test (never tuned on).
+# spike: true marks the 20 dev questions used by the acquisition and reading spike.
+# Built by scripts/build_eval_set.py (fixed seed). The human_sources are the links people cited;
+# the human links were added to the Citation Sheet for these two cities, so they are easier
+# than a new city.
+seed: asics-eval-2026-11
+rows:
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 1b
+  section: DPG
+  question_text: Is the parastatal's territorial/geographic jurisdiction specifically defined in it's enabling law?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 2a
+  section: DPG
+  question_text: Does the ULG have representation on the parastatal's governing board?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/203/Board%20Members/en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 2b
+  section: DPG
+  question_text: Is the parastatal mandated to submit its plans, budgets or reports to the ULG/council?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 3
+  section: DPG
+  question_text: Does the parastatal maintain an active and functional website?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/#googtrans(en|en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5a
+  section: DPG
+  question_text: Annual budget
+  max_score: 1.25
+  human_score: 0.5
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/departments?sectionKey=finance&sectionName=Finance&subSectionId=s_2fb566f4-1034-4d6d-a12b-dda7d62e6f2f#googtrans(en|kn
+  - https://www.bdakarnataka.in/api/media/finance/pdf_press_release/BDA_BUDGET_2025-26_1767001456881_d7914af0.pdf
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5b
+  section: DPG
+  question_text: Quarterly financial statements
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://bdakarnataka.in/
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5c
+  section: DPG
+  question_text: Annual report
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5d
+  section: DPG
+  question_text: Data on civic works/ projects
+  max_score: 1.25
+  human_score: 0.625
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/about-us#googtrans(en|en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5e
+  section: DPG
+  question_text: Meeting minutes of governing board
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5f
+  section: DPG
+  question_text: Rules, regulations and documents pertaining to the parastatal
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/about-us#googtrans(en|en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5g
+  section: DPG
+  question_text: Decision-making  process
+  max_score: 1.25
+  human_score: 0.832
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/#googtrans(en|en
+  - https://bdakarnataka.in/rti/
+  - https://bdakarnataka.in/contact#googtrans(en|en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 5h
+  section: DPG
+  question_text: Service-level benchmarks and performance reports
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 6
+  section: DPG
+  question_text: Has the parastatal published a citizen charter?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://sakala.kar.nic.in/procedure.aspx
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 7a
+  section: DPG
+  question_text: Are accessible grievance-redressal channels available and functional in practice?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://grievance.bdakarnataka.in/
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 7b
+  section: DPG
+  question_text: Are the channels through which citizens can access parastatal services accessible on the website
+    and functional?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/online-services#googtrans(en|en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: DPG 7c
+  section: DPG
+  question_text: Is information on the different schemes that the parastatal implements available on the parastatal's
+    website?
+  max_score: 3.33
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 10
+  section: SC
+  question_text: Does the law mandate a minimum tenure for the executive authority of the parastatal?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 4a
+  section: SC
+  question_text: Are annual financial statements or annual accounts legally mandated?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 4b
+  section: SC
+  question_text: Are the annual financial statements or annual accounts publicly available?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://www.bdakarnataka.in/api/media/finance/pdf_press_release/Annual_Accounts_2024-2025_1767001211781_c43e8d86.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 5a
+  section: SC
+  question_text: Is the parastatal mandated to conduct and prepare internal audits?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 5b
+  section: SC
+  question_text: Has the parastatal published it sinternal audit reports on its website?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 6a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its annual budget within a specified timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 6b
+  section: SC
+  question_text: Does the parastatal prepare its annual budget  within a specified timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://bdakarnataka.in/departments?sectionKey=finance&sectionName=Finance&subSectionId=s_2fb566f4-1034-4d6d-a12b-dda7d62e6f2f#googtrans(en|kn
+  - https://www.bdakarnataka.in/api/media/finance/pdf_press_release/BDA_BUDGET_2025-26_1767001456881_d7914af0.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 7a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its financial statements or annual accouts within a specified
+    timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 7b
+  section: SC
+  question_text: Does the parastatal publish its financial statements or annual accouts within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 8a
+  section: SC
+  question_text: Is a medium-term (3-5 year) and/or long-term (>5 year) fiscal plan legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/acts%20alpha%20and%20dept%20wise%20acts/12%20of%201976%20(E
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BDA
+  question: SC 8b
+  section: SC
+  question_text: Is the medium/long-term fiscal plan publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 1b
+  section: DPG
+  question_text: Is the parastatal's territorial/geographic jurisdiction specifically defined in it's enabling law?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/uploads/media_to_upload1773745585.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 2a
+  section: DPG
+  question_text: Does the ULG have representation on the parastatal's governing board?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 2b
+  section: DPG
+  question_text: Is the parastatal mandated to submit its plans, budgets or reports to the ULG/council?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://ksrtc.karnataka.gov.in/storage/pdf-files/Rules%20-%20Regulations/KSRTC%20Rules%201961.pdf
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 3
+  section: DPG
+  question_text: Does the parastatal maintain an active and functional website?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5a
+  section: DPG
+  question_text: Annual budget
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5b
+  section: DPG
+  question_text: Quarterly financial statements
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5c
+  section: DPG
+  question_text: Annual report
+  max_score: 1.25
+  human_score: 0.625
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/80/annual-administrative-report/en
+  - https://mybmtc.karnataka.gov.in/uploads/media_to_upload1773745585.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5d
+  section: DPG
+  question_text: Data on civic works/ projects
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/en
+  - https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5e
+  section: DPG
+  question_text: Meeting minutes of governing board
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5f
+  section: DPG
+  question_text: Rules, regulations and documents pertaining to the parastatal
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/41/Rules%20And%20Regulations/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5g
+  section: DPG
+  question_text: Decision-making  process
+  max_score: 1.25
+  human_score: 1.04
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/en
+  - https://mybmtc.karnataka.gov.in/31/Organization%20Structure/en
+  - https://mybmtc.karnataka.gov.in/37/officers-list/en
+  - https://rtionline.karnataka.gov.in/index.php?lan=E
+  - https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 5h
+  section: DPG
+  question_text: Service-level benchmarks and performance reports
+  max_score: 1.25
+  human_score: 0.625
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/uploads/Performance%20Indicators_Eng%20%281%29_1779348076.pdf
+  - https://mybmtc.karnataka.gov.in/42/perfomance-indicator/en
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 6
+  section: DPG
+  question_text: Has the parastatal published a citizen charter?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/storage/pdf-files/Citizen%20charter-2013.pdf
+  - https://sakala.kar.nic.in/procedure.aspx
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 7a
+  section: DPG
+  question_text: Are accessible grievance-redressal channels available and functional in practice?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - http://crm.mybmtc.com/
+  - http://crm.mybmtc.com/Search_Complaint.php
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 7b
+  section: DPG
+  question_text: Are the channels through which citizens can access parastatal services accessible on the website
+    and functional?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/en
+  - https://mybmtc.karnataka.gov.in/51/student-pass/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 7c
+  section: DPG
+  question_text: Is information on the different schemes that the parastatal implements available on the parastatal's
+    website?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/211/k-breeze/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 8a
+  section: DPG
+  question_text: Is citizen participation in the preparation of the parastatal's plans mandated?
+  max_score: 5.0
+  human_score: 2.5
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/storage/pdf-files/Commuter%20Advisory%20and%20Facilitation%20Committee%20(CAFC
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: DPG 8b
+  section: DPG
+  question_text: Are citizens consulted in practice in the preparation of plans by the parastatal?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://citizenmatters.in/hsr-feeder-bus-service-in-bengaluru-last-mile-connectivity/
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 10
+  section: SC
+  question_text: Does the law mandate a minimum tenure for the executive authority of the parastatal?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 4a
+  section: SC
+  question_text: Are annual financial statements or annual accounts legally mandated?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 4b
+  section: SC
+  question_text: Are the annual financial statements or annual accounts publicly available?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/80/annual-administrative-report/en
+  - https://mybmtc.karnataka.gov.in/uploads/media_to_upload1773745585.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 5a
+  section: SC
+  question_text: Is the parastatal mandated to conduct and prepare internal audits?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 5b
+  section: SC
+  question_text: Has the parastatal published it sinternal audit reports on its website?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/uploads/Performance%20Indicators_Eng%20%281%29_1779348076.pdf
+  - https://mybmtc.karnataka.gov.in/42/perfomance-indicator/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 6a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its annual budget within a specified timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 6b
+  section: SC
+  question_text: Does the parastatal prepare its annual budget  within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 7a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its financial statements or annual accouts within a specified
+    timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 7b
+  section: SC
+  question_text: Does the parastatal publish its financial statements or annual accouts within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/80/annual-administrative-report/en
+  - https://mybmtc.karnataka.gov.in/uploads/media_to_upload1773745585.pdf
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 8a
+  section: SC
+  question_text: Is a medium-term (3-5 year) and/or long-term (>5 year) fiscal plan legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: SC 8b
+  section: SC
+  question_text: Is the medium/long-term fiscal plan publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 1a
+  section: UPD
+  question_text: Is the parastatal mandated to prepare its spatial and/or sectoral plans in coordination with the
+    ULG(s) within its jurisdiction?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://indiankanoon.org/doc/1779621/
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 1b
+  section: UPD
+  question_text: Has the ULG participated in the parastatal’s plan-making process?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 2c
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, is the public bus transport
+    operator mandated to ensure consistency with the applicable metropolitan/regional or city master plan/strategic
+    plan for the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 2d
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, does the public bus transport
+    operator ensure consistency with the applicable metropolitan/regional or city master plan/strategic plan for
+    the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 4a
+  section: UPD
+  question_text: Is the public bus transport operator mandated to consider the mobility needs of women, the urban
+    poor and other vulnerable groups in planning and delivering public transport services?
+  max_score: 5.0
+  human_score: 2.5
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/51/Student%20Pass/en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 4b
+  section: UPD
+  question_text: Does the public bus transport operator actually consider the needs of women, the urban poor and
+    other vulnerable groups in decisions relating to access, affordability and delivery of public transport services?
+  max_score: 5.0
+  human_score: 2.5
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/storage/pdf-files/ordinaryfarechart.pdf
+  - https://mybmtc.karnataka.gov.in/51/Student%20Pass/en
+  - https://mybmtc.karnataka.gov.in/uploads/Write%20up%20PH%20Pass%20eng_1780401305.pdf
+  - https://mybmtc.karnataka.gov.in/uploads/Write%20up%20Shakti%20eng_1780401289.pdf
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 6a
+  section: UPD
+  question_text: Is the public bus transport operator mandated to consider environmental sustainability in planning
+    and delivering urban transport services and investments?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/storage/pdf-files/tata%20with%20photos%20dec%2012th%20english.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BMTC
+  question: UPD 6b
+  section: UPD
+  question_text: Does the public bus transport operator actually considers environmental sustainability in planning
+    and delivering urban transport services and investments?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://mybmtc.karnataka.gov.in/115/Metro%20Feeder%20Stationwise%20Route%20details/en
+  - https://www.thehindu.com/news/national/karnataka/4500-electric-buses-to-be-procured-for-bengaluru-under-pm-e-drive-scheme/article71427986.ece
+  - https://www.moneycontrol.com/news/business/bengaluru-commuters-can-now-use-single-card-for-namma-metro-bmtc-buses-14027215.html
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 1b
+  section: DPG
+  question_text: Is the parastatal's territorial/geographic jurisdiction specifically defined in it's enabling law?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://faolex.fao.org/docs/pdf/ind201320.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 2a
+  section: DPG
+  question_text: Does the ULG have representation on the parastatal's governing board?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://ksrtc.karnataka.gov.in/storage/pdf-files/Rules%20-%20Regulations/KSRTC%20Rules%201961.pdf
+  - https://mybmtc.karnataka.gov.in/uploads/media_to_upload1773745585.pdf
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 2b
+  section: DPG
+  question_text: Is the parastatal mandated to submit its plans, budgets or reports to the ULG/council?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://faolex.fao.org/docs/pdf/ind201320.pdf
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 3
+  section: DPG
+  question_text: Does the parastatal maintain an active and functional website?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5a
+  section: DPG
+  question_text: Annual budget
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://bwssb.karnataka.gov.in/104/budget/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5b
+  section: DPG
+  question_text: Quarterly financial statements
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5c
+  section: DPG
+  question_text: Annual report
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://bwssb.karnataka.gov.in/160/Right%20to%20information%20Act/en
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/rti-YearlyReport-PROSec.pdf
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5d
+  section: DPG
+  question_text: Data on civic works/ projects
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  - https://bwssb.karnataka.gov.in/205/Cauvery%20Water%20Supply%20for%20110%20Villages/en
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/ProjectDetails.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5e
+  section: DPG
+  question_text: Meeting minutes of governing board
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5f
+  section: DPG
+  question_text: Rules, regulations and documents pertaining to the parastatal
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/202/Formation%20of%20the%20Board/en
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5g
+  section: DPG
+  question_text: Decision-making  process
+  max_score: 1.25
+  human_score: 1.04
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  - https://bwssb.karnataka.gov.in/35/Organization%20Chart/en
+  - https://bwssb.karnataka.gov.in/6/senior-management/en
+  - https://bwssb.karnataka.gov.in/uploads/1_1775286932.pdf
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/KM_226_03719.pdf
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 5h
+  section: DPG
+  question_text: Service-level benchmarks and performance reports
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 6
+  section: DPG
+  question_text: Has the parastatal published a citizen charter?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/33/our-services/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 7a
+  section: DPG
+  question_text: Are accessible grievance-redressal channels available and functional in practice?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://cms.bwssb.gov.in/module/complain/new_complaint
+  - https://play.google.com/store/apps/details?id=com.bwssbpayment.cms&hl=en_IN
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/Call%20Center%20Work%20Flow.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 7b
+  section: DPG
+  question_text: Are the channels through which citizens can access parastatal services accessible on the website
+    and functional?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 7c
+  section: DPG
+  question_text: Is information on the different schemes that the parastatal implements available on the parastatal's
+    website?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 8a
+  section: DPG
+  question_text: Is citizen participation in the preparation of the parastatal's plans mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: DPG 8b
+  section: DPG
+  question_text: Are citizens consulted in practice in the preparation of plans by the parastatal?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 10
+  section: SC
+  question_text: Does the law mandate a minimum tenure for the executive authority of the parastatal?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 4a
+  section: SC
+  question_text: Are annual financial statements or annual accounts legally mandated?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 4b
+  section: SC
+  question_text: Are the annual financial statements or annual accounts publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 5a
+  section: SC
+  question_text: Is the parastatal mandated to conduct and prepare internal audits?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 5b
+  section: SC
+  question_text: Has the parastatal published it sinternal audit reports on its website?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 6a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its annual budget within a specified timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 6b
+  section: SC
+  question_text: Does the parastatal prepare its annual budget  within a specified timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/104/budget/en
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/documents/Revised%20Budget-2022-23-2.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 7a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its financial statements or annual accouts within a specified
+    timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 7b
+  section: SC
+  question_text: Does the parastatal publish its financial statements or annual accouts within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 8a
+  section: SC
+  question_text: Is a medium-term (3-5 year) and/or long-term (>5 year) fiscal plan legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: SC 8b
+  section: SC
+  question_text: Is the medium/long-term fiscal plan publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 1a
+  section: UPD
+  question_text: Is the parastatal mandated to prepare its spatial and/or sectoral plans in coordination with the
+    ULG(s) within its jurisdiction?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 1b
+  section: UPD
+  question_text: Has the ULG participated in the parastatal’s plan-making process?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://bwssb.karnataka.gov.in/en
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 2a
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, is the water board mandated
+    to ensure consistency with the applicable metropolitan/regional or city master plan/strategic plan for the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  split: dev
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 2b
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, does the Water supply entity
+    ensure consistency with the applicable metropolitan/regional or city master plan/strategic plan for the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://bwssb.karnataka.gov.in/31/about-bwssb/en
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/documents/Vision%20Document%202050%20%20new.pdf
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 3a
+  section: UPD
+  question_text: Is the Water supply entity mandated to consider the needs of women, the urban poor and other vulnerable
+    groups in decisions relating to access, affordability and delivery of water and sanitation services?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/WaterTariff-2025.pdf
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 3b
+  section: UPD
+  question_text: Does the Water supply entity actually consider the needs of women, the urban poor and other vulnerable
+    groups in decisions relating to access, affordability and delivery of water and sanitation services?
+  max_score: 5.0
+  human_score: 3.75
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/storage/pdf-files/ProjectDetails.pdf
+  - https://bwssb.karnataka.gov.in/33/our-services/en
+  split: dev
+  spike: true
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 5a
+  section: UPD
+  question_text: Is the Water supply entity mandated to consider environmental sustainability in planning and delivering
+    water and sanitation services?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://dpal.karnataka.gov.in/storage/pdf-files/29%20of%202021%20(E
+  split: test
+  spike: false
+- city: Bengaluru
+  parastatal: BWSSB
+  question: UPD 5b
+  section: UPD
+  question_text: Does the Water supply entity actually consider environmental sustainability in planning and delivering
+    water and sanitation services?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://bwssb.karnataka.gov.in/31/about-bwssb/en
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 1b
+  section: DPG
+  question_text: Is the parastatal's territorial/geographic jurisdiction specifically defined in it's enabling law?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/bda/about-bda
+  - https://cms.bhubaneswarone.in/uploadDocuments/content/Executive_Summary_1.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 2a
+  section: DPG
+  question_text: Does the ULG have representation on the parastatal's governing board?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 2b
+  section: DPG
+  question_text: Is the parastatal mandated to submit its plans, budgets or reports to the ULG/council?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 3
+  section: DPG
+  question_text: Does the parastatal maintain an active and functional website?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/notifications/notices
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5a
+  section: DPG
+  question_text: Annual budget
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://cms.bhubaneswarone.in/uploadDocuments/Directory/Annual%20Report/Directory20261021_160335.pdf
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5b
+  section: DPG
+  question_text: Quarterly financial statements
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.bda.gov.in/maps-reports
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5c
+  section: DPG
+  question_text: Annual report
+  max_score: 1.25
+  human_score: 0.625
+  human_zero: false
+  human_sources:
+  - https://cms.bhubaneswarone.in/uploadDocuments/Directory/Annual%20Report/Directory20261021_160335.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5d
+  section: DPG
+  question_text: Data on civic works/ projects
+  max_score: 1.25
+  human_score: 0.625
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5e
+  section: DPG
+  question_text: Meeting minutes of governing board
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/notifications/proceedings
+  - https://cms.bhubaneswarone.in/uploadDocuments/Notice/Notice20260612_161344.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5f
+  section: DPG
+  question_text: Rules, regulations and documents pertaining to the parastatal
+  max_score: 1.25
+  human_score: 1.25
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/notifications/act-rules
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5g
+  section: DPG
+  question_text: Decision-making  process
+  max_score: 1.25
+  human_score: 0.823
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/
+  - https://www.bda.gov.in/bda/organization-structure
+  - https://www.bda.gov.in/bda/contact
+  - https://rtiodisha.gov.in/pa/T1RILzEzLzE3Mi8xOQ
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 5h
+  section: DPG
+  question_text: Service-level benchmarks and performance reports
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 6
+  section: DPG
+  question_text: Has the parastatal published a citizen charter?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 7a
+  section: DPG
+  question_text: Are accessible grievance-redressal channels available and functional in practice?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/
+  - https://citizenservices.bhubaneswar.me/citizenservice/grievance
+  - https://play.google.com/store/apps/details?id=com.bscl.citizen&hl=hi
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 7b
+  section: DPG
+  question_text: Are the channels through which citizens can access parastatal services accessible on the website
+    and functional?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://www.bda.gov.in/bpas-services
+  - https://www.bda.gov.in/
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: DPG 7c
+  section: DPG
+  question_text: Is information on the different schemes that the parastatal implements available on the parastatal's
+    website?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://cms.bhubaneswarone.in/uploadDocuments/content/Notification_TPS_05_13316_18.06.2026__2__c.pdf
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 10
+  section: SC
+  question_text: Does the law mandate a minimum tenure for the executive authority of the parastatal?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 4a
+  section: SC
+  question_text: Are annual financial statements or annual accounts legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 4b
+  section: SC
+  question_text: Are the annual financial statements or annual accounts publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 5a
+  section: SC
+  question_text: Is the parastatal mandated to conduct and prepare internal audits?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 5b
+  section: SC
+  question_text: Has the parastatal published it sinternal audit reports on its website?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.bda.gov.in/tender/tenders
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 6a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its annual budget within a specified timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 6b
+  section: SC
+  question_text: Does the parastatal prepare its annual budget  within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://cms.bhubaneswarone.in/uploadDocuments/Directory/Annual%20Report/Directory20261021_160335.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 7a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its financial statements or annual accouts within a specified
+    timeline?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 7b
+  section: SC
+  question_text: Does the parastatal publish its financial statements or annual accouts within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 8a
+  section: SC
+  question_text: Is a medium-term (3-5 year) and/or long-term (>5 year) fiscal plan legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: BDA
+  question: SC 8b
+  section: SC
+  question_text: Is the medium/long-term fiscal plan publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 1b
+  section: DPG
+  question_text: Is the parastatal's territorial/geographic jurisdiction specifically defined in it's enabling law?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/about/company-profile
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 2a
+  section: DPG
+  question_text: Does the ULG have representation on the parastatal's governing board?
+  max_score: 5.0
+  human_score: 2.5
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 2b
+  section: DPG
+  question_text: Is the parastatal mandated to submit its plans, budgets or reports to the ULG/council?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 3
+  section: DPG
+  question_text: Does the parastatal maintain an active and functional website?
+  max_score: 10.0
+  human_score: 10.0
+  human_zero: false
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/notices
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5a
+  section: DPG
+  question_text: Annual budget
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5b
+  section: DPG
+  question_text: Quarterly financial statements
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5c
+  section: DPG
+  question_text: Annual report
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5d
+  section: DPG
+  question_text: Data on civic works/ projects
+  max_score: 1.25
+  human_score: 0.625
+  human_zero: false
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/project-details/58
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5e
+  section: DPG
+  question_text: Meeting minutes of governing board
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5f
+  section: DPG
+  question_text: Rules, regulations and documents pertaining to the parastatal
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/about/company-profile
+  split: dev
+  spike: true
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5g
+  section: DPG
+  question_text: Decision-making  process
+  max_score: 1.25
+  human_score: 0.208
+  human_zero: false
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/about/organization-structure
+  - https://www.comprehensiveregiontransport.in/contact-us
+  - https://www.comprehensiveregiontransport.in/rti-corner/rti-authority
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 5h
+  section: DPG
+  question_text: Service-level benchmarks and performance reports
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 6
+  section: DPG
+  question_text: Has the parastatal published a citizen charter?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 7a
+  section: DPG
+  question_text: Are accessible grievance-redressal channels available and functional in practice?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/contact-us
+  - https://www.comprehensiveregiontransport.in/feedback
+  - https://citizenservices.bhubaneswar.me/citizenservice/grievance
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 7b
+  section: DPG
+  question_text: Are the channels through which citizens can access parastatal services accessible on the website
+    and functional?
+  max_score: 3.33
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/transit-services/ama-bus
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 7c
+  section: DPG
+  question_text: Is information on the different schemes that the parastatal implements available on the parastatal's
+    website?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/transit-services/ama-bus
+  - https://www.comprehensiveregiontransport.in/reduced-fare-eligibility
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 8a
+  section: DPG
+  question_text: Is citizen participation in the preparation of the parastatal's plans mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: DPG 8b
+  section: DPG
+  question_text: Are citizens consulted in practice in the preparation of plans by the parastatal?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.facebook.com/crutbbsr/posts/to-enhance-amabus-services-dr-n-thirumala-naik-md-crut-has-directed-all-staff-to/1057215553254295/
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 10
+  section: SC
+  question_text: Does the law mandate a minimum tenure for the executive authority of the parastatal?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: true
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 4a
+  section: SC
+  question_text: Are annual financial statements or annual accounts legally mandated?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 4b
+  section: SC
+  question_text: Are the annual financial statements or annual accounts publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 5a
+  section: SC
+  question_text: Is the parastatal mandated to conduct and prepare internal audits?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 5b
+  section: SC
+  question_text: Has the parastatal published it sinternal audit reports on its website?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 6a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its annual budget within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 6b
+  section: SC
+  question_text: Does the parastatal prepare its annual budget  within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 7a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its financial statements or annual accouts within a specified
+    timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 7b
+  section: SC
+  question_text: Does the parastatal publish its financial statements or annual accouts within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 8a
+  section: SC
+  question_text: Is a medium-term (3-5 year) and/or long-term (>5 year) fiscal plan legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: SC 8b
+  section: SC
+  question_text: Is the medium/long-term fiscal plan publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 1a
+  section: UPD
+  question_text: Is the parastatal mandated to prepare its spatial and/or sectoral plans in coordination with the
+    ULG(s) within its jurisdiction?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 1b
+  section: UPD
+  question_text: Has the ULG participated in the parastatal’s plan-making process?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.downtoearth.org.in/energy/india-on-e-wheels-crut-plans-rs-5000-crore-urban-mobility-overhaul-for-odishas-new-economic-corridor
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 2c
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, is the public bus transport
+    operator mandated to ensure consistency with the applicable metropolitan/regional or city master plan/strategic
+    plan for the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 2d
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, does the public bus transport
+    operator ensure consistency with the applicable metropolitan/regional or city master plan/strategic plan for
+    the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://cms.bhubaneswarone.in/uploadDocuments/content/MoBus_Full_Map_Final_2024_Capital_Region_copy_Small_1_compressed.pdf
+  split: dev
+  spike: true
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 4a
+  section: UPD
+  question_text: Is the public bus transport operator mandated to consider the mobility needs of women, the urban
+    poor and other vulnerable groups in planning and delivering public transport services?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 4b
+  section: UPD
+  question_text: Does the public bus transport operator actually consider the needs of women, the urban poor and
+    other vulnerable groups in decisions relating to access, affordability and delivery of public transport services?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/reduced-fare-eligibility
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 6a
+  section: UPD
+  question_text: Is the public bus transport operator mandated to consider environmental sustainability in planning
+    and delivering urban transport services and investments?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://www.acma.in/uploads/docmanager/FAME%20II-%20Sanction%20of%20electric%20buses_Press%20release.pdf
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: CRUT
+  question: UPD 6b
+  section: UPD
+  question_text: Does the public bus transport operator actually considers environmental sustainability in planning
+    and delivering urban transport services and investments?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources:
+  - https://www.comprehensiveregiontransport.in/project-details/58
+  - https://www.comprehensiveregiontransport.in/transit-services/ama-e-ride
+  split: dev
+  spike: true
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 1b
+  section: DPG
+  question_text: Is the parastatal's territorial/geographic jurisdiction specifically defined in it's enabling law?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://watcoodisha.in/#/services
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 2a
+  section: DPG
+  question_text: Does the ULG have representation on the parastatal's governing board?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 2b
+  section: DPG
+  question_text: Is the parastatal mandated to submit its plans, budgets or reports to the ULG/council?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 3
+  section: DPG
+  question_text: Does the parastatal maintain an active and functional website?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://watcoodisha.in/#/tender
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5a
+  section: DPG
+  question_text: Annual budget
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5b
+  section: DPG
+  question_text: Quarterly financial statements
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://watcoodisha.in/#/home
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5c
+  section: DPG
+  question_text: Annual report
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5d
+  section: DPG
+  question_text: Data on civic works/ projects
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5e
+  section: DPG
+  question_text: Meeting minutes of governing board
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5f
+  section: DPG
+  question_text: Rules, regulations and documents pertaining to the parastatal
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://watcoodisha.in/#/home
+  - https://watcoodisha.in/#/about-us
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5g
+  section: DPG
+  question_text: Decision-making  process
+  max_score: 1.25
+  human_score: 0.416
+  human_zero: false
+  human_sources:
+  - https://watcoodisha.in/#/whos-who
+  - https://watcoodisha.in/#/home
+  - https://rtionline.gov.in/
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 5h
+  section: DPG
+  question_text: Service-level benchmarks and performance reports
+  max_score: 1.25
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 6
+  section: DPG
+  question_text: Has the parastatal published a citizen charter?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 7b
+  section: DPG
+  question_text: Are the channels through which citizens can access parastatal services accessible on the website
+    and functional?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://watcoodisha.in/#/home
+  - https://sujog.odisha.gov.in/citizen/user/login
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 7c
+  section: DPG
+  question_text: Is information on the different schemes that the parastatal implements available on the parastatal's
+    website?
+  max_score: 3.33
+  human_score: 3.33
+  human_zero: false
+  human_sources:
+  - https://watcoodisha.in/#/document
+  - https://bucket.watcoodisha.in/watcoodisha/Download/fb7e09f5-edcd-42dd-8f49-83fd440882d3_drinkfromtap.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 8a
+  section: DPG
+  question_text: Is citizen participation in the preparation of the parastatal's plans mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://urban.odisha.gov.in/sites/default/files/2026-09/22959.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: DPG 8b
+  section: DPG
+  question_text: Are citizens consulted in practice in the preparation of plans by the parastatal?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 10
+  section: SC
+  question_text: Does the law mandate a minimum tenure for the executive authority of the parastatal?
+  max_score: 10.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - 'https://rtiodisha.gov.in/Pages/printAllManual/office_id:23186/lang:'
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 4a
+  section: SC
+  question_text: Are annual financial statements or annual accounts legally mandated?
+  max_score: 5.0
+  human_score: 5.0
+  human_zero: false
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 4b
+  section: SC
+  question_text: Are the annual financial statements or annual accounts publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 5a
+  section: SC
+  question_text: Is the parastatal mandated to conduct and prepare internal audits?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 5b
+  section: SC
+  question_text: Has the parastatal published it sinternal audit reports on its website?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 6a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its annual budget within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 6b
+  section: SC
+  question_text: Does the parastatal prepare its annual budget  within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 7a
+  section: SC
+  question_text: Is the parastatal mandated to prepare its financial statements or annual accouts within a specified
+    timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 7b
+  section: SC
+  question_text: Does the parastatal publish its financial statements or annual accouts within a specified timeline?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 8a
+  section: SC
+  question_text: Is a medium-term (3-5 year) and/or long-term (>5 year) fiscal plan legally mandated?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: SC 8b
+  section: SC
+  question_text: Is the medium/long-term fiscal plan publicly available?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 1a
+  section: UPD
+  question_text: Is the parastatal mandated to prepare its spatial and/or sectoral plans in coordination with the
+    ULG(s) within its jurisdiction?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 1b
+  section: UPD
+  question_text: Has the ULG participated in the parastatal’s plan-making process?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources:
+  - https://pragativadi.com/odisha-reviews-water-security-plan-for-bhubaneswar-and-adjoining-areas/
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 2a
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, is the water board mandated
+    to ensure consistency with the applicable metropolitan/regional or city master plan/strategic plan for the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 2b
+  section: UPD
+  question_text: Where multiple statutory or sectoral plans apply to the same territory, does the Water supply entity
+    ensure consistency with the applicable metropolitan/regional or city master plan/strategic plan for the city?
+  max_score: 2.5
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 3a
+  section: UPD
+  question_text: Is the Water supply entity mandated to consider the needs of women, the urban poor and other vulnerable
+    groups in decisions relating to access, affordability and delivery of water and sanitation services?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 3b
+  section: UPD
+  question_text: Does the Water supply entity actually consider the needs of women, the urban poor and other vulnerable
+    groups in decisions relating to access, affordability and delivery of water and sanitation services?
+  max_score: 5.0
+  human_score: 2.5
+  human_zero: false
+  human_sources:
+  - https://urban.odisha.gov.in/sites/default/files/2023-03/Drink-From-Tap-Mission.pdf
+  split: test
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 5a
+  section: UPD
+  question_text: Is the Water supply entity mandated to consider environmental sustainability in planning and delivering
+    water and sanitation services?
+  max_score: 5.0
+  human_score: 0.0
+  human_zero: true
+  human_sources: []
+  split: dev
+  spike: false
+- city: Bhubaneswar
+  parastatal: WATCO
+  question: UPD 5b
+  section: UPD
+  question_text: Does the Water supply entity actually consider environmental sustainability in planning and delivering
+    water and sanitation services?
+  max_score: 5.0
+  human_score: 2.5
+  human_zero: false
+  human_sources:
+  - https://urban.odisha.gov.in/sites/default/files/2024-03/drinkfromtapmission.pdf
+  - https://pragativadi.com/odisha-reviews-water-security-plan-for-bhubaneswar-and-adjoining-areas/
+  split: test
+  spike: false
