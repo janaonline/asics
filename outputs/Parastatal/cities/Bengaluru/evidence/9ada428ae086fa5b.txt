@@ -158,110 +158,125 @@ Casual Contract
 ## Casual Contract
 
  Casual Contract
-PUSHPAK / ORDINARY/Midi BUSES: 01/01/2024
+
+ORDINARY/Midi BUSES: 01/01/2024
+
 Buses
+
 Per Km
+
 8 hrs (150 Kms)
+
 Per Km
+
 12 hrs (200 Kms)
+
 Per Km
+
 24 Hrs (250 Kms)
+
 Per Km
+
 24 Hrs (300 Kms)
 
-Pushpak (47 ಆಸನ)
-Rs. 55/-
-Rs. 8,250/- 
- Rs. 50/-
- Rs. 10,000/- 
- Rs.45/-
-Rs. 11,250/- 
- Rs.45/-
- Rs.13,500/-
+Ordinary (40 Seater)
 
-Ordinary (40 ಆಸನ)
-Rs. 50/-
-Rs. 7,500/- 
- Rs. 48/- 
- Rs. 9,600/- 
- Rs.44/-
-Rs. 11,000/- 
- Rs.44/-
- Rs.13,200/-
+Rs. 70/-
 
- Midi (31 ಆಸನ)
-Rs. 47/-
-Rs. 7050/- 
- Rs. 45/-
- Rs. 9,000/-
- Rs.42/-
 Rs. 10,500/- 
- Rs.42/-
- Rs.12,600/-
 
- BS-6- (41 ಆಸನ)
-Rs. 60/-
-Rs. 9,000/- 
-Rs.55/-
-Rs.11,000/-
- Rs.50/-
-Rs. 12,500/- 
-Rs.50/-
-Rs.15,000/-
+ Rs.67/- 
 
-Electric- (40 seater)
--
--
--
--
--
--
-Rs.100/- (150 Kms)
-Rs.15,000/-
+ Rs.13,400/- 
 
-Electric- (33 Seater)
--
--
--
--
--
--
-120 Km
-Rs.13,000/-
+ Rs.62/-
 
- Volvo A/c : C.C RATES :01.01.2024
+Rs.15,500/- 
+
+ Rs.62/-
+
+ Rs.18,600/-
+
+ Midi (31 Seater)
+
+Rs. 65/-
+
+Rs. 9,750/- 
+
+ Rs.62/-
+
+ Rs.12,400/-
+
+ Rs.58/-
+
+Rs.14,500/- 
+
+ Rs.58/-
+
+ Rs.17,400/-
+
+ BS-6- (41 Seater)
+
+Rs. 82/-
+
+Rs. 12,300/-
+
+Rs.74/-
+
+Rs.14,800/-
+
+ Rs.66/-
+
+Rs.16,500/-
+
+Rs.66/-
+
+Rs.19,800/-
+
+ Volvo A/c : C.C RATES :05.11.2026
+
 A/c  Buses GST 5%
+
 Buses
+
 12 Hrs
+
 24 Hrs Rate
 
-Within city limit 
-(175 Kms)
-Per Km Rs. 80/-
- Beyond city limit 
+(150 Kms)
+
+Per Km Rs. 95/-
+
 (250 Kms)
-Per Km Rs.80/-
 
-A/c 
-(35/41 ಆಸನ)
- Rs. 14,000/-
-GST: 700/-
-Rs. 14,700/-
- Rs. 20,000/-
-GST: 1,000/-
-Rs. 21,000/-
+Per Km Rs.90/-
 
-ELECTRIC BUS:
-VEHICLE MODELKM/DAYPER KM RATE 
-AC100Rs 75/- + GST
+A/c (35/41 Seater)
 
-VEHICLE MODULE Per Day/ km Per Day Rate
-Electric
-(40 seats)
-  150 kmRs.15,000/- 
-Electric 
-(33 seats)
- 120 kmRs.13,000/-
+ Rs. 14,250/-
+
+ Rs. 22,500/-
+
+Electric Bus:
+
+A/c  Buses GST 5%
+
+Buses
+
+Per Km
+Amount per day
+
+Electric (35 Seater)
+150 km
+138/-
+ರೊ.20,700/-
+
+Electric A/c (35 Seater)
+200 km 
+135/-
+ರೊ.27,000/-
+
+ [https://mybmtc.karnataka.gov.in/uploads/Casual_Contract_1_1795242334.pdf] Click here for the Official Order (PDF, 4.24 MB)
 
 ## Screen Reader Access
 
@@ -301,7 +316,7 @@ Electric
 
  Close
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
 ## Follow us
 
@@ -364,9 +379,9 @@ Cookie Settings
 
  [https://www.meity.gov.in] MeitY
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
- Visitors Counter: 4,111,153
+ Visitors Counter: 4,127,962
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2

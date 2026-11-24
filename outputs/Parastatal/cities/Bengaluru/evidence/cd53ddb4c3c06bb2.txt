@@ -195,7 +195,7 @@ Organization Structure
 
  Close
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
 ## Follow us
 
@@ -258,9 +258,9 @@ Cookie Settings
 
  [https://www.meity.gov.in] MeitY
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
- Visitors Counter: 4,111,153
+ Visitors Counter: 4,127,964
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2

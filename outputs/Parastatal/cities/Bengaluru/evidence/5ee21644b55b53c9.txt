@@ -282,7 +282,7 @@ MENU
  [https://oios.cag.gov.in] OIOS  
  [https://cag.gov.in/en/page-statefinances24-25] State Finances  
  [https://cag.gov.in/en/young-professional-programme] Internship
- [https://d1jmc0u14z2tmp.cloudfront.net/uploads/media/TelephoneDirectory16112026-06afc41e26c7d55-14229085.pdf] Telephone Directory New  
+ [https://d1jmc0u14z2tmp.cloudfront.net/uploads/media/TelephoneDirectory20112026-06b03e1046becf2-56588962.pdf] Telephone Directory New  
  [https://auditdiwas.in/] Audit Diwas  
  [https://cag.gov.in/en/page-lecture-series] Dr. B.R. Ambedkar Lecture Series
  [https://pgportal.gov.in/] CPGRAMS  
@@ -438,7 +438,7 @@ Section 11 requires the Deputy Commissioner to make an award of compensation for
 
  [https://cag.gov.in/en/page-web-information-manager] Web Information Manager 
 
- Last Updated: 20 Nov 2026 
+ Last Updated: 24 Nov 2026 
 
  [https://www.india.gov.in/] 
 

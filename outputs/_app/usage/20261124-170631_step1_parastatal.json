@@ -1,0 +1,50 @@
+{
+  "kind": "run",
+  "step": 1,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 1: Sources \u00b7 Bengaluru",
+  "cities": [
+    "Bengaluru"
+  ],
+  "work": 3,
+  "unit": "agency",
+  "started": "2026-11-24T16:47:05",
+  "finished": "2026-11-24T17:06:31",
+  "group": null,
+  "total_usd": 5.523,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 161,
+      "input": 700,
+      "cache_read": 1418169,
+      "cache_write": 1412436,
+      "output": 110687,
+      "searches": 60,
+      "fetches": 8,
+      "usd": 5.522993799999999
+    }
+  },
+  "by_agent": {
+    "source-assessor \u00b7 claude-sonnet-5-5": {
+      "calls": 153,
+      "input": 612,
+      "cache_read": 610204,
+      "cache_write": 1327440,
+      "output": 98294,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 4.4248047999999995
+    },
+    "citation-builder \u00b7 claude-sonnet-5-5": {
+      "calls": 8,
+      "input": 88,
+      "cache_read": 807965,
+      "cache_write": 84996,
+      "output": 12393,
+      "searches": 60,
+      "fetches": 8,
+      "usd": 1.098189
+    }
+  }
+}

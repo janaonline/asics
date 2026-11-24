@@ -281,7 +281,7 @@ The Stores and Purchase Department of the Corporation is entrusted with the resp
 
  Close
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
 ## Follow us
 
@@ -344,9 +344,9 @@ Cookie Settings
 
  [https://www.meity.gov.in] MeitY
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
- Visitors Counter: 4,111,149
+ Visitors Counter: 4,127,958
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2

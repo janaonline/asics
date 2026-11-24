@@ -210,7 +210,7 @@ Rules And Regulations
 
  Close
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
 ## Follow us
 
@@ -273,9 +273,9 @@ Cookie Settings
 
  [https://www.meity.gov.in] MeitY
 
- Last Updated On: 18-11-2026
+ Last Updated On: 23-11-2026
 
- Visitors Counter: 4,111,152
+ Visitors Counter: 4,127,961
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2
