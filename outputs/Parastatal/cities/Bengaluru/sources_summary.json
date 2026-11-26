@@ -1,6 +1,6 @@
 {
   "run": {
-    "run_id": "20261124-164705-73fa",
+    "run_id": "20261125-073010-f72f",
     "city": "bengaluru",
     "city_name": "Bengaluru",
     "state_name": "Karnataka",
@@ -9,7 +9,7 @@
     "output_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bengaluru",
     "cache_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bengaluru/evidence"
   },
-  "agent_setup_fingerprint": "7227250e4e1d",
+  "agent_setup_fingerprint": "956a2f1fd69b",
   "law_cutoff": "2026-08-31",
   "undated_law_policy": "confirm",
   "parastatals": [
@@ -232,7 +232,7 @@
     }
   ],
   "counts": {
-    "sources": 338,
-    "verified": 194
+    "sources": 345,
+    "verified": 201
   }
 }

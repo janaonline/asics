@@ -1,6 +1,6 @@
 {
   "run": {
-    "run_id": "20261120-152331-8e50",
+    "run_id": "20261125-082913-70f4",
     "city": "bhubaneswar",
     "city_name": "Bhubaneswar",
     "state_name": "Odisha",
@@ -9,7 +9,7 @@
     "output_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bhubaneswar",
     "cache_dir": "/Users/janaagraha/code/Jana/asics/outputs/Parastatal/cities/Bhubaneswar/evidence"
   },
-  "agent_setup_fingerprint": "0ea722fdfb4d",
+  "agent_setup_fingerprint": "956a2f1fd69b",
   "law_cutoff": "2026-08-31",
   "undated_law_policy": "confirm",
   "parastatals": [
@@ -116,9 +116,9 @@
       "governing_act": "No parent Act located. CRUT is a company registered under the Companies Act, 2013 (an SPV of the Housing & Urban Development Department, Govt of Odisha); form=company (shareholders: BDA, Cuttack Development Authority, Puri-Konark Development Authority, Bhubaneswar Smart City Ltd, and the Vice-Chairmen of BDA, CDA and PKDA); constituted/renamed under H&UD Notification No. 1919 dated 19-01-2018 and Corrigendum No. 7387 dated 19-03-2018 [unverified: the notifications themselves were not seen, only the CRUT website's description of them]; text version=n/a (no Act text; the Memorandum and Articles of Association were not located) [unverified]",
       "current_status": "Active. Renamed from Bhubaneswar-Puri Transport Services (BPTS) to Capital Region Urban Transport, per the CRUT website. It is now styled Comprehensive Region Urban Transport. The CRUT website (comprehensiveregiontransport.in) shows the new name, and a state-government page (odishatransport.gov.in) still uses 'Capital Region Urban Transport'. The date and instrument for the latest rename were not located. The service is operating (Mo Bus / Ama Bus).",
       "why_included": "NEEDS REVIEW (E1/E2/E5): Category 3. The team listed it. The only evidence found was a blocked company-profile aggregator page, which is a lead only. It says CRUT runs bus services. I found no official source for its constitution, its ownership (state or ULG, which matters for E2), the rename, or its legal form. NEEDS TEAM CONFIRMATION: legal form (company/society/other).",
-      "official_website": "",
+      "official_website": "https://www.comprehensiveregiontransport.in/",
       "website_check": {
-        "url": "https://www.capitalregiontransport.in/",
+        "url": "https://www.comprehensiveregiontransport.in/",
         "score": 40,
         "band": "Not confirmed",
         "reasons": [
@@ -127,22 +127,15 @@
           "Has Right to Information (RTI) details (+5)",
           "Its name or short name is in the web address or page title (+5)"
         ],
-        "opens": true
+        "opens": false
       },
       "other_websites": [
         {
           "url": "https://www.comprehensiveregiontransport.in/",
           "score": 35,
           "band": "Not confirmed",
-          "reasons": [
-            "No other government website seen linking to it (0)",
-            "Opens properly and shows real content (+10)",
-            "Lists a government email address (crut.state@odisha.gov.in) (+10)",
-            "Has Right to Information (RTI) details (+5)",
-            "Its social media account (channel) is also linked from a government page (+5)",
-            "Its name or short name is in the web address or page title (+5)"
-          ],
-          "opens": true
+          "reasons": [],
+          "opens": false
         }
       ]
     },
@@ -168,7 +161,7 @@
     }
   ],
   "counts": {
-    "sources": 87,
-    "verified": 56
+    "sources": 106,
+    "verified": 86
   }
 }

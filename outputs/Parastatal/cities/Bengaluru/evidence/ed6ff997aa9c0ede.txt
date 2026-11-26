@@ -312,7 +312,7 @@ Cookie Settings
 
  Last Updated On: 23-11-2026
 
- Visitors Counter: 4,127,960
+ Visitors Counter: 4,130,051
  [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
 
  Version: CeG/KRN 4.2

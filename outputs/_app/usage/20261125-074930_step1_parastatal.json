@@ -1,0 +1,70 @@
+{
+  "kind": "run",
+  "step": 1,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 1: Sources \u00b7 Bengaluru",
+  "cities": [
+    "Bengaluru"
+  ],
+  "work": 3,
+  "unit": "agency",
+  "started": "2026-11-25T07:30:10",
+  "finished": "2026-11-25T07:49:30",
+  "group": null,
+  "total_usd": 7.1849,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 167,
+      "input": 718,
+      "cache_read": 1290007,
+      "cache_write": 1491479,
+      "output": 114305,
+      "searches": 45,
+      "fetches": 10,
+      "usd": 5.5811849
+    },
+    "claude-sonnet-5-5 (batch)": {
+      "calls": 19,
+      "input": 396452,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 241450,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 1.603702
+    }
+  },
+  "by_agent": {
+    "source-assessor \u00b7 claude-sonnet-5-5": {
+      "calls": 161,
+      "input": 644,
+      "cache_read": 651101,
+      "cache_write": 1404398,
+      "output": 101610,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 4.6586032
+    },
+    "citation-builder \u00b7 claude-sonnet-5-5": {
+      "calls": 6,
+      "input": 74,
+      "cache_read": 638906,
+      "cache_write": 87081,
+      "output": 12695,
+      "searches": 45,
+      "fetches": 10,
+      "usd": 0.9225817000000001
+    },
+    "scan reading \u00b7 claude-sonnet-5-5 (batch)": {
+      "calls": 19,
+      "input": 396452,
+      "cache_read": 0,
+      "cache_write": 0,
+      "output": 241450,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 1.603702
+    }
+  }
+}

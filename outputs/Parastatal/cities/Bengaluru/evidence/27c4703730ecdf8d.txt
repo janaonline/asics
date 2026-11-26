@@ -718,7 +718,7 @@ SOURCE URL: https://mybmtc.karnataka.gov.in/
 
  ಇತ್ತೀಚಿನ ನವೀಕರಣ: 23-11-2026
 
- ಸಂದರ್ಶಕರು: 4,127,958
+ ಸಂದರ್ಶಕರು: 4,130,049
  [https://mybmtc.karnataka.gov.in/visitor-statistics/kn] ಅಂಕಿಅಂಶ - ಸಂದರ್ಶಕರ ಅಂಕಿಅಂಶಗಳು
 
  ಆವೃತ್ತಿ: CeG/KRN 4.2 MGO-DB
