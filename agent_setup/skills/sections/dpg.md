@@ -32,7 +32,10 @@ evidence_hints: board members nominated elected corporation councillor jurisdict
   content within the rubric window); Functionality (the feature works: pages load, portals
   accept input, links resolve). Currency and Functionality need a verified saved copy. If the
   page could not be opened automatically, that is NOT evidence the site is non-functional:
-  score null, Confidence Low, and say "VERIFICATION-LIMIT" in notes.
+  score null, Confidence Low, and say "VERIFICATION-LIMIT" in notes. Exception: when the task
+  has a ZERO CONDITION line and REQUIRED SOURCES says the whole site was read (a complete crawl
+  of the home page's menu) and the scan found nothing, a "cannot be found on the website" 0
+  follows the methodology: the methodology's zero condition has precedence over this note.
 - File format (where the methodology scores it): record the actual type (XLSX/CSV/structured HTML vs text PDF vs scanned
   PDF). A scanned or unextractable PDF = 0 for the format half per the rubric.
 - Where a question's evidence requirement asks for a dated screenshot, add "Reviewer to capture a dated screenshot per QB evidence requirement".

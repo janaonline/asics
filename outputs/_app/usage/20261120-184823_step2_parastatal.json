@@ -1,0 +1,60 @@
+{
+  "kind": "run",
+  "step": 2,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 2: Answers \u00b7 Bengaluru",
+  "cities": [
+    "Bengaluru"
+  ],
+  "work": 128,
+  "unit": "answer",
+  "started": "2026-11-20T18:16:09",
+  "finished": "2026-11-20T18:48:23",
+  "group": null,
+  "total_usd": 8.9774,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 8,
+      "input": 16,
+      "cache_read": 198564,
+      "cache_write": 200209,
+      "output": 5019,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.5904573000000001
+    },
+    "claude-sonnet-5-5 (batch)": {
+      "calls": 249,
+      "input": 752,
+      "cache_read": 2481300,
+      "cache_write": 5904103,
+      "output": 151581,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 8.38691575
+    }
+  },
+  "by_agent": {
+    "answer-writer \u00b7 claude-sonnet-5-5 (batch)": {
+      "calls": 249,
+      "input": 752,
+      "cache_read": 2481300,
+      "cache_write": 5904103,
+      "output": 151581,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 8.38691575
+    },
+    "answer-writer \u00b7 claude-sonnet-5-5": {
+      "calls": 8,
+      "input": 16,
+      "cache_read": 198564,
+      "cache_write": 200209,
+      "output": 5019,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.5904573000000001
+    }
+  }
+}

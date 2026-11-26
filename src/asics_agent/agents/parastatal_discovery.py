@@ -29,7 +29,7 @@ from asics_agent.agents.common import (
 )
 from asics_agent.agents.state import MasterState
 from asics_agent.categories import ULG_UNIT_ID, agent_for
-from asics_agent.links.accessibility import check_url
+from asics_agent.links.fetch_chain import check_url_staged
 from asics_agent.links.trust import best_official, host_of, is_official_host, rate_website
 from asics_agent.llm import CallFailed, call_json
 from asics_agent.models import Issue, Parastatal, Question, RunContext
@@ -327,8 +327,12 @@ def build_parastatal_discovery(services: Services):
                 continue
             seen.add(host_of(url))
             report(p.id, f"Checking candidate website {url}")
-            access = check_url(
-                url, services.http, Path(run.cache_dir), services.settings.user_agent
+            access = check_url_staged(
+                url,
+                services.http,
+                Path(run.cache_dir),
+                services.settings.user_agent,
+                settings=services.settings,
             )
             checks.append(rate_website(url, access, p.id, p.name, official_pages))
         checks.sort(key=lambda c: c.score, reverse=True)

@@ -6,7 +6,7 @@
   "agent": "question-scorer",
   "model": "claude-sonnet-5-5",
   "effort": "medium",
-  "agent_setup_fingerprint": "4f6085f90f32",
+  "agent_setup_fingerprint": "956a2f1fd69b",
   "bank_version": {
     "version": "Bengaluru_Parastatal_Pilot_NC19102026_1@2026-11-04#9d2acfb3",
     "content_hash": "9d2acfb3514efdb7e8c14bf1e3e61d8edbaf1195bf99dd71146e2cb94d7a604b",
@@ -18,15 +18,15 @@
   "calculated": true,
   "law_cutoff": "2026-08-31",
   "undated_law_policy": "confirm",
-  "last_run_id": "20261116-110304",
+  "last_run_id": "20261125-090847",
   "cities": {
     "Bengaluru": {
-      "run_id": "20261116-101134",
-      "at": "2026-11-16T10:12:35"
+      "run_id": "20261125-082200",
+      "at": "2026-11-25T08:24:05"
     },
     "Bhubaneswar": {
-      "run_id": "20261116-110304",
-      "at": "2026-11-16T11:03:22"
+      "run_id": "20261125-090847",
+      "at": "2026-11-25T09:09:58"
     }
   }
 }

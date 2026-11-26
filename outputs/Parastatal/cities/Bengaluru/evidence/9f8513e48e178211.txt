@@ -1,16 +1,66 @@
 SOURCE URL: https://mybmtc.karnataka.gov.in/info-1/BMTC+Glance/en
 
-[https://mybmtc.karnataka.gov.in/back/index] 
+Government of Karnataka 
+ •
+ [https://mybmtc.karnataka.gov.in/back/index] 
+ Login 
+ |
 
- login
+ A English (current)
+ |
+ [https://mybmtc.karnataka.gov.in/35/BMTC%20Glance/kn] ಅ ಕನ್ನಡ
 
- [https://mybmtc.karnataka.gov.in/35/BMTC%20Glance/kn] 
+ |
+ Skip to main content
 
- ಕನ್ನಡ 
+ Search this website
 
- visually challenged
+ Search
 
- a
+ Screen Reader
+
+ |
+
+ A-
+ A
+ A+
+ Night mode
+
+ |
+
+ Accessibility Tools
+
+## Accessibility Tools
+
+ ×
+
+ Colour Contrast
+
+ High Contrast
+
+ Normal Contrast
+
+ Highlight Links
+
+ Invert
+
+ Saturation
+
+ Other Controls
+
+ Text Spacing
+
+ Line Height
+
+ Hide Images
+
+ Big Cursor
+
+ Pause Animations
+
+ Reset All
+
+Loading
 
  Bengaluru Metropolitan Transport Corporation 
 
@@ -20,31 +70,31 @@ SOURCE URL: https://mybmtc.karnataka.gov.in/info-1/BMTC+Glance/en
 
  Hon'ble Transport Minister
 
- [https://mybmtc.karnataka.gov.in/en] 
+ [https://mybmtc.karnataka.gov.in/en] Home
  [https://mybmtc.karnataka.gov.in/10/complaints/en] Complaints [http://crm.mybmtc.com] New Complaint
  [http://crm.mybmtc.com/All_module] Public Grievance Dashboard
 
  [https://mybmtc.karnataka.gov.in/7/recruitment/en] Recruitment
- Services. [https://mybmtc.karnataka.gov.in/new-page/Casual Contract/en] Casual Contract
+ Services. [https://mybmtc.karnataka.gov.in/105/casual-contract/en] Casual Contract
  [http://mfs.mybmtc.com/indexmfs.php] Metro Feeder Live Tracking
- [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf] Metro Feeder Service
- [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%2027_1786534401.pdf] Vajra Services Timetable
- [https://mybmtc.karnataka.gov.in/new-page/Chartered Services/en] Chartered Services
- [https://mybmtc.karnataka.gov.in/new-page/Passenger%20bus%20fares/en] Passenger bus fares
- [https://mybmtc.karnataka.gov.in/new-page/Advertisement and Filmy Contract Fare/en] Advertisement and Filmy Contract Fare
+ [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf] Metro Feeder Service (PDF, 288.65 KB)
+ [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%2027_1786534401.pdf] Vajra Services Timetable (PDF, 74.48 KB)
+ [https://mybmtc.karnataka.gov.in/112/chartered-services/en] Chartered Services
+ [https://mybmtc.karnataka.gov.in/108/passenger-bus-fares/en] Passenger bus fares
+ [https://mybmtc.karnataka.gov.in/106/advertisement-and-filmy-contract-fare/en] Advertisement and Filmy Contract Fare
  [http://lms.mybmtc.com/BusBooking/] Contract Basis Bus
  [http://kias.mybmtc.com] Airport Services
- [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1746860294.pdf] Vayuvajra Services Main Bus Stop Wise Fare
- [https://mybmtc.karnataka.gov.in/storage/pdf-files/wonderlaeng(3).pdf] Wonderla Services
- [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%20@17_1789716606.pdf] Airport Services timetable
- One day tour package [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=1912|Bengaluru%20Rounds&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 4 (KBS-Bng City Rounds)
- [https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=5301|Divya%20Darshana%203&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 3 (KBS-Art of Living)
- [https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=2923|Divya%20Darshana%202%20Kbs-ghati&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 2 (KBS-Ghati)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5311|Divya%20Darshana%201d%20Wtf-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1D (WFTTMC- Isha)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5310|Divya%20Darshana%201c%20Mrbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1C (MRBS- Isha)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5306|Divya%20Darshana%206%20Jain%20Temple-devanahalli&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 6 (KBS-Jain Temple DVN)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5309|Divya Darshana 1b Csb-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1B (CSB- Isha)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5307|Divya%20Darshana%205%20Begur-c.tirupathi&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 5 (CSB-Chikkatirupati)
+ [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1746860294.pdf] Vayuvajra Services Main Bus Stop Wise Fare (PDF, 78.13 KB)
+ [https://mybmtc.karnataka.gov.in/storage/pdf-files/wonderlaeng(3).pdf] Wonderla Services (PDF, 40.77 KB)
+ [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%20@17_1789716606.pdf] Airport Services timetable (PDF, 82.2 KB)
+ One day tour package [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=1912%7CBengaluru%20Rounds&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 4 (KBS-Bng City Rounds)
+ [https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=5301%7CDivya%20Darshana%203&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 3 (KBS-Art of Living)
+ [https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=2923%7CDivya%20Darshana%202%20Kbs-ghati&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 2 (KBS-Ghati)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5311%7CDivya%20Darshana%201d%20Wtf-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1D (WFTTMC- Isha)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5310%7CDivya%20Darshana%201c%20Mrbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1C (MRBS- Isha)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5306%7CDivya%20Darshana%206%20Jain%20Temple-devanahalli&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 6 (KBS-Jain Temple DVN)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5309%7CDivya%20Darshana%201b%20Csb-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1B (CSB- Isha)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5307%7CDivya%20Darshana%205%20Begur-c.tirupathi&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 5 (CSB-Chikkatirupati)
  [https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=5179%7CDivya%20Darshana%201%20Kbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1 (KBS-Isha )
  [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5308%7CDivya%20Darshana%201a%20Bsk-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1A (BSK- Isha)
 
@@ -55,35 +105,35 @@ SOURCE URL: https://mybmtc.karnataka.gov.in/info-1/BMTC+Glance/en
  [https://mybmtc.karnataka.gov.in/3/rti/en] RTI [https://rtionline.karnataka.gov.in/index.php?lan=E] Online RTI
  [https://mybmtc.karnataka.gov.in/4/rti-4%281%29a/en] RTI 4(1)A
  [https://mybmtc.karnataka.gov.in/5/rti-4%281%29-b/en] RTI 4(1) B
- [https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf] List of PIO-APIO-AA
+ [https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf] List of PIO-APIO-AA (PDF, 100.76 KB)
 
  ×
 
- [https://mybmtc.karnataka.gov.in/en] 
+ [https://mybmtc.karnataka.gov.in/en] Home
  [https://mybmtc.karnataka.gov.in/10/complaints/en] Complaints [http://crm.mybmtc.com] New Complaint
  [http://crm.mybmtc.com/All_module] Public Grievance Dashboard
 
  [https://mybmtc.karnataka.gov.in/7/recruitment/en] Recruitment
- Services. [https://mybmtc.karnataka.gov.in/new-page/Casual Contract/en] Casual Contract
+ Services. [https://mybmtc.karnataka.gov.in/105/casual-contract/en] Casual Contract
  [http://mfs.mybmtc.com/indexmfs.php] Metro Feeder Live Tracking
- [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf] Metro Feeder Service
- [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%2027_1786534401.pdf] Vajra Services Timetable
- [https://mybmtc.karnataka.gov.in/new-page/Chartered Services/en] Chartered Services
- [https://mybmtc.karnataka.gov.in/new-page/Passenger%20bus%20fares/en] Passenger bus fares
- [https://mybmtc.karnataka.gov.in/new-page/Advertisement and Filmy Contract Fare/en] Advertisement and Filmy Contract Fare
+ [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1765527688.pdf] Metro Feeder Service (PDF, 288.65 KB)
+ [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%2027_1786534401.pdf] Vajra Services Timetable (PDF, 74.48 KB)
+ [https://mybmtc.karnataka.gov.in/112/chartered-services/en] Chartered Services
+ [https://mybmtc.karnataka.gov.in/108/passenger-bus-fares/en] Passenger bus fares
+ [https://mybmtc.karnataka.gov.in/106/advertisement-and-filmy-contract-fare/en] Advertisement and Filmy Contract Fare
  [http://lms.mybmtc.com/BusBooking/] Contract Basis Bus
  [http://kias.mybmtc.com] Airport Services
- [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1746860294.pdf] Vayuvajra Services Main Bus Stop Wise Fare
- [https://mybmtc.karnataka.gov.in/storage/pdf-files/wonderlaeng(3).pdf] Wonderla Services
- [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%20@17_1789716606.pdf] Airport Services timetable
- One day tour package [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=1912|Bengaluru%20Rounds&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 4 (KBS-Bng City Rounds)
- [https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=5301|Divya%20Darshana%203&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 3 (KBS-Art of Living)
- [https://ksrtc.in/search?mode=oneway&fromCity=5050|Kempegowda%20Bus%20Station&toCity=2923|Divya%20Darshana%202%20Kbs-ghati&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 2 (KBS-Ghati)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5311|Divya%20Darshana%201d%20Wtf-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1D (WFTTMC- Isha)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5310|Divya%20Darshana%201c%20Mrbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1C (MRBS- Isha)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5306|Divya%20Darshana%206%20Jain%20Temple-devanahalli&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 6 (KBS-Jain Temple DVN)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5309|Divya Darshana 1b Csb-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1B (CSB- Isha)
- [https://ksrtc.in/search?mode=oneway&fromCity=368|Bengaluru&toCity=5307|Divya%20Darshana%205%20Begur-c.tirupathi&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 5 (CSB-Chikkatirupati)
+ [https://mybmtc.karnataka.gov.in/uploads/media_to_upload1746860294.pdf] Vayuvajra Services Main Bus Stop Wise Fare (PDF, 78.13 KB)
+ [https://mybmtc.karnataka.gov.in/storage/pdf-files/wonderlaeng(3).pdf] Wonderla Services (PDF, 40.77 KB)
+ [https://mybmtc.karnataka.gov.in/uploads/Vayuvajra%20Form-3%20@17_1789716606.pdf] Airport Services timetable (PDF, 82.2 KB)
+ One day tour package [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=1912%7CBengaluru%20Rounds&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 4 (KBS-Bng City Rounds)
+ [https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=5301%7CDivya%20Darshana%203&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 3 (KBS-Art of Living)
+ [https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=2923%7CDivya%20Darshana%202%20Kbs-ghati&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 2 (KBS-Ghati)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5311%7CDivya%20Darshana%201d%20Wtf-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1D (WFTTMC- Isha)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5310%7CDivya%20Darshana%201c%20Mrbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1C (MRBS- Isha)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5306%7CDivya%20Darshana%206%20Jain%20Temple-devanahalli&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 6 (KBS-Jain Temple DVN)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5309%7CDivya%20Darshana%201b%20Csb-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1B (CSB- Isha)
+ [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5307%7CDivya%20Darshana%205%20Begur-c.tirupathi&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 5 (CSB-Chikkatirupati)
  [https://ksrtc.in/search?mode=oneway&fromCity=5050%7CKempegowda%20Bus%20Station&toCity=5179%7CDivya%20Darshana%201%20Kbs-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1 (KBS-Isha )
  [https://ksrtc.in/search?mode=oneway&fromCity=368%7CBengaluru&toCity=5308%7CDivya%20Darshana%201a%20Bsk-isha&departDate=26-07-2025&stationInFromCity=&stationInToCity=&IsSingleLady=0] Divya Darshana - 1A (BSK- Isha)
 
@@ -94,43 +144,47 @@ SOURCE URL: https://mybmtc.karnataka.gov.in/info-1/BMTC+Glance/en
  [https://mybmtc.karnataka.gov.in/3/rti/en] RTI [https://rtionline.karnataka.gov.in/index.php?lan=E] Online RTI
  [https://mybmtc.karnataka.gov.in/4/rti-4%281%29a/en] RTI 4(1)A
  [https://mybmtc.karnataka.gov.in/5/rti-4%281%29-b/en] RTI 4(1) B
- [https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf] List of PIO-APIO-AA
+ [https://mybmtc.karnataka.gov.in/storage/pdf-files/RTIPIOENGupdated04-6-24.pdf] List of PIO-APIO-AA (PDF, 100.76 KB)
 
  [https://mybmtc.karnataka.gov.in/feedback/en] 
 
  Feedback
 
- Back 
- BMTC Glance 
+ [https://mybmtc.karnataka.gov.in/en] Home
+BMTC Glance
+
+ [https://mybmtc.karnataka.gov.in/en] Back 
+
+## BMTC Glance
 
 ## BMTC at a glance
 
-As on 25 September, 2026
+As on 07  November, 2026
 
 1
 No of Schedules
-6248
+6243
 
 2
 No. of Vehicles
 
-6921 (Including EV)
+6910 (Including EV)
 
 3
 Daily Service kms.(Lakhs)
-12.39
+11.71
 
 4
 No. of Trips
-61740
+63279
 
 5
 Everyday Traffic Revenue(Rs.Crores)
-7.28
+8.09
 
 6
 No of Electric buses under GCC model
-1771
+1779
 
 7
 Infrastructure established
@@ -139,17 +193,17 @@ Infrastructure established
 50
 
     Bus stations
-48
+50
 
 8
 Staff Employed
-28382
+28329
 
 9
 Bus Staff Ratio
 4.54
 
-## Screen Reader Access 
+## Screen Reader Access
 
  The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.
 
@@ -187,23 +241,37 @@ Bus Staff Ratio
 
  Close
 
- Disclaimer
+ Last Updated On: 23-11-2026
+
+## Follow us
+
+ [http://crm.mybmtc.com/] Feedback
+
+ [https://www.instagram.com/bmtc_official?utm_source=qr&igsh=OGI3ZGl6dG04NHQ=] Instagram
+
+ [https://x.com/BMTC_BENGALURU] Twitter
+
+ [https://www.facebook.com/share/1DhknqRPyx/] facebook
+
+## Disclaimer
 
  Please note that this page also provides links to the websites / web pages of Govt. Ministries/Departments/Organisations. The content of these websites are owned by the respective organisations and they may be contacted for any further information or suggestion
 
- Website Policies and Guidelines 
+## Website Policies and Guidelines
 
- Copyright Policy
+ [https://mybmtc.karnataka.gov.in/website-policies/en] Website Policies
 
- Hyperlinking Policy
+ [https://mybmtc.karnataka.gov.in/copyright-policy/en] Copyright Policy
 
- Security Policy
+ [https://mybmtc.karnataka.gov.in/hyperlinking-policy/en] Hyperlinking Policy
 
- Terms & Conditions
+ [https://mybmtc.karnataka.gov.in/security-policy/en] Security Policy
 
- Privacy Policy
+ [https://mybmtc.karnataka.gov.in/terms-and-conditions/en] Terms & Conditions
 
- Accessibility Resources
+ [https://mybmtc.karnataka.gov.in/privacy-policy/en] Privacy Policy
+
+## Accessibility Resources
 
  [https://mybmtc.karnataka.gov.in/sitemap/en] Sitemap 
 
@@ -213,41 +281,66 @@ Bus Staff Ratio
 
  [https://ceg.karnataka.gov.in/guidelines/kn] Guidelines
 
- Last Updated: 30-09-2026
+ [https://mybmtc.karnataka.gov.in/feedback/en] Feedback
+ [https://mybmtc.karnataka.gov.in/9/contact-us/en] Contact Us
+ [https://mybmtc.karnataka.gov.in/archive/en] Archives
+Cookie Settings
 
- Visitors Counter: 
+## Related Links
 
- Version: CeG/KRN 4.0
+ [https://www.india.gov.in] National Portal of India
+
+ [https://www.karnataka.gov.in] Government of Karnataka
+
+ [https://www.mygov.in] MyGov
+
+ [https://www.myscheme.gov.in] myScheme
+
+ [https://pgportal.gov.in] CPGRAMS - Grievance
+
+ [https://data.gov.in] Open Government Data
+
+ [https://digitalindia.gov.in] Digital India
+
+ [https://www.meity.gov.in] MeitY
+
+ Last Updated On: 23-11-2026
+
+ Visitors Counter: 4,130,050
+ [https://mybmtc.karnataka.gov.in/visitor-statistics/en] Statistics - visitor statistics
+
+ Version: CeG/KRN 4.2
 
  Content Owned and maintained by: Bengaluru Metropolitan Transport Corporation, Government of Karnataka
 
+ [https://mybmtc.karnataka.gov.in/lineage/en] This website belongs to Bengaluru Metropolitan Transport Corporation (BMTC), Government of Karnataka.
  Designed , Developed & Hosted by: Centre for e-governance - Webportal karnataka government © 2026, All Rights Reserved.
 
- [https://www.meity.gov.in/] 
+ [https://www.meity.gov.in/] Ministry of Electronics and Information Technology
 
- [https://digitalindia.gov.in/] 
+ [https://digitalindia.gov.in/] Digital India
 
- [https://data.gov.in/] 
+ [https://data.gov.in/] Open Government Data Platform India
 
- [https://www.india.gov.in/] 
+ [https://www.india.gov.in/] National Portal of India
 
- [https://www.pmindia.gov.in/en/] 
+ [https://www.pmindia.gov.in/en/] Prime Minister of India
 
- [https://guidelines.india.gov.in/] 
+ [https://guidelines.india.gov.in/] Guidelines for Indian Government Websites (GIGW)
 
- [https://www.w3.org/TR/WCAG22/] 
+ [https://www.w3.org/TR/WCAG22/] Web Content Accessibility Guidelines (WCAG)
 
- [https://www.https.in/government-solutions] 
+ [https://www.https.in/government-solutions] SSL secured website
 
- [https://www.w3schools.com/html/default.asp] 
+ [https://www.w3schools.com/html/default.asp] W3C HTML standards
 
- [https://kannadapraadhikaara.karnataka.gov.in] 
+ [https://kannadapraadhikaara.karnataka.gov.in] Kannada Development Authority
 
 ## Copyright Policy
 
  Close
 
- Copyright policy (if the published information is available free of any charge)
+Copyright policy (if the published information is available free of any charge)
 
  1)Information featured on this website can be re-published in any media form free
  of any charge only with prior permission from us(CeG) or concerned respective authority which is owning the website, through email.
@@ -268,7 +361,7 @@ Bus Staff Ratio
 
  Close
 
- (in case the respective department doesn’t need any permission to hyperlink in their website) 
+(in case the respective department doesn’t need any permission to hyperlink in their website) 
 
  1)We do not object to you linking directly to the information that is hosted on our site and no prior permission is required for the same.
 
@@ -296,7 +389,7 @@ Bus Staff Ratio
 
  Close
 
- 1)This website is designed, developed, and maintained by the center for e-governance.
+1)This website is designed, developed, and maintained by the center for e-governance.
 
  2) Though all efforts have been made to ensure the accuracy and currency of the content on this website, the same should not be construed as a statement of law or used for any legal purposes. In case of any ambiguity or doubts, users are advised to verify/check with the Department(s) and/or other source(s) and to obtain appropriate professional advice.
 
@@ -339,7 +432,7 @@ Bus Staff Ratio
 
  Close
 
- privacy policy : (when the website doesn’t collect any personal information)
+privacy policy : (when the website doesn’t collect any personal information)
 
  We collect no personal information, like names or addresses, when you visit our website. If you choose to provide that information to us, it is only used to fulfill your request for information
 
@@ -394,12 +487,11 @@ Bus Staff Ratio
  if the internet is slow or unavailable, there may be a modification in website design or some subpages may not open. 
 
  Help of Various File formats : Document Type Download 
- PDF content [http://get.adobe.com/reader/] Adobe Acrobat Reader (External website that opens in a new window) 
- Word files [http://www.microsoft.com/downloads/en/details.aspx?familyid=3657CE88-7CFA-457A-9AEC-F4F827F20CAC&displaylang=en] Word Viewer (in any version till 2003) - External website that opens in a new window [http://www.microsoft.com/downloads/en/details.aspx?FamilyID=c8378bf4-996c-4369-b347-73edbd03aaf0&displaylang=EN] Microsoft Office Compatibility Pack for Word (for 2007 version) - External website that opens in a new window 
- Excel files [http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D3727-43AB-4F24-90B7-A94784AF71A4&displaylang=en] Excel Viewer 2003 (in any version till 2003) - External website that opens in a new window [http://www.microsoft.com/downloads/en/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&displaylang=en] Microsoft Office Compatibility Pack for Excel (for 2007 version) - External website that opens in a new window 
- PowerPoint presentations [http://www.microsoft.com/downloads/en/details.aspx?FamilyId=428D5727-43AB-4F24-90B7-A94784AF71A4&displaylang=en] PowerPoint Viewer 2003 (in any version till 2003) - External website that opens in a new window [http://www.microsoft.com/downloads/en/details.aspx?familyid=941b3470-3ae9-4aee-8f43-c6bb74cd1466&displaylang=en] Microsoft Office Compatibility Pack for PowerPoint (for 2007 version) - External website that opens in a new window 
- Flash content [http://get.adobe.com/flashplayer/] Adobe Flash Player (External website that opens in a new window) 
- Audio Files [http://windows.microsoft.com/en-US/windows/downloads/windows-media-player] Windows Media Player (External website that opens in a new window) 
+ PDF content [https://get.adobe.com/reader/] Adobe Acrobat Reader (External website that opens in a new window) 
+ Word files [https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web] Microsoft 365 for the web (free online Word / Excel / PowerPoint) (External website that opens in a new window) 
+ Excel files [https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web] Microsoft 365 for the web (free online Word / Excel / PowerPoint) (External website that opens in a new window) 
+ PowerPoint presentations [https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web] Microsoft 365 for the web (free online Word / Excel / PowerPoint) (External website that opens in a new window) 
+ Audio Files [https://support.microsoft.com/en-us/windows/get-windows-media-player-81718e0d-cfce-25b1-aee3-94596b658287] Windows Media Player (External website that opens in a new window) 
 
 ## Screen Reader Access
 
@@ -408,6 +500,8 @@ Bus Staff Ratio
  The website complies with World Wide Web Consortium (W3C) Web Content Accessibility Guidelines (WCAG) 2.0 level AA. This will enable people with visual impairments access the website using assistive technologies, such as screen readers. The information of the website is accessible with different screen readers, such as JAWS, NVDA, SAFA, Supernova and Window-Eyes.
 
  Following table lists the information about different screen readers:
+
+ Screen readers
 
  Sl. No.
  Screen Reader
@@ -441,6 +535,12 @@ Bus Staff Ratio
 
  6
  atoall
- [https://atoall.com/all.asp] 
+ [https://atoall.com/all.asp] This Will Make You Easy For Growth, Use Accessibility Tool
  (External website that opens in a new window)
  Free
+
+ Cookie consent: This website uses essential cookies to function. With your permission we will also use cookies to remember your preferences and to understand how the website is used, so we can improve it. [https://mybmtc.karnataka.gov.in/privacy-policy/en] Privacy Policy
+
+ Reject non-essential
+ Customise
+ Accept all

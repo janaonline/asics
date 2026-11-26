@@ -164,8 +164,103 @@ def _web_limits(services, monkeypatch, **options):
 
 
 def test_source_finder_keeps_its_own_limit_when_the_setting_is_not_set(services, monkeypatch):
-    assert services.settings.find_sources_max_uses is None
-    assert _web_limits(services, monkeypatch) == {"source finder": {5}, "other": {8}}
+    from asics_agent.services import Services
+
+    # whatever the real .env says (it may set ASICS_FIND_SOURCES_MAX_USES), this test is "unset"
+    settings = dataclasses.replace(services.settings, find_sources_max_uses=None)
+    unset = Services(llm=services.llm, http=services.http, settings=settings)
+    assert _web_limits(unset, monkeypatch) == {"source finder": {5}, "other": {8}}
+
+
+def test_a_candidate_website_is_searched_only_when_none_is_confirmed():
+    from asics_agent.agents.links_builder import candidate_website, own_domain
+    from asics_agent.models import Parastatal, WebsiteCheck
+
+    def agency(site="", check=None):
+        return Parastatal(
+            id="WATCO",
+            name="WATCO",
+            type="water_supply_entity",
+            official_website=site,
+            website_check=check,
+        )
+
+    weak = WebsiteCheck(url="https://watcoodisha.in/", score=25)
+    assert candidate_website(agency(check=weak)) == "https://watcoodisha.in/"
+    assert own_domain(candidate_website(agency(check=weak))) == {"watcoodisha.in"}
+    assert candidate_website(agency("https://watcoodisha.nic.in/", weak)) == ""  # already confirmed
+    assert candidate_website(agency(check=WebsiteCheck(url="https://x.in/", score=5))) == ""
+    assert (
+        candidate_website(agency(check=WebsiteCheck(url="https://en.wikipedia.org/", score=0)))
+        == ""
+    )
+    assert candidate_website(agency()) == ""  # nothing was found
+
+
+def test_sources_from_a_candidate_website_are_marked_confirm(services, monkeypatch):
+    from asics_agent.agents import links_builder as lb
+    from asics_agent.agents.common import CandidateList, CandidateSource
+    from asics_agent.categories import load_bank
+    from asics_agent.models import Parastatal, RunContext, Source, WebsiteCheck
+
+    seen = {}
+
+    def fake_call(services_, agent, user, schema, **kw):
+        seen["message"], seen["domains"] = user, kw.get("web_domains")
+        found = CandidateList(
+            sources=[CandidateSource(title="About", url="https://watcoodisha.in/about")]
+        )
+        return found, {"https://watcoodisha.in/about"}, []
+
+    def fake_vet(services_, run, p, candidates, **kw):
+        if not candidates:  # the gap-filling search finds nothing new
+            return []
+        source = Source(
+            parastatal_id=p.id,
+            title="About",
+            url=candidates[0].url,
+            notes="Opened.",
+            verification_status="Verified",
+        )
+        return [(candidates[0], source, [])]
+
+    monkeypatch.setattr(lb, "call_json", fake_call)
+    monkeypatch.setattr(lb, "vet_many", fake_vet)
+    questions, _ = load_bank(services.settings)
+    question = next(q for q in questions.values() if not q.is_rollup)
+    agency = Parastatal(
+        id="WATCO",
+        name="Water Corporation of Odisha",
+        type="water_supply_entity",
+        website_check=WebsiteCheck(url="https://watcoodisha.in/", score=25),
+    )
+    run = RunContext(
+        run_id="r",
+        city="bhubaneswar",
+        city_name="Bhubaneswar",
+        state_name="Odisha",
+        ulg="Bhubaneswar Municipal Corporation",
+        workspace=".",
+        output_dir=".",
+        cache_dir=".",
+    )
+    result = lb.build_links_agent(services).invoke(
+        {
+            "run": run,
+            "parastatal": agency,
+            "task_questions": [question],
+            "existing": [],
+            "known_urls": [],
+            "known_sources": [],
+            "covered_urls": [],
+            "shared_laws": [],
+        }
+    )
+    assert "watcoodisha.in" in seen["message"] and "NOT confirmed as official" in seen["message"]
+    assert seen["domains"] == {"watcoodisha.in"}
+    assert result["sources"] and all(
+        s.notes.startswith("CONFIRM: watcoodisha.in is only a candidate") for s in result["sources"]
+    )
 
 
 def test_source_finder_gets_its_own_search_limit(services, monkeypatch):
@@ -183,3 +278,76 @@ def test_a_run_override_beats_the_source_finder_limit(services, monkeypatch):
     limited = Services(llm=services.llm, http=services.http, settings=settings)
     seen = _web_limits(limited, monkeypatch, web_search_max_uses=5)
     assert seen == {"source finder": {5}, "other": {5}}
+
+
+def _earlier(status, use, found_by="Agent"):
+    from asics_agent.models import Source
+
+    return Source(
+        citation_id="BDA-07",
+        parastatal_id="BDA",
+        title="Acts page",
+        url="https://www.bda.gov.in/notifications/act-rules",
+        verification_status=status,
+        use_for_answers=use,
+        found_by=found_by,
+    )
+
+
+def test_a_row_that_was_no_only_because_its_link_failed_is_switched_on_when_it_now_verifies():
+    from asics_agent.agents.links_builder import use_after_retest
+
+    now = _earlier("Verified", True)
+    use, why = use_after_retest(_earlier("Not verified", False), now)
+    assert use is True and "Now verified" in why
+    # a team decision is never overridden
+    assert use_after_retest(_earlier("Verified", False), now)[0] is False  # the team unticked it
+    assert use_after_retest(_earlier("Not verified", False, "Your team"), now)[0] is False
+    assert use_after_retest(_earlier("Verified", True), now) == (True, "")
+    # still failing: stays off
+    assert use_after_retest(_earlier("Not verified", False), _earlier("Not verified", True)) == (
+        False,
+        "",
+    )
+
+
+def test_step_1_retest_keeps_the_ids_and_switches_a_recovered_row_on(services, monkeypatch):
+    from asics_agent.agents import links_builder as lb
+    from asics_agent.agents.common import CandidateList
+    from asics_agent.categories import load_bank
+    from asics_agent.models import Parastatal, RunContext
+
+    monkeypatch.setattr(lb, "call_json", lambda *a, **k: (CandidateList(), set(), []))
+
+    def fake_vet(services_, run, p, candidates, **kw):
+        return [(c, _earlier("Verified", True), []) for c in candidates]
+
+    monkeypatch.setattr(lb, "vet_many", fake_vet)
+    questions, _ = load_bank(services.settings)
+    question = next(q for q in questions.values() if not q.is_rollup)
+    run = RunContext(
+        run_id="r",
+        city="bhubaneswar",
+        city_name="Bhubaneswar",
+        state_name="Odisha",
+        ulg="Bhubaneswar Municipal Corporation",
+        workspace=".",
+        output_dir=".",
+        cache_dir=".",
+    )
+    result = lb.build_links_agent(services).invoke(
+        {
+            "run": run,
+            "parastatal": Parastatal(id="BDA", name="BDA", type="development_authority"),
+            "task_questions": [question],
+            "existing": [_earlier("Not verified", False)],
+            "known_urls": [],
+            "known_sources": [],
+            "covered_urls": [],
+            "shared_laws": [],
+        }
+    )
+    row = next(s for s in result["sources"] if s.citation_id == "BDA-07")
+    assert row.use_for_answers is True
+    assert row.notes.startswith("Re-tested this run. Previous status: Not verified.")
+    assert "Now verified, so Use for Answers is set to Yes" in row.notes

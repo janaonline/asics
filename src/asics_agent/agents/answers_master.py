@@ -29,8 +29,8 @@ from asics_agent.agents.state import MasterState
 from asics_agent.bank_version import bank_version
 from asics_agent.batch import Batcher
 from asics_agent.cutoff import cutoff_text
-from asics_agent.links.accessibility import check_url
 from asics_agent.links.database import write_links_db
+from asics_agent.links.fetch_chain import begin_run, check_url_staged
 from asics_agent.models import ALL_PARASTATALS, Issue, Source
 from asics_agent.run_options import RunOptions
 from asics_agent.services import AsicsChatAnthropic, Services, default_services
@@ -68,10 +68,17 @@ def build_answers_graph(
 
     def prepare_citations(state: MasterState) -> dict:
         run, settings = state["run"], services.settings
+        begin_run()  # the fetch chain's time cap for this run starts now
         citations, issues = [], []
         for s in state.get("existing_citations", []):
             if s.use_for_answers and not usable(s):
-                check = check_url(s.url, services.http, Path(run.cache_dir), settings.user_agent)
+                check = check_url_staged(
+                    s.url,
+                    services.http,
+                    Path(run.cache_dir),
+                    settings.user_agent,
+                    settings=settings,
+                )
                 if check.verification_status == "Verified":
                     s = s.model_copy(
                         update={
@@ -80,6 +87,8 @@ def build_answers_graph(
                             "content_path": check.content_path,
                             "snapshot_path": check.snapshot_path,
                             "checked_at": check.checked_at,
+                            "copy_type": check.copy_type,
+                            "archived_on": check.archived_on,
                             "notes": (
                                 s.notes + " Checked again for Step 2: " + " ".join(check.reasons)
                             ).strip(),
@@ -138,6 +147,11 @@ def build_answers_graph(
                             "parastatal": p,
                             "question": q,
                             "citation_sources": own,
+                            "citation_all": [
+                                s
+                                for s in state.get("existing_citations", [])
+                                if s.parastatal_id in (p.id, ALL_PARASTATALS)
+                            ],
                         },
                     )
                 )

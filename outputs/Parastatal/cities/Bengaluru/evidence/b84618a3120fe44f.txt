@@ -1,0 +1,87 @@
+SOURCE URL: https://mybmtc.karnataka.gov.in/uploads/Performance%20Indicators_Eng%20%281%29_1779348076.pdf
+
+[page 1]
+Performance Indicators
+  Physical performance:
+Sl. 
+No. Parameter 2019-20 2020-21 2021-22 2022-23     2023-24  2024-25            2025-26  
+(Estimated)
+2026-27  (April 
+2026 
+Estimated)
+1  Depots 45 45 46 49 49 50 50 50
+2 Schedules Added 0 0 234 10 48 266 410 6275
+3 Schedules Curtailed 31 846 0 0 0 0 0 0
+4 Schedules Operated 6159 5313 5547 5557 5605 5871 6281 -6
+5 New Vehicles added 361 0 565+30EV 238+240EV 20+325EV 820+774EV 390EV 0
+6 Vehicles Scrapped 190 168 317 469+115 748+183 709 153 0
+7 Vehicles held 6690 6521 6799 6688 6102 6872 6981 6981
+8 %age Cancellation 10.6 5.9 7.3 2.7 1.8 1.8 3.3 3.8
+9 Effective Km/day (Lakhs)          11.11 5.88 6.81 10.09 10.91 11.34 12.16 12.45
+10 Veh. Utilisation (Kms.) 200.4 161.9 171.7 186.1 203.9 206.7 205.5 205.6
+11 Fleet Utilisation (%age) 85.1 55.0 60.4 79.8 83.9 85.9 84.8 86.7
+12 K.M.P.L (HSD) 3.75 4.29 4.27 4.04 3.91 3.75 3.79 3.83
+13 No. of Breakdowns 1284 268 52 36 53 645 4519 581
+14 Rate of 
+Breakdowns/10000kms. 0.03 0.01 0.00 0.00 0.00 0.02 0.10 0.16
+15 No. of accidents 224 98 133 207 207 199 216 19
+16 Rate of Accidents/          
+Lakh kms. 0.06 0.05 0.05 0.06 0.06 0.06 0.05 0.05
+17 Staff Position 33292 32308 30153 29457 28460 28059 29114 29078
+Bengaluru Metropolitan Transport Corporation
+Operational  performance from 2019-20 to 2026-27 (April-2026 Estimated)
+
+[page 2]
+  Financial performance:
+Sl. 
+No. Parameter 2019-20 2020-21 2021-22 2022-23     2023-24  2024-25            2025-26  
+(Estimated)
+2026-27  (April 
+2026 
+Estimated)
+1 Effective  Km (lakhs) 4065.51 2147.48 2484.23 3681.93 3992.43 4140.74 4439.54 373.35
+%Growth -1.0 -47.2 15.7 48.2 8.4 3.7 7.2 6.9
+2 Traffic Revenue              
+(Rs. In lakhs) 180700.00 69976.42 92249.14 162184.64 202420.71 203909.05 267751.45 21690.79
+%Growth -1.7 -61.3 31.8 75.8 24.8 0.7 19.9 2.9
+Non Traffic Revenue (Rs. 
+In lakhs)
+a)Govt reimbursement/ 
+Financial Assistance 18175.00 99939.00 103794.58 112369.32 40754.57 38350.12 46735.91 0.00
+b) Commercial Revenue 13122.00 15390.48 15468.65 19212.40 18204.70 34567.36 24081.25 2084.47
+ Total other Revenue 31297.00 115329.48 119263.23 131581.72 58959.27 72917.48 70817.16 2084.47
+4
+Gross Revenue              
+(Rs. In lakhs) 211997.00 185305.90 211512.37 293766.36 261379.98 276826.53 338568.61 23775.26
+%Growth 5.7 -12.6 14.1 38.9 -11.0 5.9 19.5 3.7
+5 Cost of Operation           
+(Rs. In lakhs) 266931.00 201725.88 229336.91 301504.06 318925.04 343874.88 363071.75 30023.20
+% Increase 1.0 -24.4 13.7 31.5 5.8 7.8 7.4 10.2
+6 Margin on Traffic Revenue 
+(Rs. In lakhs) -86231.00 -131749.46 -137087.77 -139319.42 -116504.33 -139965.83 -95320.30 -8332.41
+7
+Margin On Gross Revenue 
+(Rs. In lakhs) -54934.00 -16419.98 -17824.54 -7737.70 -57545.06 -67048.35 -24503.14 -6247.94
+8 E P K M  On   Traffic.Rev. 
+(Paise) 4444.7 3258.5 3713.4 4404.9 5070.1 4924.5 6031.1 5809.8
+%Growth 0.4 -26.7 14.0 18.6 15.1 -2.9 11.8 -3.7
+9 E P KM  on Gross 
+Rev.(Paise) 5214.5 8629.0 8514.2 7978.6 6546.9 6685.4 7626.2 6368.1
+%Growth -5.6 65.5 -1.3 -6.3 -17.9 2.1 11.5 -3.0
+10 C P K M   (Paise) 6565.7 9393.6 9231.7 8188.8 7988.3 8304.7 8178.1 8041.6
+% Increase 3.2 43.1 -1.7 -11.3 -2.4 4.0 0.1 3.1
+Margin on Traffic Rev.
+     (Per km. in paise)
+Margin on Gross Rev. 
+     (Per km. in paise)
+-717.5
+-3783.9 -2147.111
+-210.2 -551.9-1441.4 -1619.2
+-2918.1 -2231.8
+-1673.5
+-5518.3
+3
+-2121.0
+-1351.212
+-6135.1 -3380.2
+-764.6

@@ -1,0 +1,60 @@
+{
+  "kind": "run",
+  "step": 2,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 2: Answers \u00b7 Bhubaneswar",
+  "cities": [
+    "Bhubaneswar"
+  ],
+  "work": 128,
+  "unit": "answer",
+  "started": "2026-11-20T15:49:53",
+  "finished": "2026-11-20T16:24:14",
+  "group": null,
+  "total_usd": 6.7786,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 3,
+      "input": 6,
+      "cache_read": 0,
+      "cache_write": 124346,
+      "output": 3014,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.341017
+    },
+    "claude-sonnet-5-5 (batch)": {
+      "calls": 199,
+      "input": 656,
+      "cache_read": 1846568,
+      "cache_write": 4503751,
+      "output": 124518,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 6.43759155
+    }
+  },
+  "by_agent": {
+    "answer-writer \u00b7 claude-sonnet-5-5 (batch)": {
+      "calls": 199,
+      "input": 656,
+      "cache_read": 1846568,
+      "cache_write": 4503751,
+      "output": 124518,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 6.43759155
+    },
+    "answer-writer \u00b7 claude-sonnet-5-5": {
+      "calls": 3,
+      "input": 6,
+      "cache_read": 0,
+      "cache_write": 124346,
+      "output": 3014,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.341017
+    }
+  }
+}

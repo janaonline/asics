@@ -331,3 +331,58 @@ def test_an_unregistered_city_never_enters_an_ai_run(settings, tmp_path, practic
     }
     tasks, ready, _, problems, _ = ts.plan(settings, ais, register, bank, None, None)
     assert "Testville" not in ready and not any(t.city == "Testville" for t in tasks)
+
+
+def _blank_the_city_government(settings):
+    wb = load_workbook(settings.city_register)
+    ws = wb["Cities"]
+    col = next(
+        c for c in range(1, ws.max_column + 1) if ws.cell(1, c).value == "City government (ULG)"
+    )
+    row = next(r for r in range(2, ws.max_row + 1) if ws.cell(r, 1).value == CITY)
+    old = ws.cell(row, col).value
+    ws.cell(row, col).value = None
+    wb.save(settings.city_register)
+    return old
+
+
+def test_a_blank_city_government_is_filled_in_with_a_backup_and_nothing_else_changes(settings):
+    path = settings.city_register
+    _blank_the_city_government(settings)
+    before = {
+        ws.title: [[c.value for c in row] for row in ws.iter_rows()]
+        for ws in load_workbook(path).worksheets
+    }
+    assert register_edit.set_city_government(settings, CITY, "Sample City Corporation") is None
+    history = path.parent / register_edit.HISTORY
+    assert len(list(history.glob("*_register.xlsx"))) == 1
+    after = {
+        ws.title: [[c.value for c in row] for row in ws.iter_rows()]
+        for ws in load_workbook(path).worksheets
+    }
+    changed = [
+        (sheet, c)
+        for sheet in before
+        for old, new in zip(before[sheet], after[sheet], strict=False)
+        for c, (a, b) in enumerate(zip(old, new, strict=False))
+        if a != b
+    ]
+    assert len(changed) == 1 and changed[0][0] == "Cities"
+    register, issues = load_register(path)
+    assert register["sample_city_a"].ulg == "Sample City Corporation"
+    assert not any("City government" in i.message for i in issues)
+
+
+def test_a_filled_city_government_is_never_overwritten(settings):
+    path = settings.city_register
+    before = sha(path)
+    problem = register_edit.set_city_government(settings, CITY, "Another Name")
+    assert problem and "already has the city government name" in problem
+    assert sha(path) == before  # nothing written, no backup
+    assert not (path.parent / register_edit.HISTORY).exists()
+
+
+def test_set_city_government_reports_an_unknown_city_or_empty_name(settings):
+    _blank_the_city_government(settings)
+    assert "not on the register" in register_edit.set_city_government(settings, "Nowhere", "X")
+    assert register_edit.set_city_government(settings, CITY, "  ") == "There is no name to write."

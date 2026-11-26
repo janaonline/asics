@@ -352,5 +352,8 @@ def practice_services(settings, delay: float = 0.0):
     return Services(
         llm=FakeClaude(delay=delay),
         http=fake_http(),
-        settings=dataclasses.replace(settings, outputs_dir=outputs, city_register=register),
+        # Practice stays offline: no browser, no Wayback, whatever the category file says.
+        settings=dataclasses.replace(
+            settings, outputs_dir=outputs, city_register=register, staged_fetch=False
+        ),
     )

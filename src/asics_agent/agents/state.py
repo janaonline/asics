@@ -79,6 +79,9 @@ class AnswerTask(TypedDict, total=False):
     parastatal: Parastatal
     question: Question
     citation_sources: list[Source]  # the ONLY sources this answer may use
+    citation_all: list[
+        Source
+    ]  # every Citation Sheet row of the agency and the shared laws, usable or not
     # working state
     draft: dict
     # outputs

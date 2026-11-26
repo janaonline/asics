@@ -17,6 +17,7 @@ from langgraph.checkpoint.base import BaseCheckpointSaver
 from langgraph.graph import END, START, StateGraph
 from langgraph.types import Send, interrupt
 
+from asics_agent import source_requirements
 from asics_agent.agent_setup import MemoryScope, fingerprint
 from asics_agent.agents.common import (
     CandidateList,
@@ -35,6 +36,7 @@ from asics_agent.agents.final_qa import qa_sources
 from asics_agent.agents.initial_checks import build_initial_checks
 from asics_agent.agents.links_builder import build_links_agent
 from asics_agent.agents.parastatal_discovery import build_parastatal_discovery
+from asics_agent.agents.scan_step import collect_scans
 from asics_agent.agents.state import MasterState
 from asics_agent.categories import agent_for
 from asics_agent.cutoff import cutoff_text
@@ -154,7 +156,12 @@ def build_sources_graph(
                 "Planning Act (and its Rules), and [CROSSLAW] state laws naming these services "
                 "(service guarantee, RTI rules, procurement). Do not look for any one "
                 "parastatal's own Act, website or documents: each is researched separately.\n"
-                f"Questions these laws may help with:\n{question_digest(questions)}",
+                "Questions these laws may help with:\n"
+                + question_digest(
+                    questions,
+                    requirements=services.settings.required_sources,
+                    only=source_requirements.SHARED_ONLY,
+                ),
                 CandidateList,
                 scope=(scope := MemoryScope(city=run.city_name)),
                 known_urls=set(state.get("tool_urls", [])),
@@ -251,6 +258,7 @@ def build_sources_graph(
                     source_type=old.source_type,
                     useful_for=old.useful_for,
                     question_ids=old.question_ids,
+                    human_verified=old.human_verified,
                 ),
                 provenance=old.provenance,
                 allowed_urls=None,
@@ -265,11 +273,19 @@ def build_sources_graph(
                         "team_notes": old.team_notes,
                         "found_by": old.found_by,
                         "provenance": old.provenance,
+                        "human_verified": old.human_verified,
                     }
                 )
             )
 
         sources = dedupe_sources(state.get("sources", []) + kept + shared)
+        if not state.get("skip_research"):
+            # Scanned PDFs queued by the link check are read now, with every document of the run in
+            # view (legal texts and required sources first), within the scan budget.
+            parastatals = {p.id: p for p in state.get("parastatals", [])}
+            parastatals[ALL_PARASTATALS] = everyone
+            sources, scan_issues = collect_scans(services, run, sources, parastatals.get)
+            issues += scan_issues
         tool_urls = set(state.get("tool_urls", []))
         selected_ids = {q.id for q in selected_questions(state)}
         if not state.get("skip_research"):  # a checks-only run shows every bank problem

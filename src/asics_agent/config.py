@@ -58,9 +58,33 @@ class Settings:
     # no cut-off), and what to do with a source whose date is unknown: "confirm" or "block".
     law_cutoff: date | None = None
     undated_law_policy: str = "confirm"
+    # A score of 0 needs the sources the question requires (agent_setup/categories/<name>.md,
+    # `required_sources: on`; see source_requirements.py). Off for a category that does not say so.
+    required_sources: bool = False
+    human_verified_sources: bool = False  # see categories.py (agent_setup/categories/<name>.md)
+    crawl_max_pages: int = 0  # Step 1: menu links of an agency's home page to open (0 = no crawl)
+    crawl_incomplete_on_dead_link: str = "strict"  # or "lenient" (see links/crawl.py)
     outputs_root: Path | None = None  # the outputs folder before the category's subfolder
     # Searches/fetches per source-finding call (Step 1). None = the agent's own max_uses.
     find_sources_max_uses: int | None = None
+    # The staged fetch (links/fetch_chain.py): plain HTTP, then retries and address variants, then a
+    # Chromium render, then the Wayback Machine. Off = the plain check only (the earlier behaviour).
+    staged_fetch: bool = True
+    # An archived copy older than this is "stale archive" and is not used (days).
+    archive_max_age_days: int = 365
+    # A URL that failed the whole chain is not retried for this many hours (0 = always retry).
+    failure_cache_hours: float = 24.0
+    # The chain's time cap in one run, in minutes (0 = none); past it links get the plain check only.
+    fetch_time_cap_minutes: float = 20.0
+    # Live (non-archived) copies in the shared cache are reused for this many days (links/shared_cache.py);
+    # a scan-read copy never expires. 0 = no reuse.
+    fetch_cache_max_age_days: int = 30
+    # Scan reading (links/scan_reading.py): the most one run spends on Claude reading scanned PDFs (US$).
+    # 0 = off. A document that does not fit is skipped whole and listed in Needs Attention.
+    scan_reading_budget_usd: float = 3.0
+    # How long Step 1 waits for a scan-reading batch (minutes) before it finishes and collects the
+    # result on the next Step 1 or re-check.
+    scan_batch_wait_minutes: float = 20.0
 
 
 @lru_cache
@@ -90,10 +114,11 @@ def _base_settings() -> Settings:
         http_timeout=float(os.getenv("ASICS_HTTP_TIMEOUT", "30")),
         llm_call_timeout=float(os.getenv("ASICS_LLM_CALL_TIMEOUT", "900")),
         api_read_timeout=float(os.getenv("ASICS_API_READ_TIMEOUT", "300")),
+        # A browser-like agent that also names this tool, so a site's owner can tell who is reading.
         user_agent=os.getenv(
             "ASICS_USER_AGENT",
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
-            "(KHTML, like Gecko) Chrome/129.0 Safari/537.36",
+            "(KHTML, like Gecko) Chrome/129.0 Safari/537.36 ASICS-link-check/1.0",
         ),
         find_sources_max_uses=int(os.getenv("ASICS_FIND_SOURCES_MAX_USES") or 0) or None,
         max_evidence_chars=int(os.getenv("ASICS_MAX_EVIDENCE_CHARS", "60000")),

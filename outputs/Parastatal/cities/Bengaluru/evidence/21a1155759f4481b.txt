@@ -19,6 +19,8 @@ SOURCE URL: https://rtionline.karnataka.gov.in/index.php?lan=E
 
  RTI Online
 
+ [https://rtionline.karnataka.gov.in/RTIMIS/login/index.php] Officer Login
+
 ## 
 
  [https://rtionline.karnataka.gov.in/index.php?lan=E] Home
@@ -31,8 +33,7 @@ View Status
 
  [https://rtionline.karnataka.gov.in/request/status_history.php?lan=E] View History
  [https://rtionline.karnataka.gov.in/FAQ-RTI-Eng.pdf] FAQ
- [https://rtionline.karnataka.gov.in/RTIMIS/login/index.php] Login
- [https://rtionline.karnataka.gov.in/UMcitizen_Eng.pdf] User Manual
+ [https://rtionline.karnataka.gov.in/rti_dashboard.php?lan=E] Dashboard
  [https://rtionline.karnataka.gov.in/request/contact.php?lan=E] Contact Us
  [https://rtionline.karnataka.gov.in/NodalOfficerDetails.php?lan=E] Nodal officers
 RTI
@@ -40,9 +41,12 @@ RTI
  [https://rtionline.karnataka.gov.in/Rtiact-english.pdf] RTI Act
  [https://rtionline.karnataka.gov.in/Section4Documents.php?lan=E&sec=a] Section 4(1)(a)
  [https://rtionline.karnataka.gov.in/Section4Documents.php?lan=E&sec=b] Section 4(1)(b)
+ [https://rtionline.karnataka.gov.in/UMcitizen_Eng.pdf] User Manual
 
 ಕನ್ನಡ 
  English
+
+ 📢 Citizen Announcement: Assisted RTI services are now LIVE. Visit your nearest Bangalore One, Karnataka One, Grama One centre, or EDCS CSCs to submit RTI applications, file First Appeals, track status, and download PIO replies (nominal service charges apply).
 
  Click here for Officer Login
  Public information officers and First appellate authority details
@@ -59,24 +63,23 @@ RTI
 
  DISCLAIMER
 
- Centre for e-Governance of DPAR, e-Governance Department is the nodal agency for
-managing the RTI Online application portal. The respective departments are responsible for
-disposal of RTI applications received online through the portal.
+ Department of Citizen Services is the nodal agency for managing the RTI Online application
+portal. The respective Public Authorities which receives the RTI Online applications and first appeals
+are responsible for disposal of RTI applications and first appeals received online through the portal. 
 
  With reference to point 1, only the issues regarding RTI Online portal, may be addressed to
-the RTI Online PMU of CeG. Any complaints with regard to RTI applications, delays in
-disposal in stipulated time needs to be submitted to the departmental nodal officers of
-respective departments only. The department wise Nodal Officers list is available in the RTI
-Online portal.
+the RTI Online PMU of Department of Citizen Services. Any complaints with regard to RTI applications,
+delays in disposal in stipulated time needs to be submitted to the Nodal Officers of respective Public
+Authorities only. The Public Authority wise Nodal Officers list is available in the RTI Online portal. 
 
  The RTI ONLINE Application/Appeal does not have the provision to transfer an application
 online, under Section 6 (3) of the RTI Act to any Public Authority where-in RTI ONLINE
 facility is still not on-boarded in the portal.
 
- The RTI online application/appeal can be filed only for the public authorities which are listed
-in the public authority menu of the RTI online portal. If RTI application/appeal needs to be
+ The RTI online application/First appeal can be filed only for the public authorities which are
+listed in the Nodal Officers menu of the RTI online portal. If RTI application/First appeal needs to be
 submitted to the public authority which are not listed in this portal, it is recommended to file
-RTI Application in Physical Form (Hard Copy) to such Public Authorities.
+RTI Application in Physical Form (Hard Copy) to such Public Authorities. 
 
  Do not Upload UID/Aadhaar Card/Pan Card/Passport/Personal Data. 
 
@@ -86,8 +89,10 @@ RTI Application in Physical Form (Hard Copy) to such Public Authorities.
 
  Please share your suggestion/feedback on rtionline@karnataka.gov.in 
 
- [https://rtionline.karnataka.gov.in/index.php] Home| [https://karnataka.gov.in/] Govt. of Karnataka| [https://rtionline.karnataka.gov.in/FAQ-RTI-Eng.pdf] FAQ 
+ [https://rtionline.karnataka.gov.in/index.php] Home| [https://karnataka.gov.in/] Government Of Karnataka| [https://rtionline.karnataka.gov.in/FAQ-RTI-Eng.pdf] FAQ| [https://rtisecondappeal.karnataka.gov.in] Complaint & Second Appeal to KIC| [https://rtionline.karnataka.gov.in/feedback.php?lan=E] Feedback 
 
- Contents of the site owned and maintained by: Centre for e-Governance, Department of Personnel and Administrative Reforms (e-Governance), Government of Karnataka
+ Content Owned and Maintained by Department of Citizen Services, Government of Karnataka.
 
- Copyright © 2019. All rights reserved. Designed, Developed and Hosted by National Informatics Centre, New Delhi
+ Designed and Developed by National Informatics Centre (NIC), Karnataka. Hosted at Karnataka State Data Centre (KSDC).
+
+Copyright © 2026. All rights reserved.

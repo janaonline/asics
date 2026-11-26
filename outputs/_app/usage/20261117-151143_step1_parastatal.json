@@ -1,0 +1,60 @@
+{
+  "kind": "run",
+  "step": 1,
+  "category": "parastatal",
+  "category_title": "Parastatal",
+  "label": "Step 1: Sources \u00b7 Bhubaneswar",
+  "cities": [
+    "Bhubaneswar"
+  ],
+  "work": 3,
+  "unit": "agency",
+  "started": "2026-11-17T14:52:59",
+  "finished": "2026-11-17T15:11:43",
+  "group": null,
+  "total_usd": 2.146,
+  "by_model": {
+    "claude-sonnet-5-5": {
+      "calls": 47,
+      "input": 274,
+      "cache_read": 1030402,
+      "cache_write": 358516,
+      "output": 44305,
+      "searches": 60,
+      "fetches": 19,
+      "usd": 2.1459683999999997
+    }
+  },
+  "by_agent": {
+    "website-profiler \u00b7 claude-sonnet-5-5": {
+      "calls": 2,
+      "input": 40,
+      "cache_read": 301420,
+      "cache_write": 60887,
+      "output": 8394,
+      "searches": 10,
+      "fetches": 16,
+      "usd": 0.39652149999999997
+    },
+    "source-assessor \u00b7 claude-sonnet-5-5": {
+      "calls": 38,
+      "input": 152,
+      "cache_read": 121341,
+      "cache_write": 244954,
+      "output": 23736,
+      "searches": 0,
+      "fetches": 0,
+      "usd": 0.8743171999999999
+    },
+    "citation-builder \u00b7 claude-sonnet-5-5": {
+      "calls": 7,
+      "input": 82,
+      "cache_read": 607641,
+      "cache_write": 52675,
+      "output": 12175,
+      "searches": 50,
+      "fetches": 3,
+      "usd": 0.8751297
+    }
+  }
+}

@@ -58,9 +58,9 @@ def read(workbook: str):
 @pytest.fixture
 def refused(monkeypatch):
     """The link checker is refused by PLAN's website, as by a blocking government site."""
-    real = common.check_url
+    real = common.check_url_staged
 
-    def check(url, client, cache_dir, user_agent):
+    def check(url, client, cache_dir, user_agent, official_hosts=frozenset(), **kwargs):
         if url == PLAN:
             return AccessCheck(
                 url=url,
@@ -68,9 +68,9 @@ def refused(monkeypatch):
                 reasons=["HTTP 403: the website refused the automated check."],
                 checked_at="2026-10-12T10:00:00",
             )
-        return real(url, client, cache_dir, user_agent)
+        return real(url, client, cache_dir, user_agent, official_hosts, **kwargs)
 
-    monkeypatch.setattr(common, "check_url", check)
+    monkeypatch.setattr(common, "check_url_staged", check)
 
 
 @pytest.mark.parametrize(

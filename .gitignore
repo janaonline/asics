@@ -8,6 +8,9 @@ __pycache__/
 .ruff_cache/
 .langgraph_api/
 
+# shared fetch cache (links/shared_cache.py) and failure cache: rebuilt by the app, never tracked
+outputs/_cache/
+
 # scoring: practice runs and LibreOffice working files
 scoring/*/practice/
 scoring/*/.cache/

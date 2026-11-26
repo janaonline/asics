@@ -9,5 +9,9 @@ if ! command -v uv >/dev/null 2>&1; then
   read -n 1 -s -r -p "Press any key to close."
   exit 1
 fi
+if ! ls "$HOME/Library/Caches/ms-playwright" 2>/dev/null | grep -q chromium; then
+  echo "Note: the browser used for JavaScript pages is not installed. The app still works, but Step 1"
+  echo "will skip that stage. To install it once, run:  uv run playwright install chromium"
+fi
 echo "Starting the ASICS app. Your browser will open in a few seconds..."
 uv run --quiet streamlit run app.py

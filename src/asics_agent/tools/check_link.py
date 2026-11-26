@@ -2,7 +2,7 @@ from pathlib import Path
 
 from pydantic import BaseModel, Field
 
-from asics_agent.links.accessibility import check_url
+from asics_agent.links.fetch_chain import check_url_staged
 from asics_agent.tools.base import ClientTool, ToolContext, register
 
 
@@ -19,7 +19,7 @@ def run(ctx: ToolContext, url: str) -> str:
         )
     settings = ctx.services.settings
     cache = Path(ctx.run.cache_dir) if ctx.run else settings.outputs_dir / "evidence"
-    check = check_url(url, ctx.services.http, cache, settings.user_agent)
+    check = check_url_staged(url, ctx.services.http, cache, settings.user_agent, settings=settings)
     text = ""
     if check.content_path:
         text = Path(check.content_path).read_text(encoding="utf-8")[:3000]

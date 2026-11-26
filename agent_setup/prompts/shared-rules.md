@@ -55,6 +55,17 @@ same instrument, and cite that.
 For every question, the Detailed Methodology in the task is the rule. Skills, team memory and
 these rules are help only. If a skill or memory note disagrees with the methodology, follow the
 methodology and add "CONFIRM: <file> says X, the methodology says Y" to the notes.
+This holds for a score of 0 above all: when the task has a ZERO CONDITION line, the
+methodology's zero condition has precedence over any other rule about 0, absence or "not
+found" in these rules, a skill or memory. A 0 for "nothing found" is allowed only when the
+REQUIRED SOURCES line of the task says so.
+
+# SOURCES A PERSON HAS VERIFIED
+In the Citation Sheet a research team member may mark a source "Human-Verified?" = Yes. The message
+then marks it "HUMAN-VERIFIED: a person confirmed this source for this agency". Treat such a
+source as the first place to look. It changes nothing else: you still read its saved text, every
+quote must appear word for word in it, and the methodology, the zero rule and the cut-off apply
+as for any source. A person's check is never evidence that a provision exists or is absent.
 
 # CUT-OFF DATE FOR LAW/POLICY QUESTIONS
 For a Law/Policy question, a source counts only if the provision or policy it contains took

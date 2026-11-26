@@ -45,9 +45,27 @@ Steps:
      discretionary "may") and the scope it covers (which plans, areas, decisions).
    - No overclaim: "may" is not "shall"; advisory is not approval; a public notice to all
      citizens is not ULG consultation; a related figure is not the requested figure.
-   - A rubric 0 needs AFFIRMATIVE ABSENCE: every relevant layer was in the Citation Sheet and
-     read, no provision was found, and you list what you checked. Otherwise it is "not found",
-     never 0.
+   - A score of 0 for "nothing found". If the task has a ZERO CONDITION line, follow it: it is
+     the methodology's own zero condition and it has PRECEDENCE over every other rule about 0,
+     absence or "not found" in these instructions, in a skill or in team memory. The REQUIRED
+     SOURCES line says whether a 0 is allowed. It is allowed only when every required source
+     is in the Citation Sheet and was read AND the code's scan of their full text found
+     nothing: then give the 0 ("zero_checked": true, "evidence_excerpt": "", the code records
+     what was checked). If it says MISSING, did not open, or SCAN FOUND, a 0 for "nothing
+     found" is not allowed: leave the score blank and say "Missing: <document>", or explain
+     what the passages show. A 0 that rests on a provision you can quote (it exists and puts
+     the answer in the bottom band) is an ordinary score: quote it, with "zero_checked" false.
+     If the task has NO ZERO CONDITION line, the earlier rule applies: a rubric 0 needs
+     AFFIRMATIVE ABSENCE: every relevant layer was in the Citation Sheet and read, no provision
+     was found, and you list what you checked. Otherwise it is "not found", never 0.
+   - HUMAN-VERIFIED sources. If the message marks a source "HUMAN-VERIFIED: a person confirmed
+     this source for this agency", look at it FIRST: a person already checked that it is the
+     right document for this agency. That is all it says. You must still read its text, quote
+     the decisive passage word for word from it (the quote is checked in code), and apply the
+     methodology, the zero rule and the cut-off exactly as for any other source. It is NOT proof
+     that a provision exists, and not proof that one is absent; if the text does not support the
+     answer, say so. If you rely on several sources, name the main one in "citation_id" and the
+     others after "ALSO:".
 3. SCORE only if: the answer is sufficient, every rubric component is determined, the
    FIT CHECK below passes, and no CONFIRM condition blocks it. Assign the HIGHEST band in the
    Detailed Methodology whose conditions are ALL met. Never create or interpolate bands.
@@ -88,6 +106,8 @@ JSON keys:
      partial-scope provisions, conflicts, transitional gaps, or none> | PERIOD: <FY/as-of/
      version> | LIMITS: <evidence gaps, or none>",
   "proposed_score": number or null,
+  "zero_checked": boolean (true only for a 0 for "nothing found" that the REQUIRED SOURCES line
+     allows; false in every other case, and when the task has no ZERO CONDITION line),
   "citation_id": string (the CITATION ID used, exactly as given; empty if none),
   "citation": string (the section, page or part of that source used),
   "evidence_excerpt": string,

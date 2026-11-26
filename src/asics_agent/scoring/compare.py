@@ -21,8 +21,9 @@ from openpyxl import Workbook, load_workbook
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
+from asics_agent import source_requirements
 from asics_agent.agents.initial_checks import _SCALE
-from asics_agent.models import Question
+from asics_agent.models import ALL_PARASTATALS, Question
 from asics_agent.parastatal_types import ULG_TYPE, canonical_type, known_type
 from asics_agent.scoring.ai import same_question
 from asics_agent.scoring.human import SEPARATOR, city_of
@@ -105,6 +106,8 @@ class Step2Row:
     status: str = ""
     unit_type: str = ""
     known_unit: bool = True
+    notes: str = ""  # Step 2's Notes (it says "Missing: <document>" when a 0 was not allowed)
+    citation_id: str = ""  # the Citation Sheet row the answer rests on
 
 
 @dataclass
@@ -162,6 +165,8 @@ def read_step2(
             status=_text(get(row, "Status")),
             unit_type=_text(get(row, "Parastatal Type")),
             known_unit=unit is not None,
+            notes=_text(get(row, "Notes")),
+            citation_id=_text(get(row, "Citation ID")),
         )
     return out
 
@@ -249,6 +254,10 @@ class CityInputs:
     notes: list[str] = field(default_factory=list)
     unregistered: set = field(default_factory=set)  # unit codes the register lacks
     city_in_register: bool = True
+    # For the "AI zeros" sheet: the Citation Sheet as it is now (Parastatal only)
+    parastatals: dict = field(default_factory=dict)  # unit id -> Parastatal
+    citations: list = field(default_factory=list)  # every Citation Sheet row, usable or not
+    rule: object = None  # the Law/Policy cut-off rule
 
 
 @dataclass
@@ -286,6 +295,22 @@ class CompareRow:
     scorer: str = ""
     human_file: str = ""
     human_comments: str = ""
+    # Human 0, AI blank because a required source is missing: "candidate 0: missing <document>"
+    candidate_zero: str = ""
+    # Where the AI's evidence came from: "Human-verified" when the rows it cited include a row a
+    # person marked Human-Verified?, else "App-found". And whether the agency had a usable
+    # human-verified row tagged for the question (so coverage can be read fairly: a row the AI left
+    # blank cites nothing, so its origin is always "App-found").
+    source_origin: str = ""
+    hv_available: str = ""
+    # When the AI wrote a 0 (ai_score == 0): how it got there and what the required-source gate says
+    zero_route: str = ""  # Step 2 ZERO-CHECKED | Step 3 typed | Step 3 calculated | Step 2 proposal
+    zero_gate: str = ""  # allowed | blocked by the scan | required source missing | ...
+    zero_documents: str = ""  # each required document and whether it was present
+    zero_copy_types: str = (
+        ""  # how each of those documents was obtained (plain HTTP, archived, ...)
+    )
+    zero_scan: str = ""  # the scan's result
     notes: list[str] = field(default_factory=list)
 
 
@@ -324,6 +349,72 @@ def code_for_raw(raw: str, info: CityInputs) -> tuple[str | None, bool]:
     return BankContext(
         info.bank, info.retired, info.raw_to_code, info.old_raw_to_code
     ).code_for_raw(raw)
+
+
+def _zero_route(row: "CompareRow", s2, s3) -> str:
+    """How the AI's 0 was written: by the gate in Step 2 (ZERO-CHECKED), as a typed score in Step 3,
+    as a score the template calculated from the inputs in Step 3, or as a quote-backed 0 in Step 2."""
+    if s2 is not None and source_requirements.ZERO_CHECKED in s2.notes:
+        return "Step 2 ZERO-CHECKED"
+    if row.ai_score_from == "Step 3":
+        return "Step 3 calculated" if s3 is not None and s3.inputs else "Step 3 typed"
+    return "Step 2 proposal (a 0 backed by a quote)"
+
+
+_CITED = re.compile(r"[A-Z][A-Z0-9]*-\d+")
+_ALSO = re.compile(
+    r"(?:ALSO|Other sources used):\s*(.+?)(?=\s*(?:CONFIRM:|SCORE-BLANK:|RTI-TARGET:|SCALE-MISMATCH|"
+    r"Reviewer to capture)|$)",
+    re.S,
+)
+
+
+def _origin(row: "CompareRow", s2, s3, info: "CityInputs") -> None:
+    """Fill source_origin and hv_available from the Citation Sheet's Human-Verified? column."""
+    row.source_origin = "App-found"
+    flagged = {c.citation_id: c for c in info.citations if c.human_verified}
+    if not flagged:
+        row.hv_available = "No"
+        return
+    cited = {s2.citation_id if s2 is not None else "", s3.citation_id if s3 is not None else ""}
+    for found in _ALSO.findall(s2.notes if s2 is not None else ""):
+        cited |= set(_CITED.findall(found))
+    if cited & set(flagged):
+        row.source_origin = "Human-verified"
+    code = source_requirements.code_key(row.code)
+    row.hv_available = (
+        "Yes"
+        if any(
+            c.parastatal_id in (row.unit, ALL_PARASTATALS)
+            and code in {source_requirements.code_key(q) for q in c.question_ids}
+            and source_requirements._usable(c)
+            for c in flagged.values()
+        )
+        else "No"
+    )
+
+
+def _audit_zero(row: "CompareRow", s2, s3, info: "CityInputs") -> None:
+    """Fill the zero_* fields of a row where the AI wrote a 0, from the Citation Sheet as it is now."""
+    row.zero_route = _zero_route(row, s2, s3)
+    question = info.bank.get(row.code)
+    if question is not None and question.is_rollup:
+        row.zero_gate = "roll-up question: the sum of its parts, which are listed on their own rows"
+        return
+    parastatal = info.parastatals.get(row.unit)
+    if parastatal is None or not info.citations:
+        row.zero_gate = "not checked: no Citation Sheet for this unit (or the rule is off)"
+        return
+    rows = [c for c in info.citations if c.parastatal_id in (row.unit, ALL_PARASTATALS)]
+    audit = source_requirements.audit_zero(
+        source_requirements.required_for(row.code), parastatal, rows, rule=info.rule
+    )
+    row.zero_gate, row.zero_documents, row.zero_scan = (
+        audit["gate"],
+        audit["documents"],
+        audit["scan"],
+    )
+    row.zero_copy_types = audit.get("copies", "")
 
 
 def compare_city(info: CityInputs, templates: list[TemplateRead]) -> Comparison:
@@ -496,6 +587,15 @@ def compare_city(info: CityInputs, templates: list[TemplateRead]) -> Comparison:
                 row.status = "only AI"
             else:
                 row.status = "neither"
+        if row.status == "only human" and row.human_score == 0 and s2:
+            # The AI left it blank because the sources the question requires were not all in the
+            # Citation Sheet: say which, so the team can add them and run Step 1 again
+            if m := re.search(r"Missing: (.+?)\.(?:\s|$)", s2.notes):
+                row.candidate_zero = f"candidate 0: missing {m.group(1).strip()}"
+                row.notes.append(row.candidate_zero)
+        _origin(row, s2, s3, info)
+        if row.ai_score == 0:
+            _audit_zero(row, s2, s3, info)
         if row.status == "both":
             row.difference = round(row.ai_score - row.human_score, 6)
             row.agrees = "Yes" if abs(row.ai_score - row.human_score) < SAME_SCORE else "No"
@@ -515,8 +615,35 @@ def _split_code(code: str):
     return (m.group(1), int(m.group(2)), m.group(3)) if m else (code, 0, "")
 
 
+def coverage(rows: list[CompareRow]) -> tuple[int, int]:
+    """(rows a person scored, how many of those the AI scored too). This is how much of the
+    work the AI reaches; it says nothing about whether it scored the same."""
+    human = [r for r in rows if r.status in ("both", "only human")]
+    return len(human), sum(r.status == "both" for r in human)
+
+
+def coverage_text(rows: list[CompareRow]) -> str:
+    human, both = coverage(rows)
+    return f"{both} of {human} ({100 * both / human:.0f}%)" if human else "no human-scored rows"
+
+
+def agreement_text(rows: list[CompareRow], min_rows: int = MIN_ROWS) -> str:
+    """How often the AI and people gave the same score, where BOTH scored. Kept apart from
+    coverage: a high agreement on a few rows says little, and low coverage says nothing about
+    agreement."""
+    both = [r for r in rows if r.status == "both"]
+    agree = sum(r.agrees == "Yes" for r in both)
+    if not both:
+        return "no row is scored by both"
+    if len(both) < min_rows:
+        return f"{agree} of {len(both)} agree (a percentage shows from {min_rows} compared rows)"
+    return f"{agree} of {len(both)} ({100 * agree / len(both):.0f}%)"
+
+
 def summarise(rows: list[CompareRow], key, min_rows: int) -> list[list]:
-    """[group, compared, agree, % agree, only human, only AI]: the % shows only from min_rows."""
+    """[group, human scored, coverage, compared, agree, % agree, only human, only AI]: coverage
+    (AI scored of human scored) and agreement (when both scored) are separate columns; the
+    agreement % shows only from min_rows."""
     groups: dict[str, list[CompareRow]] = {}
     for r in rows:
         groups.setdefault(key(r) or "(blank)", []).append(r)
@@ -532,6 +659,8 @@ def summarise(rows: list[CompareRow], key, min_rows: int) -> list[list]:
         out.append(
             [
                 name,
+                coverage(groups[name])[0],
+                coverage_text(groups[name]),
                 len(both),
                 agree,
                 pct,
@@ -576,7 +705,47 @@ COLUMNS = [
     ("Scorer", "scorer"),
     ("Human file", "human_file"),
     ("Human comments", "human_comments"),
+    ("Candidate 0 (AI blank: a required source is missing)", "candidate_zero"),
+    ("Source origin", "source_origin"),
+    ("Human-verified source available?", "hv_available"),
     ("Notes", "notes"),
+]
+
+
+ORIGIN_EXTRA = ["AI zeros", "False zeros (AI 0, human above 0)"]
+
+
+def summarise_with_zeros(rows: list[CompareRow], key, min_rows: int) -> list[list]:
+    """summarise(), plus for each group how many zeros the AI wrote and how many were false zeros
+    (AI 0, a person gave points)."""
+    groups: dict[str, list[CompareRow]] = {}
+    for r in rows:
+        groups.setdefault(key(r) or "(blank)", []).append(r)
+    out = []
+    for line in summarise(rows, key, min_rows):
+        mine = groups[line[0]]
+        zeros = [r for r in mine if r.ai_score == 0]
+        false = [r for r in zeros if r.human_score is not None and r.human_score > 0]
+        out.append([*line, len(zeros), len(false)])
+    return out
+
+
+ZERO_COLUMNS = [
+    "City",
+    "Parastatal",
+    "Question",
+    "Question text",
+    "Route",
+    "Gate result (today)",
+    "Required documents (present or not)",
+    "Copy types that supported the zero",
+    "Scan result",
+    "AI score from",
+    "Human score",
+    "Agree?",
+    "False zero? (AI 0, human above 0)",
+    "Source origin",
+    "Human-verified source available?",
 ]
 
 
@@ -609,7 +778,81 @@ def write_comparison(
     ws.append(["Rows by status", "Rows"])
     for s, n in by_status.items():
         ws.append([s, n])
-    header = ["", "Compared (both scored)", "Agree", "% agree", "Only human", "Only AI"]
+    ws.append(
+        [
+            "Coverage (AI scored of human scored)",
+            coverage_text(comp.rows),
+            "Of the rows a person scored, how many the AI scored too. It says nothing about "
+            "whether the scores are the same.",
+        ]
+    )
+    ws.append(
+        [
+            "Agreement when both scored",
+            agreement_text(comp.rows, min_rows),
+            "Of the rows scored by both, how many have the same score.",
+        ]
+    )
+    candidates = [r for r in comp.rows if r.candidate_zero]
+    ws.append(
+        [
+            "Candidate 0 (human 0, AI blank, a required source is missing)",
+            len(candidates),
+            "A person scored 0 and the AI left the score blank because the sources the question "
+            "requires were not all in the Citation Sheet. Add them and run Step 1 and Step 2 again.",
+        ]
+    )
+    zeros = [r for r in comp.rows if r.ai_score == 0]
+    false_zeros = [r for r in zeros if r.human_score is not None and r.human_score > 0]
+    ws.append(
+        [
+            "AI zeros (rows where the AI wrote a 0)",
+            len(zeros),
+            "Listed on the AI zeros sheet, with the route each took and what the required-source "
+            "gate says.",
+        ]
+    )
+    for route in sorted({r.zero_route for r in zeros}):
+        ws.append([f"   {route}", sum(r.zero_route == route for r in zeros)])
+    ws.append(
+        [
+            "False zeros (AI 0, human above 0)",
+            len(false_zeros),
+            "The AI wrote a 0 where a person gave points: the costly mistake to watch.",
+        ]
+    )
+    ws.append(
+        [
+            "AI 0 and human 0",
+            sum(r.human_score == 0 for r in zeros),
+            "The AI and a person both gave 0.",
+        ]
+    )
+    ws.append(
+        [
+            "AI 0, no human score",
+            sum(r.human_score is None for r in zeros),
+            "Nothing to compare the AI's 0 with.",
+        ]
+    )
+    for document, n in sorted(
+        {
+            d: sum(r.candidate_zero == d for r in candidates)
+            for d in {r.candidate_zero for r in candidates}
+        }.items(),
+        key=lambda item: -item[1],
+    ):
+        ws.append([f"   {document}", n])
+    header = [
+        "",
+        "Human scored",
+        "Coverage (AI scored of them)",
+        "Compared (both scored)",
+        "Agree",
+        "% agree",
+        "Only human",
+        "Only AI",
+    ]
     for title, key in (
         ("By section", lambda r: r.section),
         ("By AI class", lambda r: r.ai_class or "(no AI class)"),
@@ -620,6 +863,21 @@ def write_comparison(
         for cell in ws[ws.max_row]:
             cell.font, cell.fill = Font(bold=True), _HEAD
         for line in summarise(comp.rows, key, min_rows):
+            ws.append(line)
+    # Coverage, agreement and zeros for each source origin: the AI's evidence from a source a person
+    # verified against one the app found, and where a human-verified source was available or not
+    for title, key in (
+        ("By source origin (the rows the AI cited)", lambda r: r.source_origin or "App-found"),
+        (
+            "By human-verified source available for the question",
+            lambda r: f"Available: {r.hv_available or 'No'}",
+        ),
+    ):
+        ws.append([])
+        ws.append([title, *header[1:], *ORIGIN_EXTRA])
+        for cell in ws[ws.max_row]:
+            cell.font, cell.fill = Font(bold=True), _HEAD
+        for line in summarise_with_zeros(comp.rows, key, min_rows):
             ws.append(line)
     both = sorted(
         (r for r in comp.rows if r.status == "both" and r.agrees == "No"),
@@ -635,6 +893,53 @@ def write_comparison(
     ws.column_dimensions["B"].width = 26
     for c in "CDEF":
         ws.column_dimensions[c].width = 18
+
+    zero_sheet = wb.create_sheet("AI zeros", 1)
+    zero_sheet.append(ZERO_COLUMNS)
+    for cell in zero_sheet[1]:
+        cell.font, cell.fill = Font(bold=True), _HEAD
+    for r in sorted(
+        zeros,
+        key=lambda r: (
+            r not in false_zeros,  # false zeros first
+            r.unit,
+            _split_code(r.code),
+        ),
+    ):
+        agree = (
+            "no human score"
+            if r.human_score is None
+            else "Yes"
+            if r.human_score == 0
+            else "No: false zero"
+        )
+        zero_sheet.append(
+            [
+                comp.city,
+                r.unit,
+                r.code,
+                r.question,
+                r.zero_route,
+                r.zero_gate,
+                r.zero_documents,
+                r.zero_copy_types,
+                r.zero_scan,
+                r.ai_score_from,
+                r.human_score,
+                agree,
+                "Yes" if r in false_zeros else "",
+                r.source_origin,
+                r.hv_available,
+            ]
+        )
+    for i, width in enumerate(
+        (14, 12, 10, 50, 26, 26, 70, 40, 70, 16, 12, 16, 12, 16, 16), start=1
+    ):
+        zero_sheet.column_dimensions[get_column_letter(i)].width = width
+    zero_sheet.freeze_panes = "D2"
+    for row in zero_sheet.iter_rows(min_row=2):
+        for cell in row:
+            cell.alignment = Alignment(wrap_text=True, vertical="top")
 
     cmp = wb.create_sheet("Compare")
     cmp.append([name for name, _ in COLUMNS])

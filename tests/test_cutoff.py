@@ -186,7 +186,13 @@ def test_the_new_columns_round_trip_and_an_old_sheet_still_loads(services, run_s
     )
     ws = load_workbook(path)["Citation Sheet"]
     header = [c.value for c in ws[1]]
-    assert header[-2:] == ["Effective / As-of Date", "Cut-off Check"]
+    # the two cut-off columns, Human-Verified?, then Copy Type (always the last column)
+    assert header[-4:] == [
+        "Effective / As-of Date",
+        "Cut-off Check",
+        "Human-Verified?",
+        "Copy Type",
+    ]
     rows = [
         dict(zip(header, [c.value for c in r], strict=False))
         for r in ws.iter_rows(min_row=2)
@@ -201,7 +207,9 @@ def test_the_new_columns_round_trip_and_an_old_sheet_still_loads(services, run_s
     # remove the two columns: a sheet from before this work loads, with the fields empty
     wb = load_workbook(path)
     ws = wb["Citation Sheet"]
-    ws.delete_cols(len(header) - 1, 2)
+    ws.delete_cols(
+        len(header) - 3, 2
+    )  # the Effective and Cut-off columns (Human-Verified? and Copy Type stay)
     old = tmp_path / path.name
     wb.save(old)
     _, citations, issues = read_sources_workbook(old, tmp_path / "evidence")
@@ -209,11 +217,14 @@ def test_the_new_columns_round_trip_and_an_old_sheet_still_loads(services, run_s
     assert not [i for i in issues if i.severity == "error"]
 
 
-@pytest.mark.skipif(
-    not (REAL / "Bengaluru" / "ASICS_Bengaluru_Sources.xlsx").exists(), reason="no real sheet"
-)
+# The live Sources workbook is rewritten by every Step 1 run (it now has the date columns), so this
+# test uses the saved copy of the last OLD-format sheet (17 columns, 240 rows) from history/.
+OLD_SHEET = REAL / "Bengaluru" / "history" / "ASICS_Bengaluru_Sources_20261116-092417.xlsx"
+
+
+@pytest.mark.skipif(not OLD_SHEET.exists(), reason="the saved old sheet is not here")
 def test_the_real_old_sheet_loads_and_the_converter_never_touches_it(tmp_path):
-    original = REAL / "Bengaluru" / "ASICS_Bengaluru_Sources.xlsx"
+    original = OLD_SHEET
     before = hashlib.sha256(original.read_bytes()).hexdigest()
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")

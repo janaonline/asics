@@ -11,6 +11,12 @@ STATUS_HELP: dict[str, tuple[str, str]] = {
         "contains the quote.",
         "Open the link, find the quote, and confirm the answer and score.",
     ),
+    "Answered — Human-Verified Source": (
+        "Answered from a Citation Sheet source that a person had already marked Human-Verified? "
+        "= Yes (see Citation ID), that the app also opened, and that contains the quote. A person's "
+        "check does not replace the quote.",
+        "Open the link, find the quote, and confirm the answer and score, as for any source.",
+    ),
     "Partially Answered": (
         "The evidence answers only part of the question.",
         "Read the Notes to see what is missing; look for more evidence if needed.",

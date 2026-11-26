@@ -64,6 +64,26 @@ class Category:
     # Law/Policy cut-off (ISO date, "" = none) and how to treat a source with no date (cutoff.py)
     law_cutoff: str = ""
     undated_law_policy: str = "confirm"
+    # "on": a score of 0 needs the sources the question requires (source_requirements.py). Off by
+    # default, so a category without this line (ULG) works as before.
+    required_sources: bool = False
+    # "on": a source a person has verified (the Citation Sheet's "Human-Verified?" column) is marked
+    # for the AI, pinned among the sources it reads, and shows in the answer status and the compare
+    # split. The column itself is always read, kept and written, whatever this says.
+    human_verified_sources: bool = False
+    # Step 1 opens up to this many menu links of an agency's home page (links/crawl.py); 0 = off.
+    crawl_max_pages: int = 0
+    # "strict": any menu link that did not open makes the crawl incomplete. "lenient": a dead link
+    # whose text and address name no topic word is ignored (links/crawl.py).
+    crawl_incomplete_on_dead_link: str = "strict"
+    # The staged fetch (links/fetch_chain.py) and its limits; see config.Settings.
+    staged_fetch: bool = True
+    archive_max_age_days: int = 365
+    failure_cache_hours: float = 24.0
+    fetch_time_cap_minutes: float = 20.0
+    fetch_cache_max_age_days: int = 30
+    scan_reading_budget_usd: float = 3.0
+    scan_batch_wait_minutes: float = 20.0
     shared_rules: str = "shared-rules"
     agents: dict = field(default_factory=dict)  # role -> agent name
     description: str = ""
@@ -75,6 +95,27 @@ class Category:
 
     def agent(self, role: str) -> str:
         return self.agents.get(role) or ROLES[role][1]
+
+
+def _switch(value) -> bool:
+    """A yes/no setting written as on/off, yes/no or true/false (YAML reads on and off as booleans)."""
+    return str(value).strip().lower() in ("on", "true", "yes", "1")
+
+
+def _count(value) -> int:
+    """A whole number setting, 0 when missing or not a number."""
+    try:
+        return max(int(value), 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def _number(value, default: float) -> float:
+    """A number setting (hours, minutes, days), `default` when missing or not a number; never negative."""
+    try:
+        return max(float(value), 0.0)
+    except (TypeError, ValueError):
+        return default
 
 
 def _parse(path: Path) -> Category:
@@ -100,6 +141,19 @@ def _parse(path: Path) -> Category:
         scoring_templates=tuple(str(t) for t in (meta.get("scoring_templates") or [])),
         law_cutoff=str(meta.get("law_cutoff") or ""),
         undated_law_policy=str(meta.get("undated_law_policy") or "confirm").strip().lower(),
+        required_sources=_switch(meta.get("required_sources")),
+        human_verified_sources=_switch(meta.get("human_verified_sources")),
+        crawl_max_pages=_count(meta.get("crawl_max_pages")),
+        crawl_incomplete_on_dead_link=str(meta.get("crawl_incomplete_on_dead_link") or "strict")
+        .strip()
+        .lower(),
+        staged_fetch=_switch(meta.get("staged_fetch", "on")),
+        archive_max_age_days=int(_number(meta.get("archive_max_age_days"), 365)),
+        failure_cache_hours=_number(meta.get("failure_cache_hours"), 24.0),
+        fetch_time_cap_minutes=_number(meta.get("fetch_time_cap_minutes"), 20.0),
+        fetch_cache_max_age_days=int(_number(meta.get("fetch_cache_max_age_days"), 30)),
+        scan_reading_budget_usd=_number(meta.get("scan_reading_budget_usd"), 3.0),
+        scan_batch_wait_minutes=_number(meta.get("scan_batch_wait_minutes"), 20.0),
         shared_rules=str(meta.get("shared_rules") or "shared-rules"),
         agents=agents,
         description=text[match.end() :].strip() if match else text.strip(),
@@ -123,6 +177,10 @@ def load_categories(root: Path) -> tuple[dict[str, Category], list[Issue]]:
             issues.append(_issue(f"{where}: law_cutoff must be a date like 2026-08-31."))
         if v.undated_law_policy not in ("confirm", "block"):
             issues.append(_issue(f"{where}: undated_law_policy must be confirm or block."))
+        if v.crawl_incomplete_on_dead_link not in ("strict", "lenient"):
+            issues.append(
+                _issue(f"{where}: crawl_incomplete_on_dead_link must be strict or lenient.")
+            )
         if v.unit not in UNITS:
             issues.append(_issue(f"{where}: unit must be one of {', '.join(UNITS)}."))
         for role in v.agents:
@@ -198,6 +256,19 @@ def category_settings(settings, name: str):
         undated_law_policy=v.undated_law_policy
         if v.undated_law_policy in ("confirm", "block")
         else "confirm",
+        required_sources=v.required_sources,
+        human_verified_sources=v.human_verified_sources,
+        crawl_max_pages=v.crawl_max_pages,
+        crawl_incomplete_on_dead_link=v.crawl_incomplete_on_dead_link
+        if v.crawl_incomplete_on_dead_link in ("strict", "lenient")
+        else "strict",
+        staged_fetch=v.staged_fetch,
+        archive_max_age_days=v.archive_max_age_days,
+        failure_cache_hours=v.failure_cache_hours,
+        fetch_time_cap_minutes=v.fetch_time_cap_minutes,
+        fetch_cache_max_age_days=v.fetch_cache_max_age_days,
+        scan_reading_budget_usd=v.scan_reading_budget_usd,
+        scan_batch_wait_minutes=v.scan_batch_wait_minutes,
     )
 
 

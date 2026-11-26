@@ -14,7 +14,7 @@ from pathlib import Path
 import httpx
 from openpyxl import load_workbook
 
-from asics_agent.links.accessibility import check_url
+from asics_agent.links.fetch_chain import begin_run, check_url_staged
 from asics_agent.links.manual import MANUAL_DIR, saved_copy
 from asics_agent.links.text import _squash
 from asics_agent.models import AccessCheck
@@ -46,7 +46,11 @@ def _opens(check: AccessCheck) -> tuple[str, str]:
     return f"No: {reason}", "red"
 
 
-def recheck_workbook(path: Path, http: httpx.Client, user_agent: str) -> tuple[Path, Counter]:
+def recheck_workbook(
+    path: Path, http: httpx.Client, user_agent: str, settings=None
+) -> tuple[Path, Counter]:
+    """`settings` turns on the staged fetch (browser, archive); without it only the plain check runs."""
+    begin_run()
     wb = load_workbook(path)
     today = date.today().isoformat()
     results: dict[str, AccessCheck] = {}
@@ -56,7 +60,7 @@ def recheck_workbook(path: Path, http: httpx.Client, user_agent: str) -> tuple[P
 
         def check(url: str) -> AccessCheck:
             if url not in results:
-                results[url] = check_url(url, http, Path(tmp), user_agent)
+                results[url] = check_url_staged(url, http, Path(tmp), user_agent, settings=settings)
             return results[url]
 
         def text_of(result: AccessCheck) -> str:

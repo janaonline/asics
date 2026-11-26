@@ -64,6 +64,8 @@ def step2_file(path, rows):
             "Rubric Band",
             "Citation URL",
             "Where to Find It",
+            "Notes",
+            "Citation ID",
         ]
     )
     for r in rows:
@@ -249,7 +251,7 @@ def test_the_summary_hides_percentages_below_the_minimum(tmp_path, bank):
     for minimum, shown in ((20, False), (1, True)):
         path = cmp.write_comparison(comp, tmp_path / f"c{minimum}.xlsx", min_rows=minimum)
         wb = load_workbook(path)
-        assert wb.sheetnames == ["Summary", "Compare", "Review list"]
+        assert wb.sheetnames == ["Summary", "AI zeros", "Compare", "Review list"]
         cells = [
             str(c.value) for row in wb["Summary"].iter_rows() for c in row if c.value is not None
         ]
@@ -278,3 +280,233 @@ def test_urls_bands_and_inputs():
         cmp._inputs_overlap({"Own revenue": 5, "x": 1}, {"own revenue": 5}) == "1 same, 0 different"
     )
     assert cmp._inputs_overlap({"a": 1}, {"b": 1}) == "no inputs with the same name"
+
+
+def _rows(*statuses_and_agreement):
+    return [
+        cmp.CompareRow(
+            city="Testville",
+            unit="BWSSB",
+            unit_type="water_supply_entity",
+            code=f"UPD {i}",
+            section="UPD",
+            status=status,
+            agrees=agrees,
+        )
+        for i, (status, agrees) in enumerate(statuses_and_agreement, start=1)
+    ]
+
+
+def test_coverage_and_agreement_are_two_separate_numbers():
+    # 4 rows a person scored; the AI scored 2 of them, and one of those 2 agrees. Plus a row only
+    # the AI scored and one neither scored: neither counts towards coverage.
+    rows = _rows(
+        ("both", "Yes"),
+        ("both", "No"),
+        ("only human", ""),
+        ("only human", ""),
+        ("only AI", ""),
+        ("neither", ""),
+    )
+    assert cmp.coverage(rows) == (4, 2)
+    assert cmp.coverage_text(rows) == "2 of 4 (50%)"
+    assert cmp.agreement_text(rows, min_rows=20) == (
+        "1 of 2 agree (a percentage shows from 20 compared rows)"
+    )
+    assert cmp.agreement_text(rows, min_rows=2) == "1 of 2 (50%)"
+    assert cmp.coverage_text([]) == "no human-scored rows"
+    assert cmp.agreement_text(_rows(("only human", ""))) == "no row is scored by both"
+
+
+def test_the_summary_shows_coverage_and_agreement_on_separate_lines(tmp_path, bank):
+    a = next(c for c, q in bank.items() if q.tag == "SQ" and q.max_score)
+    comp = build(
+        tmp_path,
+        bank,
+        human_rows=[human(a, "BWSSB", 5.0)],
+        s2_rows=[],
+        s3_rows=[[a.replace(" ", ""), f"{CITY} – BWSSB", "", 5, "", ""]],
+    )
+    path = cmp.write_comparison(comp, tmp_path / "c.xlsx", min_rows=1)
+    rows = {
+        row[0].value: row[1].value
+        for row in load_workbook(path)["Summary"].iter_rows()
+        if row[0].value
+    }
+    assert rows["Coverage (AI scored of human scored)"] == "1 of 1 (100%)"
+    assert rows["Agreement when both scored"] == "1 of 1 (100%)"
+    sections = [
+        r
+        for r in load_workbook(path)["Summary"].iter_rows(values_only=True)
+        if r[0] == "By section"
+    ]
+    assert sections[0][1:4] == (
+        "Human scored",
+        "Coverage (AI scored of them)",
+        "Compared (both scored)",
+    )
+
+
+def test_a_human_zero_the_ai_left_blank_for_a_missing_source_is_a_candidate_zero(tmp_path, bank):
+    a, b, c = [c for c, q in bank.items() if q.tag == "SQ" and q.max_score][:3]
+
+    def blank(code, note):
+        return [
+            "Water Board",
+            bank[code].raw_id,
+            bank[code].text,
+            "Insufficient Evidence",
+            "",
+            None,
+            "Needs review",
+            "",
+            "",
+            "",
+            "",
+            note,
+        ]
+
+    comp = build(
+        tmp_path,
+        bank,
+        human_rows=[human(a, "BWSSB", 0.0), human(b, "BWSSB", 0.0), human(c, "BWSSB", 5.0)],
+        s2_rows=[
+            blank(
+                a,
+                "Zero not allowed: Missing: parent Act [ACT]; Rules made under the Act [RULES]. More.",
+            ),
+            blank(b, "Zero not allowed: Blocked: relevant text found in BWSSB-02."),
+            blank(c, "Zero not allowed: Missing: parent Act [ACT]."),
+        ],
+        s3_rows=[],
+    )
+    rows = by_key(comp)
+    first = rows[("BWSSB", a)]
+    assert first.status == "only human"
+    assert first.candidate_zero == (
+        "candidate 0: missing parent Act [ACT]; Rules made under the Act [RULES]"
+    )
+    assert first.candidate_zero in first.notes
+    assert rows[("BWSSB", b)].candidate_zero == ""  # blocked by the scan: not a missing source
+    assert rows[("BWSSB", c)].candidate_zero == ""  # the human score was not 0
+
+    path = cmp.write_comparison(comp, tmp_path / "c.xlsx", min_rows=1)
+    summary = {
+        row[0].value.strip(): row[1].value
+        for row in load_workbook(path)["Summary"].iter_rows()
+        if row[0].value
+    }
+    assert summary["Candidate 0 (human 0, AI blank, a required source is missing)"] == 1
+    assert summary["candidate 0: missing parent Act [ACT]; Rules made under the Act [RULES]"] == 1
+    header = [c.value for c in load_workbook(path)["Compare"][1]]
+    assert "Candidate 0 (AI blank: a required source is missing)" in header
+
+
+def test_the_ai_zeros_sheet_lists_every_zero_with_its_route_documents_and_scan(tmp_path, bank):
+    from asics_agent.models import Parastatal, Source
+
+    water = Parastatal(
+        id="BWSSB",
+        name="Water Board",
+        type="water_supply_entity",
+        governing_act="The Water Act, 1970 (State Act 3 of 1970)",
+    )
+    page = tmp_path / "act.txt"
+    page.write_text("Section 1. Short title.\n\nSection 2. Definitions.")
+    act = Source(
+        citation_id="BWSSB-01",
+        parastatal_id="BWSSB",
+        title="The Water Act",
+        url="https://x.gov.in/act",
+        useful_for="[ACT] the Act",
+        verification_status="Verified",
+        use_for_answers=True,
+        content_path=str(page),
+        copy_type="browser-rendered",
+    )
+    a, b = "UPD 1a", "UPD 2a"
+    comp = build(
+        tmp_path,
+        bank,
+        human_rows=[human(a, "BWSSB", 5.0), human(b, "BWSSB", 0.0)],
+        s2_rows=[
+            [
+                "Water Board",
+                bank[a].raw_id,
+                bank[a].text,
+                "Answered — Verified Source",
+                "x",
+                0,
+                "A2",
+                "Medium",
+                "0",
+                "",
+                "",
+                "ZERO-CHECKED: Checked: BWSSB-01.",
+            ]
+        ],
+        s3_rows=[
+            [a.replace(" ", ""), f"{CITY} – BWSSB", "", 0, "", ""],
+            [b.replace(" ", ""), f"{CITY} – BWSSB", "", 0, "", ""],
+        ],
+        extra_info={"parastatals": {"BWSSB": water}, "citations": [act]},
+    )
+    rows = by_key(comp)
+    assert rows[("BWSSB", a)].zero_route == "Step 2 ZERO-CHECKED"
+    assert rows[("BWSSB", b)].zero_route == "Step 3 typed"
+    assert rows[("BWSSB", a)].zero_gate == "required source missing"
+    assert "parent Act [ACT]: present (BWSSB-01)" in rows[("BWSSB", a)].zero_documents
+    assert "Rules made under the Act [RULES]: MISSING" in rows[("BWSSB", a)].zero_documents
+    assert "not run" in rows[("BWSSB", a)].zero_scan
+    assert rows[("BWSSB", a)].zero_copy_types == "BWSSB-01: browser-rendered"
+
+    path = cmp.write_comparison(comp, tmp_path / "z.xlsx", min_rows=1)
+    wb = load_workbook(path)
+    sheet = list(wb["AI zeros"].iter_rows(values_only=True))
+    header = list(sheet[0])
+    assert header[:2] == ["City", "Parastatal"] and "Route" in header and "Scan result" in header
+    assert "Copy types that supported the zero" in header
+    assert len(sheet) == 3  # header + the two zeros
+    first = dict(zip(header, sheet[1], strict=True))
+    assert first["Question"] == a  # the false zero comes first
+    assert first["Agree?"] == "No: false zero"
+    assert first["Copy types that supported the zero"] == "BWSSB-01: browser-rendered"
+    assert first["False zero? (AI 0, human above 0)"] == "Yes"
+    second = dict(zip(header, sheet[2], strict=True))
+    assert second["Agree?"] == "Yes" and second["Route"] == "Step 3 typed"
+    summary = {
+        row[0].value.strip(): row[1].value for row in wb["Summary"].iter_rows() if row[0].value
+    }
+    assert summary["AI zeros (rows where the AI wrote a 0)"] == 2
+    assert summary["False zeros (AI 0, human above 0)"] == 1
+    assert summary["AI 0 and human 0"] == 1
+    assert summary["Step 2 ZERO-CHECKED"] == 1 and summary["Step 3 typed"] == 1
+
+
+def test_a_comparison_without_zeros_still_has_the_sheet_and_a_zero_count(tmp_path, bank):
+    a = next(c for c, q in bank.items() if q.tag == "SQ" and q.max_score)
+    comp = build(
+        tmp_path,
+        bank,
+        human_rows=[human(a, "BWSSB", 5.0)],
+        s2_rows=[],
+        s3_rows=[[a.replace(" ", ""), f"{CITY} – BWSSB", "", 5, "", ""]],
+    )
+    wb = load_workbook(cmp.write_comparison(comp, tmp_path / "n.xlsx", min_rows=1))
+    assert len(list(wb["AI zeros"].iter_rows())) == 1  # only the header
+    summary = {r[0].value.strip(): r[1].value for r in wb["Summary"].iter_rows() if r[0].value}
+    assert summary["AI zeros (rows where the AI wrote a 0)"] == 0
+    assert summary["False zeros (AI 0, human above 0)"] == 0
+
+
+def test_a_roll_up_zero_is_labelled_as_a_sum_of_its_parts(tmp_path, bank):
+    roll = next(c for c, q in bank.items() if q.is_rollup and q.max_score)
+    comp = build(
+        tmp_path,
+        bank,
+        human_rows=[human(roll, "BWSSB", 3.0)],
+        s2_rows=[],
+        s3_rows=[[roll.replace(" ", ""), f"{CITY} – BWSSB", "", 0, "", ""]],
+    )
+    row = by_key(comp)[("BWSSB", roll)]
+    assert row.ai_score == 0 and row.zero_gate.startswith("roll-up question")

@@ -119,7 +119,7 @@ The result is one **Sources workbook** per city, in **City files**:
 | **How to Use** | Instructions |
 | **Needs Attention** | Problems to check, in plain language |
 | **Parastatals** | Every parastatal: **Include?** (Yes/No), Found By (Agent or Your team), website and **Website Check** score with reasons, Act, status, and the Yes/No facts that decide which questions apply |
-| **Citation Sheet** | Every source, with a **Citation ID** (e.g. `BWSSB-07`), link, saved copy, what it's useful for, Verification Status, Authority Score, and **Use for Answers?** (Yes/No) |
+| **Citation Sheet** | Every source, with a **Citation ID** (e.g. `BWSSB-07`), link, saved copy, what it's useful for, Verification Status, Authority Score, and **Use for Answers?** (Yes/No), and last **Human-Verified?** (Yes, or blank) |
 | **Coverage** | Which questions have a source, and which have none yet |
 
 ## Reviewing the Sources workbook
@@ -129,6 +129,7 @@ Open it from **City files** with **Open the Sources workbook in Excel**. Then:
 - **Parastatals:** set **Include?** to No to leave one out. To add one, add a row with its ID, name and Type, and leave Found By empty.
 - **Citation Sheet:** open each link, or its saved copy, and set **Use for Answers?** to No for anything unsuitable. Links that failed the check start as No. To add a source, add a row with Parastatal (an ID from the Parastatals sheet, or `All parastatals`; in a ULG workbook, the ID on the ULG sheet), Source Title, Official URL and What This Source Is Useful For. Leave Citation ID empty; it is filled in automatically. Your links are opened and checked the same way as the agent's.
 - **Links the tool couldn't open (*Human Verification Required*):** many government websites block automated tools. Open the link in your browser, save the page or PDF as `evidence/manual/<Citation ID>.pdf` (or `.html` / `.txt`) in the city's folder, for example `outputs/cities/Bengaluru/evidence/manual/BWSSB-07.pdf`, and set **Use for Answers?** to Yes. Run Step 1 again (or Step 2): the tool reads your saved copy, checks that it has readable text, and marks the row *Verified*, with a note that your team verified it. If the copy can't be used (a scanned PDF with no text, an India Code summary page, a login page, or a file name that matches no Citation ID), **Needs Attention** and the **Citation Sheet** tab in **City files** say why.
+- **Human-Verified?** (the last Citation Sheet column, Parastatal only): set it to **Yes** for a source a person has already checked. The app still opens and saves it and the AI still has to quote it word for word; the mark never replaces the quote or the zero rule. The AI looks at such a source first, and an answer that rests on it shows the status *Answered — Human-Verified Source*. Step 1 never clears the mark. If the app cannot open the link, Needs Attention asks you to save a copy by hand; if the assessor doubts it, the row stays in use and Needs Attention asks for a look.
 - **Coverage:** questions marked *No source yet* will be answered *Insufficient Evidence* unless you add a source.
 - **Your Notes** columns are never overwritten.
 
@@ -502,6 +503,19 @@ and `scoring/2027/ai/archive/`.
    ```
 
    Then set `ANTHROPIC_API_KEY` in `.env`.
+
+   Step 1 opens links drawn by JavaScript in a headless Chromium browser. Download it once on
+   each computer (about 100 MB; without it the app still runs and Needs Attention says the
+   browser stage was skipped):
+
+   ```bash
+   uv run playwright install chromium
+   ```
+
+   Nothing else is installed by hand: `uv sync` also brings the PDF tools (`pypdf`, `pypdfium2`). The
+   app keeps one shared copy of every page and every scanned document it reads in `outputs/_cache/`
+   (ignored by git; safe to delete, it is rebuilt), so a second city or step does not download or pay
+   for the same thing twice.
 3. Run the tests (offline, free):
 
    ```bash

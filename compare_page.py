@@ -171,15 +171,51 @@ def _compare(view) -> None:
     cols = st.columns(min(len(shown), 6) or 1)
     for col, (status, n) in zip(cols, shown[:6], strict=False):
         col.metric(status[:1].upper() + status[1:], n)
-    both = [r for r in rows if r.status == "both"]
-    if len(both) >= compare.MIN_ROWS:
-        agree = sum(r.agrees == "Yes" for r in both)
-        st.caption(f"The AI and people agree exactly on {agree} of {len(both)} compared rows.")
-    else:
+    left, right = st.columns(2)
+    left.metric(
+        "Coverage: AI scored of human scored",
+        compare.coverage_text(rows),
+        help="Of the rows a person scored, how many the AI scored too. It says nothing about "
+        "whether the scores are the same.",
+    )
+    right.metric(
+        "Agreement when both scored",
+        compare.agreement_text(rows),
+        help="Of the rows scored by both, how many have exactly the same score. A percentage "
+        f"shows from {compare.MIN_ROWS} compared rows.",
+    )
+    columns = [
+        "Group",
+        "Human scored",
+        "Coverage (AI scored of them)",
+        "Compared (both scored)",
+        "Agree",
+        "% agree",
+        "Only human",
+        "Only AI",
+        *compare.ORIGIN_EXTRA,
+    ]
+    with st.expander("By source origin: sources a person verified, and those the app found"):
         st.caption(
-            f"Only {len(both)} row(s) are scored by both; a percentage shows from "
-            f"{compare.MIN_ROWS}."
+            "Origin is taken from the rows the AI cited. A row the AI left blank cites nothing, so "
+            "it counts as App-found: read the second table too, which asks whether a human-verified "
+            "source was available for the question."
         )
+        for title, key in (
+            ("Source origin (the rows the AI cited)", lambda r: r.source_origin or "App-found"),
+            (
+                "Human-verified source available for the question",
+                lambda r: f"Available: {r.hv_available or 'No'}",
+            ),
+        ):
+            st.markdown(f"**{title}**")
+            st.dataframe(
+                pd.DataFrame(
+                    compare.summarise_with_zeros(rows, key, compare.MIN_ROWS), columns=columns
+                ).astype(object),
+                hide_index=True,
+                width="stretch",
+            )
     a, b, c, d = st.columns(4)
     sections = sorted({r.section for r in rows})
     section = a.selectbox("Section", ["All", *sections], key="cmp-section")
@@ -209,6 +245,8 @@ def _compare(view) -> None:
                 "Same source?": r.same_source,
                 "AI class": r.ai_class,
                 "AI confidence": r.ai_confidence,
+                "Source origin": r.source_origin,
+                "Human-verified available?": r.hv_available,
             }
             for r in view_rows
         ]

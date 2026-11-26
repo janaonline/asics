@@ -1370,7 +1370,9 @@ def recheck_page():
                 if practice
                 else make_http_client(settings.user_agent, settings.http_timeout)
             )
-            out, summary = recheck_workbook(path, client, settings.user_agent)
+            out, summary = recheck_workbook(
+                path, client, settings.user_agent, None if practice else settings
+            )
         problems = summary.get("links with problems", 0) + summary.get(
             "quotes no longer on the page", 0
         )
@@ -1496,6 +1498,16 @@ def costs_page():
                     "Cost per": costs.UNITS[step],
                     "US$": usd,
                     "Based on": basis,
+                }
+            )
+        if (budget := float(getattr(vs, "scan_reading_budget_usd", 0) or 0)) > 0 and vs.staged_fetch:
+            rows.append(
+                {
+                    "Category": v.title,
+                    "Step": "Step 1, scan reading",
+                    "Cost per": "run (at most)",
+                    "US$": budget,
+                    "Based on": "the scan_reading_budget_usd setting; spent only if scanned PDFs are found",
                 }
             )
     st.dataframe(

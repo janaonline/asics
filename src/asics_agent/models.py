@@ -15,11 +15,15 @@ VerificationStatus = Literal["Verified", "Not verified", "Human Verification Req
 Provenance = Literal["phase1_citation_sheet", "web_search", "fetched_page", "research_team"]
 FoundBy = Literal["Agent", "Your team"]
 
+# What the AI is told next to a source a person has checked (Citation Sheet "Human-Verified?")
+HUMAN_VERIFIED_MARK = "HUMAN-VERIFIED: a person confirmed this source for this agency"
+
 ANSWER_CLASSES = ("A1", "A2", "R", "P", "M", "Needs review")  # where an answer lives
 CONFIDENCES = ("High", "Medium", "Low")  # how good the evidence is
 
 AnswerStatus = Literal[
     "Answered — Verified Source",
+    "Answered — Human-Verified Source",
     "Partially Answered",
     "Insufficient Evidence",
     "Human Verification Required",
@@ -136,6 +140,17 @@ class AccessCheck(BaseModel):
     content_path: str | None = None  # extracted text, used by the agents
     snapshot_path: str | None = None  # the page/PDF exactly as downloaded, for reviewers
     checked_at: str = ""
+    # How the copy was obtained (links/fetch_chain.py): "plain HTTP", "browser-rendered",
+    # "certificate not verified", "ARCHIVED yyyy-mm-dd" ... joined with "; ". "" = not opened.
+    copy_type: str = ""
+    archived_on: str = ""  # ISO date of the Wayback snapshot, for an archived copy
+    stale_archive: bool = False  # the snapshot is older than archive_max_age_days
+    failure: str = ""  # why the plain check failed (see accessibility.FAILURES), "" if it opened
+    stages: list[str] = Field(default_factory=list)  # what each stage of the fetch chain did
+    not_retried: bool = False  # the chain did not run again: failure cache or the run's time cap
+    # The PDF as downloaded, kept in memory only when it could not be read (a scan or a damaged file),
+    # so scan_reading.py can repair it or have Claude read it. Never saved with the check.
+    pdf_bytes: bytes | None = Field(default=None, exclude=True, repr=False)
 
 
 ALL_PARASTATALS = "All parastatals"
@@ -161,6 +176,9 @@ class Source(BaseModel):
     content_path: str | None = None
     snapshot_path: str | None = None
     checked_at: str = ""
+    # How the saved copy was obtained (the Citation Sheet's last column, "Copy Type"); see AccessCheck.
+    copy_type: str = ""
+    archived_on: str = ""
     # When the cited text or version took effect (or its "amended up to" date): not the page's
     # "last updated" and not checked_at. And whether that is on or before the Law/Policy cut-off:
     # ok | later | unknown | Bill-draft (see cutoff.py). Both optional: old Citation Sheets lack them.
@@ -168,6 +186,10 @@ class Source(BaseModel):
     cutoff_check: str = ""
     # True when the team verified this row from a copy they saved by hand (evidence/manual/)
     team_saved_copy: bool = False
+    # A person has already checked this source (the "Human-Verified?" column, the last of the
+    # Citation Sheet). Step 1 still opens and saves it and Steps 2 and 3 still quote it: the flag
+    # is never proof that a provision exists or is absent. Step 1 never changes or clears it.
+    human_verified: bool = False
 
     @property
     def key(self) -> str:

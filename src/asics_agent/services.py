@@ -21,6 +21,9 @@ class Services:
     settings: Settings
     _models: dict = field(default_factory=dict, repr=False)
     batcher: Any = None  # set for Step 2: model calls go out as Message Batches (batch.py)
+    scan_reader: Any = (
+        None  # tests: replaces the Anthropic client that reads scans (links/scan_reading.py)
+    )
 
     def batched(self, batcher) -> "Services":
         """These services with every Claude call sent through `batcher` (practice and test

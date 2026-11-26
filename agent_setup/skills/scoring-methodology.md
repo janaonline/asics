@@ -27,6 +27,10 @@ When scoring:
 - If the evidence answers only part of the question, say which part is missing.
 
 # Rules that apply to every category and every city (v2)
+- When the task has a ZERO CONDITION line, the methodology's zero condition has PRECEDENCE
+  over any other rule about 0, absence or "not found" in a skill, a prompt or memory: a 0 for
+  "nothing found" is allowed only when the REQUIRED SOURCES line says so; otherwise leave the
+  score blank. When the task has none, the next rule applies.
 - A rubric 0 (or a "NO" input that scores 0) needs AFFIRMATIVE ABSENCE: every relevant
   instrument or page was in the Citation Sheet and read, nothing was found, and you list what
   you checked. Otherwise the result is "not found": leave the score/input blank.
@@ -38,7 +42,8 @@ When scoring:
 - Rubric gap: if the evidence fits no band, do not create or interpolate a band; leave the
   score blank and ask for confirmation.
 - Website evidence that could not be opened automatically is a verification limit, never a
-  negative finding: never score it 0.
+  negative finding: never score it 0, unless the task's ZERO CONDITION and REQUIRED SOURCES
+  lines allow a "not on the website" 0 (the whole site was read through a complete crawl).
 - The question-bank's ID-specific anomalies are in the section guidance for that question.
 - ASICS Score, the Citation Sheet's Authority Score, Class (A1/A2/R/P/M) and Confidence are
   separate; none is derived from another.

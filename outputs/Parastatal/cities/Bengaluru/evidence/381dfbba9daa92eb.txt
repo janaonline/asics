@@ -1,0 +1,85 @@
+SOURCE URL: https://censusindia.gov.in/nada/index.php/catalog/584
+
+Login ENGLISH HINDI
+ Census Digital Library
+ORGI HOME
+Home
+Catalog
+Advance Search
+Home / Central Data Catalog / DH_2011_2918_PART_A_DCHB_BANGALORE
+Census of India 2011 - Karnataka - Series 30 - Part XII A - District Census Handbook, Bangalore
+India, 2014
+Reference ID
+DH_2011_2918_PART_A_DCHB_BANGALORE
+Producer(s)
+Directorate of Census Operations, Karnataka
+Metadata
+JSON
+CREATED ON
+Jun 03, 2021
+LAST MODIFIED
+Jun 03, 2021
+PAGE VIEWS
+11655
+DOWNLOADS
+10673
+DOCUMENT DESCRIPTION
+Description
+Series
+Authoring information
+Disclaimer and copyrights
+Themes and topics
+Description
+UNIQUE USER DEFINED ID
+DH_2011_2918_PART_A_DCHB_BANGALORE
+TITLE
+Census of India 2011 - Karnataka - Series 30 - Part XII A - District Census Handbook, Bangalore
+DOWNLOADS
+Bangalore - Inset tables zip
+ Download
+DH_2011_2918_PART_A_DCHB_BANGALORE.pdf
+ Download
+Karnataka - Town Amenities xlsx
+ Download
+Karnataka - Village Amenities xlsx
+ Download
+DATE PUBLISHED
+2014
+SUBTITLE
+Village and Town Directory
+RESOURCE TYPE
+book
+ABSTRACT
+The District Census Handbook (DCHB) is an important publication of the Census Organization since 1951. It contains both Census and non Census data of urban and rural areas for each District.
+The Census data provide information on demographic and socio-economic characteristics of population at the lowest administrative unit i.e. of each Village and Town and ward of the District.
+The Primary Census Abstract (PCA) part of this publication contains Census data including data on household amenities collected during 1st.phase of the Census i.e. House Listing and Housing Census.
+The non Census data presented in the DCHB is in the form of Village Directory and Town Directory contain information on various infrastructure facilities available in the village and town viz; education, medical, drinking water, communication and transport, post and telegraph, electricity, banking, and other miscellaneous facilities.
+The data of DCHB 2011 Census have been presented in two parts, Part-A contains Village and Town Directory and Part-B contains Village and Town wise Primary Census Abstract. Both Parts have been published in separate volumes in 2011 Census.
+REFERENCE COUNTRY
+Country name Country code
+India IND
+SPATIAL COVERAGE
+Karnataka, district Bangalore
+LANGUAGE
+Name Code
+English EN
+Series
+SERIES NAME
+District Handbook
+Authoring information
+AUTHORS
+Last name
+Directorate of Census Operations, Karnataka
+Disclaimer and copyrights
+RIGHTS
+Office of the Registrar General & Census Commissioner, India (ORGI)
+Themes and topics
+KEYWORDS
+Name
+Census district handbook (cdhb)
+TAGS
+Census-2011
+ Back to Catalog
+ORGI Digital Library
+
+© 2026, ORGI Digital Library, All Rights Reserved.

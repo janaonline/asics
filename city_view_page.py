@@ -17,6 +17,7 @@ from asics_agent.workbook import canonical_header, is_scoring_sheet, unit_sheet,
 
 STATUS_ORDER = [
     ("Answered — Verified Source", "#3E7C4F"),
+    ("Answered — Human-Verified Source", "#2F6B45"),
     ("Computed from Sub-indicators", "#7FB08B"),
     ("Partially Answered", "#D9A441"),
     ("Human Verification Required", "#E07B39"),

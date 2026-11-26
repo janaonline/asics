@@ -23,5 +23,8 @@ evidence_hints: revenue expenditure capital budget estimates actuals audited acc
   not count them.
 - Media reports are never in the Citation Sheet. If a methodology's evidence text names media
   and only media evidence would exist, say so: class at most A2, Confidence Low, score null.
-- "Not found" is not "absent": a staffing or data question is not scored 0 without affirmative
-  absence (Class R).
+- When the task has a ZERO CONDITION line, the methodology's zero condition has precedence (for
+  example SC 12a: "if staffing data is not available, score 0"): a 0 is allowed when the
+  REQUIRED SOURCES line says every required source was read and the scan found nothing. Without
+  that line, "not found" is not "absent": a staffing or data question is not scored 0 without
+  affirmative absence (Class R).
